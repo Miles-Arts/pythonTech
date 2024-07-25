@@ -34,3 +34,5 @@ print(tupla)
 print(len(tupla))
 
 # DESEMPAQUETADO de TUPLAS
+
+
