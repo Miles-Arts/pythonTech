@@ -87,7 +87,25 @@
 # else:
 #     print("No")    
 
-lista = list()
+# lista = list()
+
+
+factura = ["Pan", "Queso", "Huevos", 100, 1234]
+factura.remove("Huevos")
+print(factura)
+factura.pop(1)
+print(factura)
+factura.pop()
+print(factura)
+factura.clear()
+print(factura)
+del factura[0]
+print(factura)
+del factura
+print(factura)
+
+
+
 
 
 

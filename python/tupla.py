@@ -36,3 +36,7 @@ print(len(tupla))
 # DESEMPAQUETADO de TUPLAS
 
 
+# Metodo y funciones son casi lo mismo
+
+
+
