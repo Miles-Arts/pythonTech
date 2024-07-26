@@ -253,9 +253,19 @@ c = 0
 # CONTINUE pasar al otro ciclo
 
 
-lista = ["Mariana"]
+# lista = ["Mariana"]
 
-for i in range(2):
-    nombre = input("Ingrese un nombre: ")
-    lista.append(nombre)
-print(lista)    
+# for i in range(2):
+#     nombre = input("Ingrese un nombre: ")
+#     lista.append(nombre)
+# print(lista)    
+
+
+letras = ["A", "B", "C"]
+
+print(letras)
+
+for i in range(len(letras)):
+    if letras[i] == "B":
+        del letras[i]
+    print(letras)    
