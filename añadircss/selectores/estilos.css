@@ -1,0 +1,67 @@
+* {
+    /* box-sizing: border-box ; */
+    margin: 0;
+}
+
+h1 {
+    color: rgb(233, 9, 9);
+    /* color: #c7e909;
+    color: #0909e9; */
+}
+
+#contenido {
+    border: 2px dotted #c0cb25;
+    /* margin: 10px 20px; */
+    /* margin: 10px 20px 30px; */
+    /* margin: 10px 20px 30px 40px; */
+    /* margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; */
+    padding: 10px;
+    /* padding: 10px 20px; */
+    /* padding: 10px 20px 30px; */
+    /* padding: 10px 20px 30px 40px; */
+    /* padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+}
+
+.texto {
+    font-weight: bold;
+    color: rgb(50, 119, 16);
+}
+
+input[required] {
+    border: 2px solid rgb(34, 58, 234);
+    background-color: yellow;
+}
+
+input[type="text"] {
+    border: 2px solid rgb(34, 58, 234);
+    background-color: rgb(224, 193, 230);
+}
+
+[class~="ejemplo"] { /*  linea eñe para especificar ~ */
+    margin: 10px;
+    border: 2px dashed rgb(83, 83, 203);
+}
+a[href*="https"] { /*  Asterisco para todo **/
+    font-weight: bold;
+    background-color: aquamarine;
+}
+
+img[src$=".png"] { /*  Final $ */
+    border: 3px dotted rgb(191, 25, 116);
+}
+
+a[href^="pagina2"] { /*  Por palabra ^ */
+    background-color: rgb(147, 193, 178);
+
+}
+
+*[lang|="en"] { /*  Por palabra |*/
+    font-style: italic;
+    color: blueviolet;
+}

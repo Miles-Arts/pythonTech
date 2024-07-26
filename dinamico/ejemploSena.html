@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Hola</h1>
+    <p id="idParrafo"></p>
+    
+    <p id="idParrafo1"></p>
+
+
+<script>
+
+    const nuevaSuma = document.createElement("div");
+    nuevaSuma.innerText = "Hola TEXTO WORLD";
+    document.body.appendChild(nuevaSuma);
+
+    const nuevoTexto = document.createElement("div");
+    nuevoTexto.innerText = "Ejemplo: un aprendiz aprueba un examen cuando la calificación de este es mayor o igual a 3. Elaborar un programa en JavaScript donde que dada una calificación, aplique el criterio de aprobación e imprima “Aprobado” o “Reprobado”, según sea el caso.";
+    document.body.appendChild(nuevoTexto);
+
+    let elemento = document.getElementById("idParrafo");
+
+    let numero1 = 20;
+    let numero2 = 20;
+
+    var suma = numero1 + numero2;
+    var resta = numero1 - numero2;
+    var producto = numero1 * numero2;
+    var division = numero1 / numero2;
+
+    var hola = console.log("La suma de es: " + suma);
+    console.log("La resta es: " + resta);
+    console.log("El prodiuto es:" + producto);
+    console.log("La División es: " + division);
+
+    var angulo = Math.PI * 3;
+    console.log("seno(3PI) " + Math.sin(angulo));
+
+    var potencia = Math.pow(6,3);
+    console.log("6^3 " + potencia);
+
+    // Ejemplo: un aprendiz aprueba un examen cuando la 
+    // calificación de este es mayor o igual a 3. 
+    // Elaborar un programa en JavaScript donde que 
+    // dada una calificación, aplique el criterio de 
+    // aprobación e imprima “Aprobado” o “Reprobado”, 
+    // según sea el caso.
+
+    var nota = 3;
+    nota = 2;
+
+    if (nota >= 3) {
+            console.log("Aprobado con nota: " + nota);
+    } else {
+        console.log("Reprobado con nota:" + nota);
+    }
+
+    const edad = 40;
+
+    if ( edad >= 30 && edad < 60) {
+            console.log("Su edad: "  + edad + 
+            ". Es excelente para emprender ");
+    } else {
+        console.log(" Necesita tiempo ");
+    }
+
+    var impresion = 7;
+
+    for ( let i = 0; i < impresion; i++ ) {
+            console.log("Hola gente");
+    }
+
+    var fecha = 10;
+
+    for (let i = 0; i < fecha; i++ ) {
+            console.log("Este día hay notas")
+    }
+
+    var cantidad = 5;
+    var suma = 0;
+
+    for ( let i  = 1; i <= cantidad; i++ ) {
+            suma += i;
+            console.log("Numero " + suma);
+    }
+
+    var cantidaMas = 2;
+    var sumaMas = 0;
+
+    for ( let i = 1; i <= cantidaMas; i++ ) {
+        sumaMas += i;
+        console.log("Numero " + sumaMas);
+    }
+
+    var sumaMenos = 5;
+    var resta = 0;
+
+    for (let i = 1; i <= sumaMenos; i++) {
+            resta -= i;
+            console.log("Resta: " + resta);
+    }
+
+    var var1 = 3;
+    var var2 = 4;
+
+    console.log( var2 > var1);
+    console.log( var2 < var1);
+    console.log(var1 !== var2);
+
+    var contador1 = 1;
+    var factorial = 1;
+    var numero33 = 3;
+
+    while ( contador1 <= numero33) {
+            factorial = factorial * contador1;
+            contador1 = contador1 + 1;
+            console.log(factorial);
+    }
+
+
+        let contador00 = 0;
+
+    while (contador00 < 2) {
+    console.log('El contador es: ' + contador00);
+    contador00++;
+    }
+
+    let frutas = [ "manzana", "durazno", "pera", "limón", "sandía", "Mora"];
+    console.log(frutas);
+    console.log(frutas.length);
+    console.log("----")
+
+    let arreglo  = [4, 30, 50, 33, 2];
+    console.log(arreglo[0]);
+    console.log(arreglo[3]);
+    console.log(arreglo[arreglo.length -1]);
+    console.log(arreglo[arreglo.length]);
+
+
+
+    let resultado20 = [];
+    for (let i =  1; i <= 10; i++ ) {
+            resultado20.push( i * 5);
+    }
+
+    for( let i = 1; i <= 10; i++ ) {
+            console.log( "5 x " + i + " = " + resultado20[i -1]);
+    }
+
+    let repeticion = [];
+    for ( let i = 1; i <= 10; i++) {
+                repeticion.push( i * 6);
+    }
+    for (let i = 1; i <=10; i++ ) {
+                console.log("6 x " + i + " = " + repeticion[i - 1])
+    }
+
+    let datos = [
+                        [ "Manzana", "Pera", "Papaya", "Piña"],
+                        [ "Papa", "Tomate", "Yuca", "Ajo"],
+                        [ "Arroz", "Frijol", "Cebada", "Garbanzo"]
+                        ];
+    console.log(datos);
+
+    let registros = [
+                          ["Juan", "juan@sindato.com", 19, 36.234],      
+                          ["Luis", "luis@sindato.com", 18, 23.234],      
+                          ["Andres", "andrea@sindato.com", 12, 0],      
+                          ["Pedro", "pedro@sindato.com", 12, 65.234],      
+                          ["María", "maria@sindato.com", 15, 123]      
+                        ]
+    console.log(registros);
+
+    var totales = 0;
+    for (let i = 0;  i < registros.length; i++) {
+        console.log("Registro # " + (i + 1) );
+        for( let j = 0; j < registros[i].length; j++)
+        console.log( "   " + registros[i][j]);
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

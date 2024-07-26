@@ -1,0 +1,35 @@
+
+/* P parrafo */
+p {
+    /* color:rgb(19, 133, 36) !important; */
+    color:rgb(19, 133, 36);
+}
+
+/* class */
+.externo {
+    color:rgb(229, 8, 8);
+}
+
+/* id */
+#texto-externo {
+    color:rgb(15, 15, 212);
+}
+
+body {
+    background-color: rgb(66, 65, 68);
+}
+
+.texto-interno {
+    color: rgb(160, 194, 35);
+}
+
+#parrafo {
+    color:brown
+}
+/* 
+.texto-importado {
+    font-family: "Nova Oval", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  } */
+  
