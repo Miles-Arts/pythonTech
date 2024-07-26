@@ -286,8 +286,45 @@
 #     letras.append(i)
 # print(letras)    
 
-letras = [9, 8]
+# letras = [9, 8]
 
-for i in range(6):
-    letras.append(i)
-print(letras)
+# for i in range(5):
+#     letras.append(i)
+# print(letras)
+
+# letras = [9, 8]
+
+# for i in range(0,5,1):
+#     letras.append(i)
+# print(letras)
+
+# frutas = ["manzanas", "banana", "melon"]
+
+# [print(valor) for valor in frutas]
+
+# print("----------------")
+
+# frutas = ["manzanas", "banana", "melon"]
+
+# lista=[valor for valor in frutas if "l" in valor]
+
+# print(lista)
+
+# frutas = ["manzanas", "banana", "melon"]
+
+# lista = []
+
+# for valor in frutas:
+#     if "l" in valor:
+#         lista.append(valor)
+# print(lista) 
+
+# lista = [valor for valor in frutas if "l" in valor]
+
+# print(valor)
+
+
+registro = ["Alberto", "Carmen"]
+nuevoRegistro=[]
+
+[nuevoRegistro.append(valor.lower()) for valor in registro]
