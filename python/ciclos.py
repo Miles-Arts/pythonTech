@@ -253,7 +253,7 @@ c = 0
 # CONTINUE pasar al otro ciclo
 
 
-lista = []
+lista = ["Mariana"]
 
 for i in range(2):
     nombre = input("Ingrese un nombre: ")
