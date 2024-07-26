@@ -179,38 +179,68 @@ print("-----------")
 
 # print("------------")
 
-# for i in range(1,10,8):
-#     print(i)
+# # for i in range(1,10,8):
+# #     print(i)
 
 
-nombre = "Canada"
+# nombre = "Canada"
 
 
-longitud = len(nombre)
-# print(len(nombre))
+# longitud = len(nombre)
+# # print(len(nombre))
 
-for i in range(longitud):
-    print(nombre[i])
+# for i in range(longitud):
+#     print(nombre[i])
+
+# print("------------")
+
+# for letra in "Canada":
+#     print(letra)
+
+# # print("------------")
+
+# c = 0
+
+# for _ in range(3):
+#     print(c)
+#     c += 1
+
+# print(c)
+
 
 print("------------")
 
-for letra in "Canada":
-    print(letra)
-
-print("------------")
+lista = [5,10,15,20,25]
 
 c = 0
 
-for _ in range(3):
-    print(c)
-    c += 1
+# for numero in lista:
 
-print(c)
+#     c += numero
 
+# promedio = c / len(lista)
 
+# print("------------")
+# print(promedio)
+# print("------------")
+# print(c)
+# print("------------")
+# print(numero)
 
+#  end="" le quita el salto de línea de print
+for numero in lista:
+    print(numero, end=" ")
 
+# #lista[i]= "x"  X es asignado a x
+# for i in range(len(lista)):
+#     lista[i]= "x"
+#     # lista[i]= input("Ingrese un valor: ")
 
+# print(lista)    
 
+for i in range(len(lista)):
+   if lista[i] == 15:
+        del lista[i]
+    # lista[i]= input("Ingrese un valor: ")
 
-
+print(lista) 
