@@ -228,8 +228,8 @@ c = 0
 # print(numero)
 
 #  end="" le quita el salto de línea de print
-for numero in lista:
-    print(numero, end=" ")
+# for numero in lista:
+#     print(numero, end=" ")
 
 # #lista[i]= "x"  X es asignado a x
 # for i in range(len(lista)):
@@ -238,9 +238,24 @@ for numero in lista:
 
 # print(lista)    
 
-for i in range(len(lista)):
-   if lista[i] == 15:
-        del lista[i]
-    # lista[i]= input("Ingrese un valor: ")
+# for i in range(len(lista)):
+#    if lista[i] == 15:
+#         del lista[i]
+#         break
+#         # continue
 
-print(lista) 
+
+# print(lista)
+
+# print(lista) 
+
+# BREAK romper
+# CONTINUE pasar al otro ciclo
+
+
+lista = []
+
+for i in range(2):
+    nombre = input("Ingrese un nombre: ")
+    lista.append(nombre)
+print(lista)    
