@@ -132,6 +132,14 @@ for letras in nombre:
 for letras in range(len(nombre)):
     print(letras)
 
+# Palabra para variables y letra para contadores
+#  i  contador
+#  variables NOMBRE = "Juanita"
+
+# Tuplas y List sólo tiene valores
+
+# Items trae ambos - Claves y valores
+
 
 
 
