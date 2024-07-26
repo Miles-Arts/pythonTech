@@ -90,19 +90,48 @@
 # lista = list()
 
 
-factura = ["Pan", "Queso", "Huevos", 100, 1234]
-factura.remove("Huevos")
-print(factura)
-factura.pop(1)
-print(factura)
-factura.pop()
-print(factura)
-factura.clear()
-print(factura)
-del factura[0]
-print(factura)
-del factura
-print(factura)
+# factura = ["Pan", "Queso", "Huevos", 100, 1234]
+# factura.remove("Huevos")
+# print(factura)
+# factura.pop(1)
+# print(factura)
+# factura.pop()
+# print(factura)
+# factura.clear()
+# print(factura)
+# del factura[0]
+# print(factura)
+# del factura
+# print(factura)
+
+
+notas = ["a", "c","e","a","d","b","c","a","c",]
+
+print(notas)
+print(len(notas))
+print(min(notas))
+print(max(notas))
+notas.append("b")
+print(notas)
+notas.insert(2, "d")
+print(notas)
+print(notas.count("a"))
+notas.extend(["b", "c", "d"])
+print(notas)
+print(notas.index("c", 4))
+print(notas.pop(2))
+print(notas)
+notas.remove("a")
+print(notas)
+notas.reverse()
+print(notas)
+nuevaLista = notas.copy()
+print(nuevaLista)
+nuevaLista.sort()
+print(nuevaLista)
+nuevaLista.clear()
+print(nuevaLista)
+
 
 
 
