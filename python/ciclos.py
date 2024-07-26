@@ -197,6 +197,16 @@ print("------------")
 for letra in "Canada":
     print(letra)
 
+print("------------")
+
+c = 0
+
+for _ in range(3):
+    print(c)
+    c += 1
+
+print(c)
+
 
 
 
