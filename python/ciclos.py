@@ -153,34 +153,49 @@ print("-----------")
 
 # RANGE
 
+# nombre = "Canada"
+
+
+# longitud = len(nombre)
+# # print(len(nombre))
+
+# for i in range(5):
+#     print(i)
+
+# print("------------")
+
+# for i in range(1,5):
+#     print(i)
+
+# print("------------")
+
+# for i in range(1,5,2):
+#     print(i)
+
+# print("------------")
+
+# for i in range(10):
+#     print(i)
+
+# print("------------")
+
+# for i in range(1,10,8):
+#     print(i)
+
+
 nombre = "Canada"
 
 
 longitud = len(nombre)
 # print(len(nombre))
 
-for i in range(5):
-    print(i)
+for i in range(longitud):
+    print(nombre[i])
 
 print("------------")
 
-for i in range(1,5):
-    print(i)
-
-print("------------")
-
-for i in range(1,5,2):
-    print(i)
-
-print("------------")
-
-for i in range(10):
-    print(i)
-
-
-
-
-
+for letra in "Canada":
+    print(letra)
 
 
 
