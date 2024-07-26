@@ -151,7 +151,26 @@ print("-----------")
 
 
 
+# RANGE
 
+nombre = "Canada"
+
+
+longitud = len(nombre)
+# print(len(nombre))
+
+for i in range(5):
+    print("Hola")
+
+print("------------")
+
+for i in range(0,5):
+    print("Hola")
+
+print("------------")
+
+for i in range(0,5,1):
+    print("Hola")
 
 
 
