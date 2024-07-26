@@ -114,23 +114,23 @@ for claves in {"clave1": "a", "clave2":"2", "clave3":True}.keys():
 
 print("-----------")
 
-for letras in "Mercedes Benz":
-    print(letras)
+# for letras in "Mercedes Benz":
+#     print(letras)
 
-print("-----------")
+# print("-----------")
 
-nombre = "Mercedes Benz"
+# nombre = "Mercedes Benz"
 
-for letras in nombre:
-    print(letras[0])
+# for letras in nombre:
+#     print(letras[0])
 
-print(len(nombre))    
+# print(len(nombre))    
 
-for letras in nombre:
-    print(letras)
+# for letras in nombre:
+#     print(letras)
 
-for letras in range(len(nombre)):
-    print(letras)
+# for letras in range(len(nombre)):
+#     print(letras)
 
 # Palabra para variables y letra para contadores
 #  i  contador
@@ -141,7 +141,13 @@ for letras in range(len(nombre)):
 # Items trae ambos - Claves y valores
 
 
+# generar_coordenadas_aleatorias = 10
 
+# for _ in range(10):
+
+#     x_coord, y_coord = generar_coordenadas_aleatorias()
+
+#     print(f"Coordenadas aleatorias: ({x_coord:.2f}, {y_coord:.2f})")
 
 
 
