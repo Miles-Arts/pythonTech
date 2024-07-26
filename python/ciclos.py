@@ -87,32 +87,32 @@
 # # PDF 110 VER VER
 #  i es un contador
 
-for valor in [1,2,3]:
-    print(valor)
+# for valor in [1,2,3]:
+#     print(valor)
 
-print("-----------")
+# print("-----------")
 
-for valor in ("a",2,True):
-    print(valor)
-print("-----------")
+# for valor in ("a",2,True):
+#     print(valor)
+# print("-----------")
 
-for claves in {"clave1": "a", "clave2":"2", "clave3":True}.values():
-    print(claves)
-print("-----------")
+# for claves in {"clave1": "a", "clave2":"2", "clave3":True}.values():
+#     print(claves)
+# print("-----------")
 
-# "DEsacople de Tuplas"
-x, y = ("a", "b")
+# # "DEsacople de Tuplas"
+# x, y = ("a", "b")
 
 
-for claves, valor in {"clave1": "a", "clave2":"2", "clave3":True}.items():
-    print(claves, valor)
+# for claves, valor in {"clave1": "a", "clave2":"2", "clave3":True}.items():
+#     print(claves, valor)
 
-print("-----------")
+# print("-----------")
 
-for claves in {"clave1": "a", "clave2":"2", "clave3":True}.keys():
-    print(claves)
+# for claves in {"clave1": "a", "clave2":"2", "clave3":True}.keys():
+#     print(claves)
 
-print("-----------")
+# print("-----------")
 
 # for letras in "Mercedes Benz":
 #     print(letras)
@@ -208,11 +208,11 @@ print("-----------")
 # print(c)
 
 
-print("------------")
+# print("------------")
 
-lista = [5,10,15,20,25]
+# lista = [5,10,15,20,25]
 
-c = 0
+# c = 0
 
 # for numero in lista:
 
@@ -261,11 +261,33 @@ c = 0
 # print(lista)    
 
 
-letras = ["A", "B", "C"]
+# letras = ["A", "B", "C"]
 
+# print(letras)
+# #REcorrer atras hacia delante
+# for i in range(len(letras) -1, -1, -1):
+#     if letras[i] == "B":
+#         del letras[i]
+#     print(letras)    
+
+
+
+
+# letras = ["A", "B", "C"]
+
+# for i in range(len(letras) -1, -1, -1):
+#     print("Posición: ", i, end="")
+#     print(" con valor: ", letras[i])
+
+
+
+# letras = [] 
+# for i in range(5):
+#     letras.append(i)
+# print(letras)    
+
+letras = [9, 8]
+
+for i in range(6):
+    letras.append(i)
 print(letras)
-
-for i in range(len(letras)):
-    if letras[i] == "B":
-        del letras[i]
-    print(letras)    
