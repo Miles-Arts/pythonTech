@@ -74,6 +74,9 @@ print(diccionario2)
 diccionario.clear()
 print(diccionario)
 
+print("---------------------------------")
+diccionario.update({"clave":1, 2:False})
+print(diccionario)
 
 
 
