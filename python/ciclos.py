@@ -391,23 +391,108 @@ nombres = ["Alberto", "Carmen"]
 # for nombre in nombres:
 #     registros.append(nombre.lower())
 
-registros = [nombre.lower() for nombre in nombres ]    
+# registros = [nombre.lower() for nombre in nombres ]    
 
-print(registros)
+# print(registros)
 
-# [registro.append(valor.lower()) for valor in registro]
+# # [registro.append(valor.lower()) for valor in registro]
 
-usuario = input("Ingrese nombre: ")
+# usuario = input("Ingrese nombre: ")
 
-if usuario.lower() not in registros:
-    print("No Encontrado")
-else:
-    print("Encontrado: ")    
+# if usuario.lower() not in registros:
+#     print("No Encontrado")
+# else:
+#     print("Encontrado: ")    
 
 
 
-# nombre = ["pepe", "maria", "juan"]
+# nombres = ["pepe", "maria", "juan"]
 
 # for nombre in nombres:
-#     if nombre == "sara":
+    
+#     if nombre == "juan":
 #         break
+
+
+
+# nombres = ["pepe", "maria", "juan"]
+
+# for nombre in nombres:
+    
+#     if nombre == "maria":
+#        continue
+
+#     print(nombre)
+
+# else:
+#     print("Final")    
+
+
+# if 1<2:
+#     pass
+# elif 2 >1:
+#     print("2 es mayor que 1")
+# else:
+#     print("Es igual")    
+
+
+diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
+
+# valor = diccionario["clave1"]
+
+# for clave in diccionario:
+#     print(clave)
+
+# print("-----------------")
+
+# for clave in diccionario.keys():
+#     print(clave)
+
+# print("-----------------")
+
+# for clave in diccionario.values():
+#     print(clave)
+
+# print("-----------------")
+
+# for tupla in diccionario.items():
+#     print(tupla)
+
+# print("-----------------")
+
+
+
+# for clave in diccionario:
+#     print(diccionario[clave])
+
+# print("-----------------")
+
+# for clave, valor in diccionario.items():
+#     print(clave, valor)
+
+
+
+lista = []
+
+diccionario1 = {"nombre": "pepe", "edad": 12, "genero": "hombre"}
+diccionario2 = {"nombre": "maria", "edad": 25, "genero": "mujer"}
+diccionario3 = {"nombre": "carlos", "edad": 30, "genero": "otro"}
+
+lista.append(diccionario1)
+lista.append(diccionario2)
+lista.append(diccionario3)
+
+# print(lista)
+# print(lista[0])
+# print(lista[1])
+# print(lista[2])
+
+# for diccionario in lista:
+#     print(diccionario["nombre"], diccionario["edad"], diccionario["genero"])
+    # print(diccionario["edad"])
+    # print(diccionario["genero"])
+
+for dicc in lista:
+    print("ciclo interno: ")
+    for clave, valor in dicc.items():
+        print(clave, valor)
