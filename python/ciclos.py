@@ -324,7 +324,57 @@
 # print(valor)
 
 
-registro = ["Alberto", "Carmen"]
-nuevoRegistro=[]
+# registro = ["Alberto", "Carmen"]
+# nuevoRegistro=[]
 
-[nuevoRegistro.append(valor.lower()) for valor in registro]
+# [nuevoRegistro.append(valor.lower()) for valor in registro]
+
+
+# letras= ["a", "b", "c"]
+
+# lista= []
+
+# for letra in letras:
+#     lista.append(letra)
+
+# lista= [ letra for letra in letras ]    
+
+# print(lista)
+
+# nombres = ["pepe", "maria", "juan"]
+
+
+# for nombre in nombres:
+#     print(nombre)
+
+
+# [print(nombre) for nombre in nombres]
+
+frutas = ["banana", "pera", "coco"]
+
+lista = []
+
+for fruta in frutas:
+    if "banana" in frutas:
+        lista.append(fruta)
+
+print(lista)        
+
+
+lista = [ fruta for fruta in frutas   if "banana" in frutas]
+
+print(lista) 
+
+
+
+# listaNumeros = [1,2,3,4,5,6,7,8,9,10]
+
+# listaNumeroPar = []
+
+# for numero in listaNumeros:
+
+#     if numero % 2 == 0:
+
+#         listaNumeroPar.append(numero)
+
+# print(listaNumeroPar)
