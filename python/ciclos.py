@@ -399,7 +399,15 @@ print(registros)
 
 usuario = input("Ingrese nombre: ")
 
-if usuario.lower() in registros:
-    print("Encontrado")
+if usuario.lower() not in registros:
+    print("No Encontrado")
 else:
-    print("No encontrado: ")    
+    print("Encontrado: ")    
+
+
+
+# nombre = ["pepe", "maria", "juan"]
+
+# for nombre in nombres:
+#     if nombre == "sara":
+#         break
