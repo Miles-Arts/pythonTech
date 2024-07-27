@@ -350,20 +350,7 @@
 
 # [print(nombre) for nombre in nombres]
 
-frutas = ["banana", "pera", "coco"]
 
-lista = []
-
-for fruta in frutas:
-    if "banana" in frutas:
-        lista.append(fruta)
-
-print(lista)        
-
-
-lista = [ fruta for fruta in frutas   if "banana" in frutas]
-
-print(lista) 
 
 
 
@@ -378,3 +365,41 @@ print(lista)
 #         listaNumeroPar.append(numero)
 
 # print(listaNumeroPar)
+
+
+
+# frutas = ["banana", "pera", "coco"]
+
+# lista = []
+
+# for fruta in frutas:
+#     if "banana" in frutas:
+#         lista.append(fruta)
+
+# print(lista)        
+
+
+# lista = [ fruta for fruta in frutas   if "banana" in frutas]
+
+# print(lista) 
+
+
+nombres = ["Alberto", "Carmen"]
+
+# registros=[]
+
+# for nombre in nombres:
+#     registros.append(nombre.lower())
+
+registros = [nombre.lower() for nombre in nombres ]    
+
+print(registros)
+
+# [registro.append(valor.lower()) for valor in registro]
+
+usuario = input("Ingrese nombre: ")
+
+if usuario.lower() in registros:
+    print("Encontrado")
+else:
+    print("No encontrado: ")    
