@@ -16,30 +16,52 @@
 # 
 # 
 
+print("---------TIENDA EL PROGRESO----------")
+print(" ")
 
+productoPrecios = []
 
-productoNombre = [input("Ingrese producto ")]
-productoPrecio = int(input("Ingrese precio: "))
-cantidadComprada = int(input("Cantidad de producto: "))
+codigoProducto = input("Ingrese código producto: ")
+productoNombre = [input("Ingrese Nombres productos cada uno con Coma , : ")]
+productoPrecios = (input("Ingrese precio en COP: "))
 
-ivaCinco = 0.05
+# productoPrecios = [float(precio.strip()) for precio in productoPrecios]
+
+ivaCinco = 0.5
 ivaDienciNueve = 0.19
 
-precio = 0
+
+ivaBienes = (productoPrecios + (productoPrecios * ivaCinco))
+ivaGeneral = (productoPrecios + (productoPrecios * ivaDienciNueve))
+
+print("-------------------")
 
 # for precio in productoPrecio:
-if productoPrecio < 4:
+if productoPrecios <= 99999:
+    print(f"Código Producto: {codigoProducto}")
     print(f"Productos: {productoNombre}")
-    print("Producto Excento de Iva ")
-elif  productoPrecio < 18:
+    print(f"Producto Excento de IVA {productoPrecios}")
+
+elif  productoPrecios <= 100000:
+
+    print(f"Código Producto: {codigoProducto}")
     print(f"Productos: {productoNombre}")
-    print("Con 5% IVA") 
-elif  productoPrecio > 19:
+    print(f"Precio sin IVA ${productoPrecios}" ) 
+    print(f"Con 5% IVA ${ivaBienes}") 
+
+elif  productoPrecios >= 1000000:
+    
+    print(f"Código Producto: {codigoProducto}")
     print(f"Productos: {productoNombre}")
-    print("Producto con 19% de IVA")
+    print(f"Precio sin IVA ${productoPrecios}")
+    print(f"Producto con 19% de IVA ${ivaGeneral}")
+    print(f"Cantidad de productos {len(productoNombre)}")
+
      
 
 
+print(" ")
+print("---------Gracias Por Su Compra----------")
 
 
 
