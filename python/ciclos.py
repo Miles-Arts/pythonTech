@@ -472,15 +472,15 @@ diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
 
 
 
-lista = []
+# lista = []
 
-diccionario1 = {"nombre": "pepe", "edad": 12, "genero": "hombre"}
-diccionario2 = {"nombre": "maria", "edad": 25, "genero": "mujer"}
-diccionario3 = {"nombre": "carlos", "edad": 30, "genero": "otro"}
+# diccionario1 = {"nombre": "pepe", "edad": 12, "genero": "hombre"}
+# diccionario2 = {"nombre": "maria", "edad": 25, "genero": "mujer"}
+# diccionario3 = {"nombre": "carlos", "edad": 30, "genero": "otro"}
 
-lista.append(diccionario1)
-lista.append(diccionario2)
-lista.append(diccionario3)
+# lista.append(diccionario1)
+# lista.append(diccionario2)
+# lista.append(diccionario3)
 
 # print(lista)
 # print(lista[0])
@@ -498,22 +498,33 @@ lista.append(diccionario3)
 #         print(clave, valor)
 
 
-for letra in ["a", "b", "c"]:
-    print(letra)
+# for letra in ["a", "b", "c"]:
+#     print(letra)
 
-for i in range(0,15,3):
-    print(i)    
+# for i in range(0,15,3):
+#     print(i)    
 
 
 
-i = 1
+# i = 1
 
-while i < 6:
-    print(i)
-    i+=1
+# while i < 6:
+#     print(i)
+#     i+=1
 
-condicion = 3
+# condicion = 3
 
-while condicion:
-    condicion += 1
+i = 0
+
+while i < 5:
     print("Hola")
+    i += 1
+    # break
+
+lista = ["a", "b", "c"]    
+
+c = 0
+
+while c < len(lista):
+    print(lista[c])
+    c+=1
