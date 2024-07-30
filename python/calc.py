@@ -6,40 +6,47 @@
 (4)  División
 """
 
-# print("(1)  Suma")
-# print("(2)  Resta")
-# print("(3)  Multiplicación")
-# print("(4)  División")
+print("(1)  Suma")
+print("(2)  Resta")
+print("(3)  Multiplicación")
+print("(4)  División")
 
-# op = input("Ingrese la operación: ")
+# 
 
 # calculadora(op)
 
+op = input("Ingrese la operación: ")
+num1 = input("Ingrese valores: " )
+num2 = input("Ingrese valores: " )
+
+op = int(op)
+num1 = float(num1)
+num2 = float(num2)
+
+
+
 def calculadora(num1, num2, op):
-
-    # op = input("Ingrese numero")
-    # num1 = int(input("Ingrese valores: " )) 
-    # num2 = int(input("Ingrese valores: " )) 
-
+    
     if op == 1:
-        print(f"Resultado de la Suma:  { num1 + num2}")
-    
+        print("Suma")
+        return num1 + num2
     elif op == 2:
-        print(f"Resultado de la Resta:  { num1 - num2}")
-     
+        print()
+        return num1 + num2
     elif op == 3:
-        print(f"Resultado de la Multiplicación:  { num1 * num2}")
-    
+        print()
+        return num1 + num2
     elif op == 4:
-        print(f"Resultado de la División:  { num1 / num2}")
-    
+        print()
+        return num1 + num2
     else:
         print(f"Ingresa un número correcto")
 
 
 # calculadora(45, 30, 3)  
-   
-(calculadora(45, 30, 3))
+resultado = calculadora(num1, num2, op)  
+
+print(f"El resultado de la {resultado}")
 
 # valores ==
 
