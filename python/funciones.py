@@ -110,34 +110,42 @@ print(resultado)
 
 # print(resultado)
 
-def sumar(**args):
-    print(args)
-    res = args["n1"]+args["n2"]
-    return res
+# def sumar(**args):
+#     print(args)
+#     res = args["n1"]+args["n2"]
+#     return res
 
-resultado = sumar(n1 = 0, n2 = 4, n3 = 6, n4 = 8)
+# resultado = sumar(n1 = 0, n2 = 4, n3 = 6, n4 = 8)
 
-print(resultado)
+# print(resultado)
 
-#-------------------------
-print("----------------------------")
+# #-------------------------
+# print("----------------------------")
 
-def miFuncion3(*args, **keywordsargs):
-    total = 0
-    for valor in args:
-        total += valor
-    print("Sumatorial:", total)
+# def miFuncion3(*args, **keywordsargs):
+#     total = 0
+#     for valor in args:
+#         total += valor
+#     print("Sumatorial:", total)
 
-    for valor in keywordsargs:
-        print(valor, keywordsargs[valor])
+#     for valor in keywordsargs:
+#         print(valor, keywordsargs[valor])
 
-miFuncion3(10, -2, 1.5, celular ="315230000", edad = "18")         
+# miFuncion3(10, -2, 1.5, celular ="315230000", edad = "18")         
 
-#-------------------------
-print("----------------------------")
+# #-------------------------
+# print("----------------------------")
 
-def restar(a,b):
-    return a - b, "Naranja", 3500
+# def restar(a,b):
+#     return a - b, "Naranja", 3500
 
-respuesta = restar(30,10)
-print(respuesta)
+# respuesta = restar(30,10)
+# print(respuesta)
+
+def calcularIva():
+    iva = 12
+    costo = int(input("¿Cual es el monto a Calcular?: "))
+    calculo = (costo * iva)/ 100
+    print("El calculo de IVA es: " + str(calculo) + "\n")
+
+calcularIva()    
