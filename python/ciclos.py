@@ -497,8 +497,23 @@ lista.append(diccionario3)
 #     for clave, valor in dicc.items():
 #         print(clave, valor)
 
+
+for letra in ["a", "b", "c"]:
+    print(letra)
+
+for i in range(0,15,3):
+    print(i)    
+
+
+
 i = 1
 
 while i < 6:
     print(i)
     i+=1
+
+condicion = 3
+
+while condicion:
+    condicion += 1
+    print("Hola")
