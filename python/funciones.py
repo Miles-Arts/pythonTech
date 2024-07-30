@@ -97,14 +97,15 @@ resultado = sumar(2,4,6,8)
 print(resultado)
 
 # ---------------------------
-
-def sumar(*args):
+# Desempaquetado de tuplas
+def sumar(**args):
     print(args)
-    n1,n2,n3,n4 = args
+    # n1,n2,n3,n4 = args
     # respuesta = args[0] + args[1]
-    respuesta = n1 + n2
-    return respuesta
+    # respuesta = n1 + n2
+    # return respuesta
 
-resultado = sumar(2,4,6,8)
+# resultado = sumar(2,4,6,8)
+resultado = sumar(n1 = 2, n2 = 4, n3 = 6, n4 = 8)
 
 print(resultado)
