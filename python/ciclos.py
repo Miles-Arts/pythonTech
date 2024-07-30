@@ -384,7 +384,7 @@
 # print(lista) 
 
 
-nombres = ["Alberto", "Carmen"]
+# nombres = ["Alberto", "Carmen"]
 
 # registros=[]
 
@@ -436,7 +436,7 @@ nombres = ["Alberto", "Carmen"]
 #     print("Es igual")    
 
 
-diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
+# diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
 
 # valor = diccionario["clave1"]
 
@@ -538,12 +538,16 @@ diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
 #     print(i)
 #     i+=1
 
+
+# CON WHILE VERDADERO o FALSO
+# CON WHILE TRUE o FALSE
+
 resultado = 0
 x = 5
 
 while x > 0:
-    resultado += x
+    resultado+=x
     x-=1
-    print("...", x)
+    print("...", x, end="... ")
     # break
 print(resultado)    
