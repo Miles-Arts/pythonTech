@@ -558,31 +558,31 @@
 # while x <= 5:
 #     print(x, end=" ")
 
-i = 1
+# i = 1
 
-while i < 6:
-    print(i)
-    if(i == 3):
-        break
-    i += 1
-
-
-i = 1
-
-while i < 6:
-    print(i)
-    if i == 4:
-        break
-    i += 1
+# while i < 6:
+#     print(i)
+#     if(i == 3):
+#         break
+#     i += 1
 
 
-i = 1
+# i = 1
 
-while i < 6:
-    print(i)
-    i +=1
-else:
-    print("i no es menor que 6")    
+# while i < 6:
+#     print(i)
+#     if i == 4:
+#         break
+#     i += 1
+
+
+# i = 1
+
+# while i < 6:
+#     print(i)
+#     i +=1
+# else:
+#     print("i no es menor que 6")    
 
 
 i = 0
@@ -592,3 +592,17 @@ while i < 6:
     if i == 3:
         continue
     print(i)
+else:
+    print("i no es menor que 6")    
+
+
+
+frutas = ["manzana", "banana", "melon"]    
+
+valor = 0
+
+while valor < len (frutas):
+    print(frutas[valor])
+    valor+=1
+
+
