@@ -542,12 +542,35 @@
 # CON WHILE VERDADERO o FALSO
 # CON WHILE TRUE o FALSE
 
-resultado = 0
-x = 5
+# resultado = 0
+# x = 5
 
-while x > 0:
-    resultado+=x
-    x-=1
-    print("...", x, end="... ")
-    # break
-print(resultado)    
+# while x > 0:
+#     resultado+=x
+#     x-=1
+#     print("...", x, end="... ")
+#     # break
+# print(resultado)    
+
+
+# x = 1
+
+# while x <= 5:
+#     print(x, end=" ")
+
+i = 1
+
+while i < 6:
+    print(i)
+    if(i == 3):
+        break
+    i += 1
+
+
+i = 1
+
+while i < 6:
+    print(i)
+    if i == 4:
+        break
+    i += 1
