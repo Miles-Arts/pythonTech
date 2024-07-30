@@ -514,17 +514,36 @@ diccionario = {"clave1": 1, "clave2": 2, "clave3": 3}
 
 # condicion = 3
 
-i = 0
+# i = 0
 
-while i < 5:
-    print("Hola")
-    i += 1
+# while i < 5:
+#     print("Hola")
+#     i += 1
+#     # break
+
+# lista = ["a", "b", "c"]    
+
+# c = 0
+
+# while c < len(lista):
+#     print(lista[c])
+#     c+=1
+
+# while True:
+#     print("Hola")
+#     break
+
+# i = 1
+# while i < 6:
+#     print(i)
+#     i+=1
+
+resultado = 0
+x = 5
+
+while x > 0:
+    resultado += x
+    x-=1
+    print("...", x)
     # break
-
-lista = ["a", "b", "c"]    
-
-c = 0
-
-while c < len(lista):
-    print(lista[c])
-    c+=1
+print(resultado)    
