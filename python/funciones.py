@@ -67,22 +67,22 @@
 
 # print(respuesta)
 
-# ------------------------------------
+# # ------------------------------------
 
-def miFuncion(*args):
-    for valor in args:
-        print(valor)
+# def miFuncion(*args):
+#     for valor in args:
+#         print(valor)
 
-retorno = miFuncion("Código ", 2024, [0,1,2,3,4] )   
+# retorno = miFuncion("Código ", 2024, [0,1,2,3,4] )   
 
-# print(retorno)
-# ------------------------------
+# # print(retorno)
+# # ------------------------------
 
-def miFuncionN(**keywordargs):
-    for valor in keywordargs:
-        print(valor)
+# def miFuncionN(**keywordargs):
+#     for valor in keywordargs:
+#         print(valor)
 
-miFuncionN(nombre = "Código ", año = 2024, numero = [0,1,2,3,4] )   
+# miFuncionN(nombre = "Código ", año = 2024, numero = [0,1,2,3,4] )   
 
 # print(retorno)
 
@@ -98,14 +98,37 @@ print(resultado)
 
 # ---------------------------
 # Desempaquetado de tuplas
+# def sumar(**args):
+#     print(args)
+#     # n1,n2,n3,n4 = args
+#     # respuesta = args[0] + args[1]
+#     # respuesta = n1 + n2
+#     # return respuesta
+
+# # resultado = sumar(2,4,6,8)
+# resultado = sumar(n1 = 2, n2 = 4, n3 = 6, n4 = 8)
+
+# print(resultado)
+
 def sumar(**args):
     print(args)
-    # n1,n2,n3,n4 = args
-    # respuesta = args[0] + args[1]
-    # respuesta = n1 + n2
-    # return respuesta
+    res = args["n1"]+args["n2"]
+    return res
 
-# resultado = sumar(2,4,6,8)
-resultado = sumar(n1 = 2, n2 = 4, n3 = 6, n4 = 8)
+resultado = sumar(n1 = 0, n2 = 4, n3 = 6, n4 = 8)
 
 print(resultado)
+
+#-------------------------
+print("----------------------------")
+
+def miFuncion3(*args, **keywordsargs):
+    total = 0
+    for valor in args:
+        total += valor
+    print("Sumatorial:", total)
+
+    for valor in keywordsargs:
+        print(valor, keywordsargs[valor])
+
+miFuncion3(10, -2, 1.5, celular ="315230000", edad = "18")            
