@@ -492,7 +492,13 @@ lista.append(diccionario3)
     # print(diccionario["edad"])
     # print(diccionario["genero"])
 
-for dicc in lista:
-    print("ciclo interno: ")
-    for clave, valor in dicc.items():
-        print(clave, valor)
+# for dicc in lista:
+#     print("ciclo interno: ")
+#     for clave, valor in dicc.items():
+#         print(clave, valor)
+
+i = 1
+
+while i < 6:
+    print(i)
+    i+=1
