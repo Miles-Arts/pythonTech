@@ -131,4 +131,13 @@ def miFuncion3(*args, **keywordsargs):
     for valor in keywordsargs:
         print(valor, keywordsargs[valor])
 
-miFuncion3(10, -2, 1.5, celular ="315230000", edad = "18")            
+miFuncion3(10, -2, 1.5, celular ="315230000", edad = "18")         
+
+#-------------------------
+print("----------------------------")
+
+def restar(a,b):
+    return a - b, "Naranja", 3500
+
+respuesta = restar(30,10)
+print(respuesta)
