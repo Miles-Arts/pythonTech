@@ -19,20 +19,20 @@
 print("---------TIENDA EL PROGRESO----------")
 print(" ")
 
-productoPrecios = []
+
 
 codigoProducto = input("Ingrese código producto: ")
 productoNombre = [input("Ingrese Nombres productos cada uno con Coma , : ")]
-productoPrecios = (input("Ingrese precio en COP: "))
+productoPrecios = int(input("Ingrese precio en COP: "))
 
-# productoPrecios = [float(precio.strip()) for precio in productoPrecios]
+
 
 ivaCinco = 0.5
 ivaDienciNueve = 0.19
 
 
-ivaBienes = (productoPrecios + (productoPrecios * ivaCinco))
-ivaGeneral = (productoPrecios + (productoPrecios * ivaDienciNueve))
+ivaBienes = productoPrecios + (productoPrecios * ivaCinco)
+ivaGeneral = productoPrecios + (productoPrecios * ivaDienciNueve)
 
 print("-------------------")
 
