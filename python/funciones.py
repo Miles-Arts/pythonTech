@@ -154,8 +154,7 @@ calcularIva()
 print("---------------------------")
 
 # ENTRADA
-costo = input("¿Cual es el monto a Calcular?: $ ")
-costo = int(costo)
+costo = int(input("¿Cual es el monto a Calcular?: $ "))
 calculo = 0
 iva = 12
 
