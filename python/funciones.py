@@ -140,29 +140,34 @@ print(resultado)
 #     return a - b, "Naranja", 3500
 
 # respuesta = restar(30,10)
-# print(respuesta)
+# # print(respuesta)
+# print("---------------------------")
+
+# def calcularIva():
+#     iva = 12
+#     costo = int(input("¿Cual es el monto a Calcular?: "))
+#     calculo = (costo * iva)/ 100
+#     print("El calculo de IVA es: " + str(calculo) + "\n")
+
+# calcularIva()    
+
 print("---------------------------")
 
-def calcularIva():
-    iva = 12
-    costo = int(input("¿Cual es el monto a Calcular?: "))
-    calculo = (costo * iva)/ 100
-    print("El calculo de IVA es: " + str(calculo) + "\n")
-
-calcularIva()    
-
-print("---------------------------")
+# PROCESO
+def calcularIva(costo, iva):
+    # calculo = 0
+    # calculo = (costo * iva)/ 100
+    # return calculo
+    return (costo * iva)/ 100
 
 # ENTRADA
 costo = int(input("¿Cual es el monto a Calcular?: $ "))
-calculo = 0
 iva = 12
 
-# PROCESO
-def calcularIva(costo, calculo, iva):
-    calculo = (costo * iva)/ 100
-    return calculo
-
 # SALIDA
-resultado = calcularIva(costo, calculo, iva)    
-print("El calculo de IVA es: $" + str(resultado) + "\n")
+resultado = calcularIva(costo, iva)    
+# print("El calculo de IVA es: $" + str(resultado) + "\n")
+# print("El calculo de IVA es: $" , (resultado) , "\n")
+print(f"El calculo de IVA es: ${resultado} \n")
+
+print("---------------------------")
