@@ -16,5 +16,19 @@ def cargar():
         continua1 = input("Ingrese otra fecha[s(n)]: ")    
     return agenda    
 
-cargar()
+# cargar()
 
+def imprimir(agenda):
+    print("Listado completa de la agenda")
+    for fecha in agenda:
+        print("Para la fecha: " , fecha)
+        for hora, actividad in agenda[agenda]:
+            print(hora, actividad)    
+
+def consultar_fecha(agenda):
+    fecha = input("Ingrese la fecha que desea consultar: ")
+    if fecha in agenda:
+        for hora, actividad in agenda[fecha]:
+            print(hora,actividad)
+    else:
+        print("No hay actividades agendadas para dicha fecha")                   
