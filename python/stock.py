@@ -39,30 +39,41 @@ def transporte():
     vehiculos={}
     continuar="s"
     while continuar=="s":
-        placa_Vehiculo=int(input("Ingrese placa vehículo: "))
-        print("Bus - Colectivo - Moto - Taxi - Taxi Turismo")
-        tipo_Vehiculo=input("Ingrese tipo de vehículo: ")
-        precio_pasaje=int(input("Ingrese precio pasaje: $"))
-        hora_salida=int(input("Ingrese hora de salida: "))
-        vehiculos[placa_Vehiculo]=(tipo_Vehiculo,precio_pasaje,hora_salida)
-        continuar=input("Desea ingresar otro vehiculo [s/n] ")
+        try:     
+            codigo_Vehiculo=int(input("Ingrese código de vehículo: "))
+            print(" ")
+            print("Bus - Colectivo - Moto - Taxi - Taxi Turismo")
+            tipo_Vehiculo=input("Ingrese tipo de vehículo: ")
+            precio_pasaje=float(input("Ingrese precio pasaje: $"))
+            hora_salida=int(input("Ingrese hora de salida [24h]: "))   
+            vehiculos[codigo_Vehiculo]=(tipo_Vehiculo,precio_pasaje,hora_salida)
+            continuar=input("Desea ingresar otro vehiculo [s/n] ")
+        except ValueError:
+            print("Ingrese datos correctos")
+            print("-----------------------")
+        else:
+            continue;            
     return vehiculos
 
 def imprimir(vehiculos):
     print("Listado de vehículos: ")
-    for placa_Vehiculo in vehiculos:
-        print(placa_Vehiculo, vehiculos[placa_Vehiculo][0],vehiculos[placa_Vehiculo][1],vehiculos[placa_Vehiculo][2])
+    for codigo_vehiculo in vehiculos:
+        print(codigo_vehiculo, vehiculos[codigo_vehiculo][0],vehiculos[codigo_vehiculo][1],vehiculos[codigo_vehiculo][2])
         
 def consultar(vehiculos):
-    placa_Vehiculo=input("Ingrese placa vehículo a consultar: ")
-    for placa_Vehiculo in vehiculos:
-        print(vehiculos[placa_Vehiculo][0],vehiculos[placa_Vehiculo][1],vehiculos[placa_Vehiculo][2])
+    # try:
+        codigo_vehiculo=int(input("Ingrese placa vehículo a consultar: "))
+    # except ValueError:
+    #     print("Ingrese datos correctos")
+    #     print("-----------------------")      
+        if codigo_vehiculo in vehiculos:
+            print(vehiculos[codigo_vehiculo][0],vehiculos[codigo_vehiculo][1],vehiculos[codigo_vehiculo][2])
 
 def listado_vehiculos(vehiculos):
-    print("Listado de vehículos: ")
-    for placa_Vehiculo in vehiculos:
-        if vehiculos[placa_Vehiculo][2]==0:
-            print(vehiculos[placa_Vehiculo][0],vehiculos[placa_Vehiculo][1],vehiculos[placa_Vehiculo][2])
+    print("Listado de vehículos:")
+    for codigo_vehiculo in vehiculos:
+        if vehiculos[codigo_vehiculo][2]==0:
+            print(codigo_vehiculo, vehiculos[codigo_vehiculo][0],vehiculos[codigo_vehiculo][1],vehiculos[codigo_vehiculo][2])
 
 vehiculos=transporte()
 imprimir(vehiculos)
