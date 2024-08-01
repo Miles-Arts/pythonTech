@@ -40,45 +40,43 @@
 print("---Agende su cita Médica---")
 
 def organizador():
-    diario=[]
+    diario={}
     continuar1="s"
     while continuar1=="s":
         try:
-            dia_semana=str(input("Ingrese día de la semana: "))
+            print("Lunes - Martes - Miércoles - Jueves - Viernes")
+            dia_semana=input("Ingrese día de la semana: ")
         except TypeError:
             print("Ingrese parámetro correcto")     
         continua2="s"
         lista=[]
         while continua2=="s":
             try:
-                dia=str(input("Ingrese día de la cita: "))
                 hora=int(input("ingrese hora de cita [24h]: "))
                 nombre=str(input("Ingrese su nombre: "))
-                lista.append((dia,hora,nombre))
+                lista.append((hora,nombre))
                 continua2=str(input("Agendar otra cita para el mismo día? [s/n] "))
             except TypeError:
                 print("Ingrese parámetro correcto") 
         diario[dia_semana]=lista
-        try:
-            continuar1=str(input("Ingresa otra fecha[s/n] "))
-        except TypeError:
-            print("Ingrese parámetro correcto")  
+        continuar1=input("Ingresa otra fecha[s/n] ")
+        
     return diario        
 
 def imprimir(diario):
     print("Lista completa de citas: ")
     for fecha in diario:
         print("Para el día: ", fecha)
-        for dia,hora in dia[fecha]:
-            print(dia,hora)
+        for hora,nombre in diario[fecha]:
+            print(hora,nombre)
     
 
 def consultar_dia(diario):
     fecha=str(input("¿Cuál día desea consultar? "))
-     
+
     if fecha in diario:
-        for dia,hora in diario[fecha]:
-            print(dia,hora)
+        for hora,nombre in diario[fecha]:
+            print(hora,nombre)
     else:
         print("No hay citas para ese día")  
 
