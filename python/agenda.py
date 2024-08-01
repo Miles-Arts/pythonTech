@@ -37,6 +37,17 @@
 # imprimir(agenda)
 # consultar_fecha(agenda)
 
+print("---Agende su cita Médica---")
+
+def organizador():
+    diario=[]
+    continuar1="s"
+    while continuar1=="s":
+        fecha=input("Ingrese día de la semana")
+        continua2="s"
+        lista=[]
+        while continua2=="s":
+
 
 
 
