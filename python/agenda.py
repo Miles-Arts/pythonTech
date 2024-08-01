@@ -60,7 +60,23 @@ def organizador():
             continuar1=str(input("Ingresa otra fecha[s/n]"))
         except TypeError:
             print("Ingrese parámetro correcto")  
-    return diario                     
+    return diario        
+
+def imprimir(diario):
+    print("Lista completa de citas: ")
+    for fecha in diario:
+        print("Para el día: ", fecha)
+        for dia,hora in dia[fecha]:
+            print(dia,hora)
+    
+
+def consultar_dia(diario):
+    fecha=str(input("El día que desea consultar")) 
+    if fecha in diario:
+        for 
+    
+
+
 
 
 
