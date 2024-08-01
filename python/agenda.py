@@ -47,6 +47,23 @@ def organizador():
         continua2="s"
         lista=[]
         while continua2=="s":
+            try:
+                dia=str(input("Ingrese día de la cita: "))
+                hora=int(input("ingrese hora de cita: "))
+                nombre=str(input("Ingrese su nombre: "))
+                lista.append((dia,hora,nombre))
+                continua2=str(input("Agendar otra cita para el mismo día? [s/n]"))
+            except TypeError:
+                print("Ingrese parámetro correcto") 
+        diario[fecha]=lista
+        try:
+            continuar1=str(input("Ingresa otra fecha[s/n]"))
+        except TypeError:
+            print("Ingrese parámetro correcto")  
+    return diario                     
+
+
+
 
 
 
