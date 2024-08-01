@@ -31,4 +31,9 @@ def consultar_fecha(agenda):
         for hora, actividad in agenda[fecha]:
             print(hora,actividad)
     else:
-        print("No hay actividades agendadas para dicha fecha")                   
+        print("No hay actividades agendadas para dicha fecha")       
+
+agenda = cargar()
+imprimir(agenda)
+consultar_fecha(agenda)
+
