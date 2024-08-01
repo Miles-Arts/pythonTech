@@ -1,16 +1,16 @@
 # #Ejemplo de STOCK
 
 # def cargar():
-#     productos={}
-#     continua="s"
-#     while continua=="s":
-#         codigo=int(input("Ingrese el codigo del producto: "))
-#         descripcion=input("Ingrese la descripción: ")
-#         precio=float(input("Ingrese el precio: "))
-#         stock=int(input("Ingrese el stock actual: "))
-#         productos[codigo]=(descripcion,precio,stock)
-#         continua=input("Desea cargar otro producto[s/n]")
-#     return productos
+    # productos={}
+    # continua="s"
+    # while continua=="s":
+    #     codigo=int(input("Ingrese el codigo del producto: "))
+    #     descripcion=input("Ingrese la descripción: ")
+    #     precio=float(input("Ingrese el precio: "))
+    #     stock=int(input("Ingrese el stock actual: "))
+    #     productos[codigo]=(descripcion,precio,stock)
+    #     continua=input("Desea cargar otro producto[s/n]")
+    # return productos
 
 # def imprimir(productos):
 #     print("Listado completo de productos: ")
@@ -42,16 +42,16 @@ def transporte():
         placa_Vehiculo=int(input("Ingrese placa vehículo: "))
         print("Bus - Colectivo - Moto - Taxi - Taxi Turismo")
         tipo_Vehiculo=input("Ingrese tipo de vehículo: ")
-        precio_pasaje=int(input("Ingrese precio pasaje: "))
+        precio_pasaje=int(input("Ingrese precio pasaje: $"))
         hora_salida=int(input("Ingrese hora de salida: "))
-        vehiculos=[placa_Vehiculo]=(tipo_Vehiculo,precio_pasaje,hora_salida)
-        continuar=int("Desea ingresar otro vehiculo [s/n] ")
+        vehiculos[placa_Vehiculo]=(tipo_Vehiculo,precio_pasaje,hora_salida)
+        continuar=input("Desea ingresar otro vehiculo [s/n] ")
     return vehiculos
 
 def imprimir(vehiculos):
     print("Listado de vehículos: ")
     for placa_Vehiculo in vehiculos:
-        print(placa_Vehiculo, vehiculos[transporte][0],vehiculos[transporte][1],vehiculos[transporte][2])
+        print(placa_Vehiculo, vehiculos[placa_Vehiculo][0],vehiculos[placa_Vehiculo][1],vehiculos[placa_Vehiculo][2])
         
 def consultar(vehiculos):
     placa_Vehiculo=input("Ingrese placa vehículo a consultar: ")
