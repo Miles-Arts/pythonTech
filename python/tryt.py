@@ -122,3 +122,46 @@ while True:
         else:
             break
 print("Busqueda finalizada")                        
+
+
+# Restaurante El COMELÓN
+# Nombre Cliente
+# Dirección
+# Cantidad de Productos
+# Nombres Productos
+# PRecio
+# 
+# Mostrar en CONSOLA
+# Nombre Cliente - Dirección - 5 productos con nombre precio.
+# 
+# Mostrar el SUB TOTAL - IVA 19%
+# Total a PAGAR 
+# DESCUENTO 25% por cada 2 PRODUCTOS sobre el valor del producto
+#  
+# VALIDAR DATOS de ENTRADA 
+#  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
