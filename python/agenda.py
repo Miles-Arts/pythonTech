@@ -126,11 +126,13 @@ def imprimir(entradas):
             print(f"hora {hora_pelicula}")
 
 def consultar_dia(entradas):
-    dia_pelicula=str(input(print("Ingrese el día que desea hacerla consulta")))
-    if dia_pelicula in entradas:
-        for dia_pelicula,hora_pelicula in entradas[dia_pelicula]:
+    ingrese_pelicula=str(input("Ingrese el día de la consulta: "))
+    if ingrese_pelicula in entradas:
+        for dia_pelicula,hora_pelicula in entradas[ingrese_pelicula]:
             print(f"Día {dia_pelicula}")
             print(f"Hora {hora_pelicula}")
+    else:
+        print("No hay películas para ese día")    
 
 entradas=cine()  
 imprimir(entradas)
