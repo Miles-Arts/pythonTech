@@ -50,18 +50,42 @@
 # print("---------------------")
 
 
-print("-----CALCULAR ÁREA RECTÁNGULO------")
+# print("-----CALCULAR ÁREA RECTÁNGULO------")
 
-area_rectangulo=lambda base,altura: base*altura
+# area_rectangulo=lambda base,altura: base*altura
 
-print(f"El área del rectágulo es: {area_rectangulo(15,10)}")
+# print(f"El área del rectágulo es: {area_rectangulo(15,10)}")
 
-print("-----------")
-print("----CALCULAR ÁREA DEL CIRCULO-------")
+# print("-----------")
+# print("----CALCULAR ÁREA DEL CIRCULO-------")
 
-radio=int(input("Ingrese el radio delcículo: "))
-area_circulo=lambda radio: (radio ** 2) *  3.141592 
+# radio=int(input("Ingrese el radio delcículo: "))
+# area_circulo=lambda radio: (radio ** 2) * 3.141592 
 
-print(f"El área es: {area_circulo(radio)}")
+# print(f"El área es: {area_circulo(radio)}")
+# print(f"---Fin---")
+
+print(f"--------------")
+print(f"------RELACIÓN-------")
+
+mayor1=int(input("Ingrese un numero: "))
+mayor2=int(input("Ingrese un numero: "))
+
+# numeros=lambda numero: " 1" if numero == 1 
+
+# if mayor1 == mayor2:
+#     print("0")
+# elif mayor1 > mayor2:
+#     print("1")
+# elif mayor1 < mayor2:
+#     print("-1")
+# else:
+#     print("Ingrese un parámetro correcto")
+
+comparar=lambda mayor1, mayor2: 0 if mayor1 == mayor2 else (1 if mayor1 > mayor2 else -1)        
+
+print(comparar(mayor1,mayor2))
+
+print("---Fin---") 
 
 
