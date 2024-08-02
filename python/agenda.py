@@ -38,6 +38,7 @@
 # consultar_fecha(agenda)
 
 print("---Agende su cita Médica---")
+print("")
 
 def organizador():
     diario={}
@@ -52,7 +53,7 @@ def organizador():
         lista=[]
         while continua2=="s":
             try:
-                hora=int(input("ingrese hora de cita [24h]: "))
+                hora=int(input("Ingrese hora de cita [24h]: "))
                 nombre=str(input("Ingrese su nombre: "))
                 lista.append((hora,nombre))
                 continua2=str(input("Agendar otra cita para el mismo día? [s/n] "))
@@ -64,9 +65,10 @@ def organizador():
     return diario        
 
 def imprimir(diario):
+    print("-------------------------")
     print("Lista completa de citas: ")
     for fecha in diario:
-        print("Para el día: ", fecha)
+        print("Para el día:", fecha)
         for hora,nombre in diario[fecha]:
             print(hora,nombre)
     
@@ -78,7 +80,10 @@ def consultar_dia(diario):
         for hora,nombre in diario[fecha]:
             print(hora,nombre)
     else:
-        print("No hay citas para ese día")  
+        print("-------------------------")
+        print("No hay citas para ese día")
+        print("---Gracias por consultar---")
+        
 
 diario=organizador()
 imprimir(diario)
