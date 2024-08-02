@@ -173,38 +173,67 @@
 print("---------------------------")
 
 
-def sumar(n1,n2):
-    return n1+n2
+# def sumar(n1,n2):
+#     return n1+n2
 
-suma = sumar(1,2)
-print(suma)
+# suma = sumar(1,2)
+# print(suma)
 
 # exepciones
 
 
 notas = ["a","b","c","d","a","b","c","d""a","b","c","d"]
 
-letra = input("Ingrese letra: ")
-indiceInicio = input("Ingrese Indice inicio: ")
-indiceFinal = input("Ingrese Indice final: ")
+while True:
+    letra = input("Ingrese letra: ")
+    indiceInicio = input("Ingrese Indice inicio: ")
+    indiceFinal = input("Ingrese Indice final: ")
+    noExiste=False
 
-noExiste=False
-try:
-    indiceInicio = int(indiceInicio)
-    indiceFinal = int(indiceFinal)
+
     try:
-        posicion=notas.index(letra, indiceInicio, indiceFinal)
-    except:
-        noExiste = True
-    else:
-        print(posicion)
-    finally:
-        print("No Existe")
+        indiceInicio = int(indiceInicio)
+        indiceFinal = int(indiceFinal)
+        try:
+            posicion=notas.index(letra, indiceInicio, indiceFinal)
+        except ValueError as mensajeError:
+            noExiste = True
+            # print(mensajeError)
+            raise
+        # else:
+        #     print(posicion)
+        # finally:
+        #     print("No Existe")
 
-except ValueError:
-    print("Elemento no encontrado")  
+    except ValueError as mensajeError:
+        if noExiste:
+            ("Elemento no encontrado")
+        else:    
+            print("Erro Se debe ingresar numeros")
+
+        print(mensajeError)  
+        2
+    else:
+        print(f"La letra esta en la posición {posicion}")
+        res=None
+        while res != "2":
+            print("¿Desea ingresar otra letra? \n1. si\n2. no")
+            res=input()
+            if res == "1":
+                break
+            elif res == "2":
+                continue
+            else:
+                print("Opción no válida")
+        else:
+            break    
+
+
 
 # indiceInicio = input("Ingrese Indice inicio: ")  
 # indiceInicio = int(indiceInicio)  
 
 # print(indiceInicio)
+print("---------------------------")
+
+
