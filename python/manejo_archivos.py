@@ -23,7 +23,7 @@ diccionario={
     ]
 }
 
+# datos= json.dumps(diccionario, indent=4, sort_keys=True, separators=(".","="))
 datos= json.dumps(diccionario)
-print(datos)
 
 
