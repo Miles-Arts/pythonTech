@@ -37,59 +37,106 @@
 # imprimir(agenda)
 # consultar_fecha(agenda)
 
-print("---Agende su cita Médica---")
+# MEDICO
+
+# print("---Agende su cita Médica---")
+# print("")
+
+# def organizador():
+#     diario={}
+#     continuar1="s"
+#     while continuar1=="s":
+#         try:
+#             print("Lunes - Martes - Miércoles - Jueves - Viernes")
+#             dia_semana=input("Ingrese día de la semana: ")
+#         except TypeError:
+#             print("Ingrese parámetro correcto")     
+#         continua2="s"
+#         lista=[]
+#         while continua2=="s":
+#             try:
+#                 hora=int(input("Ingrese hora de cita [24h]: "))
+#                 nombre=str(input("Ingrese su nombre: "))
+#                 lista.append((hora,nombre))
+#                 continua2=str(input("Agendar otra cita para el mismo día? [s/n] "))
+#             except TypeError:
+#                 print("Ingrese parámetro correcto") 
+#         diario[dia_semana]=lista
+#         continuar1=input("Ingresa otra fecha[s/n] ")
+        
+#     return diario        
+
+# def imprimir(diario):
+#     print("-------------------------")
+#     print("Lista completa de citas: ")
+#     for fecha in diario:
+#         print("Día de la cita:", fecha)
+#         for hora,nombre in diario[fecha]:
+#             print(f"Nombre: {nombre}")
+#             print(f"Hora: {hora}")
+    
+
+# def consultar_dia(diario):
+#     fecha=str(input("¿Cuál día desea consultar? "))
+
+#     if fecha in diario:
+#         for hora,nombre in diario[fecha]:
+#             print(f"Nombre: {nombre}.")
+#             print(f"Hora: {hora}")
+#     else:
+#         print("-------------------------")
+#         print("No hay citas para ese día")
+#         print("---Gracias por consultar---")
+        
+
+# diario=organizador()
+# imprimir(diario)
+# consultar_dia(diario)              
+
+# -------------    
+# AGENDA 
+
+print("---CINEMA 24 HORAS---")
 print("")
 
-def organizador():
-    diario={}
-    continuar1="s"
-    while continuar1=="s":
-        try:
-            print("Lunes - Martes - Miércoles - Jueves - Viernes")
-            dia_semana=input("Ingrese día de la semana: ")
-        except TypeError:
-            print("Ingrese parámetro correcto")     
+def cine():
+    entradas={}
+    continuar="s"
+    while continuar=="s":
+        print("Acción - Misterio - Drama - Musical")
+        ingrese_pelicula=str(input("Ingrese un genero de Películas: "))
+        print("Lunes - Martes - Miércoles - Jueves - Viernes")
         continua2="s"
         lista=[]
         while continua2=="s":
-            try:
-                hora=int(input("Ingrese hora de cita [24h]: "))
-                nombre=str(input("Ingrese su nombre: "))
-                lista.append((hora,nombre))
-                continua2=str(input("Agendar otra cita para el mismo día? [s/n] "))
-            except TypeError:
-                print("Ingrese parámetro correcto") 
-        diario[dia_semana]=lista
-        continuar1=input("Ingresa otra fecha[s/n] ")
-        
-    return diario        
+            dia_pelicula=str(input("Escriba el día: "))
+            hora_pelicula=int(input("Ingrese la hora: "))
+            lista.append((dia_pelicula,hora_pelicula))
+            entradas[ingrese_pelicula]=lista
+            continua2=input("¿Desea añadir otra película?[s/n] ")
+        continuar=input("¿Desea añadir otro día? ")    
+    return entradas    
 
-def imprimir(diario):
-    print("-------------------------")
-    print("Lista completa de citas: ")
-    for fecha in diario:
-        print("Para el día:", fecha)
-        for hora,nombre in diario[fecha]:
-            print(hora,nombre)
-    
+def imprimir(entradas):
+    print("Lista completa de películas: ")
+    for dia_pelicula in entradas:
+        print(f"Día de la película: ", dia_pelicula )
+        for dia_pelicula,hora_pelicula in entradas[dia_pelicula]:
+            print(f"Día {dia_pelicula}")
+            print(f"hora {hora_pelicula}")
 
-def consultar_dia(diario):
-    fecha=str(input("¿Cuál día desea consultar? "))
+def consultar_dia(entradas):
+    dia_pelicula=str(input(print("Ingrese el día que desea hacerla consulta")))
+    if dia_pelicula in entradas:
+        for dia_pelicula,hora_pelicula in entradas[dia_pelicula]:
+            print(f"Día {dia_pelicula}")
+            print(f"Hora {hora_pelicula}")
 
-    if fecha in diario:
-        for hora,nombre in diario[fecha]:
-            print(hora,nombre)
-    else:
-        print("-------------------------")
-        print("No hay citas para ese día")
-        print("---Gracias por consultar---")
-        
+entradas=cine()  
+imprimir(entradas)
+consultar_dia(entradas)          
 
-diario=organizador()
-imprimir(diario)
-consultar_dia(diario)              
 
-    
 
 
 
