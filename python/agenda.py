@@ -94,7 +94,7 @@
 # consultar_dia(diario)              
 
 # -------------    
-# AGENDA 
+# CINEMA 
 
 print("---CINEMA 24 HORAS---")
 print("")

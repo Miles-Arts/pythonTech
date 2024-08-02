@@ -179,3 +179,32 @@ def sumar(n1,n2):
 suma = sumar(1,2)
 print(suma)
 
+# exepciones
+
+
+notas = ["a","b","c","d","a","b","c","d""a","b","c","d"]
+
+letra = input("Ingrese letra: ")
+indiceInicio = input("Ingrese Indice inicio: ")
+indiceFinal = input("Ingrese Indice final: ")
+
+noExiste=False
+try:
+    indiceInicio = int(indiceInicio)
+    indiceFinal = int(indiceFinal)
+    try:
+        posicion=notas.index(letra, indiceInicio, indiceFinal)
+    except:
+        noExiste = True
+    else:
+        print(posicion)
+    finally:
+        print("No Existe")
+
+except ValueError:
+    print("Elemento no encontrado")  
+
+# indiceInicio = input("Ingrese Indice inicio: ")  
+# indiceInicio = int(indiceInicio)  
+
+# print(indiceInicio)
