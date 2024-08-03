@@ -311,23 +311,34 @@ print("---------------")
 
 
 # MATRICES IRREGULARES
+# print("---------------")
+
+# irregulares=[
+#     [15,2,8,5,3],
+#     [3,3,7],
+#     [9,1,16,13],
+#     [],
+#     [5]
+# ]
+
+# for column in irregulares:
+#     for item in column:
+#         print(item, end=" ")
+#     print("")
+
+# 183
+
+
+# LISTA de COMPRESION
 print("---------------")
 
-irregulares=[
-    [15,2,8,5,3],
-    [3,3,7],
-    [9,1,16,13],
-    [],
-    [5]
-]
+matriz=[     
+    [1,2,3], 
+    [4,5,6], 
+    [7,8,["a",True,0.9]]
+    ]
 
-
-
-
-
-
-
-
+[print([columna for columna in fila]) for fila in matriz ]
 
 
 
