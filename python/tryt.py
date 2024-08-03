@@ -134,9 +134,7 @@
 # Mostrar en CONSOLA
 # Nombre Cliente - Dirección - 5 productos con nombre precio.
 # 
-# Mostrar el SUB TOTAL - IVA 19%
-# Total a PAGAR 
-# DESCUENTO 25% por cada 2 PRODUCTOS sobre el valor del producto
+
 #  
 # VALIDAR DATOS de ENTRADA 
 #  
@@ -154,15 +152,15 @@ def restaurante():
         # continuar2="s"
         lista_productos=[]
         # while continuar2=="s":
-        for i in range(1,6): 
+        for i in range(1,3): 
             print(f"Producto numero: {i} ")
             nombre_productos=input("Ingrese nombre productos: ")
-            precio_productos=input("Ingrese precio de productos: $")
+            precio_productos=float(input("Ingrese precio de productos: $"))
             lista_productos.append((nombre_productos,precio_productos))
             cliente[nombre_cliente,direccion_cliente]=lista_productos
             # continuar2=input("Desea añadir más productos? [s/n]")
             i+=1     
-        continuar=input("¿Continuar? [s/n]")  
+        continuar=input("¿Desea ingresar más productos? [s/n]")  
     return cliente      
 
 def imprimir(cliente):
@@ -177,14 +175,44 @@ def imprimir(cliente):
 def productos(cliente):
     # lista_productos=str(input("Nombre Cliente: "))
     for lista_productos in cliente:
-        for nombre_producto, precio_producto in cliente[lista_productos]:
+        for nombre_producto, precio_productos in cliente[lista_productos]:
             print(f"Producto: {nombre_producto}")
-            print(f"Precio: ${precio_producto}")
+            print(f"Precio: ${precio_productos}")
+
+# Mostrar el SUB TOTAL - IVA 19%
+# Total a PAGAR 
+# DESCUENTO 25% por cada 2 PRODUCTOS sobre el valor del producto
+# def precio(cliente):
+  
+#     for lista_productos in cliente:
+#         for precio_productos in cliente[lista_productos]:
+#             precio_product = sum(precio_productos)
+#             # precio_producto = int(precio_productos[1,2])
+#             iva= 0.19
+#             # precio_producto= sum(precio_producto)
+#             precio_producto_iva=precio_product + (precio_product * iva)
+#             print(f"Precio {precio_producto_iva:.2f}")
+
+def precio(cliente):
+    for lista_productos in cliente:
+        for precio_productos in cliente[lista_productos]:
+            # Asegúrate de que todos los elementos sean números
+            try:
+                # Convertir los precios a números flotantes
+                precios_numericos = [float(p) for p in precio_productos]
+                precio_product = sum(precios_numericos)
+                
+                iva = 0.19
+                precio_producto_iva = precio_product + (precio_product * iva)
+                print(f"Precio con IVA: {precio_producto_iva:.2f}")
+            except ValueError:
+                print("Error: Todos los precios deben ser números válidos.")
 
 
 cliente=restaurante()
 imprimir(cliente)  
-productos(cliente)        
+productos(cliente) 
+precio(cliente)       
 
 
 
