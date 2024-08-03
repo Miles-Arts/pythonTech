@@ -224,6 +224,102 @@
 
 # RECURSIVIDAD
 
+# def jugar(intento=1):
+#     try:
+#             respuesta=str(input("¿De qué color es la naranja?: ").lower())
+#             if respuesta != "naranja":         
+#                 if intento < 3:
+#                     print("\nFallaste! Inténtalo de nuevo")
+#                     intento+=1
+#                     jugar(intento)
+#                 else:
+#                     print("\nPerdiste!") 
+                     
+#             else:
+#                 print("\nGanaste!")
+#     except ValueError:
+#          print("err")
+               
+              
+# jugar()        
+# --------------------------------------
+
+# LISTA MULTIDIMENSIONAL
+
+# matriz=[[1,2,3], [4,5,6], [7,8,["a",True,0.9]]]
+
+# print(matriz)
+# print(matriz[0])
+# print(matriz[0][1])
+# print(matriz[2][2][1])
+
+# print("---------------")
+
+# matriz=[[1,2,3], [4,5,6], [7,8,["a",True,0.9]]]
+
+# for fila in matriz:
+#     print(fila)
+
+
+# LISTA MULTIDIMENSIONAL
+print("---------------")
+
+# matriz=[[1,2,3], [4,5,6], [7,8,["a",True,0.9]]]
+
+# for fila in matriz:
+#     print(fila[2])
+
+# for i in range(len(matriz)):
+#     print(matriz[2][i])
+
+# for i in range(len(matriz)):
+#     print(matriz[i][2])  
+# 
+# # LISTA MULTIDIMENSIONAL
+# print("---------------")
+
+# matriz=[
+#     [1,2,3], 
+#     [4,5,6], 
+#     [7,8,["a",True,0.9]]
+#     ]
+
+# for fila in range(len(matriz)):
+#     for columna in range(len(matriz[fila])):
+#         print(matriz[fila][columna], end="")
+#     print()
+
+# print("---------------")
+
+# sublista=matriz[2][2]       
+
+# for valor in sublista:
+#     print(valor)
+
+# print("---------------")
+
+# matriz=[
+#     [1,2,3], 
+#     [4,5,6], 
+#     [7,8,["a",True,0.9]]
+#     ]
+
+# for fila in  matriz:
+#     for columna in fila:
+#         print(columna, end="")
+#     print()    
+
+
+# MATRICES IRREGULARES
+print("---------------")
+
+irregulares=[
+    [15,2,8,5,3],
+    [3,3,7],
+    [9,1,16,13],
+    [],
+    [5]
+]
 
 
 
