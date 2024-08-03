@@ -38,181 +38,193 @@
 
 # while True:
 #     try:
-#         x = int(input("Ingrese un número: "))
-#         break
-#     except ValueError:
-#         print("Error, sólo ingrese números. ")
+# #         x = int(input("Ingrese un número: "))
+# #         break
+# #     except ValueError:
+# #         print("Error, sólo ingrese números. ")
 
-# print(x)
+# # print(x)
 
-# print("------------------")
-
-# try:
-#     print("Llamar...")
-# except:
-#     print("Error al llamar")
-# # else:
-# #     print("Entrando llamada...")     
-
-# # print("------------------")       
+# # print("------------------")
 
 # # try:
-# #     print(x)
+# #     print("Llamar...")
 # # except:
-# #     print("Algo salió mal")
-# # finally:
-# #     print("El 'try except' ha terminado")        
+# #     print("Error al llamar")
+# # # else:
+# # #     print("Entrando llamada...")     
 
-# # print("------------------")       
+# # # print("------------------")       
 
-# # try:
-# #     print(x)
-# # except NameError:
-# #     print("la variable x no está definida")
-# # finally:
-# #     print("El 'try except' ha terminado")  
+# # # try:
+# # #     print(x)
+# # # except:
+# # #     print("Algo salió mal")
+# # # finally:
+# # #     print("El 'try except' ha terminado")        
 
+# # # print("------------------")       
 
-
-# # # x = -1
-# # # if x < 0:
-# # #     raise Exception("No hay número por debajo de cero")
-
-# # x = "Hello"
-# # if not type(x) is int:
-# #     raise TypeError("sólo se permite números enteros")
-
-# # Listas Operadores Especiales
-# print("------------------")  
-
-# lista=["a","b","c","d","a","b","c","d","a","b","c","d"]
-
-# while True:
-#     print("Nueva Busqueda")
-#     letra=input("ingresa la letra a buscar: ")
-#     indiceInicio=input("Indice para inicar búsqueda: ")
-#     indiceFinal=input("Indice para terminar búsqueda: ")
-#     noExiste=False
-#     try:
-#         indiceInicio=int(indiceInicio)
-#         indiceFinal=int(indiceFinal)
-#         try:
-#             posicion=lista.index(letra, indiceInicio, indiceFinal)
-#         except ValueError:
-#             noExiste=True
-#             raise 
-#     except ValueError as mensajeError:
-#         if(noExiste):
-#             print(f"La letra {letra} no esta en la lista.")
-#         else:
-#             print("Solo se puede ingresar numeros.") 
-#         print(f"Error: {mensajeError}")
-#     else:
-#         print(f"la letra \"{letra}\" está en la posición: ", posicion)
-#         respuesta=None
-#         while(respuesta!="2"):
-#             print("¿Desea buscar otra letra? \n1.si\n2.no")
-#             respuesta=input()
-#             if(respuesta=="1"):
-#                 break
-#             elif(respuesta=="2"):
-#                 continue       
-#             else:
-#                 print("Opción no válida")
-#         else:
-#             break
-# print("Busqueda finalizada")                        
+# # # try:
+# # #     print(x)
+# # # except NameError:
+# # #     print("la variable x no está definida")
+# # # finally:
+# # #     print("El 'try except' ha terminado")  
 
 
-# Restaurante El COMELÓN
-# Nombre Cliente
-# Dirección
-# Cantidad de Productos
-# Nombres Productos
-# PRecio
-# 
-# Mostrar en CONSOLA
-# Nombre Cliente - Dirección - 5 productos con nombre precio.
-# 
 
-#  
-# VALIDAR DATOS de ENTRADA 
-#  
+# # # # x = -1
+# # # # if x < 0:
+# # # #     raise Exception("No hay número por debajo de cero")
 
-print("---RESTAURANTE---")
-print("---EL COMELÓN---")
+# # # x = "Hello"
+# # # if not type(x) is int:
+# # #     raise TypeError("sólo se permite números enteros")
 
-def restaurante():
-    cliente={}
-    continuar="s"
-    while continuar=="s":
-        print("Bienvenidos")
-        nombre_cliente=input("Ingrese su nombre: ")
-        direccion_cliente=input("Ingrese su dirección: ")
-        # continuar2="s"
-        lista_productos=[]
-        # while continuar2=="s":
-        for i in range(1,3): 
-            print(f"Producto numero: {i} ")
-            nombre_productos=input("Ingrese nombre productos: ")
-            precio_productos=float(input("Ingrese precio de productos: $"))
-            lista_productos.append((nombre_productos,precio_productos))
-            cliente[nombre_cliente,direccion_cliente]=lista_productos
-            # continuar2=input("Desea añadir más productos? [s/n]")
-            i+=1     
-        continuar=input("¿Desea ingresar más productos? [s/n]")  
-    return cliente      
+# # # Listas Operadores Especiales
+# # print("------------------")  
 
-def imprimir(cliente):
-    print("--------------")
-    for nombre_cliente in cliente:
-        print("Cliente: ", nombre_cliente)
-        for nombre_cliente, lista_productos in cliente:
-            print("El cliente: " , nombre_cliente)
-            print("Con dirección: " , lista_productos)
-            print("Lista completa de productos")
+# # lista=["a","b","c","d","a","b","c","d","a","b","c","d"]
 
-def productos(cliente):
-    # lista_productos=str(input("Nombre Cliente: "))
-    for lista_productos in cliente:
-        for nombre_producto, precio_productos in cliente[lista_productos]:
-            print(f"Producto: {nombre_producto}")
-            print(f"Precio: ${precio_productos}")
+# # while True:
+# #     print("Nueva Busqueda")
+# #     letra=input("ingresa la letra a buscar: ")
+# #     indiceInicio=input("Indice para inicar búsqueda: ")
+# #     indiceFinal=input("Indice para terminar búsqueda: ")
+# #     noExiste=False
+# #     try:
+# #         indiceInicio=int(indiceInicio)
+# #         indiceFinal=int(indiceFinal)
+# #         try:
+# #             posicion=lista.index(letra, indiceInicio, indiceFinal)
+# #         except ValueError:
+# #             noExiste=True
+# #             raise 
+# #     except ValueError as mensajeError:
+# #         if(noExiste):
+# #             print(f"La letra {letra} no esta en la lista.")
+# #         else:
+# #             print("Solo se puede ingresar numeros.") 
+# #         print(f"Error: {mensajeError}")
+# #     else:
+# #         print(f"la letra \"{letra}\" está en la posición: ", posicion)
+# #         respuesta=None
+# #         while(respuesta!="2"):
+# #             print("¿Desea buscar otra letra? \n1.si\n2.no")
+# #             respuesta=input()
+# #             if(respuesta=="1"):
+# #                 break
+# #             elif(respuesta=="2"):
+# #                 continue       
+# #             else:
+# #                 print("Opción no válida")
+# #         else:
+# #             break
+# # print("Busqueda finalizada")                        
 
-# Mostrar el SUB TOTAL - IVA 19%
-# Total a PAGAR 
-# DESCUENTO 25% por cada 2 PRODUCTOS sobre el valor del producto
-# def precio(cliente):
-  
+
+# # Restaurante El COMELÓN
+# # Nombre Cliente
+# # Dirección
+# # Cantidad de Productos
+# # Nombres Productos
+# # PRecio
+# # 
+# # Mostrar en CONSOLA
+# # Nombre Cliente - Dirección - 5 productos con nombre precio.
+# # 
+
+# #  
+# # VALIDAR DATOS de ENTRADA 
+# #  
+
+# print("---RESTAURANTE---")
+# print("---EL COMELÓN---")
+
+# def restaurante():
+#     cliente={}
+#     continuar="s"
+#     while continuar=="s":
+#         print("Bienvenidos")
+#         nombre_cliente=input("Ingrese su nombre: ")
+#         direccion_cliente=input("Ingrese su dirección: ")
+#         # continuar2="s"
+#         lista_productos=[]
+#         # while continuar2=="s":
+#         for i in range(1,6): 
+#             print(f"Producto numero: {i} ")
+#             nombre_productos=input("Ingrese nombre productos: ")
+#             precio_productos=float(input("Ingrese precio de productos: $"))
+#             lista_productos.append((nombre_productos,precio_productos))
+#             cliente[(nombre_cliente,direccion_cliente)]=lista_productos
+#             # continuar2=input("Desea añadir más productos? [s/n]")
+#             i+=1     
+#         continuar=input("¿Desea ingresar más productos? [s/n]")  
+#     return cliente      
+
+# def imprimir(cliente):
+#     print("--------------")
+#     for nombre_cliente in cliente:
+#         print("Cliente: ", nombre_cliente[0])
+#         for nombre_cliente, lista_productos in cliente:
+#             print("Con dirección: " , lista_productos)
+#             print("Lista completa de productos")
+
+# def productos(cliente):
+#     # lista_productos=str(input("Nombre Cliente: "))
 #     for lista_productos in cliente:
-#         for precio_productos in cliente[lista_productos]:
-#             precio_product = sum(precio_productos)
-#             # precio_producto = int(precio_productos[1,2])
-#             iva= 0.19
-#             # precio_producto= sum(precio_producto)
-#             precio_producto_iva=precio_product + (precio_product * iva)
-#             print(f"Precio {precio_producto_iva:.2f}")
+#         for nombre_producto, precio_productos in cliente[lista_productos]:
+#             print(f"Producto: {nombre_producto}")
+#             print(f"Precio: ${precio_productos}")
 
-def precio(cliente):
-    for lista_productos in cliente:
-        for precio_productos in cliente[lista_productos]:
-            # Asegúrate de que todos los elementos sean números
-            try:
-                # Convertir los precios a números flotantes
-                precios_numericos = [float(p) for p in precio_productos]
-                precio_product = sum(precios_numericos)
-                
-                iva = 0.19
-                precio_producto_iva = precio_product + (precio_product * iva)
-                print(f"Precio con IVA: {precio_producto_iva:.2f}")
-            except ValueError:
-                print("Error: Todos los precios deben ser números válidos.")
+# # Mostrar el SUB TOTAL - IVA 19%
+# # Total a PAGAR 
+# # DESCUENTO 25% por cada 2 PRODUCTOS sobre el valor del producto
+# # def precio(cliente):
+# #      for lista_productos in cliente:
+# #          for precio_productos in lista_productos:
+# #             try:    
+# #                 # precios_numericos = [float(p) for p in precio_productos]
+# #                 precio_sin_iva = sum(precio_productos)
+# #                 # precio_producto = int(precio_productos[1,2])
+# #                 iva = 0.19
+# #                 # precio_producto= sum(precio_producto)
+# #                 precio_producto_iva=precio_sin_iva + (precio_sin_iva * iva)
+# #                 print(f"Precio {precio_producto_iva:.2f}")
+# #             except:
+# #                 print("ERROR")    
 
 
-cliente=restaurante()
-imprimir(cliente)  
-productos(cliente) 
-precio(cliente)       
+# def precio(cliente):
+#     for (nombre_cliente, direccion_cliente), lista_productos in cliente.items():
+#         total_sin_iva = sum(precio for nombre, precio in lista_productos)
+#         iva = 0.19
+#         total_con_iva = total_sin_iva + (total_sin_iva * iva)
+        
+#         # Descuento del 25% por cada 2 productos
+#         descuento = 0
+#         if len(lista_productos) >= 2:
+#             descuento = sum(precio for nombre, precio in lista_productos) * 0.25
+        
+#         total_con_descuento = total_con_iva - descuento
+        
+#         print(f"Cliente: {nombre_cliente}")
+#         print(f"Total sin IVA: ${total_sin_iva:.2f}")
+#         print(f"Total con IVA: ${total_con_iva:.2f}")
+#         print(f"Descuento: ${descuento:.2f}")
+#         print(f"Total a pagar: ${total_con_descuento:.2f}")
+#         print("--------------")
+
+# cliente=restaurante()
+# imprimir(cliente)  
+# productos(cliente) 
+# precio(cliente)       
+
+
+# RECURSIVIDAD
+
+
 
 
 
