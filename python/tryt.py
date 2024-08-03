@@ -330,26 +330,72 @@ print("---------------")
 
 
 # LISTA de COMPRESION
+
+
+# [print([columna for columna in fila]) for fila in matriz ]
+# [print([columna[fila] for columna in matriz]) for fila in range(len(matriz)) ]
+
+
+# matriz.append([9,10,11])
+# matriz[0].extend([12,13,14])
+# matriz[2].reverse()
+
+# print(matriz)
+
+# print("---------------")
+
+# matriz=[     
+#     [1,2,3], 
+#     [4,5,6], 
+#     [7,8,["a",True,0.9]]
+#     ]
+
+# matriz[0][0]="m"
+# matriz[1][2]="n"
+# matriz[2][1]="o"
+
+# print(matriz)
+
+# print("---------------")
+# import random
+
+# matriz=[     
+#     [1,2,3], 
+#     [4,5,6], 
+#     [7,8,["a",True,0.9]]
+#     ]
+
+# filas=int(input("Ingrese el número de filas: "))
+# columnas=int(input("Ingrese el número de columnas: "))
+# matriz=[]
+
+# # matriz=[[random.randint(0,9) for c in range(columnas)] for f in range(filas)]
+
+# # print(matriz)
+
+# for f in range(filas):
+#     temporal=[]
+#     for c in range(columnas):
+#         temporal.append(random.randint(0,9))
+#     matriz.append(temporal)    
+
+# print(matriz)
+
+
 print("---------------")
 
-matriz=[     
-    [1,2,3], 
-    [4,5,6], 
-    [7,8,["a",True,0.9]]
-    ]
+fila=[]
 
-[print([columna for columna in fila]) for fila in matriz ]
+for f in range(3):
+    columna=[]
+    for c in range(5):
+        columna.append(0)
+    fila.append(columna)  
 
-
-
-
-
-
-
-
-
-
-
+for columna in fila:
+    for valor in columna:
+        print(valor, end=" ")
+    print          
 
 
 
