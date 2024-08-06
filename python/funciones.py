@@ -249,7 +249,7 @@
 
 # sumar(400,500)    
 
-print("---------------------------")
+# print("---------------------------")
 
 
 # def sumar(numero1, numero2):
@@ -270,12 +270,67 @@ print("---------------------------")
 # print(texto, respuesta)
 
 
-def sumar(numero1, numero2):
-    res=numero1+numero2
-    return res
+# def sumar(numero1, numero2):
+#     res=numero1+numero2
+#     return res
 
-numero1=300
-numero2=123
+# numero1=300
+# numero2=123
 
-respuesta=sumar(numero1,numero2)
-print(respuesta)
+# respuesta=sumar(numero1,numero2)
+# print(respuesta)
+
+
+# def sumar(numero1=0,numero2=0):
+#     res=numero1+numero2
+#     return "La respuesta es: ", res
+
+# texto, respuesta=sumar(numero1=10,numero2=15)
+# print(texto,respuesta)
+
+# print("-------------------------")
+    
+
+# def sumar(*args):
+#     print(args)
+#     n1,n2,n3,n4=args
+
+#     respuesta=n1+n2*n3*n4
+#     return respuesta
+
+# respuesta=sumar(2,4,6,8)
+# print(respuesta)
+
+# print("-------------------------")
+
+# def sumar(**args):
+#     print(args)
+#     respuesta=args["n1"]+args["n2"]
+
+#     return respuesta
+
+# respuesta=sumar(n1=2,n2=4,n3=6,n4=8)
+# print(respuesta)
+
+
+# print("---------------------------")
+
+# # # PROCESO
+# def calcularIva(costo, iva):
+#             calculo = 0
+#             calculo = (costo * iva)/ 100
+#             # return calculo
+#             return (costo * iva)/ 100
+
+# # # ENTRADA
+# costo = float(input("¿Cual es el monto a Calcular?: $ "))
+# iva = 12
+
+# # # SALIDA
+# resultado = calcularIva(costo, iva)    
+#  # print("El calculo de IVA es: $" + str(resultado) + "\n")
+#  # print("El calculo de IVA es: $" , (resultado) , "\n")
+# print(f"El calculo de IVA es: ${resultado:.2f} \n")
+
+
+print("---------------------------")
