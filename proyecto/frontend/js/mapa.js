@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
 
     L.marker([5.690338844121654, -73.22773931589995 ]).addTo(map)
-        .bindPopup("<b>Tuta Boyacá</b> <br> Bosque de Boyacá")
+        .bindPopup("<b>Tuta - Boyacá</b> <br> Bosque de Tuta")
         .openPopup();
 
 
