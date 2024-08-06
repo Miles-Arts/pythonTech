@@ -11,6 +11,8 @@ import json
 
 # print(dato)
 
+# PASAR DE DICCIONARIO A JSON COPN DUMPS
+
 # diccionario={
 #     "nombre":"Rodolfo", 
 #     "edad": 38, 
@@ -27,7 +29,7 @@ import json
 # datos= json.dumps(diccionario, indent=4, sort_keys=True, separators=(".","="))
 # print(datos)
 
-
+# PASAR DE JSON A DICCIONARIO CON LOADS
 objetoJSON = """
 {
     "nombre": "Rodolfo",
