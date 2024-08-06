@@ -170,7 +170,7 @@
 # # print("El calculo de IVA es: $" , (resultado) , "\n")
 # print(f"El calculo de IVA es: ${resultado:.2f} \n")
 
-print("---------------------------")
+# print("---------------------------")
 
 
 # def sumar(n1,n2):
@@ -182,58 +182,100 @@ print("---------------------------")
 # exepciones
 
 
-notas = ["a","b","c","d","a","b","c","d""a","b","c","d"]
+# notas = ["a","b","c","d","a","b","c","d""a","b","c","d"]
 
-while True:
-    letra = input("Ingrese letra: ")
-    indiceInicio = input("Ingrese Indice inicio: ")
-    indiceFinal = input("Ingrese Indice final: ")
-    noExiste=False
-
-
-    try:
-        indiceInicio = int(indiceInicio)
-        indiceFinal = int(indiceFinal)
-        try:
-            posicion=notas.index(letra, indiceInicio, indiceFinal)
-        except ValueError as mensajeError:
-            noExiste = True
-            # print(mensajeError)
-            raise
-        # else:
-        #     print(posicion)
-        # finally:
-        #     print("No Existe")
-
-    except ValueError as mensajeError:
-        if noExiste:
-            ("Elemento no encontrado")
-        else:    
-            print("Erro Se debe ingresar numeros")
-
-        print(mensajeError)  
-        2
-    else:
-        print(f"La letra esta en la posición {posicion}")
-        res=None
-        while res != "2":
-            print("¿Desea ingresar otra letra? \n1. si\n2. no")
-            res=input()
-            if res == "1":
-                break
-            elif res == "2":
-                continue
-            else:
-                print("Opción no válida")
-        else:
-            break    
+# while True:
+#     letra = input("Ingrese letra: ")
+#     indiceInicio = input("Ingrese Indice inicio: ")
+#     indiceFinal = input("Ingrese Indice final: ")
+#     noExiste=False
 
 
+#     try:
+#         indiceInicio = int(indiceInicio)
+#         indiceFinal = int(indiceFinal)
+#         try:
+#             posicion=notas.index(letra, indiceInicio, indiceFinal)
+#         except ValueError as mensajeError:
+#             noExiste = True
+#             # print(mensajeError)
+#             raise
+#         # else:
+#         #     print(posicion)
+#         # finally:
+#         #     print("No Existe")
 
-# indiceInicio = input("Ingrese Indice inicio: ")  
-# indiceInicio = int(indiceInicio)  
+#     except ValueError as mensajeError:
+#         if noExiste:
+#             ("Elemento no encontrado")
+#         else:    
+#             print("Erro Se debe ingresar numeros")
 
-# print(indiceInicio)
+#         print(mensajeError)  
+#         2
+#     else:
+#         print(f"La letra esta en la posición {posicion}")
+#         res=None
+#         while res != "2":
+#             print("¿Desea ingresar otra letra? \n1. si\n2. no")
+#             res=input()
+#             if res == "1":
+#                 break
+#             elif res == "2":
+#                 continue
+#             else:
+#                 print("Opción no válida")
+#         else:
+#             break    
+
+
+
+# # indiceInicio = input("Ingrese Indice inicio: ")  
+# # indiceInicio = int(indiceInicio)  
+
+# # print(indiceInicio)
+
+
+
+# def sumar():
+#     res=2+4
+#     print(res)
+
+# sumar()    
+
+# def sumar(numero1, numero2):
+#     res= numero1 + numero2
+#     print(res)
+
+# sumar(400,500)    
+
 print("---------------------------")
 
 
+# def sumar(numero1, numero2):
+#     res= numero1 + numero2
+#     return res
+
+# respuesta = sumar(450,550)    
+# print(respuesta)
+
+
+# # print(f"Cuanto es la suma de: {respuesta}")
+# # print(f"Cuanto es la suma de: {respuesta}")
+# def sumar1(numero1, numero2):
+#     res= numero1 + numero2
+#     return "El Resultado es: ", res 
+
+# texto, respuesta = sumar1(450,550)    
+# print(texto, respuesta)
+
+
+def sumar(numero1, numero2):
+    res=numero1+numero2
+    return res
+
+numero1=300
+numero2=123
+
+respuesta=sumar(numero1,numero2)
+print(respuesta)
