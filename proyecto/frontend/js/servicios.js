@@ -7,17 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
             descripcion: "Participa en nuestros tours guiados y experimenta la belleza y diversidad de los bosques.",
             imagen: "avistamiento.jpg" 
         },
+    
         {
             id: 2,
-            nombre: "Conservación de árboles",
-            descripcion: "Aprende sobre nuestras iniciativas de conservación para proteger y preservar las especies bosques locales.",
-            imagen: "conservacion.jpg"
-        },
-        {
-            id: 3,
             nombre: "Programas Educativos",
             descripcion: "Involúcrate en nuestros programas educativos diseñados para todas las edades y aprende sobre la importancia de la biodiversidad arborea.",
             imagen: "programas1.jpg"
+        },
+        {
+            id: 3,
+            nombre: "Conservación de árboles",
+            descripcion: "Aprende sobre nuestras iniciativas de conservación para proteger y preservar las especies bosques locales.",
+            imagen: "conservacion.jpg"
         }
     ];
  
