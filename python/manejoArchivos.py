@@ -30,45 +30,64 @@ import json
 # print(datos)
 
 # PASAR DE JSON A DICCIONARIO CON LOADS
-objetoJSON = """
-{
-    "nombre": "Rodolfo",
-    "edad":34,
-    "ciudad":"Cúcuta"
-}
-"""
+# objetoJSON = """
+# {
+#     "nombre": "Rodolfo",
+#     "edad":34,
+#     "ciudad":"Cúcuta"
+# }
+# """
 
-diccionario= json.loads(objetoJSON)
-print(diccionario)
-print(diccionario["nombre"])
-print(diccionario["edad"])
-print(diccionario["ciudad"])
+# diccionario= json.loads(objetoJSON)
+# print(diccionario)
+# print(diccionario["nombre"])
+# print(diccionario["edad"])
+# print(diccionario["ciudad"])
 
 
-cadena1=""" 
-[
-    {
-        "codigo": "1",
-        "descripción": "papas",
-        "precio": "15"
-    },
-    {
-        "codigo": "2",
-        "descripción": "naranjas",
-        "precio": "25"
-    }
+# cadena1=""" 
+# [
+#     {
+#         "codigo": "1",
+#         "descripción": "papas",
+#         "precio": "15"
+#     },
+#     {
+#         "codigo": "2",
+#         "descripción": "naranjas",
+#         "precio": "25"
+#     }
+# ]
+# """
+
+# print(type(cadena1))
+# print(cadena1)
+# print("_"*80)
+# lista=json.loads(cadena1)
+# print(type(lista))
+# print(lista)
+# print("_"*80)
+# cadena2=json.dumps(lista)
+# print(type(cadena2))
+# print(cadena2)
+
+contactos=[
+    (" Juanita", "Desarrolladora Back", "juanita@backmaria.com"),
+    ("Carla", "Analista", "carla@backmaria.com"),
+    ("José", "Desarrollador Front", "jose@backmaria.com"),
+    ("Peter", "Diseño UX/UI", "peter@backmaria.com")
 ]
-"""
 
-print(type(cadena1))
-print(cadena1)
-print("_"*80)
-lista=json.loads(cadena1)
-print(type(lista))
-print(lista)
-print("_"*80)
-cadena2=json.dumps(lista)
-print(type(cadena2))
-print(cadena2)
+datos=[]
 
+for nombre, empleo, email in contactos:
+    datos.append({"nombre":nombre, "empleo":empleo, "email": email})
+
+with open("contactos.json") as archivoJson:
+    json.dump(datos, archivoJson)
+
+with open(contactos.json) as archivoJson:
+    datos = json.load(archivoJson)  
+    for contacto in datos:
+        print(contacto["nombre"], contacto["empleo"], contacto["email"])
 
