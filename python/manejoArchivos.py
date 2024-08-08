@@ -120,5 +120,11 @@ for nombre, cargo, email in lista:
     # print(nombre, cargo, email)
 print(datos)
 
+# Funcion apuntar la direccion del ARCHIVO
+
+with open("usuarios.json", "w") as archivoJSON:
+    json.dump(datos, archivoJSON)
+
+
 
 
