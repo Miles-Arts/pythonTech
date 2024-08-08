@@ -103,22 +103,22 @@ lista=[
     ("usuario3", "cargo3", "email3"),
     ("usuario4", "cargo4", "email4")
 ]
-print("Tupla: ")
-print(lista)
+# print("Tupla: ")
+# print(lista)
 datos =[]
 
 
-
-print("-------------")
 print("Desacople de tuplas")
+print("-------------")
+
 # for nombre, cargo, email in ("usuario1", "cargo1", "email1"):
 
 
 for nombre, cargo, email in lista:
     datos.append({ "nombre": nombre, "cargo": cargo, "email": email})
 
-    print(nombre, cargo, email)
-    print(datos)
+    # print(nombre, cargo, email)
+print(datos)
 
 
 
