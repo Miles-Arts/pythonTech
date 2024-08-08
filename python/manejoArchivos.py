@@ -71,23 +71,45 @@ import json
 # print(type(cadena2))
 # print(cadena2)
 
-contactos=[
-    (" Juanita", "Desarrolladora Back", "juanita@backmaria.com"),
-    ("Carla", "Analista", "carla@backmaria.com"),
-    ("José", "Desarrollador Front", "jose@backmaria.com"),
-    ("Peter", "Diseño UX/UI", "peter@backmaria.com")
+# contactos=[
+#     (" Juanita", "Desarrolladora Back", "juanita@backmaria.com"),
+#     ("Carla", "Analista", "carla@backmaria.com"),
+#     ("José", "Desarrollador Front", "jose@backmaria.com"),
+#     ("Peter", "Diseño UX/UI", "peter@backmaria.com")
+# ]
+
+# datos=[]
+
+# for nombre, empleo, email in contactos:
+#     datos.append({"nombre":nombre, "empleo":empleo, "email": email})
+
+# with open("contactos.json") as archivoJson:
+#     json.dump(datos, archivoJson)
+
+# with open(contactos.json) as archivoJson:
+#     datos = json.load(archivoJson)  
+#     for contacto in datos:
+#         print(contacto["nombre"], contacto["empleo"], contacto["email"])
+
+
+# Convertir TUPLA a DICCIONARIO
+# Desacople de tuplas
+
+print("----------------")
+
+lista=[
+    ("usuario1", "cargo1", "email1"),
+    ("usuario2", "cargo2", "email2"),
+    ("usuario3", "cargo3", "email3"),
+    ("usuario4", "cargo4", "email4")
 ]
 
-datos=[]
+datos =[]
 
-for nombre, empleo, email in contactos:
-    datos.append({"nombre":nombre, "empleo":empleo, "email": email})
 
-with open("contactos.json") as archivoJson:
-    json.dump(datos, archivoJson)
+for nombre, cargo, email in lista:
 
-with open(contactos.json) as archivoJson:
-    datos = json.load(archivoJson)  
-    for contacto in datos:
-        print(contacto["nombre"], contacto["empleo"], contacto["email"])
+    # print("Desacople de tuplas")
+    print(nombre, cargo, email)
+
 
