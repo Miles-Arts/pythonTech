@@ -123,13 +123,22 @@ print(f"a {datos}")
 # Funcion apuntar la direccion del ARCHIVO
 # ESCRIBIENDO COnvertir crear o sobre escribir archivo JSON
 # Lo que encuentre en PYTHON lo pasa a JSON.
+# ESCRITURA de JSON "w"
+print("Serialización de DATOS")
 with open("usuarios.json", "w") as archivoJSON:
     json.dump(datos, archivoJSON)
 
 # LEER del archivo JSON y convertir a Python
 print(" ")
+print("Deserialización de DATOS")
 with open("usuarios.json", "r") as archivoJSON:
     datos = json.load(archivoJSON)
-    print("Lectura de JSON")
+    print("Lectura de JSON:")
+    print(datos)
+
+# Lectura de JSON "r"
+with open("datos.json", "r") as archivoJSON:
+    datos = json.load(archivoJSON)
+    print("B")
     print(datos)
 
