@@ -1,6 +1,1 @@
-[
-    {"nombre": "usuario1", "cargo": "cargo1", "email": "email1"}, 
-    {"nombre": "usuario2", "cargo": "cargo2", "email": "email2"}, 
-    {"nombre": "usuario3", "cargo": "cargo3", "email": "email3"}, 
-    {"nombre": "usuario4", "cargo": "cargo4", "email": "email4"}
-]
+[{"nombre": "usuario1", "cargo": "cargo1", "email": "email1"}, {"nombre": "usuario2", "cargo": "cargo2", "email": "email2"}, {"nombre": "usuario3", "cargo": "cargo3", "email": "email3"}, {"nombre": "usuario4", "cargo": "cargo4", "email": "email4"}]

@@ -118,13 +118,18 @@ for nombre, cargo, email in lista:
     datos.append({ "nombre": nombre, "cargo": cargo, "email": email})
 
     # print(nombre, cargo, email)
-print(datos)
+print(f"a {datos}")
 
 # Funcion apuntar la direccion del ARCHIVO
-
+# ESCRIBIENDO COnvertir crear o sobre escribir archivo JSON
+# Lo que encuentre en PYTHON lo pasa a JSON.
 with open("usuarios.json", "w") as archivoJSON:
     json.dump(datos, archivoJSON)
 
-
-
+# LEER del archivo JSON y convertir a Python
+print(" ")
+with open("usuarios.json", "r") as archivoJSON:
+    datos = json.load(archivoJSON)
+    print("Lectura de JSON")
+    print(datos)
 
