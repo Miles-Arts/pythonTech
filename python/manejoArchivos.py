@@ -95,52 +95,66 @@ import json
 # Convertir TUPLA a DICCIONARIO
 # Desacople de tuplas
 
-print("----------------")
-
-lista=[
-    ("usuario1", "cargo1", "email1"),
-    ("usuario2", "cargo2", "email2"),
-    ("usuario3", "cargo3", "email3"),
-    ("usuario4", "cargo4", "email4")
-]
-# print("Tupla: ")
-# print(lista)
-datos =[]
 
 
-print("Desacople de tuplas")
-print("-------------")
+# lista=[
+#     ("usuario1", "cargo1", "email1"),
+#     ("usuario2", "cargo2", "email2"),
+#     ("usuario3", "cargo3", "email3"),
+#     ("usuario4", "cargo4", "email4")
+# ]
+# # print("Tupla: ")
+# # print(lista)
+# datos =[]
 
-# for nombre, cargo, email in ("usuario1", "cargo1", "email1"):
+
+# print("Desacople de tuplas")
+# print("-------------")
+
+# # for nombre, cargo, email in ("usuario1", "cargo1", "email1"):
 
 
-for nombre, cargo, email in lista:
-    datos.append({ "nombre": nombre, "cargo": cargo, "email": email})
+# for nombre, cargo, email in lista:
+#     datos.append({ "nombre": nombre, "cargo": cargo, "email": email})
 
-    # print(nombre, cargo, email)
-print(f"a {datos}")
+#     # print(nombre, cargo, email)
+# print(f"a {datos}")
 
-# Funcion apuntar la direccion del ARCHIVO
-# ESCRIBIENDO COnvertir crear o sobre escribir archivo JSON
-# Lo que encuentre en PYTHON lo pasa a JSON.
-# ESCRITURA de JSON "w"
-print("Serialización de DATOS")
-with open("usuarios.json", "w") as archivoJSON:
-    json.dump(datos, archivoJSON)
+# # Funcion apuntar la direccion del ARCHIVO
+# # ESCRIBIENDO COnvertir crear o sobre escribir archivo JSON
+# # Lo que encuentre en PYTHON lo pasa a JSON.
+# # ESCRITURA de JSON "w"
+# print("Serialización de DATOS")
+# with open("usuarios.json", "w") as archivoJSON:
+#     json.dump(datos, archivoJSON)
 
-# LEER del archivo JSON y convertir a Python
-print(" ")
-print("Deserialización de DATOS")
-with open("usuarios.json", "r") as archivoJSON:
-    datos = json.load(archivoJSON)
-    print("Lectura de JSON:")
-    print(datos)
+# # LEER del archivo JSON y convertir a Python
+# print(" ")
+# print("Deserialización de DATOS")
+# with open("usuarios.json", "r") as archivoJSON:
+#     datos = json.load(archivoJSON)
+#     print("Lectura de JSON:")
+#     print(datos)
 
-# Lectura de JSON "r"
-with open("datos.json") as archivoJSON:
-    datos = json.load(archivoJSON)
-    for clientes in datos:
-        print("B")
-        print(clientes)
+# # Lectura de JSON "r"
+# with open("datos.json") as archivoJSON:
+#     datos = json.load(archivoJSON)
+#     for clientes in datos.items():
+#         print("B")
+#         print(clientes)
     # print(datos)
 
+# MANEJO DE ARCHIVOS
+print("----------------")
+
+# Abrir y Cerrar siempre los Archivos
+# Se guarda la ruta
+# abrir=open("archivo.txt")
+# print(abrir.read())
+# abrir.close()
+
+
+# CONTEXT MANAGER
+
+with open("archivo.txt", "r") as abrir:
+        print(abrir.read())
