@@ -1,11 +1,11 @@
 print("----------------------------")
 print(" ")
 
-nombre_dia="Viernes"
-nombre_producto="Libro"
-precio=200
-iva=0.19
-estado=True
+# nombre_dia="Viernes"
+# nombre_producto="Libro"
+# precio=200
+# iva=0.19
+# estado=True
 
 # print("El producto: " + nombre_producto + " tiene le precio de $" + str(precio))
 # print("El producto:", nombre_producto , "tiene le precio de $" ,precio)
@@ -74,26 +74,48 @@ estado=True
 #     print(f"- {i }")
 
 
-for i in range(5):
-    if i==2:
-        continue
-    print(f"{i }")
+# for i in range(5):
+#     if i==2:
+#         continue
+#     print(f"{i }")
+
+listas = []
+tuplas = ()
+diccionario = {}
+
+listas = [1, 2.5, True, "Rodolfo", ["a", "b", (7,2)], (1,  2, ["c", "d"]), {"clave1 ": 15, "clave2 ": 16}]
+
+print(listas)
+
+valor = listas[3]
+
+listas[2]= False
+
+valor2 = listas[4][1]
+valor3= listas[4][2][0]
+# valor4= listas[6]["clave1"]
+
+print(valor)
+print(valor2)
+print(valor3)
+# print(valor4)
+
+print(listas)
 
 
+listas[5][2][0]= "p"
+print(listas)
+
+print(" ")
+print("----------------------------")
+
+listas[6]["clave1"] = 8
+print(listas)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+nombre = input("Hola")
+precio = int(input("precio"))
+total = float(input("precio"))
 
 
 
