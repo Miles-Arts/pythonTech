@@ -208,7 +208,8 @@ print("----------------")
 with open("data.csv", "r", encoding="utf-8") as archivo:
     leer= csv.reader(archivo)
     for filas in leer:
-        print(filas[0][2][:1])
+        print(filas)
+        # print(filas[0][2][:1])
 
 print("----------------")
 
@@ -216,4 +217,8 @@ print("----------------")
 with open("data.csv", "r", encoding="utf-8") as archivo:
     leer= csv.reader(archivo)
     for filas in leer:
-        print(",".join(filas))
+        print(", ".join(filas))
+
+with open("data.csv", "a", encoding="utf-8") as archivo:
+           escribir = csv.writer(archivo)
+           escribir.writerow(['Luciana','ux/ui','luci@blik.com'])
