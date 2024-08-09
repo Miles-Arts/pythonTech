@@ -155,6 +155,28 @@ print("----------------")
 
 
 # CONTEXT MANAGER
+# Siempre tener ALIAS
+# with open("archivo.txt", "r") as abrir:
+#         print(abrir.read())
+
+# with open("archivo.txt", "r") as abrir:
+#     print(abrir.readline())
+
+# with open("archivo.txt", "r") as abrir:
+#     print(abrir.readlines())
+
+
+# Carácteres Especiales 
+# encoding="utf-8"
+with open("archivo.txt", "r", encoding="utf-8") as abrir:
+    print(abrir.readlines())
+
+print("----------------")
 
 with open("archivo.txt", "r") as abrir:
-        print(abrir.read())
+
+    for lineas in abrir:
+        print(lineas)
+
+
+
