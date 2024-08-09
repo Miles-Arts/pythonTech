@@ -1,4 +1,5 @@
 import json
+import csv
 # JSON
 
 # [{"clave1": 1,"clave2":2}]
@@ -145,7 +146,7 @@ import json
     # print(datos)
 
 # MANEJO DE ARCHIVOS
-print("----------------")
+# print("----------------")
 
 # Abrir y Cerrar siempre los Archivos
 # Se guarda la ruta
@@ -179,7 +180,7 @@ print("----------------")
 #         print(lineas)
 
 
-print("----------------")
+# print("----------------")
 
 # SOBRE ESCRIBIR "w"
 # with open("archivo3.txt", "w") as archivo:
@@ -197,5 +198,22 @@ print("----------------")
 # ARCHIVOS CSV
 print("----------------")
 
+with open("data.csv", "r", encoding="utf-8") as archivo:
+    leer= csv.reader(archivo)
+    for datas in leer:
+        print(datas)
 
+print("----------------")
 
+with open("data.csv", "r", encoding="utf-8") as archivo:
+    leer= csv.reader(archivo)
+    for filas in leer:
+        print(filas[0][2][:1])
+
+print("----------------")
+
+# con JOIN se pasa la lista a STRING
+with open("data.csv", "r", encoding="utf-8") as archivo:
+    leer= csv.reader(archivo)
+    for filas in leer:
+        print(",".join(filas))
