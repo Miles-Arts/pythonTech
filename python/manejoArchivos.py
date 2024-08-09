@@ -168,15 +168,20 @@ print("----------------")
 
 # Carácteres Especiales 
 # encoding="utf-8"
-with open("archivo.txt", "r", encoding="utf-8") as abrir:
-    print(abrir.readlines())
+# with open("archivo.txt", "r", encoding="utf-8") as abrir:
+#     print(abrir.readlines())
+
+# print("----------------")
+
+# with open("archivo.txt", "r") as abrir:
+
+#     for lineas in abrir:
+#         print(lineas)
+
 
 print("----------------")
 
-with open("archivo.txt", "r") as abrir:
-
-    for lineas in abrir:
-        print(lineas)
-
-
+# SOBRE ESCRIBIR
+with open("archivo2.txt", "w") as archivo:
+    print(archivo.write("Mercedes BENZ - 190E"))
 
