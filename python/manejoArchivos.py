@@ -181,7 +181,21 @@ print("----------------")
 
 print("----------------")
 
-# SOBRE ESCRIBIR
-with open("archivo2.txt", "w") as archivo:
-    print(archivo.write("Mercedes BENZ - 190E"))
+# SOBRE ESCRIBIR "w"
+# with open("archivo3.txt", "w") as archivo:
+#     print(archivo.write("Mercedes BENZ - 190E"))
+
+
+# with open("archivo3.txt", "w") as archivo:
+#     print(archivo.writelines(["Mercedes\n BENZ\n  - 190E\n EVO-II"]))
+
+# # AGrega al FINa con "a"
+# with open("archivo3.txt", "a", encoding="utf-8") as archivo:
+#     print(archivo.writelines(["\n🚗 Mercedes BENZ - S600 V6 💯"]))
+
+
+# ARCHIVOS CSV
+print("----------------")
+
+
 
