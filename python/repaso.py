@@ -63,19 +63,21 @@ estado=True
 #     if contador == 3:
 #         break
 
-desde = 0
-hasta = 10
-paso = 2
+# desde = 0
+# hasta = 10
+# paso = 2
 
-for i in range(desde, hasta , paso):
-    print(f"Hola {i }")
+# for i in range(desde, hasta , paso):
+#     print(f"Hola {i }")
     
-for i in range(0,6,1):
-    print(f"- {i }")
+# for i in range(0,6,1):
+#     print(f"- {i }")
 
 
-for i in range(6):
-    print(f"-- {i }")
+for i in range(5):
+    if i==2:
+        continue
+    print(f"{i }")
 
 
 
