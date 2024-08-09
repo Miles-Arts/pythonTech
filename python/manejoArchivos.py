@@ -221,4 +221,5 @@ with open("data.csv", "r", encoding="utf-8") as archivo:
 
 with open("data.csv", "a", encoding="utf-8") as archivo:
            escribir = csv.writer(archivo)
-           escribir.writerow(['Luciana','ux/ui','luci@blik.com'])
+
+           escribir.writerow(["Luciana","ux/ui","luci@blik.com"])
