@@ -137,8 +137,10 @@ with open("usuarios.json", "r") as archivoJSON:
     print(datos)
 
 # Lectura de JSON "r"
-with open("datos.json", "r") as archivoJSON:
+with open("datos.json") as archivoJSON:
     datos = json.load(archivoJSON)
-    print("B")
-    print(datos)
+    for clientes in datos:
+        print("B")
+        print(clientes)
+    # print(datos)
 
