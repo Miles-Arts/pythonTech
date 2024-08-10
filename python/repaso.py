@@ -150,6 +150,10 @@ for fila in range(len(matriz)):
         print(matriz[fila][columna], end=" ")
     print()
 
+sublista=matriz[2][2]
+for valor in sublista:
+    print(valor)    
+
 
 
 
