@@ -79,51 +79,76 @@ print(" ")
 #         continue
 #     print(f"{i }")
 
-listas = []
-tuplas = ()
-diccionario = {}
+# listas = []
+# tuplas = ()
+# diccionario = {}
 
-listas = [1, 2.5, True, "Rodolfo", ["a", "b", (7,2)], (1,  2, ["c", "d"]), {"clave1 ": 15, "clave2 ": 16}]
+# listas = [1, 2.5, True, "Rodolfo", ["a", "b", (7,2)], (1,  2, ["c", "d"]), {"clave1 ": 15, "clave2 ": 16}]
 
-print(listas)
+# print(listas)
 
-valor = listas[3]
+# valor = listas[3]
 
-listas[2]= False
+# listas[2]= False
 
-valor2 = listas[4][1]
-valor3= listas[4][2][0]
-# valor4= listas[6]["clave1"]
+# valor2 = listas[4][1]
+# valor3= listas[4][2][0]
+# # valor4= listas[6]["clave1"]
 
-print(valor)
-print(valor2)
-print(valor3)
-# print(valor4)
+# print(valor)
+# print(valor2)
+# print(valor3)
+# # print(valor4)
 
-print(listas)
-
-
-listas[5][2][0]= "p"
-print(listas)
-
-print(" ")
-print("----------------------------")
-
-listas[6]["clave1"] = 8
-print(listas)
+# print(listas)
 
 
-nombre = input("Hola")
-precio = int(input("precio"))
-total = float(input("precio"))
+# listas[5][2][0]= "p"
+# print(listas)
+
+# print(" ")
+# print("----------------------------")
+
+# listas[6]["clave1"] = 8
+# print(listas)
 
 
+# nombre = input("Hola")
+# precio = int(input("precio"))
+# total = float(input("precio"))
+
+# lista = [1,2,3,4]
+
+# i = lista[2]
+# print(i)
+
+# for i in lista:
+#     print(i)
 
 
+# irregulares =[
+#     [15, 2, 8, 5 , 3],
+#     [3, 3, 7],
+#     [9, 1, 16, 13],
+#     [],
+#     [5]
+# ]
 
+# for column in irregulares:
+#     for item in column:
+#         print(item, end=" ")
+#     print()    
 
+matriz=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,["a",True,0.9]],
+    ]
 
-
+for fila in range(len(matriz)):
+    for columna in range(len(matriz[fila])):
+        print(matriz[fila][columna], end=" ")
+    print()
 
 
 
