@@ -255,7 +255,7 @@ print(" ")
 
 
 # Deserializar
-print("------------------")
+
 
 
 # pais="""
@@ -275,34 +275,83 @@ print("------------------")
 # print(diccionario["moneda"])
 
 
-paises="""
-[
-    {
-        "pais": "Alemania",
-        "continente": "Europa",
-        "moneda": "Euro"
-    },
-    {
-        "pais": "Colombia",
-        "continente": "América del Sur",
-        "moneda": "Peso"
-    }
+print("------------------")
+
+# Escritura y lectura
+
+contactos=[
+    ("Carla", "Analista de Java", "carla@java.com"),
+    ("José", "ux/ui", "jose@uxui.com"),
+    ("Mariana", "Programadora Python", "mar@python.com"),
+    ("Nicolás", "Front End", "nico@front.com"),
+    ("Marta", "Back End", "marta@back.com"),
+    ("Lorena", "Analista de datos", "lore@data.com"),
 ]
-"""
-# Serialización y deserialización
+
+datos = []
+
+for nombre, empleo, email in contactos:
+    datos.append({"nombre": nombre, "empleo": empleo, "email": email})
+
+with open("contactos.json", "w") as archivoJson:
+    json.dump(datos, archivoJson )
+
+with open("contactos.json", "r") as archivoJson:
+    datos = json.load(archivoJson)
+    for contacto  in datos:
+        print(contacto["nombre"], contacto["empleo"], contacto["email"])
+
+# print(datos)
 
 
-print(paises)
-print(type(paises))
-print("_"*70)
-lista=json.loads(paises)
-print(lista)
-print(type(lista))
-print("_"*70)
-paises1=json.dumps(lista)
-print(paises1)
-print(type(paises1))
-print(paises1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
