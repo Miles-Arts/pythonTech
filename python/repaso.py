@@ -1,3 +1,4 @@
+import json
 print("----------------------------")
 print(" ")
 
@@ -139,67 +140,75 @@ print(" ")
 #         print(item, end=" ")
 #     print()    
 
-matriz=[
-    [1,2,3],
-    [4,5,6],
-    [7,8,["a",True,0.9]],
-    ]
+# matriz=[
+#     [1,2,3],
+#     [4,5,6],
+#     [7,8,["a",True,0.9]],
+#     ]
+# print("---------")
+
+# for fila in range(len(matriz)):
+#     for columna in range(len(matriz[fila])):
+#         print(matriz[fila][columna], end=" ")
+#     print()
+
+# print("---------")
+
+# sublista=matriz[2][2]
+# for valor in sublista:
+#     print(valor)   
+
+# print("---------")     
+
+# for fila in matriz:
+#     for columna in fila:
+#         print(columna, end="")
+#     print()    
+
+# print("---------") 
+
+# [print([columna for columna in fila]) for fila in matriz ]
+
+
+# print("---------") 
+
+# [print([columna[fila] for columna in matriz]) for fila in range(len(matriz)) ]
+
+
+# print(" ---------") 
+
+
+# # lista multidimensional
+# matriz.append([9,10,11])
+# print(matriz)
+# matriz[0].extend([12,13,14])
+# print(matriz)
+# matriz[1].reverse()
+# matriz[2].reverse()
+# print(matriz)
+
+
+# nombres=[
+#     [],
+#     [],
+#     []
+# ]
+# nombres.append(["Juanita", "soy", "Hola"])
+# nombres.append([" De Bogotá"])
+# print(nombres)
+# nombres[2].extend([" hola gente"])
+# print(nombres)
+# nombres.reverse()
+# print(nombres)
 print("---------")
 
-for fila in range(len(matriz)):
-    for columna in range(len(matriz[fila])):
-        print(matriz[fila][columna], end=" ")
-    print()
-
-print("---------")
-
-sublista=matriz[2][2]
-for valor in sublista:
-    print(valor)   
-
-print("---------")     
-
-for fila in matriz:
-    for columna in fila:
-        print(columna, end="")
-    print()    
-
-print("---------") 
-
-[print([columna for columna in fila]) for fila in matriz ]
-
-
-print("---------") 
-
-[print([columna[fila] for columna in matriz]) for fila in range(len(matriz)) ]
-
-
-print(" ---------") 
-
-
-# lista multidimensional
-matriz.append([9,10,11])
-print(matriz)
-matriz[0].extend([12,13,14])
-print(matriz)
-matriz[1].reverse()
-matriz[2].reverse()
-print(matriz)
-
-
-nombres=[
-    [],
-    [],
-    []
-]
-nombres.append(["Juanita", "soy", "Hola"])
-nombres.append([" De Bogotá"])
-print(nombres)
-nombres[2].extend([" hola gente"])
-print(nombres)
-nombres.reverse()
-print(nombres)
-
+diccionario={
+    "marca_vehículoa": "Mercedes Benz",
+    "placa": "abc123",
+    "tipo": "Sedan"
+}
+vehiculo=json.dumps(diccionario)
+print(vehiculo)
 
 
 
