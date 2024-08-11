@@ -293,10 +293,10 @@ datos = []
 for nombre, empleo, email in contactos:
     datos.append({"nombre": nombre, "empleo": empleo, "email": email})
 
-with open("contactos.json", "w") as archivoJson:
+with open("contactos.json", "w"  , encoding="utf-8") as archivoJson:
     json.dump(datos, archivoJson )
 
-with open("contactos.json", "r") as archivoJson:
+with open("contactos.json", "r" , encoding="utf-8") as archivoJson:
     datos = json.load(archivoJson)
     for contacto  in datos:
         print(contacto["nombre"], contacto["empleo"], contacto["email"])
