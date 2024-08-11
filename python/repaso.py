@@ -226,36 +226,83 @@ print(" ")
 # print(json.dumps(None))
 
 
-print("------------------")
+# print("------------------")
 
 
 # Tipos de datos
 
-diccionario={
-    "nombre": "Carolina",
-    "edad": 19,
-    "soltera": False,
-    "independiente": True,
-    "padres": ("Samuel", "Eva"),    
-    "hijos": None,
-    "mascotas": [
-        {"tipo": "gato", "edad": 3},
-        {"tipo": "perro", "edad": 2}
-    ] 
-}
+# diccionario={
+#     "nombre": "Carolina",
+#     "edad": 19,
+#     "soltera": False,
+#     "independiente": True,
+#     "padres": ("Samuel", "Eva"),    
+#     "hijos": None,
+#     "mascotas": [
+#         {"tipo": "gato", "edad": 3},
+#         {"tipo": "perro", "edad": 2}
+#     ] 
+# }
 
 
-datos1 = json.dumps(diccionario)
-datos2 = json.dumps(diccionario, ensure_ascii=False)
-datos3 = json.dumps(diccionario, indent=4, sort_keys=True, separators=(". ", " = "))
+# datos1 = json.dumps(diccionario)
+# datos2 = json.dumps(diccionario, ensure_ascii=False)
+# datos3 = json.dumps(diccionario, indent=4, sort_keys=True, separators=(". ", " = "))
 
-print(datos1)
-print(datos2)
-print(datos3)
-
-
+# print(datos1)
+# print(datos2)
+# print(datos3)
 
 
+# Deserializar
+print("------------------")
+
+
+# pais="""
+# {
+#     "pais": "Alemania",
+#     "continente": "Europa",
+#     "moneda": "Euro"
+
+# }
+# """
+
+# diccionario= json.loads(pais)
+
+# print(diccionario)
+# print(diccionario["pais"])
+# print(diccionario["continente"])
+# print(diccionario["moneda"])
+
+
+paises="""
+[
+    {
+        "pais": "Alemania",
+        "continente": "Europa",
+        "moneda": "Euro"
+    },
+    {
+        "pais": "Colombia",
+        "continente": "América del Sur",
+        "moneda": "Peso"
+    }
+]
+"""
+# Serialización y deserialización
+
+
+print(paises)
+print(type(paises))
+print("_"*70)
+lista=json.loads(paises)
+print(lista)
+print(type(lista))
+print("_"*70)
+paises1=json.dumps(lista)
+print(paises1)
+print(type(paises1))
+print(paises1)
 
 
 
