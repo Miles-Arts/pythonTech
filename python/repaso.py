@@ -200,25 +200,58 @@ print(" ")
 # print(nombres)
 # nombres.reverse()
 # print(nombres)
-print("---------")
+# print("---------")
+
+# diccionario={
+#     "marca_vehículo": "Mercedes Benz",
+#     "placa": "abc123",
+#     "tipo": "Sedan"
+# }
+# # ensure_ascii=False -- mantener acentos como tíldes
+# vehiculo=json.dumps(diccionario, ensure_ascii=False)
+# vehiculo1=json.dumps(diccionario)
+# print(vehiculo)
+# print(vehiculo1)
+
+# print("---------")
+
+# print(json.dumps({"nombre": "Luicina", "edad": 23}))
+# print(json.dumps(["Coco", "Durazno"]))
+# print(json.dumps(("Coco", "Durazno")))
+# print(json.dumps("Hola"))
+# print(json.dumps(42))
+# print(json.dumps(31.76))
+# print(json.dumps(True))
+# print(json.dumps(False))
+# print(json.dumps(None))
+
+
+print("------------------")
+
+
+# Tipos de datos
 
 diccionario={
-    "marca_vehículoa": "Mercedes Benz",
-    "placa": "abc123",
-    "tipo": "Sedan"
+    "nombre": "Carolina",
+    "edad": 19,
+    "soltera": False,
+    "independiente": True,
+    "padres": ("Samuel", "Eva"),    
+    "hijos": None,
+    "mascotas": [
+        {"tipo": "gato", "edad": 3},
+        {"tipo": "perro", "edad": 2}
+    ] 
 }
-vehiculo=json.dumps(diccionario)
-print(vehiculo)
 
 
+datos1 = json.dumps(diccionario)
+datos2 = json.dumps(diccionario, ensure_ascii=False)
+datos3 = json.dumps(diccionario, indent=4, sort_keys=True, separators=(". ", " = "))
 
-
-
-
-
-
-
-
+print(datos1)
+print(datos2)
+print(datos3)
 
 
 
