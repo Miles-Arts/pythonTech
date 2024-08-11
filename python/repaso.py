@@ -358,5 +358,6 @@ with open("contactos.json", "r" , encoding="utf-8") as archivoJson:
 
 
 
+
 print(" ")
 print("----------------------------")
