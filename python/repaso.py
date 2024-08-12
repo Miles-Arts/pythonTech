@@ -359,8 +359,18 @@ with open("contactoss.txt", "r", encoding="utf-8") as texto:
         print(linea)
 
 
+def leer_archivo(nombre_archivo):
+    try:
+        abrir_archivo = open("D:/SENA/USA/BOOTCAMP/python/"+nombre_archivo+".txt", "r", encoding="utf-8") 
+    except:
+        print("El Archivo " , nombre_archivo, "no se puede abrir")
+        quit()
 
+    return abrir_archivo.read()
 
+nombre_archivo=input("Ingrese el nombre del archivo: ")
+print("")
+print(leer_archivo(nombre_archivo))    
 
 
 
