@@ -201,17 +201,18 @@ import csv
 print("----------------")
 
 
-with open("mision.csv", "r", encoding="utf-8") as misionCSV:
-    leer=csv.writer(misionCSV)
+with open("misionn.csv", "r", encoding="utf-8") as misionCSV:
+    leer=csv.reader(misionCSV)
     for fila in leer:
         print(",".join(fila))
 
-with open("mision.csv", "a", encoding="utf-8") as misionCSV:
+with open("misionn.csv", "a", encoding="utf-8") as misionCSV:
     escribir=csv.writer(misionCSV)
-    escribir.writerow((["Rodrigo", "Quintero", "123456", "rodrigo@gmail.com" ]))
+    escribir.writerow(["Rodrigo", "Quintero", "123456", "rodrigo@gmail.com" ])
+    escribir.writerow(["Sofia", "Lucas", "123456", "sofia@gmail.com" ])
 
-
-
+with open("misionn.csv", "r", encoding="utf-8") as misionCSV:
+    leer=csv.reader(misionCSV)
 
 
 
