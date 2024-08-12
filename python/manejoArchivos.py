@@ -200,6 +200,12 @@ import csv
 # ARCHIVOS CSV
 print("----------------")
 
+contactos=[
+    ["Carla", "Lucas", "123456", "carla@gmail.com" ],
+    ["Joaquin", "Nieto", "123456", "nieto@gmail.com" ],
+    ["Fernanda", "Pizon", "123456", "fernanda@gmail.com" ],
+]
+
 
 with open("misionn.csv", "r", encoding="utf-8") as misionCSV:
     leer=csv.reader(misionCSV)
@@ -210,6 +216,11 @@ with open("misionn.csv", "a", encoding="utf-8") as misionCSV:
     escribir=csv.writer(misionCSV)
     escribir.writerow(["Rodrigo", "Quintero", "123456", "rodrigo@gmail.com" ])
     escribir.writerow(["Sofia", "Lucas", "123456", "sofia@gmail.com" ])
+
+
+with open("misionn.csv", "a", encoding="utf-8") as misionCSV:
+    escribir=csv.writer(misionCSV)
+    escribir.writerows(contactos)
 
 with open("misionn.csv", "r", encoding="utf-8") as misionCSV:
     leer=csv.reader(misionCSV)
