@@ -1,7 +1,7 @@
 import json
 import os
-print("----------------------------")
-print(" ")
+# print("----------------------------")
+# print(" ")
 
 # nombre_dia="Viernes"
 # nombre_producto="Libro"
@@ -259,14 +259,14 @@ print(" ")
 
 
 
-pais="""
-{
-    "pais": "Alemania",
-    "continente": "Europa",
-    "moneda": "Euro"
+# pais="""
+# {
+#     "pais": "Alemania",
+#     "continente": "Europa",
+#     "moneda": "Euro"
 
-}
-"""
+# }
+# """
 
 # diccionario= json.loads(pais)
 
@@ -276,7 +276,7 @@ pais="""
 # print(diccionario["moneda"])
 
 
-print("------------------")
+# print("------------------")
 
 # # Escritura y lectura
 
@@ -374,7 +374,7 @@ print("------------------")
 # print(leer_archivo(nombre_archivo))    
 
 
-print("---------------------")
+# print("---------------------")
 
 # mision = """
 
@@ -388,34 +388,37 @@ print("---------------------")
 # with open("mision.txt", "w", encoding="utf-8") as mision:
 #     print(mision.write("Hola"))
 
-abrir_archivo = open("mision.txt", "r+", encoding="utf-8")
+# abrir_archivo = open("mision.txt", "r+", encoding="utf-8")
 
-abrir_archivo.write("Hola Tripulante")
-abrir_archivo.writelines(["\nsoy una linea"])
-abrir_archivo.seek(35)
-abrir_archivo.write("Mision tic")
-abrir_archivo.seek(10)
-print(abrir_archivo.read(15))
-abrir_archivo.seek(0)
-abrir_archivo.writelines("Ciclo 1")
-abrir_archivo.close
+# abrir_archivo.write("Hola Tripulante")
+# abrir_archivo.writelines(["\nsoy una linea"])
+# abrir_archivo.seek(35)
+# abrir_archivo.write("Mision tic")
+# abrir_archivo.seek(10)
+# print(abrir_archivo.read(15))
+# abrir_archivo.seek(0)
+# abrir_archivo.writelines("Ciclo 1")
+# abrir_archivo.close
 
-print("-"*10)
+# print("-"*10)
 
-abrir_archivo=open("mision.txt", "r", encoding="utf-8")
-print(abrir_archivo.read(5))
+# abrir_archivo=open("mision.txt", "r", encoding="utf-8")
+# print(abrir_archivo.read(5))
 
-abrir_archivo=open("mision3.txt", "x", encoding="utf-8")
-
-abrir_archivo=open("mision4.txt", "a+", encoding="utf-8")
+# abrir_archivo=open("mision2.txt", "w", encoding="utf-8")
 
 
+# abrir_archivo=open("mision3.txt", "x", encoding="utf-8")
 
-os.remove("mision2.txt")
-os.rmdir("lacarpeta")
+# abrir_archivo=open("mision4.txt", "a+", encoding="utf-8")
 
 
 
+# os.remove("mision4.txt")
+# os.rmdir("mision4")
+
+
+print("-"*30)
 
 
 
