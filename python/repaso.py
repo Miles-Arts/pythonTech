@@ -258,14 +258,14 @@ print(" ")
 
 
 
-# pais="""
-# {
-#     "pais": "Alemania",
-#     "continente": "Europa",
-#     "moneda": "Euro"
+pais="""
+{
+    "pais": "Alemania",
+    "continente": "Europa",
+    "moneda": "Euro"
 
-# }
-# """
+}
+"""
 
 # diccionario= json.loads(pais)
 
@@ -304,27 +304,49 @@ with open("contactos.json", "r" , encoding="utf-8") as archivoJson:
 # print(datos)
 
 
+with open("contactoss.txt", "w", encoding="utf-8") as texto:
+    print(texto.write(pais))
+
+with open("contactoss.txt", "r", encoding="utf-8")  as texto:
+    print(texto.readline())    
+    print(texto.readline())    
+    print(texto.readline())    
+
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
+    print(texto.readline())
 
 
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
+    print(list(texto))
 
 
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
+    for linea in texto:
+        print(linea)
 
 
+with open("contactoss.txt", "w", encoding="utf-8")  as nTexto:
+    print(nTexto.write("Alemania"))
+
+with open("contactoss.txt", "w", encoding="utf-8") as nTexto:
+
+    nTexto.writelines(["Alemania\n", "Fundamentos de Automovilismo\n", str(2024) + "\n"])   
 
 
+with open("contactoss.txt", "a" , encoding="utf-8") as nTexto:
+    nTexto.writelines("Autos de Lujo")
 
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
+    caracteres=texto.read()
+    print(len(caracteres))
+    print(caracteres[:8])
 
-
-
-
-
-
-
-
-
-
-
-
+with open("contactoss.txt", "r", encoding="tuf-8") as texto:
+    cuenta = 0
+    for linea in texto:
+        if linea.startswith("F"):
+            print(linea)
+        print(cuenta)
 
 
 
