@@ -277,102 +277,124 @@ pais="""
 
 print("------------------")
 
-# Escritura y lectura
+# # Escritura y lectura
 
-contactos=[
-    ("Carla", "Analista de Java", "carla@java.com"),
-    ("José", "ux/ui", "jose@uxui.com"),
-    ("Mariana", "Programadora Python", "mar@python.com"),
-    ("Nicolás", "Front End", "nico@front.com"),
-    ("Marta", "Back End", "marta@back.com"),
-    ("Lorena", "Analista de datos", "lore@data.com"),
-]
+# contactos=[
+#     ("Carla", "Analista de Java", "carla@java.com"),
+#     ("José", "ux/ui", "jose@uxui.com"),
+#     ("Mariana", "Programadora Python", "mar@python.com"),
+#     ("Nicolás", "Front End", "nico@front.com"),
+#     ("Marta", "Back End", "marta@back.com"),
+#     ("Lorena", "Analista de datos", "lore@data.com"),
+# ]
 
-datos = []
+# datos = []
 
-for nombre, empleo, email in contactos:
-    datos.append({"nombre": nombre, "empleo": empleo, "email": email})
+# for nombre, empleo, email in contactos:
+#     datos.append({"nombre": nombre, "empleo": empleo, "email": email})
 
-with open("contactos.json", "w"  , encoding="utf-8") as archivoJson:
-    json.dump(datos, archivoJson )
+# with open("contactos.json", "w"  , encoding="utf-8") as archivoJson:
+#     json.dump(datos, archivoJson )
 
-with open("contactos.json", "r" , encoding="utf-8") as archivoJson:
-    datos = json.load(archivoJson)
-    for contacto  in datos:
-        print(contacto["nombre"], contacto["empleo"], contacto["email"])
+# with open("contactos.json", "r" , encoding="utf-8") as archivoJson:
+#     datos = json.load(archivoJson)
+#     for contacto  in datos:
+#         print(contacto["nombre"], contacto["empleo"], contacto["email"])
 
 # print(datos)
 
 
-with open("contactoss.txt", "w", encoding="utf-8") as texto:
-    print(texto.write(pais))
+# with open("contactoss.txt", "w", encoding="utf-8") as texto:
+#     print(texto.write(pais))
 
-with open("contactoss.txt", "r", encoding="utf-8")  as texto:
-    print(texto.readline())    
-    print(texto.readline())    
-    print(texto.readline())    
+# with open("contactoss.txt", "r", encoding="utf-8")  as texto:
+#     print(texto.readline())    
+#     print(texto.readline())    
+#     print(texto.readline())    
 
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    print(texto.readline())
-
-
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    print(list(texto))
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     print(texto.readline())
 
 
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    for linea in texto:
-        print(linea)
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     print(list(texto))
 
 
-with open("contactoss.txt", "w", encoding="utf-8")  as nTexto:
-    print(nTexto.write("Alemania"))
-
-with open("contactoss.txt", "w", encoding="utf-8") as nTexto:
-    nTexto.writelines(["Alemania\n", "Fundamentos de Automovilismo\n", str(2024) + "\n"])   
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     for linea in texto:
+#         print(linea)
 
 
-with open("contactoss.txt", "a" , encoding="utf-8") as nTexto:
-    nTexto.writelines("Autos de Lujo")
+# with open("contactoss.txt", "w", encoding="utf-8")  as nTexto:
+#     print(nTexto.write("Alemania"))
 
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    caracteres=texto.read()
-    print(len(caracteres))
-    print(caracteres[:8])
-
-print( "---------------------------------")    
-
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    cuenta = 0
-    for linea in texto:
-        cuenta+=1
-        if linea.startswith("F"):
-            print(linea)
-        print(cuenta)
-
-print( "---------------------------------")  
-with open("contactoss.txt", "r", encoding="utf-8") as texto:
-    for linea in texto:
-        linea=linea.rstrip()
-        if not linea.startswith("20"):
-            continue
-        print(linea)
+# with open("contactoss.txt", "w", encoding="utf-8") as nTexto:
+#     nTexto.writelines(["Alemania\n", "Fundamentos de Automovilismo\n", str(2024) + "\n"])   
 
 
-def leer_archivo(nombre_archivo):
-    try:
-        abrir_archivo = open("D:/SENA/USA/BOOTCAMP/python/"+nombre_archivo+".txt", "r", encoding="utf-8") 
-    except:
-        print("El Archivo " , nombre_archivo, "no se puede abrir")
-        quit()
+# with open("contactoss.txt", "a" , encoding="utf-8") as nTexto:
+#     nTexto.writelines("Autos de Lujo")
 
-    return abrir_archivo.read()
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     caracteres=texto.read()
+#     print(len(caracteres))
+#     print(caracteres[:8])
 
-nombre_archivo=input("Ingrese el nombre del archivo: ")
-print("")
-print(leer_archivo(nombre_archivo))    
+# print( "---------------------------------")    
+
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     cuenta = 0
+#     for linea in texto:
+#         cuenta+=1
+#         if linea.startswith("F"):
+#             print(linea)
+#         print(cuenta)
+
+# print( "---------------------------------")  
+# with open("contactoss.txt", "r", encoding="utf-8") as texto:
+#     for linea in texto:
+#         linea=linea.rstrip()
+#         if not linea.startswith("20"):
+#             continue
+#         print(linea)
 
 
+# def leer_archivo(nombre_archivo):
+#     try:
+#         abrir_archivo = open("D:/SENA/USA/BOOTCAMP/python/"+nombre_archivo+".txt", "r", encoding="utf-8") 
+#     except:
+#         print("El Archivo " , nombre_archivo, "no se puede abrir")
+#         quit()
+
+#     return abrir_archivo.read()
+
+# nombre_archivo=input("Ingrese el nombre del archivo: ")
+# print("")
+# print(leer_archivo(nombre_archivo))    
+
+
+print("---------------------")
+
+mision = """
+
+[{
+     "pais": "Alemania",
+    "continente": "Europa",
+    "moneda": "Euro"
+
+}]
+"""
+with open("mision.txt", "w", encoding="utf-8") as mision:
+    print(mision.write())
+
+abrir_archivo = open("contactoss.txt", "r+", encoding="utf-8")
+abrir_archivo.write("Hola Estudiante")
+
+abrir_archivo.writelines(["\nsoy una línea"])
+abrir_archivo.seek(35)
+abrir_archivo.write("Talento Tech")
+abrir_archivo.seek(10)
+print(abrir_archivo.read(15))
 
 
 
