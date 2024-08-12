@@ -195,31 +195,76 @@ import csv
 #     print(archivo.writelines(["\n🚗 Mercedes BENZ - S600 V6 💯"]))
 
 
+# 
+
 # ARCHIVOS CSV
 print("----------------")
 
-with open("data.csv", "r", encoding="utf-8") as archivo:
-    leer= csv.reader(archivo)
-    for datas in leer:
-        print(datas)
 
-print("----------------")
+with open("mision.csv", "r", encoding="utf-8") as misionCSV:
+    leer=csv.writer(misionCSV)
+    for fila in leer:
+        print(",".join(fila))
 
-with open("data.csv", "r", encoding="utf-8") as archivo:
-    leer= csv.reader(archivo)
-    for filas in leer:
-        print(filas)
-        # print(filas[0][2][:1])
+with open("mision.csv", "a", encoding="utf-8") as misionCSV:
+    escribir=csv.writer(misionCSV)
+    escribir.writerow((["Rodrigo", "Quintero", "123456", "rodrigo@gmail.com" ]))
 
-print("----------------")
 
-# con JOIN se pasa la lista a STRING
-with open("data.csv", "r", encoding="utf-8") as archivo:
-    leer= csv.reader(archivo)
-    for filas in leer:
-        print(", ".join(filas))
 
-with open("data.csv", "a", encoding="utf-8") as archivo:
-           escribir = csv.writer(archivo)
 
-           escribir.writerow(["Luciana","ux/ui","luci@blik.com"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("-"*70)
