@@ -1,4 +1,5 @@
 import json
+import os
 print("----------------------------")
 print(" ")
 
@@ -375,35 +376,43 @@ print("------------------")
 
 print("---------------------")
 
-mision = """
+# mision = """
 
-[{
-     "pais": "Alemania",
-    "continente": "Europa",
-    "moneda": "Euro"
+# [{
+#     "pais": "Alemania",
+#     "continente": "Europa",
+#     "moneda": "Euro"
 
-}]
-"""
-with open("mision.txt", "w", encoding="utf-8") as mision:
-    print(mision.write())
+# }]
+# """
+# with open("mision.txt", "w", encoding="utf-8") as mision:
+#     print(mision.write("Hola"))
 
-abrir_archivo = open("contactoss.txt", "r+", encoding="utf-8")
-abrir_archivo.write("Hola Estudiante")
+abrir_archivo = open("mision.txt", "r+", encoding="utf-8")
 
-abrir_archivo.writelines(["\nsoy una línea"])
+abrir_archivo.write("Hola Tripulante")
+abrir_archivo.writelines(["\nsoy una linea"])
 abrir_archivo.seek(35)
-abrir_archivo.write("Talento Tech")
+abrir_archivo.write("Mision tic")
 abrir_archivo.seek(10)
 print(abrir_archivo.read(15))
+abrir_archivo.seek(0)
+abrir_archivo.writelines("Ciclo 1")
+abrir_archivo.close
+
+print("-"*10)
+
+abrir_archivo=open("mision.txt", "r", encoding="utf-8")
+print(abrir_archivo.read(5))
+
+abrir_archivo=open("mision3.txt", "x", encoding="utf-8")
+
+abrir_archivo=open("mision4.txt", "a+", encoding="utf-8")
 
 
 
-
-
-
-
-
-
+os.remove("mision2.txt")
+os.rmdir("lacarpeta")
 
 
 
