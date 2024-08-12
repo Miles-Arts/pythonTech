@@ -329,7 +329,6 @@ with open("contactoss.txt", "w", encoding="utf-8")  as nTexto:
     print(nTexto.write("Alemania"))
 
 with open("contactoss.txt", "w", encoding="utf-8") as nTexto:
-
     nTexto.writelines(["Alemania\n", "Fundamentos de Automovilismo\n", str(2024) + "\n"])   
 
 
@@ -341,15 +340,23 @@ with open("contactoss.txt", "r", encoding="utf-8") as texto:
     print(len(caracteres))
     print(caracteres[:8])
 
-with open("contactoss.txt", "r", encoding="tuf-8") as texto:
+print( "---------------------------------")    
+
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
     cuenta = 0
     for linea in texto:
+        cuenta+=1
         if linea.startswith("F"):
             print(linea)
         print(cuenta)
 
-
-
+print( "---------------------------------")  
+with open("contactoss.txt", "r", encoding="utf-8") as texto:
+    for linea in texto:
+        linea=linea.rstrip()
+        if not linea.startswith("20"):
+            continue
+        print(linea)
 
 
 
