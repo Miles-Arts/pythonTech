@@ -18,15 +18,15 @@
 # else:
 #     print("Es triángulo isóceles")    
 
-lado1 = float(input("Ingrese la longitud del primer lado del triángulo: "))
-lado2 = float(input("Ingrese la longitud del segundo lado del triángulo: "))
-lado3 = float(input("Ingrese la longitud del tercer lado del triángulo: "))
+# lado1 = float(input("Ingrese la longitud del primer lado del triángulo: "))
+# lado2 = float(input("Ingrese la longitud del segundo lado del triángulo: "))
+# lado3 = float(input("Ingrese la longitud del tercer lado del triángulo: "))
 
-if lado1 == lado2 == lado3:
-    tipo = "equilátero"
-elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-    tipo = "isósceles"
-else:
-    tipo = "escaleno"
+# if lado1 == lado2 == lado3:
+#     tipo = "equilátero"
+# elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+#     tipo = "isósceles"
+# else:
+#     tipo = "escaleno"
 
-print(f"El triángulo es {tipo}.")
+# print(f"El triángulo es {tipo}.")
