@@ -29,8 +29,8 @@ while True:
         print(f"El áreas del Círculo es: {area}")
         break
     elif respuesta != "t" and respuesta != "c":
-        print("Ingrese un parámetro válido")
-    continue
+        print("Ingrese un parámetro válido.")
+        break
 
 
 
