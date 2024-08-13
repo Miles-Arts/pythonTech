@@ -10,7 +10,9 @@ dia_semana = str(input("Ingrese un día de la semana: ").lower())
 
 if dia_semana == "viernes":
     print(f"¡Es {dia_semana} ya vemos cerca el fin de semana!")
-elif dia_semana == "jueves" or  dia_semana == "miercoles":
+# elif dia_semana == "jueves" or  dia_semana == "miercoles":
+elif dia_semana in ["jueves", "miercoles"]:
     print(f"¡Es {dia_semana} si se puede!")
-elif dia_semana == "lunes" or  dia_semana == "sabado" or  dia_semana == "domingo":
+# elif dia_semana == "lunes" or  dia_semana == "sabado" or  dia_semana == "domingo":
+elif dia_semana in ["lunes", "sabado", "domingo"]:
     print(f"Avancemos que ya es {dia_semana}")    
