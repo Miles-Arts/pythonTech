@@ -7,6 +7,20 @@
 
 
 
+frase = str(input("Escribe una frase: ").lower())
+letra = str(input("Ingrese una letra: "))
+
+for letras in frase:
+    letras.split()
+    # print(letras)
+    if letras == letra:
+        numero_letras = len(letras)
+        sum(numero_letras)
+        print(f"Hay {numero_letras} letras de la letra {letras}")
+        break    
+else:
+    print("no hay letra")    
+
 
 
 
