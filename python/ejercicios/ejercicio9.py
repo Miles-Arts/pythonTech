@@ -21,32 +21,39 @@
 # else:
 #     print("no hay letra")    
 
-hola = "holoholo"
-letra = str(input("ingresa una letra: "))
+# hola = "holoholo"
+# letra = str(input("ingresa una letra: "))
 
-hola = hola.split()
+# hola = hola.split()
 
-holas = []
+# holas = []
 
-holas.append(hola)
+# holas.append(hola)
 
-# print(len(holas))
+# # print(len(holas))
 
-# palabra = len(hola)
+# # palabra = len(hola)
 
-for letras in range(0, len(hola), 1):
-        if letras == letra:
-              # sum(letra)
-            print(f"Encontramos  la letra {letra}")
-        break
+# for letras in range(0, len(hola), 1):
+#         if letras == letra:
+#               # sum(letra)
+#             print(f"Encontramos  la letra {letra}")
+#         break
         
-else:
-    print(f"no hay letra {letra} ")
+# else:
+#     print(f"no hay letra {letra} ")
 
 
 # print(palabra)
 
+frase = input("Ingrese una frase: ").lower()
+letra = input("Ingrese una letra: ").lower()
 
+if len(letra) == 1 and letra.isalpha():
+    cantidad_apariciones = frase.count(letra)
+    print(f"La letra '{letra}' aparece {cantidad_apariciones} veces en la frase.")
+else:
+    print("Entrada no válida. Por favor, ingrese una letra.")
 
 
 
