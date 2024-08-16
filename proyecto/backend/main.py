@@ -21,9 +21,12 @@ def agregarAve():
 def actualizarAve():
     print("Actualizar Ave.")
     especie= input("Ingrese la especie del ave que desea actualizar: ")
-    
     for ave in datosAves:
         if especie == ave["especie"]:
+            departamentoNuevo = input("Ingrese el departamento: ")
+            avistamientoNuevos = int(input("Ingrese los avistamientos: "))
+            # ave=["departamento"]= departamentoNuevo
+            # ave=["avistamiento"]= avistamientoNuevos
             print("Ave actualizada")
             return
      
@@ -31,7 +34,11 @@ def actualizarAve():
 
 
 def eliminarAve():
-    print("Eliminar Ave.")     
+    print("Eliminar Ave.")   
+    especie= input("Ingrese la especie que desea eliminar: ")
+    for ave in datosAves:
+        
+
 
 def menu():
     while True:
