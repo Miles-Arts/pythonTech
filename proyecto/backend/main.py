@@ -24,9 +24,9 @@ def actualizarAve():
     for ave in datosAves:
         if especie == ave["especie"]:
             departamentoNuevo = input("Ingrese el departamento: ")
-            avistamientoNuevos = int(input("Ingrese los avistamientos: "))
-            # ave=["departamento"]= departamentoNuevo
-            # ave=["avistamiento"]= avistamientoNuevos
+            avistamientosNuevos = int(input("Ingrese los avistamientos: "))
+            ave=["departamento"]= departamentoNuevo
+            ave=["avistamiento"]= avistamientosNuevos
             print("Ave actualizada")
             return
      
@@ -36,8 +36,24 @@ def actualizarAve():
 def eliminarAve():
     print("Eliminar Ave.")   
     especie= input("Ingrese la especie que desea eliminar: ")
-    for ave in datosAves:
-        
+    longitudAnterior = len(datosAves)
+
+    # COMPRESION DE LISTA
+    # listaSinEliminar=[]
+    # for ave in datosAves:
+    #     if especie != ave["especie"]:
+    #         listaSinEliminar.append(ave)
+
+    listaSinEliminado=[ave for ave in datosAves if especie != ave["especie"]]         
+    datosAves[:]= listaSinEliminado
+    datosAves[:]=[ave for ave in datosAves if especie != ave["especie"]]  
+    
+    if longitudAnterior > len(datosAves):
+        print("Ave eliminada")
+    else:
+        print("Especie no encontrada")    
+    
+    print(listaSinEliminado)        
 
 
 def menu():
