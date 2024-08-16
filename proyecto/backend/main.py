@@ -13,7 +13,7 @@ def agregarAve():
 
     especie = input("Ingrese la especie: ")
     departamento = input("Ingrese el departamento: ")
-    avistamiento = input("Ingrese los avistamiento: ")
+    avistamiento = int(input("Ingrese los avistamiento: "))
     ave={"especie": especie, "departamento": departamento, "avistamiento": avistamiento}
     datosAves.append(ave)
 
@@ -54,7 +54,7 @@ def menu():
         print("")
 
 menu()
-mostrarAves()    
+# mostrarAves()    
 # agregarAve()
 # actualizarAve()
 # eliminarAve()
