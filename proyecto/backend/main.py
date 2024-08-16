@@ -20,6 +20,15 @@ def agregarAve():
 
 def actualizarAve():
     print("Actualizar Ave.")
+    especie= input("Ingrese la especie del ave que desea actualizar: ")
+    
+    for ave in datosAves:
+        if especie == ave["especie"]:
+            print("Ave actualizada")
+            return
+     
+    print("Especie no encontrada")
+
 
 def eliminarAve():
     print("Eliminar Ave.")     
