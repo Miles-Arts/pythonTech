@@ -8,9 +8,20 @@ def mostrarAves():
     print("Mostrar Aves")
     print(datosAves)
 
+def agregarave():
+    print("Agregar Ave")
+
+def actualizarAve():
+    print("Actualizar Ave")
+
+def aliminarAve():
+    print("Eliminar Ave")     
+
 
 mostrarAves()    
-
+agregarave()
+actualizarAve()
+aliminarAve()
 
 
 
