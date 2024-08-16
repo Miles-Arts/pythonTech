@@ -25,8 +25,8 @@ def actualizarAve():
         if especie == ave["especie"]:
             departamentoNuevo = input("Ingrese el departamento: ")
             avistamientosNuevos = int(input("Ingrese los avistamientos: "))
-            ave=["departamento"]= departamentoNuevo
-            ave=["avistamiento"]= avistamientosNuevos
+            ave["departamento"]= departamentoNuevo
+            ave["avistamiento"]= avistamientosNuevos
             print("Ave actualizada")
             return
      
