@@ -9,6 +9,7 @@ carros = [
 
 def mostrar_vehiculo():
     print("Mostrar Vehículos")
+    print("")
     print(carros)
 
 def agregar_vehiculo():
@@ -26,14 +27,11 @@ def actualizar_vehiculo():
         if marca ==  carro["marca"]:
             nuevo_modelo = input("Ingrese nuevo modelo: ")
             nuevo_tipo = input("Ingrese nuevo tipo: ")
-            carro=["modelo"]=nuevo_modelo
-            carro=["tipo"]=nuevo_tipo
+            carro["modelo"]=nuevo_modelo
+            carro["tipo"]=nuevo_tipo
             print("Automovil actualizado")
             return
     print("Marca no encontrada")    
-
-
-
 
 def eliminar_vehiculo():
     print("eliminar")        
@@ -42,7 +40,7 @@ def eliminar_vehiculo():
 def menu_vehiculos():
    while True:
         print("---Menú Gestión de Vehículos---")
-        print("1. Ver .")
+        print("1. Ver.")
         print("2. Agregar Vehículo.")
         print("3. Editar Vehículo.")
         print("4. Eliminar Vehículo.")
