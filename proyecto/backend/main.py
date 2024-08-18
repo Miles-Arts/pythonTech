@@ -27,10 +27,10 @@ def actualizarAve():
             avistamientosNuevos = int(input("Ingrese los avistamientos: "))
             ave["departamento"]= departamentoNuevo
             ave["avistamiento"]= avistamientosNuevos
-            print("Ave actualizada")
+            print("Ave actualizada.")
             return
      
-    print("Especie no encontrada")
+    print("Especie no encontrada.")
 
 
 def eliminarAve():
@@ -51,7 +51,7 @@ def eliminarAve():
     if longitudAnterior > len(datosAves):
         print("Ave eliminada")
     else:
-        print("Especie no encontrada")    
+        print("Especie no encontrada.")    
     
     print(listaSinEliminado)        
 
@@ -59,11 +59,11 @@ def eliminarAve():
 def menu():
     while True:
         print("\n---Menú gestión de Aves---")
-        print("\n1. Ver todas las aves")
-        print("2. Agregar nueva ave")
-        print("3. Actualizar datos de una ave")
-        print("4. Eliminar un ave")
-        print("5. Salir")
+        print("\n1. Ver todas las aves.")
+        print("2. Agregar nueva ave.")
+        print("3. Actualizar datos de una ave.")
+        print("4. Eliminar un ave.")
+        print("5. Salir.")
         print("")
         opcion = input("Selecione una opción: ")
         print("")
