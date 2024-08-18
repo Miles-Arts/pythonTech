@@ -13,17 +13,24 @@ def mostrar_vehiculo():
 
 def agregar_vehiculo():
     print("Agregar nuevo vehículo")
-    modelo = input("\nIngrese un Modelo: ")
-    marca = input("Ingrese una marca de Vehículo: ")
+    marca = input("\nIngrese una marca de Vehículo: ")
+    modelo = input("Ingrese un Modelo: ")
     tipo = input("Ingrese tipo: ")
     carro={"marca": marca, "modelo": modelo, "tipo": tipo}
     carros.append(carro)
 
 def actualizar_vehiculo():
     print("editar")
-    modelo =input("\nIngrese modelo que desea actualizar: ")
+    marca =input("\nIngrese la marca que desea actualizar: ")
     for carro in carros:
-        if modelo ==  carro["modelo"]:
+        if marca ==  carro["marca"]:
+            nuevo_modelo = input("Ingrese nuevo modelo: ")
+            nuevo_tipo = input("Ingrese nuevo tipo: ")
+            carro=["modelo"]=nuevo_modelo
+            carro=["tipo"]=nuevo_tipo
+            print("Automovil actualizado")
+            return
+    print("Marca no encontrada")    
 
 
 
