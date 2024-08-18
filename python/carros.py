@@ -19,8 +19,14 @@ def agregar_vehiculo():
     carro={"marca": marca, "modelo": modelo, "tipo": tipo}
     carros.append(carro)
 
-def editar_vehiculo():
+def actualizar_vehiculo():
     print("editar")
+    modelo =input("\nIngrese modelo que desea actualizar: ")
+    for carro in carros:
+        if modelo ==  carro["modelo"]:
+
+
+
 
 def eliminar_vehiculo():
     print("eliminar")        
@@ -43,7 +49,7 @@ def menu_vehiculos():
         elif opcion == "2":
             agregar_vehiculo()
         elif opcion == "3":
-            editar_vehiculo()
+            actualizar_vehiculo()
         elif opcion == "4":
             eliminar_vehiculo()
         elif opcion == "5":
