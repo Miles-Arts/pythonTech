@@ -42,14 +42,15 @@ def eliminarAve():
     # for ave in datosAves:
     #     if especie != ave["especie"]:
     #         listaSinEliminar.append(ave)
-    listaSinEliminado=[ave for ave in datosAves if especie != ave["especie"]]         
-    datosAves[:]= listaSinEliminado
+    # listaSinEliminado=[ave for ave in datosAves if especie != ave["especie"]]         
+    # datosAves[:]= listaSinEliminado
     datosAves[:]=[ave for ave in datosAves if especie != ave["especie"]]  
     if longitudAnterior > len(datosAves):
         print("Ave eliminada")
     else:
         print("Especie no encontrada.")    
-    print(listaSinEliminado)        
+    # print(listaSinEliminado)        
+    print(datosAves)        
 
 
 def menu():

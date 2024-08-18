@@ -37,9 +37,12 @@ def eliminar_vehiculo():
     print("Eliminar") 
     marca=input("Ingrese la marca a eliminar: ")
     cantidad_anterior = len(carros)
-    
-
-
+    carros[:]=[carro for carro in carros if carro != carros["marca"]]
+    if cantidad_anterior > len(carros):
+        print("Marca de vehículo eliminado")
+    else:
+        print("Marca no encontrada")
+    print(carros)
 
 
 def menu_salir():
