@@ -3,8 +3,8 @@ print("-"*60)
 carros = [
     {"marca": "Mercedes Benz", "modelo": "C300", "tipo": "Sedan" },
     {"marca": "BMW", "modelo": "328i", "tipo": "Cabriolet" },
-    {"marca": "Audio", "modelo": "Q4", "tipo": "Sedan" },
-    {"marca": "Porsche", "modelo": "Cayenne", "tipo": "Camioneta" }
+    {"marca": "Audi", "modelo": "Q4", "tipo": "Sedan" },
+    {"marca": "Porsche", "modelo": "Cayenne", "tipo": "SUV" }
 ]
 
 def mostrar_vehiculo():
@@ -37,7 +37,7 @@ def eliminar_vehiculo():
     print("Eliminar") 
     marca=input("Ingrese la marca a eliminar: ")
     cantidad_anterior = len(carros)
-    carros[:]=[carro for carro in carros if carro != carros["marca"]]
+    carros[:]=[carro for carro in carros if marca != carro["marca"]]
     if cantidad_anterior > len(carros):
         print("Marca de vehículo eliminado")
     else:
