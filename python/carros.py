@@ -8,7 +8,7 @@ carros = [
 ]
 
 def mostrar_vehiculo():
-    print("Mostrar Vehículos")
+    print("---Mostrar Vehículos---")
     print("")
     print(carros)
 
@@ -34,20 +34,29 @@ def actualizar_vehiculo():
     print("Marca no encontrada")    
 
 def eliminar_vehiculo():
-    print("eliminar")        
+    print("Eliminar") 
+    marca=input("Ingrese la marca a eliminar: ")
+    cantidad_anterior = len(carros)
+    
+
+
+
+
+def menu_salir():
+    print("----FIN----")    
 
 
 def menu_vehiculos():
    while True:
         print("---Menú Gestión de Vehículos---")
-        print("1. Ver.")
+        print("\n1. Ver.")
         print("2. Agregar Vehículo.")
         print("3. Editar Vehículo.")
         print("4. Eliminar Vehículo.")
         print("5. Salir.")
         print("")
         opcion = input("Seleciones una opción: ")
-        print("")
+        print("\n")
 
         if opcion == "1":
             mostrar_vehiculo()
@@ -58,6 +67,7 @@ def menu_vehiculos():
         elif opcion == "4":
             eliminar_vehiculo()
         elif opcion == "5":
+            menu_salir()
             break
         else:
             print("Opción no válida.")        
