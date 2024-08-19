@@ -1,7 +1,7 @@
 def hola():
     print("hola mi gente")
 
-flores = [
+flores_especies = [
     {"flores": "Girasol", "color": "amarillo", "precio": 20},
     {"flores": "Rosa", "color": "rojo", "precio": 10},
     {"flores": "Orquidea", "color": "morado", "precio": 40},
@@ -9,43 +9,61 @@ flores = [
 
 
 def ver_flores():
-    print(flores)
+    print(flores_especies)
 
 def agregar_flores():
     print("Agregar Flores")
+    flores = input("Ingrese nueva flor: ")
+    color = input("Ingrese color de la flor: ")
+    precio = float(input("Ingrese valor de la flor: "))
+    flor={"flores": flores, "color": color, "precio": precio}
+    flores_especies.append(flor) 
+
 
 def editar_flores():
     print("Editar Flores")
+    editar_flor = input("Ingrese nombre flor a editar: ")
+    for flor in flores_especies:
+        if editar_flor in flores_especies["flores"]:
+            color_nuevo = input("Ingrese color de la flor: ")
+            precio_nuevo = float(input("Ingrese valor de la flor: "))
+            flor["color"]=color_nuevo
+            flor["precio"]=precio_nuevo
+            print("Flor editada")
+            return
+    
+    print("Ingrese un nombre válido")        
+
+
 
 def elimninar_flores():
     print("Eliminar Flores") 
 
-def salir_menu():
+def menu_salir():
     print("\n---FIN---")       
 
-
-while True:
-    print("---Menu Flores---")
-    print("\n1. Ver flores.")
-    print("2. Agregar flores.")
-    print("3. Editar flores.")
-    print("4. Eliminar flores.")
-    print("5. Salir del menú.")
-    opcion = input("\nIngrese un numero: ")
-                 
-    if opcion == "1":
-        ver_flores()
-    elif opcion == "2":
-        agregar_flores()
-    elif opcion == "3":
-        editar_flores()
-    elif opcion == "4":
-        elimninar_flores()
-    elif opcion == "5":
-        salir_menu()
-        break
-    else:
-        print("Dato incorrecto")                
-
-
-    break
+def menu_flores():
+    while True:
+        print("\n---Menu Flores---")
+        print("\n1. Ver flores.")
+        print("2. Agregar flores.")
+        print("3. Editar flores.")
+        print("4. Eliminar flores.")
+        print("5. Salir del menú.")
+        opcion = int(input("\nIngrese un numero: "))
+                    
+        if opcion == 1:
+            ver_flores()
+        elif opcion == 2:
+            agregar_flores()
+        elif opcion == 3:
+            editar_flores()
+        elif opcion == 4:
+            elimninar_flores()
+        elif opcion == 5:
+            menu_salir()
+            break
+        else:
+            print("\nDato incorrecto")                
+    
+menu_flores()
