@@ -24,15 +24,14 @@ def editar_flores():
     print("Editar Flores")
     editar_flor = input("Ingrese nombre flor a editar: ")
     for flor in flores_especies:
-        if editar_flor in flores_especies["flores"]:
+        if editar_flor == flor["flores"]:
             color_nuevo = input("Ingrese color de la flor: ")
             precio_nuevo = float(input("Ingrese valor de la flor: "))
             flor["color"]=color_nuevo
             flor["precio"]=precio_nuevo
             print("Flor editada")
             return
-    
-    print("Ingrese un nombre válido")        
+    print("\nIngrese un nombre válido")        
 
 
 
