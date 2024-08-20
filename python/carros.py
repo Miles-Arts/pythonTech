@@ -44,7 +44,6 @@ def eliminar_vehiculo():
         print("Marca no encontrada")
     print(carros)
 
-
 def menu_salir():
     print("----FIN----")    
 

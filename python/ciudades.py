@@ -1,9 +1,9 @@
 
 
 ciudades = [
-    {"Ciudad": "Bogotá", "Departamento": "Cundinamarca", "clima": "frío"},
-    {"Ciudad": "Medellín", "Departamento": "Antioquia", "clima": "templado"},
-    {"Ciudad": "Tunja", "Departamento": "Boyacá", "clima": "frío"}
+    {"Departamento": "Cundinamarca", "Ciudad": "Bogotá", "Clima": "frío"},
+    {"Departamento": "Antioquia", "Ciudad": "Medellín", "Clima": "templado"},
+    {"Departamento": "Boyacá", "Ciudad": "Tunja", "Clima": "frío"}
 ]
 
 def mostrar_ciudades():
@@ -20,22 +20,26 @@ def anadir_ciudad():
 
 def editar_ciudad():
     print("--Editar Ciudad--")    
-    ciudad_editar=input("Ingrese la ciudad a editar: ")
-    for ciudad in ciudades:
-        if ciudad_editar in ciudad["Ciudad"]:
-            print("Hola")
-        else:
-            print("ingrese un dato válido")          
+    ciudad = input("Ingrese la ciudad a editar: ")
+    for ciudad_ed in ciudades:
+        if ciudad == ciudad_ed["Ciudad"]:
+            nuevo_departamento=input("Ingrese la edición del departamento: ")
+            nuevo_clima=input("Ingrese clima a editar: ")
+            ciudad_ed["Departamento"]=nuevo_departamento
+            ciudad_ed["Clima"]=nuevo_clima
+            print("Ciudad Actualizada")
+            return
+    print("ingrese un dato válido")          
 
 def eliminar_ciudad():
     print("---Eliminador---")
     sin_eliminar = str(input("Ingrese el valor a eliminar: "))
     cantidad_casas_anterior = len(ciudades)
-    ciudades[:]=[ciudad for ciudad in ciudades if sin_eliminar != ciudad["ciudad"]]
+    ciudades[:]=[ciudad for ciudad in ciudades if sin_eliminar != ciudad["Ciudad"]]
     if cantidad_casas_anterior > len(ciudades):
         print("Casa eliminada")
     else:
-        ("Ingrese un parametro válido")    
+        print("Ciudad no encontrada")    
     print(ciudades)
 
 def menu_ciudades():
