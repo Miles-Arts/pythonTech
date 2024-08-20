@@ -39,7 +39,11 @@ def elimninar_flores():
     print("Eliminar Flores") 
     eliminar_flor = input("Ingrese la flor a eliminar: ")
     flores_anterior = len(flores_especies)
-    flores_especies[:]=
+    flores_especies[:]=[flor for flor in flores_especies if eliminar_flor != flor["flores"]]
+    if flores_anterior > len(flores_especies):
+        print("Flor eliminada")
+    else:
+        print("Escriba un parámetro válido")    
 
 def menu_salir():
     print("\n---FIN---")       
