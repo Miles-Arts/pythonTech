@@ -37,6 +37,16 @@ def editar_flores():
 
 def elimninar_flores():
     print("Eliminar Flores") 
+    eliminar_flor = input("Ingrese la flor a eliminar: ")
+    for eliminar in flores_especies:
+        if eliminar_flor == eliminar["flores"]:
+            print("Eliminada")
+        else: 
+            print("Ingrese un dato correcto")    
+        break
+
+
+
 
 def menu_salir():
     print("\n---FIN---")       
