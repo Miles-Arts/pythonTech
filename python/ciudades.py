@@ -1,7 +1,7 @@
 
 
 ciudades = [
-    {"Ciudad": "Bogotaá", "Departamento": "Cundinamarca", "clima": "frío"},
+    {"Ciudad": "Bogotá", "Departamento": "Cundinamarca", "clima": "frío"},
     {"Ciudad": "Medellín", "Departamento": "Antioquia", "clima": "templado"},
     {"Ciudad": "Tunja", "Departamento": "Boyacá", "clima": "frío"}
 ]
@@ -12,9 +12,20 @@ def mostrar_ciudades():
 
 def anadir_ciudad():
     print("--Añadir Ciudad--")
+    ciudad = input("Ingrese una nueva ciudad: ")
+    departamento= input("Ingrese nuevo departamento: ")
+    clima= input("Ingrese nuevo clima: ")
+    nueva_ciudad={"Ciudad": ciudad, "Departamento": departamento, "Clima": clima}
+    ciudades.append(nueva_ciudad)
 
 def editar_ciudad():
     print("--Editar Ciudad--")    
+    ciudad_editar=input("Ingrese la ciudad a editar: ")
+    for ciudad in ciudades:
+        if ciudad_editar in ciudad["Ciudad"]:
+            print("Hola")
+        else:
+            print("ingrese un dato válido")          
 
 def eliminar_ciudad():
     print("---Eliminador---")
@@ -29,6 +40,7 @@ def eliminar_ciudad():
 
 def menu_ciudades():
     while True:
+      print("")
       print("---Menu Ciudades---")  
       print("")
       print("1. Mostrar Ciudades")
@@ -61,8 +73,8 @@ def menu_ciudades():
 
 
 
-mostrar_ciudades()
+menu_ciudades()
 
 
 
-eliminar_ciudad()
+# eliminar_ciudad()
