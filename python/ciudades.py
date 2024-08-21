@@ -82,3 +82,4 @@ menu_ciudades()
 
 
 # eliminar_ciudad()
+help(id)
