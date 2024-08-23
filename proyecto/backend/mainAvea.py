@@ -53,9 +53,13 @@ def agregarAve():
             break
             
         observacion={}    
-        observacion=["fotos"]=input("Ingrese la fecha de la observación (YYY-MM-DD)")
-        observacion=["lugar"]=input("Ingrese el lugar del avistamiento: ")
+        observacion=["fotos"]=input("Ingrese la fecha de la observación (YYY-MM-DD):")
+        observacion=["lugar"]=input("Ingrese el lugar de la observación: ")
+        observacion=["avistamientos"]=input("Ingrese el números de avistamientos: ")
+        
+        observaciones.append(observacion)
 
+    aveNueva["observaciones"]=observaciones    
 
 
 
