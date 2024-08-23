@@ -70,15 +70,52 @@ def actualizarAve():
     for ave in datosAves:
         if nombreComun == ave["nombreComun"]:
             aveEncontrada=True
-            print("Actualizar ave")
-            return
+            print("Seleccione la opción que desea actualizar: ")
+            print("1. Descrpción")
+            print("1. Multimedia")
+            print("1. Obervaciones")
+
+            opcion=input()
+
+            if opcion == "1":
+                descripcion={}
+                descripcion["tamano"]=input("Ingrese el nuevo tamaño del Ave: ")
+                descripcion["color"]=input("Ingrese el nuevo color del Ave: ")
+                descripcion["caracteristica"]=input("Ingrese las nuevas caracteristica del Ave: ")
+                descripcion["comportamiento"]=input("Ingrese el nuevo comportamiento del Ave: ")
+                ave["descripcion"]=descripcion
+                
+            elif opcion == "2":   
+                multimedia={}
+                multimedia["fotos"]=input("Ingrese las rutas de las nuevas fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+                multimedia["sonidos"]=input("Ingrese las rutas de los nuevos sonidos: (ruta/sonido1.mp3 , ruta/sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+                ave["multimedia"]=multimedia
+
+            elif opcion == "3":
+                observaciones=[]
+                while True:
+                    res=input("¿Desea agrgar una observación?: \n1. Sí  \n2. No \n : ")
+                    if res == "2":
+                        break  
+
+                    observacion={}    
+                    observacion["fecha"]=input("Ingrese la nueva fecha de la observación (YYY-MM-DD):")
+                    observacion["lugar"]=input("Ingrese el nuevo lugar de la observación: ")
+                    observacion["avistamientos"]=input("Ingrese el números de nuevos avistamientos: ")
+                    
+                    observaciones.append(observacion)
+
+                    ave["observaciones"]=observaciones    
+                    datosAves.append(ave)
+                print("Ave agregada")
+
+            else:
+                print("Opción no válida")   
+
+            print("Ave actualizada.")     
 
     if not aveEncontrada:
         print("Nombre común no encontrado.")    
-
-
-
-        
 
 def eliminarAve():
     print("Eliminar Ave.")   
