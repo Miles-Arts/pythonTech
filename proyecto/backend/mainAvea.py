@@ -2,7 +2,7 @@ datosAves=[
     {
         "nombreComun": "Colibrí", 
         "descripcion": {
-            "tamaño": "9 cm",
+            "tamano": "9 cm",
             "color": "Verde y Rojo",
             "caracteristicas": "Pequeño",
             "comportamiento": "Se alimenta de neétar"
@@ -27,13 +27,29 @@ def agregarAve():
     print("Agregar Ave.")
     aveNueva={}
 
-    nombre=input("Ingrese el nombre común: ")
+    nombreComun=input("Ingrese el nombre común: ")
 
-    aveNueva["nombreComun"]=nombre
-    
+    aveNueva["nombreComun"]=nombreComun
 
+    descripcion={}
+    descripcion["tamano"]=input("Ingrese el tamaño del Ave: ")
+    descripcion["color"]=input("Ingrese el color del Ave: ")
+    descripcion["caracteristica"]=input("Ingrese la caracteristica del Ave: ")
+    descripcion["comportamiento"]=input("Ingrese la comportamiento del Ave: ")
 
+    aveNueva["descripcion"]=descripcion
 
+    multimedia={}
+    multimedia["fotos"]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+    multimedia["sonidos"]=input("Ingrese las rutas de los sonidos: (ruta/sonido1.mp3 , ruta/sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+
+    aveNueva["multimedia"]=multimedia
+
+    observaciones={}
+    observaciones["fecha"]=input("")
+    observaciones["lugar"]=input("")
+
+    aveNueva["observaciones"]=observaciones
 
 def actualizarAve():
     pass
