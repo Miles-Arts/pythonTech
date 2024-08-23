@@ -1,8 +1,8 @@
-import discord
-import requests
+# import discord
+# import requests
 
 # Clave API de Jooble
-API_KEY = "925c61ce-0418-48cc-a504-5b9fd4b26ebf"
+API_KEY = ""
 
 # Configuración de permisos para el bot
 intents = discord.Intents.default()
@@ -11,7 +11,7 @@ client = discord.Client(intents=intents)
 
 # Función para buscar vacantes utilizando la API de Jooble
 def buscar_vacantes(palabra_clave, ubicacion="remote"):
-    url = f"https://jooble.org/api/{API_KEY}/"
+    url = f""
     data = {
         "keywords": palabra_clave,
         "location": ubicacion,
