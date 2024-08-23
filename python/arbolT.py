@@ -75,7 +75,7 @@ def menu_arboles():
         print("3. Actualizar Árboles.")
         print("4. Eliminar Árboles.")
         print("5. Salir del menú.\n")
-        opcion = input(("Ingrese un numero del menú: "))
+        opcion = input(("Ingrese un número del menú: "))
 
         if opcion == "1":
             mostrar_arboles()
@@ -86,6 +86,7 @@ def menu_arboles():
         elif opcion == "4":
             eliminar_arboles()
         elif opcion == "5":
+            print("\n----Fin----")
             break
         print("Ingrese un número válido: ")                    
 
