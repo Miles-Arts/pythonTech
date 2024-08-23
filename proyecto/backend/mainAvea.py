@@ -45,11 +45,17 @@ def agregarAve():
 
     aveNueva["multimedia"]=multimedia
 
-    observaciones={}
-    observaciones["fecha"]=input("")
-    observaciones["lugar"]=input("")
+    observaciones=[] 
+    while True:
 
-    aveNueva["observaciones"]=observaciones
+        res=input("¿Desea agrgar una observación?: \n1. Sí \n2. No")
+        if res == "2":
+            break
+            
+        observacion={}    
+        observacion=["fotos"]=input("Ingrese la fecha de la observación (YYY-MM-DD)")
+        observacion=["lugar"]=input("Ingrese el lugar del avistamiento: ")
+
 
 
 
