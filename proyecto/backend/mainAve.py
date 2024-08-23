@@ -62,7 +62,23 @@ def agregarAve():
 
 
 def actualizarAve():
-    pass
+    # pass
+    print("Actualizar Ave.")
+    nombreComun= input("Ingrese el nombre común del ave que desea actualizar: ")
+    aveEncontrada= False
+
+    for ave in datosAves:
+        if nombreComun == ave["nombreComun"]:
+            aveEncontrada=True
+            print("Actualizar ave")
+            return
+
+    if not aveEncontrada:
+        print("Nombre común no encontrado.")    
+
+
+
+        
 
 def eliminarAve():
     print("Eliminar Ave.")   
