@@ -22,5 +22,44 @@ datos_arboles=[
 def mostrar_arboles():
     print(datos_arboles)
 
+def agregar_arboles():
+    pass
+
+def actualizar_arboles():
+    pass
+
+def eliminar_arboles():
+    pass
+
+
+def menu_arboles():
+    while True:
+        print("----Menú Árboles Tuta----\n")
+        print("1. Mostrar Árboles.")
+        print("2. Agregar Árboles.")
+        print("3. Actualizar Árboles.")
+        print("4. Eliminar Árboles.")
+        print("5. Salir del menú.\n")
+        opcion = input(("Ingrese un numero del menú: "))
+
+        if opcion == "1":
+            mostrar_arboles()
+        elif opcion == "2":
+            agregar_arboles()
+        elif opcion == "3":
+            actualizar_arboles()
+        elif opcion == "4":
+            eliminar_arboles()
+        elif opcion == "5":
+            break
+        print("Ingrese un número válido: ")                    
+
+
+
+
+
+
+
+
 # print("Hola")
-mostrar_arboles()
+menu_arboles()
