@@ -109,10 +109,10 @@ def actualizarAve():
                     datosAves.append(ave)
                 print("Ave agregada")
 
-            else:
-                print("Opción no válida")   
+            # else:
+            #     print("Opción no válida")   
 
-            print("Ave actualizada.")     
+            # print("Ave actualizada.")     
 
     if not aveEncontrada:
         print("Nombre común no encontrado.")    
