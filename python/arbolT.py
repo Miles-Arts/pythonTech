@@ -11,7 +11,7 @@ datos_arboles=[
             "fotos": ["ruta/foto1.png", "ruta/foto2.png"],
             "video": ["ruta/video1.mp4", "ruta/video2.mp4"]
         },
-        "observacione": [
+        "observaciones": [
             {"fecha": "2024-06-08", "lugar": "Tuta - San Nicolás", "avistamiento": 20},
             {"fecha": "2024-08-20", "lugar": "Tuta - La Playa","avistamientos": 50}
         ]
@@ -36,6 +36,26 @@ def agregar_arboles():
     arbol_nuevo["descrpcion"]=descripcion
 
 
+    multimedia={}
+    multimedia["foto"]=input("Ingrese las rutas de las fotos ruta/foto1.png : ")
+    multimedia["video"]=input("Ingrse las rutas de los videos ruta/video1.png : ")
+    arbol_nuevo["mutimedia"]=multimedia
+
+    observaciones=[]
+    while True:
+            
+            
+
+            observacion={}
+            observacion["fecha"]=input("Ingrese fecha (YYYY-MM-DD)")
+            observacion["lugar"]=input("Ingrese lugar.")
+            observacion["avistamiento"]=input("Ingrese números de avistamientos")
+            observaciones.append(observacion)
+
+    arbol_nuevo["observaciones"]=observaciones   
+    datos_arboles.append(arbol_nuevo)
+    print("Árbol ingresado")     
+   
 
 def actualizar_arboles():
     pass
