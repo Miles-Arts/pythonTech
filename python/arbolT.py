@@ -1,6 +1,6 @@
 datos_arboles=[
     {
-        "nombreComun": "Duraznillo",
+        "nombre_comun": "Duraznillo",
         "descripcion": {
             "tamano": "20 mt",
             "color": "Verde",
@@ -23,7 +23,19 @@ def mostrar_arboles():
     print(datos_arboles)
 
 def agregar_arboles():
-    pass
+    arbol_nuevo={}
+
+    nombre_comun=input("Ingrese el nombre del árbol: ")
+    arbol_nuevo["nombre_comun"]=nombre_comun
+
+    descripcion={}
+    descripcion["tamano"]=input("Ingrese tamaño del árbol en mt: ")
+    descripcion["color"]=input("Ingrese color del árbol: ")
+    descripcion["caracteristicas"]=input("Ingrese caracteristicas del árbol: ")
+    descripcion["comportamiento"]=input("Ingrese comportamiento del árbol: ")
+    arbol_nuevo["descrpcion"]=descripcion
+
+
 
 def actualizar_arboles():
     pass
