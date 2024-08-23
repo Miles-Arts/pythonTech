@@ -45,7 +45,7 @@ def agregarAve():
     observaciones=[] 
     while True:
 
-        res=input("¿Desea agrgar una observación?: \n1. Sí  \n2. No \n : ")
+        res=input("¿Desea agr3gar una observación?: \n1. Sí  \n2. No \n : ")
         if res == "2":
             break
             

@@ -37,19 +37,22 @@ def agregar_arboles():
 
 
     multimedia={}
-    multimedia["foto"]=input("Ingrese las rutas de las fotos ruta/foto1.png : ")
-    multimedia["video"]=input("Ingrse las rutas de los videos ruta/video1.png : ")
+    multimedia["foto"]=input("Ingrese las rutas de las fotos ruta/foto1.png : ").split(",")
+    multimedia["video"]=input("Ingrse las rutas de los videos ruta/video1.mp4 : ").split(",")
     arbol_nuevo["mutimedia"]=multimedia
 
     observaciones=[]
     while True:
             
-            
+
+            res=input("¿Desea agregar una nueva observación?: \n1. Sí  \n2. No \n: ")
+            if res == "2":
+                break
 
             observacion={}
-            observacion["fecha"]=input("Ingrese fecha (YYYY-MM-DD)")
-            observacion["lugar"]=input("Ingrese lugar.")
-            observacion["avistamiento"]=input("Ingrese números de avistamientos")
+            observacion["fecha"]=input("Ingrese la fecha del avistamiento (YYYY-MM-DD)")
+            observacion["lugar"]=input("Ingrese el lugar de la avistamiento.")
+            observacion["avistamiento"]=input("Ingrese números de avistamientos.")
             observaciones.append(observacion)
 
     arbol_nuevo["observaciones"]=observaciones   
