@@ -28,7 +28,6 @@ def agregarAve():
     aveNueva={}
 
     nombreComun=input("Ingrese el nombre común: ")
-
     aveNueva["nombreComun"]=nombreComun
 
     descripcion={}
@@ -36,19 +35,17 @@ def agregarAve():
     descripcion["color"]=input("Ingrese el color del Ave: ")
     descripcion["caracteristica"]=input("Ingrese la caracteristica del Ave: ")
     descripcion["comportamiento"]=input("Ingrese la comportamiento del Ave: ")
-
     aveNueva["descripcion"]=descripcion
 
     multimedia={}
     multimedia["fotos"]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
     multimedia["sonidos"]=input("Ingrese las rutas de los sonidos: (ruta/sonido1.mp3 , ruta/sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
-
     aveNueva["multimedia"]=multimedia
 
     observaciones=[] 
     while True:
 
-        res=input("¿Desea agrgar una observación?: \n1. Sí:  \n2. No: \n")
+        res=input("¿Desea agrgar una observación?: \n1. Sí  \n2. No \n : ")
         if res == "2":
             break
             
@@ -60,17 +57,34 @@ def agregarAve():
         observaciones.append(observacion)
 
     aveNueva["observaciones"]=observaciones    
-
     datosAves.append(aveNueva)
     print("Ave agregada")
-
 
 
 def actualizarAve():
     pass
 
 def eliminarAve():
-    pass
+    print("Eliminar Ave.")   
+    nombreComun= input("Ingrese la especie que desea eliminar: ")
+    longitudAnterior = len(datosAves)
+        
+    datosAves[:]=[ave for ave in datosAves if nombreComun != ave["nombreComun"]]  
+    if longitudAnterior > len(datosAves):
+        print("Ave eliminada")
+    else:
+        print("Nombre común no encontrado.")    
+            
+     
+
+
+
+
+
+
+
+
+
 
 def menu():
     while True:
