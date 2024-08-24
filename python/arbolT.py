@@ -43,8 +43,6 @@ def agregar_arboles():
 
     observaciones=[]
     while True:
-            
-
             res=input("¿Desea agregar una nueva observación?: \n1. Sí  \n2. No \n: ")
             if res == "2":
                 break
