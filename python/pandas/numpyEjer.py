@@ -31,8 +31,43 @@ print(cambiar_array)
 lista=["a","b","c","d","e"]
 print(lista[:5])
 
+
+
+
+b=np.array([[1,2,3],[4,5,6]])
+print("")
 primera_fila=b[1,:2]
-print(primera_fila)
+# print(primera_fila)
+
+segunda_columna=b[:,1]
+# print(segunda_columna)
+
+
+submatriz=b[  0 :2, 1:  3]
+print(submatriz)
+
+print("--")
+
+suma_array=a+b[0]
+print(suma_array)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
