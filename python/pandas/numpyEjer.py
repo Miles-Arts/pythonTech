@@ -85,11 +85,26 @@ print("")
 e=np.random.random((2,2))
 print(e)
 
+print("--")
+print("")
+
+f=np.random.uniform(5,10,(3,3))
+print(f)
 
 
+print("--")
+print("")
+media=np.mean(a)
+print(media)
 
 
+print("--")
+print("")
+varianza_standar=np.var(a)
+print(desviacion_varianza)
 
 
-
-
+print("--")
+print("")
+desviacion_standar=np.std(a)
+print(desviacion_standar)
