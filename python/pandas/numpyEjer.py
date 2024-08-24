@@ -51,7 +51,9 @@ print("--")
 suma_array=a+b[0]
 print(suma_array)
 
-
+print("--")
+producto_punto=np.dot(a,b[0])
+print(producto_punto)
 
 
 
