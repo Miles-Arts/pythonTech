@@ -55,16 +55,35 @@ print("--")
 producto_punto=np.dot(a,b[0])
 print(producto_punto)
 
+print("--")
+print("--")
 
 
+a=np.array([1,2,3])
+b=np.array([[1,2,3],[4,5,6]])
+
+broad_cast_array=a+b
+print(broad_cast_array)
+
+print("--")
+print("")
+
+c=np.zeros((3,4))
+print(c)
 
 
+print("--")
+print("")
+
+c=np.ones((2,4))
+print(c)
 
 
+print("--")
+print("")
 
-
-
-
+e=np.random.random((2,2))
+print(e)
 
 
 
