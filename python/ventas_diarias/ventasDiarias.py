@@ -20,7 +20,7 @@ print("\n----Ventas diarias----\n")
 # • Emplea el método writerows() del objeto escritor para escribir la lista datos_ventas en el
 # archivo CSV.
 
-datos_vetas=[["Día", "Ventas"],
+datos_ventas=[["Día", "Ventas"],
              ["Lunes", 450],
              ["Martes", 300],
              ["Miércoles", 200],
@@ -29,7 +29,7 @@ datos_vetas=[["Día", "Ventas"],
 
 with open("ventas_semanales.csv", "w", newline="", encoding="utf-8") as archivo:
     escritor=csv.writer(archivo)
-    escritor.writerows(datos_vetas)
+    escritor.writerows(datos_ventas)
 
 
 # Paso 2: Leer Datos de Ventas desde el CSV
@@ -58,8 +58,13 @@ promedio_ventas = total_ventas / len(ventas)
 print("Total de Ventas en la Semana: ", total_ventas)
 print("Promedio de Ventas Diarias: ", promedio_ventas)
 
+# Paso 4: Filtrar Días con Ventas Mayores a 300
+# • Utiliza comprensión de lista para filtrar los días cuyas ventas superan los 300.
+# • Imprime los días con ventas mayores a 300.
 
-
-
+ventas_altas = [venta for venta in ventas if venta["Ventas"] > 300]
+print("\nDías con Ventas Mayores a 300: ")
+for venta in ventas_altas:
+    print(venta)
 
 
