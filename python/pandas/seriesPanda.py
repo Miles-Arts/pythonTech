@@ -19,7 +19,8 @@ import pandas as pd
 #     escribir.writerow([ "Rodolfo","Lucas", "34465899" ])
 
 
-
+# data=pd.read_csv("archivoP.csv")
+# print(data)
 
 
 
