@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import numpy as np
 
 # nombres=input("Ingrese los nombres: ").split(",")
 # print(nombres)
@@ -75,15 +76,20 @@ print(ventas2)
 ventas2.index=["Mon", "Tue", "Wen", "Thu", "Fri"]
 print(ventas2)
 
-print(ventas2.sort_values())
+print(ventas2.sort_values()) # ASCENDENTE
+print(ventas2.sort_values(ascending=False)) # DES- CENDENTE
 
 
+# def descontar(x):
+#     return x
 
+print("")
+ventas_con_descuento= ventas2.apply(lambda x: x *0.5)
+print(ventas_con_descuento)
 
-
-
-
-
+array_np=np.array([10,20,30,40, 50])
+serie_np= pd.Series(array_np, index=["A", "B", "C", "D", "E"])
+print(serie_np)
 
 
 
