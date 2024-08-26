@@ -46,7 +46,25 @@ print(" ")
 ventas=pd.Series([450, 300,200,400,600], index=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"])
 print(ventas)
 print(ventas["Miercoles"])
-print(ventas.iloc[0])
+print(ventas.iloc[2])
+
+# print(ventas.sum())
+# print(ventas.mean())
+# print(ventas["Lunes"])
+# print(ventas[ventas>300])
+# print(ventas[ventas<400])
+
+# ventas["Lunes"]=500
+# print(ventas)
+
+# ventas["Sabado"]=350
+# print(ventas)
+
+ventas2=pd.Series([500, 350,250,450,650], index=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"])
+
+print(ventas)
+print(ventas2)
+print(ventas+ventas2)
 
 
 
@@ -57,4 +75,7 @@ print(ventas.iloc[0])
 
 
 
-print(".")
+
+
+
+
