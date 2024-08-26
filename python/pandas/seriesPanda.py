@@ -23,11 +23,16 @@ import pandas as pd
 # print(data)
 
 
+serie_a=pd.Series([1, 2, 3, 4, 5])
+print(serie_a)
 
+print(" ")
+serie_b=pd.Series([10, 20, 30, 40, 50], index=["a", "b", "c", "d", "e"])
+print(serie_b)
 
-
-
-
+print(" ")
+serie_c=pd.Series({"a": 100, "b": 200, "c" : 300, "d": 400, "e" :500  })
+print(serie_c)
 
 
 
