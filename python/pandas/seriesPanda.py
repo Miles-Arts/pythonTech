@@ -66,7 +66,16 @@ print(ventas)
 print(ventas2)
 print(ventas+ventas2)
 
+# ventas.loc
+# print(ventas.iloc[2])
+# print(ventas2.loc[[ "Lunes", "Martes"]])+=50
+ventas2.loc[[ "Lunes", "Martes"]]+=50
+print(ventas2)
 
+ventas2.index=["Mon", "Tue", "Wen", "Thu", "Fri"]
+print(ventas2)
+
+print(ventas2.sort_values())
 
 
 
