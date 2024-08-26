@@ -11,8 +11,12 @@ with open("ventas_semanales.csv", "w", newline="", encoding="utf-8") as archivo:
     escritor=csv.writer(archivo)
     escritor.writerows(datos_vetas)
 
-# ventas=[]
-# with open("ventas_semanales.csv")
+ventas=[]
+with open("ventas_semanales.csv", "r", encoding="utf-8") as archivo:
+    lector=csv.reader(archivo)
+    next(lector)
+    for fila in lector:
+        ventas.append({"Día": fila[0], "Ventas": int(fila[1])})
 
 
 
