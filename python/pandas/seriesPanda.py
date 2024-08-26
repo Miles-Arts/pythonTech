@@ -34,12 +34,19 @@ print(" ")
 serie_c=pd.Series({"a": 100, "b": 200, "c" : 300, "d": 400, "e" :500  })
 print(serie_c)
 
+# print(serie_a[0])
+# print(serie_b["a"])
+# print(serie_c["a"])
+
+print(" ")
+print(serie_a ** 2)
 
 
-
-
-
-
+print(" ")
+ventas=pd.Series([450, 300,200,400,600], index=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"])
+print(ventas)
+print(ventas["Miercoles"])
+print(ventas.iloc[0])
 
 
 
