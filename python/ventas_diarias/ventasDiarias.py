@@ -86,8 +86,19 @@ for venta in ventas:
     print(venta)
 
 
+# Paso 7: Tratar con Datos Faltantes
+# • Supongamos que algunos datos están faltantes o son desconocidos.
+# • Itera sobre ventas y usa None para marcar las ventas desconocidas.
+# • Filtra los datos para excluir aquellos marcados como None.
 
+for vents in ventas:
+    if venta["Día"] == "Martes":
+        venta["Ventas"] = None
 
+ventas_sin_nulos = [venta for venta in ventas  if venta["Ventas"] is not None]        
+print("\nVentas sin días Faltantes:")
+for venta in ventas_sin_nulos:
+    print(venta)
 
 
 
