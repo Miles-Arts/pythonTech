@@ -63,8 +63,34 @@ print("Promedio de Ventas Diarias: ", promedio_ventas)
 # • Imprime los días con ventas mayores a 300.
 
 ventas_altas = [venta for venta in ventas if venta["Ventas"] > 300]
+print(f"VENTAS {ventas_altas}")
 print("\nDías con Ventas Mayores a 300: ")
 for venta in ventas_altas:
     print(venta)
+
+# Paso 5: Actualizar Ventas para un Día Específico y Añadir un Nuevo Día
+# • Itera sobre la lista ventas para encontrar y actualizar las ventas de un día específico.
+# • Añade un nuevo día de ventas al final de la lista ventas.
+
+for venta in ventas:
+    if venta["Día"] == "Lunes":
+        venta["Ventas"] = 500      
+ventas.append({"Día": "Sábado", "Ventas": 350})        
+# print(ventas)
+
+# Paso 6: Mostrar Ventas Actualizadas
+# • Imprime todas las ventas actualizadas para verificar los cambios.
+
+print("\nVentas Actualizadas: ")
+for venta in ventas:
+    print(venta)
+
+
+
+
+
+
+
+
 
 
