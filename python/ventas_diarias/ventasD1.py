@@ -17,6 +17,9 @@ ventas = pd.Series([450,300,200,400,600], index=["Lunes", "Martes", "Miércoles"
 # • Guarda la serie en un archivo llamado ventas_semanales.csv
 
 
+ventas.index.name = "Día"
+ventas.to_frame("Ventas").to_csv("ventas_semanales1.csv", header=True)
+
 
 
 
