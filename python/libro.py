@@ -117,9 +117,26 @@ print("-"*60)
 
 #Lista de diccionarios
 
+auths=[
+    {"user_name": "juan", "password": "1234"},
+    {"email": "juan@gmail.com", "password": "43212"},
+    {"email": "tes@gmail.com", "password": "ABCD"},
+    {"user_name": "juan", "password": 1234}
+]
 
-
-
+for auth in auths:
+    print(auth)
+    match auth:
+        case {"user_name": str(user_name), "password": str(password)}:
+            print("Authenticating witch username and password")
+            print(f"{user_name}:{password}")
+        case {"email": str(email), "token": str(token)}:
+            print("Authenticating with email and token")
+            print(f"{email}:{token}")
+        case _:
+            print("Authenticathing method not valid!")
+    print("-"*10)        
+             
 
 
 
