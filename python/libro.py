@@ -49,6 +49,43 @@ match point:
 
 print("-"*60)
 
+point2 = ("2","6")
+
+match point2:
+    case (x,y):
+        print(f"({x},{y}) is in plane")
+    case (x,y,z):
+        print(f"({x},{y},{z}) is in space")
+    case _:
+        print("Unknown ")        
+
+
+
+print("-"*60)
+
+
+point3 = ("2", "5")
+
+match point3:
+    case (int(), int()):
+        print(f"({point}) is in plane")
+    case (int(),int(),int())  :
+        print(f"({point}) is in space")
+    case _:
+        print("Unknown!")      
+
+
+print("-"*60)
+
+point4 = (3,1,9)
+
+match point4:
+    case (int(),int()):
+        print(f"({point}) is in plane")
+    case (int(),int(),int()):
+        print(f"({point4}) is in space")
+    case _:
+        print("Unknown!")        
 
 
 
@@ -57,5 +94,28 @@ print("-"*60)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("-"*60)
 
 
