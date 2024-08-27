@@ -8,7 +8,7 @@ import pandas as pd
 # Paso 1: Crear una Serie de Ventas
 # • Crea una serie de pandas llamada ventas con los datos de ventas d
 
-
+ventas = pd.Series([450,300,200,400,600], index=["Lunes"])
 
 
 
