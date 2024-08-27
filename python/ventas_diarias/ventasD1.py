@@ -20,8 +20,14 @@ ventas = pd.Series([450,300,200,400,600], index=["Lunes", "Martes", "Miércoles"
 ventas.index.name = "Día"
 ventas.to_frame("Ventas").to_csv("ventas_semanales1.csv", header=True)
 
+# Paso 3: Leer los Datos desde el Archivo CSV
+# • Lee el archivo CSV que has guardado previamente, asegurándote de establecer la columna
+# de los días como índice.
+# • Convierte los datos leídos a una serie de pandas para facilitar su manipulación.
 
-
+ventas_leidas=pd.read_csv("ventas_semanales1.csv", index_col=0)["Ventas"]
+ventas_leidas=pd.Series(ventas_leidas)
+print("Ventas leídas del CSV:\n", ventas_leidas)
 
 
 
