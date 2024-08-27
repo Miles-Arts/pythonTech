@@ -8,9 +8,13 @@ import pandas as pd
 # Paso 1: Crear una Serie de Ventas
 # • Crea una serie de pandas llamada ventas con los datos de ventas d
 
-ventas = pd.Series([450,300,200,400,600], index=["Lunes"])
+ventas = pd.Series([450,300,200,400,600], index=["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"])
 
-
+# Paso 2: Guardar la Serie en un Archivo CSV
+# • Asigna un nombre al índice de la serie para indicar que representa los días de la semana.
+# • Convierte la serie a un DataFrame para poder guardarla en un archivo CSV, ya que pandas
+# no permite guardar directamente series en este formato.
+# • Guarda la serie en un archivo llamado ventas_semanales.csv
 
 
 
