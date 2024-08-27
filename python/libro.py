@@ -87,15 +87,35 @@ match point4:
     case _:
         print("Unknown!")        
 
+print("-"*60)
 
+point5 = (8,3,5)
+match point5:
+    case (int(x),int(y)):
+        dist_to_origin =(x ** 2 + y ** 2) ** (1 / 2)
+        print(dist_to_origin)
+    case (int(x), int(y), int(z)):
+        dist_to_origin =(x ** 2 + y ** 2 + z **2) ** (1 / 2)
+        print(dist_to_origin)
+    case _:
+        print("Unknown!")
 
+print("-"*60)
 
+point6 = ("8",3,6)
+match point6:
+    case (int(x), int(y)):
+        dist_to_origin = (x ** 2 + y ** 2) ** (1 / 2) 
+        print(dist_to_origin)
+    case (int(x), int(y), int(z)):
+        dist_to_origin =(x ** 2 + y ** 2 + z **2) ** (1 / 2)
+        print(dist_to_origin)
+    case _:
+        print("Unknown!")
 
+print("-"*60)
 
-
-
-
-
+#Lista de diccionarios
 
 
 
