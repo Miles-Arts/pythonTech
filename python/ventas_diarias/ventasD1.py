@@ -29,6 +29,22 @@ ventas_leidas=pd.read_csv("ventas_semanales1.csv", index_col=0)["Ventas"]
 ventas_leidas=pd.Series(ventas_leidas)
 print("Ventas leídas del CSV:\n", ventas_leidas)
 
+# Paso 4: Realizar Cálculos Básicos
+# • Calcula y muestra el total de ventas de la semana.
+# • Calcula y muestra el promedio de ventas diarias.
+
+total_ventas=ventas_leidas.sum()
+promedio_ventas=ventas_leidas.mean()
+print("\nTotal de Ventas en la Semana:", total_ventas)
+print("\nPromedio de Ventas Diarias:", promedio_ventas)
+
+# Paso 5: Filtrar Días con Ventas Mayores a 300
+# • Filtra y muestra los días que tuvieron ventas mayores a 300.
+
+ventas_altas = ventas_leidas[ventas_leidas > 300]
+print("\nDías con Ventas Mayores a 300:\n", ventas_altas)
+
+
 
 
 
