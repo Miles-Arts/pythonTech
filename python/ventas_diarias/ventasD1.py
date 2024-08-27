@@ -44,9 +44,21 @@ print("\nPromedio de Ventas Diarias:", promedio_ventas)
 ventas_altas = ventas_leidas[ventas_leidas > 300]
 print("\nDías con Ventas Mayores a 300:\n", ventas_altas)
 
+# Paso 6: Actualizar el Valor de Ventas para un Día Específico y Añadir un Nuevo Día
+# • Actualiza las ventas del día lunes a 500.
+# • Añade un nuevo día, el sábado, con ventas de 350.
+
+ventas_leidas["Lunes"] = 500
+ventas_leidas["Sábado"] = 350
+print("\nVentas actualizadas con Sábado añadido:\n", ventas_leidas)
 
 
+# Paso 7: Manejo de Datos Faltantes en la Serie
+# • Añade un día adicional, el domingo, con ventas desconocidas (representado por None).
+# • Filtra y muestra la serie sin incluir los días con ventas faltantes
 
 
-
-
+ventas_leidas["Domingo"] = None
+print(ventas_leidas)
+vetas_sin_nulos=ventas_leidas.dropna()
+print("\nVentas sin días Faltantes:\n", vetas_sin_nulos)
