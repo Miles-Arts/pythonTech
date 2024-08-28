@@ -137,49 +137,51 @@
 #     print("-"*10)        
 
 
-autenticacion=[
-    {"nombre_usuario": "juan", "contrasena": "1234"},
-    {"email": "juan@gmail.com", "token": "1234"},
-    {"email": "juan@gmail.com", "contrasena": "ABCD"},
-    {"nombre_usuario": "juan", "token": 1234}
-]
+# autenticacion=[
+#     {"nombre_usuario": "juan", "contrasena": "1234"},
+#     {"email": "juan@gmail.com", "token": "1234"},
+#     {"email": "juan@gmail.com", "contrasena": "ABCD"},
+#     {"nombre_usuario": "juan", "token": 1234}
+# ]
 
-for autenticar in autenticacion:
-    print(autenticar)
-    match autenticar:
-        case {"nombre_usuario": str(nombre_usuario), "contrasena": str(contrasena)}:
-            print("1")
-            print("Autenticación con Nombre Usuario y Contraseña")
-            print(f"{nombre_usuario}:{contrasena}")
-        case {"email": str(email), "token": str(token)}:
-            print("2")
-            print("Autenticación con Nombre Usuario y Contraseña")
-            print(f"{email}:{token}") 
-        case {"email": str(email), "contrasena": str(contrasena)}:
-            print("3")
-            print("Autenticación con Nombre Usuario y Contraseña")
-            print(f"{email}:{contrasena}")
-        case {"nombre_usuario": str(nombre_usuario), "token": int(token)}: 
-            print("4")
-            print("Autenticación con Nombre Usuario y Contraseña")
-            print(f"{nombre_usuario}:{token}")   
-        case _:
-            print("Ingrese nombre usurio y contraseña correctos")
-    print("-"*10)    
+# for autenticar in autenticacion:
+#     print(autenticar)
+#     match autenticar:
+#         case {"nombre_usuario": str(nombre_usuario), "contrasena": str(contrasena)}:
+#             print("1")
+#             print("Autenticación con Nombre Usuario y Contraseña")
+#             print(f"{nombre_usuario}:{contrasena}")
+#         case {"email": str(email), "token": str(token)}:
+#             print("2")
+#             print("Autenticación con Nombre Usuario y Contraseña")
+#             print(f"{email}:{token}") 
+#         case {"email": str(email), "contrasena": str(contrasena)}:
+#             print("3")
+#             print("Autenticación con Nombre Usuario y Contraseña")
+#             print(f"{email}:{contrasena}")
+#         case {"nombre_usuario": str(nombre_usuario), "token": int(token)}: 
+#             print("4")
+#             print("Autenticación con Nombre Usuario y Contraseña")
+#             print(f"{nombre_usuario}:{token}")   
+#         case _:
+#             print("Ingrese nombre usurio y contraseña correctos")
+#     print("-"*10)    
 
 # print("-"*60)
 
-# age=21
+age=21
 
-# match age:
-#     case 0 | None:
-#         print("Not a person")
-#     case n if n < 17:
-#         print("Nop")
-#     case n if n < 22:
-#         print("Not is the USA")
-#     case _:
-#         print("Yes!")
+match age:
+    case 0 | None:
+        print("Not a person")
+    case n if n < 17:
+        print("Nop")
+    case n if n < 22:
+        print("Not is the USA")
+    case _:
+        print("Yes!")
+
+print("-"*40)        
 
 
 # Operador MORSE
