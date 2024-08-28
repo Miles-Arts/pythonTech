@@ -297,29 +297,62 @@
 #         boleta=str(input("Desea Ingresar de nuevo? [S/N]"))
 # print("Gracias por su asistencia")        
 
-print("-"*60)
+
 
 # ENTRADAS_MAXIMAS=3
-numero_entradas=0
-boleta="S"
-
-while boleta == "S":
-    print("Entrada", numero_entradas + 1)
-    print("Hola Buen día")
-    boleta=str(input("Desea entrar? [S/N]"))
-    numero_entradas+=1
-    n
 
 
+# while boleta == "S":
+#     print("Entrada", numero_entradas + 1)
+#     print("Hola Buen día")
+#     boleta=str(input("Desea entrar? [S/N]"))
+#     numero_entradas+=1
+#     n
+
+# numero_entradas=0
+# boleta="S"
+
+# while boleta == "S":
+#     print("Hola")
+#     boleta=input("¿Desea ingresar de nuevo? [S/N]")
+#     if boleta not in "S":
+#         print("No etendí")
+#         boleta="S"
+#         continue
+#     numero_entradas+=1
+# print(f"{numero_entradas} válidas")
+# print("Que tengas buen día")    
+
+print("-"*60)
+
+# num=1
+# # while num!=10:
+# #     num+=2
+# #     print(num)
+
+# while num < 10:
+#     num+=2
+#     print(num)
 
 
+# print("-"*60)
 
+# while True:
+#     mark = float(input("Introduce una nota: "))
+#     if not(0 <= mark <= 10):
+#         print("nota fuera de rango")
+#         break
+#     print(mark)
 
+# while 0<= (mark := float(input("Introduce una nueva nota: "))) <= 10:
+#     print(mark)
+# print("Nota fuera de rango")    
 
+print("-"*60)
 
-
-
-
+while 0 <= (nota := float(input("Ingrese nota entre 0 y 10: "))) <= 10:
+    print(nota)
+print("Nota no válida")
 
 
 
