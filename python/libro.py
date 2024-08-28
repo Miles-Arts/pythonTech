@@ -1,23 +1,23 @@
-casa = "a"
-perro = "antes"
+# casa = "a"
+# perro = "antes"
 
-b = 0
-c = 5
+# b = 0
+# c = 5
 
-a = b or c
+# a = b or c
 
-color = "#FF0000"
+# color = "#FF0000"
 
-match color:
-    case "#FF0000":
-        print("🔴")
-    case "#00FF00":
-        print("🟢") 
-    case "#0000FF":
-        print("🔵")       
+# match color:
+#     case "#FF0000":
+#         print("🔴")
+#     case "#00FF00":
+#         print("🟢") 
+#     case "#0000FF":
+#         print("🔵")       
 
 
-color1="#AF549B"
+# color1="#AF549B"
 
 # match color1:
 #     case "#FF0000":
@@ -153,12 +153,28 @@ color1="#AF549B"
 
 # Operador MORSE
 print("-"*60)
+# print("\n")
 
-radius=3.5
+radius=4.5
 perimeter= 2 * 3.14 * radius
 if perimeter < 100:
     print("Increase radius to reach minimunperimeter")
     print("Actual perimeter: ", perimeter)
+
+print("-"*60)
+
+radius = 4.5
+if (perimeter := 2 * 3.14 * radius) < 100:
+    print("Increase radius to reach minimunperimeter")
+    print("Actual perimeter: ", perimeter)
+
+
+
+
+
+
+
+
 
 
 
