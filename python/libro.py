@@ -280,22 +280,49 @@
 # print("Gracias Que tengas buen día")    
 
    
+# print("-"*60)
+
+# ENTRADAS_MAXIMAS=3
+# numero_entradas=0
+# boleta="S"
+
+# while boleta == "S":
+#     print("Entrada", numero_entradas +1)
+#     print("Hola buen día")
+#     numero_entradas+=1
+#     if numero_entradas == ENTRADAS_MAXIMAS:
+#         print(f"Entradas totales {ENTRADAS_MAXIMAS},  utilizadas ")
+#         break
+#     else: 
+#         boleta=str(input("Desea Ingresar de nuevo? [S/N]"))
+# print("Gracias por su asistencia")        
+
 print("-"*60)
 
-ENTRADAS_MAXIMAS=3
+# ENTRADAS_MAXIMAS=3
 numero_entradas=0
 boleta="S"
 
 while boleta == "S":
-    print("Entrada", numero_entradas +1)
-    print("Hola buen día")
+    print("Entrada", numero_entradas + 1)
+    print("Hola Buen día")
+    boleta=str(input("Desea entrar? [S/N]"))
     numero_entradas+=1
-    if numero_entradas == ENTRADAS_MAXIMAS:
-        print(f"Entradas totales {ENTRADAS_MAXIMAS},  utilizadas ")
-        break
-    else: 
-        boleta=str(input("Desea Ingresar de nuevo? [S/N]"))
-print("Gracias por su asistencia")        
+    n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
