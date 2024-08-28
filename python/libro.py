@@ -348,11 +348,80 @@ print("-"*60)
 #     print(mark)
 # print("Nota fuera de rango")    
 
+# print("-"*60)
+
+# # while 0 <= (nota := float(input("Ingrese nota entre 0 y 10: "))) <= 10:
+# #     print(nota)
+# # print("Nota no válida")
+
+# numero=int(input("Ingrese un numero: "))
+# for numero in range(5,numero,5): 
+#     print(numero)
+
+# impresion_entradas= int(input("Ingrese el numero de entrada a imprimir: "))
+
+# for impresion_entradas in range(1,impresion_entradas,5):
+#     print(impresion_entradas)
+
+# print("-"*60)
+
+# word = "Python"
+# for letter in word:
+#     print(letter)
+
+# letras="Juanita España"
+# for letra in letras:
+#     print(letra)
+
+# word="Python"
+# for letter in word:
+#     if letter =="o":
+#         continue
+#     print(letter)
+
+
 print("-"*60)
 
-while 0 <= (nota := float(input("Ingrese nota entre 0 y 10: "))) <= 10:
-    print(nota)
-print("Nota no válida")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -361,5 +430,3 @@ print("Nota no válida")
 
 
 print("-"*60)
-
-
