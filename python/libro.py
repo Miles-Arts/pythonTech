@@ -250,19 +250,36 @@
 # print("Acceso Denegado")    
 
 
-MAX_GREETS = 4
-num_greets = 0
-saludos = "S"
+# MAX_GREETS = 4
+# num_greets = 0
+# saludos = "S"
 
-while saludos == "S":
-    print("Hola qué tal!")
-    num_greets += 1
-    if num_greets == MAX_GREETS:
-        print("Máximo número de saludos alcanzado.")
-        break
-    saludos = input("Quieres otro saludos? [S/N] ")
-print("Que tengas buen día!")
+# while saludos == "S":
+#     print("Hola qué tal!")
+#     num_greets += 1
+#     if num_greets == MAX_GREETS:
+#         print("Máximo número de saludos alcanzado.")
+#         break
+#     saludos = input("Quieres otro saludos? [S/N] ")
+# print("Que tengas buen día!")
 
+# print("-"*60)
+
+# ENTRADAS_MAXIMAS=3
+# numero_entradas=0
+# boleta="S"
+
+# while boleta == "S":
+#     print("Ingreso", numero_entradas + 1)
+#     print("Ingresa 3 veces")
+#     numero_entradas+=1
+#     if numero_entradas == ENTRADAS_MAXIMAS:
+#         print("Ingreso máximos utilizados")
+#         break
+#     boleta = str(input("Tienes otro Ingreso? [S/N]"))
+# print("Gracias Que tengas buen día")    
+
+   
 print("-"*60)
 
 ENTRADAS_MAXIMAS=3
@@ -270,19 +287,15 @@ numero_entradas=0
 boleta="S"
 
 while boleta == "S":
-    print("Ingreso", numero_entradas + 1)
-    print("Ingresa 3 veces")
+    print("Entrada", numero_entradas +1)
+    print("Hola buen día")
     numero_entradas+=1
     if numero_entradas == ENTRADAS_MAXIMAS:
-        print("Ingreso máximos utilizados")
+        print(f"Entradas totales {ENTRADAS_MAXIMAS},  utilizadas ")
         break
-    boleta = str(input("Tienes otro Ingreso? [S/N]"))
-print("Gracias Que tengas buen día")    
-
-   
-
-
-
+    else: 
+        boleta=str(input("Desea Ingresar de nuevo? [S/N]"))
+print("Gracias por su asistencia")        
 
 
 
