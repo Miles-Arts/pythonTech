@@ -135,7 +135,38 @@
 #         case _:
 #             print("Authenticathing method not valid!")
 #     print("-"*10)        
-             
+
+
+autenticacion=[
+    {"nombre_usuario": "juan", "contrasena": "1234"},
+    {"email": "juan@gmail.com", "token": "1234"},
+    {"email": "juan@gmail.com", "contrasena": "ABCD"},
+    {"nombre_usuario": "juan", "token": 1234}
+]
+
+for autenticar in autenticacion:
+    print(autenticar)
+    match autenticar:
+        case {"nombre_usuario": str(nombre_usuario), "contrasena": str(contrasena)}:
+            print("1")
+            print("Autenticación con Nombre Usuario y Contraseña")
+            print(f"{nombre_usuario}:{contrasena}")
+        case {"email": str(email), "token": str(token)}:
+            print("2")
+            print("Autenticación con Nombre Usuario y Contraseña")
+            print(f"{email}:{token}") 
+        case {"email": str(email), "contrasena": str(contrasena)}:
+            print("3")
+            print("Autenticación con Nombre Usuario y Contraseña")
+            print(f"{email}:{contrasena}")
+        case {"nombre_usuario": str(nombre_usuario), "token": int(token)}: 
+            print("4")
+            print("Autenticación con Nombre Usuario y Contraseña")
+            print(f"{nombre_usuario}:{token}")   
+        case _:
+            print("Ingrese nombre usurio y contraseña correctos")
+    print("-"*10)    
+
 # print("-"*60)
 
 # age=21
@@ -152,28 +183,48 @@
 
 
 # Operador MORSE
-print("-"*60)
+
 # print("\n")
 
-radius=4.5
-perimeter= 2 * 3.14 * radius
-if perimeter < 100:
-    print("Increase radius to reach minimunperimeter")
-    print("Actual perimeter: ", perimeter)
+# radius=4.5
+# perimeter= 2 * 3.14 * radius
+# if perimeter < 100:
+#     print("Increase radius to reach minimunperimeter")
+#     print("Actual perimeter: ", perimeter)
+
+# print("-"*60)
+
+# radius = 4.5
+# if (perimeter := 2 * 3.14 * radius) < 100:
+#     print("Increase radius to reach minimunperimeter")
+#     print("Actual perimeter: ", perimeter)
+
+# print("-"*60)
+
+
+# saludos = "S"
+
+# while saludos == "S":
+#     print("Hola qué tal!")
+#     saludos = input("Quieres otro saludos? [S/N] ")
+# print("Que tengas buen día!")
+
 
 print("-"*60)
 
-radius = 4.5
-if (perimeter := 2 * 3.14 * radius) < 100:
-    print("Increase radius to reach minimunperimeter")
-    print("Actual perimeter: ", perimeter)
 
+# MAX_GREETS = 4
+# num_greets = 0
+# saludos = "S"
 
-
-
-
-
-
+# while saludos == "S":
+#     print("Hola qué tal!")
+#     num_greets += 1
+#     if num_greets == MAX_GREETS:
+#         print("Máximo número de saludos alcanzado.")
+#         break
+#     saludos = input("Quieres otro saludos? [S/N] ")
+# print("Que tengas buen día!")
 
 
 
