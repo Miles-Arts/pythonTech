@@ -169,19 +169,36 @@
 
 # print("-"*60)
 
-age=21
+# age=21
 
-match age:
-    case 0 | None:
-        print("Not a person")
-    case n if n < 17:
-        print("Nop")
-    case n if n < 22:
-        print("Not is the USA")
-    case _:
-        print("Yes!")
+# match age:
+#     case 0 | None:
+#         print("Not a person")
+#     case n if n < 17:
+#         print("Nop")
+#     case n if n < 22:
+#         print("Not is the USA")
+#     case _:
+#         print("Yes!")
 
-print("-"*40)        
+# print("-"*40)        
+
+# boleta= int(input("Ingrese el valor de Boleta: "))
+
+# match boleta:
+#     case 0 | None:
+#         print("Sin acceso")
+#     case n if n <= 2000:
+#         print("Público General")    
+#     case n if n <= 4000:
+#         print("Entrada preferencial")
+#     case n if n <= 6000:
+#         print("Entrada Premium")
+#     case n if n >= 6001:
+#         print("Entrada VIP acceso total")
+#     case _:
+#         print("Ingrese un valor")   
+
 
 
 # Operador MORSE
@@ -203,6 +220,16 @@ print("-"*40)
 
 # print("-"*60)
 
+# numero=20
+# if(numeros := 20 * numero) < 100:
+#     print("Multipliación menor de 600")
+#     print("Valor de la operación", numeros)
+# elif(numeros := 40 * numero) <= 800:
+#     print("Multipliación menor de 800")
+#     print("Valor de la operación", numeros)
+
+
+
 
 # saludos = "S"
 
@@ -211,26 +238,48 @@ print("-"*40)
 #     saludos = input("Quieres otro saludos? [S/N] ")
 # print("Que tengas buen día!")
 
+
+# print("-"*60)
+
+# entrada = "S"
+
+# while entrada == "S":
+#     print("Hola qué tal")
+#     entrada=str(input("Tines entrada? [S/N] "))
+#     print("Ingresa!")
+# print("Acceso Denegado")    
+
+
+MAX_GREETS = 4
+num_greets = 0
+saludos = "S"
+
+while saludos == "S":
+    print("Hola qué tal!")
+    num_greets += 1
+    if num_greets == MAX_GREETS:
+        print("Máximo número de saludos alcanzado.")
+        break
+    saludos = input("Quieres otro saludos? [S/N] ")
+print("Que tengas buen día!")
 
 print("-"*60)
 
+ENTRADAS_MAXIMAS=3
+numero_entradas=0
+boleta="S"
 
-# MAX_GREETS = 4
-# num_greets = 0
-# saludos = "S"
+while boleta == "S":
+    print("Ingreso", numero_entradas + 1)
+    print("Ingresa 3 veces")
+    numero_entradas+=1
+    if numero_entradas == ENTRADAS_MAXIMAS:
+        print("Ingreso máximos utilizados")
+        break
+    boleta = str(input("Tienes otro Ingreso? [S/N]"))
+print("Gracias Que tengas buen día")    
 
-# while saludos == "S":
-#     print("Hola qué tal!")
-#     num_greets += 1
-#     if num_greets == MAX_GREETS:
-#         print("Máximo número de saludos alcanzado.")
-#         break
-#     saludos = input("Quieres otro saludos? [S/N] ")
-# print("Que tengas buen día!")
-
-
-
-
+   
 
 
 
