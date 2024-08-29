@@ -28,7 +28,7 @@ print("-"*60)
 
 datos={
     "Dia":      ["Lunes", "Martes", "Miercoles", "Martes", "Viernes", np.nan, "Viernes" ],
-    "Ventas":   [100,       150,     np.nan,      150,      200,      130,     200      ],
+    "Ventas":   [   100,    150,     np.nan,      150,      200,      130,     200      ],
     "Vendedor": ["Ana",   "Juan",   "Ana",       "Juan",    "Ana",    "Maria", "Ana"    ],
     "Ciudad":   ["Bogota","Cucuta",  np.nan,     "Cucuta",  "Bogota", "Bogota","Bogota",]
 }
@@ -48,7 +48,9 @@ print(df[ df["Ciudad"] == "Cucuta" ])
 print(df.loc[ df["Ventas"] > 100, ["Dia", "Ventas"]])
 print("-"*30)
 print(df.iloc[ 1 :3, 1:3  ])
-
+print(df.groupby("Vendedor")["Ventas"].sum())
+print("-"*30)
+print(df.isnull().sum())
 
 
 
