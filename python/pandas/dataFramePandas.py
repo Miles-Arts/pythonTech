@@ -19,10 +19,10 @@ print(df2)
 
 nombres=pd.Series(["Ana", "Juan", "Maria"])
 edades=pd.Series([10, 15, 20])
-ciudad=pd.Series(["Bogota", "Cucuta", "Medellin"])
+ciudades=pd.Series(["Bogota", "Cucuta", "Medellin"])
 
-df4=pd.DataFrame({})
-
+df4=pd.DataFrame({"Nombres": nombres, "Edades": edades, "Ciudades": ciudades})
+print(df4)
 
 
 
