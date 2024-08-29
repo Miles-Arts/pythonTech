@@ -45,8 +45,8 @@ print(df.iloc[2])
 print(df.iloc[5])
 print(df[ df["Ventas"] > 150 ])
 print(df[ df["Ciudad"] == "Cucuta" ])
-print(df)
-
+print(df.loc[ df["Ventas"] > 100, ["Dia", "Ventas"]])
+print(df.iloc[ 1 : , :2  ])
 
 
 
