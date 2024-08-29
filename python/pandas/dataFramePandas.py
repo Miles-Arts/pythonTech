@@ -33,6 +33,19 @@ datos={
     "Ciudad": ["Bogota", "Cucuta", np.nan, "Cucuta", "Bogota", "Bogota","Bogota", ]
 }
 
+df=pd.DataFrame(datos)
+# print(df)
+
+
+print(df.head())
+print(df.describe())
+print(df["Ventas"])
+# print(df["Ciudad"])
+print(df.iloc[2])
+print(df.iloc[5])
+print(df[ df["Ventas"] > 150 ])
+print(df[ df["Ciudad"] == "Cucuta" ])
+print(df)
 
 
 
@@ -52,3 +65,10 @@ datos={
 
 
 
+
+
+
+
+
+
+# print("-"*60)
