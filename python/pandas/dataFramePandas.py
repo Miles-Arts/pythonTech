@@ -37,23 +37,39 @@ df=pd.DataFrame(datos)
 # print(df)
 
 
-print(df.head())
-print(df.describe())
-print(df["Ventas"])
-# print(df["Ciudad"])
-print(df.iloc[2])
-print(df.iloc[5])
-print(df[ df["Ventas"] > 150 ])
-print(df[ df["Ciudad"] == "Cucuta" ])
-print(df.loc[ df["Ventas"] > 100, ["Dia", "Ventas"]])
+# print(df.head())
+# print(df.describe())
+# print(df["Ventas"])
+# # print(df["Ciudad"])
+# print(df.iloc[2])
+# print(df.iloc[5])
+# print(df[ df["Ventas"] > 150 ])
+# print(df[ df["Ciudad"] == "Cucuta" ])
+# print(df.loc[ df["Ventas"] > 100, ["Dia", "Ventas"]])
+# print("-"*30)
+# print(df.iloc[ 1 :3, 1:3  ])
+# print(df.groupby("Vendedor")["Ventas"].sum())
+# print("-"*30)
+# print(df.isnull().sum())
+
+# print("-"*30)
+
+# print(df)
 print("-"*30)
-print(df.iloc[ 1 :3, 1:3  ])
-print(df.groupby("Vendedor")["Ventas"].sum())
-print("-"*30)
-print(df.isnull().sum())
+# df_sin_nulos=df.dropna()
+# print(df_sin_nulos)
 
+# df["Ventas"]=df["Ventas"].fillna(df["Ventas"].mean())
+# # print(df)
 
+# df["Ventas"]=df["Ventas"].astype(int)
+# # print(df)
 
+# df=df.drop_duplicates()
+# print(df)
+
+df["Ciudad"]=df["Ciudad"].astype("category")
+print(df["Ciudad"])
 
 
 
