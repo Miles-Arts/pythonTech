@@ -156,7 +156,8 @@ productos={
     "productos3": {"nombre": "Teclado", "precio": 20, "stock": 30}
 }
 
-
+print("Producto 1:", productos["productos1"])
+print("Precio del producto 2:", productos["productos2"]["precio"])
 
 
 
