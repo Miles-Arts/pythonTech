@@ -88,7 +88,7 @@ df9=pd.DataFrame(peliculas)
 print(df9)
 
 
-sistema_operativo={"Sistema_Operativo": ["Windows", "Abunto", "Debian"], "Versión": ["11", "Dark II", "Blue 13"]}
+sistema_operativo={"Sistema_Operativo": ["Windows", "Abunto", "Debian"], "Versión": ["11", "Dark VI", "Blue 13"]}
 df13=pd.DataFrame(sistema_operativo)
 print(df13)
 
