@@ -10,12 +10,24 @@ data={
 }
 
 df=pd.DataFrame(data)
-print(df)
+# print(df)
 
-print(df.isnull().sum())
+# print(df.isnull().sum())
 
 df_dropped=df.dropna()
-print(df_dropped)
+# print(df_dropped)
 
 df=df.dropna(subset=["Fechas"])
+# print(df)
+
+
+df["Ventas"]=df["Ventas"].fillna(df["Ventas"].mean())
 print(df)
+
+
+
+
+
+
+
+
