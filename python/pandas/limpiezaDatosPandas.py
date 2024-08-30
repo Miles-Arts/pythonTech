@@ -49,11 +49,11 @@ print(df)
 # print(df.dtypes)
 
 
-df.replace({"Cucuta": "Cúcuta"}, inplace=True)
+# df.replace({"Cucuta": "Cúcuta"}, inplace=True)
+# print(df)
+
+
+df.rename(columns={"Ventas": "Total/Ventas"}, inplace=True)
 print(df)
-
-
-
-
 
 
