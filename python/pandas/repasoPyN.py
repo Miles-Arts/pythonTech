@@ -45,6 +45,18 @@ ciudades=[
 df8=pd.DataFrame(ciudades, columns=["Ciudades", "Climas"])
 print(df8)
 
+celulares=[["iPhone", "Azul"], ["Motorola", "Blanco"], ["LG", "Negro"]]
+df10=pd.DataFrame(celulares, columns=["Marca Celular", "Color"])
+print(df10)
+
+computador=[["Asus", "32 GB"], ["HP", "8 GB"], ["Sony", "16 GB"]]
+df11=pd.DataFrame(computador, columns=["Computador", "Ram"])
+print(df11)
+
+navegador=[["Opera", "12.0"], ["Chrome", "20"], ["Edge", "8.0.1"]]
+df12=pd.DataFrame(navegador, columns=["Navegador", "Actualización"])
+print(df12)
+
 # Creación de DataFrame desde
 # Diccionarios usando Pandas
 data={
@@ -74,5 +86,21 @@ peliculas={
     }
 df9=pd.DataFrame(peliculas)
 print(df9)
+
+
+sistema_operativo={"Sistema_Operativo": ["Windows", "Abunto", "Debian"], "Versión": ["11", "Dark II", "Blue 13"]}
+df13=pd.DataFrame(sistema_operativo)
+print(df13)
+
+
+
+
+
+
+
+
+
+
+
 
 
