@@ -53,7 +53,11 @@ print(df)
 # print(df)
 
 
-df.rename(columns={"Ventas": "Total/Ventas"}, inplace=True)
+# df.rename(columns={"Ventas": "Total/Ventas"}, inplace=True)
+# print(df)
+
+df.drop(columns=["Ciudades"], inplace=True)
 print(df)
 
-
+df.replace(200, 300, inplace=True)
+print(df)
