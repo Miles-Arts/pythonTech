@@ -22,11 +22,13 @@ df_ventas.loc[df_ventas["Día"] == "Lunes", "Ventas"] = 500
 print("\nVentas Actualizadas:\n", df_ventas)
 # print(df_ventas)
 
+nueva_fila=pd.DataFrame({"Día": ["Sábado"], "Ventas": [350]})
+df_ventas=pd.concat([df_ventas, nueva_fila], ignore_index=True)
+print("\nVentas con Sábado Añadido:\n", df_ventas)
 
-
-
-
-
-
+df_ventas.loc[df_ventas["Día"] == "Martes", "Ventas"] =np.nan
+print("\nVentas con Dato Faltante:\n", df_ventas)
+df_ventas_sin_nulos=df_ventas.dropna()
+print("\nVentas sin Días Faltantes:\n", df_ventas_sin_nulos)
 
 
