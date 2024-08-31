@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-import sqlalchemy 
+from sqlalchemy import create_engine
+import seaborn as sns
 
 print("-"*60)
 
@@ -152,6 +153,33 @@ df_json=pd.read_json(
     orient="records"
 )
 print(df_json)
+
+# SQL lite
+# engine=create_engine("sqlite:///:memory:")
+# print(engine)
+
+# df_sql=pd.read_sql(
+#     "nombre_table",
+#     con=engine
+# )
+
+# print(engine)
+
+# IRIS SEA born
+iris_data=sns.load_dataset("iris")
+
+print(iris_data.head())
+
+
+
+
+
+
+
+
+
+
+
 
 
 
