@@ -31,7 +31,6 @@
 productos=[]
 def compras():
     print("---Agregar Productos---")
-    
     while True:
         nombre_producto=str(input("\nIngrese Producto: "))
         precio_producto=float(input("Ingrese precio: "))
@@ -46,16 +45,12 @@ def compras():
 
 def imprimir(productos):
     print("\n ---Productos--- \n")
-    # total = sum(productos["precio"])
-    for producto in productos:
-        print(f"Producto {producto["producto"]} Precio: {producto["precio"]}" )
+    valor_total=0
+    for i, producto in enumerate(productos, start=1):
         
-    # print("Articulo  1:,", productos["precio"])
-    # print(f"Articulo  1: {productos["producto"][0]}")
-    # # print(f"Articulo  1: {articulos[:]}. Valor : ${articulos}")
-    # # print(f"Articulo  2: {articulos["producto"]}. Valor : ${articulos["precio"]}")
-    # # print(f"Articulo  3: {articulos["producto"]}. Valor : ${articulos["precio"]}")
-
+        print(f"Producto {i} {producto["producto"]} Precio: {producto["precio"]}" )
+        valor_total += producto["precio"]
+    print(f"Valor total compra: {valor_total}") 
 
 lista_productos=compras()
 imprimir(lista_productos)
