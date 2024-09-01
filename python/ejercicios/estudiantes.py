@@ -9,6 +9,8 @@ import pandas as pd
 
 # Muestra el DataFrame resultante.
 
+print("-"*60)
+print()
 
 estudiantes={
     "Nombre":           ["Juan Cataño", "Anita Lozano", "Carla España", "Samuel Tenorio", "Juaita Lucas"],
@@ -18,6 +20,21 @@ estudiantes={
 
 df=pd.DataFrame(estudiantes)
 print(df)
+
+departamentos={
+    "Departamentos" : ["Cundinamarca",      "Boyacá", "Quindio", "Meta"         ],
+    "Ciudad" :        [   "Bogotá",         "Tunja",  "Armenia", "Villavicencio"],
+    "Programadores" : [      7500,            1040,     1890,      400          ]
+}
+
+print("-"*60)
+print()
+
+df1=pd.DataFrame(departamentos)
+print(df1)
+
+print("-"*60)
+print()
 
 
 
