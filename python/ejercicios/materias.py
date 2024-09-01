@@ -35,15 +35,16 @@ def agregar_materias():
         materia=str(input("Ingrese la materia: "))
         nota=float(input("Ingrese la nota: "))
         materias[materia]=(nota)
-        continuar=input("Desea continuar (S/N)")
+        continuar=input("Desea continuar (S/N) ")
         # can_materias={"materia": materia, "nota": nota}
         # materias.append(can_materias)
     return materias
 
 def imprimir(materias):
-     print("Materias")
-     for materia in materias:
-         print(materia, materias) 
+     print("\n ---Materias--- \n")
+     print(materias)
+    #  for materia in materias:
+    #      print(materia, materias) 
         
 materia_notas= agregar_materias()
 imprimir(materia_notas)
