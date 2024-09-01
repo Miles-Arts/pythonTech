@@ -51,27 +51,27 @@ materia_notas= agregar_materias()
 imprimir(materia_notas)
 
 
-# materias = [
-#     "Matemáticas", 
-#     "Física", 
-#     "Química", 
-#     "Historia", 
-#     "Lenguaje", 
-#     "Programacóin"
-# ]
+materias = [
+    "Matemáticas", 
+    "Física", 
+    "Química", 
+    "Historia", 
+    "Lenguaje", 
+    "Programacóin"
+]
 
-# notas=[]
+notas=[]
 
-# for materia in materias:
-#     nota=float(input(F"Ingrese la nota de {materia}: "))
-#     notas.append(nota)
+for materia in materias:
+    nota=float(input(F"Ingrese la nota de {materia}: "))
+    notas.append(nota)
 
-# promedio = prom.mean(notas)
+promedio = prom.mean(notas)
 
-# print("\nResumen de notas:")
-# for i in range(len(materias)):
-#     print(f"En {materias[i]} has sacado {notas[i]}")
-# print(f"Promedio de notas: {promedio}")
+print("\nResumen de notas:")
+for i in range(len(materias)):
+    print(f"En {materias[i]} has sacado {notas[i]}")
+print(f"Promedio de notas: {promedio}")
 
 
 

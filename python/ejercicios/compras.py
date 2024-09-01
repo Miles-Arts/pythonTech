@@ -15,22 +15,46 @@
 # Articulo 3 Valor
 # TOTAL VALOR
 
-def compras():
-    articulos={}
-    continuar="fin"
-    while continuar=="fin":
-        print("\n---Pruductos---\n")
-        producto=str(input("Ingrese Productos"))
-        precio=float(input("Ingrese precio: "))
-        articulos[producto]=(precio)
-        continuar=input("Para terminar escriba (FIN)").lower()
-    return articulos
+# def compras():
+#     articulos={}
+#     continuar="fin"
+#     while continuar=="fin":
+#         print("\n---Lista Productos---\n")
+#         producto=str(input("Ingrese Productos: "))
+#         precio=float(input("Ingrese precio: "))
+#         articulos[producto]=(precio)
+#         continuar1=input("Para terminar escriba (FIN)").lower()
+#         if continuar1 == "fin":
+#             break 
+#     return articulos
 
-def imprimir(articulos):
+productos=[]
+def compras():
+    print("---Agregar Productos---")
+    
+    while True:
+        nombre_producto=str(input("\nIngrese Producto: "))
+        precio_producto=float(input("Ingrese precio: "))
+        producto={"producto": nombre_producto, "precio": float(precio_producto)}
+        productos.append(producto)
+        print("\nPara continuar ( Enter )")
+        terminar=input("Para terminar escriba -> ( FIN ): ").lower()
+        if terminar == "fin":
+            break
+    return productos    
+   
+
+def imprimir(productos):
     print("\n ---Productos--- \n")
-    print(f"Articulo  1: {articulos["producto"]}. Valor : ${articulos["precio"]}")
-    print(f"Articulo  2: {articulos["producto"]}. Valor : ${articulos["precio"]}")
-    print(f"Articulo  3: {articulos["producto"]}. Valor : ${articulos["precio"]}")
+    # total = sum(productos["precio"])
+    for producto in productos:
+        print(f"Producto {producto["producto"]} Precio: {producto["precio"]}" )
+        
+    # print("Articulo  1:,", productos["precio"])
+    # print(f"Articulo  1: {productos["producto"][0]}")
+    # # print(f"Articulo  1: {articulos[:]}. Valor : ${articulos}")
+    # # print(f"Articulo  2: {articulos["producto"]}. Valor : ${articulos["precio"]}")
+    # # print(f"Articulo  3: {articulos["producto"]}. Valor : ${articulos["precio"]}")
 
 
 lista_productos=compras()
