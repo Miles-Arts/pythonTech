@@ -1,3 +1,4 @@
+import statistics as prom
 # # def materias():
 # #     materias={}
 # #     continuar="s"
@@ -65,13 +66,12 @@ for materia in materias:
     nota=float(input(F"Ingrese la nota de {materia}: "))
     notas.append(nota)
 
-promedio=  ma 
+promedio = prom.mean(notas)
 
 print("\nResumen de notas:")
 for i in range(len(materias)):
     print(f"En {materias[i]} has sacado {notas[i]}")
-    print()
-
+print(f"Promedio de notas: {promedio}")
 
 
 
