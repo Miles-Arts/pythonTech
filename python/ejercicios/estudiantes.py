@@ -37,9 +37,16 @@ print("-"*60)
 print()
 
 
+programadores={
+    "Nombre":       ["Juan Cataño",     "Anita Lozano",     "Carla España",          "Samuel Tenorio", "Juaita Lucas"           ],
+    "Experiencia":  ["Senior",          "Junior",           "Trainee",               "Semi-Senior",    "Junio"                  ],
+    "Lenguaje":     ["Java",            "Python",           "Cobol",                 "Go",             "PHP"                    ],
+    "Localización": ["Virtual",         "Precencial",       "Hibrido",               "Virtual",        "Virtual"                ],
+    "Idioma":       ["Español",         "Español/Inglés",   "Italiano/Español",      "Español",        "Español/Mandarin"     ]
+}
 
-
-
+df2=pd.DataFrame(programadores)
+print(df2)
 
 
 
