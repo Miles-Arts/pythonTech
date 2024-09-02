@@ -30,10 +30,18 @@ fig, ax=plt.subplots(figsize=(10,6))
 # print(fig)
 # print(ax)
 
-ax.plot(datos.index, datos["Ventas"] )
+ax.plot(datos.index, datos["Ventas"], label="Ventas", color="blue", marker="o" )
+ax.bar(datos.index, datos["Costos"],label="Costos", color="red", alpha=0.5 )
+ax.set_title("Ventas y Costo por Fecha")
+ax.set_xlabel("Fecha")
+ax.set_ylabel("Cantidad")
+ax.grid(True)
+ax.legend()
 
+
+# plt.xticks(rotation=45)
 plt.show()
-print()
+# print()
 
 
 
