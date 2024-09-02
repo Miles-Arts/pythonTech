@@ -31,10 +31,10 @@
 
 base_datos_clientes=[ 
     {
-        "Nit": {
+        12345: {
         "Nombre": "Juan", 
         "Direccion" : "123", 
-        "Telefono": 12345,
+        "Telefono": 54321,
         "Correo" : "juan@gmail.com",
         "Preferencial": True
         }}
