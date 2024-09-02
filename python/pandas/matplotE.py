@@ -18,15 +18,22 @@ print(columnas)
 datos=pd.DataFrame(valores, index=fechas, columns=columnas)
 print(datos)
 
+datos["Ventas"]=datos["A"].cumsum() + 10
+print(datos)
 
+datos["Costos"]=datos["B"].cumsum() + 8
+print(datos)
 
+print("-"*50)
 
+fig, ax=plt.subplots(figsize=(10,6))
+# print(fig)
+# print(ax)
 
+ax.plot(datos.index, datos["Ventas"] )
 
-
-
-
-
+plt.show()
+print()
 
 
 
