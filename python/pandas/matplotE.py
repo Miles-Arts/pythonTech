@@ -39,6 +39,9 @@ ax.grid(True)
 ax.legend()
 
 
+manager=plt.get_current_fig_manager()
+manager.set_window_title("Ventas y Costos")
+# manager.window.state
 # plt.xticks(rotation=45)
 plt.show()
 # print()
