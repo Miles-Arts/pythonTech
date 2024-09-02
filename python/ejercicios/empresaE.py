@@ -40,8 +40,6 @@ base_datos_clientes=[
         }}
 ]
 
-
-
 def anadir_cliente():
     pass
 
@@ -59,38 +57,42 @@ def preferencial_lista_clientes():
     pass
 
 def terminar():
+   print("---FIN---")
    pass
 
 
-def menu():    
-    print("\n---Menú---\n")
-    print("1. Añadir Clientes")
-    print("2. Eliminar Cliente")
-    print("3. Mostrar Cliente")
-    print("4. Listar todos los clientes")
-    print("5. Listar clientes preferenciales")
-    print("6. Terminar Programa")
-    opcion=int(input("Ingrese el número de la opción: "))
-    # print("\n-------\n")
-
+def menu_clientes():    
     while True:
-        if opcion == "1":
-           anadir_cliente()
-        elif opcion == "2":
-            eliminar_cliente()
-        elif opcion == "3":
-            mostrar_cliente()        
-        elif opcion == "4":
-            lista_clientes()
-        elif opcion == "5":
-            preferencial_lista_clientes()
-        else:
-            print("---FIN---")
-            break
+            print("\n---Menú---\n")
+            print("1. Añadir Clientes")
+            print("2. Eliminar Cliente")
+            print("3. Mostrar Cliente")
+            print("4. Listar todos los clientes")
+            print("5. Listar clientes preferenciales")
+            print("6. Terminar Programa")
+            opcion=int(input("Ingrese el número de la opción: "))
+            # print("\n-------\n")
+
+            if opcion == 1:
+                anadir_cliente()
+            elif opcion == 2:
+                eliminar_cliente()
+            elif opcion == 3:
+                mostrar_cliente()        
+            elif opcion == 4:
+                lista_clientes()
+            elif opcion == 5:
+                preferencial_lista_clientes()
+            elif opcion == 6:
+                terminar()
+                break
+            else:
+                print("\nIngrese un parámetro válido\n")
+            
 
              
 
-menu()
+menu_clientes()
 
 
 
