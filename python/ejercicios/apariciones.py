@@ -24,7 +24,7 @@ apariciones={}
 
 for palabra in palabras:
     if palabra in apariciones:
-        apariciones[palabra]+=1
+        apariciones[palabra]+= 1
     else:
         apariciones[palabra]=1
 
