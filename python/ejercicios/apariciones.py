@@ -10,16 +10,28 @@
 # # 'que': 2, 'lindo': 1, 'día': 1, 'hace': 1, 'hoy': 1
 
 
-CADENA_TEXTO=str(input("Ingrese una frase: ")).rstrip()
+# CADENA_TEXTO=str(input("Ingrese una frase: ")).split(" ")
 
-diccionarios={}
+# diccionarios={}
+
+# for i, diccionario in enumerate(CADENA_TEXTO, start=1):
+#     diccionarios[diccionario] = i
+# print(diccionarios, i )
+
+cadena=input("Ingrese una cadena de texto: ").lower()
+palabras=cadena.split()
+apariciones={}
+
+for palabra in palabras:
+    if palabra in apariciones:
+        apariciones[palabra]+=1
+    else:
+        apariciones[palabra]=1
 
 
-for i, diccionario in enumerate(CADENA_TEXTO, start=1):
-    diccionarios[diccionario] = i
-print(diccionarios, i )
-
-
+print("\nDiccionario de apariciones: ")
+for palabra, cantidad in apariciones.items():
+    print(f"'{palabra}':{cantidad}")
 
 
 
