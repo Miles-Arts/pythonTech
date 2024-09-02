@@ -31,24 +31,48 @@
 
 base_datos_clientes=[ 
     {
-        12345: {
-        "Nombre": "Juan", 
-        "Direccion" : "123", 
-        "Telefono": 54321,
-        "Correo" : "juan@gmail.com",
-        "Preferencial": True
+        "nit" :12345, 
+        "cliente": {
+        "nombre": "Juan", 
+        "direccion" : "123", 
+        "telefono": 54321,
+        "correo" : "juan@gmail.com",
+        "preferencial": True
         }}
 ]
 
 def anadir_cliente():
-    pass
+    base_datos={}
+    print("Agregar Cliente: ")
+    nit=int(input("Ingrese NIT: "))
+    nombre=input("Ingrese nombre: ")
+    direccion=input("Ingrese dirección Cliente: ")
+    telefono=input("Ingrese teléfono:")
+    correo=input("Ingrese correo: ")
+    preferencial=bool(input("Preferencial marque 1: "))
+    base_datos["nit": nit]={
+        "nombre": nombre, 
+        "direccion": direccion, 
+        "telefono": telefono, 
+        "correo": correo,
+        "preferencial": preferencial
+        }
+    base_datos_clientes.append(base_datos)
+    
 
 def eliminar_cliente():
-    pass
+    print("Eliminar Cliente")
+    eliminar_cliente=(input("Ingrese Nit del cliente a eliminar: "))
+    clientes_antes=len(base_datos_clientes)
+    base_datos_clientes[:]=[cliente for cliente in base_datos_clientes if eliminar_cliente != cliente["nit"]]
+    if clientes_antes > len(base_datos_clientes):
+        print("Cliente Eliminado")
+    else:
+        print("Escriba un parámetro válido")    
 
 def mostrar_cliente():
     print(base_datos_clientes)
-    print("hola")
+    # print("hola")
 
 def lista_clientes():
     pass
