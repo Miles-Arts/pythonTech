@@ -1,8 +1,11 @@
-numero=int(input("Grise un número: "))
+numero=int(input("Ingrese un número: "))
 
 cuadrado =0
 nivel=0
 
+while cuadrado < numero:
+    nivel+=1
+    cuadrado= nivel * nivel
 
 
 if cuadrado == numero:
