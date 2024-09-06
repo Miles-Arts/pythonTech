@@ -125,12 +125,20 @@
 # print(f"Costo TOTAL: {descuento_no_dia:.1f}€")
 
 # BUCLE USUARIO
+# nombre_usuario=str(input("Ingrese su nombre: "))
+# numero_entero=int(input("Ingrese nu numero entero: "))
 
-nombre_usuario=str(input("Ingrese su nombre: "))
-numero_entero=int(input("Ingrese nu numero entero: "))
+# for numero in range(numero_entero):
+#     print(nombre_usuario)
 
-for numero in range(numero_entero):
-    print(nombre_usuario)
+# NOMBRE USER MAYUSCULAS, MINUSCULAS Title CASE
 
+nombre_user=str(input("Ingrese su nombre: "))
+nombre_lowe=nombre_user.lower()
+nombre_upercase=nombre_user.upper()
+nombre_title_clase=nombre_user.title()
 
+print(nombre_lowe)
+print(nombre_upercase)
+print(nombre_title_clase)
 
