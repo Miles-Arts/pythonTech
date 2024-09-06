@@ -54,14 +54,47 @@
 
 
 # MASA CORPORAL
-peso=float(input("Ingrese su peso: "))
-altura=float(input("Ingrese su altura: "))
+# peso=float(input("Ingrese su peso kg: "))
+# altura=float(input("Ingrese su altura Mt: "))
 
-imc= peso / (altura * altura)
+# imc= peso / (altura * altura)
 
-print(f"Su altura de {altura}")
-print(f"Su peso de {peso}")
-print(f"Su masa corporal es de: {imc:.2f}%")
+# # print(f"Su altura de {altura}")
+# # print(f"Su peso de {peso}")
+# print(f"Tu índice de masa corporal es {imc:.2f}")
+
+# COCIENTE
+# entero0=int(input("Ingrese el primer numero entero: "))
+# entero1=int(input("Ingrese el segundo numero entero: "))
+
+
+# division= entero0 / entero1
+# cociente= entero0 % entero1
+
+# print(f"{entero0} entre {entero1} da un cociente {division:.2f} y un resto {cociente}")
+
+# INVERSION DINERO
+
+# dinero_inversion=float(input("Ingrese la cantidad a Invertir: "))
+# interes_anual=float(input("Ingrese el interés anual (%): "))
+# anios_invertir=int(input("Años a inventir: "))
+
+# for anio in range(1, anios_invertir +1):
+#     dinero_inversion *= 1 + (interes_anual / 100)
+#     print(f"Año { anio}: Capital acumulado = {round(dinero_inversion, 2)}")
+
+# dinero_invertir=float(input("Ingrese cantidad a invertir: "))
+# anual_interes=float(input("Ingrese el interés anual (%): "))
+# dinero_anios=int(input("Años a inventir: "))
+
+# for anio in range(1,dinero_anios,1):
+#     resultado = (dinero_invertir * (anual_interes / 100 + 1 ) ** dinero_anios)
+# print(f"Año {dinero_anios}: Capital acumulado = {round(resultado, 2)}")
+  
+# PAYASOS Y MUÑECAS
+
+
+
 
 
 
