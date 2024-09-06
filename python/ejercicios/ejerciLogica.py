@@ -41,18 +41,27 @@
 
 
 
-ingrese_numero=int(input("Ingrese numero entero positivo: "))
+# ingrese_numero=int(input("Ingrese numero entero positivo: "))
 
-# for numero in range(0,ingrese_numero,1):
-#     numero= numero * (numero + 1) / 2
-#     # numero+=1
-#     print(numero)
+# # for numero in range(0,ingrese_numero,1):
+# #     numero= numero * (numero + 1) / 2
+# #     # numero+=1
+# #     print(numero)
 
-suma = ingrese_numero * (ingrese_numero + 1) / 2
+# suma = ingrese_numero * (ingrese_numero + 1) / 2
 
-print(f"La suma de los números enteros desde 1 hasta + {ingrese_numero} es {suma}")
+# print(f"La suma de los números enteros desde 1 hasta + {ingrese_numero} es {suma}")
 
 
+# MASA CORPORAL
+peso=float(input("Ingrese su peso: "))
+altura=float(input("Ingrese su altura: "))
+
+imc= peso / (altura * altura)
+
+print(f"Su altura de {altura}")
+print(f"Su peso de {peso}")
+print(f"Su masa corporal es de: {imc:.2f}%")
 
 
 
