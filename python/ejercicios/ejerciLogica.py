@@ -93,7 +93,20 @@
   
 # PAYASOS Y MUÑECAS
 
+cantida_payasos=float(input("Ingrese la cantidad de payasos vendidos: "))
+cantida_munecas=float(input("Ingrese la cantidad de muñecas vendidas: "))
 
+PESO_PAYASO = 112
+PESO_MUNECA = 75
+
+peso_total_payasos = cantida_payasos * PESO_PAYASO
+peso_total_munecas = cantida_munecas * PESO_MUNECA
+total_ventas = peso_total_payasos+peso_total_munecas
+
+if peso_total_payasos > 1000:
+    print(f"Peso Total del paquete es de: {total_ventas:.0f} kilos")
+else:
+    print(f"Peso Total del paquete es de: {total_ventas:.0f} gramos")
 
 
 
