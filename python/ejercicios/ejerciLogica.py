@@ -111,22 +111,26 @@
 # PANADERIA - BARRAS PAN
 
 
-cantidad_pan_vendido = int(input("Ingrese la cantidad de pan vendido: "))
-UNIDAD_PAN_PRECIO = float(3.49)
-DESCUENTO = 60
+# cantidad_pan_vendido = int(input("Ingrese la cantidad de pan vendido: "))
+# UNIDAD_PAN_PRECIO = float(3.49)
+# DESCUENTO = 60
 
-precio_pan_total = cantidad_pan_vendido * UNIDAD_PAN_PRECIO
-descuento_no_dia = float(precio_pan_total * (1- DESCUENTO / 100 ) )
-cantidad_descuento =   precio_pan_total - descuento_no_dia  
+# precio_pan_total = cantidad_pan_vendido * UNIDAD_PAN_PRECIO
+# descuento_no_dia = float(precio_pan_total * (1- DESCUENTO / 100 ) )
+# cantidad_descuento =   precio_pan_total - descuento_no_dia  
 
-print(f"Precio habitual pan {UNIDAD_PAN_PRECIO}€")
-print(f"Descuento no frescura del {DESCUENTO}%")
-print(f"Valor del descuento: {cantidad_descuento:.2f}€")
-print(f"Costo TOTAL: {descuento_no_dia:.2f}€")
+# print(f"Precio habitual del pan fresco es: {UNIDAD_PAN_PRECIO}€")
+# print(f"Descuento no frescura del {DESCUENTO}%")
+# print(f"Valor del descuento: {cantidad_descuento:.2f}€")
+# print(f"Costo TOTAL: {descuento_no_dia:.1f}€")
 
+# BUCLE USUARIO
 
+nombre_usuario=str(input("Ingrese su nombre: "))
+numero_entero=int(input("Ingrese nu numero entero: "))
 
-
+for numero in range(numero_entero):
+    print(nombre_usuario)
 
 
 
