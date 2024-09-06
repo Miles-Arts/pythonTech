@@ -132,13 +132,62 @@
 #     print(nombre_usuario)
 
 # NOMBRE USER MAYUSCULAS, MINUSCULAS Title CASE
+# nombre_user=str(input("Ingrese su nombre: "))
+# nombre_lowe=nombre_user.lower()
+# nombre_upercase=nombre_user.upper()
+# nombre_title_clase=nombre_user.title()
 
-nombre_user=str(input("Ingrese su nombre: "))
-nombre_lowe=nombre_user.lower()
-nombre_upercase=nombre_user.upper()
-nombre_title_clase=nombre_user.title()
+# print(nombre_lowe)
+# print(nombre_upercase)
+# print(nombre_title_clase)
 
-print(nombre_lowe)
-print(nombre_upercase)
-print(nombre_title_clase)
+# NOMBRE CANTIDAD LETRAS Y MAYUSCULA
+
+# nombre_user=str(input("Ingrese nombre: ")).upper()
+
+# nombre=len(nombre_user)
+# print(f"Nombre: {nombre_user} tiene {nombre} letras")
+
+# n=10
+# print("Juan\n"*int(n))
+
+
+# NÚMERO PREFIJO EMPRESA
+# prefijo numero extención
+# +34-913724710-56
+# numero=(input("Ingrese un numero con su prefijo-número-extención: "))
+
+# print(f"Número sin prefijo y sin extención: {numero[4:-3]}")
+
+
+# LETRAS INVERTIDAS
+# ingrese_frase=input("Ingrese una frase: ")
+# print(ingrese_frase[::-1]["o"])
+
+
+# VOCAL MAYUSCULA
+
+# frase=str(input("Escriba una frase: "))
+# vocal=str(input("Escriba una vocal: "))
+# call="M"
+
+# print(frase.replace(vocal, call.upper()))
+# # print(frase.replace(vocal, vocal.upper()))
+
+
+# EMAIL DOMINiO
+
+# ingrese_email=input("Ingrese su email: ")
+# domini="ceu.es"
+# arroba="@"
+# print(ingrese_email.replace(arroba, domini))
+
+ingrese_email=input("Ingrese su email: ")
+# print(ingrese_email[:ingrese_email.find('@')] + "@ceo.es")
+
+print(ingrese_email[:ingrese_email.find("@")] + "@que_loco_de_email.com")
+
+
+
+
 
