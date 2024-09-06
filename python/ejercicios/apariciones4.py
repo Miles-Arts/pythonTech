@@ -43,13 +43,14 @@
 
 ingrese_numero=int(input("Ingrese numero entero positivo: "))
 
-for numero in range(0,ingrese_numero,1):
-  
-    numero+=1
-    print(numero)
+# for numero in range(0,ingrese_numero,1):
+#     numero= numero * (numero + 1) / 2
+#     # numero+=1
+#     print(numero)
 
+suma = ingrese_numero * (ingrese_numero + 1) / 2
 
-
+print(f"La suma de los números enteros desde 1 hasta + {ingrese_numero} es {suma}")
 
 
 
