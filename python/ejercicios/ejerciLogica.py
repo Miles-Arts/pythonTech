@@ -93,20 +93,38 @@
   
 # PAYASOS Y MUÑECAS
 
-cantida_payasos=float(input("Ingrese la cantidad de payasos vendidos: "))
-cantida_munecas=float(input("Ingrese la cantidad de muñecas vendidas: "))
+# cantida_payasos=float(input("Ingrese la cantidad de payasos vendidos: "))
+# cantida_munecas=float(input("Ingrese la cantidad de muñecas vendidas: "))
 
-PESO_PAYASO = 112
-PESO_MUNECA = 75
+# PESO_PAYASO = 112
+# PESO_MUNECA = 75
 
-peso_total_payasos = cantida_payasos * PESO_PAYASO
-peso_total_munecas = cantida_munecas * PESO_MUNECA
-total_ventas = peso_total_payasos+peso_total_munecas
+# peso_total_payasos = cantida_payasos * PESO_PAYASO
+# peso_total_munecas = cantida_munecas * PESO_MUNECA
+# total_ventas = peso_total_payasos+peso_total_munecas
 
-if peso_total_payasos > 1000:
-    print(f"Peso Total del paquete es de: {total_ventas:.0f} kilos")
-else:
-    print(f"Peso Total del paquete es de: {total_ventas:.0f} gramos")
+# if peso_total_payasos > 1000:
+#     print(f"Peso Total del paquete es de: {total_ventas:.0f} kilos")
+# else:
+#     print(f"Peso Total del paquete es de: {total_ventas:.0f} gramos")
+
+# PANADERIA - BARRAS PAN
+
+
+cantidad_pan_vendido = int(input("Ingrese la cantidad de pan vendido: "))
+UNIDAD_PAN_PRECIO = float(3.49)
+DESCUENTO = 60
+
+precio_pan_total = cantidad_pan_vendido * UNIDAD_PAN_PRECIO
+descuento_no_dia = float(precio_pan_total * (1- DESCUENTO / 100 ) )
+cantidad_descuento =   precio_pan_total - descuento_no_dia  
+
+print(f"Precio habitual pan {UNIDAD_PAN_PRECIO}€")
+print(f"Descuento no frescura del {DESCUENTO}%")
+print(f"Valor del descuento: {cantidad_descuento:.2f}€")
+print(f"Costo TOTAL: {descuento_no_dia:.2f}€")
+
+
 
 
 
