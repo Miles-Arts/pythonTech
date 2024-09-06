@@ -8,13 +8,15 @@
 #     print()
 
 
-altura=int(input("Ingrese numero enyero: "))
+altura=int(input("Ingrese numero entero: "))
            
            
 if altura % 2 !=0:
-    altura += 1   
+    altura -= 1   
 
-for i in range(0, altura,1):
+for i in range(2, altura + 2, 2):
+    for j in range(i, 0, -2):
+        print(j,  end=" ")        
     print()        
            
            
