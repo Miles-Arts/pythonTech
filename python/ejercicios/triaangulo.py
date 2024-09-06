@@ -3,7 +3,7 @@
 
 # for i in range(1, altura + 1, 2):
 #     for j in range(i, 0, -2):
-#         print(j, end=" ")
+#         print(j, end=" " if j > 2 else "")
 #         # return
 #     print()
 
@@ -16,7 +16,7 @@ if altura % 2 !=0:
 
 for i in range(2, altura + 2, 2):
     for j in range(i, 0, -2):
-        print(j,  end=" ")        
+        print(j, end=" " if j > 2 else "")        
     print()        
            
            
