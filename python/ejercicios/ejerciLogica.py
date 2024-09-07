@@ -255,19 +255,54 @@
 
 # Productos USUARIO
 
-nombre_producto=input("Ingrese el nombre producto: ")
-precio_producto=float(input("Ingrese el precio producto: "))
-unidades_producto=int(input("Ingrese el número unidades producto: "))
+# nombre_producto=input("Ingrese el nombre producto: ")
+# precio_producto=float(input("Ingrese el precio producto: "))
+# unidades_producto=int(input("Ingrese el número unidades producto: "))
 
-total_valor=precio_producto*unidades_producto
+# total_valor=precio_producto*unidades_producto
 
-# print(nombre_producto, precio_producto, unidades_producto, total_valor)
-print(f'{nombre_producto}: {unidades_producto:3d} unidades x {precio_producto:11.2f}€ = {total_valor:9.2f}€'.format(nombre_producto = nombre_producto, unidades_producto = unidades_producto, precio_producto = precio_producto, total_valor = total_valor))
+# # print(nombre_producto, precio_producto, unidades_producto, total_valor)
+# print(f'{nombre_producto}: {unidades_producto:3d} unidades x {precio_producto:11.2f}€ = {total_valor:9.2f}€'.format(nombre_producto = nombre_producto, unidades_producto = unidades_producto, precio_producto = precio_producto, total_valor = total_valor))
+
+# nombre=input("Nombre: ")
+# edad=input("Edad: ")
+
+# salida= "My name is {nombre}, I'm {edad}".format(nombre = nombre, edad = edad)
+# salida1= "My name is {0}, I'm {1}".format(nombre, edad)
+# salida2= "My name is {}, I'm {} ".format(nombre,edad)
+
+# print(salida)
+# print(salida1)
+# print(salida2)
+
+# MAYOR EDAD
+
+# edad=int(input("Ingrese su edad: "))
+
+# if edad >= 18:
+#     print("Es mayor de edad.")
+# else:
+#     print("Es menor de edad.")    
+
+# CONTRASEÑA
+
+# password=input("Ingrese contraseña: ").lower()
+
+# password_new=input("Introduca nuevamente su contraseña: ")
+
+# if password == password_new:
+#     print("Contraseña correcta")
+# else:
+#     print("Contraseña errónea")    
 
 
+num1=float(input("Introduzca primer número: "))
+num2=float(input("Introduzca segundo número: "))
 
+division = float(num1 / num2)
 
+if division == 0:
+    print("Error")
 
-
-
-
+else:
+    print(f"Resultado: {division}")
