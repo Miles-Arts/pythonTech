@@ -231,14 +231,38 @@
 # for lista in listas:
 #     print(lista)
 #     # print("\n",lista_productos,"\n")
-#     # print(lista)
+# #     # print(lista)
 
-productos_lista=input("Ingrese lista productos, después (,) ")
+# productos_lista=input("Ingrese lista productos, después (,) ")
 
-productos=productos_lista.split()
+# productos=productos_lista.split()
 
-for lista in productos:
-    print(lista)
+# for lista in productos:
+#     print(lista)
+
+# productos=input("Añada lista después (,): ")
+
+# # lista=",".join(productos)
+# print("\n".join(productos.split(",")))
+
+
+# compras=input("Ingrese productos (,)")
+
+# lista=compras.replace(",", "\n")
+
+# print(lista)
+
+
+# Productos USUARIO
+
+nombre_producto=input("Ingrese el nombre producto: ")
+precio_producto=input("Ingrese el precio producto: ")
+unidades_producto=input("Ingrese el número unidades producto: ")
+
+
+
+
+
 
 
 
