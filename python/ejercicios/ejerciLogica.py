@@ -209,11 +209,18 @@ fecha=input("Ingrese su fecha de nacimiento dd/mm/aaaa : ")
 # print(fecha[:fecha.find("/")],fecha[fecha.find("/0")+1:])
 
 # 12/23/1234
-print("Día:",   fecha[:2])
-print("Mes:",   fecha[3:5])
-print("Año:",   fecha[6:])
+# print("Día:",   fecha[:2])
+# print("Mes:",   fecha[3:5])
+# print("Año:",   fecha[6:])
 
+dia=fecha[:fecha.find("/")]
+mesaño = fecha[fecha.find("/")+1:]
+mes = mesaño[:mesaño.find("/")]
+año = mesaño[mesaño.find("/")+1:]
 
+print("Día", dia)
+print("Mes", mes)
+print("Año", año)
 
 
 
