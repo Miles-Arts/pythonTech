@@ -296,13 +296,64 @@
 #     print("Contraseña errónea")    
 
 
-num1=float(input("Introduzca primer número: "))
-num2=float(input("Introduzca segundo número: "))
+# DIVIISON EN CERO
 
-division = float(num1 / num2)
+# num1=float(input("Introduzca primer número: "))
+# num2=float(input("Introduzca segundo número: "))
 
-if division == 0:
-    print("Error")
+# division = float(num1 / num2)
 
-else:
-    print(f"Resultado: {division}")
+# if division == 0:
+#     print("¡Error! No se puede dividir por 0.")
+
+# else:
+#     print(f"Resultado: {division}")
+
+
+# PAR E IMPAR
+
+# num_par=float(input("Ingrese un numero: "))
+
+# if num_par % 2 == 0:
+#     print(f"El numero {num_par} es par")
+# else:
+#     print(f"El numero {num_par} es impar")    
+
+
+# entero=int(input("Ingrese numero entero: "))
+
+# if entero % 2 == 0:
+#     print(f"Es número {entero} par.")
+# else:
+#     print(f"Es número {entero} impar.")    
+
+
+# TRUBITAR IMPUESTO
+
+# edad=int(input("Ingrese edad: "))
+# ingresos=float(input("Ingresos mensuales: "))
+
+# if edad >= 18 and ingresos >= 1000:
+#     print("Tiene que tributar")
+# else:
+#     print("No tiene que tributar")    
+
+# ALUMNOS COLEGIO
+
+nombre=str(input("Ingrese su numbre: ")).lower()
+sexo=str(input("Ingres su sexo: ")).lower()
+
+if sexo == "mujer" and  nombre[0] in ["a","b","c","d","e","f","g","h","i","j", "k","l"] :
+    print("Grupo A ")
+elif sexo == "hombre" and  nombre[0] in ["o","p","q","r","s", "t", "u","w", "x","y","z" ]:    
+    print("Grupo A")
+else: 
+    print("Grupo B")
+
+
+
+
+
+
+
+
