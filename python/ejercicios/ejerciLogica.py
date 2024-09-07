@@ -182,10 +182,42 @@
 # arroba="@"
 # print(ingrese_email.replace(arroba, domini))
 
-ingrese_email=input("Ingrese su email: ")
-# print(ingrese_email[:ingrese_email.find('@')] + "@ceo.es")
+# ingrese_email=input("Ingrese su email: ")
+# # print(ingrese_email[:ingrese_email.find('@')] + "@ceo.es")
 
-print(ingrese_email[:ingrese_email.find("@")] + "@que_loco_de_email.com")
+# print(ingrese_email[:ingrese_email.find("@")] + "@que_loco_de_email.com")
+
+# ingrese_email=input("Ingrese su email: ")
+# print(ingrese_email[:ingrese_email.find("@")] + "@hola_gente.caspa.com")
+
+# PRODUCTO EURO DECIMALES CENTIMOS.
+
+
+# precio=input("Ingrese precio en euros: ")
+# # print(f"{precio}€")
+
+# print(precio[:precio.find(".")] , "euros y" , precio[precio.find(".")+1:], "centimos.") 
+
+# precio=input("Ingrese precio: ")
+
+# print(precio[:precio.find(".")], "euros y", precio[precio.find(".")+1:]  ,"centimos" )
+
+
+# INGRESE dd/mm/aaaa
+fecha=input("Ingrese su fecha de nacimiento dd/mm/aaaa : ")
+
+# print(fecha[:fecha.find("/")],fecha[fecha.find("/0")+1:])
+
+# 12/23/1234
+print("Día:",   fecha[:2])
+print("Mes:",   fecha[3:5])
+print("Año:",   fecha[6:])
+
+
+
+
+
+
 
 
 
