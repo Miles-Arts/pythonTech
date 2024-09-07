@@ -204,7 +204,7 @@
 
 
 # INGRESE dd/mm/aaaa
-fecha=input("Ingrese su fecha de nacimiento dd/mm/aaaa : ")
+# fecha=input("Ingrese su fecha de nacimiento dd/mm/aaaa : ")
 
 # print(fecha[:fecha.find("/")],fecha[fecha.find("/0")+1:])
 
@@ -213,18 +213,32 @@ fecha=input("Ingrese su fecha de nacimiento dd/mm/aaaa : ")
 # print("Mes:",   fecha[3:5])
 # print("Año:",   fecha[6:])
 
-dia=fecha[:fecha.find("/")]
-mesaño = fecha[fecha.find("/")+1:]
-mes = mesaño[:mesaño.find("/")]
-año = mesaño[mesaño.find("/")+1:]
+# dia=fecha[:fecha.find("/")]
+# mesaño = fecha[fecha.find("/")+1:]
+# mes = mesaño[:mesaño.find("/")]
+# año = mesaño[mesaño.find("/")+1:]
 
-print("Día", dia)
-print("Mes", mes)
-print("Año", año)
-
-
+# print("Día", dia)
+# print("Mes", mes)
+# print("Año", año)
 
 
+# Productos separados
+# lista_productos=input("Ingrese lista produtos compra: ")
+
+# listas=lista_productos.split(",")
+
+# for lista in listas:
+#     print(lista)
+#     # print("\n",lista_productos,"\n")
+#     # print(lista)
+
+productos_lista=input("Ingrese lista productos, después (,) ")
+
+productos=productos_lista.split()
+
+for lista in productos:
+    print(lista)
 
 
 
