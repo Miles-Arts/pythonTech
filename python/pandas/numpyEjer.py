@@ -1,110 +1,119 @@
-import numpy as np
+# import numpy as np
 
 
-# lista=[1,2,3]
-# print(lista)
-# #array multidimensional
-a=np.array([1,2,3])
-print(a)
+# # lista=[1,2,3]
+# # print(lista)
+# # #array multidimensional
+# a=np.array([1,2,3])
+# print(a)
 
-# escalarProducto=a*2
-# print(escalarProducto)
+# # escalarProducto=a*2
+# # print(escalarProducto)
 
-# seno=np.sin(a)
-# print(seno)
+# # seno=np.sin(a)
+# # print(seno)
 
-# logaritmo=np.log(a)
-# print(logaritmo)
+# # logaritmo=np.log(a)
+# # print(logaritmo)
 
-# b=np.array([[1,2,3]])
-#Una 2x3 DOS filas 3 COLUMNAS- filas primeros, comulnas depues
-b=np.array([[1,2,3],[4,5,6]])
-print(b)
+# # b=np.array([[1,2,3]])
+# #Una 2x3 DOS filas 3 COLUMNAS- filas primeros, comulnas depues
+# b=np.array([[1,2,3],[4,5,6]])
+# print(b)
 
-print("")
+# print("")
 
-# 3 Filas 2 Columnas
-# modifica la matriz
-cambiar_array=b.reshape((3,2))
-print(cambiar_array)
+# # 3 Filas 2 Columnas
+# # modifica la matriz
+# cambiar_array=b.reshape((3,2))
+# print(cambiar_array)
 
-lista=["a","b","c","d","e"]
-print(lista[:5])
-
-
+# lista=["a","b","c","d","e"]
+# print(lista[:5])
 
 
-b=np.array([[1,2,3],[4,5,6]])
-print("")
-primera_fila=b[1,:2]
-# print(primera_fila)
-
-segunda_columna=b[:,1]
-# print(segunda_columna)
 
 
-submatriz=b[  0 :2, 1:  3]
-print(submatriz)
+# b=np.array([[1,2,3],[4,5,6]])
+# print("")
+# primera_fila=b[1,:2]
+# # print(primera_fila)
 
-print("--")
-
-suma_array=a+b[0]
-print(suma_array)
-
-print("--")
-producto_punto=np.dot(a,b[0])
-print(producto_punto)
-
-print("--")
-print("--")
+# segunda_columna=b[:,1]
+# # print(segunda_columna)
 
 
-a=np.array([1,2,3])
-b=np.array([[1,2,3],[4,5,6]])
+# submatriz=b[  0 :2, 1:  3]
+# print(submatriz)
 
-broad_cast_array=a+b
-print(broad_cast_array)
+# print("--")
 
-print("--")
-print("")
+# suma_array=a+b[0]
+# print(suma_array)
 
-c=np.zeros((3,4))
-print(c)
+# print("--")
+# producto_punto=np.dot(a,b[0])
+# print(producto_punto)
 
-
-print("--")
-print("")
-
-c=np.ones((2,4))
-print(c)
+# print("--")
+# print("--")
 
 
-print("--")
-print("")
+# a=np.array([1,2,3])
+# b=np.array([[1,2,3],[4,5,6]])
 
-e=np.random.random((2,2))
-print(e)
+# broad_cast_array=a+b
+# print(broad_cast_array)
 
-print("--")
-print("")
+# print("--")
+# print("")
 
-f=np.random.uniform(5,10,(3,3))
-print(f)
-
-
-print("--")
-print("")
-media=np.mean(a)
-print(media)
+# c=np.zeros((3,4))
+# print(c)
 
 
-print("--")
-print("")
-varianza_standar=np.var(a)
-print(desviacion_varianza)
+# print("--")
+# print("")
+
+# c=np.ones((2,4))
+# print(c)
 
 
-print("--")
-print("")
-desviacion_standar=np.std(a)
-print(desviacion_standar)
+# print("--")
+# print("")
+
+# e=np.random.random((2,2))
+# print(e)
+
+# print("--")
+# print("")
+
+# f=np.random.uniform(5,10,(3,3))
+# print(f)
+
+
+# print("--")
+# print("")
+# media=np.mean(a)
+# print(media)
+
+
+# print("--")
+# print("")
+# varianza_standar=np.var(a)
+# print(desviacion_varianza)
+
+
+# print("--")
+# print("")
+# desviacion_standar=np.std(a)
+# print(desviacion_standar)
+
+
+
+
+
+
+
+
+
