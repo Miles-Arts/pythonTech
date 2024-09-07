@@ -256,11 +256,13 @@
 # Productos USUARIO
 
 nombre_producto=input("Ingrese el nombre producto: ")
-precio_producto=input("Ingrese el precio producto: ")
-unidades_producto=input("Ingrese el número unidades producto: ")
+precio_producto=float(input("Ingrese el precio producto: "))
+unidades_producto=int(input("Ingrese el número unidades producto: "))
 
+total_valor=precio_producto*unidades_producto
 
-
+# print(nombre_producto, precio_producto, unidades_producto, total_valor)
+print(f'{nombre_producto}: {unidades_producto:3d} unidades x {precio_producto:11.2f}€ = {total_valor:9.2f}€'.format(nombre_producto = nombre_producto, unidades_producto = unidades_producto, precio_producto = precio_producto, total_valor = total_valor))
 
 
 
