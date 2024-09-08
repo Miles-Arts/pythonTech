@@ -340,15 +340,97 @@
 
 # ALUMNOS COLEGIO
 
-nombre=str(input("Ingrese su numbre: ")).lower()
-sexo=str(input("Ingres su sexo: ")).lower()
+# nombre=str(input("Ingrese su numbre: ")).lower()
+# sexo=str(input("Ingres su sexo: ")).lower()
 
-if sexo == "mujer" and  nombre[0] in ["a","b","c","d","e","f","g","h","i","j", "k","l"] :
-    print("Grupo A ")
-elif sexo == "hombre" and  nombre[0] in ["o","p","q","r","s", "t", "u","w", "x","y","z" ]:    
-    print("Grupo A")
-else: 
-    print("Grupo B")
+# if sexo == "mujer" and  nombre[0] in ["a","b","c","d","e","f","g","h","i","j", "k","l"] :
+#     print("Grupo A ")
+# elif sexo == "hombre" and  nombre[0] in ["o","p","q","r","s", "t", "u","w", "x","y","z" ]:    
+#     print("Grupo A")
+# else: 
+#     print("Grupo B")
+
+# if letra <= "d":
+#     print("letra entre abcd")
+# elif letra >= "e":
+#     print("Letras despues de la e hasta la z")
+
+# nombre=input("Ingrese Nombre: ")
+# sexo=input("Ingrese sexo: (M/H): ")
+# grupo=""
+
+# if sexo.lower() == "m":
+#     if nombre.lower() < "m":
+#        grupo = "A"
+#     else:
+#        grupo = "B"
+
+# if sexo.lower() == "h":
+#     if nombre.lower() > "n":
+#        grupo = "A"    
+#     else:
+#        grupo = "B"   
+# print(f"Tu grupo es: {grupo}")               
+
+
+# nombre=input("Ingrese Nombre: ")
+# sexo=input("Ingrese sexo: (M/H): ")
+# sexo=sexo.upper()
+# grupo=""
+
+# if sexo == "M":
+#     if nombre.lower() < "m":
+#        grupo = "A"
+#     else:
+#        grupo = "B"
+# else:
+#     if nombre.lower() > "n":
+#        grupo = "A"    
+#     else:
+#        grupo = "B"   
+# print(f"Tu grupo es: {grupo}")     
+
+
+# TRAMOS IMPOSITIVOS
+
+# renta=float(input("Ingrese su renta anual: ")) 
+
+# if renta < 10000:
+#     print("Tipo impositivo del 5%")
+# elif renta >= 10000 and renta < 20000:
+#     print("Tipo impositivo del 15%")    
+# elif renta >= 20000 and renta < 35000:
+#     print("Tipo impositivo del 20%") 
+# elif renta >= 35000 and renta < 60000:
+#     print("Tipo impositivo del 30%")
+# else:
+#     print("Tipo impositivo del 45%")          
+
+# renta=float(input("¿Cuál es tu renta anual? "))
+
+# if renta < 10000:
+#     tipo = 5
+# elif renta < 20000:
+#     tipo = 15
+# elif renta < 35000:
+#     tipo = 20
+# elif renta < 60000:
+#     tipo = 30
+# else: 
+#     tipo = 45
+
+# print(f"tienes que pagar. {renta * tipo / 100}€")                    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
