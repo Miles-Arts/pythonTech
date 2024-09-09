@@ -426,8 +426,20 @@
 
 puntos=float(input("Ingrese los puntos obtenidos: "))
 
+bono= float(2400)
+
+if puntos == 0.0:
+    print(f"Rendimiento Inaceptable. Puntuación: {puntos}")
+elif puntos == 0.4:
+    bono = bono + (bono * puntos)
+    # bono = bono * puntos
+    print(f"Rendimiento Aceptable. Puntuación: {puntos} Bono de: {bono}")    
+elif puntos == 0.6:
+    bono = bono + (bono * puntos)
+    print(f"Rendmiento Meritorio. Puntuación: {puntos} Bono de: {bono}")
 
 
+    
 
 
 
