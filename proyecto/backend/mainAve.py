@@ -129,16 +129,6 @@ def eliminarAve():
         print("Nombre común no encontrado.")    
             
      
-
-
-
-
-
-
-
-
-
-
 def menu():
     while True:
         print("\n---Menú gestión de Aves---")
