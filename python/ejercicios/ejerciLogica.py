@@ -541,15 +541,58 @@
 #     resultado = (dinero_invertir * (anual_interes / 100 + 1 ) ** dinero_anios)
 # print(f"Año {dinero_anios}: Capital acumulado = {round(resultado, 2)}")
 
-inversion=float(input("Ingrese cantidad a invertir: "))
-interes_anual=float(input("Ingrese interés anual: "))
-anios_inversion=int(input("Años de inversion: "))
+# inversion=float(input("Ingrese cantidad a invertir: "))
+# interes_anual=float(input("Ingrese interés anual: "))
+# anios_inversion=int(input("Años de inversion: "))
 
-for anio in range(1,anios_inversion+1,1):
+# for anio in range(1,anios_inversion+1,1):
+#     resultado = (inversion * ( interes_anual / 100 + 1) ** inversion)
+#     # print(resultado)
+#     # # resultado += resultado
+#     # print(f"\n\tInversión del año: {anio}")
+#     # print(f"\tTotal { round(resultado, 2) }")
 
-    resultado = (inversion * ( interes_anual / 100 + 1) ** inversion)
-    print(f"Inversión del año: {anio}")
-    print(f"hola { resultado }")
+# print("------------------------------------------------------------------")    
+
+# inversion=float(input("Ingrese cantidad a invertir: "))
+# interes_anual=float(input("Ingrese interés anual: "))
+# anios_inversion=int(input("Años de inversion: "))
+
+# for i in range(anios_inversion):
+#     inversion *=1 + interes_anual / 100
+#     print(f"Capital tras {i+1} Año: {round(inversion, 2)} ")
+
+
+# TRIANGULO
+
+# numero=int(input("Ingrese un número entero: "))
+
+# for i in range(1,numero):
+#     # 
+#     print("*")
+#     # i+=1
+#     for j in range(i):
+#         # j+=1
+#         print(end="* ")
+        
+numero=int(input("Ingrese un número entero: "))
+
+for i in range(numero):
+    for j in range(i+1):
+        casa=0
+        print("*", end=" ")
+    print("-")    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
