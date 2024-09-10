@@ -506,11 +506,25 @@
 
 # EDAD USUARIO
 
-ingrese_edad=int(input("Ingrese su edad: "))
+# ingrese_edad=int(input("Ingrese su edad: "))
 
-for i in range(0,ingrese_edad,1):
-    i+=1
-    print(f"Años cumplidos: {i}")
+# for i in range(0,ingrese_edad,1):
+#     i+=1
+#     # print(f"Años cumplidos: {i}")
+#     print(f"Has cumplido {i} años")
+
+
+
+# enerots y print impares
+
+num_entero=int(input("Ingrese un números entero positivo: "))
+
+for i in range(1,num_entero+1,2):
+
+    print(i, end=", ")
+
+
+
 
 
 
