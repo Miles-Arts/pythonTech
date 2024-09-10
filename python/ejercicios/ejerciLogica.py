@@ -449,22 +449,51 @@
 
 # JUEGOS FAMILIA
 
-edad=int(input("Ingrese la edad del usuario: "))
+# edad=int(input("Ingrese la edad del usuario: "))
 
-if edad == 4:
-    # print("Menos de 4 años, entra gratis.")
-    precio = 0
-elif edad > 4 and edad < 18:
-    # print(f"Edad: {edad}. Debe pagar 5€.")
-    precio = 5
-elif edad >= 18:
-    # print(f"Mayor de 18 años debe pagar 10€.")
-    precio = 10
+# if edad == 4:
+#     # print("Menos de 4 años, entra gratis.")
+#     precio = 0
+# elif edad > 4 and edad < 18:
+#     # print(f"Edad: {edad}. Debe pagar 5€.")
+#     precio = 5
+# elif edad >= 18:
+#     # print(f"Mayor de 18 años debe pagar 10€.")
+#     precio = 10
 
-print(f"El precio de la entrada es {precio}€")    
+# print(f"El precio de la entrada es {precio}€")    
 
 
+# PIZZERIA 
 
+tipo_pizza=input("¿Desea pizza vegetariana? (SI/No) ").lower()
+
+
+if tipo_pizza == "no":
+    print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
+    ingredientes=input("\nIngredientes no vegetarianos: \nPeperoni, \nJamón \nSalmón. \n Ingrese 1 ingrediente extra:").lower()
+    
+    if ingredientes == "peperoni":
+        print(f"Pizza de mozzarela y tomate con {ingredientes}")
+    elif ingredientes == ingredientes in ["Jamón", "Jamon"]:
+        print(f"Pizza de mozzarela y tomate con {ingredientes}")
+    elif ingredientes == ingredientes in ["Salmón", "Salmon"]:
+        print(f"Pizza de mozzarela y tomate con {ingredientes}")
+    else:
+        print("Valor no válido: ")    
+
+
+elif tipo_pizza == "si":
+    print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
+    ingredientes=input("\nIngredientes vegetarianos: \nPimiento \nTofu.").lower()
+    if ingredientes == "Pimiento":
+        print(f"Pizza de mozzarela y tomate con {ingredientes}")
+    elif ingredientes == "Tofu":
+        print(f"Pizza de mozzarela y tomate con {ingredientes}")   
+    else:
+         print("Valor no válido: ")  
+else:
+    print("Ingrese una respuesta correcta")
 
 
 
