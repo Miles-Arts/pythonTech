@@ -525,14 +525,31 @@
 
 # ENTERO POSITIVO HACIA ATRÁS
 
-numero=int(input("Ingrese un número entero positivo: "))
+# numero=int(input("Ingrese un número entero positivo: "))
 
-for i in range(numero,-1,-1):
+# for i in range(numero,-1,-1):
 
-    print(i, end=", ")
+#     print(i, end=", ")
 
+# INVERSION
 
+# dinero_invertir=float(input("Ingrese cantidad a invertir: "))
+# anual_interes=float(input("Ingrese el interés anual (%): "))
+# dinero_anios=int(input("Años a inventir: "))
 
+# for anio in range(1,dinero_anios,1):
+#     resultado = (dinero_invertir * (anual_interes / 100 + 1 ) ** dinero_anios)
+# print(f"Año {dinero_anios}: Capital acumulado = {round(resultado, 2)}")
+
+inversion=float(input("Ingrese cantidad a invertir: "))
+interes_anual=float(input("Ingrese interés anual: "))
+anios_inversion=int(input("Años de inversion: "))
+
+for anio in range(1,anios_inversion+1,1):
+
+    resultado = (inversion * ( interes_anual / 100 + 1) ** inversion)
+    print(f"Inversión del año: {anio}")
+    print(f"hola { resultado }")
 
 
 
