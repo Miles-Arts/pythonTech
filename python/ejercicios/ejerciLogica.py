@@ -466,41 +466,51 @@
 
 # PIZZERIA 
 
-tipo_pizza=input("¿Desea pizza vegetariana? (SI/NO) ").lower()
+# tipo_pizza=input("¿Desea pizza vegetariana? (SI/NO) ").lower()
 
 
-if tipo_pizza.lower() == "no":
-    print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
-    ingredientes=input("\nIngredientes no vegetarianos: \nPeperoni. \nJamón. \nSalmón. \nIngrese 1 ingrediente extra: ")
+# if tipo_pizza.lower() == "no":
+#     print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
+#     ingredientes=input("\nIngredientes no vegetarianos: \n\tPeperoni. \n\tJamón. \n\tSalmón. \nIngrese 1 ingrediente extra: ")
     
-    if ingredientes.lower() == "peperoni":
-        print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
-    elif ingredientes.lower() == ingredientes in ["Jamón", "Jamon", "jamon"]:
-        print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
-    elif ingredientes.lower() == ingredientes in ["Salmón", "Salmon", "salmon"]:
-        print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
-    else:
-        print("Valor no válido: ")    
+#     if ingredientes.lower() == "peperoni":
+#         print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
+#     elif ingredientes.lower() == ingredientes in ["Jamón", "Jamon", "jamon"]:
+#         print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
+#     elif ingredientes.lower() == ingredientes in ["Salmón", "Salmon", "salmon"]:
+#         print(f"Pizza No vegetariana de mozzarela y tomate con {ingredientes}")
+#     else:
+#         print("Valor no válido: ")    
 
 
-elif tipo_pizza.lower() == "si":
-    print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
-    ingredientes=input("\nIngredientes vegetarianos: \nPimiento \nTofu. \nIngrese 1 ingrediente extra: ")
-    if ingredientes.lower() == ingredientes in ["Pimiento", "pimiento"]:
-        print(f"Pizza de mozzarela y tomate con {ingredientes}")
-    elif ingredientes.lower() == ingredientes in ["Tofu", "tofu"]:
-        print(f"Pizza Vegetariana de mozzarela y tomate con {ingredientes}")   
-    else:
-         print("Valor no válido: ")  
-else:
-    print("Ingrese una respuesta correcta")
+# elif tipo_pizza.lower() == "si":
+#     print("\nSolo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.")
+#     ingredientes=input("\nIngredientes vegetarianos: \n\tPimiento \n\tTofu. \nIngrese 1 ingrediente extra: ")
+#     if ingredientes.lower() == ingredientes in ["Pimiento", "pimiento"]:
+#         print(f"Pizza de mozzarela y tomate con {ingredientes}")
+#     elif ingredientes.lower() == ingredientes in ["Tofu", "tofu"]:
+#         print(f"Pizza Vegetariana de mozzarela y tomate con {ingredientes}")   
+#     else:
+#          print("Valor no válido: ")  
+# else:
+#     print("Ingrese una respuesta correcta")
 
 
+# BUCLES
+# BUCLE PALABRA
+# palabras=input("Ingrese una palabra: ")
 
+# for palabra in range(10):
+#     # palabra +=1
+#     print(palabra, palabras)
 
+# EDAD USUARIO
 
+ingrese_edad=int(input("Ingrese su edad: "))
 
-
+for i in range(0,ingrese_edad,1):
+    i+=1
+    print(f"Años cumplidos: {i}")
 
 
 
