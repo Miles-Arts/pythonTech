@@ -517,14 +517,19 @@
 
 # enerots y print impares
 
-num_entero=int(input("Ingrese un números entero positivo: "))
+# num_entero=int(input("Ingrese un números entero positivo: "))
 
-for i in range(1,num_entero+1,2):
+# for i in range(1,num_entero+1,2):
+
+#     print(i, end=", ")
+
+# ENTERO POSITIVO HACIA ATRÁS
+
+numero=int(input("Ingrese un número entero positivo: "))
+
+for i in range(numero,-1,-1):
 
     print(i, end=", ")
-
-
-
 
 
 
