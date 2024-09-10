@@ -34,8 +34,8 @@ def agregar_arbol():
     descripcion={}
     descripcion["tamanio"]=input("Ingrese el tamaño del árbol: ")
     descripcion["color"]=input("Ingrese el color del árbol: ")
-    descripcion["caracteristica"]=input("Ingrese caracteríticas del árbol: ")
-    descripcion["comportamiento"]=input("Ingrese coportamiento del árbol: ")
+    descripcion["caracteristica"]=input("Ingrese características del árbol: ")
+    descripcion["comportamiento"]=input("Ingrese comportamiento del árbol: ")
     nuevo_arbol["descripcion"]=descripcion
 
     multimedia={}
@@ -46,7 +46,7 @@ def agregar_arbol():
     observaciones=[]
     while True:
 
-        respuesta=input("Agregar nueva obervación: \n\t1. Sí  \n\t2. No \n\t : ")
+        respuesta=input("Agregar nueva obervación: \n\t1. Sí  \n\t2. No \n\t\t --> : ")
         if respuesta == "2":
             break
 
@@ -61,12 +61,73 @@ def agregar_arbol():
     datos_arboles.append(nuevo_arbol)
     print("--- Árbol Agregado ---")
 
-
 def actualizar_arbol():
-    
+    print("--- Actualizar Árbol ---")
+    nombre_comun=input("\nIngrese nombre común del árbol: ")
+    arbol_encontrado=False
+
+    for arbol in datos_arboles:
+        if nombre_comun == arbol["nombre_comun"]:
+            arbol_encontrado = True
+            print("-"*40)
+            print("\nIngrese opción a actualizar: ")
+            print("\n\t1. Descrpción.")
+            print("\t2. Multimedia.")
+            print("\t3. Obervaciones.")
+
+            opcion=input("\t\t--> : ")
+
+            if opcion == "1":
+                descripcion={}
+                descripcion["tamanio"]=input("Ingrese el tamaño del árbol: ")
+                descripcion["color"]=input("Ingrese el color del árbol: ")
+                descripcion["caracteristica"]=input("Ingrese características del árbol: ")
+                descripcion["comportamiento"]=input("Ingrese comportamiento del árbol: ")
+                arbol["descripcion"]=descripcion
+
+            elif opcion == "2":
+                multimedia={}
+                multimedia[""]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",")    
+                multimedia[""]=input("Ingrese las rutas de los vídeos: (ruta/video1.mp4 , ruta/video2.mp4): ").split(",")    
+                arbol["multimedia"]=multimedia
+
+            elif opcion == "3":
+                observaciones=[]
+                while True:
+                    respuesta=input("Agregar nueva observación: \n\t1. Sí  \n\t2. No \n\t : ")
+                    if respuesta == "2":
+                        break  
+
+                    observacion={}
+                    observacion["fecha"]=input("Ingrese fecha de obervación (YYYY-MM-DD): ")   
+                    observacion["lugar"]=input("Lugar de la observación: ")    
+                    observacion["avistamientos"]=input("Numero de avistamientos: ") 
+
+                    observaciones.append(observacion)
+
+                    arbol["observaciones"]=observaciones
+                    datos_arboles.append(arbol)
+                    
+                print("--- Árbol Actualizado ---")
+
+            else:
+                print("Opción no válida")   
+            print("Ave actualizada.")     
+
+    if not arbol_encontrado:
+        print("Nombre común de árbol no encontrado.")                
+            
 
 def eliminar_arbol():
-    pass    
+    print("--- Eliminar Árbol ---") 
+    nombre_comun=input("Ingrese el árbol a eliminar:  ")
+    longitud_anterior=len(datos_arboles)
+
+    datos_arboles[:]=[arbol for arbol in datos_arboles if nombre_comun != arbol["nombre_comun"]]
+    if longitud_anterior > len(datos_arboles):
+        print("--- Árbol Eliminado ---")
+    else:
+        print("Nombre de árbol común no encontrado.")  
 
 def menu():
     while True:
