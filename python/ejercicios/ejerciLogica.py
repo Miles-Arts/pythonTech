@@ -424,22 +424,44 @@
 # Puntuación empresa
 
 
-puntos=float(input("Ingrese los puntos obtenidos: "))
-
-bono= float(2400)
-
-if puntos == 0.0:
-    print(f"Rendimiento Inaceptable. Puntuación: {puntos}")
-elif puntos == 0.4:
-    bono = bono + (bono * puntos)
-    # bono = bono * puntos
-    print(f"Rendimiento Aceptable. Puntuación: {puntos} Bono de: {bono}")    
-elif puntos == 0.6:
-    bono = bono + (bono * puntos)
-    print(f"Rendmiento Meritorio. Puntuación: {puntos} Bono de: {bono}")
+# puntos=float(input("Ingrese los puntos obtenidos: "))
+# bono= float(2400)
+# inaceptable = float(0)
+# aceptable = float(0.4)
+# meritorio = float(0.6)
 
 
-    
+# if puntos == inaceptable:
+#     nivel = "Inaceptable"
+# elif puntos == aceptable:
+#     nivel = "Aceptable"
+# elif puntos >= meritorio:
+#     nivel = "Meritorio"
+# else:
+#     nivel = ""
+
+# if nivel == "":
+#     print("Esta puntuaciónno no es válida.")
+# else:
+#     print("Tu nivel de rendimiento es %s" % nivel)    
+#     print("Te correponde cobrar %.2f€" % (puntos * bono))
+
+
+# JUEGOS FAMILIA
+
+edad=int(input("Ingrese la edad del usuario: "))
+
+if edad == 4:
+    # print("Menos de 4 años, entra gratis.")
+    precio = 0
+elif edad > 4 and edad < 18:
+    # print(f"Edad: {edad}. Debe pagar 5€.")
+    precio = 5
+elif edad >= 18:
+    # print(f"Mayor de 18 años debe pagar 10€.")
+    precio = 10
+
+print(f"El precio de la entrada es {precio}€")    
 
 
 
