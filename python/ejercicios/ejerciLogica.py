@@ -574,20 +574,47 @@
 #     for j in range(i):
 #         # j+=1
 #         print(end="* ")
+#  BLUCES       # 
+# numero=int(input("Ingrese un número entero: "))
+
+# for i in range(numero):
+#     for j in range(i+1):
+#         casa=0
+#         print("*", end=" ")
+#     print("")    
+
+
+
+# tabla multiplizar
+
+# numero = 1
+# fin = 11
+# tabla=1
+# salto=0
+
+# for tabla in range(1,fin,1):
+    
+
+#     resultado= tabla * numero
+    
+#     tabla = tabla + salto
+
+#     for num in range(1,fin,1):
+
+#         print(f"{tabla} x {numero} = {resultado}")
         
-numero=int(input("Ingrese un número entero: "))
 
-for i in range(numero):
-    for j in range(i+1):
-        casa=0
-        print("*", end=" ")
-    print("")    
+#     # for tabla in range(1,fin,1):
+#     #     # tabla+=1
+#     #     # numero+=1
+#     #     print(f"{tabla} x {numero} = {resultado}")
 
+# MULTIPLIZAR
 
-
-
-
-
+for i in range(1,11):
+    for j in range(1,11):
+        print(i*j, end="\t")
+    print(" ")    
 
 
 
