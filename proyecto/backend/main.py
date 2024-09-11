@@ -5,7 +5,7 @@ datos_arboles=[
             "tamanio": "30 metros.",
             "color": "Verde oscuro.",
             "caracteristicas": "Fuerte.",
-            "comportamiento": "Hábitat natural son los lugares húmedos."
+            "comportamiento": "Hábitat natural en los lugares húmedos."
         },
         "multimedia": {
             "fotos":    ["ruta/foto1.jpg", "ruta/foto2.jpg" ],
@@ -21,15 +21,15 @@ datos_arboles=[
 
 
 def mostrar_arbol():
-    print("Motrar Árboles.")
+    print("--- Mostrar Árboles ---")
     print(datos_arboles)
 
 def agregar_arbol():
-    print("Agrgar nuevo árbol.")
+    print("--- Agregar nuevo árbol ---")
     nuevo_arbol={}
 
     nombre_comun=input("Ingrese el nombre común: ")
-    nuevo_arbol["noombre_comun"]=nombre_comun
+    nuevo_arbol["nombre_comun"]=nombre_comun
 
     descripcion={}
     descripcion["tamanio"]=input("Ingrese el tamaño del árbol: ")
@@ -46,14 +46,14 @@ def agregar_arbol():
     observaciones=[]
     while True:
 
-        respuesta=input("Agregar nueva obervación: \n\t1. Sí  \n\t2. No \n\t\t --> : ")
+        respuesta=input("Agregar nueva observación: \n\t1. Sí  \n\t2. No \n\t\t --> : ")
         if respuesta == "2":
             break
 
         observacion={}
-        observacion["fecha"]=input("Ingrese fecha de obervación (YYYY-MM-DD): ")   
-        observacion["lugar"]=input("Lugar de la obervación: ")    
-        observacion["avistamientos"]=input("Numero de avistamientos: ")    
+        observacion["fecha"]=input("Ingrese fecha de observación (YYYY-MM-DD): ")   
+        observacion["lugar"]=input("Lugar de la observación: ")    
+        observacion["avistamientos"]=input("Número de avistamientos: ")    
         
         observaciones.append(observacion)
 
@@ -71,9 +71,9 @@ def actualizar_arbol():
             arbol_encontrado = True
             print("-"*40)
             print("\nIngrese opción a actualizar: ")
-            print("\n\t1. Descrpción.")
+            print("\n\t1. Descripción.")
             print("\t2. Multimedia.")
-            print("\t3. Obervaciones.")
+            print("\t3. Observaciones.")
 
             opcion=input("\t\t--> : ")
 
@@ -87,8 +87,8 @@ def actualizar_arbol():
 
             elif opcion == "2":
                 multimedia={}
-                multimedia[""]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",")    
-                multimedia[""]=input("Ingrese las rutas de los vídeos: (ruta/video1.mp4 , ruta/video2.mp4): ").split(",")    
+                multimedia["fotos"]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",")    
+                multimedia["videos"]=input("Ingrese las rutas de los vídeos: (ruta/video1.mp4 , ruta/video2.mp4): ").split(",")    
                 arbol["multimedia"]=multimedia
 
             elif opcion == "3":
@@ -99,9 +99,9 @@ def actualizar_arbol():
                         break  
 
                     observacion={}
-                    observacion["fecha"]=input("Ingrese fecha de obervación (YYYY-MM-DD): ")   
+                    observacion["fecha"]=input("Ingrese fecha de observación (YYYY-MM-DD): ")   
                     observacion["lugar"]=input("Lugar de la observación: ")    
-                    observacion["avistamientos"]=input("Numero de avistamientos: ") 
+                    observacion["avistamientos"]=input("Número de avistamientos: ") 
 
                     observaciones.append(observacion)
 
@@ -112,7 +112,7 @@ def actualizar_arbol():
 
             else:
                 print("Opción no válida")   
-            print("Ave actualizada.")     
+            print("--- Árbol actualizado ---")     
 
     if not arbol_encontrado:
         print("Nombre común de árbol no encontrado.")                
