@@ -581,7 +581,7 @@ for i in range(numero):
     for j in range(i+1):
         casa=0
         print("*", end=" ")
-    print("-")    
+    print("")    
 
 
 
