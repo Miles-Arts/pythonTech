@@ -117,7 +117,6 @@ def actualizar_arbol():
     if not arbol_encontrado:
         print("Nombre común de árbol no encontrado.")                
             
-
 def eliminar_arbol():
     print("--- Eliminar Árbol ---") 
     nombre_comun=input("Ingrese el árbol a eliminar:  ")
