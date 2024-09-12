@@ -47,9 +47,9 @@ def mostrarAves():
             "Comportamiento": ave["descripcion"]["comportamiento"],
             "Fotos": ", ".join(ave["multimedia"]["fotos"]),
             "Sonidos": ", ".join(ave["multimedia"]["sonidos"]),
-            "Fecha": 
-            "Lugar": 
-            "Avistamientos": 
+            "Fecha": ", ".join(map(str, observaciones_fecha)),
+            "Lugar": ", ".join(map(str, observaciones_lugar)),
+            "Avistamientos": ", ".join(map(str,observaciones_avistamientos))
         })
 
     df=pd.DataFrame(datos)
