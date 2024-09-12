@@ -1,15 +1,22 @@
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+
+id = 1
+
 datosAves=[
     {
-        "nombreComun": "Colibrí", 
+        "id": id,
+        "nombre": "Colibrí", 
         "descripcion": {
-            "tamano": "9 cm",
+            "tamano": 9,
             "color": "Verde y Rojo",
-            "caracteristicas": "Pequeño",
+            "caracteristica": "Pequeño",
             "comportamiento": "Se alimenta de neétar"
         },
         "multimedia": {
-            "fotos": ["ruta/foto1.jpg","ruta/foto2.jpg" ],
-            "sonidos": ["ruta/sonidos1.mp3"]
+            "fotos": ["foto1.jpg","foto2.jpg" ],
+            "sonidos": ["sonidos1.mp3"]
         },
         "observaciones": [
             {"fecha": "2024-05-01", "lugar": "Boyacá", "avistamientos": 5},
@@ -20,8 +27,26 @@ datosAves=[
 
 def mostrarAves():
     print("Mostrar Aves.")
-    print(datosAves)
+    datos=[]
+    # datos=[{"id": 1, "nombre": "Perro", "tamano": 10, "color": "rojo", "caracteristicas": "peludo", "comportamiento": "ladrar" }]
 
+    for ave in datosAves:
+        datos.append({
+            "ID": ave["id"],
+            "Nombre": ave["nombre"],
+            "Tamaño":  ave["descripcion"]["tamano"],
+            "Color": ave["descripcion"]["color"],
+            "Caracteristica": ave["descripcion"]["caracteristica"],
+            "Comportamiento": ave["descripcion"]["comportamiento"],
+            "Fotos": ave["multimedia"]["fotos"],
+            "Sonidos": ave["multimedia"]["sonidos"],
+            "Fecha": ave["observaciones"]["fecha"],
+            "Lugar": ave["observaciones"]["lugar"],
+            "Avistamientos": ave["observaciones"]["avistamientos"]
+        })
+
+    df=pd.DataFrame(datos)
+    print(df)    
 
 def agregarAve():
     print("Agregar Ave.")
@@ -59,7 +84,6 @@ def agregarAve():
     aveNueva["observaciones"]=observaciones    
     datosAves.append(aveNueva)
     print("Ave agregada")
-
 
 def actualizarAve():
     # pass

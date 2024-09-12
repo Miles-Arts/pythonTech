@@ -1,5 +1,13 @@
+import pandas as pd
+import numpy as np
+import matplotlib as plt
+
+
+id = 1
+
 datos_arboles=[
     {
+        "id": id,
         "nombre_comun": "Aliso",
         "descripcion": {
             "tamanio": "30 metros.",
