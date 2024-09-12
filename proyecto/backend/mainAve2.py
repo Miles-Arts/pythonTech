@@ -26,7 +26,6 @@ datosAves=[
 ]
 
 def mostrarAves():
-    print("Mostrar Aves.")
     datos=[]
     # datos=[{"id": 1, "nombre": "Perro", "tamano": 10, "color": "rojo", "caracteristicas": "peludo", "comportamiento": "ladrar" }]
 
@@ -56,41 +55,45 @@ def mostrarAves():
     print(df)    
 
 def agregarAve():
-    print("Agregar Ave.")
-    aveNueva={}
+    global id
+    id+=1
 
-    nombreComun=input("Ingrese el nombre común: ")
-    aveNueva["nombreComun"]=nombreComun
+    nombre=input("Ingrese el nombre: ")
 
     descripcion={}
-    descripcion["tamano"]=input("Ingrese el tamaño del Ave: ")
+    descripcion["tamano"]=int(input("Ingrese el tamaño del Ave: "))
     descripcion["color"]=input("Ingrese el color del Ave: ")
     descripcion["caracteristica"]=input("Ingrese la caracteristica del Ave: ")
     descripcion["comportamiento"]=input("Ingrese la comportamiento del Ave: ")
-    aveNueva["descripcion"]=descripcion
 
     multimedia={}
     multimedia["fotos"]=input("Ingrese los nombres de las fotos: (foto1.jpg , foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
     multimedia["sonidos"]=input("Ingrese los nombres de los sonidos: (sonido1.mp3 , sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
-    aveNueva["multimedia"]=multimedia
 
     observaciones=[] 
     while True:
 
-        res=input("¿Desea agr3gar una observación?: \n1. Sí  \n2. No \n : ")
-        if res == "2":
+        observacion={}  
+        observacion["fecha"]=input("Ingrese la fecha de la observación (YYY-MM-DD) o 'fin' para terminar: ")
+        
+        # res=input("¿Desea agr3gar una observación?: \n1. Sí  \n2. No \n : ")
+        if observacion["fecha"].lower() == "fin":
             break
-            
-        observacion={}    
-        observacion["fecha"]=input("Ingrese la fecha de la observación (YYY-MM-DD):")
+         
         observacion["lugar"]=input("Ingrese el lugar de la observación: ")
         observacion["avistamientos"]=input("Ingrese el números de avistamientos: ")
         
         observaciones.append(observacion)
+  
+    datosAves.append({
+        "id": id,
+        "nombre": nombre,
+        "descripcion": descripcion,
+        "multimedia": multimedia,
+        "observaciones": observaciones
 
-    aveNueva["observaciones"]=observaciones    
-    datosAves.append(aveNueva)
-    print("Ave agregada")
+    })
+    
 
 def actualizarAve():
     # pass
