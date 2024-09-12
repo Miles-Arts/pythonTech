@@ -31,6 +31,13 @@ def mostrarAves():
     # datos=[{"id": 1, "nombre": "Perro", "tamano": 10, "color": "rojo", "caracteristicas": "peludo", "comportamiento": "ladrar" }]
 
     for ave in datosAves:
+        
+        #Para guardar o sacar infromaicón de una 
+        #Lista utilizamos bucle.,
+        observaciones_fecha=[observacion["fecha"] for observacion  in ave["observaciones"]] 
+        observaciones_lugar=[observacion["lugar"] for observacion  in ave["observaciones"]] 
+        observaciones_avistamientos=[observacion["avistamientos"] for observacion  in ave["observaciones"]] 
+
         datos.append({
             "ID": ave["id"],
             "Nombre": ave["nombre"],
@@ -38,11 +45,11 @@ def mostrarAves():
             "Color": ave["descripcion"]["color"],
             "Caracteristica": ave["descripcion"]["caracteristica"],
             "Comportamiento": ave["descripcion"]["comportamiento"],
-            "Fotos": ave["multimedia"]["fotos"],
-            "Sonidos": ave["multimedia"]["sonidos"],
-            "Fecha": ave["observaciones"]["fecha"],
-            "Lugar": ave["observaciones"]["lugar"],
-            "Avistamientos": ave["observaciones"]["avistamientos"]
+            "Fotos": ", ".join(ave["multimedia"]["fotos"]),
+            "Sonidos": ", ".join(ave["multimedia"]["sonidos"]),
+            "Fecha": 
+            "Lugar": 
+            "Avistamientos": 
         })
 
     df=pd.DataFrame(datos)
@@ -63,8 +70,8 @@ def agregarAve():
     aveNueva["descripcion"]=descripcion
 
     multimedia={}
-    multimedia["fotos"]=input("Ingrese las rutas de las fotos: (ruta/foto1.jpg , ruta/foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
-    multimedia["sonidos"]=input("Ingrese las rutas de los sonidos: (ruta/sonido1.mp3 , ruta/sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+    multimedia["fotos"]=input("Ingrese los nombres de las fotos: (foto1.jpg , foto2.jpg): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
+    multimedia["sonidos"]=input("Ingrese los nombres de los sonidos: (sonido1.mp3 , sonido2.mp3): ").split(",") # ["ruta/foto1.jpg , ruta/foto2.jpg"]
     aveNueva["multimedia"]=multimedia
 
     observaciones=[] 
