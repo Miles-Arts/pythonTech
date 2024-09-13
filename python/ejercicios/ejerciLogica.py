@@ -673,16 +673,24 @@
 # else:
 #     print(str(numero) + " no es primo.")        
 
-numero=int(input("Introduce núemros primso positivo mayor a 2: "))
+# numero=int(input("Introduce núemros primso positivo mayor a 2: "))
 
-for i in range(2, numero):
-    if numero % i == 0:
-        break
-if (i + 1) == numero:
-    print(str(numero) + "es primo.")
-else:
-    print(str(numero) + "no es primo.")       
+# for i in range(2, numero):
+#     if numero % i == 0:
+#         break
+# if (i + 1) == numero:
+#     print(str(numero) + " es primo.")
+# else:
+#     print(str(numero) + " no es primo.")       
 
+# Impresion letras desde atrás
+
+# palabra=input("Ingrese palabra: ")
+
+# for letras in palabra:
+#         # print(letras)
+#         for letra in range(letras, -1,-1):    
+#             print(letra)
 
 
 
