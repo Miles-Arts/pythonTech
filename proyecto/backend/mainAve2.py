@@ -94,7 +94,6 @@ def agregarAve():
 
     })
     
-
 def actualizarAve():
     id_ave= int(input("Ingrese el ID del ave que desea actualizar: "))
     aveEncontrada= False
@@ -153,26 +152,69 @@ def eliminarAve():
     id_ave= int(input("Ingrese el ID del ave que desea actualizar: "))
     longitudAnterior = len(datosAves)
         
-    datosAves[:]=[ave for ave in datosAves if id_ave != ave["nombreComun"]]  
+    datosAves[:]=[ave for ave in datosAves if id_ave != ave["id"]]  
     
     if longitudAnterior > len(datosAves):
         print("Ave eliminada")
     else:
-        print("Nombre común no encontrado.")    
-            
+        print("ID 4no encontrado.")    
+
+def analisis_datos():
+    pass     
+
+def cargar_datos():
+    global id, datosAves
+
+    try: 
+        df=pd.read_csv("datos_aves.csv")
+        print(df)
+
+        print("Datos cargados desdeel archivo.")
+    except  FileNotFoundError:
+        print("No se encuentra el archivo")   
+
+
+
+
+def guardar_datos():
+    datos=[]
+
+    for ave in datosAves:
+        for observaciones in ave["observaciones"]:
+            datos.append({
+                "ID": ave["id"],
+                "Nombre": ave["nombre"],
+                "Tamaño":  ave["descripcion"]["tamano"],
+                "Color": ave["descripcion"]["color"],
+                "Caracteristica": ave["descripcion"]["caracteristica"],
+                "Comportamiento": ave["descripcion"]["comportamiento"],
+                "Fotos": ", ".join(ave["multimedia"]["fotos"]),
+                "Sonidos": ", ".join(ave["multimedia"]["sonidos"]),
+                "Fecha": observaciones["fecha"],
+                "Lugar": observaciones["lugar"],
+                "Avistamientos": observaciones["avistamientos"]
+            })
+
+    df=pd.DataFrame(datos)
+    df.to_csv("datos_aves.csv", index=False)
+    print("Datos gurdados en el archivo datos_aves.csv")    
      
+
 def menu():
+    cargar_datos()
+
     while True:
         print("\n---Menú gestión de Aves---")
         print("\n1. Ver todas las aves.")
         print("2. Agregar nueva ave.")
         print("3. Actualizar datos de una ave.")
         print("4. Eliminar un ave.")
-        print("5. Salir.")
+        print("5. Análisis de datos.")
+        print("6. Guardar datos.")
+        print("7. Salir.")
         print("")
         opcion = input("Selecione una opción: ")
         print("")
-
 
         if opcion == "1":
             mostrarAves()
@@ -183,6 +225,10 @@ def menu():
         elif opcion == "4":
             eliminarAve()
         elif opcion == "5":
+            analisis_datos()
+        elif opcion == "6":
+            guardar_datos()
+        elif opcion == "7":
             print("Salir.")
             break    
         else: 
