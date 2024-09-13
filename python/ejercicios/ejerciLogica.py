@@ -692,8 +692,65 @@
 #         for letra in range(letras, -1,-1):    
 #             print(letra)
 
+# palabra=input("Ingrese la palabra: ")
 
+# for i  in range(len(palabra)-1,-1,-1):
+#     print(palabra[i])
 
+# frases letras
+
+# frase=input("Ingrese una frase: ").split(",")
+# letra=input("Ingrese una letra: ")
+
+# for i in frase:
+#     if letra == len(frase):
+#         print(letra)
+#     else:
+#         print("No")    
+   
+
+# frase=input("Introduce frase: ")
+# letra=input("Introduce letra: ")
+# contador=0
+
+# for  i in frase:
+#     if i == letra:
+#         contador+=1
+# print(letra,contador,frase)    
+
+# frase=input("Frase: ")
+# letra=input("Letra: ")
+# contador=0
+
+# for i in frase:
+#     if i == letra:
+#         contador+=1
+# print(f"Hay {contador} letras {letra} en {frase}")        
+
+# eco=input("Introduce palabra: ")
+# terminar="salir"
+# bucle= 100
+
+# while True:
+    # for i in range(0,200):
+# while 1 > 0:
+#     salir=input("escribe [ salir ] : ")
+#     while True:    
+#         if 1 > 10:
+#             print(eco)
+#             print("escribe [ salir ] : ")
+            
+#         elif salir.lower() == terminar:
+#             print("--fin--")
+#             break       
+#         else:    
+#             print("escribe [ salir ] : ")
+
+while True:
+    frase=input("Introduce algo: ")
+    if frase == "salir":
+        break
+    print(frase)    
 
 
 
