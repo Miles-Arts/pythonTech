@@ -632,9 +632,56 @@
 #     for j in range(i,0,-2):
 #         print(j, end=" ")
 #     print()    
-               
 
+#CONTRASEÑA  
 
+# contrasena=input("Introduce una contraseña: ")
+
+# while True:
+#     contrasena_new=input("Ingrese nuevamente la contraseña: ")
+#     if contrasena_new != contrasena:
+#         print("\ncontraseña incorrecta!\n")
+#     elif contrasena == contrasena:
+#         print("\nContraseña Correcta!\n")
+#         break
+
+# key="contraseña"  
+# password=""
+# while  password != key:
+#     password=input("Introduce la contraseña: ")
+# print("Contraseña correcta")       
+
+# NUMEROS PRIMOS
+
+# numero=int(input("Introduce un numero entero: "))
+
+# while  numero % 2 == 0:
+       
+#         print("No es primo")   
+#         break
+# else:
+#      print("Es número primo")
+   
+# numero=int(input("Introduce núemros primso positivo mayor a 2: "))
+# i = 2
+
+# while numero % i != 0:
+#     # print(i)
+#     i+=1
+# if i == numero:
+#     print(str(numero) + " es primo.")
+# else:
+#     print(str(numero) + " no es primo.")        
+
+numero=int(input("Introduce núemros primso positivo mayor a 2: "))
+
+for i in range(2, numero):
+    if numero % i == 0:
+        break
+if (i + 1) == numero:
+    print(str(numero) + "es primo.")
+else:
+    print(str(numero) + "no es primo.")       
 
 
 
