@@ -167,14 +167,48 @@ def cargar_datos():
 
     try: 
         df=pd.read_csv("datos_aves.csv")
-        print(df)
+        # print(df)
 
-        print("Datos cargados desdeel archivo.")
+        datosAves=[]
+        aves={}
+
+        # for data_df, row in df.iterrows():
+        for _, row in df.iterrows():
+            id_ave=row["ID"]
+
+            if id_ave not in aves:
+                aves[id_ave]= {
+                    "id": id_ave,
+                    "nombre": row["Nombre"], 
+                    "descripcion": {
+                        "tamano": row["Tamaño"],
+                        "color": row["Color"],
+                        "caracteristica": row[ "Caracteristica"],
+                        "comportamiento": row[ "Comportamiento"]
+                    },
+                    "multimedia": {
+                        "fotos": row[ "Fotos"].split(", "),
+                        "sonidos": row[ "Sonidos"].split(", ")
+                    },
+                    "observaciones": [ ] 
+                }
+
+            aves[id_ave]["observaciones"].append({
+                "fecha": row["Fecha"],
+                "lugar": row["Lugar"],
+                "avistamientos": row["Avistamientos"]
+                })
+            
+        # print(aves)        
+
+        datosAves=list(aves.values())  
+        id=max(aves.keys())
+
+        print(datosAves)  
+
+        print("Datos cargados desde el archivo.")
     except  FileNotFoundError:
         print("No se encuentra el archivo")   
-
-
-
 
 def guardar_datos():
     datos=[]
