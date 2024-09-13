@@ -746,14 +746,21 @@
 #         else:    
 #             print("escribe [ salir ] : ")
 
-while True:
-    frase=input("Introduce algo: ")
-    if frase == "salir":
-        break
-    print(frase)    
+# while True:
+#     frase=input("Introduce algo: ")
+#     if frase == "salir":
+#         break
+#     print(frase)    
 
+# LISTAS
 
+# lista=input("Ingrese cada materias separadas con ( , ): ").split(",")
+# materias=[]
+# materias.append(lista)
 
+# print(materias)
 
+materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+print(materias)
 
 
