@@ -611,10 +611,32 @@
 
 # MULTIPLIZAR
 
-for i in range(1,11):
-    for j in range(1,11):
-        print(i*j, end="\t")
-    print(" ")    
+# for i in range(1,11):
+#     for j in range(1,11):
+#         print(i*j, end="\t")
+#     print(" ")    
+
+# numero=int(input("Ingrese número: "))
+
+# for i in range(1,numero+1,2):
+    
+#     for j in range(i,0,-2):
+#         # numero+=1
+#         print(j, end=" ")
+#     print()
+
+
+# numero=int(input("Ingrese numero: "))
+
+# for i in range(1, numero+1,2):
+#     for j in range(i,0,-2):
+#         print(j, end=" ")
+#     print()    
+               
+
+
+
+
 
 
 
