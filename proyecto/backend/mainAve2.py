@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-import matplotlib as plt
+# import matplotlib as plt
+import matplotlip as plt
 
 id = 1
 
@@ -160,7 +161,72 @@ def eliminarAve():
         print("ID 4no encontrado.")    
 
 def analisis_datos():
-    pass     
+    observaciones=[]
+
+    for ave in datosAves:
+        for observacion in ave["observaciones"]:
+            observaciones.append({
+                "Nombre": ave["nombre"],
+                "Fecha": observacion["fecha"],
+                "Lugar": observacion["lugar"],
+                "Avistamientos": observacion["avistamientos"]
+            })
+
+    df=pd.DataFrame(observaciones)
+    print(df) 
+
+    if df.empty:
+        print("No hay datos disponibles para el análisis.")       
+        return
+    
+    print("\nAnálisis de datos.")
+    print("\nEstadistica descriptivas antes de la limpieza.")
+    print(df.describe(include="all"))
+
+    df=df.drop_duplicates()
+    print(df)
+
+    df=df.dropna(subset=["Nombre","Fecha"])
+    print(df)
+
+    df["Avistamientos"]=df["Avistamientos"].fillna(df["Avistamientos"].median())
+    print(df)
+
+    df["Fecha"]=pd.to_datetime(df["Fecha"])
+    print(df)
+
+    df=df[ ( df["Avistamientos"]>0 ) & ( df["Avistamientos"] <= 100 ) ]
+    print(df)
+
+    print("\nEstadistica descriptivas despues de la limpieza.")
+    print(df.describe(include="all"))
+
+    # Establecer la fecha como índice DF
+    df.set_index("Fecha", inplace=True)
+    print(df)
+
+    print("\nTendencia a lo largo del tiempo por mes.")
+    tendencia=df.resample("ME").sum(numeric_only=True)
+    print(tendencia)
+
+
+    print("\nDistribución de avistamientos por lugar")
+    distribucion=df.groupby("Lugar").sum(numeric_only=True)
+    print(distribucion)
+
+    print("\nAvistamientos proyecto ave")
+    avistamientos=df.groupby("Nombre").sum(numeric_only=True)
+    print(avistamientos)
+
+    # grafica
+
+    print("Crear grafica")
+
+    fig= plt.figure(figsize=(14,10))
+    fig.canvas.manager.set_window_title("Análisi de datos aves")
+    plt.subplot(2,2,1)
+    tendencia["Avistamientos"].plot(kind="line", marker="o", color="red")
+
 
 def cargar_datos():
     global id, datosAves
@@ -232,7 +298,6 @@ def guardar_datos():
     df=pd.DataFrame(datos)
     df.to_csv("datos_aves.csv", index=False)
     print("Datos gurdados en el archivo datos_aves.csv")    
-     
 
 def menu():
     cargar_datos()
