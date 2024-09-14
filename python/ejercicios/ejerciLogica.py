@@ -811,6 +811,48 @@
 # for i in range(len(materias)):
 #     print(f"En {materias[i]} has sacdo la nota {notas[i]}")
 
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas=[]
+
+# for materia in materias:
+#     nota=input(f"Ingrese la nota de la materia {materia}: ")
+#     notas.append(nota)
+# for i in range(len(materias)):
+#     print(f"En la materia {materias[i]} has scaado la nota {notas[i]}")    
+
+# meses=["Enero", "Febrero", "Marzo", "Abril"]
+# ventas=[]
+
+# for mes in meses:
+#     venta=input(f"Ingrese el total de ventas del mes {mes}: ")
+#     ventas.append(venta)
+# for i in range(len(ventas)):
+#     print(f"Lan ventas del mes {meses[i]} fueron de ${ventas[i]}")    
+
+ventas=[300,400,500,234,333]
+meses=[]
+
+for venta in ventas:
+    mes=input(f"Ingrese mes de la siguiente venta {venta}: ")
+    meses.append(mes)
+for i in range(len(ventas)):
+    print(f"Las ventas {ventas[i]} son del mes {meses[i]}")    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
