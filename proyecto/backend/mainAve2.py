@@ -1,7 +1,11 @@
 import pandas as pd
+import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
+import random
 # import matplotlib as plt
-import matplotlip as plt
+# import matplotlip as plt
+
 
 id = 1
 
@@ -224,9 +228,35 @@ def analisis_datos():
 
     fig= plt.figure(figsize=(14,10))
     fig.canvas.manager.set_window_title("Análisi de datos aves")
+   
     plt.subplot(2,2,1)
     tendencia["Avistamientos"].plot(kind="line", marker="o", color="red")
+    plt.title("Tendencia a lo largo del tiempo por mes")
+    plt.xlabel("Fecha")
+    plt.ylabel("Avistaiento")
 
+    plt.subplot(2,2,2)
+    distribucion["Avistamientos"].plot(kind="bar",color="blue")
+    plt.title("distribucion de avistamientos por lugar")
+    plt.xlabel("Lujar")
+    plt.ylabel("Avistamiento")
+
+    plt.subplot(2,2,3)
+    avistamientos["Avistamientos"].plot(kind="hist", bins=10, color="purple", alpha=0.7)
+    plt.title("Avistamientos promedio por ave")
+    plt.xlabel("Avistamientos")
+    plt.ylabel("Frecuencia")
+
+    plt.tight_layout()
+    plt.get_current_fig_manager().window.state("zoomed")
+    plt.show()
+
+    plt.subplot(2,2,4)
+    colores=plt.cm.Paired(np.arange(len(avistamientos)))
+    avistamientos["Avistamientos"].plot(kind="pie", color= colores, startangle=90)
+    plt.title("Avistamientos promedio por ave")
+    plt.ylabel("Avistamientos")
+ 
 
 def cargar_datos():
     global id, datosAves
@@ -274,7 +304,8 @@ def cargar_datos():
 
         print("Datos cargados desde el archivo.")
     except  FileNotFoundError:
-        print("No se encuentra el archivo")   
+        print("No se encuentra el archivo. Generando datos")   
+        generarDatos(datosAves, 5)
 
 def guardar_datos():
     datos=[]
@@ -298,6 +329,12 @@ def guardar_datos():
     df=pd.DataFrame(datos)
     df.to_csv("datos_aves.csv", index=False)
     print("Datos gurdados en el archivo datos_aves.csv")    
+
+
+def generarObservaciones():
+    pass
+
+
 
 def menu():
     cargar_datos()
