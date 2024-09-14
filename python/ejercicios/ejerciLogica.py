@@ -760,7 +760,64 @@
 
 # print(materias)
 
-materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
-print(materias)
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# print(materias)
+
+# Impresión de listas
+
+
+
+# materias=input("Ingrse materias: ")
+
+# listas_materias=[]
+# listas_materias.append(materias)
+
+# print(f"Yo estudio {listas_materias }")
+
+# listas_materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# for materias in listas_materias:
+#     print(f"Yo estudio {materias}.")
+
+# materias=input("Ingrese materias: ").split(", ")
+# notas=input("Ingrese notas: ").split(", ")
+
+# materias_lista=[]
+# notas_listas=[]
+
+# materias_lista.append(materias)
+# notas_listas.append(notas)
+
+# for materia in materias_lista:
+#     for nota in notas_listas:
+#         print(f"En {materia} has sacado la nota {nota}")
+
+
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas=[]
+
+# for materia in materias:
+#     nota=input(f"Que nota has sacado en {materia }:")
+#     notas.append(nota)
+# for i in range(len(materias)):
+#     print(f"En {materias[i]} has  sacado {notas[i]}")    
+
+
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas=[]
+
+# for materia in materias:
+#     nota=input(f"Ingrese la nota de {materia}: ")
+#     notas.append(nota)
+# for i in range(len(materias)):
+#     print(f"En {materias[i]} has sacdo la nota {notas[i]}")
+
+
+
+
+
+
+
+
+
 
 
