@@ -829,21 +829,32 @@
 # for i in range(len(ventas)):
 #     print(f"Lan ventas del mes {meses[i]} fueron de ${ventas[i]}")    
 
-ventas=[300,400,500,234,333]
-meses=[]
+# ventas=[300,400,500,234,333]
+# meses=[]
 
-for venta in ventas:
-    mes=input(f"Ingrese mes de la siguiente venta {venta}: ")
-    meses.append(mes)
-for i in range(len(ventas)):
-    print(f"Las ventas {ventas[i]} son del mes {meses[i]}")    
+# for venta in ventas:
+#     mes=input(f"Ingrese mes de la siguiente venta {venta}: ")
+#     meses.append(mes)
+# for i in range(len(ventas)):
+#     print(f"Las ventas {ventas[i]} son del mes {meses[i]}")    
 
+# Numeros loteria
 
+# numeros_loteria=input("Ingrese los numeros de loteria primitiva: ")
+# numeros_lista=[]
 
+# numeros_lista.append(numeros_loteria)
 
+# for i in numeros_loteria:
+#     # len(min(numero))
+#     print(len(min(numeros_loteria)))
 
+numeros_loteria=[]
 
-
+for i in range(6):
+    numeros_loteria.append(int(input("Introduce un número ganador: "))) 
+numeros_loteria.sort()
+print(f"Los números ganadores son {numeros_loteria}")
 
 
 
