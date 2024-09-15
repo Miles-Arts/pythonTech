@@ -849,18 +849,31 @@
 #     # len(min(numero))
 #     print(len(min(numeros_loteria)))
 
-numeros_loteria=[]
+# numeros_loteria=[]
 
-for i in range(6):
-    numeros_loteria.append(int(input("Introduce un número ganador: "))) 
-numeros_loteria.sort()
-print(f"Los números ganadores son {numeros_loteria}")
+# for i in range(6):
+#     # numeros_loteria.append(int(input("Introduce un número ganador: "))) 
+# # numeros_loteria.sort()
+# print(f"Los números ganadores son {numeros_loteria}")
 
+# Numero inverso
 
+# numericos=input("Ingrese numeros del 1 al 10, separados con comas (,) ").split(", ")
 
+# numerico=[]
+# numericos=(int(input("Ingrese numeros del 1 al 10, separados con comas (,) ").split()))
+# numerico.append(numericos)
+# numerico.sort()
+# print(f"Lo numeros en orden son: {numerico} ")    
 
+numericos=[1,2,3,4,5,6,7,8,9,10]
+for i in range(1,11):
+    print(numericos[-i], end=(", "))
 
-
+numeros=[1,2,3,4,5,6,7,8.9,10]
+numeros.reverse()
+for numero in numeros:
+    print(numero, end=("* "))
 
 
 
