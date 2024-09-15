@@ -929,21 +929,38 @@
 #      productos_personales.remove(product)    
 # print(f"Metas de ventas no logradas de los productos: {productos_personales}")           
 
-repuestos=["Llantas", "Tapa Gasolina", "Vidrio Panorámico", "Bomper Trasero", "Luces Delanteras"]
-cantidad_stock=[]
+# repuestos=["Llantas", "Tapa Gasolina", "Vidrio Panorámico", "Bomper Trasero", "Luces Delanteras"]
+# cantidad_stock=[]
 
-for respuesto in repuestos:
-    cantidad=int(input(f"Ingrese ecantidad de stock para cada respuesto de {respuesto} "))
-    if cantidad >= 50:
-        cantidad_stock.append(respuesto)
-for stock in cantidad_stock:
-    repuestos.remove(stock)
-print(f"La cantidad de stock de {repuestos} es insuficente")    
+# for respuesto in repuestos:
+#     cantidad=int(input(f"Ingrese ecantidad de stock para cada respuesto de {respuesto} "))
+#     if cantidad >= 50:
+#         cantidad_stock.append(respuesto)
+# for stock in cantidad_stock:
+#     repuestos.remove(stock)
+# print(f"Queda isuficente de stock de {repuestos}.")    
 
+# sabores_helado=["Chocolate", "Vainilla", "Arequipe", "Fresa", "Melocotón"]
+# litros_helado=[]
 
+# for sabores in sabores_helado:
+#     litros=float(input(f"Ingrese la cantidad de litros disponibles de {sabores}: "))
+#     if litros >= 50:
+#         litros_helado.append(sabores)
+# for litro in litros_helado:
+#     sabores_helado.remove(litro)
+# print(f"Actualizar pedido de helado para los sabores de {sabores_helado}")    
 
+# prendas_ropa=["Pantalón", "Chaleco","Camiseta", "Pantaloneta", "Medias"]
+# cantidad_prendas=[]
 
-
+# for prendas in prendas_ropa:
+#     cantidad=int(input(f"Ingrese la cantidad de prendas en bodega de {prendas}: "))
+#     if cantidad >= 50:
+#         cantidad_prendas.append(prendas)
+# for total in cantidad_prendas:        
+#     prendas_ropa.remove(total)
+# print(f"Falta de stock en bodega de {prendas_ropa}")    
 
 
 
