@@ -993,16 +993,27 @@
 #         letras.pop(i-1)
 # print(f"letras {letras}")        
 
-elementos=["Mesa", "Radio", "Libreta", "Silla"]
-for i in range(len(elementos),1,-1):
-    if i % 3==0:
-        elementos.pop(i-1)
-print(elementos)    
+# elementos=["Mesa", "Radio", "Libreta", "Silla"]
+# for i in range(len(elementos),1,-1):
+#     if i % 3==0:
+#         elementos.pop(i-1)
+# print(elementos)    
 
+# dias=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo", "Lunes", "Martes"]
 
+# for i in range(len(dias),1,-1):
+#     if i % 3 == 0:
+#         dias.pop(i-1)
+# print(dias)        
 
+# sabores=["Chocolate", "Fresa", "Mora","Melocotón", "Vainilla", "Frutos Rojos", "Mango"]
 
+# for i in range(len(sabores), 1,-1):
+#     if i % 3 == 0:
+#         sabores.pop(i-1)
+# print(sabores)        
 
+# palindromo
 
 
 
