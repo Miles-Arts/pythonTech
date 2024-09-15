@@ -866,22 +866,41 @@
 # numerico.sort()
 # print(f"Lo numeros en orden son: {numerico} ")    
 
-numericos=[1,2,3,4,5,6,7,8,9,10]
-for i in range(1,11):
-    print(numericos[-i], end=(", "))
+# numeros=[1,2,3,4,5,6,7,8.9,10]
+# numeros.reverse()
+# for numero in numeros:
+#     print(numero, end=("* "))
 
-numeros=[1,2,3,4,5,6,7,8.9,10]
-numeros.reverse()
-for numero in numeros:
-    print(numero, end=("* "))
-
-
+# numericos=[1,2,3,4,5,6,7,8,9,10]
+# for i in range(1,11):
+#     print(numericos[-i], end=(", "))
 
 
 
+# num=[500,323,2,67878,654,29,1,454,45567,87665,23,]
+# for i in range(1,11):
+#     print(num[-i], end=(", "))
 
 
+# MATERIAS APROVADAS
 
+
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas=[]
+# for materia in materias:
+#     nota=int(input(f"Ingrese la nota ( 0-5 )de la materia {materia}: "))
+#     notas.append(nota)
+# for i in range(len(materias)):
+#     if i >= 0 and i <= 3:
+#         print(f"Ha perdido la materia {materias[i]} con la nota {notas[i]}")
+#     else:
+#         print("Ingrese nota correcta")    
+#     # print(f"materia {materias[i]} and notas: {notas[i]}")
+    
+materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+notas=[]
+for materia in materias:
+    
 
 
 
