@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib as plt
+# import matplotlib as plt
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -334,7 +334,8 @@ def guardar_datos():
 def generarObservaciones():
     pass
 
-
+def generarDatos():
+    pass
 
 def menu():
     cargar_datos()
