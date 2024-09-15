@@ -962,6 +962,45 @@
 #     prendas_ropa.remove(total)
 # print(f"Falta de stock en bodega de {prendas_ropa}")    
 
+# ABCEDARIO LISTA
+
+
+
+# abcedario=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+# numeros=[0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,23,24,25,26]
+# posicion=[]
+
+
+# for abc in abcedario:
+#     numero = float(numeros % 2 != 0)
+#     if round(numero) != 0:
+#         posicion.append(numero)
+# for abc in abcedario:
+#     abcedario.remove(posicion)
+# print(abcedario)            
+        
+# abcedario=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+# for i in range(len(abcedario), 1,-1):
+#     if i % 3 == 0:
+#         abcedario.pop(i-1)
+# print(abcedario)        
+
+# letras=["a", "b", "c", "d", "e", "f", "g", "h", "i"]
+
+# for i in range(len(letras),1,-1):
+#     if i % 3 == 0:
+#         letras.pop(i-1)
+# print(f"letras {letras}")        
+
+elementos=["Mesa", "Radio", "Libreta", "Silla"]
+for i in range(len(elementos),1,-1):
+    if i % 3==0:
+        elementos.pop(i-1)
+print(elementos)    
+
+
+
 
 
 
