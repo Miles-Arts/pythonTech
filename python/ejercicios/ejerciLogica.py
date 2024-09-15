@@ -897,10 +897,51 @@
 #         print("Ingrese nota correcta")    
 #     # print(f"materia {materias[i]} and notas: {notas[i]}")
     
-materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
-notas=[]
-for materia in materias:
-    
+# materias=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas_aprobadas=[]
+# for materia in materias:
+#     nota=float(input(f"¿Qué nota sacaste en {materia}: "))
+#     if nota >= 5:
+#         notas_aprobadas.append(materia)
+# for materia in notas_aprobadas:
+#         materias.remove(materia)
+# print("Tiene que repetir ", str(materias)) 
+         
+# materias_aprobadas=["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# notas_excelentes=[]
+
+# for materia_lista in materias_aprobadas:
+#      nota=float(input(f"¿Qué nota sacaste en {materia_lista}: "))
+#      if nota >= 7:
+#           notas_excelentes.append(materia_lista)
+# for materia_lista in notas_excelentes:
+#      materias_aprobadas.remove(materia_lista)
+# print(f"Tiene que repetir {materias_aprobadas} ")    
+
+productos_personales=["Jabón","Champoo","Crema piel", "Acondicionador", "Perfume"]
+ventas_totales=[]
+
+for producto in productos_personales:
+     ventas=float(input(f"¿cuanto vendiste por mes para el siguiente producto? {producto}: "))
+     if ventas >= 50:
+          ventas_totales.append(producto)
+for producto in ventas_totales:
+     productos_personales.remove(producto)    
+print(f"Metas de ventas no logradas de los productos: {productos_personales}")           
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
