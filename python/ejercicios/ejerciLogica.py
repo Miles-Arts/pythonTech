@@ -918,18 +918,28 @@
 #      materias_aprobadas.remove(materia_lista)
 # print(f"Tiene que repetir {materias_aprobadas} ")    
 
-productos_personales=["Jabón","Champoo","Crema piel", "Acondicionador", "Perfume"]
-ventas_totales=[]
+# productos_personales=["Jabón","Champoo","Crema piel", "Acondicionador", "Perfume"]
+# ventas_totales=[]
 
-for producto in productos_personales:
-     ventas=float(input(f"¿cuanto vendiste por mes para el siguiente producto? {producto}: "))
-     if ventas >= 50:
-          ventas_totales.append(producto)
-for producto in ventas_totales:
-     productos_personales.remove(producto)    
-print(f"Metas de ventas no logradas de los productos: {productos_personales}")           
+# for producto in productos_personales:
+#      ventas=float(input(f"¿cuanto vendiste por mes para el siguiente producto? {producto}: "))
+#      if ventas >= 50:
+#           ventas_totales.append(producto)
+# for product in ventas_totales:
+#      productos_personales.remove(product)    
+# print(f"Metas de ventas no logradas de los productos: {productos_personales}")           
 
-        
+repuestos=["Llantas", "Tapa Gasolina", "Vidrio Panorámico", "Bomper Trasero", "Luces Delanteras"]
+cantidad_stock=[]
+
+for respuesto in repuestos:
+    cantidad=int(input(f"Ingrese ecantidad de stock para cada respuesto de {respuesto} "))
+    if cantidad >= 50:
+        cantidad_stock.append(respuesto)
+for stock in cantidad_stock:
+    repuestos.remove(stock)
+print(f"La cantidad de stock de {repuestos} es insuficente")    
+
 
 
 
