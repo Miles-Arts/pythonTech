@@ -1006,12 +1006,12 @@
 #         dias.pop(i-1)
 # print(dias)        
 
-# sabores=["Chocolate", "Fresa", "Mora","Melocotón", "Vainilla", "Frutos Rojos", "Mango"]
+sabores=["Chocolate", "Fresa", "Mora","Melocotón", "Vainilla", "Frutos Rojos", "Mango"]
 
-# for i in range(len(sabores), 1,-1):
-#     if i % 3 == 0:
-#         sabores.pop(i-1)
-# print(sabores)        
+for i in range(len(sabores), 1,-1):
+    if i % 3 == 0:
+        sabores.pop(i-1)
+print(sabores)        
 
 # palindromo
 
