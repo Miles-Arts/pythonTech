@@ -1080,25 +1080,53 @@
 #             veces+=1
 #     print(f"La vocal {vocal} esta {veces} veces")          
 
-palabras=(input("Introduce una frase: "))
-letras=["a", "b", "c","ch", "d", "e", "f", "g", "h", "i", "j", "k", "l","ll", "m", "n", "ñ", "o", "p", "q", "r","rr", "s", "t", "u","ü", "v", "w", "x", "y", "z"]
+# palabras=(input("Introduce una frase: "))
+# letras=["a", "b", "c","ch", "d", "e", "f", "g", "h", "i", "j", "k", "l","ll", "m", "n", "ñ", "o", "p", "q", "r","rr", "s", "t", "u","ü", "v", "w", "x", "y", "z"]
 
 
-for letra in letras:
+# for letra in letras:
+#     veces=0
+#     for palabra in palabras:
+#         if letra == palabra:
+#             veces+=1
+#     print(f"La letra {letra} esta {veces} veces")        
+
+
+# palabras=input("Introduce una frase: ").lower()
+# letra=input("Introduce letras con (,) al final c/u: ").split(",")
+# letras=[]
+# letras.append(letra)
+
+# for letraz in letras:
+#     veces=0
+#     for palabra in palabras:
+#         if palabra == letraz:
+#             veces+=1
+#     print(f"Las letras {letraz} estan {veces} veces")        
+
+
+
+# numeros=int(input("Introduce 6 números: "))
+# # numeros=list(numeros)
+# enteros=[0,1,2,3,4,5,6,7,8,9]
+
+# for numero in len(numeros):
+#     veces=0
+#     for entero in enteros:
+#         if numero == entero:
+#             veces+=1
+#     print(f"Los números {numero} estan {veces} veces ")        
+
+
+numeros=input("Introduce 6 números: ")
+enteros=["0","1","2","3","4","5","6","7","8","9"]
+
+for entero in enteros:
     veces=0
-    for palabra in palabras:
-        if letra == palabra:
+    for numero in numeros:
+        if numero == entero:
             veces+=1
-    print(f"La letra {letra} esta {veces} veces")        
-
-
-
-
-
-
-
-
-
+    print(f"Los números {entero} estan {veces} veces ")        
 
 
 
