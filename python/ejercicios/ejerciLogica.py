@@ -1105,28 +1105,64 @@
 #     print(f"Las letras {letraz} estan {veces} veces")        
 
 
+# numeros=[]
+# numericos=int(input("Introduce 6 números: "))
+# numeros.append(numericos)
+# enteros=[0,1,2,3,4,5,6,7,8,9,10,11,12,13]
 
-# numeros=int(input("Introduce 6 números: "))
-# # numeros=list(numeros)
-# enteros=[0,1,2,3,4,5,6,7,8,9]
-
-# for numero in len(numeros):
+# for numero in numeros:
 #     veces=0
 #     for entero in enteros:
 #         if numero == entero:
 #             veces+=1
-#     print(f"Los números {numero} estan {veces} veces ")        
+#     print(f"Los número {numero} estan {veces} veces ")        
 
 
-numeros=input("Introduce 6 números: ")
-enteros=["0","1","2","3","4","5","6","7","8","9"]
+# numeros=input("Introduce 6 números: ")
+# enteros=["0","1","2","3","4","5","6","7","8","9"]
 
-for entero in enteros:
-    veces=0
-    for numero in numeros:
-        if numero == entero:
-            veces+=1
-    print(f"Los números {entero} estan {veces} veces ")        
+# for entero in enteros:
+#     veces=0
+#     for numero in numeros:
+#         if numero == entero:
+#             veces+=1
+#     print(f"Los números {entero} estan {veces} veces ")        
+
+
+# palabras=input("Ingrese palabras: ").split(" ")
+# con_censura=["malo","violencia","negativo"]
+
+# for censura in con_censura:
+#     veces=0
+#     for palabra in palabras:
+#         if palabra == censura:
+#             veces+=1
+#     print(f"La palabra {censura} esta {veces} veces")        
+
+#  PRECIOS PRODUCTOS MENOR Y MAYOR
+
+# precios=[50,75,46,22,80,65,8]
+
+# precios_min=min(precios)
+# precios_max=max(precios)
+
+# print(f"El valor máximo es: {precios_max}")
+# print(f"El valor mínimo es: {precios_min}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
