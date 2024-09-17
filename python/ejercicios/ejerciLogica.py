@@ -1006,14 +1006,102 @@
 #         dias.pop(i-1)
 # print(dias)        
 
-sabores=["Chocolate", "Fresa", "Mora","Melocotón", "Vainilla", "Frutos Rojos", "Mango"]
+# sabores=["Chocolate", "Fresa", "Mora","Melocotón", "Vainilla", "Frutos Rojos", "Mango"]
 
-for i in range(len(sabores), 1,-1):
-    if i % 3 == 0:
-        sabores.pop(i-1)
-print(sabores)        
+# for i in range(len(sabores), 1,-1):
+#     if i % 3 == 0:
+#         sabores.pop(i-1)
+# print(sabores)        
 
 # palindromo
+
+
+# letra=input("Ingrese una palabra: ").split(", ")
+# letra=input("Ingrese una palabra: ")
+# palindromo=[]
+# palindromo.append(letra)
+# for i in range(len(palindromo),1,-1):
+#     if i == letra:
+#           print("Palindromo")
+#     else:
+#           print("No palindromo")
+# else:
+#     print("Error")            
+
+# palabra=input("Introduce palabra: ").lower()
+# reves_palabra = palabra
+# palabra=list(palabra)
+# reves_palabra=list(reves_palabra)
+# reves_palabra.reverse()
+# if palabra == reves_palabra:
+#     print("Es Palíndromo")
+# else:
+#     print("No es Palíndromo")    
+
+# palabra=input("Ingrese palabra: ").lower()
+# reves_palabra=palabra
+# palabra=list(palabra)
+# reves_palabra=list(reves_palabra)
+# reves_palabra.reverse()
+# if palabra == reves_palabra:
+#     print(f"Palíndromo {palabra} revés {reves_palabra}")
+# else:
+#     print(f"No Palíndromo {palabra} revés {reves_palabra}")    
+
+# palabra=input("Ingrese palabra: ")
+# palabra=list(palabra)
+
+# for i in range(len(palabra)):
+#     if i == palabra:
+#         i+1
+#         print(palabra.pop(i-1)) 
+# # print(i)
+
+
+# palabra=input("Introduce palabra: ").lower()
+# vocales=["a","e","i","o","u"]
+
+# for vocal in vocales:
+#     veces = 0
+#     for letra in palabra:
+#         if letra == vocal:
+#             veces+=1
+#     print(f"La vocal {vocal} aparece {veces} veces")
+
+
+
+# palabra=input("Introduce palabra: ").lower()
+# vocales=["a","e","i","o","u"]
+
+# for vocal in vocales:
+#     veces=0
+#     for letra in palabra:
+#         if vocal == letra:
+#             veces+=1
+#     print(f"La vocal {vocal} esta {veces} veces")          
+
+palabras=(input("Introduce una frase: "))
+letras=["a", "b", "c","ch", "d", "e", "f", "g", "h", "i", "j", "k", "l","ll", "m", "n", "ñ", "o", "p", "q", "r","rr", "s", "t", "u","ü", "v", "w", "x", "y", "z"]
+
+
+for letra in letras:
+    veces=0
+    for palabra in palabras:
+        if letra == palabra:
+            veces+=1
+    print(f"La letra {letra} esta {veces} veces")        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
