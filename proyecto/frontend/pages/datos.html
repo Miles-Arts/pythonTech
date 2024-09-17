@@ -56,90 +56,127 @@
   
 
   <main class="container mt-4">
-    <section id="id-mapa-section" class="mb"></section>
-    <h2>Gestion de Aves</h2>
-   <div class="text-end my-3">
-    <button type="button" id="btnAgregarAve" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#i--modal-agregar">
-        Agregar
-      </button>
-   </div>
+    <section id="i-datos-section" class="mb-4">
+      <h2>Gestión de Árboles</h2>
 
-    <table id="i-table-aves" class="table table-hover">
+      <div class="text-end my-3">
+        <button type="button" id="btnAgregar-Arbol" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#i-modal-agregar">
+          Agregar Árboles
+        </button>
+      </div>
+
+      <table id="i-table-arboles" class="table table-hover">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+          <tr>              
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tamaño</th>
+            <th scope="col">Color</th>
+            <th scope="col">Caracteristica</th>
+            <th scope="col">Comportamiento</th>
+            <th scope="col">Acciones</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
+    </section>
 
-    <!-- <section id="id-mapa-section" class="mb-4">
-      <h2>Mapa</h2>
-      <div id="map">
-      </div>
-    </section> -->
-
-    <!-- Button trigger modal -->
-
-  
-  <!-- Modal -->
-  <div class="modal fade" id="i--modal-agregar" tabindex="-1" aria-labelledby="i-modal-agregar-label" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title fs-5" id="i-modal-agregar-label">Agregar Ave / Editar</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="i-modal-agregar" tabindex="-1" aria-labelledby="i-modal-agregar-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="i-modal-agregar-label">Agregar / Editar Árbol</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="i-agregar-form" class="row">
+              <input type="hidden" id="form-id" name="form-id">
+              <div class="col-md-6">
+                <label for="form-nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="form-nombre" name="form-nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="form-tamano" class="form-label">Tamaño:</label>
+                <input type="number" class="form-control" id="form-tamano" name="form-tamano" required>
+              </div>
+              <div class="col-md-6">
+                <label for="form-color" class="form-label">Color:</label>
+                <input type="text" class="form-control" id="form-color" name="form-color" required>
+              </div>
+              <div class="col-md-6">
+                <label for="form-caracteristica" class="form-label">Característica:</label>
+                <input type="text" class="form-control" id="form-caracteristica" name="form-caracteristica" required>
+              </div>
+              <div class="col-md-6">
+                <label for="form-comportamiento" class="form-label">Comportamiento:</label>
+                <input type="text" class="form-control" id="form-comportamiento" name="form-comportamiento" required>
+              </div>
+              <div class="col-md-12">
+                <label for="i-form-fotos" class="form-label">Fotos:</label>
+                <div id="i-form-fotos"></div>
+                <button type="button" class="btn btn-secondary btn-sm" id="i-btn-agregar-fotos">Agregar Fotos</button>
+              </div>
+              <div class="col-md-12">
+                <label for="i-form-video" class="form-label">Vídeo:</label>
+                <div id="i-form-video"></div>
+                <button type="button" class="btn btn-secondary btn-sm" id="i-btn-agregar-video">Agregar Vídeo</button>
+              </div>
+              <div class="col-md-12">
+                <label for="i-form-observaciones" class="form-label">Observaciones:</label>
+                <div id="i-form-observaciones"></div>
+                <button type="button" class="btn btn-secondary btn-sm" id="i-btn-agregar-observaciones">Agregar Observaciones</button>
+              </div>              
+              <div class="col-12 mt-3 text-end">
+                <button type="submit" class="btn btn-primary btn-sm">Guardar</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+              </div>         
+            </form>
+          </div>
         </div>
-        <div class="modal-body">
-          ...<form id="i-agrgar-form">
-            <input type="hidden"  id="for,-id" name="form-id">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-           <dov>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-           </dov>
-          </form>
-        </div>
-        <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-  
-        </div> -->
       </div>
     </div>
-  </div>
+
+     <!-- Modal -->
+    <div class="modal fade" id="i-modal-detalle" tabindex="-1" aria-labelledby="i-modal-detalle-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="i-modal-detalle-label">Detalles del Árbol</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card" style="width: 18rem;">
+              
+              <div id="id-card-carousel" class="carousel slide">
+                <div class="carousel-inner" id="id-carousel"></div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#id-card-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#id-card-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+              
+              <div class="card-body">
+                <h5 class="card-title" id="detalle-nombre"></h5>
+                <p class="card-text"> <strong>Tamaño:</strong> <span id="detalle-nombre"></span> </p>
+                <p class="card-text"> <strong>Color:</strong> <span id="detalle-nombre"></span> </p>
+                <p class="card-text"> <strong>Caracteristica:</strong> <span id="detalle-nombre"></span> </p>
+                <p class="card-text"> <strong>Comportamiento:</strong> <span id="detalle-nombre"></span> </p>
+                <p class="card-text"> <strong>Árbol:</strong> <span id="detalle-nombre"></span> </p>
+                <div class="overflow-auto">
+                  <div id="detalle-sonidos" class="d-inline-flex"></div>
+                </div>
+                <div id="detalle-observaciones"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
