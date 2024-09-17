@@ -1,7 +1,7 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
-import random
+
 
 id= 1
 
@@ -161,94 +161,7 @@ def eliminarAve():
 
 
 def analisisDatos():
-    observaciones= []
-
-    for ave in datosAves:
-        for obs in ave["observaciones"]:
-            observaciones.append({
-                "Nombre": ave["nombre"],
-                "Fecha": obs["fecha"],
-                "Lugar": obs["lugar"], 
-                "Avistamientos": obs["avistamientos"]
-            })
-
-    df= pd.DataFrame(observaciones)
-    print(df)
-
-    if df.empty:
-        print("No hay datos disponibles para el análisis")
-        return
-    
-    # Limpieza de datos
-    print("\nAnálisis de datos")
-    print("\nEstadisticas descriptivas antes de la limpieza")
-    print(df.describe(include="all"))
-
-    df= df.drop_duplicates()
-    print(df)
-
-    df= df.dropna(subset=["Nombre", "Fecha"])
-    print(df)
-    
-    df["Avistamientos"]= df["Avistamientos"].fillna(df["Avistamientos"].median())
-    print(df)
-
-    df["Fecha"]= pd.to_datetime(df["Fecha"])
-    print(df)
-
-    df= df[(df["Avistamientos"]>0) & (df["Avistamientos"]<=100)]
-
-    print("\nEstadisticas descriptivas despues de la limpieza")
-    print(df.describe(include="all"))
-
-    #Establecer la fecha como el indice del df
-    df.set_index("Fecha", inplace=True)
-    print(df)
-
-    print("\nTendencia a lo largo del tiempo por mes")
-    tendencia= df.resample("ME").sum(numeric_only=True)
-    print(tendencia)
-
-    print("\nDistribucion de avistamientos por lugar")
-    distribucion= df.groupby("Lugar").sum(numeric_only=True)
-    print(distribucion)
-
-    print("\nAvistamientos promedio por ave")
-    avistamientos= df.groupby("Nombre").sum(numeric_only=True)
-    print(avistamientos)
-
-    # Graficar
-    print("Crear grafica")
-    fig= plt.figure(figsize=(14, 10))
-    fig.canvas.manager.set_window_title("Análisis de datos de aves")
-
-    plt.subplot(2, 2, 1)
-    tendencia["Avistamientos"].plot(kind="line", marker="o", color="red")
-    plt.title("Tendencia de avistamientos a lo largo del tiempo por mes")
-    plt.xlabel("Fecha")
-    plt.ylabel("Avistamientos")
-
-    plt.subplot(2, 2, 2)
-    distribucion["Avistamientos"].plot(kind="bar", color= "blue")
-    plt.title("Distribucion de avistamientos por lugar")
-    plt.xlabel("Lugar")
-    plt.ylabel("Avistamientos")
-
-    plt.subplot(2, 2, 3)
-    avistamientos["Avistamientos"].plot(kind="hist", bins=10, color="purple", alpha=0.7)
-    plt.title("Avistamientos promedio")
-    plt.xlabel("Avistamientos")
-    plt.ylabel("Frecuencia")
-
-    plt.subplot(2, 2, 4)
-    colores= plt.cm.Paired(np.arange(len(avistamientos)))
-    avistamientos["Avistamientos"].plot(kind="pie", color= colores, startangle=90)
-    plt.title("Avistamientos promedio por ave")
-    plt.ylabel("")
-
-    plt.tight_layout()
-    plt.get_current_fig_manager().window.state("zoomed")
-    plt.show()
+    pass
 
 
 def cargarDatos():
@@ -292,9 +205,9 @@ def cargarDatos():
         
         print("Datos cargados desde el archivo.")
     except FileNotFoundError:
-        print("No se encuentra el archivo. Generando nuevos datos")
-        generarDatos(datosAves, 5)
+        print("No se encuentra el archivo")
     
+
 
 def guardarDatos():
     datos=[]
@@ -319,55 +232,6 @@ def guardarDatos():
     df.to_csv("datos_aves.csv", index= False)
 
     print("Datos guardados en el archivo 'datos_aves.csv'.")
-
-
-def generarObservaciones():
-    fechas = ['2023-04-01', '2023-04-15', '2023-05-01', '2023-05-15', '2023-06-01', None]
-    lugares = ['California', 'Nevada', 'Oregon', 'Washington', 'Arizona', None]
-    avistamientos= [random.randint(1, 20), None]
-
-    observaciones = []
-
-    for _ in range(random.randint(1, 2)):
-        observaciones.append({
-            'fecha': random.choice(fechas),
-            'lugar': random.choice(lugares),
-            'avistamientos': random.choice(avistamientos)
-        })
-
-    return observaciones
-
-
-def generarDatos(datos, cantidad):
-    global id
-
-    nombres = ['Colibrí rubí', 'Jilguero dorado', 'Gorrión melódico', 'Pájaro carpintero', 'Mirlo acuático']
-    tamaño= [random.randint(8, 15), None]
-    colores = ['Verde brillante y rojo', 'Azul y negro', 'Amarillo y blanco', 'Naranja y marrón', 'Gris y azul', None]    
-    caracteristica = ['Diminuto, gorjeador rápido', 'Plumaje colorido, vuelo ágil', 'Pico largo y curvado', 'Canto melodioso', 'Patas cortas, alas largas', None]
-    comportamientos = ['Se alimenta de néctar', 'Se alimenta de insectos', 'Canta al amanecer', 'Construye nidos en árboles', 'Vuela en bandadas', None]
-    
-    for _ in range(cantidad):
-        id += 1
-
-        ave = {
-            'id': id,
-            'nombre': random.choice(nombres),
-            'descripcion': {
-                'tamaño': random.choice(tamaño),
-                'color': random.choice(colores),
-                'caracteristica': random.choice(caracteristica),
-                'comportamiento': random.choice(comportamientos)
-            },
-            'multimedia': {
-                'fotos': [f'foto{random.randint(1, 10)}.jpg' for _ in range(random.randint(1, 3))],
-                'sonidos': [f'sonido{random.randint(1, 10)}.mp3' for _ in range(random.randint(1, 3))]
-            },
-            'observaciones': generarObservaciones()
-        }
-
-        datos.append(ave)
-
 
 
 def menu():
