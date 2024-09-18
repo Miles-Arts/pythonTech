@@ -1161,16 +1161,96 @@
 # print(f"El mínimo es {min}")            
 # print(f"El máximo es {max}")            
 
-inventarios=[50,75,46,22,80,65,8,500,10,4]
-min = max = inventarios[0]
+# inventarios=[2,50,75,46,22,80,65,8,500,10,4,900,1]
+# min = max = inventarios[0]
 
-for inventario in inventarios:
-    if  inventario < min:
-        inventario = inventario
-    elif  inventario > max:
-        max = inventario        
-print(f"Stock Mínimo {min}")
-print(f"Stock Máximo {max}")
+# for inventario in inventarios:
+#     if  inventario < min:
+#         min = inventario
+#     elif  inventario > max:
+#         max = inventario        
+# print(f"Stock Mínimo {min}")
+# print(f"Stock Máximo {max}")
+
+# inventarios = [2, 50, 75, 46, 22, 80, 65, 8, 500, 10, 4, 900, 1]
+# stock_minimo = min(inventarios)
+# stock_maximo = max(inventarios)
+# print(f"Stock Mínimo {stock_minimo}")
+# print(f"Stock Máximo {stock_maximo}")
+
+
+
+# inventarios = [2, 50, 75, 46, 22, 80, 65, 8, 500, 10, 4, 900, 1]
+# stock_minimo = min(inventarios)
+# stock_maximo = max(inventarios)
+# print(f"Stock Mínimo {stock_minimo}")
+# print(f"Stock Máximo {stock_maximo}")
+
+
+
+# edades=[30,50,30,40,19,90]
+# min = max = edades[0]
+
+# for edad in edades:
+#     if edad < min:
+#         min = edad
+#     elif edad > max:
+#         max = edad
+# print(f"Edad menos {min}")            
+# print(f"Edad mayor {max}")            
+
+# letras=["a", "b", "c","ch", "d", "e", "f", "g", "h", "i", "j", "k", "l","ll", "m", "n", "ñ", "o", "p", "q", "r","rr", "s", "t", "u","ü", "v", "w", "x", "y", "z"]
+# min = max = letras[0]
+
+# for letra in letras:
+#     if letra < min:
+#         min = letra
+#     elif letra > max:
+#         max = letra 
+
+# print(f"{min}")        
+# print(f"{max}")        
+# palabras=["Mesa", "Días", "hola", "sol", "Maestría", "Píngüno","Esternocleidomastoideo", "Zebra", "Wyz"]
+# min = max = palabras[0]
+
+# for palabra in palabras:
+#     if palabra < min:
+#         min = palabra
+#     elif palabra > max:
+#         max = palabra
+# print(f"{min}")        
+# print(f"{max}")        
+
+vocales=["a","e","i","o","u","á","é","í","ó","ú", "ü"]
+min = max = vocales[0]
+
+for vocal in vocales:
+    if vocal < min:
+        min = vocal
+    elif vocal > max:
+        max = vocal
+print(f"{min}")        
+print(f"{max}")        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
