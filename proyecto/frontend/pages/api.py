@@ -71,7 +71,7 @@ def obtener_aves():
 def errorInterno():
     return jsonify({"error": "Ocurrió un error interno del servidos" }), 500
 
-@app.errorhandler(5404)
+@app.errorhandler(404)
 def errorInterno():
     return jsonify({"error": "Recurso no encontrado" }), 404
 
