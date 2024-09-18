@@ -7,16 +7,53 @@ from flask_cors import CORS
 # pip install Flask
 # pip install Flask-Cors
 
+# VARIOS IP LISTA BLANCA
 app=Flask(__name__)
-CORS()
+CORS(app, resources={r"/*": {"origins":"*"}})
+
+CARPETA_IMG="img"
+CARPETA_SOUND="sound"
+ARCHIVO_CSV="data_aves-csv"
+
+# Creación carpetas
+for carpeta in [CARPETA_IMG, CARPETA_SOUND]:
+    os.makedirs(carpeta, exist_ok=True)
+
+# RUTAS carpetas creadas
+app.config["CARPETA_IMG"]=CARPETA_IMG
+app.config["CARPETA_SOUND"]=CARPETA_SOUND
 
 
+def leerCsv():
+    aves={}
 
+    if os.path.exists(ARCHIVO_CSV):
+        with open(ARCHIVO_CSV, mode="r", encoding="utf-8") as archivo:
+            lector=csv.DictReader(archivo)
 
+                    # for data_df, row in df.iterrows():
+            for row in lector():
+                id_ave=int(row["ID"])
 
+                if id_ave not in aves:
+                    aves[id_ave]= {
+                        "id": id_ave,
+                        "nombre": row["Nombre"], 
+                        "tamano": float(row["Tamaño"]) if row["Tamaño"] else None, #TERNARIO OPERADOR IZQUIERDA TRUE DERECHA FALSE if por si no hay archivo y evitar romper la API
+                        "color": row["Color"],
+                        "caracteristica": row[ "Caracteristica"],
+                        "comportamiento": row[ "Comportamiento"],
+                        "fotos": row[ "Fotos"].split(", ") if row["Fotos"] else [], #TERNARIO OPERADOR IZQUIERDA TRUE DERECHA FALSE - if por si no hay archivo y evitar romper la API
+                        "sonidos": row[ "Sonidos"].split(", ") if row["Sonidos"] else [], #TERNARIO OPERADOR IZQUIERDA TRUE DERECHA FALSE  if por si no hay archivo y evitar romper la API
+                        "observaciones": [ ] 
+                    }
 
-
-
+                aves[id_ave]["observaciones"].append({
+                    "fecha": row["Fecha"],
+                    "lugar": row["Lugar"],
+                    "avistamientos": float(row["Avistamientos"]) if row["Avistamientos"] else None
+                    })
+            
 
 
 
