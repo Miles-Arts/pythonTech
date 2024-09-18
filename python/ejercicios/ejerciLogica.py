@@ -1150,19 +1150,27 @@
 # print(f"El valor mínimo es: {precios_min}")
 
 
-precios=[50,75,46,22,80,65,8]
+# precios=[50,75,46,22,80,65,8]
 
-min = max = precios[0]
-for precio in precios:
-    if precio < min:
-        min = precio
-    elif precio > max:
-        max = precio
-print(f"El mínimo es {min}")            
-print(f"El máximo es {max}")            
+# min = max = precios[0]
+# for precio in precios:
+#     if precio < min:
+#         min = precio
+#     elif precio > max:
+#         max = precio
+# print(f"El mínimo es {min}")            
+# print(f"El máximo es {max}")            
 
+inventarios=[50,75,46,22,80,65,8,500,10,4]
+min = max = inventarios[0]
 
-
+for inventario in inventarios:
+    if  inventario < min:
+        inventario = inventario
+    elif  inventario > max:
+        max = inventario        
+print(f"Stock Mínimo {min}")
+print(f"Stock Máximo {max}")
 
 
 
