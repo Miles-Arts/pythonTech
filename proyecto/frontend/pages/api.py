@@ -53,7 +53,68 @@ def leerCsv():
                     "lugar": row["Lugar"],
                     "avistamientos": float(row["Avistamientos"]) if row["Avistamientos"] else None
                     })
-            
+    return aves
+
+
+# el FRONT siempre necesita una ruta
+# 190.2.3.5.550/aves
+
+@app.route("/aves/", methods=["GET"]) 
+def obtener_aves():
+    aves= leerCsv()
+    datosAves=list(aves.values())
+
+    # CONVERTIR a JASON
+    return jsonify(datosAves)
+
+@app.errorhandler(500)
+def errorInterno():
+    return jsonify({"error": "Ocurrió un error interno del servidos" }), 500
+
+@app.errorhandler(5404)
+def errorInterno():
+    return jsonify({"error": "Recurso no encontrado" }), 404
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
