@@ -20,18 +20,14 @@ document.addEventListener("DOMContentLoaded", function(){
             const row=tbody.insertRow()
             row.insertCell(0).textContent=ave.id
             row.insertCell(1).textContent=ave.nombre
-            row.insertCell(2).textContent=ave.tamaño
+            row.insertCell(2).textContent=ave.tamano
             row.insertCell(3).textContent=ave.color
             row.insertCell(4).textContent=ave.caracteristica
             row.insertCell(5).textContent=ave.comportamiento
         });
-    
     }
 
     cargarAves()
-
-
-
 
 })
 

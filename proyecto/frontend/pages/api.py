@@ -55,7 +55,6 @@ def leerCsv():
                     })
     return aves
 
-
 # el FRONT siempre necesita una ruta
 # 190.2.3.5.5500/aves
 
