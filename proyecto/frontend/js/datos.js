@@ -11,10 +11,9 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         const aves=await respuesta.json()
-        console.log(aves)
+        // console.log(aves)
 
-
-        const tbody= document.getElementById("i-table-aves").querySelector("tbody")
+        const tbody= document.getElementById("i-table-arboles").querySelector("tbody")
         tbody.innerHTML=""
 
         aves.forEach(ave => {

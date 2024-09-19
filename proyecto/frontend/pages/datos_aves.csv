@@ -1,6 +1,7 @@
 ID,Nombre,Tamaño,Color,Caracteristica,Comportamiento,Fotos,Sonidos,Fecha,Lugar,Avistamientos
-1,Colibrí,19,Verde y Rojo,Pequeño,Se alimenta de néctar,"foto1.jpg, foto2.jpg",sonido1.mp3,2024-05-01,Boyacá,5
-1,Colibrí,19,Verde y Rojo,Pequeño,Se alimenta de néctar,"foto1.jpg, foto2.jpg",sonido1.mp3,2024-04-01,Cundinamarca,10
-2,perro,10,rojo,peludo,ladrar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-01-01,cucuta,2
-2,perro,10,rojo,peludo,ladrar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-02-05,bogota,10
-2,perro,10,rojo,peludo,ladrar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-06-07,bucaramanga,6
+0,Colibrí,19,Rojo,Pequeño,Se alimenta de néctar,"foto1.jpg, foto2.jpg",sonido1.mp3,2024-05-01,Boyacá,5
+1,Carpintero,19,negro,Pequeño,Se alimenta de insectos,"foto1.jpg, foto2.jpg",sonido1.mp3,2024-04-01,Cundinamarca,10
+2,Perro,10,amarillo,pelo corto,ladrar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-01-01,cucuta,2
+3,Gato,10,gris,pelo largo,maullar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-02-05,bogota,10
+4,Lobo,10,blanco negro gris,peludo,maullar,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-06-07,bucaramanga,6
+5,Oso,10,cafe,peludo,gruñir,"foto1.jpg, foto2.jpg","sonido1.mp3, sonido2.mp3",2024-06-07,bucaramanga,6
