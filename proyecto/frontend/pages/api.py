@@ -9,19 +9,19 @@ from flask_cors import CORS
 
 # VARIOS IP LISTA BLANCA
 app=Flask(__name__)
-CORS(app, resources={r"/*": {"origins":"*"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
-CARPETA_IMG="img"
-CARPETA_SOUND="sound"
-ARCHIVO_CSV="data_aves-csv"
+# CARPETA_IMG="img"
+# CARPETA_SOUND="sound"
+ARCHIVO_CSV="datos_aves.csv"
 
 # Creación carpetas
-for carpeta in [CARPETA_IMG, CARPETA_SOUND]:
-    os.makedirs(carpeta, exist_ok=True)
+# for carpeta in [CARPETA_IMG, CARPETA_SOUND]:
+#     os.makedirs(carpeta, exist_ok=True)
 
-# RUTAS carpetas creadas
-app.config["CARPETA_IMG"]=CARPETA_IMG
-app.config["CARPETA_SOUND"]=CARPETA_SOUND
+# # RUTAS carpetas creadas
+# app.config["CARPETA_IMG"]=CARPETA_IMG
+# app.config["CARPETA_SOUND"]=CARPETA_SOUND
 
 
 def leerCsv():
@@ -32,7 +32,7 @@ def leerCsv():
             lector=csv.DictReader(archivo)
 
                     # for data_df, row in df.iterrows():
-            for row in lector():
+            for row in lector:
                 id_ave=int(row["ID"])
 
                 if id_ave not in aves:
@@ -57,13 +57,12 @@ def leerCsv():
 
 
 # el FRONT siempre necesita una ruta
-# 190.2.3.5.550/aves
+# 190.2.3.5.5500/aves
 
 @app.route("/aves/", methods=["GET"]) 
 def obtener_aves():
     aves= leerCsv()
     datosAves=list(aves.values())
-
     # CONVERTIR a JASON
     return jsonify(datosAves)
 
@@ -72,8 +71,8 @@ def errorInterno():
     return jsonify({"error": "Ocurrió un error interno del servidos" }), 500
 
 @app.errorhandler(404)
-def errorInterno():
-    return jsonify({"error": "Recurso no encontrado" }), 404
+def noEncontrado():
+    return jsonify({"error": "Recurso no encontrado"}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)

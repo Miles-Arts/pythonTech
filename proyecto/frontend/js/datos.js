@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     async function cargarAves(){
-        const respuesta=fetch("http://127.0.0.1:5000/aves/")
+        const respuesta= await fetch("http://127.0.0.1:5000/aves/")
     
         if (!respuesta.ok){
-            console.log("Error al carghar eves.", (await respuesta).statusText)
+            // console.log("Error al cargar eves.", (await respuesta).statusText)
+            console.log("Error al cargar eves.", respuesta.statusText)
             return
         }
 
-        const aves=(await respuesta).json()
+        const aves=await respuesta.json()
         console.log(aves)
 
 
