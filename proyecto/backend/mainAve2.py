@@ -255,8 +255,7 @@ def analisis_datos():
     colores=plt.cm.Paired(np.arange(len(avistamientos)))
     avistamientos["Avistamientos"].plot(kind="pie", color= colores, startangle=90)
     plt.title("Avistamientos promedio por ave")
-    plt.ylabel("Avistamientos")
- 
+    plt.ylabel("Avistamientos") 
 
 def cargar_datos():
     global id, datosAves
@@ -329,7 +328,6 @@ def guardar_datos():
     df=pd.DataFrame(datos)
     df.to_csv("datos_aves.csv", index=False)
     print("Datos gurdados en el archivo datos_aves.csv")    
-
 
 def generarObservaciones():
     pass

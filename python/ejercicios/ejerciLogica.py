@@ -1221,35 +1221,100 @@
 # print(f"{min}")        
 # print(f"{max}")        
 
-vocales=["a","e","i","o","u","á","é","í","ó","ú", "ü"]
-min = max = vocales[0]
+# vocales=["a","e","i","o","u","á","é","í","ó","ú", "ü"]
 
-for vocal in vocales:
-    if vocal < min:
-        min = vocal
-    elif vocal > max:
-        max = vocal
-print(f"{min}")        
-print(f"{max}")        
+# min = max = vocales[0]
 
-
-
+# for vocal in vocales:
+#     if vocal < min:
+#         min = vocal
+#     elif vocal > max:
+#         max = vocal
+# print(f"{min}")        
+# print(f"{max}")  
 
 
 
 
+# vocales=["a","e","i","o","u"]
+# min = max = vocales[0]
+
+# for vocal in vocales:
+#     if vocal < min:
+#         min = vocal
+#     elif vocal > max:
+#         max = vocal
+# print(f"{min}")        
+# print(f"{max}")        
+
+# vocales=[30,60,40,60]
+# min = max = vocales[0]
+
+# for vocal in vocales:
+#     if vocal < min:
+#         min = vocal
+#     elif vocal > max:
+#         max = vocal
+# print(f"Precio menor ${min} USD")        
+# print(f"Precio mayor ${max} USD")   
+
+
+# vector1=[1,2,3]
+# vector2=[-1,0,2]
+
+# vector3 = vector1 + vector2
+# vector1.append(vector2)
+
+# print(vector3)
+# print(vector1)
+
+# lista1 = (1,2,3)
+# lista2 = (-1,0,2)
+
+# producto=0
+# for i in range(len(lista1)):
+#     producto += lista1[i]*lista2[i]
+# print(f"El producto de los vestores {lista1} y {lista2} es: {producto}")    
+# # MULTIPLIZAR  UN NÚMERO positivo con uno NEGATIVO SIEMPRE EL RESULTADO ES NEGATIVO
+
+# num = (1) * (-1) 
+# print(num)
+
+# lista1=(3,4,5,)
+# lista2=(-3,4,5,)
+
+# resultado=0
+
+# for i in range(len(lista1)):
+#     resultado += lista1[i] * lista2[i]
+# print(f"El resultado de tupla 1 {lista1} y tupla 2{lista2} es: {resultado}")    
+
+# # Mulitiplzai precios
+
+# precios_semana1 = (10, 20, 30, 40 )
+# precios_semana2 = (10, 20, 30, 40 )
+
+# total_semanas=0
+
+# for i in range(len(precios_semana1)):
+#     total_semanas += precios_semana1[i] * precios_semana2[i]
+# print(f"Semana 1 {precios_semana1 } Semana 2. \n\tTotal: {total_semanas}")    
 
 
 
+# clientes_nuevos1=(1,3,4,5)
+# clientes_nuevos2=(1,3,4,5)
+# # clientes_nuevosx=(1,3,4,5)
+# # clientes_nuevos2=(1,3,4,5)
+
+# total_clientes=0
+
+# for i in range(len(clientes_nuevos1)):
+#     total_clientes += clientes_nuevos1[i] + clientes_nuevos2[i]
+# print(f"Clientes 1 {clientes_nuevos1} Clientes 2 {clientes_nuevos2} Total clientes {total_clientes}")    
 
 
-
-
-
-
-
-
-
+# Matrices 
 
 
 
