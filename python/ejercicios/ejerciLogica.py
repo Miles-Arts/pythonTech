@@ -1342,25 +1342,98 @@
 # print(lista_1 , lista_2)
 
 
-lista_1=((1,2,3),
-         (4,5,6))
+# lista_1=((1,2,3),
+#          (4,5,6))
+# lista_2=((-1,0),
+#         (0,1),
+#         (1,1))
+# resultado=[[0,0],
+#            [0,0]]
+# for i in range(len(lista_1)):
+#     for j in range(len(lista_2[0])):
+#         for k in range(len(lista_2)):
+#             resultado[i][j] += lista_1[i][k] * lista_2[k][j]
+#             print(resultado)
+# for i in range(len(resultado)):
+#     resultado[i] = tuple(resultado[i])
+# resultado = tuple(resultado)
+# for i in range(len(resultado)):
+#     print(resultado[i])    
 
-lista_2=((-1,0),
+# ----------------
+
+# lista_1=((1,2,3),
+#          (4,5,6))
+# lista_2=((-1,0),
+#         (0,1),
+#         (1,1))
+# resultado=[[0,0],
+#            [0,0]]
+
+# for i in range(len(lista_1)):
+#     for j in range(len(lista_2[0])):
+#         for k in range(len(lista_2)):
+#             resultado[i][j] += lista_1[i][k] * lista_2[k][j]
+# for i in range(len(resultado)):
+#     resultado[i] = tuple(resultado[i])      
+# resultado = tuple(resultado)
+# for i in range(len(resultado)):
+#     print(resultado)          
+
+tupla1=((1,2,3),
+        (4,5,6))
+tupla2=((-1,0),
         (0,1),
         (1,1))
-
 resultado=[[0,0],
            [0,0]]
 
-for i in range(len(lista_1)):
-    for j in range(len(lista_2[0])):
-        for k in range(len(lista_2)):
-            resultado[i][j] += lista_1[i][k] * lista_2[k][j]
+for i in range(len(tupla1)):
+    for j in range(len(tupla2[0])):
+        for k in range(len(tupla2)):
+            resultado[i][j] +=  tupla1[i][k] * tupla2[k][j]
 for i in range(len(resultado)):
-    resultado[i] = tuple(resultado[i])
-resultado = tuple(resultado)
+    resultado[i]= tuple(resultado[i]) 
+resultado= tuple(resultado)
 for i in range(len(resultado)):
     print(resultado[i])    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
