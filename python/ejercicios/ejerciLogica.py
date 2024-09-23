@@ -1323,15 +1323,44 @@
 # print(f"Ventas mes Enero {ventas_semana1} ventas mes Febrero {ventas_semana2} Total ventas {total_ventas}")    
 
 
-
-
-
-
-
-
-
-
 # Matrices 
+
+# lista_1=[(1,2,3),(4,5,6)]
+# lista_2=((-1,0),(0,1),(1,1))
+
+# # for i in lista_1:
+# #     for j in lista_2:
+# #         print(i,j)
+
+# lista_1.append(lista_2)
+# # print(lista_1)
+
+# for i in range(len(lista_1)):
+#     print(lista_1[i])
+
+
+# print(lista_1 , lista_2)
+
+
+lista_1=((1,2,3),
+         (4,5,6))
+
+lista_2=((-1,0),
+        (0,1),
+        (1,1))
+
+resultado=[[0,0],
+           [0,0]]
+
+for i in range(len(lista_1)):
+    for j in range(len(lista_2[0])):
+        for k in range(len(lista_2)):
+            resultado[i][j] += lista_1[i][k] * lista_2[k][j]
+for i in range(len(resultado)):
+    resultado[i] = tuple(resultado[i])
+resultado = tuple(resultado)
+for i in range(len(resultado)):
+    print(resultado[i])    
 
 
 
