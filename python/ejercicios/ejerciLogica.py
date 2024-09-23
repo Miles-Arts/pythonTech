@@ -1302,16 +1302,31 @@
 
 
 
-clientes_nuevos1=(1,3,4,5)
-clientes_nuevos2=(1,3,4,5)
-# clientes_nuevosx=(1,3,4,5)
+# clientes_nuevos1=(1,3,4,5)
 # clientes_nuevos2=(1,3,4,5)
+# # clientes_nuevosx=(1,3,4,5)
+# # clientes_nuevos2=(1,3,4,5)
 
-total_clientes=0
+# total_clientes=0
 
-for i in range(len(clientes_nuevos1)):
-    total_clientes += clientes_nuevos1[i] + clientes_nuevos2[i]
-print(f"Clientes 1 {clientes_nuevos1} Clientes 2 {clientes_nuevos2} Total clientes {total_clientes}")    
+# for i in range(len(clientes_nuevos1)):
+#     total_clientes += clientes_nuevos1[i] + clientes_nuevos2[i]
+# print(f"Clientes 1 {clientes_nuevos1} Clientes 2 {clientes_nuevos2} Total clientes {total_clientes}")    
+
+
+# ventas_semana1=(10,20,30,40)
+# ventas_semana2=(10,20,30,40)
+# total_ventas=0
+
+# for i in range(len(ventas_semana1)):
+#     total_ventas += ventas_semana1[i] + ventas_semana2[i]
+# print(f"Ventas mes Enero {ventas_semana1} ventas mes Febrero {ventas_semana2} Total ventas {total_ventas}")    
+
+
+
+
+
+
 
 
 
