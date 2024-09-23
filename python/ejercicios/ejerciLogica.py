@@ -1436,38 +1436,92 @@
 #     print(resultado[i])           
 
 
+# numero separados comas
+
+# muestra_numeros=float(input("Ingrese una lista de nuemros separados por (,) "))
+# muestra_numeros=input("Ingrese una lista de nuemros separados por (,) ")
+# muestra_numeros = muestra_numeros.split(',')
+# muestra_lista=[]
+# muestra_lista.append(muestra_numeros)
+
+# for i  in range(len(muestra_lista)):
+#     promedio = len(muestra_lista)
+#     resultado = (promedio / muestra_lista) 
+#     print(resultado)
 
 
 
 
 
+# numeros_list=input("Ingrese una muestra de números separados por comas (,) : ")
+# numeros_list= numeros_list.split(',')
+# numero = len(numeros_list)
+# for i  in range(numero):
+#     numeros_list[i] = int(numeros_list[i])
+# numeros_list = tuple(numeros_list)
+# sum=0
+# sumsq=0
+# for i in numeros_list:
+#     sum  += i
+#     sumsq += i **2
+# promedio = sum/numero
+# desviacion=(sumsq/numero-promedio**2)**(1/2)
+# print(f"La media es: {promedio} y la desviación es: {desviacion}")      
+
+
+# numeras_lista=["1.0","2.0","3.0","4.0","5.0"]
+# numeras_listas=["1.0","2.0","3.0","4.0","5.0"]
+# numeras = len(numeras_lista)
+
+# for i in range(numeras,):
+#     numeras_listas[i] = int(numeras_listas[i])
+#     numeras_lista[i] = float(numeras_lista[i])
+# print(numeras_lista,numeras_listas)
+
+# lista_num=["2","4","6","7","90","3","9",]
+# lista_total=len(lista_num)
+
+# for i in range(lista_total):
+#     lista_num[i] = int(lista_num[i])
+#     print(lista_num)    
+# print(lista_num)    
 
 
 
 
+# lista_num=["2","4","6","7","90","3","9",]
+# lista_len=len(lista_num)
+
+# for i in range(lista_len):
+#     lista_num[i] = float(lista_num[i])
+# print(lista_num)    
+
+# lista_num=["2","43","6","7","90","31"]
+
+# len_lista=len(lista_num)
+
+# for i in range(len_lista):
+#     lista_num[i] = int(lista_num[i])
+# print(lista_num)    
 
 
+# DICCIONARIOS
 
 
+# moneda={"Euro":"€", "Dollar":"$", "Yen":"¥"}
+monedas={"Euro":"€", "Dollar":"$", "Yen":"¥"}
+pregunta=input("Ingrese la divisa: ").title()
 
+print(monedas.get(pregunta.title(), "NO"))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# if  pregunta == moneda["Euro"]:
+#     print("€")
+# elif pregunta == moneda["Dollar"]  :
+#     print("$")
+# elif pregunta == moneda["Yen"]:
+#     print("¥")
+# else:
+#     print(f"La divisa {pregunta} no está en el diccionario")        
 
 
 
