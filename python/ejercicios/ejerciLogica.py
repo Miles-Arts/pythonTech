@@ -1302,16 +1302,18 @@
 
 
 
-# clientes_nuevos1=(1,3,4,5)
+clientes_nuevos1=(1,3,4,5)
+clientes_nuevos2=(1,3,4,5)
+# clientes_nuevosx=(1,3,4,5)
 # clientes_nuevos2=(1,3,4,5)
-# # clientes_nuevosx=(1,3,4,5)
-# # clientes_nuevos2=(1,3,4,5)
 
-# total_clientes=0
+total_clientes=0
 
-# for i in range(len(clientes_nuevos1)):
-#     total_clientes += clientes_nuevos1[i] + clientes_nuevos2[i]
-# print(f"Clientes 1 {clientes_nuevos1} Clientes 2 {clientes_nuevos2} Total clientes {total_clientes}")    
+for i in range(len(clientes_nuevos1)):
+    total_clientes += clientes_nuevos1[i] + clientes_nuevos2[i]
+print(f"Clientes 1 {clientes_nuevos1} Clientes 2 {clientes_nuevos2} Total clientes {total_clientes}")    
+
+
 
 
 # Matrices 
