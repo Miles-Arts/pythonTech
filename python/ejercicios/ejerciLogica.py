@@ -1632,12 +1632,38 @@
 # print(f"{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su número de teléfono es {datos_personales["telefono"]}.")
 
 
+# frutas={
+#     "Platano": 1.35,
+#     "Manzana": 0.80,
+#     "Pera": 0.85,
+#     "Naranja": 0.70
+# }
 
+# nombre=input("Ingrese Fruta: ")
+# kilos=input("Ingrese kilos: ")
 
+# for fruta in range(len(frutas)):
+#     precio = frutas.values()
+#     float(kilos * precio)
+#     # kilos * fruta[]
+#     nombre == fruta
+#     # print(f"{fruta} {kilos}")
+#     print(f"{kilos}")
 
+frutas={
+    "Platano": 1.35,
+    "Manzana": 0.80,
+    "Pera": 0.85,
+    "Naranja": 0.70
+}
 
+fruta=input("Ingrese Fruta: ").title()
+kilos=float(input("Ingrese kilos: "))
 
-
+if fruta in frutas:
+    print(f"{kilos} Kilos de {fruta} valen {frutas[fruta]*kilos}€.")
+else:
+    print(f"Los siento, la fruta {fruta} no está disponible.")
 
 
 
