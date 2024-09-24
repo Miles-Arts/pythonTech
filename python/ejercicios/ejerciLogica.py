@@ -1612,24 +1612,24 @@
 
 
 
-nombre=input("Ingrese su nombre: ")
-edad=input("Ingrese su edad: ")
-direccion=input("Ingrese su dirección: ")
-telefono=input("Ingrese su teléfono: ")
+# nombre=input("Ingrese su nombre: ")
+# edad=input("Ingrese su edad: ")
+# direccion=input("Ingrese su dirección: ")
+# telefono=input("Ingrese su teléfono: ")
 
-datos_personales={
-    "nombre": "nombre",
-    "edad": "edad",
-    "direccion": "direccion",
-    "telefono": "telefono"
-}
+# datos_personales={
+#     "nombre": "nombre",
+#     "edad": "edad",
+#     "direccion": "direccion",
+#     "telefono": "telefono"
+# }
 
-datos_personales["nombre"]=nombre
-datos_personales["edad"]=edad
-datos_personales["direccion"]=direccion
-datos_personales["telefono"]=telefono
+# datos_personales["nombre"]=nombre
+# datos_personales["edad"]=edad
+# datos_personales["direccion"]=direccion
+# datos_personales["telefono"]=telefono
 
-print(f"{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su número de teléfono es {datos_personales["telefono"]}.")
+# print(f"{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su número de teléfono es {datos_personales["telefono"]}.")
 
 
 
