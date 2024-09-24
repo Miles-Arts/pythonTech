@@ -1700,39 +1700,102 @@
 #     print(f"No hay ventas para el día {dia_venta}.")    
 
 
-acciones_banco={
-    "Lunes": 1.35,
-    "Martes": 0.80,
-    "Miercoles": 0.85,
-    "Jueves": 0.70,
-    "Viernes": 3.01
-}
+# acciones_banco={
+#     "Lunes": 1.35,
+#     "Martes": 0.80,
+#     "Miercoles": 0.85,
+#     "Jueves": 0.70,
+#     "Viernes": 3.01
+# }
 
-accion_dia=input("Ingrese el día de compra acciones: ").title()
-cantidad=float(input("Ingrese la cantidad de acciones compradas: "))
+# accion_dia=input("Ingrese el día de compra acciones: ").title()
+# cantidad=float(input("Ingrese la cantidad de acciones compradas: "))
 
-if accion_dia in acciones_banco:
-    total_compra = acciones_banco[accion_dia]*cantidad
-    print(f"\n{cantidad} acciones se compraron el día {accion_dia}. \nEl valor total de las acciones compradas son: ${total_compra:.2f}")
-else:
-    print(f"El día {accion_dia} no se encuentra. ")
-
-
+# if accion_dia in acciones_banco:
+#     total_compra = acciones_banco[accion_dia]*cantidad
+#     print(f"\n{cantidad} acciones se compraron el día {accion_dia}. \nEl valor total de las acciones compradas son: ${total_compra:.2f}")
+# else:
+#     print(f"El día {accion_dia} no se encuentra. ")
 
 
+# print("Ingrese la fecha  dd/mm/aaaa ")
+# dia=int(input("Ingrese día:  "))
+# mes=int(input("Ingrese mes: "))
+# anio=int(input("Ingrese año: "))
+# fecha_anio={
+#     "dia": "dia",
+#     "mes": "mes",
+#     "anio": "anio"
+# }
+
+# fecha_anio["dia"]=dia
+# fecha_anio["mes"]=mes
+# fecha_anio["anio"]=anio
+
+# print(f"{fecha_anio["dia"]} de {fecha_anio["mes"]} de {fecha_anio["anio"]}")
 
 
 
+# meses = {
+#     1:'enero', 
+#     2:'febrero', 
+#     3:'marzo', 
+#     4:'abril', 
+#     5:'mayo', 
+#     6:'junio', 
+#     7:'julio', 
+#     8:'agosto', 
+#     9:'septiembre', 
+#     10:'octubre', 
+#     11:'noviembre',
+#     12:'diciembre'
+# }
+
+# fecha=input("Ingrese una fecha formato: dd/mm/aaaa: ")
+# fecha = fecha.split("/")
+# print(f"{fecha[0]} de {meses[int(fecha[1])]} de {fecha[2]}")
 
 
+# meses = {
+#     1:'enero', 
+#     2:'febrero', 
+#     3:'marzo', 
+#     4:'abril', 
+#     5:'mayo', 
+#     6:'junio', 
+#     7:'julio', 
+#     8:'agosto', 
+#     9:'septiembre', 
+#     10:'octubre', 
+#     11:'noviembre',
+#     12:'diciembre'
+# }
+
+# mes=input("Ingrese fecha dd/mm/aaaa: ")
+# fecha= mes.split("/")
+
+# print(f"{fecha[0]} de {meses[int(fecha[1])]} de {fecha[2]}")
 
 
+# meses = {
+#     1:'Enero', 
+#     2:'Febrero', 
+#     3:'Marzo', 
+#     4:'Abril', 
+#     5:'Mayo', 
+#     6:'Junio', 
+#     7:'Julio', 
+#     8:'Agosto', 
+#     9:'Septiembre', 
+#     10:'Octubre', 
+#     11:'Noviembre',
+#     12:'Diciembre'
+# }
 
+# consulta=input("Ingrese fecha de consulta dd/mm/aaaa: ")
+# fecha=consulta.split("/")
 
-
-
-
-
+# print(f"{fecha[0]} de {meses[int(fecha[1])]} del {fecha[2]}.")
 
 
 
