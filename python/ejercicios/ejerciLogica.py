@@ -1874,16 +1874,93 @@
 #     for datos, informacion in datos_personales.items():
 #         print(f"{datos}{informacion}")
 
+# persona={}
+# continuar=True
+# while continuar:
+#     clave=input("Que Dato quiere introducir: ")
+#     valor=input(f"{clave}: ")
+#     persona[clave]=valor
+#     print(persona)
+#     continuar=input("¿Quiere añadir más información (Si/No)? ").title() == "Si"
+# print("Gracias por su visita.")    
 
-persona={}
+# persona={}
+# continuar=True
+# while continuar:
+#     clave=input("¿Qué dato desea ingresar? ")
+#     valor=input(f"{clave}: ")
+#     persona[clave]=valor
+#     print(persona)
+#     continuar=input("¿Desea gregar un nuevo dato (Si/No)? ").title() == "Si"
+# print("Gracias por su visita")    
+
+
+productos={}
 continuar=True
 while continuar:
-    clave=input("Que Dato quiere introducir: ")
+    print("Ingrese nombre y valor producto.")
+    clave=input("Ingrese nombre producto: ").title()
+    print("Ingrese valor producto.")
     valor=input(f"{clave}: ")
-    persona[clave]=valor
-    print(persona)
-    continuar=input("¿Quiere añadir más información (Si/No)? ").title() == "Si"
+    productos[clave]=valor
+    print(productos)
+    continuar=input("¿Añadir nuevo producto? (Si/No) ").lower() == "si"
 print("Gracias por su visita.")    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
