@@ -1547,27 +1547,89 @@
 # print(monedas.get(moneda.title(), "No hay esa divisa"), moneda.title())
 
 
+# monedas={'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+# moneda=input("Introduce una divisa: ")
+
+# print(monedas.get(moneda.title(), "No se encuentra la divisa:"), moneda.title())
+
+
+# monedas={'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+# moneda=input("Introduce una divisa: ")
+
+# if moneda.title() in monedas:
+#     resultado= monedas[moneda.title()]
+#     print(resultado)
+# else:
+#     print(f"La moneda {moneda.title()} no se encuentra. ")
+
+
+# Usuarios Lista
 
 
 
 
 
+# nombre=input("Ingrese nombre: ")
+# edad=input("Ingrese edad: ")
+# direccion=input("Ingrese dirección: ")
+# telefono=input("Ingrese teléfono: ")
+
+# datos_personales={
+#     "nombre": nombre,
+#     "edad": edad,
+#     "direccion": direccion,
+#     "telefono": telefono
+# }
+
+#     # datos_personales={
+#     #     "nombre": "nombre",
+#     #     "edad": "edad",
+#     #     "direccion": "direccion",
+#     #     "telefono": "telefono"
+#     # }
+   
+#     # datos_personales["nombre"]=datos1
+#     # datos_personales["edad"]=datos2
+#     # datos_personales["direccion"]=datos3
+#     # datos_personales["telefono"]=datos4
+
+# print(f"\n{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su números de teléfono es {datos_personales["telefono"]}")
+
+
+# nombre=input("Ingrese su nombre: ")
+# edad=input("Ingrese su edad: ")
+# direccion=input("Ingrese su dirección: ")
+# telefono=input("Ingrese su teléfono: ")
+
+# datos_personales={
+#     "nombre": nombre,
+#     "edad": edad,
+#     "direccion": direccion,
+#     "telefono": telefono
+# }
+
+# print(f"{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su número de teléfono es {datos_personales["telefono"]}.")
 
 
 
+nombre=input("Ingrese su nombre: ")
+edad=input("Ingrese su edad: ")
+direccion=input("Ingrese su dirección: ")
+telefono=input("Ingrese su teléfono: ")
 
+datos_personales={
+    "nombre": "nombre",
+    "edad": "edad",
+    "direccion": "direccion",
+    "telefono": "telefono"
+}
 
+datos_personales["nombre"]=nombre
+datos_personales["edad"]=edad
+datos_personales["direccion"]=direccion
+datos_personales["telefono"]=telefono
 
-
-
-
-
-
-
-
-
-
-
+print(f"{datos_personales["nombre"]} tiene {datos_personales["edad"]} años, vive en {datos_personales["direccion"]} y su número de teléfono es {datos_personales["telefono"]}.")
 
 
 
