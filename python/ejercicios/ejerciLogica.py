@@ -1650,33 +1650,72 @@
 #     # print(f"{fruta} {kilos}")
 #     print(f"{kilos}")
 
-frutas={
-    "Platano": 1.35,
-    "Manzana": 0.80,
-    "Pera": 0.85,
-    "Naranja": 0.70
+# frutas={
+#     "Platano": 1.35,
+#     "Manzana": 0.80,
+#     "Pera": 0.85,
+#     "Naranja": 0.70
+# }
+
+# fruta=input("Ingrese Fruta: ").title()
+# kilos=float(input("Ingrese kilos: "))
+
+# if fruta in frutas:
+#     print(f"{kilos} Kilos de {fruta} valen {frutas[fruta]*kilos}€.")
+# else:
+#     print(f"Los siento, la fruta {fruta} no está disponible.")
+
+
+# frutas={
+#     "Platano": 1.35,
+#     "Manzana": 0.80,
+#     "Pera": 0.85,
+#     "Naranja": 0.70
+# }
+
+# fruta=input("Ingrese la fruta: ").title()
+# kilos=float(input("Ingrese kilos: "))
+
+# if fruta in frutas:
+#     print(f"{kilos} kilos de {fruta} cuestan {frutas[fruta]*kilos}")
+# else:
+#     print(f"La fruta {fruta} no está disponible.")    
+
+
+# ventas_acciones={
+#     "Lunes": 1.35,
+#     "Martes": 0.80,
+#     "Miercoles": 0.85,
+#     "Jueves": 0.70,
+#     "Viernes": 3.01
+# }
+
+# dia_venta=input("Ingrese el día de la venta: ").title()
+# venta=float(input("Ingrese la cantidad de ventas: "))
+
+# if dia_venta in ventas_acciones:
+#     total_ventas = ventas_acciones[dia_venta]*venta
+#     print(f"{venta} ventas del día {dia_venta} son {total_ventas:.2f}")
+# else:
+#     print(f"No hay ventas para el día {dia_venta}.")    
+
+
+acciones_banco={
+    "Lunes": 1.35,
+    "Martes": 0.80,
+    "Miercoles": 0.85,
+    "Jueves": 0.70,
+    "Viernes": 3.01
 }
 
-fruta=input("Ingrese Fruta: ").title()
-kilos=float(input("Ingrese kilos: "))
+accion_dia=input("Ingrese el día de compra acciones: ").title()
+cantidad=float(input("Ingrese la cantidad de acciones compradas: "))
 
-if fruta in frutas:
-    print(f"{kilos} Kilos de {fruta} valen {frutas[fruta]*kilos}€.")
+if accion_dia in acciones_banco:
+    total_compra = acciones_banco[accion_dia]*cantidad
+    print(f"\n{cantidad} acciones se compraron el día {accion_dia}. \nEl valor total de las acciones compradas son: ${total_compra:.2f}")
 else:
-    print(f"Los siento, la fruta {fruta} no está disponible.")
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print(f"El día {accion_dia} no se encuentra. ")
 
 
 
