@@ -1509,10 +1509,10 @@
 
 
 # moneda={"Euro":"€", "Dollar":"$", "Yen":"¥"}
-monedas={"Euro":"€", "Dollar":"$", "Yen":"¥"}
-pregunta=input("Ingrese la divisa: ").title()
+# monedas={"Euro":"€", "Dollar":"$", "Yen":"¥"}
+# pregunta=input("Ingrese la divisa: ").title()
 
-print(monedas.get(pregunta.title(), "NO"))
+# print(monedas.get(pregunta.title(), "NO"))
 
 # if  pregunta == moneda["Euro"]:
 #     print("€")
@@ -1522,6 +1522,113 @@ print(monedas.get(pregunta.title(), "NO"))
 #     print("¥")
 # else:
 #     print(f"La divisa {pregunta} no está en el diccionario")        
+
+# monedas={'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+# moneda=input("Introduce una divisa: ")
+# if moneda.title() in monedas:
+#     resultado = monedas[moneda.title()]
+#     print(resultado)
+# else:
+#     print(f"La divisa {moneda.title()} no está.")    
+
+
+# monedas={'Euro':'€', 'Dollar':'$', 'Yen':'¥'}
+# moneda=input("Introduce una divisa: ")
+
+# if moneda.title() in monedas:
+#     resultado = monedas[moneda.title()]
+#     print(resultado)
+# else:
+#     print(f"La modena {moneda.title()} no está.")    
+
+
+
+
+# print(monedas.get(moneda.title(), "No hay esa divisa"), moneda.title())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
