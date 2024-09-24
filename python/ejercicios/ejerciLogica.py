@@ -1798,27 +1798,92 @@
 # print(f"{fecha[0]} de {meses[int(fecha[1])]} del {fecha[2]}.")
 
 
+# materias={
+#     "Matemáticas": 6,
+#     "Física": 4,
+#     "Química": 5,
+# }
+
+# for i in materias:
+#     total=0
+#     total += materias[i]
+#     print(f"{i} tiene {materias[i]} créditos" )
+# print(f"Total créditos {total}")    
 
 
+# materias={
+#     "Matemáticas": 6,
+#     "Física": 4,
+#     "Química": 5,
+# }
+# tota_creditos=0
+
+# for materia, creditos in materias.items():
+#     print(f"{materia} tiene {creditos} créditos")
+#     tota_creditos += creditos
+# print(f"Número total de créditos del curso: {tota_creditos}")    
 
 
+# ventas={
+#     "Lunes": 26,
+#     "Martes": 14,
+#     "Miércoles": 35,
+#     "Jueves": 45,
+#     "Viernes": 15
+# }
+# total_ventas=0
+
+# for dia, cantidad in ventas.items():
+#     print(f"{dia} tuvo {cantidad} ventas.")
+#     total_ventas += cantidad
+# print(f"Total ventas de la semana {total_ventas}")    
 
 
+# ventas={
+#     "Lunes": 26,
+#     "Martes": 14,
+#     "Miércoles": 35,
+#     "Jueves": 45,
+#     "Viernes": 15
+# }
+# total_productos=0
+
+# for dia, cantidad_productos in ventas.items():
+#     print(f"El dia {dia} se vendieron {cantidad_productos} productos.")
+#     total_productos+=cantidad_productos
+# print(f"Se vendieron {total_productos} productos en total en la semana.")    
 
 
+# while True:
+    
+#     datos_personales={}
+#     dato_nombre=input("Ingrese nombre: ")
+#     dato_edad=input("Ingrese edad: ")
+#     dato_genero=input("Ingrese genero: ")
+#     dato_telefono=input("Ingrese telefono: ")
+#     dato_email=input("Ingrese email: ")
+
+#     datos_personales[
+#         "nombre":dato_nombre,
+#         "edad":dato_edad,
+#         "genero":dato_genero,
+#         "telefono":dato_telefono,
+#         "email":dato_email
+#         ]
+    
+#     for datos, informacion in datos_personales.items():
+#         print(f"{datos}{informacion}")
 
 
-
-
-
-
-
-
-
-
-
-
-
+persona={}
+continuar=True
+while continuar:
+    clave=input("Que Dato quiere introducir: ")
+    valor=input(f"{clave}: ")
+    persona[clave]=valor
+    print(persona)
+    continuar=input("¿Quiere añadir más información (Si/No)? ").title() == "Si"
+print("Gracias por su visita.")    
 
 
 
