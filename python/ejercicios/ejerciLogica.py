@@ -1895,17 +1895,17 @@
 # print("Gracias por su visita")    
 
 
-productos={}
-continuar=True
-while continuar:
-    print("Ingrese nombre y valor producto.")
-    clave=input("Ingrese nombre producto: ").title()
-    print("Ingrese valor producto.")
-    valor=input(f"{clave}: ")
-    productos[clave]=valor
-    print(productos)
-    continuar=input("¿Añadir nuevo producto? (Si/No) ").lower() == "si"
-print("Gracias por su visita.")    
+# productos={}
+# continuar=True
+# while continuar:
+#     print("Ingrese nombre y valor producto.")
+#     clave=input("Ingrese nombre producto: ").title()
+#     print("Ingrese valor producto.")
+#     valor=input(f"{clave}: ")
+#     productos[clave]=valor
+#     print(productos)
+#     continuar=input("¿Añadir nuevo producto? (Si/No) ").lower() == "si"
+# print("Gracias por su visita.")    
 
 
 
