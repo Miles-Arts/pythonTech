@@ -1907,6 +1907,14 @@
 #     continuar=input("¿Añadir nuevo producto? (Si/No) ").lower() == "si"
 # print("Gracias por su visita.")    
 
+productos={}
+continuar=True
+while continuar:
+    clave=input("Ingrese nombre producto: ")
+    valor=input(f"Ingrese precio de {clave}: ")
+    productos[clave]=valor
+    continuar=input(f"DEsea agregar un nuevo producto (Si/No): ").lower() == "si"
+print("Gracias por su vista")    
 
 
 
