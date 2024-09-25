@@ -1985,20 +1985,47 @@
 # TRADUCTOR
 
 
-traduccion={}
-continuar=True
-while continuar:
-    palabras=input("Ingrese palabras: ").lower().split(", ")
-    # palabras.append(palabras)
-    traduccion=[palabras]
-    print(traduccion)
-    frase=input("Ingrese una frase: ").split(", ")
-if frase in traduccion:
-        print("Hola")
+# traduccion={}
+# continuar=True
+# while continuar:
+#     palabras=input("Ingrese palabras: ").lower().split(", ")
+#     # palabras.append(palabras)
+#     traduccion=[palabras]
+#     print(traduccion)
+#     frase=input("Ingrese una frase: ").split(", ")
+# if frase in traduccion:
+#         print("Hola")
 
+# diccionario={}
+# palabras=input("Introduce la lista de palabras y traducciones \nen formato palabra:traducción separadas por comas: ")
+# for i in palabras.split(','):
+#     clave,valor=i.split(':')
+#     diccionario[clave]=valor
+# frases = input("Introduceuna frase en español: ")
+# for i in frases.split():
+#     if i in diccionario:
+#         print(diccionario[i], end=" ")
+#     else:
+#         print(i, end=" ")        
 
+# continuar=True
+# while continuar:
+#     veces=input("Ingrese materia aprobadas: ")
+#     # materias
+#     for i in range(0,veces,1):
 
-
+        
+diccionario={}
+palabras=input("Introduce la lista de palabras y traducciones \nen formato palabra:traducción separadas por comas: ")
+for i in palabras.split(','):
+    clave,valor=i.split(':')
+    diccionario[clave]=valor
+frases = input("Introduceuna frase en español: ")
+for i in frases.split():
+    if i in diccionario:
+        print(diccionario[i], end=" ")
+    else:
+        print(i, end=" ")   
 
 
 
