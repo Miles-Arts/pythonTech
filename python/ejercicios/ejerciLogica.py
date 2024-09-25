@@ -1982,7 +1982,19 @@
 # print(f"Total: \t${total_ingresos}")    
 
 
+# TRADUCTOR
 
+
+traduccion={}
+continuar=True
+while continuar:
+    palabras=input("Ingrese palabras: ").lower().split(", ")
+    # palabras.append(palabras)
+    traduccion=[palabras]
+    print(traduccion)
+    frase=input("Ingrese una frase: ").split(", ")
+if frase in traduccion:
+        print("Hola")
 
 
 
