@@ -1907,27 +1907,79 @@
 #     continuar=input("¿Añadir nuevo producto? (Si/No) ").lower() == "si"
 # print("Gracias por su visita.")    
 
-productos={}
-continuar=True
-while continuar:
-    clave=input("Ingrese nombre producto: ")
-    valor=input(f"Ingrese precio de {clave}: ")
-    productos[clave]=valor
-    continuar=input(f"DEsea agregar un nuevo producto (Si/No): ").lower() == "si"
-print("Gracias por su vista")    
+# productos={}
+# continuar=True
+# while continuar:
+#     clave=input("Ingrese nombre producto: ").title()
+#     valor=input(f"Ingrese precio de {clave}: ")
+#     productos[clave]=valor
+#     print(productos)
+#     continuar=input(f"DEsea agregar un nuevo producto (Si/No): ").lower() == "si"
+# print("Gracias por su vista")    
+
+# compras={}
+# continuar=True
+
+# while continuar:
+#     clave=input("Ingrese nombre artículo: ").title()
+#     valor=float(input(f"Ingrese valor del {clave}: "))
+#     compras[clave]=valor
+#     continuar=input("continuar (Si/No) ").lower() == "si"
+# precio_total=0
+# print("\n\t---Lista compra---")
+# for producto, precio in compras.items():
+#     print(f"{producto}\t ${precio}")
+#     precio_total += precio
+# print(f"Total \t${precio_total}")    
+    
+
+
+# compras={}
+# continuar=True
+# while continuar:
+#     producto=input("Ingresar producto: ").title()
+#     precio=float(input(f"Ingrese precio de {producto}: "))
+#     compras[producto]=precio
+#     continuar=input("Añadir otro artículo (Si/No): ").lower() == "si"
+# valor_total=0
+# print("---Lista de Compra---")
+# for producto, precio in compras.items():
+#     print(f"{producto}\t{precio}")
+#     valor_total+=precio
+# print(f"Valor Total: {valor_total}")    
+
+
+# ventas_dias={}
+# continuar=True
+# while continuar:
+#     dia_venta=input("Ingrese el día de la venta: ").title()
+#     venta_total=float(input(f"Ingrese ventas totales del día {dia_venta}: "))
+#     ventas_dias[dia_venta]=venta_total
+#     continuar=input("Agregar otro día (Si/No): ").lower() == "si"
+# total_ventas=0
+# print("--Lista de la Compra---")
+# for dia, valor in ventas_dias.items():
+#     print(f"{dia} \t${valor}")
+#     total_ventas += valor
+# print(f"Tota: \t${total_ventas}")         
 
 
 
 
 
-
-
-
-
-
-
-
-
+# ingresos_mes={}
+# continuar=True
+# while continuar:
+#     dia_ingreso=input("Ingrese día del ingreso: ").title()
+#     ganancia=float(input(f"Ingrese cantidad de dinero {dia_ingreso}: $"))
+#     ingresos_mes[dia_ingreso]=ganancia
+#     continuar=input("Ingresar otro estudiante (Si/No): ").lower() == "si"
+# total_ingresos=0
+# print("Lista de Ingresos")
+# for dia, dinero in ingresos_mes.items():
+#     print(f"{dia}\t${dinero}")
+#     total_ingresos+=dinero
+# print(f"Total: \t${total_ingresos}")    
 
 
 
