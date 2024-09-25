@@ -2015,27 +2015,49 @@
 #     for i in range(0,veces,1):
 
         
+# diccionario={}
+# palabras=input("Introduce la lista de palabras y traducciones \nen formato palabra:traducción separadas por comas: ")
+# for i in palabras.split(','):
+#     clave,valor=i.split(':')
+#     diccionario[clave]=valor
+# frases = input("Introduceuna frase en español: ")
+# for i in frases.split():
+#     if i in diccionario:
+#         print(diccionario[i], end=" ")
+#     else:
+#         print(i, end=" ")   
+
+
+
+
+# dicionario={}
+
+# palabras=input("Introduce palabras: (, - :) ")
+# for i in palabras.split(","):
+#     clave, valor = i.split(":")
+#     dicionario[clave]=valor
+
+# frase=input("Ingrese frase: ")    
+# for i in frase.split() :
+#     if i in dicionario:
+#         print(dicionario[i], end=" ")    
+#     else:
+#         print(i, end=" ")
+
+
 diccionario={}
-palabras=input("Introduce la lista de palabras y traducciones \nen formato palabra:traducción separadas por comas: ")
-for i in palabras.split(','):
-    clave,valor=i.split(':')
+
+palabras=input("Introduce palabras: ")
+for i in palabras.split(","):
+    clave, valor = i.split(":")
     diccionario[clave]=valor
-frases = input("Introduceuna frase en español: ")
-for i in frases.split():
+
+frase=input("Escribe una frase: ")
+for i in frase.split():
     if i in diccionario:
         print(diccionario[i], end=" ")
     else:
-        print(i, end=" ")   
-
-
-
-
-
-
-
-
-
-
+        print(i, end=" ")    
 
 
 
