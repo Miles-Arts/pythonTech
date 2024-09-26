@@ -2128,24 +2128,148 @@ facturas={}
 #     print("No tienes suficiente dinero para comprar el articulo.")
 
 
-factura={}
-cobrado=0
-pendiente=0
-mas= ""
-while mas != "T":
-    if mas == "F":
-        clave=input("Introduce numero factura: ")
-        coste=float(input("Introduce el coste factura: "))
-        factura[clave]=coste
-        pendiente += coste
-    if mas == "P":
-        clave=input("Introduce el número de la factura a pagar: ")    
-        coste=factura.pop(clave, 0)
-        cobrado+= coste
-        pendiente -= coste
-    print(f"Recaudado: {cobrado}")    
-    print(f"Pendiente de cobro: {pendiente}")    
-    mas=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+# factura={}
+# cobrado=0
+# pendiente=0
+# continuar= ""
+# while continuar != "T":
+#     if continuar == "F":
+#         clave=input("Introduce numero factura: ")
+#         coste=float(input("Introduce el coste factura: "))
+#         factura[clave]=coste
+#         pendiente += coste
+#     if continuar == "P":
+#         clave=input("Introduce el número de la factura a pagar: ")    
+#         coste=factura.pop(clave, 0)
+#         cobrado+= coste
+#         pendiente -= coste
+#     print(f"Recaudado: {cobrado}")    
+#     print(f"Pendiente de cobro: {pendiente}")    
+#     continuar=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+
+# Terminar Facturar Pagar
+# facturas={}
+# cobrado=0
+# pendiente=0
+# continuar= ""
+# while continuar != "T":
+#     if continuar == "F":
+#         clave=input("Ingrese número factura: ")
+#         valor=input("Ingrese valor factura: ")
+#         facturas[clave]=valor
+#         pendiente += cobrado
+#     if continuar == "P":
+#         clave=input("Ingrese número factura a pagar: ")
+#         valor=facturas.pop(clave,0)
+#         cobrado+=valor
+#         pendiente+=valor
+#     print(f"Recaudado: {cobrado}")    
+#     print(f"Pendiente {pendiente}")
+#     continuar=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+
+# Terminar Facturar Pagar
+# cobrado+=valor
+# pendiente+=valor
+
+# facturas={}
+# cobrado=0
+# pendiente=0
+# continuar= ""
+
+# while continuar != "T":
+#     if continuar == "F":
+#         clave=input("Ingrese numero factura:")
+#         valor=float(input("Ingrese valor factura: "))
+#         facturas[clave]=valor
+#         pendiente+=cobrado
+#     if continuar == "P":
+#         clave=input("Ingrese numero factura: ")
+#         valor=facturas.pop(clave, 0)
+#         cobrado+=valor
+#         pendiente+=valor
+#     print(f"Cobrado: {cobrado}")        
+#     print(f"Pendiente: {pendiente}")
+#     continuar=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+      
+
+
+# facturas={}
+# pagado=0
+# sin_pagar=0
+# continuar=""
+
+
+# continuar=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+    
+
+facturas={}
+pagado=0
+sin_pagar=0
+continuar=""
+while continuar != "T":
+    if continuar == "F":
+        clave=input("Ingrense numero de factura: ")
+        valor=float(input("Ingrene valor de factura: "))
+        facturas[clave]=valor
+        pagado+=sin_pagar
+    if continuar == "P":
+        clave=input("Ingrese numero factura a pagar: ")
+        valor=facturas.pop(clave,0)
+        pagado+=valor
+        sin_pagar-=valor
+    print(f"Pagado {pagado}")    
+    print(f"Sin pagar: {sin_pagar}")
+    continuar=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
