@@ -2305,6 +2305,24 @@ facturas={}
 #     continuar=input("T - F - P : ").upper()
 # print("---Fin---")        
 
+facturas={}
+pagadas=0
+sin_pagar=0
+continuar=""
+while continuar != "T":
+    if continuar == "F":
+        clave=input("Número Factura: ")
+        valor=float(input("Valor Factura: "))
+        facturas[clave]=valor
+        sin_pagar+=valor
+    if continuar == "P":
+        clave=input("# Factura a pagar: ")
+        valor=facturas.pop(clave,0)
+        pagadas+=valor
+        sin_pagar-=valor
+    print(f"Pagadas: {pagadas}")        
+    print(f"Sin Pagar: {sin_pagar}")      
+    continuar=input("T - F - P : ").upper()  
 
 
 
