@@ -2305,26 +2305,127 @@ facturas={}
 #     continuar=input("T - F - P : ").upper()
 # print("---Fin---")        
 
-facturas={}
-pagadas=0
-sin_pagar=0
-continuar=""
-while continuar != "T":
-    if continuar == "F":
-        clave=input("Número Factura: ")
-        valor=float(input("Valor Factura: "))
-        facturas[clave]=valor
-        sin_pagar+=valor
-    if continuar == "P":
-        clave=input("# Factura a pagar: ")
-        valor=facturas.pop(clave,0)
-        pagadas+=valor
-        sin_pagar-=valor
-    print(f"Pagadas: {pagadas}")        
-    print(f"Sin Pagar: {sin_pagar}")      
-    continuar=input("T - F - P : ").upper()  
+# facturas={}
+# pagadas=0
+# sin_pagar=0
+# continuar=""
+# while continuar != "T":
+#     if continuar == "F":
+#         clave=input("Número Factura: ")
+#         valor=float(input("Valor Factura: "))
+#         facturas[clave]=valor
+#         sin_pagar+=valor
+#     if continuar == "P":
+#         clave=input("# Factura a pagar: ")
+#         valor=facturas.pop(clave,0)
+#         pagadas+=valor
+#         sin_pagar-=valor
+#     print(f"Pagadas: {pagadas}")        
+#     print(f"Sin Pagar: {sin_pagar}")      
+#     continuar=input("T - F - P : ").upper()  
+
+# CLIENTES EMPRESA
+# nif=0
+# clientes={}
+
+# continuar=""
+# while continuar != "6":
+
+#     print("1- Ingresar Datos cliente: ")
+#     print("2- Eliminar cliente, ingerese NIF: ")
+#     print("3- Ingrese NIF ver base de datos: ")
+#     print("4- Mostrar todos los clientes: ")
+#     print("5- Clientes Preferentes: ")
+#     print("6- Terminar.")
+#     continuar=input("\tIngrese número: ")
+
+#     if continuar == "1":
+#         nif=input("Ingrese Nif: ") 
+#         nombre=input("Ingrese su Nombre: ")
+#         direccion=input("Ingrese su dirección: ")
+#         telefono=input("Ingrese su teléfono: ")
+#         email=input("Ingrese su email:")
+       
+
+#     elif continuar == "2":
+#          nif=input("Ingrese su nif: ")
+#          clientes.pop(nif)
+
+#     elif continuar == "3":
+#         nif=input("Ingrese su nif: ")
+#         print(f"{clientes["nif"]}")
+
+#     elif continuar == "4":
+#         for clave, valor in clientes.items(): 
+#             print(f"{clave} {valor}")   
+
+#     elif continuar == "5":
+#         print("Clientes preferentes")
+#         clientes["preferentes"] 
+
+clientes={}
+opcion=""
+while opcion != "6":
+    if opcion == "1":
+        dni=input("Introduce DNI del cliente: ")
+        nombre=input("Nombre Cliente: ")
+        direccion=input("Dirección Cliente: ")
+        telefono=input("Teléfono Cliente: ")
+        email=input("Email Cliente: ")
+        vip=input("¿Cliente Preferente? (S/N)").upper()
+        cliente={
+            "nombre": nombre,
+            "dirección": direccion,
+            "telefono": telefono,
+            "email": email,
+            "preferente": vip=="S",
+        }
+        clientes[dni]=cliente
+
+    if opcion == "2":
+        dni=input("Introduce DIN del cliente: ")
+        if dni in clientes:
+            del clientes[dni]
+        else:
+            print(f"No exite u cliente con el DNI {dni}")    
+
+    if opcion == "3":
+        dni=input("Introduce DNI del cliente: ")
+        if dni in clientes:
+            print(f"DNI {dni}")
+            for clave, valor in clientes[dni].items():
+                print(clave.title() + ":", valor)
+        else:
+            print(f"DNI {dni} no encontrado")
+    
+    if opcion == "4":
+        print("Lista de clientes")
+        for clave, valor in clientes.items():
+            print(clave, valor["nombre"])
+
+    if opcion == "5":
+        print("Lista de clientes preferentes")
+        for clave, valor in clientes.items():
+            if valor["preferente"]:
+                print(clave, valor["nombre"])
+
+    print("1- Ingresar Datos cliente: ")
+    print("2- Eliminar cliente, ingerese NIF: ")
+    print("3- Ingrese NIF ver base de datos: ")
+    print("4- Mostrar todos los clientes: ")
+    print("5- Clientes Preferentes: ")
+    print("6- Terminar.")
+    opcion=input("\tIngrese número: ")
+    # opcion=input("")   
+
+    # opcion = input('Menú de opciones\n(1) Añadir cliente\n(2) Eliminar cliente\n(3) Mostrar cliente\n(4) Listar clientes\n(5) Listar clientes preferentes\n(6) Terminar\nElige una opción:')
+                         
 
 
+             
+     
+
+    
 
 
 
