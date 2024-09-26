@@ -2045,31 +2045,92 @@
 #         print(i, end=" ")
 
 
-diccionario={}
+# diccionario={}
 
-palabras=input("Introduce palabras: ")
-for i in palabras.split(","):
-    clave, valor = i.split(":")
-    diccionario[clave]=valor
+# palabras=input("Introduce palabras: ")
+# for i in palabras.split(","):
+#     clave, valor = i.split(":")
+#     diccionario[clave]=valor
 
-frase=input("Escribe una frase: ")
-for i in frase.split():
-    if i in diccionario:
-        print(diccionario[i], end=" ")
-    else:
-        print(i, end=" ")    
-
-
+# frase=input("Escribe una frase: ")
+# for i in frase.split():
+#     if i in diccionario:
+#         print(diccionario[i], end=" ")
+#     else:
+#         print(i, end=" ")    
 
 
 
+# cambiar_producto={}
+
+# producto=input("Ingrese productos a cambiar: ")
+# for i in producto.split(","):
+#     clave, valor = i.split(":")
+#     cambiar_producto[clave]=valor
+
+# lista_productos=input("Ingrese texto: ")
+# for i in lista_productos.split():
+#     if i in cambiar_producto:
+#         print(cambiar_producto[i], end=" ")
+#     else:
+#         print(i, end=" ")    
+
+# diccionario_nero={}
+
+# palabras=input("Ingrese palabras ( , - : ) ")
+
+# for i in palabras.split(","):
+#     clave, valor = i.split(":")
+#     diccionario_nero[clave]=valor
+
+# frase_a_traducir=input("Ingrese la frase: ")
+# for i in frase_a_traducir.split():    
+#     if i in diccionario_nero:
+#         print(diccionario_nero[i], end=" ")
+#     else:
+#         print(i, end=" ")    
 
 
+facturas={}
+
+# continuar=True
+# while continuar:
+#     ingreso_facturas=input("Ingrese numero de factura y valor separado por (,): ")
+#     clave, valor = ingreso_facturas.split(" ")
+#     facturas[clave]=valor
+#     print("Desea añadir una nueva. \n\t1 - Factura \n\t2 - Pagar Factura. \n\t3 - Termina.")
+#     continuar=int(input("Ingrese número: "))
+#     if continuar == 1:
+#         ingreso_facturas=input("Ingrese numero de factura y valor separado por (,)")
+#         clave, valor = ingreso_facturas.split(",")
+#         facturas[clave]=valor
+#     elif continuar == 2:
+#         clave=input("Ingrese numero de factura: ")
+#         print(f"La factura {clave} ha sido eliminada")
+#     elif continuar == 3:
+#         break
+
+# print(f"Cantidad a pagar {valor}")    
+# print(f"Tota { valor}")    
 
 
-
-
-
+factura={}
+cobrado=0
+pendiente=0
+mas= ""
+while mas != "T":
+    if mas == "F":
+        clave=input("Intrudice numero factura: ")
+        coste=float(input("Introdice el coste factura: "))
+        factura[clave]=coste
+    if mas == "P":
+        clave=input("Introduce el número de la factura a pagar: ")    
+        coste=factura.pop(clave, 0)
+        cobrado+= coste
+        pendiente -= coste
+    print(f"Recaudado: {cobrado}")    
+    print(f"Pendiente de cobro: {pendiente}")    
+    mas=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ")
 
 
 
