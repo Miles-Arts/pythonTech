@@ -2114,15 +2114,30 @@ facturas={}
 # print(f"Tota { valor}")    
 
 
+
+
+# #solicitar al usuario ingresar el 
+# # presupuesto actual y el luego el 
+# # costo del articulo a comprar
+# presupuesto, costo = input("Ingrese presupuesto y costo: ").split()
+
+# #Verificar si el cliente puede comprar el articulo
+# if int(presupuesto) >= int(costo):
+#     print("Puedes comprar el articulo.")
+# else:
+#     print("No tienes suficiente dinero para comprar el articulo.")
+
+
 factura={}
 cobrado=0
 pendiente=0
 mas= ""
 while mas != "T":
     if mas == "F":
-        clave=input("Intrudice numero factura: ")
-        coste=float(input("Introdice el coste factura: "))
+        clave=input("Introduce numero factura: ")
+        coste=float(input("Introduce el coste factura: "))
         factura[clave]=coste
+        pendiente += coste
     if mas == "P":
         clave=input("Introduce el número de la factura a pagar: ")    
         coste=factura.pop(clave, 0)
@@ -2130,12 +2145,7 @@ while mas != "T":
         pendiente -= coste
     print(f"Recaudado: {cobrado}")    
     print(f"Pendiente de cobro: {pendiente}")    
-    mas=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ")
-
-
-
-
-
+    mas=input("¿Quieres añadir una nueva Factura (F), Pagarla (P) o Terminar (T)? ").upper()
 
 
 
