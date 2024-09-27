@@ -2363,63 +2363,193 @@ facturas={}
 #         print("Clientes preferentes")
 #         clientes["preferentes"] 
 
-clientes={}
-opcion=""
-while opcion != "6":
-    if opcion == "1":
-        dni=input("Introduce DNI del cliente: ")
-        nombre=input("Nombre Cliente: ")
-        direccion=input("Dirección Cliente: ")
-        telefono=input("Teléfono Cliente: ")
-        email=input("Email Cliente: ")
-        vip=input("¿Cliente Preferente? (S/N)").upper()
-        cliente={
-            "nombre": nombre,
-            "dirección": direccion,
-            "telefono": telefono,
-            "email": email,
-            "preferente": vip=="S",
-        }
-        clientes[dni]=cliente
+# clientes={}
+# opcion=""
+# while opcion != "6":
+#     if opcion == "1":
+#         dni=input("Introduce DNI del cliente: ")
+#         nombre=input("Nombre Cliente: ")
+#         direccion=input("Dirección Cliente: ")
+#         telefono=input("Teléfono Cliente: ")
+#         email=input("Email Cliente: ")
+#         vip=input("¿Cliente Preferente? (S/N)").upper()
+#         cliente={
+#             "nombre": nombre,
+#             "dirección": direccion,
+#             "telefono": telefono,
+#             "email": email,
+#             "preferente": vip=="S",
+#         }
+#         clientes[dni]=cliente
 
-    if opcion == "2":
-        dni=input("Introduce DIN del cliente: ")
-        if dni in clientes:
-            del clientes[dni]
-        else:
-            print(f"No exite u cliente con el DNI {dni}")    
+#     if opcion == "2":
+#         dni=input("Introduce DIN del cliente: ")
+#         if dni in clientes:
+#             del clientes[dni]
+#         else:
+#             print(f"No exite u cliente con el DNI {dni}")    
 
-    if opcion == "3":
-        dni=input("Introduce DNI del cliente: ")
-        if dni in clientes:
-            print(f"DNI {dni}")
-            for clave, valor in clientes[dni].items():
-                print(clave.title() + ":", valor)
-        else:
-            print(f"DNI {dni} no encontrado")
+#     if opcion == "3":
+#         dni=input("Introduce DNI del cliente: ")
+#         if dni in clientes:
+#             print(f"DNI {dni}")
+#             for clave, valor in clientes[dni].items():
+#                 print(clave.title() + ":", valor)
+#         else:
+#             print(f"DNI {dni} no encontrado")
     
-    if opcion == "4":
-        print("Lista de clientes")
-        for clave, valor in clientes.items():
-            print(clave, valor["nombre"])
+#     if opcion == "4":
+#         print("Lista de clientes")
+#         for clave, valor in clientes.items():
+#             print(clave, valor["nombre"])
 
-    if opcion == "5":
-        print("Lista de clientes preferentes")
-        for clave, valor in clientes.items():
-            if valor["preferente"]:
-                print(clave, valor["nombre"])
+#     if opcion == "5":
+#         print("Lista de clientes preferentes")
+#         for clave, valor in clientes.items():
+#             if valor["preferente"]:
+#                 print(clave, valor["nombre"])
 
-    print("1- Ingresar Datos cliente: ")
-    print("2- Eliminar cliente, ingerese NIF: ")
-    print("3- Ingrese NIF ver base de datos: ")
-    print("4- Mostrar todos los clientes: ")
-    print("5- Clientes Preferentes: ")
-    print("6- Terminar.")
-    opcion=input("\tIngrese número: ")
+#     print("1- Ingresar Datos cliente: ")
+#     print("2- Eliminar cliente, ingerese NIF: ")
+#     print("3- Ingrese NIF ver base de datos: ")
+#     print("4- Mostrar todos los clientes: ")
+#     print("5- Clientes Preferentes: ")
+#     print("6- Terminar.")
+#     opcion=input("\tIngrese número: ")
     # opcion=input("")   
 
     # opcion = input('Menú de opciones\n(1) Añadir cliente\n(2) Eliminar cliente\n(3) Mostrar cliente\n(4) Listar clientes\n(5) Listar clientes preferentes\n(6) Terminar\nElige una opción:')
                          
+# CLIENTES
+
+# usuarios={}
+# menu=""
+# while menu!=6:
+#         #MENU PROGRAMA
+#         print("1- Ingresar Datos cliente: ")
+#         print("2- Eliminar cliente, ingerese NIF: ")
+#         print("3- Ingrese NIF ver base de datos: ")
+#         print("4- Mostrar todos los clientes: ")
+#         print("5- Clientes Preferentes: ")
+#         print("6- Terminar.")
+#         menu=int(input("\tIngrese número: "))
+
+#         if  menu == 1:
+#             #INGRESAR DATOS USUARIO
+#             cedula=input("Escribe tu cédula: ")
+#             nombre=input("Escribe tu nombre: ")
+#             direccion=input("Escribe tu dirección: ")
+#             telefono=input("Escribe tu teléfono: ")
+#             email=input("Escribe tu email: ")
+#             vip=input("¿Cliente Preferente? (S/N) ").upper()
+#             usuario={
+#                 "nombre": nombre,
+#                 "direccion": direccion,
+#                 "telefono": telefono,
+#                 "email": email,
+#                 "preferente": vip=="S"
+#             }
+#             usuarios[cedula]=usuario
+
+#         if menu == 2:
+#             #ELIMINAR USUARIO
+#             cedula=input("Introduce Cédula cliente: ")
+#             if cedula in usuarios:
+#                 del usuarios[cedula]
+#                 print("Usuario eliminado") 
+#             else:
+#                 print(f"No hay usuario con esa cédula {cedula}")       
+
+
+#         if menu == 3:
+#             #BASE DATOS USUARIOS
+#             cedula=input("Introduce cédula usuario: ")
+#             if cedula in usuarios:
+#                 print(f"Cédula: {cedula}")
+#                 for clave, valor in usuarios[cedula].items():
+#                     print(clave.title() + ":", valor)
+#             else: 
+#                 print(f"Cédula {cedula} no encontrada.")
+
+#         if menu == 4:
+#             #MOSTRAR TODOS LOS USUARIO
+#             print("--Lista de clientes--")    
+#             for clave, valor in usuarios.items():
+#                 # if valor["preferente"]:
+#                     print(clave, valor["nombre"])
+
+#         if menu == 5:
+#             #LISTA CLIENTES PREFERENTES
+#             print("Lista de clientes preferentes")
+#             for clave, valor in usuarios.items():
+#                 if valor["preferente"]:
+#                     print(f"\tUsuario: {clave, valor["nombre"]}") 
+
+
+# productos
+
+productos={}
+menu=""
+while menu !=6:
+    #MENU PROGRAMA
+        print("1- Ingresar Datos producto: ")
+        print("2- Eliminar producto, ingrese ID: ")
+        print("3- Ingrese ID ver base de datos: ")
+        print("4- Mostrar todos los productos: ")
+        print("5- Productos Preferentes: ")
+        print("6- Terminar.")
+        menu=int(input("\tIngrese número: "))
+
+        if menu == 1:
+            #INGRESAR DATOS Productos
+            id=input("ID del producto: ")
+            nombre_producto=input("Nombre producto: ")
+            marca_producto=input("Ingrse marca: ")
+            tamanio_producto=input("Ingrese tamaño: ")
+            email_soporte=input("Ingrese email soporte al clente: ")
+            vip=input("Producto de lujo (S/N)").upper()
+            producto={
+                "nombre_producto": nombre_producto,
+                "marca_producto": marca_producto,
+                "tamanio_producto": tamanio_producto,
+                "email_soporte": email_soporte,
+                "producto_lujo": vip=="S"
+            } 
+            productos[id]=producto
+
+            if menu == 2:
+                #ELIMINAR USUARIO
+                id=input("Introduce ID producto: ")
+                if id in productos:
+                    del productos[id]
+                    print(f"Producto con el ID {id} eliminado.")
+                else:
+                    print(f"Producto con el ID {id} no encontrado.")
+
+            if menu == 3:
+                #Mostrar DATOS Productos
+                id=input("Introduce ID producto: ")
+                if id in productos:
+                    print(f"ID {id}")
+                    for clave, valor in productos[id].items():
+                        print(f"ID {clave.title()} : {valor}")
+                else:
+                    print(f"ID {id} no enontrado.")
+
+            if menu == 4:
+                #MOSTRAR TODOS LOS Produtos
+                print("--Lista de productos--")
+                for clave, valor in productos.items():
+                        print(f"{clave}{valor["nombre_producto"]}") 
+
+            if menu == 5:
+                 #Productos LUJO
+                 print("Lista de productos de Lujo.")
+                 for clave, valor in productos.items():
+                      if valor["producto_lujo"]:
+                           print(f"\tProducto: {clave}{valor["nombre_producto"]}")
+                             
+
 
 
              
