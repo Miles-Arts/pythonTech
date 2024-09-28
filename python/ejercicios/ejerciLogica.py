@@ -2488,69 +2488,137 @@ facturas={}
 
 # productos
 
-productos={}
-menu=""
-while menu !=6:
-    #MENU PROGRAMA
-        print("1- Ingresar Datos producto: ")
-        print("2- Eliminar producto, ingrese ID: ")
-        print("3- Ingrese ID ver base de datos: ")
-        print("4- Mostrar todos los productos: ")
-        print("5- Productos Preferentes: ")
-        print("6- Terminar.")
-        menu=int(input("\tIngrese número: "))
+# productos={}
+# menu=""
+# while menu !=6:
+#     #MENU PROGRAMA
+#         print("1- Ingresar Datos producto: ")
+#         print("2- Eliminar producto, ingrese ID: ")
+#         print("3- Ingrese ID ver base de datos: ")
+#         print("4- Mostrar todos los productos: ")
+#         print("5- Productos Preferentes: ")
+#         print("6- Terminar.")
+#         menu=int(input("\tIngrese número: "))
 
-        if menu == 1:
-            #INGRESAR DATOS Productos
-            id=input("ID del producto: ")
-            nombre_producto=input("Nombre producto: ")
-            marca_producto=input("Ingrse marca: ")
-            tamanio_producto=input("Ingrese tamaño: ")
-            email_soporte=input("Ingrese email soporte al clente: ")
-            vip=input("Producto de lujo (S/N)").upper()
-            producto={
-                "nombre_producto": nombre_producto,
-                "marca_producto": marca_producto,
-                "tamanio_producto": tamanio_producto,
-                "email_soporte": email_soporte,
-                "producto_lujo": vip=="S"
-            } 
-            productos[id]=producto
+#         if menu == 1:
+#             #INGRESAR DATOS Productos
+#             id=input("ID del producto: ")
+#             nombre_producto=input("Nombre producto: ")
+#             marca_producto=input("Ingrse marca: ")
+#             tamanio_producto=input("Ingrese tamaño: ")
+#             email_soporte=input("Ingrese email soporte al clente: ")
+#             vip=input("Producto de lujo (S/N)").upper()
+#             producto={
+#                 "nombre_producto": nombre_producto,
+#                 "marca_producto": marca_producto,
+#                 "tamanio_producto": tamanio_producto,
+#                 "email_soporte": email_soporte,
+#                 "producto_lujo": vip=="S"
+#             } 
+#             productos[id]=producto
 
-            if menu == 2:
-                #ELIMINAR USUARIO
-                id=input("Introduce ID producto: ")
-                if id in productos:
-                    del productos[id]
-                    print(f"Producto con el ID {id} eliminado.")
-                else:
-                    print(f"Producto con el ID {id} no encontrado.")
+#             if menu == 2:
+#                 #ELIMINAR USUARIO
+#                 id=input("Introduce ID producto: ")
+#                 if id in productos:
+#                     del productos[id]
+#                     print(f"Producto con el ID {id} eliminado.")
+#                 else:
+#                     print(f"Producto con el ID {id} no encontrado.")
 
-            if menu == 3:
-                #Mostrar DATOS Productos
-                id=input("Introduce ID producto: ")
-                if id in productos:
-                    print(f"ID {id}")
-                    for clave, valor in productos[id].items():
-                        print(f"ID {clave.title()} : {valor}")
-                else:
-                    print(f"ID {id} no enontrado.")
+#             if menu == 3:
+#                 #Mostrar DATOS Productos
+#                 id=input("Introduce ID producto: ")
+#                 if id in productos:
+#                     print(f"ID {id}")
+#                     for clave, valor in productos[id].items():
+#                         print(f"ID {clave.title()} : {valor}")
+#                 else:
+#                     print(f"ID {id} no enontrado.")
 
-            if menu == 4:
-                #MOSTRAR TODOS LOS Produtos
-                print("--Lista de productos--")
-                for clave, valor in productos.items():
-                        print(f"{clave}{valor["nombre_producto"]}") 
+#             if menu == 4:
+#                 #MOSTRAR TODOS LOS Produtos
+#                 print("--Lista de productos--")
+#                 for clave, valor in productos.items():
+#                         print(f"{clave}{valor["nombre_producto"]}") 
 
-            if menu == 5:
-                 #Productos LUJO
-                 print("Lista de productos de Lujo.")
-                 for clave, valor in productos.items():
-                      if valor["producto_lujo"]:
-                           print(f"\tProducto: {clave}{valor["nombre_producto"]}")
+#             if menu == 5:
+#                  #Productos LUJO
+#                  print("Lista de productos de Lujo.")
+#                  for clave, valor in productos.items():
+#                       if valor["producto_lujo"]:
+#                            print(f"\tProducto: {clave}{valor["nombre_producto"]}")
                              
 
 # estudiantes
+
+estudiantes={}
+menu=""
+while menu !=6:
+    #MENU Estudiantes
+        print("1- Ingresar Datos Estudiantes: ")
+        print("2- Eliminar Estudiantes, ingrese ID: ")
+        print("3- Ingrese ID ver base de datos: ")
+        print("4- Mostrar todos los Estudiantes: ")
+        print("5- Estudiantes Preferentes: ")
+        print("6- Terminar.")
+        menu=int(input("\tIngrese número: "))
+
+        if menu ==1:
+             
+             #Ingresar Datos Estudiante
+             id=input("Ingrese el Id del estudiante: ")
+             nombre=input("Ingrese el nombre del estudiante: ").title()
+             direccion=input("Ingrese el dirección del estudiante: ").title()
+             telefono=input("Ingrese el telefono del estudiante: ")
+             email=input("Ingrese el email del estudiante: ")
+             vip=input("¿Estudiante Preferente? (S/N) ").upper()
+
+             estudiante={
+                  "nombre": nombre,
+                  "direccion": direccion,
+                  "telefono": telefono,
+                  "email": email,
+                  "preferente": vip=="S"
+             }
+             estudiantes[id]=estudiante
+
+        if menu == 2:
+             #Eliminar Estudiante
+             id=input("Ingrese ID de estudiante: ")
+             if id in estudiantes:
+                  del estudiantes[id]
+                  print(f"Estudiante con el ID {id} borrado.")
+             else:
+                  print(f"Estudiante con ID {id} no encontrado.") 
+
+        if menu == 3:
+              #Mostrar datos ESTUDIANTES
+              id=input("Ingrese id del estudiante a consultar: ")
+              if id in estudiantes:
+                    print(f"ID estudiante: {id}")
+                    for clave, valor in estudiantes[id].items():
+                          print(f"{clave.title()} Datos: {valor}")
+              else:
+                    print(f"Estudiante conId {id} no encontrado: ")
+
+        if menu == 4:
+              #Mostrar todo los estudiantes
+              print("--Lista de estudiantes--")
+              for clave, valor in estudiantes.items():
+                    print(f"ID {clave} Nombre: {valor["nombre"]}")
+
+        if menu == 5:
+              #Estudaiantes preferemtes
+              print("Estudiantes en Maestria")
+              for clave, valor in estudiantes.items():
+                    if valor["preferente"]:
+                        print(f"\tEstudiante: {valor["nombre"]} preferente {valor["preferente"]}")            
+
+
+             
+                  
+
 
 
 
