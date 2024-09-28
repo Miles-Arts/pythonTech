@@ -2552,73 +2552,152 @@ facturas={}
 
 # estudiantes
 
-estudiantes={}
+# estudiantes={}
+# menu=""
+# while menu !=6:
+#     #MENU Estudiantes
+#         print("1- Ingresar Datos Estudiantes: ")
+#         print("2- Eliminar Estudiantes, ingrese ID: ")
+#         print("3- Ingrese ID ver base de datos: ")
+#         print("4- Mostrar todos los Estudiantes: ")
+#         print("5- Estudiantes Preferentes: ")
+#         print("6- Terminar.")
+#         menu=int(input("\tIngrese número: "))
+
+#         if menu ==1:
+             
+#              #Ingresar Datos Estudiante
+#              id=input("Ingrese el Id del estudiante: ")
+#              nombre=input("Ingrese el nombre del estudiante: ").title()
+#              direccion=input("Ingrese el dirección del estudiante: ").title()
+#              telefono=input("Ingrese el telefono del estudiante: ")
+#              email=input("Ingrese el email del estudiante: ")
+#              vip=input("¿Estudiante Preferente? (S/N) ").upper()
+
+#              estudiante={
+#                   "nombre": nombre,
+#                   "direccion": direccion,
+#                   "telefono": telefono,
+#                   "email": email,
+#                   "preferente": vip=="S"
+#              }
+#              estudiantes[id]=estudiante
+
+#         if menu == 2:
+#              #Eliminar Estudiante
+#              id=input("Ingrese ID de estudiante: ")
+#              if id in estudiantes:
+#                   del estudiantes[id]
+#                   print(f"Estudiante con el ID {id} borrado.")
+#              else:
+#                   print(f"Estudiante con ID {id} no encontrado.") 
+
+#         if menu == 3:
+#               #Mostrar datos ESTUDIANTES
+#               id=input("Ingrese id del estudiante a consultar: ")
+#               if id in estudiantes:
+#                     print(f"ID estudiante: {id}")
+#                     for clave, valor in estudiantes[id].items():
+#                           print(f"{clave.title()} Datos: {valor}")
+#               else:
+#                     print(f"Estudiante conId {id} no encontrado: ")
+
+#         if menu == 4:
+#               #Mostrar todo los estudiantes
+#               print("--Lista de estudiantes--")
+#               for clave, valor in estudiantes.items():
+#                     print(f"ID {clave} Nombre: {valor["nombre"]}")
+
+#         if menu == 5:
+#               #Estudaiantes preferemtes
+#               print("Estudiantes en Maestria")
+#               for clave, valor in estudiantes.items():
+#                     if valor["preferente"]:
+#                         print(f"\tEstudiante: {valor["nombre"]} preferente {valor["preferente"]}")            
+
+# Preguntar los datos del cliente, 
+# crear un diccionario con los datos y añadirlo a la base de datos.
+
+# Preguntar por el NIF del cliente y eliminar sus 
+# datos de la base de datos.
+
+# Preguntar por el NIF del cliente y 
+# mostrar sus datos.
+
+# Mostrar lista de todos los clientes 
+# de la base datos con su NIF y nombre.
+
+# Mostrar la lista de clientes preferentes 
+# de la base de datos con su NIF y nombre.
+
+# Terminar el programa.
+             
+                  
+# MASCOTAS
+
+mascotas={}
 menu=""
 while menu !=6:
-    #MENU Estudiantes
-        print("1- Ingresar Datos Estudiantes: ")
-        print("2- Eliminar Estudiantes, ingrese ID: ")
+         #MENU Estudiantes
+        print("1- Ingresar Datos mascota: ")
+        print("2- Eliminar mascota, ingrese ID: ")
         print("3- Ingrese ID ver base de datos: ")
-        print("4- Mostrar todos los Estudiantes: ")
-        print("5- Estudiantes Preferentes: ")
+        print("4- Mostrar todos las mascota: ")
+        print("5- Mascota Preferente: ")
         print("6- Terminar.")
         menu=int(input("\tIngrese número: "))
 
-        if menu ==1:
-             
-             #Ingresar Datos Estudiante
-             id=input("Ingrese el Id del estudiante: ")
-             nombre=input("Ingrese el nombre del estudiante: ").title()
-             direccion=input("Ingrese el dirección del estudiante: ").title()
-             telefono=input("Ingrese el telefono del estudiante: ")
-             email=input("Ingrese el email del estudiante: ")
-             vip=input("¿Estudiante Preferente? (S/N) ").upper()
+        if menu == 1:
+           #CREAR MASCOTA
+           id=input("Ingrese ID mascota: ")     
+           nombre_mascota=input("Ingrese nombre mascota: ")     
+           edad_mascota=input("Ingrese edad mascota: ")     
+           raza_mascota=input("Ingrese raza mascota: ")     
+           peso_mascota=input("Ingrese peso mascota: ")     
+           pedrigri=input("Pedrigrí mascota (S/N): ").upper()
 
-             estudiante={
-                  "nombre": nombre,
-                  "direccion": direccion,
-                  "telefono": telefono,
-                  "email": email,
-                  "preferente": vip=="S"
-             }
-             estudiantes[id]=estudiante
+           mascota={
+                 "nombre_mascota": nombre_mascota,
+                 "edad_mascota": edad_mascota,
+                 "raza_mascota": raza_mascota,
+                 "peso_mascota": peso_mascota,
+                 "pedrigri": pedrigri=="S"
+           }     
+           mascotas[id]=mascota
 
         if menu == 2:
-             #Eliminar Estudiante
-             id=input("Ingrese ID de estudiante: ")
-             if id in estudiantes:
-                  del estudiantes[id]
-                  print(f"Estudiante con el ID {id} borrado.")
-             else:
-                  print(f"Estudiante con ID {id} no encontrado.") 
+              #ELIMINAR MASCOTA
+            id=input("Ingrese ID de mascota para borrar: ")
+            if id in mascotas:
+                del mascotas[id]
+                print(f"Mascota con ID {id} borrada.")
+            else:
+                print(f"Mascota con ID {id} no encontrada. ") 
 
-        if menu == 3:
-              #Mostrar datos ESTUDIANTES
-              id=input("Ingrese id del estudiante a consultar: ")
-              if id in estudiantes:
-                    print(f"ID estudiante: {id}")
-                    for clave, valor in estudiantes[id].items():
-                          print(f"{clave.title()} Datos: {valor}")
-              else:
-                    print(f"Estudiante conId {id} no encontrado: ")
+        if menu == 3:   
+             #MOSTRAR DATOS CLIENTE: 
+            id=input("Ingre Id de mascota: ")
+            if id in mascotas:
+                print(f"ID mascota: {id}")
+                for clave, valor in mascotas[id].items():
+                    print(f"Mascota {clave.title()} Datos: {valor}")
+            else:
+                print(f"Mascota con ID {id} no encontrada: ")
 
         if menu == 4:
-              #Mostrar todo los estudiantes
-              print("--Lista de estudiantes--")
-              for clave, valor in estudiantes.items():
-                    print(f"ID {clave} Nombre: {valor["nombre"]}")
-
-        if menu == 5:
-              #Estudaiantes preferemtes
-              print("Estudiantes en Maestria")
-              for clave, valor in estudiantes.items():
-                    if valor["preferente"]:
-                        print(f"\tEstudiante: {valor["nombre"]} preferente {valor["preferente"]}")            
-
-
+             #MOSTAR BASEDE DATOS MASCOTAS
+             print("--Lista de Mascotas--")
+             for clave, valor in mascotas.items():
+                  print(f"ID {clave} Nombre: {valor["nombre_mascota"]}")         
              
-                  
-
+        if menu == 5:
+             # MASCOTAS PREFERENTES
+             print("Mascotas con Pedigrí")
+             for clave, valor in mascotas.items():
+                  print(f"ID: {id} Nombre: {valor["nombre_mascota"]}. Pedrigí: {valor["pedrigri"]}")
+               
+                          
+                
 
 
 
