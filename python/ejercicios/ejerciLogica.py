@@ -2635,73 +2635,158 @@ facturas={}
                   
 # MASCOTAS
 
-mascotas={}
-menu=""
-while menu !=6:
-         #MENU Estudiantes
-        print("1- Ingresar Datos mascota: ")
-        print("2- Eliminar mascota, ingrese ID: ")
-        print("3- Ingrese ID ver base de datos: ")
-        print("4- Mostrar todos las mascota: ")
-        print("5- Mascota Preferente: ")
-        print("6- Terminar.")
-        menu=int(input("\tIngrese número: "))
+# mascotas={}
+# menu=""
+# while menu !=6:
+#          #MENU Estudiantes
+#         print("1- Ingresar Datos mascota: ")
+#         print("2- Eliminar mascota, ingrese ID: ")
+#         print("3- Ingrese ID ver base de datos: ")
+#         print("4- Mostrar todos las mascota: ")
+#         print("5- Mascota Preferente: ")
+#         print("6- Terminar.")
+#         menu=int(input("\tIngrese número: "))
 
-        if menu == 1:
-           #CREAR MASCOTA
-           id=input("Ingrese ID mascota: ")     
-           nombre_mascota=input("Ingrese nombre mascota: ")     
-           edad_mascota=input("Ingrese edad mascota: ")     
-           raza_mascota=input("Ingrese raza mascota: ")     
-           peso_mascota=input("Ingrese peso mascota: ")     
-           pedrigri=input("Pedrigrí mascota (S/N): ").upper()
+#         if menu == 1:
+#            #CREAR MASCOTA
+#            id=input("Ingrese ID mascota: ")     
+#            nombre_mascota=input("Ingrese nombre mascota: ")     
+#            edad_mascota=input("Ingrese edad mascota: ")     
+#            raza_mascota=input("Ingrese raza mascota: ")     
+#            peso_mascota=input("Ingrese peso mascota: ")     
+#            pedrigri=input("Pedrigrí mascota (S/N): ").upper()
 
-           mascota={
-                 "nombre_mascota": nombre_mascota,
-                 "edad_mascota": edad_mascota,
-                 "raza_mascota": raza_mascota,
-                 "peso_mascota": peso_mascota,
-                 "pedrigri": pedrigri=="S"
-           }     
-           mascotas[id]=mascota
+#            mascota={
+#                  "nombre_mascota": nombre_mascota,
+#                  "edad_mascota": edad_mascota,
+#                  "raza_mascota": raza_mascota,
+#                  "peso_mascota": peso_mascota,
+#                  "pedrigri": pedrigri=="S"
+#            }     
+#            mascotas[id]=mascota
 
-        if menu == 2:
-              #ELIMINAR MASCOTA
-            id=input("Ingrese ID de mascota para borrar: ")
-            if id in mascotas:
-                del mascotas[id]
-                print(f"Mascota con ID {id} borrada.")
-            else:
-                print(f"Mascota con ID {id} no encontrada. ") 
+#         if menu == 2:
+#               #ELIMINAR MASCOTA
+#             id=input("Ingrese ID de mascota para borrar: ")
+#             if id in mascotas:
+#                 del mascotas[id]
+#                 print(f"Mascota con ID {id} borrada.")
+#             else:
+#                 print(f"Mascota con ID {id} no encontrada. ") 
 
-        if menu == 3:   
-             #MOSTRAR DATOS CLIENTE: 
-            id=input("Ingre Id de mascota: ")
-            if id in mascotas:
-                print(f"ID mascota: {id}")
-                for clave, valor in mascotas[id].items():
-                    print(f"Mascota {clave.title()} Datos: {valor}")
-            else:
-                print(f"Mascota con ID {id} no encontrada: ")
+#         if menu == 3:   
+#              #MOSTRAR DATOS CLIENTE: 
+#             id=input("Ingre Id de mascota: ")
+#             if id in mascotas:
+#                 print(f"ID mascota: {id}")
+#                 for clave, valor in mascotas[id].items():
+#                     print(f"Mascota {clave.title()} Datos: {valor}")
+#             else:
+#                 print(f"Mascota con ID {id} no encontrada: ")
 
-        if menu == 4:
-             #MOSTAR BASEDE DATOS MASCOTAS
-             print("--Lista de Mascotas--")
-             for clave, valor in mascotas.items():
-                  print(f"ID {clave} Nombre: {valor["nombre_mascota"]}")         
+#         if menu == 4:
+#              #MOSTAR BASEDE DATOS MASCOTAS
+#              print("--Lista de Mascotas--")
+#              for clave, valor in mascotas.items():
+#                   print(f"ID {clave} Nombre: {valor["nombre_mascota"]}")         
              
-        if menu == 5:
-             # MASCOTAS PREFERENTES
-             print("Mascotas con Pedigrí")
-             for clave, valor in mascotas.items():
-                  print(f"ID: {id} Nombre: {valor["nombre_mascota"]}. Pedrigí: {valor["pedrigri"]}")
+#         if menu == 5:
+#              # MASCOTAS PREFERENTES
+#              print("Mascotas con Pedigrí")
+#              for clave, valor in mascotas.items():
+#                   print(f"ID: {id} Nombre: {valor["nombre_mascota"]}. Pedrigí: {valor["pedrigri"]}")
                
+                          
+#  0  Menú general                
+
+#  1  Ingresar Clientes
+     
+#  2  ELIMINAR Cliente
+   
+#  3  Motrar Cliente
+  
+#  4  MOSTRAR TODOS los CLIENTEs: 
+ 
+#  5  Cliente PREFERENTES
+     
+#  6  Terminar
+           
                           
                 
 
 
+clientes_banco={}
+menu=""
 
-             
+while menu != 6:
+    #Menu Clientes
+    print("---Menu Principal---")
+    print("Ingresar datos cliente 1.")
+    print("Borrar Cliente 2.")
+    print("Buscar Cliente 3.")
+    print("Mostrar todos los clientes 4.")
+    print("Clientes Preferentes 5.")
+    print("Terminar 6.")
+    menu=int(input("Ingrese numero: "))
+
+    if menu == 1:
+        #Crear Cliente
+        cuenta=input("Ingrese número cuenta cliente: ")
+        nombre_cliente=input("Ingrese nombre cliente: ").title()
+        documento_cliente=input("Ingrese documento cliente: ")
+        direccion_cliente=input("Ingrese dirección cliente: ")
+        telefono_cliente=input("Ingrese teléfono cliente: ")
+        email_cliente=input("Ingrese email cliente: ")
+        preferente_cliente=input("Es cliente preferente (S/N): ").upper()
+
+        cliente={
+            "nombre": nombre_cliente,
+            "documento": documento_cliente,
+            "direccion": direccion_cliente,
+            "telefono": telefono_cliente,
+            "email": email_cliente,
+            "preferente": preferente_cliente=="S"
+        }
+
+        clientes_banco[cuenta]=cliente
+
+    if menu == 2:
+        #Borrar Cliente
+        print("---Borrar cliente---")
+        cuenta=input("Ingrese cuenta del cliente: ")
+        if cuenta in clientes_banco:
+            del clientes_banco[cuenta]
+            print(f"Cliente con la cuenta {cuenta} ha sido borrado.")
+        else:
+            print(f"Cliente con cuenta {cuenta} no encontrado.")        
+
+    if menu == 3:
+        #Mostrar cliente ID
+        print("--Mostrar Clientes--")
+        cuenta=input("Ingrese cuenta de cliente: ")
+        if cuenta in clientes_banco:
+            print(f"")
+            for clave, valor in clientes_banco[cuenta].items():
+                print(f"{clave.title()}: {valor}")
+        else:
+            print(f"Cliente con cuenta {cuenta} no encontrado.")  
+
+    if menu == 4:
+        #Mostrar Base de Datos
+        print("---Base de Datos---")
+        for clave, valor in clientes_banco.items():
+            print(f"Cédula {clave} Nombre: {valor["nombre"]}")
+        # else:
+        #     print("Base de datos vacia.")
+    if menu == 5:
+        print("---Clientes Preferentes---")
+        cuenta=input("Ingrese cuenta del cliente: ")
+        if cuenta in clientes_banco:
+            for clave, valor in clientes_banco.items():
+                print("Sí es Cliente Preferente")
+                print(f"Cuenta: {cuenta}. Nombre {valor["nombre"]}. Cliente Preferente: {valor["preferente"]}.")   
+        else:
+            print(f"Cliente con cuenta {cuenta} no es preferente.")
      
 
     
