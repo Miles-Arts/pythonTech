@@ -2811,83 +2811,128 @@ facturas={}
 
 
 
-vehiculos={}
-menu=""
-while menu != 6:
-    # Menu General
-    print("---Menu Parqueadero---")
-    print("1 Ingresar vehículo.")
-    print("2 Eliminar Vehículo.")
-    print("3 Mostrar Vehículo")
-    print("4 Mostrar todos los vehículos.")
-    print("5 Servicio VIP.")
-    print("6 Terminar.")
-    menu=int(input("Ingrese Número: "))
+# vehiculos={}
+# menu=""
+# while menu != 6:
+#     # Menu General
+#     print("---Menu Parqueadero---")
+#     print("1 Ingresar vehículo.")
+#     print("2 Eliminar Vehículo.")
+#     print("3 Mostrar Vehículo")
+#     print("4 Mostrar todos los vehículos.")
+#     print("5 Servicio VIP.")
+#     print("6 Terminar.")
+#     menu=int(input("Ingrese Número: "))
 
-    if menu == 1:
-        # Ingresar Vehículo
-        placa=input("Ingrese Placa Vehículo: ").upper()
-        hora_ingreso=input("Hora de ingreso Vehículo: ")
-        marca=input("Ingrese Marca Vehículo: ").title()
-        tipo_vehiculo=input("Ingrese Tipo Vehículo: ").title()
-        color=input("Ingrese color Vehículo: ").title()
-        vip=input("Vehículo VIP (S/N) ").upper()
+#     if menu == 1:
+#         # Ingresar Vehículo
+#         placa=input("Ingrese Placa Vehículo: ").upper()
+#         hora_ingreso=input("Hora de ingreso Vehículo: ")
+#         marca=input("Ingrese Marca Vehículo: ").title()
+#         tipo_vehiculo=input("Ingrese Tipo Vehículo: ").title()
+#         color=input("Ingrese color Vehículo: ").title()
+#         vip=input("Vehículo VIP (S/N) ").upper()
 
-        vehiculo={
-            "placa": placa,
-            "hora_ingreso": hora_ingreso,
-            "marca": marca,
-            "tipo_vehiculo":tipo_vehiculo,
-            "color": color,
-            "vip": vip=="S"
-        }
+#         vehiculo={
+#             "placa": placa,
+#             "hora_ingreso": hora_ingreso,
+#             "marca": marca,
+#             "tipo_vehiculo":tipo_vehiculo,
+#             "color": color,
+#             "vip": vip=="S"
+#         }
 
-        vehiculos[placa]=vehiculo
+#         vehiculos[placa]=vehiculo
 
-    if menu == 2:
-        # Eliminar Vehículo
-        placa=input("Ingrese placa de vehículo a borrar: ").upper()
-        if placa in vehiculos:
-            del vehiculos[placa]
-            print(f"Vehículo con placa {placa} borrado.")
-        else:
-            print(f"Vehículo con placa {placa} no encontrado.")    
-    if menu == 3:
-        #Motrar vehículo
-        placa=input("Ingrese placa de vehículo: ").upper()
-        if placa in vehiculos:
-            for clave, valor in vehiculos[placa].items():  
-                print(f"{clave.title()}: {valor}")
-        else: 
-            print(f"Vehículo con placa {placa} no encontrado.")
-
-
-    if menu == 4:
-        #Mostrar todos los vehículos
-        print("---Lista de Vehíulos---")
-        for clave,valor in vehiculos.items():
-            print(f"Placa {clave}. Marca Vehículo: {valor["marca"]}.")
-
-    if menu == 5:
-        #Vehículo VIP
-        print("---Vehículos VIP---")
-        placa=input("Ingrese Placa de Vehículo: ").upper()
-        if placa in vehiculos:
-            for clave, valor in vehiculos.items():
-                print("---Vehículo VIP---")
-                print(f"Vehículo con placa {placa} VIP: {valor["vip"]}")
-        else:
-            print(f"Vehículo con placa {placa} no es VIP")
+#     if menu == 2:
+#         # Eliminar Vehículo
+#         placa=input("Ingrese placa de vehículo a borrar: ").upper()
+#         if placa in vehiculos:
+#             del vehiculos[placa]
+#             print(f"Vehículo con placa {placa} borrado.")
+#         else:
+#             print(f"Vehículo con placa {placa} no encontrado.")    
+#     if menu == 3:
+#         #Motrar vehículo
+#         placa=input("Ingrese placa de vehículo: ").upper()
+#         if placa in vehiculos:
+#             for clave, valor in vehiculos[placa].items():  
+#                 print(f"{clave.title()}: {valor}")
+#         else: 
+#             print(f"Vehículo con placa {placa} no encontrado.")
 
 
+#     if menu == 4:
+#         #Mostrar todos los vehículos
+#         print("---Lista de Vehíulos---")
+#         for clave,valor in vehiculos.items():
+#             print(f"Placa {clave}. Marca Vehículo: {valor["marca"]}.")
+
+#     if menu == 5:
+#         #Vehículo VIP
+#         print("---Vehículos VIP---")
+#         placa=input("Ingrese Placa de Vehículo: ").upper()
+#         if placa in vehiculos:
+#             for clave, valor in vehiculos.items():
+#                 print("---Vehículo VIP---")
+#                 print(f"Vehículo con placa {placa} VIP: {valor["vip"]}")
+#         else:
+#             print(f"Vehículo con placa {placa} no es VIP")
 
 
 
+#  0  Menú general                
 
+#  1  Ingresar Clientes
+     
+#  2  ELIMINAR Cliente
+   
+#  3  Motrar Cliente
+  
+#  4  MOSTRAR TODOS los CLIENTEs: 
+ 
+#  5  Cliente PREFERENTES
+     
+#  6  Terminar
 
+#"nif;nombre;email;teléfono;descuento
+# \n01234567L;   
+#               Luis González;   
+#               luisgonzalez@mail.com;   
+#               656343576;12.5
 
+# \n71476342J;   
+#               Macarena Ramírez;   
+#               macarena@mail.com;   
+#               692839321;8
+# \n63823376M;   
+#               Juan José Martínez;   
+#               juanjo@mail.com;   
+#               664888233;5.2
+# \n98376547F;   
+#               Carmen Sánchez;   
+#               armen@mail.com;   
+#               667677855;15.7"
 
+#{'01234567L': {'nombre': 'Luis González', 
+#                'email': 'luisgonzalez@mail.com', 
+#             'teléfono': '656343576', 
+#            'descuento': 12.5}, 
 
+# '71476342J': {'nombre': 'Macarena Ramírez', 
+#                'email': 'macarena@mail.com', 
+#             'teléfono': '692839321', 
+#            'descuento': 8.0}, 
+
+# '63823376M': {'nombre': 'Juan José Martínez', 
+#                'email': 'juanjo@mail.com', 
+#             'teléfono': '664888233', 
+#            'descuento': 5.2}, 
+
+# '98376547F': {'nombre': 'Carmen Sánchez', 
+#                'email': 'carmen@mail.com', 
+#             'teléfono': '667677855', 
+#            'descuento': 15.7}}
 
 
 
