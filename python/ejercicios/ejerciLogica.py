@@ -2983,33 +2983,46 @@ facturas={}
 
 # DATOS CLIENTES
 
-datos_clientes= "nif;nombre;email;teléfono;descuento\n01234567L;Luis González;luisgonzalez@mail.com;656343576;12.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;8\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;5.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;15.7"
+# datos_clientes= "nif;nombre;email;teléfono;descuento\n01234567L;Luis González;luisgonzalez@mail.com;656343576;12.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;8\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;5.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;15.7"
 
-lista_clientes = datos_clientes.split("\n")
+# lista_clientes = datos_clientes.split("\n")
+# directorio={}
+# lista_campos= lista_clientes[0].split(";")
+
+# for i in lista_clientes[1:]:
+#     cliente={}
+#     lista_info=i.split(";")
+
+#     for j in range(1,len(lista_campos)):
+#         if lista_campos[j] == "descuento":
+#             lista_info[j]= float(lista_info[j])
+#             cliente[lista_campos[j]] = lista_info[j]
+#     directorio[lista_info[0]]=cliente
+
+# print(directorio)    
+
+
+
+
+
+# Datos estudiants
+datos_estudiantes= "nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+
+lista_estudiantes= datos_estudiantes.split("\n")
+
 directorio={}
-lista_campos= lista_clientes[0].split(";")
+
+lista_espacios=lista_estudiantes[0].split(";")
 
 for i in lista_clientes[1:]:
-    cliente={}
-    lista_info=i.split(";")
+    estudiante={}
+    lista_data=i.split(";")
 
     for j in range(1,len(lista_campos)):
-        if lista_campos[j] == "descuento":
-            lista_info[j]= float(lista_info[j])
-            cliente[lista_campos[j]] = lista_info[j]
-    directorio[lista_info[0]]=cliente
-
-print(directorio)    
-
-
-
-
-
-
-
-
-
-
+        if lista_espacios[j]=="promedio":
+            lista_data[j] = float(lista_data[j])
+            estudiante[lista_espacios[j]]= lista_data[j]
+    directorio[lista_data[0]]=estudiante        
 
 
 
