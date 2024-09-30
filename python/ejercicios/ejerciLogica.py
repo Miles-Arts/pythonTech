@@ -2715,85 +2715,169 @@ facturas={}
                 
 
 
-clientes_banco={}
-menu=""
+# clientes_banco={}
+# menu=""
 
-while menu != 6:
-    #Menu Clientes
-    print("---Menu Principal---")
-    print("Ingresar datos cliente 1.")
-    print("Borrar Cliente 2.")
-    print("Buscar Cliente 3.")
-    print("Mostrar todos los clientes 4.")
-    print("Clientes Preferentes 5.")
-    print("Terminar 6.")
-    menu=int(input("Ingrese numero: "))
+# while menu != 6:
+#     #Menu Clientes
+#     print("---Menu Principal---")
+#     print("Ingresar datos cliente 1.")
+#     print("Borrar Cliente 2.")
+#     print("Buscar Cliente 3.")
+#     print("Mostrar todos los clientes 4.")
+#     print("Clientes Preferentes 5.")
+#     print("Terminar 6.")
+#     menu=int(input("Ingrese numero: "))
 
-    if menu == 1:
-        #Crear Cliente
-        cuenta=input("Ingrese número cuenta cliente: ")
-        nombre_cliente=input("Ingrese nombre cliente: ").title()
-        documento_cliente=input("Ingrese documento cliente: ")
-        direccion_cliente=input("Ingrese dirección cliente: ")
-        telefono_cliente=input("Ingrese teléfono cliente: ")
-        email_cliente=input("Ingrese email cliente: ")
-        preferente_cliente=input("Es cliente preferente (S/N): ").upper()
+#     if menu == 1:
+#         #Crear Cliente
+#         cuenta=input("Ingrese número cuenta cliente: ")
+#         nombre_cliente=input("Ingrese nombre cliente: ").title()
+#         documento_cliente=input("Ingrese documento cliente: ")
+#         direccion_cliente=input("Ingrese dirección cliente: ")
+#         telefono_cliente=input("Ingrese teléfono cliente: ")
+#         email_cliente=input("Ingrese email cliente: ")
+#         preferente_cliente=input("Es cliente preferente (S/N): ").upper()
 
-        cliente={
-            "nombre": nombre_cliente,
-            "documento": documento_cliente,
-            "direccion": direccion_cliente,
-            "telefono": telefono_cliente,
-            "email": email_cliente,
-            "preferente": preferente_cliente=="S"
-        }
+#         cliente={
+#             "nombre": nombre_cliente,
+#             "documento": documento_cliente,
+#             "direccion": direccion_cliente,
+#             "telefono": telefono_cliente,
+#             "email": email_cliente,
+#             "preferente": preferente_cliente=="S"
+#         }
 
-        clientes_banco[cuenta]=cliente
+#         clientes_banco[cuenta]=cliente
 
-    if menu == 2:
-        #Borrar Cliente
-        print("---Borrar cliente---")
-        cuenta=input("Ingrese cuenta del cliente: ")
-        if cuenta in clientes_banco:
-            del clientes_banco[cuenta]
-            print(f"Cliente con la cuenta {cuenta} ha sido borrado.")
-        else:
-            print(f"Cliente con cuenta {cuenta} no encontrado.")        
+#     if menu == 2:
+#         #Borrar Cliente
+#         print("---Borrar cliente---")
+#         cuenta=input("Ingrese cuenta del cliente: ")
+#         if cuenta in clientes_banco:
+#             del clientes_banco[cuenta]
+#             print(f"Cliente con la cuenta {cuenta} ha sido borrado.")
+#         else:
+#             print(f"Cliente con cuenta {cuenta} no encontrado.")        
 
-    if menu == 3:
-        #Mostrar cliente ID
-        print("--Mostrar Clientes--")
-        cuenta=input("Ingrese cuenta de cliente: ")
-        if cuenta in clientes_banco:
-            print(f"")
-            for clave, valor in clientes_banco[cuenta].items():
-                print(f"{clave.title()}: {valor}")
-        else:
-            print(f"Cliente con cuenta {cuenta} no encontrado.")  
+#     if menu == 3:
+#         #Mostrar cliente ID
+#         print("--Mostrar Clientes--")
+#         cuenta=input("Ingrese cuenta de cliente: ")
+#         if cuenta in clientes_banco:
+#             print(f"")
+#             for clave, valor in clientes_banco[cuenta].items():
+#                 print(f"{clave.title()}: {valor}")
+#         else:
+#             print(f"Cliente con cuenta {cuenta} no encontrado.")  
 
-    if menu == 4:
-        #Mostrar Base de Datos
-        print("---Base de Datos---")
-        for clave, valor in clientes_banco.items():
-            print(f"Cédula {clave} Nombre: {valor["nombre"]}")
-        # else:
-        #     print("Base de datos vacia.")
-    if menu == 5:
-        print("---Clientes Preferentes---")
-        cuenta=input("Ingrese cuenta del cliente: ")
-        if cuenta in clientes_banco:
-            for clave, valor in clientes_banco.items():
-                print("Sí es Cliente Preferente")
-                print(f"Cuenta: {cuenta}. Nombre {valor["nombre"]}. Cliente Preferente: {valor["preferente"]}.")   
-        else:
-            print(f"Cliente con cuenta {cuenta} no es preferente.")
-     
+#     if menu == 4:
+#         #Mostrar Base de Datos
+#         print("---Base de Datos---")
+#         for clave, valor in clientes_banco.items():
+#             print(f"Cédula {clave} Nombre: {valor["nombre"]}")
+#         # else:
+#         #     print("Base de datos vacia.")
+#     if menu == 5:
+#         print("---Clientes Preferentes---")
+#         cuenta=input("Ingrese cuenta del cliente: ")
+#         if cuenta in clientes_banco:
+#             for clave, valor in clientes_banco.items():
+#                 print("Sí es Cliente Preferente")
+#                 print(f"Cuenta: {cuenta}. Nombre {valor["nombre"]}. Cliente Preferente: {valor["preferente"]}.")   
+#         else:
+#             print(f"Cliente con cuenta {cuenta} no es preferente.")
+# print("---FIN---")     
 
     
 
 
 
 
+
+#  0  Menú general                
+
+#  1  Ingresar Clientes
+     
+#  2  ELIMINAR Cliente
+   
+#  3  Motrar Cliente
+  
+#  4  MOSTRAR TODOS los CLIENTEs: 
+ 
+#  5  Cliente PREFERENTES
+     
+#  6  Terminar
+
+
+
+vehiculos={}
+menu=""
+while menu != 6:
+    # Menu General
+    print("---Menu Parqueadero---")
+    print("1 Ingresar vehículo.")
+    print("2 Eliminar Vehículo.")
+    print("3 Mostrar Vehículo")
+    print("4 Mostrar todos los vehículos.")
+    print("5 Servicio VIP.")
+    print("6 Terminar.")
+    menu=int(input("Ingrese Número: "))
+
+    if menu == 1:
+        # Ingresar Vehículo
+        placa=input("Ingrese Placa Vehículo: ").upper()
+        hora_ingreso=input("Hora de ingreso Vehículo: ")
+        marca=input("Ingrese Marca Vehículo: ").title()
+        tipo_vehiculo=input("Ingrese Tipo Vehículo: ").title()
+        color=input("Ingrese color Vehículo: ").title()
+        vip=input("Vehículo VIP (S/N) ").upper()
+
+        vehiculo={
+            "placa": placa,
+            "hora_ingreso": hora_ingreso,
+            "marca": marca,
+            "tipo_vehiculo":tipo_vehiculo,
+            "color": color,
+            "vip": vip=="S"
+        }
+
+        vehiculos[placa]=vehiculo
+
+    if menu == 2:
+        # Eliminar Vehículo
+        placa=input("Ingrese placa de vehículo a borrar: ").upper()
+        if placa in vehiculos:
+            del vehiculos[placa]
+            print(f"Vehículo con placa {placa} borrado.")
+        else:
+            print(f"Vehículo con placa {placa} no encontrado.")    
+    if menu == 3:
+        #Motrar vehículo
+        placa=input("Ingrese placa de vehículo: ").upper()
+        if placa in vehiculos:
+            for clave, valor in vehiculos[placa].items():  
+                print(f"{clave.title()}: {valor}")
+        else: 
+            print(f"Vehículo con placa {placa} no encontrado.")
+
+
+    if menu == 4:
+        #Mostrar todos los vehículos
+        print("---Lista de Vehíulos---")
+        for clave,valor in vehiculos.items():
+            print(f"Placa {clave}. Marca Vehículo: {valor["marca"]}.")
+
+    if menu == 5:
+        #Vehículo VIP
+        print("---Vehículos VIP---")
+        placa=input("Ingrese Placa de Vehículo: ").upper()
+        if placa in vehiculos:
+            for clave, valor in vehiculos.items():
+                print("---Vehículo VIP---")
+                print(f"Vehículo con placa {placa} VIP: {valor["vip"]}")
+        else:
+            print(f"Vehículo con placa {placa} no es VIP")
 
 
 
