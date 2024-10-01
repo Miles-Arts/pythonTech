@@ -3036,17 +3036,17 @@ lista_estudiantes=lista_salon.split("\n")
 
 directorio={}
 
-lista_espacios=lista_estudiantes[0].split(";")
+lista_datos=lista_estudiantes[0].split(";")
 
 for i in lista_estudiantes[1:]:
     estudiante={}
     lista_datos=i.split(";")
 
-    for j in range(1,len(lista_espacios)):
-        if lista_espacios[j]=="promedio":
+    for j in range(1,len(lista_datos)):
+        if lista_datos[j]=="promedio":
 
             lista_datos[j] = float(lista_datos[j])
-            estudiante[lista_espacios[j]]=lista_datos[j]
+            estudiante[lista_datos[j]]=lista_datos[j]
 
     directorio[lista_datos[0]]=estudiante
 
@@ -3055,6 +3055,27 @@ for clave, valor in directorio.items():
 
 
 
+
+lista_clientes="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+
+#convierno el String a un lista con SPLIT 
+# y los separo con , ahora tiene un indice
+clientes_lista=lista_clientes.split("\n")
+
+directorio={}
+
+#nif;nombre;email;teléfono;promedio
+lista_espacios=clientes_lista[0].split(";")
+
+
+for i in clientes_lista[1:]:
+    clientes={}
+    lista_datos=i.split(";")
+
+    for j in range(1,len(lista_espacios)):
+        if lista_espacios[j]=="promedio":
+
+            lista_datos[j]=float(lista_datos[j])
 
 
 
