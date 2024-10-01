@@ -3005,10 +3005,34 @@ facturas={}
 
 
 
-# Datos estudiants
-datos_estudiantes= "nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+# # Datos estudiants
+# datos_estudiantes= "nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
 
-lista_estudiantes= datos_estudiantes.split("\n")
+# lista_estudiantes= datos_estudiantes.split("\n")
+
+# directorio={}
+
+# lista_espacios=lista_estudiantes[0].split(";")
+
+# for i in lista_estudiantes[1:]:
+#     estudiante={}
+#     lista_data=i.split(";")
+
+#     for j in range(1,len(lista_espacios)):
+#         if lista_espacios[j]=="promedio":
+#             lista_data[j] = float(lista_data[j])
+#             estudiante[lista_espacios[j]]= lista_data[j]
+#     directorio[lista_data[0]]=estudiante  
+
+# for clave, valor in directorio.items():
+#     print(f"Código: {clave} Promedio: {valor["promedio"]}")      
+
+# print(directorio)
+
+
+lista_salon="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+
+lista_estudiantes=lista_salon.split("\n")
 
 directorio={}
 
@@ -3016,18 +3040,18 @@ lista_espacios=lista_estudiantes[0].split(";")
 
 for i in lista_estudiantes[1:]:
     estudiante={}
-    lista_data=i.split(";")
+    lista_datos=i.split(";")
 
     for j in range(1,len(lista_espacios)):
         if lista_espacios[j]=="promedio":
-            lista_data[j] = float(lista_data[j])
-            estudiante[lista_espacios[j]]= lista_data[j]
-    directorio[lista_data[0]]=estudiante  
+
+            lista_datos[j] = float(lista_datos[j])
+            estudiante[lista_espacios[j]]=lista_datos[j]
+
+    directorio[lista_datos[0]]=estudiante
 
 for clave, valor in directorio.items():
-    print(f"Código: {clave} Promedio: {valor["promedio"]}")      
-
-# print(directorio)
+    print(f"Código: {clave} Promedio; {valor["promedio"]}")            
 
 
 
