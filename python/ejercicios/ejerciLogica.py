@@ -3030,28 +3030,28 @@ facturas={}
 # print(directorio)
 
 
-lista_salon="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+# lista_salon="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
 
-lista_estudiantes=lista_salon.split("\n")
+# lista_estudiantes=lista_salon.split("\n")
 
-directorio={}
+# directorio={}
 
-lista_datos=lista_estudiantes[0].split(";")
+# lista_datos=lista_estudiantes[0].split(";")
 
-for i in lista_estudiantes[1:]:
-    estudiante={}
-    lista_datos=i.split(";")
+# for i in lista_estudiantes[1:]:
+#     estudiante={}
+#     lista_datos=i.split(";")
 
-    for j in range(1,len(lista_datos)):
-        if lista_datos[j]=="promedio":
+#     for j in range(1,len(lista_datos)):
+#         if lista_datos[j]=="promedio":
 
-            lista_datos[j] = float(lista_datos[j])
-            estudiante[lista_datos[j]]=lista_datos[j]
+#             lista_datos[j] = float(lista_datos[j])
+#             estudiante[lista_datos[j]]=lista_datos[j]
 
-    directorio[lista_datos[0]]=estudiante
+#     directorio[lista_datos[0]]=estudiante
 
-for clave, valor in directorio.items():
-    print(f"Código: {clave} Promedio; {valor["promedio"]}")            
+# for clave, valor in directorio.items():
+#     print(f"Código: {clave} Promedio; {valor["promedio"]}")            
 
 
 
@@ -3062,20 +3062,40 @@ lista_clientes="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;lu
 # y los separo con , ahora tiene un indice
 clientes_lista=lista_clientes.split("\n")
 
+#Creo un diccionario general
 directorio={}
 
 #nif;nombre;email;teléfono;promedio
 lista_espacios=clientes_lista[0].split(";")
 
-
+#separa las informaicón por 
+# comas ,  desde el 1 de la lista.
+# y crea un diccionario  
 for i in clientes_lista[1:]:
-    clientes={}
-    lista_datos=i.split(";")
 
+    clientes={}
+    lista_datos = i.split(";")
+
+    #Itera la lista que ha sido separa por comas ,
     for j in range(1,len(lista_espacios)):
+
+        #Al iterar acá revisa que en la lista 
+        #haya el valor "promedio"
         if lista_espacios[j]=="promedio":
 
+            #convierte el float el String de numeros
+            # a Float número.
             lista_datos[j]=float(lista_datos[j])
+            
+            #Pasa la lista datos a el diccionario Clientes
+            #lista_espacio se convierne en CLAVE
+            #Del diccionario y Lista datos el VALOR
+            clientes[lista_espacios[j]] = lista_datos[j]
+
+        #Imprime el dicionario con el índice [0] 
+        directorio[lista_datos[0]]=clientes  
+
+print(directorio)
 
 
 
