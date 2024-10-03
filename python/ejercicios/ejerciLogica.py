@@ -3112,13 +3112,12 @@ for i in vendedores_lista[1:]:
         if vendedores_espacios[j]=="promedio":
 
             vendedores_datos[j]=float(vendedores_datos[j])
-
             vendedores[vendedores_datos[j]] = vendedores_datos[j]
 
         base_datos[vendedores_datos[0]]=clientes
 
 for clave, valor in base_datos.items():   
-    print(f"Vendedor ID: {clave} Promedio: {valor["promedio"]}")     
+    print(f"ID: {clave} Promedio: {valor["promedio"]}")     
 
 print(base_datos)            
 
