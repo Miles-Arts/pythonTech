@@ -3054,8 +3054,6 @@ facturas={}
 #     print(f"Código: {clave} Promedio; {valor["promedio"]}")            
 
 
-
-
 lista_clientes="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
 
 #convierno el String a un lista con SPLIT 
@@ -3098,8 +3096,31 @@ for i in clientes_lista[1:]:
 print(directorio)
 
 
+lista_vendedores="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
 
+vendedores_lista= lista_vendedores.split("\n")
 
+base_datos={}
+
+vendedores_espacios= vendedores_lista[0].split(";")
+
+for i in vendedores_lista[1:]:
+    vendedores={}
+    vendedores_datos=i.split(";")
+
+    for j in range(1,len(vendedores_espacios)):
+        if vendedores_espacios[j]=="promedio":
+
+            vendedores_datos[j]=float(vendedores_datos[j])
+
+            vendedores[vendedores_datos[j]] = vendedores_datos[j]
+
+        base_datos[vendedores_datos[0]]=clientes
+
+for clave, valor in base_datos.items():   
+    print(f"Vendedor ID: {clave} Promedio: {valor["promedio"]}")     
+
+print(base_datos)            
 
 
 
