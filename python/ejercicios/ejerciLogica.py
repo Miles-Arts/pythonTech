@@ -3232,15 +3232,54 @@ facturas={}
 
 
 
+# def factorial(numero):
+
+#     factorizar = 1
+
+#     for i in range(numero):
+
+#         factorizar *= i + 1
+
+#     return factorizar
+
+# print(factorial(3))        
+# print(factorial(5))        
+# print(factorial(6))        
 
 
 
+# def factorizar(num):
 
+#     factorial = 1
 
+#     for i in range(num):
 
+#         factorial *= i + 1
 
+#     return factorial
 
+# print(factorizar(7))    
+# print(factorizar(5))    
 
+# funcion con IVA
+
+def facturas(cantidad, iva=21):
+
+    # if iva >= 1:
+    #     total = cantidad * iva
+    #     return  total    
+    # elif iva == 0:
+    #     total = cantidad * iva     
+
+    return cantidad + cantidad * iva/100
+
+cantidad=float(input(f"Cantidad sin IVA: "))
+iva=float(input(f"IVA %: "))
+
+print(f"Tiene IVA del: {iva}% Total: ${facturas(cantidad, iva)}")
+print(f"IVA del 21% Total: ${facturas(cantidad)}")
+
+        
 
 
 
