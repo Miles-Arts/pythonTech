@@ -3152,13 +3152,25 @@ facturas={}
 
 # saludar()    
 
+# def nombre():
+#     tu_nombre=input(f"Ingrese su nombre: ")
+#     print(f"¡hola {tu_nombre}!")
+#     return
+
+# nombre()
 
 
+def greet(nombre):
+    """Función que muestra un saludo por pantalla.
+        Parámetros
+        nombre: Nombre del usuario
+        Devuelve el saludo ¡Hola nombre!.
+        """
+    print("¡Hola " + nombre + "!")
+    
 
-
-
-
-
+greet("Ana")    
+greet("Python Juliana")    
 
 
 
