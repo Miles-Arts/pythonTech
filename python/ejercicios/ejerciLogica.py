@@ -3160,29 +3160,63 @@ facturas={}
 # nombre()
 
 
-def greet(nombre):
-    """Función que muestra un saludo por pantalla.
-        Parámetros
-        nombre: Nombre del usuario
-        Devuelve el saludo ¡Hola nombre!.
-        """
-    print("¡Hola " + nombre + "!")
-    
-
-greet("Ana")    
-greet("Python Juliana")    
+# def greet(nombre):
+#     """Función que muestra un saludo por pantalla.
+#         Parámetros
+#         nombre: Nombre del usuario
+#         Devuelve el saludo ¡Hola nombre!.
+#         """
+#     print("¡Hola " + nombre + "!")
 
 
+# greet("Ana")    
+# greet("Python Juliana")    
+
+
+# def factorial(a):
+#     resultado  = a * 1 * a * 3 * a
+#     print(f"{resultado}")
+#     return resultado
+
+
+# factorial(2)
 
 
 
+# def factorial(n):
+
+#     """Función que calcula el factorial 
+#      de un número entero positivo.
+#         Parámetros n: Es un entero positivo.
+#         Devuelve el factorial de n.
+#     """
+
+#     algoritmo = 1
+#     for i in range(n):
+        
+#         algoritmo *= i + 1
+#     return algoritmo
+
+# # 4!  Factorial
+# # 20!  Factorial
+# # 500!  Factorial
+# # El ! es el simbolo de factorial
+# print(factorial(4))    
+# print(factorial(20))    
+# print(factorial(600))    
 
 
 
+# def factorial(numero):
 
+#     factorizar = 1
+#     for i in range(numero):
+#         factorizar *= i + 1
+#     return factorizar
 
-
-
+# print(factorial(4))
+# factorial(4)
+# factorial(6)
 
 
 
