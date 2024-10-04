@@ -3121,30 +3121,36 @@ facturas={}
 
 
 
-lista_hv="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
+# lista_hv="nif;nombre;email;teléfono;promedio\n01234567L;Luis González;luisgonzalez@mail.com;656343576;4.5\n71476342J;Macarena Ramírez;macarena@mail.com;692839321;4\n63823376M;Juan José Martínez;juanjo@mail.com;664888233;4.2\n98376547F;Carmen Sánchez;carmen@mail.com;667677855;3.7"
 
-new_hv = lista_hv.split("\n")
+# new_hv = lista_hv.split("\n")
 
-directorio={}
+# directorio={}
 
-espacios_hv=new_hv[0].split(";")
+# espacios_hv=new_hv[0].split(";")
 
-for i in new_hv[1:]:
-    hvs={}
-    lista_datos_hv=i.split(";")
-    for j in range(1,len(espacios_hv)):
-        if espacios_hv[j]=="promedio":
+# for i in new_hv[1:]:
+#     hvs={}
+#     lista_datos_hv=i.split(";")
+#     for j in range(1,len(espacios_hv)):
+#         if espacios_hv[j]=="promedio":
 
-            lista_datos_hv[j]=float(lista_datos_hv[j])
-            hvs[espacios_hv[j]]=lista_datos_hv[j]
+#             lista_datos_hv[j]=float(lista_datos_hv[j])
+#             hvs[espacios_hv[j]]=lista_datos_hv[j]
 
-        directorio[lista_datos_hv[0]]=hvs
+#         directorio[lista_datos_hv[0]]=hvs
 
-for clave, valor in directorio.items():
-    print(f"ID: {clave} Promedio: {valor["promedio"]}")
+# for clave, valor in directorio.items():
+#     print(f"ID: {clave} Promedio: {valor["promedio"]}")
 
 
+# FUnciones
 
+# def saludar():
+#     print("¡Hola amiga!")
+#     return
+
+# saludar()    
 
 
 
