@@ -3219,7 +3219,16 @@ facturas={}
 # factorial(6)
 
 
+# def factorial(n):
 
+#     factorizar = 1
+#     for i in range(n):
+#         factorizar *= i + 1
+#     return factorizar
+
+# print(factorial(10))        
+# print(factorial(9))        
+# print(factorial(8))        
 
 
 
