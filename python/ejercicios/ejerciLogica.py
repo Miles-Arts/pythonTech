@@ -3263,26 +3263,32 @@ facturas={}
 
 # funcion con IVA
 
-def facturas(cantidad, iva=21):
+# def facturas(cantidad, iva=21):
 
-    # if iva >= 1:
-    #     total = cantidad * iva
-    #     return  total    
-    # elif iva == 0:
-    #     total = cantidad * iva     
+#     # if iva >= 1:
+#     #     total = cantidad * iva
+#     #     return  total    
+#     # elif iva == 0:
+#     #     total = cantidad * iva     
 
-    return cantidad + cantidad * iva/100
+#     return cantidad + cantidad * iva/100
 
-cantidad=float(input(f"Cantidad sin IVA: "))
-iva=float(input(f"IVA %: "))
+# cantidad=float(input(f"Cantidad sin IVA: "))
+# iva=float(input(f"IVA %: "))
 
-print(f"Tiene IVA del: {iva}% Total: ${facturas(cantidad, iva)}")
-print(f"IVA del 21% Total: ${facturas(cantidad)}")
+# print(f"Tiene IVA del: {iva}% Total: ${facturas(cantidad, iva)}")
+# print(f"IVA del 21% Total: ${facturas(cantidad)}")
 
         
+def venta(cantidad, iva=21):
 
+    return cantidad + cantidad * iva / 100
 
+cantidad=float(input("Cantidad venta: "))
+iva=float(input("Ingrese IVA %: "))
 
+print(f"Venta con IVA {venta(cantidad,iva)}")
+print(f"Sin IVA {venta(cantidad)}")
 
 
 
