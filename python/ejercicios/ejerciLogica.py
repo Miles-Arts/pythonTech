@@ -3280,24 +3280,26 @@ facturas={}
 # print(f"IVA del 21% Total: ${facturas(cantidad)}")
 
         
-def venta(cantidad, iva=21):
+# def venta(cantidad, iva=21):
+#     return cantidad + cantidad * iva / 100
 
-    return cantidad + cantidad * iva / 100
+# cantidad=float(input("Cantidad venta: "))
+# iva=float(input("Ingrese IVA %: "))
 
-cantidad=float(input("Cantidad venta: "))
-iva=float(input("Ingrese IVA %: "))
-
-print(f"Venta con IVA {venta(cantidad,iva)}")
-print(f"Sin IVA {venta(cantidad)}")
-
+# print(f"Venta con IVA {venta(cantidad,iva)}")
+# print(f"Sin IVA {venta(cantidad)}")
 
 
 
+def venta(ventas, iva=21):
+    return ventas + ventas * iva /100
 
 
+ventas=float(input("Ingrese Venta: "))
+iva=float(input("IVA: "))
 
-
-
+print(f"IVA del {iva}% Total: ${venta(ventas,iva)}")
+print(f"Venta IVA del 21% Total: ${venta(ventas)}")
 
 
 
