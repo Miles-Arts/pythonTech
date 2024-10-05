@@ -3291,15 +3291,15 @@ facturas={}
 
 
 
-def venta(ventas, iva=21):
-    return ventas + ventas * iva /100
+# def venta(ventas, iva=21):
+#     return ventas + ventas * iva /100
 
 
-ventas=float(input("Ingrese Venta: "))
-iva=float(input("IVA: "))
+# ventas=float(input("Ingrese Venta: "))
+# iva=float(input("IVA: "))
 
-print(f"IVA del {iva}% Total: ${venta(ventas,iva)}")
-print(f"Venta IVA del 21% Total: ${venta(ventas)}")
+# print(f"IVA del {iva}% Total: ${venta(ventas,iva)}")
+# print(f"Venta IVA del 21% Total: ${venta(ventas)}")
 
 
 
