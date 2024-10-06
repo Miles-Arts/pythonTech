@@ -3463,10 +3463,16 @@ facturas={}
 
 
 
+def pagos(dinero, iva=21):
+    dinero = dinero + dinero * iva / 100
+    return dinero
 
 
+dinero=float(input("Ingerse la cantidad: "))
+iva=float(input("Ingrese % IVA: "))
 
-
+print(f"IVA {iva} Total: {pagos(dinero,iva)}")
+print(f"IVA del 21% Total: {pagos(dinero)}")
 
 
 
