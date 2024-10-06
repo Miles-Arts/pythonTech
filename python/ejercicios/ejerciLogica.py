@@ -3503,38 +3503,67 @@ facturas={}
 
 
 
-def circulo_area(radio):
+# def circulo_area(radio):
 
-    pi = 3.1415
-    resultado = pi * radio ** 2
-    return resultado
+#     pi = 3.1415
+#     resultado = pi * radio ** 2
+#     return resultado
 
-def volumen_cilindro(radio, altura):
+# def volumen_cilindro(radio, altura):
 
-    resultado = circulo_area(radio)*altura 
-    return resultado
-
-
-radio=int(input("Ingrese radio cilíndro: "))
-altura=int(input("Ingrese altura: "))
+#     resultado = circulo_area(radio)*altura 
+#     return resultado
 
 
-print(f"{volumen_cilindro(radio,altura)}")
+# radio=int(input("Ingrese radio cilíndro: "))
+# altura=int(input("Ingrese altura: "))
 
 
-
+# print(f"Área: {circulo_area(radio):.2f}")
+# print(f"Volumen del cilindro {volumen_cilindro(radio,altura):.2f}")
 
 
 
+# def circulo(radio):
+#     pi = 3.1415
+#     resultado = pi * radio ** 2
+#     return resultado
+
+# def volumen_circulo(radio, altura):
+#     resultado = circulo(radio)*altura
+#     return resultado
 
 
+# radio=int(input(f"Ingrese radio: "))
+# altura=int(input(f"Ingrese altura: "))
 
 
+# print(f"Área círculo: {circulo(radio):.2f}")
+# print(f"Volúmen cilindro: {volumen_circulo(radio,altura):.2f}")
 
 
+# numero_lista=[2,2,4,5,3,6]
 
 
+# def media(numero_lista):
+#     for i in range(1,len(numero_lista)):
+#         numero_lista = i += 1
+#         numero_lista / len(numero_lista)
+#         return i
 
+# print(f"Media {media(numero_lista)}")        
+
+
+numero_lista=[2,2,4,5,3,6]
+
+def media(numero_lista):
+    suma=0
+    for i in numero_lista:
+        suma += i
+        media = suma / len(numero_lista)
+    return media
+
+print(f"Media: {media(numero_lista):.2f}")       
 
 
 
