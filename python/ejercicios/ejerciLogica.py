@@ -3661,50 +3661,92 @@ facturas={}
 
 
 
-def maximo_comun_divisor(numero1,numero2):
-    resto=0
+# def maximo_comun_divisor(numero1,numero2):
+#     resto=0
 
-    while(numero2 > 0):
-        resto = numero2
-        numero2 = numero1 % numero2
-        numero1 =  resto
+#     while(numero2 > 0):
+#         resto = numero2
+#         numero2 = numero1 % numero2
+#         numero1 =  resto
 
-    return numero1
-
-
-def minimo_comun_multiplo(numero1,numero2):
-    if numero1 > numero2:
-        mayor_que = numero1
-    else:
-        mayor_que = numero2
-
-    while(mayor_que % numero1 != 0) or (mayor_que % numero2 != 0):
-        mayor_que += 1
-    return mayor_que
-
-print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")                   
-print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")                   
+#     return numero1
 
 
+# def minimo_comun_multiplo(numero1,numero2):
+#     if numero1 > numero2:
+#         mayor_que = numero1
+#     else:
+#         mayor_que = numero2
+
+#     while(mayor_que % numero1 != 0) or (mayor_que % numero2 != 0):
+#         mayor_que += 1
+#     return mayor_que
+
+# print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")                   
+# print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")                   
 
 
 
 
+# cuadrados=[1,2,3,4,5]
+
+# def calcular_cuadrador(cuadrados):
+
+#     for cuadrado in cuadrados:
+#         resultado = cuadrado ** cuadrado
+       
+#     return resultado
+
+
+# print(calcular_cuadrador(cuadrados))
+
+# cuadrado=[1,2,3,4,5]
+# # cuadrado=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+
+# def cuadrados(cuadrado):
+
+#     list=[]
+
+#     for i in cuadrado:
+
+#         list.append(i**2)
+
+#     return list    
+
+# print(f"Cuadrador {cuadrados(cuadrado)}")
+# # print(f"Cuadrador {cuadrados(cuadrado)}")
+
+
+# def square(*sample):
+#     """Función que calcula los cuadrados de una lista de números.
+#     Parámetros
+#     *sample: Es una secuencia de números separados por comas.
+#     Devuelve una lista con los cuadrados de los números de sample.
+#     """
+#     list = []
+#     for i in sample:
+#         list.append(i**2)
+#     return list
+
+# print(square(1, 2, 3, 4, 5))
+# print(square(2.3, 5.7, 6.8, 9.7, 12.1, 15.6))
 
 
 
+cuadrado=[1,2,3,4,5]
+
+def cuadrados(cuadrado):
+
+    lista=[]
+
+    for i in cuadrado:
+
+        lista.append(i**2)
+
+    return lista    
 
 
-
-
-
-
-
-
-
-
-
-
+print(f"Al cuadrado {cuadrados(cuadrado)}")
 
 
 
