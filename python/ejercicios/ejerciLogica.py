@@ -3634,33 +3634,56 @@ facturas={}
 # print(media(promedio))        
 
 
-def maximo_comun_divisor(numero1, numero2):
+# def maximo_comun_divisor(numero1, numero2):
+#     resto=0
+
+#     while(numero2 > 0):
+#         resto = numero2
+#         numero2 = numero1 % numero2
+#         numero1 = resto
+#     return numero1
+
+# def minimo_comun_multiplo(numero1,numero2):
+
+#     if numero1 > numero2:
+#         mayor = numero1
+#     else:
+#         mayor = numero2
+
+#     while (mayor % numero1 != 0) or (mayor  % numero2 != 0 ):
+#         mayor += 1
+#     return mayor         
+
+# print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")
+# print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")
+
+
+
+
+
+def maximo_comun_divisor(numero1,numero2):
     resto=0
 
     while(numero2 > 0):
         resto = numero2
         numero2 = numero1 % numero2
-        numero1 = resto
+        numero1 =  resto
+
     return numero1
 
+
 def minimo_comun_multiplo(numero1,numero2):
-
     if numero1 > numero2:
-        mayor = numero1
+        mayor_que = numero1
     else:
-        mayor = numero2
+        mayor_que = numero2
 
-    while (mayor % numero1 != 0) or (mayor  % numero2 != 0 ):
-        mayor += 1
-    return mayor         
+    while(mayor_que % numero1 != 0) or (mayor_que % numero2 != 0):
+        mayor_que += 1
+    return mayor_que
 
-print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")
-print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")
-
-
-
-
-
+print(f"{maximo_comun_divisor(24,36)}")                   
+print(f"{minimo_comun_multiplo(24,36)}")                   
 
 
 
