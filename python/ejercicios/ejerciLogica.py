@@ -3554,8 +3554,7 @@ facturas={}
 # print(f"Media {media(numero_lista)}")        
 
 
-numero_lista=[2,2,4,5,3,6]
-
+numero_lista=[1,2,3,4,5]
 def media(numero_lista):
     suma=0
     for i in numero_lista:
@@ -3563,9 +3562,19 @@ def media(numero_lista):
         media = suma / len(numero_lista)
     return media
 
-print(f"Media: {media(numero_lista):.2f}")       
+print(f"Media: {media(numero_lista):.2f}")  
 
+# DOS
 
+numero_lista=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+def media(numero_lista):
+    suma=0
+    for i in numero_lista:
+        suma += i
+        media = suma / len(numero_lista)
+    return media
+
+print(f"Media: {media(numero_lista):.2f}") 
 
 
 
