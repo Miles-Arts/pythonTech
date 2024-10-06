@@ -3682,8 +3682,8 @@ def minimo_comun_multiplo(numero1,numero2):
         mayor_que += 1
     return mayor_que
 
-print(f"{maximo_comun_divisor(24,36)}")                   
-print(f"{minimo_comun_multiplo(24,36)}")                   
+print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")                   
+print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")                   
 
 
 
