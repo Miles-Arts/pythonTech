@@ -3554,38 +3554,71 @@ facturas={}
 # print(f"Media {media(numero_lista)}")        
 
 
-numero_lista=[1,2,3,4,5]
-def media(numero_lista):
-    suma=0
-    for i in numero_lista:
+# numero_lista=[1,2,3,4,5]
+# def media(numero_lista):
+#     suma=0
+#     for i in numero_lista:
+#         suma += i
+#         media = suma / len(numero_lista)
+#     return media
+
+# print(f"Media: {media(numero_lista):.2f}")  
+
+# # DOS
+
+# numero_lista=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+# def media(numero_lista):
+#     suma=0
+#     for i in numero_lista:
+#         suma += i
+#         media = suma / len(numero_lista)
+#     return media
+
+# print(f"Media: {media(numero_lista):.2f}") 
+
+
+# numero_lista=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+
+# def listas(numero_lista):
+    
+#     suma=0
+#     for i in numero_lista:
+#         suma += i
+#         media = suma / len(numero_lista)
+
+#     return media
+
+# print(f"Media: {listas(numero_lista):.2f}")
+
+
+
+
+# promedio_estudiante=[3.4,5,4.3,3.8,4.1]
+
+
+# def promedio(promedio_estudiante):
+#     suma=0
+
+#     for i in promedio_estudiante:
+#         suma += i
+#         media = suma / len(promedio_estudiante)
+#     return media
+
+# print(f"Media: {promedio(promedio_estudiante):.2f}")        
+
+
+
+promedio_ventas=[30,40,50,60,80]
+
+def ventas_semana(promedio_ventas):
+    suma = 0
+
+    for i in promedio_ventas:
         suma += i
-        media = suma / len(numero_lista)
+        media = suma / len(promedio_ventas)
     return media
 
-print(f"Media: {media(numero_lista):.2f}")  
-
-# DOS
-
-numero_lista=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
-def media(numero_lista):
-    suma=0
-    for i in numero_lista:
-        suma += i
-        media = suma / len(numero_lista)
-    return media
-
-print(f"Media: {media(numero_lista):.2f}") 
-
-
-
-
-
-
-
-
-
-
-
+print(f"Media ventas: {ventas_semana(promedio_ventas)}")        
 
 
 
