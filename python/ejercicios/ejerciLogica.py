@@ -3608,24 +3608,54 @@ facturas={}
 
 
 
-promedio_ventas=[30,40,50,60,80]
+# promedio_ventas=[30,40,50,60,80]
 
-def ventas_semana(promedio_ventas):
-    suma = 0
+# def ventas_semana(promedio_ventas):
+#     suma = 0
 
-    for i in promedio_ventas:
-        suma += i
-        media = suma / len(promedio_ventas)
-    return media
+#     for i in promedio_ventas:
+#         suma += i
+#         media = suma / len(promedio_ventas)
+#     return media
 
-print(f"Media ventas: {ventas_semana(promedio_ventas)}")        
-
-
+# print(f"Media ventas: {ventas_semana(promedio_ventas)}")        
 
 
+# promedio=[1,2,3,4,5]
+
+# def media(promedio):
+#     suma = 0
+
+#     for i in promedio:
+#         suma += i
+#         media = suma / len(promedio)
+#     return media
+
+# print(media(promedio))        
 
 
+def maximo_comun_divisor(numero1, numero2):
+    resto=0
 
+    while(numero2 > 0):
+        resto = numero2
+        numero2 = numero1 % numero2
+        numero1 = resto
+    return numero1
+
+def minimo_comun_multiplo(numero1,numero2):
+
+    if numero1 > numero2:
+        mayor = numero1
+    else:
+        mayor = numero2
+
+    while (mayor % numero1 != 0) or (mayor  % numero2 != 0 ):
+        mayor += 1
+    return mayor         
+
+print(f"Máximo común divisor: {maximo_comun_divisor(24,36)}")
+print(f"Mínimo común multiplo: {minimo_comun_multiplo(24,36)}")
 
 
 
