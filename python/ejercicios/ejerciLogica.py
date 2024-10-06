@@ -3490,21 +3490,36 @@ facturas={}
 
 
 
+# def circulo(circulos):
+#     circulos = circulos ** 2
+#     circulos =  float(3,14159) * circulos 
+#     return float(circulos)
+
+
+# circulos=float(input("Ingrese radio del circulo: "))
+
+# print(f"Área del curculo es: {circulo}")
 
 
 
 
+def circulo_area(radio):
+
+    pi = 3.1415
+    resultado = pi * radio ** 2
+    return resultado
+
+def volumen_cilindro(radio, altura):
+
+    resultado = circulo_area(radio)*altura 
+    return resultado
 
 
+radio=int(input("Ingrese radio cilíndro: "))
+altura=int(input("Ingrese altura: "))
 
 
-
-
-
-
-
-
-
+print(f"{volumen_cilindro(radio,altura)}")
 
 
 
