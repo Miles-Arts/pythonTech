@@ -4041,8 +4041,37 @@ print("-"*60)
 
 
 
+# def decimal(numero):
+#     numero= list(numero)
+#     numero.reverse()
+#     decimal=0
+
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+#     return decimal
+
+# def binario(numero):
+#     binario=[]
+#     while numero > 0:
+#         binario.append(str(numero % 2 ))
+#         numero //= 2
+#     binario.reverse()
+#     return "".join(binario)    
+
+
+# print(decimal("10110"))
+# print(binario(22))
+# print(decimal(binario(22)))
+# print(binario(decimal("10110")))
+
+
+
+
+
+
+
 def decimal(numero):
-    numero= list(numero)
+    numero = list(numero)
     numero.reverse()
     decimal=0
 
@@ -4052,9 +4081,10 @@ def decimal(numero):
 
 def binario(numero):
     binario=[]
+
     while numero > 0:
         binario.append(str(numero % 2 ))
-        numero //=2
+        numero //= 2
     binario.reverse()
     return "".join(binario)    
 
@@ -4063,16 +4093,6 @@ print(decimal("10110"))
 print(binario(22))
 print(decimal(binario(22)))
 print(binario(decimal("10110")))
-
-
-
-
-
-
-
-
-
-
 
 
 
