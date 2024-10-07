@@ -3940,32 +3940,54 @@ facturas={}
 
 
 
-def numero_decimal(numero):
+# def numero_decimal(numero):
+#     numero = list(numero)
+#     numero.reverse()
+#     decimal=0
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+#     return decimal   
+
+# def numero_binario(numero):
+#     binario=[]
+
+#     while numero > 0: 
+#         binario.append(str(numero % 2))
+#         numero //= 2
+#     binario.reverse()
+#     return "".join(binario)
+
+# print(numero_decimal("10110"))
+# print(numero_binario(22))
+# print(numero_decimal(numero_binario(22)))
+# print(numero_binario(numero_decimal("10110")))     
+
+print("-"*60)
+
+def num_decimal(numero):
     numero = list(numero)
     numero.reverse()
     decimal=0
+
     for i in range(len(numero)):
         decimal += int(numero[i]) * 2 ** i
-    return decimal   
 
-def numero_binario(numero):
+    return decimal
+
+def num_binario(numero):
     binario=[]
 
-    while numero > 0: 
+    while numero > 0:
         binario.append(str(numero % 2))
         numero //= 2
     binario.reverse()
     return "".join(binario)
 
-print(numero_decimal("10110"))
-print(numero_binario(22))
-print(numero_decimal(numero_binario(22)))
-print(numero_binario(numero_decimal("10110")))     
 
-
-
-
-
+print(num_decimal("10110"))
+print(num_binario(22))
+print(num_decimal(num_binario(22)))
+print(num_binario(num_decimal("10110")))
 
 
 
