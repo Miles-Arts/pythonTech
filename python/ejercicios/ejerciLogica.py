@@ -3962,56 +3962,107 @@ facturas={}
 # print(numero_decimal(numero_binario(22)))
 # print(numero_binario(numero_decimal("10110")))     
 
+
+
+# def num_decimal(numero):
+#     numero = list(numero)
+#     numero.reverse()
+#     decimal=0
+
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+
+#     return decimal
+
+# def num_binario(numero):
+#     binario=[]
+
+#     while numero > 0:
+#         binario.append(str(numero % 2))
+#         numero //= 2
+#     binario.reverse()
+#     return "".join(binario)
+
+
+# print(num_decimal("10110"))
+# print(num_binario(22))
+# print(num_decimal(num_binario(22)))
+# print(num_binario(num_decimal("10110")))
+
+
+
+
 print("-"*60)
 
-def num_decimal(numero):
-    numero = list(numero)
+# def decimal(numero):
+#     numero = list(numero)
+#     numero.reverse()
+#     decimal=0
+
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+#     return decimal 
+
+# def binario(numero):
+#     binario=[]
+
+#     while numero > 0:
+#         binario.append(str(numero % 2))
+#         numero //=2
+#     binario.reverse()
+#     return "".join(binario)   
+
+
+
+# def decimal(numero):
+#     numero = list(numero)
+#     numero.reverse()
+#     decimal=0
+
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+#     return decimal
+
+# def binario(numero):
+#     binario=[]
+
+#     while numero > 0:
+#         binario.append(str(numero % 2))
+#         numero //= 2
+#     binario.reverse()
+#     return "".join(binario)            
+
+
+# print(decimal("10110"))
+# print(binario(22))
+# print(decimal(binario(22)))
+# print(binario(decimal("10110")))
+
+
+
+
+def decimal(numero):
+    numero= list(numero)
     numero.reverse()
     decimal=0
 
     for i in range(len(numero)):
         decimal += int(numero[i]) * 2 ** i
-
     return decimal
 
-def num_binario(numero):
+def binario(numero):
     binario=[]
-
     while numero > 0:
-        binario.append(str(numero % 2))
-        numero //= 2
+        binario.append(str(numero % 2 ))
+        numero //=2
     binario.reverse()
-    return "".join(binario)
+    return "".join(binario)    
 
 
-print(num_decimal("10110"))
-print(num_binario(22))
-print(num_decimal(num_binario(22)))
-print(num_binario(num_decimal("10110")))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(decimal("10110"))
+print(binario(22))
+print(decimal(binario(22)))
+print(binario(decimal("10110")))
 
 
 
