@@ -3768,10 +3768,34 @@ facturas={}
 # con su media, varianza y desviación típica.
 
 
+# numeros=[1,2,3,4,5]
+# numeros1=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+
+# def cuadrado(numeros):
+#     lista=[]
+
+#     for i in numeros:
+#         resultado = i ** 2
+#         lista.append(resultado)
+#     return lista 
+
+# def estidistica(numeros):
+
+#     estadistica_valor={}
+#     estadistica_valor["media"]=sum(numeros)/len(numeros)
+#     estadistica_valor["varianza"]=sum(cuadrado(numeros))/len(numeros)-estadistica_valor["media"]**2
+#     estadistica_valor["desviacion tipica"]=estadistica_valor["varianza"]**0.5
+    
+#     return estadistica_valor
+
+# print(estidistica(numeros))   
+# #  print(estidistica(numeros1))   
+
+# media, varianza y desviación típica.
 
 
-numeros=[1,2,3,4,5]
-numeros1=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+numeros1=[1,2,3,4,5]
+numeros=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
 
 def cuadrado(numeros):
     lista=[]
@@ -3779,33 +3803,17 @@ def cuadrado(numeros):
     for i in numeros:
         resultado = i ** 2
         lista.append(resultado)
+    return lista  
 
-    return lista 
+def estadistica(numeros):
 
+    valor_estadistica={}
+    valor_estadistica["media"]= sum(numeros)/len(numeros)
+    valor_estadistica["varianza"]= sum(cuadrado(numeros))/len(numeros)-valor_estadistica["media"]**2
+    valor_estadistica["desviacion tipica"]= valor_estadistica["varianza"]/0.5
+    return valor_estadistica
 
-# print(media(numeros))
-
-def estidistica(numeros):
-
-    estadistica_valor={}
-    estadistica_valor["media"]=sum(numeros)/len(numeros)
-    estadistica_valor["varianza"]=sum(cuadrado(numeros))/len(numeros)-estadistica_valor["media"]**2
-    estadistica_valor["desviacion tipica"]=estadistica_valor["varianza"]**0.5
-    return estadistica_valor
-
-
- 
-print(estidistica(numeros))   
-#  print(estidistica(numeros1))   
-
-
-
-
-
-
-
-
-
+print(estadistica(numeros))
 
 
 
