@@ -3889,32 +3889,56 @@ facturas={}
 
 # numero="10110"
 
-def numero_decimal(numero):
-    # lista=[]
+# def numero_decimal(numero):
+#     # lista=[]
+#     numero = list(numero)
+#     numero.reverse()
+#     decimal = 0
+
+#     for i in range(len(numero)):
+#         decimal += int(numero[i]) * 2 ** i
+#     return decimal    
+
+# def numero_binario(numero):
+#     binario=[]
+#     while numero > 0:
+#         binario.append(str(numero % 2))
+#         numero //= 2
+#     binario.reverse()
+#     return "".join(binario)
+
+# print(numero_decimal('10110'))
+# print(numero_binario(22))
+# print(numero_decimal(numero_binario(22)))
+# print(numero_binario(numero_decimal('10110')))                
+
+
+
+def decimal(numero):
     numero = list(numero)
     numero.reverse()
-    decimal = 0
+    decimal=0
 
     for i in range(len(numero)):
         decimal += int(numero[i]) * 2 ** i
-    return decimal    
 
-def numero_binario(numero):
-    binario=[]
+    return decimal
+
+def bynario(numero):
+
+    binario=[]    
+
     while numero > 0:
-        binario.append(str(numero % 2))
-        numero //= 2
+        binario.append(str(numero % 2)) # devuelve el resto cero 0 o uno 1
+        numero //= 2 #  devuelve el resultado entero devuelve 11 en lugar de 11.0
+
     binario.reverse()
     return "".join(binario)
 
-print(numero_decimal('10110'))
-print(numero_binario(22))
-print(numero_decimal(numero_binario(22)))
-print(numero_binario(numero_decimal('10110')))                
-
-
-
-
+print(decimal("110111"))
+print(bynario(22))
+print(decimal(bynario(22)))
+print(bynario(decimal("10110")))
 
 
 
