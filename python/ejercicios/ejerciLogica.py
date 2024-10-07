@@ -3868,28 +3868,49 @@ facturas={}
 # media, varianza y desviación típica.
 
 # numeros=[1,3,5,3,5,6]
-numeros=[1,2,4,3,5]
+# numeros=[1,2,4,3,5]
 
-def cuadrado(numeros):
-    lista=[]
+# def cuadrado(numeros):
+#     lista=[]
 
-    for i in numeros:
-        resultado = i ** 2
-        lista.append(resultado)
-    return lista    
+#     for i in numeros:
+#         resultado = i ** 2
+#         lista.append(resultado)
+#     return lista    
 
-def estaditica(numeros):
-    valor_estadistica={}
-    valor_estadistica["media"]=sum(numeros)/len(numeros)
-    valor_estadistica["varianza"]=sum(cuadrado(numeros))/len(numeros)-valor_estadistica["media"]**2
-    valor_estadistica["desviacion tipica"]= valor_estadistica["varianza"]**0.5
-    return valor_estadistica
+# def estaditica(numeros):
+#     valor_estadistica={}
+#     valor_estadistica["media"]=sum(numeros)/len(numeros)
+#     valor_estadistica["varianza"]=sum(cuadrado(numeros))/len(numeros)-valor_estadistica["media"]**2
+#     valor_estadistica["desviacion tipica"]= valor_estadistica["varianza"]**0.5
+#     return valor_estadistica
 
-print(estaditica(numeros))    
+# print(estaditica(numeros))    
 
+# numero="10110"
 
+def numero_decimal(numero):
+    # lista=[]
+    numero = list(numero)
+    numero.reverse()
+    decimal = 0
 
+    for i in range(len(numero)):
+        decimal += int(numero[i]) * 2 ** i
+    return decimal    
 
+def numero_binario(numero):
+    binario=[]
+    while numero > 0:
+        binario.append(str(numero % 2))
+        numero //= 2
+    binario.reverse()
+    return "".join(binario)
+
+print(numero_decimal('10110'))
+print(numero_binario(22))
+print(numero_decimal(numero_binario(22)))
+print(numero_binario(numero_decimal('10110')))                
 
 
 
