@@ -3732,42 +3732,71 @@ facturas={}
 # print(square(2.3, 5.7, 6.8, 9.7, 12.1, 15.6))
 
 
+# Escribir una función que reciba una muestra 
+# de números en una lista y devuelva
+#  otra lista con sus cuadrados.
+# cuadrado=[1,2,3,4,5]
 
-cuadrado=[1,2,3,4,5]
+# def cuadrados(cuadrado):
+#     lista=[]
 
-def cuadrados(cuadrado):
+#     for i in cuadrado:
+#         resultado=i**2
+#         lista.append(resultado)
+#     return lista    
 
+# print(f"Al cuadrado {cuadrados(cuadrado)}")
+
+
+
+
+# cuadrado=[6,7,8,9,10]
+
+# def cuadrados(cuadrado):
+#     lista=[]
+
+#     for i in cuadrado:
+#         resultado = i ** 2
+#         lista.append(resultado)
+#     return lista
+
+# print(f"Al cuadrdo: {cuadrados(cuadrado)}")        
+
+# Escribir una función que reciba 
+# una muestra de números en una 
+# lista y devuelva un diccionario 
+# con su media, varianza y desviación típica.
+
+
+
+
+numeros=[1,2,3,4,5]
+numeros1=[2.3, 5.7, 6.8, 9.7, 12.1, 15.6]
+
+def cuadrado(numeros):
     lista=[]
 
-    for i in cuadrado:
+    for i in numeros:
+        resultado = i ** 2
+        lista.append(resultado)
 
-        lista.append(i**2)
-
-    return lista    
-
-
-print(f"Al cuadrado {cuadrados(cuadrado)}")
+    return lista 
 
 
+# print(media(numeros))
+
+def estidistica(numeros):
+
+    estadistica_valor={}
+    estadistica_valor["media"]=sum(numeros)/len(numeros)
+    estadistica_valor["varianza"]=sum(cuadrado(numeros))/len(numeros)-estadistica_valor["media"]**2
+    estadistica_valor["desviacion tipica"]=estadistica_valor["varianza"]**0.5
+    return estadistica_valor
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+print(estidistica(numeros))   
+#  print(estidistica(numeros1))   
 
 
 
