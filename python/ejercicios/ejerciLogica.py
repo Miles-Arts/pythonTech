@@ -4273,6 +4273,7 @@ def menor_estatura(datos):
             persona_menor = nombre
     return persona_menor              
 
+#Sumar edades
 def sumar_edades(datos):
     total=0
 
@@ -4280,13 +4281,14 @@ def sumar_edades(datos):
         total += dattos_persona["edad"]
     return total
 
-
+#suamr estatura
 def sumar_estaturas(datos):
     total=0
 
     for datos_persona in datos.values():
         total += datos_persona["estatura"]
     return total            
+
 
 if menu == "N":
     if datos_personas:
@@ -4311,6 +4313,8 @@ if menu == "N":
 
         
 
+
+# Datos Estudiante:
 
 
 
