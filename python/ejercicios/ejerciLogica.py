@@ -4316,7 +4316,28 @@ if menu == "N":
 
 # Datos Estudiante:
 
+datos_estudiante={}
+menus="S"
+estudiantes_menores_30_mejor_promedio=0
 
+while menu != "N":
+
+    nombre=input("Ingrese nombre estudiante: ").title()
+    edad=int(input("Ingrese edad: "))
+    promedio=float(input("Ingrese promedio: "))
+
+    estudiante={
+        "edad": edad,
+        "promedio": promedio,
+    }
+
+    datos_estudiante[nombre]=estudiante
+
+
+    if edad < 30 and promedio > 4.50:
+        estudiantes_menores_30_mejor_promedio
+
+    menu=input("¿Desea continuar (S/N) ").upper()    
 
 
 
