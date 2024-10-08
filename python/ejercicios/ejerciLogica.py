@@ -4316,8 +4316,8 @@ if menu == "N":
 
 # Datos Estudiante:
 
-datos_estudiante={}
-menus="S"
+datos_estudiantes={}
+menu="S"
 estudiantes_menores_30_mejor_promedio=0
 
 while menu != "N":
@@ -4331,7 +4331,7 @@ while menu != "N":
         "promedio": promedio,
     }
 
-    datos_estudiante[nombre]=estudiante
+    datos_estudiantes[nombre]=estudiante
 
 
     if edad < 30 and promedio > 4.50:
@@ -4340,12 +4340,20 @@ while menu != "N":
     menu=input("¿Desea continuar (S/N) ").upper()    
 
 
+    def estudiante_mayor(datos):
+        estudiante_mayor=None
+        mayor_edad = -1
+
+        for nombre, datos_estudiante in datos_estudiantes.items():
+            if datos_estudiante["edad"] > mayor_edad:
+                mayor_edad = datos_estudiante["edad"]
+                estudiante_mayor = nombre
+        return estudiante_mayor        
 
 
-
-
-
-
+def menor_promedio(datos):
+    estudiante_menor=None
+    menor_promedio=
 
 
 
