@@ -4227,98 +4227,99 @@ facturas={}
 
 
 
-datos_personas={}
-menu="S"
-personas_menores_15_y_altas=0
-# personas_altas=0
+# datos_personas={}
+# menu="S"
+# personas_menores_15_y_altas=0
+# # personas_altas=0
 
-while menu != "N":
+# while menu != "N":
 
-    nombre=input("Ingrese nombre: ").title()
-    edad=int(input("Ingrese edad: "))
-    estatura=float(input("Ingrese estatura: "))
+#     nombre=input("Ingrese nombre: ").title()
+#     edad=int(input("Ingrese edad: "))
+#     estatura=float(input("Ingrese estatura: "))
 
-    persona={
-        "edad": edad, 
-        "estatura": estatura
-    }
+#     persona={
+#         "edad": edad, 
+#         "estatura": estatura
+#     }
 
-    datos_personas[nombre] = persona
+#     datos_personas[nombre] = persona
 
-    if edad < 18 and estatura > 1.70:
-        personas_menores_15_y_altas +=1
-        # personas_altas +=1
+#     if edad < 18 and estatura > 1.70:
+#         personas_menores_15_y_altas +=1
+#         # personas_altas +=1
 
-    menu=input("¿Desea continuar (S/N) ").upper()  
+#     menu=input("¿Desea continuar (S/N) ").upper()  
 
-# Función para calcular el máximo basado en la edad
-def persona_mayor(datos):
-    persona_mayor=None
-    mayor_edad = -1
+# # Función para calcular el máximo basado en la edad
+# def persona_mayor(datos):
+#     persona_mayor=None
+#     mayor_edad = -1
 
-    for nombre, datos_persona in datos.items():
-        if datos_persona["edad"] > mayor_edad:
-            mayor_edad = datos_persona["edad"]
-            persona_mayor = nombre
-    return persona_mayor   
+#     for nombre, datos_persona in datos.items():
+#         if datos_persona["edad"] > mayor_edad:
+#             mayor_edad = datos_persona["edad"]
+#             persona_mayor = nombre
+#     return persona_mayor   
 
-# Función para calcular el mínimo basado en la estatura
-def menor_estatura(datos):
-    persona_menor= None
-    menor_estatura= float("inf")  
+# # Función para calcular el mínimo basado en la estatura
+# def menor_estatura(datos):
+#     persona_menor= None
+#     menor_estatura= float("inf")  
 
-    for nombre, datos_persona  in datos.items():
-        if datos_persona["estatura"] < menor_estatura:
-            menor_estatura = datos_persona["estatura"]
-            persona_menor = nombre
-    return persona_menor              
+#     for nombre, datos_persona  in datos.items():
+#         if datos_persona["estatura"] < menor_estatura:
+#             menor_estatura = datos_persona["estatura"]
+#             persona_menor = nombre
+#     return persona_menor              
 
-#Sumar edades
-def sumar_edades(datos):
-    total=0
+# #Sumar edades
+# def sumar_edades(datos):
+#     total=0
 
-    for dattos_persona in datos.values():
-        total += dattos_persona["edad"]
-    return total
+#     for datos_persona in datos.values():
+#         total += datos_persona["edad"]
+#     return total
 
-#suamr estatura
-def sumar_estaturas(datos):
-    total=0
+# #suamr estatura
+# def sumar_estaturas(datos):
+#     total=0
 
-    for datos_persona in datos.values():
-        total += datos_persona["estatura"]
-    return total            
+#     for datos_persona in datos.values():
+#         total += datos_persona["estatura"]
+#     return total            
 
 
-if menu == "N":
-    if datos_personas:
-        persona_mayor = persona_mayor(datos_personas)
+# if menu == "N":
+#     if datos_personas:
+#         persona_mayor = persona_mayor(datos_personas)
 
-        total_edades = sumar_edades(datos_personas)
-        promedio_edad = total_edades / len(datos_personas)
+#         total_edades = sumar_edades(datos_personas)
+#         promedio_edad = total_edades / len(datos_personas)
 
-        menor_estatura = menor_estatura(datos_personas)
+#         menor_estatura = menor_estatura(datos_personas)
 
-        total_estatura = sumar_estaturas(datos_personas)
-        promedio_estatura = total_estatura / len(datos_personas)
+#         total_estatura = sumar_estaturas(datos_personas)
+#         promedio_estatura = total_estatura / len(datos_personas)
 
-        print("\nResumen:")
-        print(f"• Nombre de la persona de mayor edad: {persona_mayor}")
-        print(f"• Edad promedio: {promedio_edad:.1f} años")
-        print(f"• Nombre de la persona de menor estatura: {menor_estatura}")
-        print(f"• Estatura promedio: {promedio_estatura:.2f} metros")
-        print(f"• Cantidad de personas menores a 15 años y con estatura mayor a 1.70 metros: {personas_menores_15_y_altas}")
-    else:
-        print("No se ingresaron datos.")
+#         print("\nResumen:")
+#         print(f"• Nombre de la persona de mayor edad: {persona_mayor}")
+#         print(f"• Edad promedio: {promedio_edad:.1f} años")
+#         print(f"• Nombre de la persona de menor estatura: {menor_estatura}")
+#         print(f"• Estatura promedio: {promedio_estatura:.2f} metros")
+#         print(f"• Cantidad de personas menores a 15 años y con estatura mayor a 1.70 metros: {personas_menores_15_y_altas}")
+#     else:
+#         print("No se ingresaron datos.")
 
         
-
+##########################
 
 # Datos Estudiante:
 
 datos_estudiantes={}
 menu="S"
 estudiantes_menores_30_mejor_promedio=0
+
 
 while menu != "N":
 
@@ -4328,14 +4329,15 @@ while menu != "N":
 
     estudiante={
         "edad": edad,
-        "promedio": promedio,
+        "promedio": promedio
     }
 
     datos_estudiantes[nombre]=estudiante
 
 
     if edad < 30 and promedio > 4.50:
-        estudiantes_menores_30_mejor_promedio
+        estudiantes_menores_30_mejor_promedio += 1
+
 
     menu=input("¿Desea continuar (S/N) ").upper()    
 
@@ -4353,7 +4355,55 @@ while menu != "N":
 
 def menor_promedio(datos):
     estudiante_menor=None
-    menor_promedio=
+    menor_promedio= float("inf")
+
+    for nombre, datos_estudiante in datos_estudiantes.items():
+        if datos_estudiante["promedio"] < menor_promedio:
+            menor_promedio = datos_estudiante["promedio"]
+            estudiante_menor = nombre
+    return estudiante_menor
+
+
+def sumar_edades(datos):
+    total=0
+
+    for datos_estudiante in datos_estudiantes.values():
+        total += datos_estudiante["edad"]
+    return total
+
+
+def sumar_promedios(datos):
+    total=0
+
+    for datos_estudiante in datos_estudiantes.values():
+        total += datos_estudiante["promedio"]
+    return total
+
+
+if menu == "N":
+    if datos_estudiantes:
+
+        estudiante_mayor = estudiante_mayor(datos_estudiantes)
+
+        total_edades = sumar_edades(datos_estudiantes)
+        promedio_edad = total_edades / len(datos_estudiantes)
+
+        menor_promedio = menor_promedio(datos_estudiantes)
+
+        total_promedios = sumar_promedios(datos_estudiantes)
+        promedio_notas = total_promedios / len(datos_estudiantes)
+
+        print("\nResumen:")
+        print(f"• Nombre de la persona de mayor edad: {estudiante_mayor}")
+        print(f"• Edad promedio: {promedio_edad:.1f} años")
+        print(f"• Nombre de la persona de menor promedio: {menor_promedio}")
+        print(f"• Promedio notas: {promedio_notas:.2f}")
+        print(f"• Cantidad de personas menores a 30 años y con promedio mayor a 4.5: {estudiantes_menores_30_mejor_promedio}")
+    else:
+        print("No se ingresaron datos.")
+
+
+
 
 
 
