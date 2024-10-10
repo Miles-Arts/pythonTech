@@ -4587,8 +4587,68 @@ if menu == "N":
 ##################################
 
 
+datos_empleados={}
+menu="S"
+mejor_empleado_mejores_ventas=0
 
+while menu != "N":
 
+    nombre=input("Ingrese nombre empleado: ").title()
+    codigo=int(input("Ingrese ranking empleado: "))
+    ventas=float(input("Ingrese total ventas último mes: "))
+
+    datos_empleado={
+        "codigo": codigo,
+        "ventas": ventas
+    }
+
+    datos_empleados[nombre]=datos_empleado
+
+    if codigo < 20 and ventas > 100:
+        mejor_empleado_mejores_ventas += 1
+
+    menu=input("¿Desea continuar (S/N)? ").upper() 
+
+def empleado_mejor_ranking(empleados_datos):
+
+    nombre_mejor_ranking=None
+    numero_ranking=-1
+
+    for nombre, datos_empleado in datos_empleados.items():
+
+        if datos_empleado["codigo"] > numero_ranking:
+            numero_ranking = datos_empleado["codigo"]
+            nombre_mejor_ranking = nombre
+    return nombre_mejor_ranking  
+
+def empleado_menor_venta(empleados_datos):
+    nombre_empledado_menor_venta=None
+    cantidad_venta=float("inf")
+
+    for nombre, datos_empleado in datos_empleados.items():
+        if datos_empleados["ventas"] < cantidad_venta:
+            cantidad_venta = datos_empleados["ventas"]
+            nombre_empledado_menor_venta = nombre      
+    return nombre_empledado_menor_venta
+
+def empleado_codigo(empleados_datos):
+    total=0
+
+    for datos_empleado in datos_empleados.values():
+        total = datos_empleado["codigo"]
+    return total
+
+def empleados_promedio_ventas(empleados_datos):
+    total=0
+
+    for datos_empleado in datos_empleados.values():
+        total = datos_empleado["ventas"] 
+    return total
+
+if menu == "N":
+    if datos_empleados:
+        
+                       
 
 
 
