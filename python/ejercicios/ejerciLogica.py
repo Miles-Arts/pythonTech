@@ -4403,97 +4403,178 @@ facturas={}
 #         print("No se ingresaron datos.")
 
 
-datos_estudiantes={}
+# datos_estudiantes={}
+# menu="S"
+# estudiantes_mayor_30__mejor_promedio=0
+
+
+# while menu !="N":
+
+#     nombre=input("Ingrese su nombre: ").title()
+#     edad=int(input("Ingrese su edad: "))
+#     promedio=float(input("Ingrese su promedio: "))
+
+#     estudiante={
+#         "edad": edad,
+#         "promedio": promedio
+#     }
+
+#     datos_estudiantes[nombre]=estudiante
+
+
+#     if edad > 30 and promedio > 4.6:
+#         estudiantes_mayor_30__mejor_promedio += 1
+
+
+#     menu=input("¿Desea continuar? (S/N) ").upper()   
+
+
+# def estudiante_mayor(datos):
+#     estudiante_mayor=None
+#     mayor_estudiante=-1
+
+#     for nombre, datos_estudiante in datos_estudiantes.items():
+
+#         if datos_estudiante["edad"] > mayor_estudiante:
+#             mayor_estudiante = datos_estudiante["edad"]
+#             estudiante_mayor = nombre
+#         return estudiante_mayor    
+
+# def menor_promedio(datos):
+#     estudiante_menor_promedio=None
+#     menor_promedio=float("inf")
+
+#     for nombre, datos_estudiante in datos_estudiantes.items():
+#         if datos_estudiante["promedio"] < menor_promedio:
+#             menor_promedio = datos_estudiante["promedio"]
+#             estudiante_menor_promedio = nombre
+#     return estudiante_menor_promedio
+
+
+# def sumar_edades_estudiantes(datos):
+#     total=0
+
+#     for datos_estudiante in datos_estudiantes.values():
+#         total += datos_estudiante["edad"]
+#     return total
+
+
+# def sumar_promedio_estudiantes(datos):      
+#     total=0
+
+#     for datos_estudiante in datos_estudiantes.values():
+#         total += datos_estudiante["promedio"]
+#     return total  
+
+
+# if menu == "N":
+#     if datos_estudiantes:
+
+#         estudiante_mayor = estudiante_mayor(datos_estudiantes)
+
+#         total_edades_estudiantes = sumar_edades_estudiantes(datos_estudiantes)
+#         promedio_edad_estudiantes = total_edades_estudiantes / len(datos_estudiantes)
+
+#         menor_promedio = menor_promedio(datos_estudiantes)
+
+#         total_promedio_estudiantes = sumar_promedio_estudiantes(datos_estudiantes)
+#         promedio_estudiantes = total_edades_estudiantes / len(datos_estudiantes)
+
+#         print("\nResumen:")
+#         print(f"• Nombre del estudiante de mayor edad: {estudiante_mayor}")
+#         print(f"• Edad promedio: {promedio_edad_estudiantes:.1f} años")
+#         print(f"• Nombre del estudiante de menor promedio: {menor_promedio}")
+#         print(f"• Promedio notas: {promedio_estudiantes:.2f}")
+#         print(f"• Cantidad de personas mayores de 30 años y con promedio mayor a 4.60: {estudiantes_mayor_30__mejor_promedio}")
+#     else:
+#         print("No se ingresaron datos.")
+
+###########################
+
+
+
+
+datos_carros={}
 menu="S"
-estudiantes_mayor_30__mejor_promedio=0
+carros_2024_Y_mayor_hp=0
 
 
-while menu !="N":
+while menu != "N":
 
-    nombre=input("Ingrese su nombre: ").title()
-    edad=int(input("Ingrese su edad: "))
-    promedio=float(input("Ingrese su promedio: "))
+    marca_carro=input("Ingrese marca vehículo: ").title()
+    anio_carro=int(input("Ingrse año vehículo: "))
+    hp_carro=float(input("Ingrese potencia: "))
 
-    estudiante={
-        "edad": edad,
-        "promedio": promedio
+    datos_carro={
+        "anio_carro": anio_carro,
+        "hp_carro": hp_carro
     }
 
-    datos_estudiantes[nombre]=estudiante
+    datos_carros["marca_carro"]=datos_carro
 
 
-    if edad > 30 and promedio > 4.6:
-        estudiantes_mayor_30__mejor_promedio += 1
+    if anio_carro > 2024 and hp_carro > 250:
+        carros_2024_Y_mayor_hp += 1
 
+    menu=input("¿Desea contionuar (S/N)? ").upper()
 
-    menu=input("¿Desea continuar? (S/N) ").upper()   
+def carro_mas_reciente(carros_dato):
+    carro_mas_nuevo=None
+    mas_nuevo=-1
 
+    for marca, datos_carro in datos_carros.items():
 
-def estudiante_mayor(datos):
-    estudiante_mayor=None
-    mayor_estudiante=-1
+        if datos_carro["anio_carro"] > mas_nuevo:
+            mas_nuevo = datos_carro["anio_carro"]
+            carro_mas_nuevo = marca
+        return carro_mas_nuevo    
 
-    for nombre, datos_estudiante in datos_estudiantes.items():
+def carro_menor_potencia(carros_dato):
+    menor_potencia_carro=None
+    menor_potencia=float("inf")
 
-        if datos_estudiante["edad"] > mayor_estudiante:
-            mayor_estudiante = datos_estudiante["edad"]
-            estudiante_mayor = nombre
-        return estudiante_mayor    
+    for marca, datos_carro in datos_carros.items():
 
-def menor_promedio(datos):
-    estudiante_menor_promedio=None
-    menor_promedio=float("inf")
+        if datos_carro["hp_carro"] < menor_potencia:
+            menor_potencia= datos_carro["hp_carro"]
+            menor_potencia_carro = marca
+        return menor_potencia_carro    
 
-    for nombre, datos_estudiante in datos_estudiantes.items():
-        if datos_estudiante["promedio"] < menor_promedio:
-            menor_promedio = datos_estudiante["promedio"]
-            estudiante_menor_promedio = nombre
-    return estudiante_menor_promedio
-
-
-def sumar_edades_estudiantes(datos):
+def carro_anios(carros_dato):
     total=0
 
-    for datos_estudiante in datos_estudiantes.values():
-        total += datos_estudiante["edad"]
+    for datos_carro in datos_carros.values:
+        total += datos_carro["anio_carro"]
     return total
 
-
-def sumar_promedio_estudiantes(datos):      
+def carro_potencia_promedio(datos_carro):
     total=0
 
-    for datos_estudiante in datos_estudiantes.values():
-        total += datos_estudiante["promedio"]
-    return total  
-
+    for datos_carro in datos_carros.values():
+        total += datos_carro["hp_carro"]
+    return total
 
 if menu == "N":
-    if datos_estudiantes:
+    if datos_carros:
 
-        estudiante_mayor = estudiante_mayor(datos_estudiantes)
+        carro_mas_reciente = carro_mas_reciente(datos_carros)
 
-        total_edades_estudiantes = sumar_edades_estudiantes(datos_estudiantes)
-        promedio_edad_estudiantes = total_edades_estudiantes / len(datos_estudiantes)
+        carro_anios_marca = carro_anios(datos_carros)   
+        promedio_anio_carro = carro_anios_marca / len(datos_carros)
 
-        menor_promedio = menor_promedio(datos_estudiantes)
+        carro_menor_potencia = carro_menor_potencia(datos_carros)
 
-        total_promedio_estudiantes = sumar_promedio_estudiantes(datos_estudiantes)
-        promedio_estudiantes = total_edades_estudiantes / len(datos_estudiantes)
+        carros_promedio_hp = carro_potencia_promedio(datos_carros)
+        carro_hp_promedio = carros_promedio_hp(datos_carros)
 
         print("\nResumen:")
-        print(f"• Nombre del estudiante de mayor edad: {estudiante_mayor}")
-        print(f"• Edad promedio: {promedio_edad_estudiantes:.1f} años")
-        print(f"• Nombre del estudiante de menor promedio: {menor_promedio}")
-        print(f"• Promedio notas: {promedio_estudiantes:.2f}")
-        print(f"• Cantidad de personas mayores de 30 años y con promedio mayor a 4.60: {estudiantes_mayor_30__mejor_promedio}")
+        print(f"• Nombre del estudiante de mayor edad: {carro_mas_reciente}")
+        print(f"• Edad promedio: {promedio_anio_carro:.1f} años")
+        print(f"• Nombre del estudiante de menor promedio: {carro_menor_potencia}")
+        print(f"• Promedio notas: {carro_hp_promedio:.2f}")
+        print(f"• Cantidad de personas mayores de 30 años y con promedio mayor a 4.60: {carros_2024_Y_mayor_hp}")
     else:
         print("No se ingresaron datos.")
-
-
-
-
-
-
 
 
 
