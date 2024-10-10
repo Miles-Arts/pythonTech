@@ -4494,88 +4494,88 @@ facturas={}
 
 
 
-datos_carros={}
-menu="S"
-carros_2024_Y_mayor_hp=0
+# datos_carros={}
+# menu="S"
+# carros_2024_Y_mayor_hp=0
 
 
-while menu != "N":
+# while menu != "N":
 
-    marca_carro=input("Ingrese marca vehículo: ").title()
-    anio_carro=int(input("Ingrese año vehículo: "))
-    hp_carro=float(input("Ingrese potencia vehículo: "))
+#     marca_carro=input("Ingrese marca vehículo: ").title()
+#     anio_carro=int(input("Ingrese año vehículo: "))
+#     hp_carro=float(input("Ingrese potencia vehículo: "))
 
-    datos_carro={
-        "anio_carro": anio_carro,
-        "hp_carro": hp_carro
-    }
+#     datos_carro={
+#         "anio_carro": anio_carro,
+#         "hp_carro": hp_carro
+#     }
 
-    datos_carros[marca_carro]=datos_carro
+#     datos_carros[marca_carro]=datos_carro
 
 
-    if anio_carro > 2022 and hp_carro > 250:
-        carros_2024_Y_mayor_hp += 1
+#     if anio_carro > 2022 and hp_carro > 250:
+#         carros_2024_Y_mayor_hp += 1
 
-    menu=input("¿Desea contionuar (S/N)? ").upper()
+#     menu=input("¿Desea contionuar (S/N)? ").upper()
 
-def carro_mas_reciente(carros_dato):
-    carro_mas_nuevo=None
-    mas_nuevo=-1
+# def carro_mas_reciente(carros_dato):
+#     carro_mas_nuevo=None
+#     mas_nuevo=-1
 
-    for marca, datos_carro in datos_carros.items():
+#     for marca, datos_carro in datos_carros.items():
 
-        if datos_carro["anio_carro"] > mas_nuevo:
-            mas_nuevo = datos_carro["anio_carro"]
-            carro_mas_nuevo = marca
-        return carro_mas_nuevo    
+#         if datos_carro["anio_carro"] > mas_nuevo:
+#             mas_nuevo = datos_carro["anio_carro"]
+#             carro_mas_nuevo = marca
+#         return carro_mas_nuevo    
 
-def carro_menor_potencia(carros_dato):
-    menor_potencia_carro=None
-    menor_potencia=float("inf")
+# def carro_menor_potencia(carros_dato):
+#     menor_potencia_carro=None
+#     menor_potencia=float("inf")
 
-    for marca, datos_carro in datos_carros.items():
+#     for marca, datos_carro in datos_carros.items():
 
-        if datos_carro["hp_carro"] < menor_potencia:
-            menor_potencia= datos_carro["hp_carro"]
-            menor_potencia_carro = marca
+#         if datos_carro["hp_carro"] < menor_potencia:
+#             menor_potencia= datos_carro["hp_carro"]
+#             menor_potencia_carro = marca
 
-    return menor_potencia_carro    
+#     return menor_potencia_carro    
 
-def carro_anios(carros_dato):
-    total=0
+# def carro_anios(carros_dato):
+#     total=0
 
-    for datos_carro in datos_carros.values():
-        total += datos_carro["anio_carro"]
-    return total
+#     for datos_carro in datos_carros.values():
+#         total += datos_carro["anio_carro"]
+#     return total
 
-def carro_potencia_promedio(datos_carro):
-    total=0
+# def carro_potencia_promedio(datos_carro):
+#     total=0
 
-    for datos_carro in datos_carros.values():
-        total += datos_carro["hp_carro"]
-    return total
+#     for datos_carro in datos_carros.values():
+#         total += datos_carro["hp_carro"]
+#     return total
 
-if menu == "N":
-    if datos_carros:
+# if menu == "N":
+#     if datos_carros:
 
-        carro_mas_reciente = carro_mas_reciente(datos_carros)
+#         carro_mas_reciente = carro_mas_reciente(datos_carros)
 
-        total_carro_anios_marca = carro_anios(datos_carros)   
-        promedio_anio_carro = total_carro_anios_marca / len(datos_carros)
+#         total_carro_anios_marca = carro_anios(datos_carros)   
+#         promedio_anio_carro = total_carro_anios_marca / len(datos_carros)
 
-        carro_menor_potencia = carro_menor_potencia(datos_carros)
+#         carro_menor_potencia = carro_menor_potencia(datos_carros)
 
-        total_carros_promedio_hp = carro_potencia_promedio(datos_carros)
-        carro_hp_promedio = total_carros_promedio_hp / len(datos_carros)
+#         total_carros_promedio_hp = carro_potencia_promedio(datos_carros)
+#         carro_hp_promedio = total_carros_promedio_hp / len(datos_carros)
 
-        print("\nResumen:")
-        print(f"• Nombre de la marca del vehículo más nuevo: {carro_mas_reciente}")
-        print(f"• Promedio año carro: {promedio_anio_carro:.0f}")
-        print(f"• Marca vehículo menor potencia: {carro_menor_potencia}")
-        print(f"• Promedio potencia: {carro_hp_promedio:.1f} hp")
-        print(f"• Cantidad de vehiculos del 2023 al 2024 y con potencia mayor a 250 hp: {carros_2024_Y_mayor_hp}")
-    else:
-        print("No se ingresaron datos.")
+#         print("\nResumen:")
+#         print(f"• Nombre de la marca del vehículo más nuevo: {carro_mas_reciente}")
+#         print(f"• Promedio año carro: {promedio_anio_carro:.0f}")
+#         print(f"• Marca vehículo menor potencia: {carro_menor_potencia}")
+#         print(f"• Promedio potencia: {carro_hp_promedio:.1f} hp")
+#         print(f"• Cantidad de vehiculos del 2023 al 2024 y con potencia mayor a 250 hp: {carros_2024_Y_mayor_hp}")
+#     else:
+#         print("No se ingresaron datos.")
 
 
 
@@ -4619,41 +4619,56 @@ def empleado_mejor_ranking(empleados_datos):
         if datos_empleado["codigo"] > numero_ranking:
             numero_ranking = datos_empleado["codigo"]
             nombre_mejor_ranking = nombre
-    return nombre_mejor_ranking  
+        return nombre_mejor_ranking  
 
 def empleado_menor_venta(empleados_datos):
     nombre_empledado_menor_venta=None
     cantidad_venta=float("inf")
 
     for nombre, datos_empleado in datos_empleados.items():
-        if datos_empleados["ventas"] < cantidad_venta:
-            cantidad_venta = datos_empleados["ventas"]
-            nombre_empledado_menor_venta = nombre      
+
+        if datos_empleado["ventas"] < cantidad_venta:
+            cantidad_venta = datos_empleado["ventas"]
+            nombre_empledado_menor_venta = nombre    
+
     return nombre_empledado_menor_venta
 
 def empleado_codigo(empleados_datos):
     total=0
 
     for datos_empleado in datos_empleados.values():
-        total = datos_empleado["codigo"]
+        total += datos_empleado["codigo"]
     return total
 
 def empleados_promedio_ventas(empleados_datos):
     total=0
 
     for datos_empleado in datos_empleados.values():
-        total = datos_empleado["ventas"] 
+        total += datos_empleado["ventas"] 
     return total
 
 if menu == "N":
     if datos_empleados:
-        
-                       
+
+        empleado_mejor_ranking = empleado_mejor_ranking(datos_empleados)
+
+        total_codigo_empleados = empleado_codigo(datos_empleados)
+        promedio_codigo= total_codigo_empleados / len(datos_empleados)
+
+        empleado_menor_venta = empleado_menor_venta(datos_empleados)
+
+        total_promedio_ventas = empleados_promedio_ventas(datos_empleados)
+        empleado_mejor_promedio = total_promedio_ventas / len(datos_empleados)
 
 
-
-
-
+        print("\nResumen:")
+        print(f"• Nombre del mejor empleado: {empleado_mejor_ranking}")
+        print(f"• Promedio ranking: {promedio_codigo:.0f}")
+        print(f"• Empleado con menores ventas: {empleado_menor_venta}")
+        print(f"• Promedio ventas: {empleado_mejor_promedio:.1f}")
+        print(f"• Cantidad de empleados con mejor ranking y más ventas: {mejor_empleado_mejores_ventas}")
+    else:
+        print("No se ingresaron datos.")
 
 
 
