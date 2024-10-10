@@ -4502,18 +4502,18 @@ carros_2024_Y_mayor_hp=0
 while menu != "N":
 
     marca_carro=input("Ingrese marca vehículo: ").title()
-    anio_carro=int(input("Ingrse año vehículo: "))
-    hp_carro=float(input("Ingrese potencia: "))
+    anio_carro=int(input("Ingrese año vehículo: "))
+    hp_carro=float(input("Ingrese potencia vehículo: "))
 
     datos_carro={
         "anio_carro": anio_carro,
         "hp_carro": hp_carro
     }
 
-    datos_carros["marca_carro"]=datos_carro
+    datos_carros[marca_carro]=datos_carro
 
 
-    if anio_carro > 2024 and hp_carro > 250:
+    if anio_carro > 2022 and hp_carro > 250:
         carros_2024_Y_mayor_hp += 1
 
     menu=input("¿Desea contionuar (S/N)? ").upper()
@@ -4538,12 +4538,13 @@ def carro_menor_potencia(carros_dato):
         if datos_carro["hp_carro"] < menor_potencia:
             menor_potencia= datos_carro["hp_carro"]
             menor_potencia_carro = marca
-        return menor_potencia_carro    
+
+    return menor_potencia_carro    
 
 def carro_anios(carros_dato):
     total=0
 
-    for datos_carro in datos_carros.values:
+    for datos_carro in datos_carros.values():
         total += datos_carro["anio_carro"]
     return total
 
@@ -4559,20 +4560,20 @@ if menu == "N":
 
         carro_mas_reciente = carro_mas_reciente(datos_carros)
 
-        carro_anios_marca = carro_anios(datos_carros)   
-        promedio_anio_carro = carro_anios_marca / len(datos_carros)
+        total_carro_anios_marca = carro_anios(datos_carros)   
+        promedio_anio_carro = total_carro_anios_marca / len(datos_carros)
 
         carro_menor_potencia = carro_menor_potencia(datos_carros)
 
-        carros_promedio_hp = carro_potencia_promedio(datos_carros)
-        carro_hp_promedio = carros_promedio_hp(datos_carros)
+        total_carros_promedio_hp = carro_potencia_promedio(datos_carros)
+        carro_hp_promedio = total_carros_promedio_hp / len(datos_carros)
 
         print("\nResumen:")
-        print(f"• Nombre del estudiante de mayor edad: {carro_mas_reciente}")
-        print(f"• Edad promedio: {promedio_anio_carro:.1f} años")
-        print(f"• Nombre del estudiante de menor promedio: {carro_menor_potencia}")
-        print(f"• Promedio notas: {carro_hp_promedio:.2f}")
-        print(f"• Cantidad de personas mayores de 30 años y con promedio mayor a 4.60: {carros_2024_Y_mayor_hp}")
+        print(f"• Nombre de la marca del vehículo más nuevo: {carro_mas_reciente}")
+        print(f"• Promedio año carro: {promedio_anio_carro:.0f}")
+        print(f"• Marca vehículo menor potencia: {carro_menor_potencia}")
+        print(f"• Promedio potencia: {carro_hp_promedio:.1f} hp")
+        print(f"• Cantidad de vehiculos del 2023 al 2024 y con potencia mayor a 250 hp: {carros_2024_Y_mayor_hp}")
     else:
         print("No se ingresaron datos.")
 
