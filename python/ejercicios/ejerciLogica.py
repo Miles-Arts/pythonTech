@@ -4676,37 +4676,37 @@ facturas={}
 
 # #####################
 
-categoria_productos={}
-menu="S"
-mas_vendido_mas_costoso=0
+# categoria_productos={}
+# menu="S"
+# mas_vendido_mas_costoso=0
 
-while menu != "N":
+# while menu != "N":
 
-    producto=input("Ingrese producto: ").title()
-    cantidad=int(input("Cantidad de productos vendidos: "))
-    venta=float(input("Ventas totales mes: "))
+#     producto=input("Ingrese producto: ").title()
+#     cantidad=int(input("Cantidad de productos vendidos: "))
+#     venta=float(input("Ventas totales mes: "))
 
-    categoria_producto={
-        "cantidad": cantidad,
-        "venta": venta
-    }
+#     categoria_producto={
+#         "cantidad": cantidad,
+#         "venta": venta
+#     }
 
-    categoria_productos[producto]=categoria_producto
+#     categoria_productos[producto]=categoria_producto
 
-    if venta > 500 and cantidad > 100:
-        mas_vendido_mas_costoso += 1
+#     if venta > 500 and cantidad > 100:
+#         mas_vendido_mas_costoso += 1
 
-    menu=input("¿Desea continuar (S/N)? ").upper()
+#     menu=input("¿Desea continuar (S/N)? ").upper()
 
-def producto_mas_vendido(productos):     
-    nombre_mas_vendido=None
-    mas_vendido=-1
+# def producto_mas_vendido(productos):     
+#     nombre_mas_vendido=None
+#     mas_vendido=-1
 
-    for nombre, categoria_producto in categoria_productos.items():
-        if categoria_producto["cantidad"] > mas_vendido:
-            mas_vendido = categoria_producto["cantidad"]
-            nombre_mas_vendido=nombre
-    return nombre_mas_vendido    
+#     for nombre, categoria_producto in categoria_productos.items():
+#         if categoria_producto["cantidad"] > mas_vendido:
+#             mas_vendido = categoria_producto["cantidad"]
+#             nombre_mas_vendido=nombre
+#     return nombre_mas_vendido    
 
 def producto_menor_venta(productos):
     nombre_menos_vendido=None
@@ -4718,42 +4718,42 @@ def producto_menor_venta(productos):
            nombre_menos_vendido=nombre
     return nombre_menos_vendido        
 
-def productos_cantidad(productos):
-    total=0
+# def productos_cantidad(productos):
+#     total=0
 
-    for categoria_producto in categoria_productos.values():
-        total+=categoria_producto["cantidad"]
-    return total    
+#     for categoria_producto in categoria_productos.values():
+#         total+=categoria_producto["cantidad"]
+#     return total    
 
 
-def productos_promedio(productos):
-    total=0
+# def productos_promedio(productos):
+#     total=0
 
-    for categoria_producto in categoria_productos.values():
-        total+=categoria_producto["venta"]
-    return total
+#     for categoria_producto in categoria_productos.values():
+#         total+=categoria_producto["venta"]
+#     return total
 
-if menu == "N":
-    if categoria_productos:
+# if menu == "N":
+#     if categoria_productos:
 
-        producto_mas_vendido= producto_mas_vendido(categoria_productos)
+#         producto_mas_vendido= producto_mas_vendido(categoria_productos)
 
-        total_cantidad_productos = productos_cantidad(categoria_productos)
-        promedio_cantidades=total_cantidad_productos / len(categoria_productos)
+#         total_cantidad_productos = productos_cantidad(categoria_productos)
+#         promedio_cantidades=total_cantidad_productos / len(categoria_productos)
 
-        producto_menor_venta = producto_menor_venta(categoria_productos)
+#         producto_menor_venta = producto_menor_venta(categoria_productos)
 
-        total_ventas_promedio = productos_promedio(categoria_productos)
-        producto_mejor_promedio = total_ventas_promedio / len(categoria_productos)
+#         total_ventas_promedio = productos_promedio(categoria_productos)
+#         producto_mejor_promedio = total_ventas_promedio / len(categoria_productos)
 
-        print("\nResumen:")
-        print(f"• Producto más vendido: {producto_mas_vendido}")
-        print(f"• Promedio de productos vendidos: {promedio_cantidades:.0f}")
-        print(f"• Producto con menores ventas: {producto_menor_venta}")
-        print(f"• Promedio ventas: {producto_mejor_promedio:.1f}")
-        print(f"• Producto con mejor venta y más cantidad: {mas_vendido_mas_costoso}")
-    else:
-        print("No se ingresaron datos.")
+#         print("\nResumen:")
+#         print(f"• Producto más vendido: {producto_mas_vendido}")
+#         print(f"• Promedio de productos vendidos: {promedio_cantidades:.0f}")
+#         print(f"• Producto con menores ventas: {producto_menor_venta}")
+#         print(f"• Promedio ventas: {producto_mejor_promedio:.1f}")
+#         print(f"• Producto con mejor venta y más cantidad: {mas_vendido_mas_costoso}")
+#     else:
+#         print("No se ingresaron datos.")
 
 
 #####################
@@ -4768,7 +4768,7 @@ while menu != "N":
 
     estudiante=str(input("Ingrese nombre estudiante: ")).title()
     edad=int(input("Ingrese edad estudiante: "))
-    promedio=float("Ingrese promedio estudiante: ")
+    promedio=float(input("Ingrese promedio estudiante: "))
 
 
     estudiante_lista={
@@ -4781,15 +4781,15 @@ while menu != "N":
     if edad < 25 and promedio > 4.5:
         menor_edad_mejor_promedio += 1
 
-        menu=str(input("¿Desea constinuar (S/N)? ")).upper()
+    menu=str(input("¿Desea constinuar (S/N)? ")).upper()
 
 def  estudiante_mejor(datos_estudiantes):
      nombre_estudiante_edad=None
      estudiante_mayor=-1
 
      for nombre, datos_estudiante in estudiantes_listas.items():
-        if datos_estudiante["edad"] > estudiante_mayor:
-            estudiante_mayor = datos_estudiante["edad"]
+        if datos_estudiante["promedio"] > estudiante_mayor:
+            estudiante_mayor = datos_estudiante["promedio"]
             nombre_estudiante_edad = nombre
      return nombre_estudiante_edad
 
@@ -4811,6 +4811,36 @@ def promedio_edad(datos_estudiante):
     return total    
 
 def promedio_notas(datos_estudiante):
+    total=0
+
+    for datos_estudiantes in estudiantes_listas.values():
+        total += datos_estudiantes["promedio"]
+    return total
+
+if menu == "N":
+
+    if estudiantes_listas:
+
+        estudiante_mejor=estudiante_mejor(estudiantes_listas)
+
+        total_promedio_edad=promedio_edad(estudiantes_listas)
+        promedio_edades=total_promedio_edad/len(estudiantes_listas)
+
+        estudiante_edad=estudiante_edad(estudiantes_listas)
+
+        total_promedio=promedio_notas(estudiantes_listas)
+        mejor_estudiante=total_promedio/len(estudiantes_listas)
+
+        print("\nResumen:")
+        print(f"• Estudiante con mejor promedio: {estudiante_mejor}")
+        print(f"• Edad promedio de estudiantes: {promedio_edades:.0f}")
+        print(f"• Estudiante menor promedio: {estudiante_edad}")
+        print(f"• Promedio notas: {mejor_estudiante:.1f}")
+        print(f"• Cantidad de estudiantes menores y con mejor promedio: {menor_edad_mejor_promedio}")
+    else:
+        print("No se ingresaron datos.")
+
+
 
 
 
