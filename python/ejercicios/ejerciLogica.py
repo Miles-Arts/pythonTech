@@ -4674,9 +4674,67 @@ if menu == "N":
 
 
 
+# #####################
+
+categoria_productos={}
+menu="S"
+mas_vendido_mas_costoso=0
+
+while menu != "N":
+
+    producto=input("Ingrese producto: ").title()
+    cantidad=int(input("Cantidad de productos vendidos: "))
+    venta=float(input("Ventas totales mes: "))
+
+    categoria_producto={
+        "cantidad": cantidad,
+        "venta": venta
+    }
+
+    categoria_productos[producto]=categoria_producto
+
+    if venta > 500 and cantidad > 100:
+        mas_vendido_mas_costoso += 1
+
+    menu=input("¿Desea continuar (S/N)? ").upper()
+
+def producto_mas_vendido(productos):     
+    nombre_mas_vendido=None
+    mas_vendido=-1
+
+    for nombre, categoria_producto in categoria_productos.items():
+        if categoria_producto["cantidad"] > mas_vendido:
+            mas_vendido = categoria_producto["cantidad"]
+            nombre_mas_vendido=nombre
+    return nombre_mas_vendido    
+
+def producto_menor_venta(productos):
+    nombre_menos_vendido=None
+    menos_vendido=float("inf")
+
+    for nombre, categoria_producto in categoria_productos.items():
+        if categoria_producto["venta"] < menos_vendido:
+           menos_vendido=categoria_producto["venta"]
+           nombre_menos_vendido=nombre
+    return nombre_menos_vendido        
+
+def productos_cantidad(productos):
+    total=0
+
+    for categoria_producto in categoria_productos.values():
+        total+=categoria_producto["cantidad"]
+    return total    
 
 
+def productos_promedio(productos):
+    total=0
 
+    for categoria_producto in categoria_productos.values():
+        total+=categoria_producto["venta"]
+    return total
+
+if menu == "N":
+    if categoria_productos:
 
 
 
