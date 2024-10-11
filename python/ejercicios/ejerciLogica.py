@@ -4756,16 +4756,61 @@ if menu == "N":
         print("No se ingresaron datos.")
 
 
+#####################
 
 
 
+estudiantes_listas={}
+menu="S"
+menor_edad_mejor_promedio=0
+
+while menu != "N":
+
+    estudiante=str(input("Ingrese nombre estudiante: ")).title()
+    edad=int(input("Ingrese edad estudiante: "))
+    promedio=float("Ingrese promedio estudiante: ")
 
 
+    estudiante_lista={
+        "edad": edad,
+        "promedio": promedio
+    }
 
+    estudiantes_listas[estudiante]=estudiante_lista
 
+    if edad < 25 and promedio > 4.5:
+        menor_edad_mejor_promedio += 1
 
+        menu=str(input("¿Desea constinuar (S/N)? ")).upper()
 
+def  estudiante_mejor(datos_estudiantes):
+     nombre_estudiante_edad=None
+     estudiante_mayor=-1
 
+     for nombre, datos_estudiante in estudiantes_listas.items():
+        if datos_estudiante["edad"] > estudiante_mayor:
+            estudiante_mayor = datos_estudiante["edad"]
+            nombre_estudiante_edad = nombre
+     return nombre_estudiante_edad
+
+def  estudiante_edad(datos_estudiantes):
+    nombre_promedio_estudiante=None
+    estudiante_menor_promedio=float("inf")  
+
+    for nombre, datos_estudiante in estudiantes_listas.items():
+        if datos_estudiante["promedio"] < estudiante_menor_promedio:
+            estudiante_menor_promedio= datos_estudiante["promedio"]
+            nombre_promedio_estudiante=nombre
+    return nombre_promedio_estudiante
+
+def promedio_edad(datos_estudiante):
+    total=0
+
+    for datos_estudiantes in estudiantes_listas.values():
+        total+= datos_estudiantes["edad"]
+    return total    
+
+def promedio_notas(datos_estudiante):
 
 
 
