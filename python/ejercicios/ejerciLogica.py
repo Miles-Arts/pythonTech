@@ -4587,88 +4587,88 @@ facturas={}
 ##################################
 
 
-datos_empleados={}
-menu="S"
-mejor_empleado_mejores_ventas=0
+# datos_empleados={}
+# menu="S"
+# mejor_empleado_mejores_ventas=0
 
-while menu != "N":
+# while menu != "N":
 
-    nombre=input("Ingrese nombre empleado: ").title()
-    codigo=int(input("Ingrese ranking empleado: "))
-    ventas=float(input("Ingrese total ventas último mes: "))
+#     nombre=input("Ingrese nombre empleado: ").title()
+#     codigo=int(input("Ingrese ranking empleado: "))
+#     ventas=float(input("Ingrese total ventas último mes: "))
 
-    datos_empleado={
-        "codigo": codigo,
-        "ventas": ventas
-    }
+#     datos_empleado={
+#         "codigo": codigo,
+#         "ventas": ventas
+#     }
 
-    datos_empleados[nombre]=datos_empleado
+#     datos_empleados[nombre]=datos_empleado
 
-    if codigo < 20 and ventas > 100:
-        mejor_empleado_mejores_ventas += 1
+#     if codigo < 20 and ventas > 100:
+#         mejor_empleado_mejores_ventas += 1
 
-    menu=input("¿Desea continuar (S/N)? ").upper() 
+#     menu=input("¿Desea continuar (S/N)? ").upper() 
 
-def empleado_mejor_ranking(empleados_datos):
+# def empleado_mejor_ranking(empleados_datos):
 
-    nombre_mejor_ranking=None
-    numero_ranking=-1
+#     nombre_mejor_ranking=None
+#     numero_ranking=-1
 
-    for nombre, datos_empleado in datos_empleados.items():
+#     for nombre, datos_empleado in datos_empleados.items():
 
-        if datos_empleado["codigo"] > numero_ranking:
-            numero_ranking = datos_empleado["codigo"]
-            nombre_mejor_ranking = nombre
-        return nombre_mejor_ranking  
+#         if datos_empleado["codigo"] > numero_ranking:
+#             numero_ranking = datos_empleado["codigo"]
+#             nombre_mejor_ranking = nombre
+#         return nombre_mejor_ranking  
 
-def empleado_menor_venta(empleados_datos):
-    nombre_empledado_menor_venta=None
-    cantidad_venta=float("inf")
+# def empleado_menor_venta(empleados_datos):
+#     nombre_empledado_menor_venta=None
+#     cantidad_venta=float("inf")
 
-    for nombre, datos_empleado in datos_empleados.items():
+#     for nombre, datos_empleado in datos_empleados.items():
 
-        if datos_empleado["ventas"] < cantidad_venta:
-            cantidad_venta = datos_empleado["ventas"]
-            nombre_empledado_menor_venta = nombre    
+#         if datos_empleado["ventas"] < cantidad_venta:
+#             cantidad_venta = datos_empleado["ventas"]
+#             nombre_empledado_menor_venta = nombre    
 
-    return nombre_empledado_menor_venta
+#     return nombre_empledado_menor_venta
 
-def empleado_codigo(empleados_datos):
-    total=0
+# def empleado_codigo(empleados_datos):
+#     total=0
 
-    for datos_empleado in datos_empleados.values():
-        total += datos_empleado["codigo"]
-    return total
+#     for datos_empleado in datos_empleados.values():
+#         total += datos_empleado["codigo"]
+#     return total
 
-def empleados_promedio_ventas(empleados_datos):
-    total=0
+# def empleados_promedio_ventas(empleados_datos):
+#     total=0
 
-    for datos_empleado in datos_empleados.values():
-        total += datos_empleado["ventas"] 
-    return total
+#     for datos_empleado in datos_empleados.values():
+#         total += datos_empleado["ventas"] 
+#     return total
 
-if menu == "N":
-    if datos_empleados:
+# if menu == "N":
+#     if datos_empleados:
 
-        empleado_mejor_ranking = empleado_mejor_ranking(datos_empleados)
+#         empleado_mejor_ranking = empleado_mejor_ranking(datos_empleados)
 
-        total_codigo_empleados = empleado_codigo(datos_empleados)
-        promedio_codigo= total_codigo_empleados / len(datos_empleados)
+#         total_codigo_empleados = empleado_codigo(datos_empleados)
+#         promedio_codigo= total_codigo_empleados / len(datos_empleados)
 
-        empleado_menor_venta = empleado_menor_venta(datos_empleados)
+#         empleado_menor_venta = empleado_menor_venta(datos_empleados)
 
-        total_promedio_ventas = empleados_promedio_ventas(datos_empleados)
-        empleado_mejor_promedio = total_promedio_ventas / len(datos_empleados)
+#         total_promedio_ventas = empleados_promedio_ventas(datos_empleados)
+#         empleado_mejor_promedio = total_promedio_ventas / len(datos_empleados)
 
 
-        print("\nResumen:")
-        print(f"• Nombre del mejor empleado: {empleado_mejor_ranking}")
-        print(f"• Promedio ranking: {promedio_codigo:.0f}")
-        print(f"• Empleado con menores ventas: {empleado_menor_venta}")
-        print(f"• Promedio ventas: {empleado_mejor_promedio:.1f}")
-        print(f"• Cantidad de empleados con mejor ranking y más ventas: {mejor_empleado_mejores_ventas}")
-    else:
-        print("No se ingresaron datos.")
+#         print("\nResumen:")
+#         print(f"• Nombre del mejor empleado: {empleado_mejor_ranking}")
+#         print(f"• Promedio ranking: {promedio_codigo:.0f}")
+#         print(f"• Empleado con menores ventas: {empleado_menor_venta}")
+#         print(f"• Promedio ventas: {empleado_mejor_promedio:.1f}")
+#         print(f"• Cantidad de empleados con mejor ranking y más ventas: {mejor_empleado_mejores_ventas}")
+#     else:
+#         print("No se ingresaron datos.")
 
 
 
@@ -4736,7 +4736,24 @@ def productos_promedio(productos):
 if menu == "N":
     if categoria_productos:
 
+        producto_mas_vendido= producto_mas_vendido(categoria_productos)
 
+        total_cantidad_productos = productos_cantidad(categoria_productos)
+        promedio_cantidades=total_cantidad_productos / len(categoria_productos)
+
+        producto_menor_venta = producto_menor_venta(categoria_productos)
+
+        total_ventas_promedio = productos_promedio(categoria_productos)
+        producto_mejor_promedio = total_ventas_promedio / len(categoria_productos)
+
+        print("\nResumen:")
+        print(f"• Producto más vendido: {producto_mas_vendido}")
+        print(f"• Promedio de productos vendidos: {promedio_cantidades:.0f}")
+        print(f"• Producto con menores ventas: {producto_menor_venta}")
+        print(f"• Promedio ventas: {producto_mejor_promedio:.1f}")
+        print(f"• Producto con mejor venta y más cantidad: {mas_vendido_mas_costoso}")
+    else:
+        print("No se ingresaron datos.")
 
 
 
