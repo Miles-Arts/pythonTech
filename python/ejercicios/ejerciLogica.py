@@ -4977,38 +4977,72 @@ facturas={}
 #CONTADOR PALABRAS AND FRECUENCIA PALABRAS
 
 
-def contador_palabras(texto):
-    texto=texto.split()
-    palabras={}
+# def contador_palabras(texto):
+#     texto=texto.split()
+#     palabras={}
 
-    for i in texto:
-        if i in palabras:
-            palabras[i] += 1
-        else:
-            palabras[i] = 1
-    return palabras
+#     for i in texto:
+#         if i in palabras:
+#             palabras[i] += 1
+#         else:
+#             palabras[i] = 1
+#     return palabras
 
-def contador_frecuencia_palabras(texto):
-    max_palabra=""
-    max_frecuencia=0
+# def contador_frecuencia_palabras(texto):
+#     max_palabra=""
+#     max_frecuencia=0
 
-    for palabra, frecuencia in texto.items():
-        if frecuencia > max_frecuencia:
-            max_palabra = palabra
-            max_frecuencia = frecuencia      
-        return max_frecuencia,max_palabra
+#     for palabra, frecuencia in texto.items():
+#         if frecuencia > max_frecuencia:
+#             max_palabra = palabra
+#             max_frecuencia = frecuencia      
+#         return max_frecuencia,max_palabra
 
  
-texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
-print(f"Contador palabras: {contador_palabras(texto)}")
-print(f"Palabras más repetida: {contador_frecuencia_palabras(contador_palabras(texto))}")
+# texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
+# print(f"Contador palabras: {contador_palabras(texto)}")
+# print(f"Palabras más repetida: {contador_frecuencia_palabras(contador_palabras(texto))}")
 
 
 
 
 
+#PROGRAMAICÓN FUNCIONAL
+
+# precio=0
+# porcentaje=0
+
+# lista={
+#     "precio": precio,   
+#     "procentaje": porcentaje   
+#         }
 
 
+# def descuento(precio):
+
+#         descuento=10
+#         precio =  precio - descuento 
+
+#         return precio
+
+# def iva(precio):
+
+#         iva=0.005
+#         precio =  precio + (precio * iva)
+
+#         return precio   
+
+# def compras(lista):
+        
+#         for precio, iva in lista.items():
+#                 print(precio)
+#                 print(iva)
+        
+       
+
+# print(descuento(100))
+# print(iva(100))
+# print(compras(lista))
 
 
 
