@@ -4840,11 +4840,33 @@ facturas={}
 #     else:
 #         print("No se ingresaron datos.")
 
+def contador_palabras(texto):
+    texto=texto.split()
+    palabras={}
+
+    for i in texto:
+        if i in palabras:
+            palabras[i]+=1
+        else:
+            palabras[i] = 1
+    return palabras            
+
+def palabra_mas_repetida(palabras):
+    
+    max_palabra=""
+    max_palabra_frecuente=0
+
+    for palabra, frecuencia in palabras.items():
+
+        if frecuencia > max_palabra_frecuente:
+            max_palabra = palabra
+            max_palabra_frecuente = frecuencia
+    return max_palabra, max_palabra_frecuente        
 
 
-
-
-
+texto = 'Como quieres que te quiera si el que quiero que me quiera no me quiere como quiero que me quiera'
+print(contador_palabras(texto))
+print(palabra_mas_repetida(contador_palabras(texto)))
 
 
 
