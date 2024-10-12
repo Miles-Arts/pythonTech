@@ -5044,24 +5044,48 @@ facturas={}
 # print(iva(100))
 # print(compras(lista))
 
+def aplicar_descuento(precio, descuento):
+     precio = precio - precio * descuento / 100
+     return precio
+
+def aplicar_iva(precio, procentaje_iva):
+     precio = precio + precio * procentaje_iva / 100
+     return precio
+
+def precio_cesta(cesta, funcion):
+    total=0
+
+    for precio, aplicar_descuento in cesta.items():
+          total += funcion(precio, aplicar_descuento)
+    return total
+
+
+print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
+print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
 
 
 
 
+#DEscuento
 
+def descuento(precio,descuento):
+     precio = precio - precio * descuento / 100
+     return precio
 
+def iva(precio, iva):
+     precio = precio + precio * iva / 100
+     return precio
 
+def cesta(pedido, descuento):
+     total=0
 
+     for precio, apliacar_iva in pedido.items():
+          total*= descuento(precio, apliacar_iva)
+     return total
 
-
-
-
-
-
-
-
-
-
+print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
+print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
+    
 
 
 
