@@ -5044,51 +5044,93 @@ facturas={}
 # print(iva(100))
 # print(compras(lista))
 
-def aplicar_descuento(precio, descuento):
-     precio = precio - precio * descuento / 100
-     return precio
+# def aplicar_descuento(precio, descuento):
+#      precio = precio - precio * descuento / 100
+#      return precio
 
-def aplicar_iva(precio, procentaje_iva):
-     precio = precio + precio * procentaje_iva / 100
-     return precio
+# def aplicar_iva(precio, procentaje_iva):
+#      precio = precio + precio * procentaje_iva / 100
+#      return precio
 
-def precio_cesta(cesta, funcion):
-    total=0
+# def precio_cesta(cesta, funcion):
+#     total=0
 
-    for precio, aplicar_descuento in cesta.items():
-          total += funcion(precio, aplicar_descuento)
-    return total
-
-
-print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
-print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
+#     for precio, iva_o_descuento in cesta.items():
+#           total += funcion(precio, iva_o_descuento)
+#     return total
 
 
+# print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
+# print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
 
 
-#DEscuento
 
-def descuento(precio,descuento):
-     precio = precio - precio * descuento / 100
-     return precio
 
-def iva(precio, iva):
-     precio = precio + precio * iva / 100
-     return precio
+# #DEscuento
 
-def cesta(pedido, descuento):
-     total=0
+# def descuento(precio,descuento):
+#      precio = precio - precio * descuento / 100
+#      return precio
 
-     for precio, apliacar_iva in pedido.items():
-          total*= descuento(precio, apliacar_iva)
-     return total
+# def iva(precio, iva):
+#      precio = precio + precio * iva / 100
+#      return precio
 
-print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
-print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
+# def cesta(pedido, descuento):
+#      total=0
+
+#      for precio, apliacar_iva in pedido.items():
+#           total*= descuento(precio, apliacar_iva)
+#      return total
+
+# print('El precio de la compra tras aplicar los descuentos es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_descuento))
+# print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 500:10, 100:1}, aplicar_iva))
     
 
 
 
+# def aplicar_descuento(precio, descuento):
+#      precio = precio - precio * descuento / 100
+#      return precio
+
+# def aplicar_iva(precio, iva):
+#      precio = precio + precio * iva / 100
+#      return precio
+
+# def precio_pedido(productos, funcion):
+#      total=0
+
+#      for precio, iva_o_descuento in productos.items():
+#           total+= funcion(precio, iva_o_descuento)
+#      return total
+
+# print('El precio de la compra tras aplicar los descuentos es: ', precio_pedido({1000:20, 500:10, 100:1}, aplicar_descuento))
+# print('El precio de la compra tras aplicar el IVA es: ', precio_pedido({1000:20, 500:10, 100:1}, aplicar_iva))
+
+
+
+#PEdidio tienda
+
+def precio_descuento(precio, descuento):
+     precio = precio - precio * descuento / 100
+     return precio
+
+def precio_iva(precio, iva):
+     precio = precio + precio * iva / 100
+     return precio
+
+def productos_pedido(productos, impuestos):
+     total =0
+
+     for precio, iva_o_descuento in productos.items():
+            total+= impuestos(precio, iva_o_descuento)
+     return total
+
+# print(f"Precio descuento: {productos_pedido({100:20,500:40,40:15}),precio_descuento}")
+# print(f"Precio descuento: {productos_pedido({100:20,500:40,40:15}),precio_iva}")
+
+print(f"Precio con descuento: {productos_pedido({100: 20, 500: 40, 40: 15}, precio_descuento)}") 
+print(f"Precio con IVA: {productos_pedido({100: 20, 500: 40, 40: 15}, precio_iva)}")
 
 
 
@@ -5096,20 +5138,7 @@ print('El precio de la compra tras aplicar el IVA es: ', precio_cesta({1000:20, 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##IVA DESCUENTO EN COMPRA
 
 
 
