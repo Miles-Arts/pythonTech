@@ -4708,15 +4708,15 @@ facturas={}
 #             nombre_mas_vendido=nombre
 #     return nombre_mas_vendido    
 
-def producto_menor_venta(productos):
-    nombre_menos_vendido=None
-    menos_vendido=float("inf")
+# def producto_menor_venta(productos):
+#     nombre_menos_vendido=None
+#     menos_vendido=float("inf")
 
-    for nombre, categoria_producto in categoria_productos.items():
-        if categoria_producto["venta"] < menos_vendido:
-           menos_vendido=categoria_producto["venta"]
-           nombre_menos_vendido=nombre
-    return nombre_menos_vendido        
+#     for nombre, categoria_producto in categoria_productos.items():
+#         if categoria_producto["venta"] < menos_vendido:
+#            menos_vendido=categoria_producto["venta"]
+#            nombre_menos_vendido=nombre
+#     return nombre_menos_vendido        
 
 # def productos_cantidad(productos):
 #     total=0
@@ -4760,85 +4760,85 @@ def producto_menor_venta(productos):
 
 
 
-estudiantes_listas={}
-menu="S"
-menor_edad_mejor_promedio=0
+# estudiantes_listas={}
+# menu="S"
+# menor_edad_mejor_promedio=0
 
-while menu != "N":
+# while menu != "N":
 
-    estudiante=str(input("Ingrese nombre estudiante: ")).title()
-    edad=int(input("Ingrese edad estudiante: "))
-    promedio=float(input("Ingrese promedio estudiante: "))
+#     estudiante=str(input("Ingrese nombre estudiante: ")).title()
+#     edad=int(input("Ingrese edad estudiante: "))
+#     promedio=float(input("Ingrese promedio estudiante: "))
 
 
-    estudiante_lista={
-        "edad": edad,
-        "promedio": promedio
-    }
+#     estudiante_lista={
+#         "edad": edad,
+#         "promedio": promedio
+#     }
 
-    estudiantes_listas[estudiante]=estudiante_lista
+#     estudiantes_listas[estudiante]=estudiante_lista
 
-    if edad < 25 and promedio > 4.5:
-        menor_edad_mejor_promedio += 1
+#     if edad < 25 and promedio > 4.5:
+#         menor_edad_mejor_promedio += 1
 
-    menu=str(input("¿Desea constinuar (S/N)? ")).upper()
+#     menu=str(input("¿Desea constinuar (S/N)? ")).upper()
 
-def  estudiante_mejor(datos_estudiantes):
-     nombre_estudiante_edad=None
-     estudiante_mayor=-1
+# def  estudiante_mejor(datos_estudiantes):
+#      nombre_estudiante_edad=None
+#      estudiante_mayor=-1
 
-     for nombre, datos_estudiante in estudiantes_listas.items():
-        if datos_estudiante["promedio"] > estudiante_mayor:
-            estudiante_mayor = datos_estudiante["promedio"]
-            nombre_estudiante_edad = nombre
-     return nombre_estudiante_edad
+#      for nombre, datos_estudiante in estudiantes_listas.items():
+#         if datos_estudiante["promedio"] > estudiante_mayor:
+#             estudiante_mayor = datos_estudiante["promedio"]
+#             nombre_estudiante_edad = nombre
+#      return nombre_estudiante_edad
 
-def  estudiante_edad(datos_estudiantes):
-    nombre_promedio_estudiante=None
-    estudiante_menor_promedio=float("inf")  
+# def  estudiante_edad(datos_estudiantes):
+#     nombre_promedio_estudiante=None
+#     estudiante_menor_promedio=float("inf")  
 
-    for nombre, datos_estudiante in estudiantes_listas.items():
-        if datos_estudiante["promedio"] < estudiante_menor_promedio:
-            estudiante_menor_promedio= datos_estudiante["promedio"]
-            nombre_promedio_estudiante=nombre
-    return nombre_promedio_estudiante
+#     for nombre, datos_estudiante in estudiantes_listas.items():
+#         if datos_estudiante["promedio"] < estudiante_menor_promedio:
+#             estudiante_menor_promedio= datos_estudiante["promedio"]
+#             nombre_promedio_estudiante=nombre
+#     return nombre_promedio_estudiante
 
-def promedio_edad(datos_estudiante):
-    total=0
+# def promedio_edad(datos_estudiante):
+#     total=0
 
-    for datos_estudiantes in estudiantes_listas.values():
-        total+= datos_estudiantes["edad"]
-    return total    
+#     for datos_estudiantes in estudiantes_listas.values():
+#         total+= datos_estudiantes["edad"]
+#     return total    
 
-def promedio_notas(datos_estudiante):
-    total=0
+# def promedio_notas(datos_estudiante):
+#     total=0
 
-    for datos_estudiantes in estudiantes_listas.values():
-        total += datos_estudiantes["promedio"]
-    return total
+#     for datos_estudiantes in estudiantes_listas.values():
+#         total += datos_estudiantes["promedio"]
+#     return total
 
-if menu == "N":
+# if menu == "N":
 
-    if estudiantes_listas:
+#     if estudiantes_listas:
 
-        estudiante_mejor=estudiante_mejor(estudiantes_listas)
+#         estudiante_mejor=estudiante_mejor(estudiantes_listas)
 
-        total_promedio_edad=promedio_edad(estudiantes_listas)
-        promedio_edades=total_promedio_edad/len(estudiantes_listas)
+#         total_promedio_edad=promedio_edad(estudiantes_listas)
+#         promedio_edades=total_promedio_edad/len(estudiantes_listas)
 
-        estudiante_edad=estudiante_edad(estudiantes_listas)
+#         estudiante_edad=estudiante_edad(estudiantes_listas)
 
-        total_promedio=promedio_notas(estudiantes_listas)
-        mejor_estudiante=total_promedio/len(estudiantes_listas)
+#         total_promedio=promedio_notas(estudiantes_listas)
+#         mejor_estudiante=total_promedio/len(estudiantes_listas)
 
-        print("\nResumen:")
-        print(f"• Estudiante con mejor promedio: {estudiante_mejor}")
-        print(f"• Edad promedio de estudiantes: {promedio_edades:.0f}")
-        print(f"• Estudiante menor promedio: {estudiante_edad}")
-        print(f"• Promedio notas: {mejor_estudiante:.1f}")
-        print(f"• Cantidad de estudiantes menores y con mejor promedio: {menor_edad_mejor_promedio}")
-    else:
-        print("No se ingresaron datos.")
+#         print("\nResumen:")
+#         print(f"• Estudiante con mejor promedio: {estudiante_mejor}")
+#         print(f"• Edad promedio de estudiantes: {promedio_edades:.0f}")
+#         print(f"• Estudiante menor promedio: {estudiante_edad}")
+#         print(f"• Promedio notas: {mejor_estudiante:.1f}")
+#         print(f"• Cantidad de estudiantes menores y con mejor promedio: {menor_edad_mejor_promedio}")
+#     else:
+#         print("No se ingresaron datos.")
 
 
 
