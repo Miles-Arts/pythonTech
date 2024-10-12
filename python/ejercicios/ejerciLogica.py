@@ -4840,65 +4840,168 @@ facturas={}
 #     else:
 #         print("No se ingresaron datos.")
 
+# def contador_palabras(texto):
+#     texto=texto.split()
+#     palabras={}
+
+#     for i in texto:
+#         if i in palabras:
+#             palabras[i]+=1
+#         else:
+#             palabras[i] = 1
+
+#     return palabras            
+
+
+# def palabra_mas_repetida(palabras):
+    
+#     max_palabra=""
+#     max_palabra_frecuente=0
+
+#     for palabra, frecuencia in palabras.items():
+
+#         if frecuencia > max_palabra_frecuente:
+#             max_palabra = palabra
+#             max_palabra_frecuente = frecuencia
+
+#     return max_palabra, max_palabra_frecuente        
+
+# # texto = 'Como quieres que te quiera si el que quiero que me quiera no me quiere como quiero que me quiera'
+# texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres"
+# print(f"Contador palabras: {contador_palabras(texto)}")
+# print(f"Palabras más repetida: {palabra_mas_repetida(contador_palabras(texto))}")
+
+
+
+
+##COntador palabras
+
+# def contador_word(text):
+#     text=text.split()
+#     diccionario={}
+
+#     for i in text:
+#         if i in diccionario:
+#             diccionario[i] += 1
+#         else:
+#             diccionario[i] = 1
+
+#     return diccionario
+
+# def contador_total_words(text):
+
+#     max_palabras=""
+#     max_frecuencia=0
+
+#     for palabra, frecuencia in text.items():
+#         if frecuencia > max_frecuencia:
+#             max_palabras = palabra
+#             max_frecuencia = frecuencia
+#     return max_palabras, max_frecuencia
+
+
+# text = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
+# print(f"Contador palabras: {contador_word(text)}")
+# print(f"Palabras más repetida: {contador_total_words(contador_word(text))}")
+
+
+
+
+#CONTADOR WORDS AND LETTERS
+
+# def contador_palabras(texto):
+#     texto=texto.split()
+#     palabras={}
+
+#     for i in texto:
+#         if i in palabras:
+#             palabras[i] +=  1
+#         else:
+#             palabras[i] = 1
+
+#     return palabras
+
+# def  contador_frecuencia_palabras(texto):
+
+#         max_palabra=""
+#         max_frecuencia=0
+
+#         for palabra, frecuencia in texto.items():
+#             if frecuencia > max_frecuencia:
+#                 max_palabra = palabra
+#                 max_frecuencia = frecuencia
+#         return max_palabra, max_frecuencia        
+
+
+# texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
+# print(f"Contador palabras: {contador_palabras(texto)}")
+# print(f"Palabras más repetida: {contador_frecuencia_palabras(contador_palabras(texto))}")
+
+
+
+#CONTADOR PALABRAS Y MAX PALABRA
+
+
+
+# def contador_palabras(texto):
+#     texto=texto.split()
+#     palabras={}
+
+#     for i in texto:
+#         if i in palabras:
+#             palabras[i] += 1
+#         else:
+#             palabras[i] = 1
+#     return palabras
+
+# def contador_frecuencia_palabras(texto):
+#     max_palabra=""
+#     max_frecuencia=0
+
+#     for palabra, frecuencia in texto.items():
+#         if frecuencia > max_frecuencia:
+#             max_palabra = palabra
+#             max_frecuencia = frecuencia
+
+#     return max_palabra, max_frecuencia
+
+  
+# texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
+# print(f"Contador palabras: {contador_palabras(texto)}")
+# print(f"Palabras más repetida: {contador_frecuencia_palabras(contador_palabras(texto))}")
+
+
+
+
+
+#CONTADOR PALABRAS AND FRECUENCIA PALABRAS
+
+
 def contador_palabras(texto):
     texto=texto.split()
     palabras={}
 
     for i in texto:
         if i in palabras:
-            palabras[i]+=1
+            palabras[i] += 1
         else:
             palabras[i] = 1
-    return palabras            
+    return palabras
 
-def palabra_mas_repetida(palabras):
-    
+def contador_frecuencia_palabras(texto):
     max_palabra=""
-    max_palabra_frecuente=0
+    max_frecuencia=0
 
-    for palabra, frecuencia in palabras.items():
-
-        if frecuencia > max_palabra_frecuente:
+    for palabra, frecuencia in texto.items():
+        if frecuencia > max_frecuencia:
             max_palabra = palabra
-            max_palabra_frecuente = frecuencia
-    return max_palabra, max_palabra_frecuente        
+            max_frecuencia = frecuencia      
+        return max_frecuencia,max_palabra
 
-
-# texto = 'Como quieres que te quiera si el que quiero que me quiera no me quiere como quiero que me quiera'
-texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres"
+ 
+texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres".title()
 print(f"Contador palabras: {contador_palabras(texto)}")
-print(f"Palabras más repetida: {palabra_mas_repetida(contador_palabras(texto))}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(f"Palabras más repetida: {contador_frecuencia_palabras(contador_palabras(texto))}")
 
 
 
