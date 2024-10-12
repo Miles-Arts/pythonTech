@@ -4864,9 +4864,10 @@ def palabra_mas_repetida(palabras):
     return max_palabra, max_palabra_frecuente        
 
 
-texto = 'Como quieres que te quiera si el que quiero que me quiera no me quiere como quiero que me quiera'
-print(contador_palabras(texto))
-print(palabra_mas_repetida(contador_palabras(texto)))
+# texto = 'Como quieres que te quiera si el que quiero que me quiera no me quiere como quiero que me quiera'
+texto = "tres tristes tigres comian trigo en tres tristes platos, sentados en un trigal sentados en un trigal en tres tristes platos, comian trigo tres tristes tigres"
+print(f"Contador palabras: {contador_palabras(texto)}")
+print(f"Palabras más repetida: {palabra_mas_repetida(contador_palabras(texto))}")
 
 
 
