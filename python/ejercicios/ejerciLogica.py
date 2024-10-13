@@ -5303,43 +5303,69 @@ facturas={}
 
 #CALCULADORA CIENTIFICA
 
-def aplicar_algortimo(calculador, numero_entero):
-    funcion={'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
-    resultado={}
+# def aplicar_algortimo(calculador, numero_entero):
+#     funcion={'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+#     resultado={}
 
-    for i in range(1, numero_entero):
-        resultado[i]=funcion[calculador](i)
-    return resultado
+#     for i in range(1, numero_entero):
+#         resultado[i]=funcion[calculador](i)
+#     return resultado
 
-def calcular():
-    calculo=input("función que desea realizar (sin, cos, tan, exp, log) ").lower()
-    numero=int(input("Número entero positivo: "))
+# def calcular():
+#     calculo=input("función que desea realizar (sin, cos, tan, exp, log) ").lower()
+#     numero=int(input("Número entero positivo: "))
 
-    for valor, funcion_hacer in aplicar_algortimo(calculo, numero).items():
-        print(f"{valor} {funcion_hacer}")
-    return
+#     for valor, funcion_hacer in aplicar_algortimo(calculo, numero).items():
+#         print(f"{valor} {funcion_hacer}")
+#     return
 
-calcular()            
-
-
+# calcular()            
 
 
 
 
 
 
+# def aplicar_algoritmos(calcular, numero_entero):
+#     funcion={'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+#     resultado={}
+
+#     for i in range(1, numero_entero):
+#         resultado[i]=funcion[calcular](i)
+#     return resultado
+
+# def calcular():
+#     calculo=input("Función a realizar: (sin, cos, tan, exp, log) ").lower()
+#     numero=int(input("Número entero: "))
+
+#     for valor, funcion_hacer in aplicar_algoritmos(calculo, numero).items():
+#         print(f"{valor} {funcion_hacer}")
+#     return    
+
+# calcular()
 
 
 
+#list
 
+# 
 
+num=[1,2,3,4]
 
+def aplicar_funcion_lista(funcion, listas):
 
+    lista=[]
 
+    for i in listas:
+        lista.append(funcion(i))
 
+    return lista    
 
+def cuadrado(numero):
+    numero =  numero * numero  
+    return  numero
 
-
+print(f"Resultado:  { aplicar_funcion_lista(cuadrado, num)}")
 
 
 
