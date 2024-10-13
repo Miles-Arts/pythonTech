@@ -5134,7 +5134,29 @@ def productos_pedido(productos, impuestos):
 
 
 
-##IVA DESCUENTO EN COMPRA
+# ##IVA DESCUENTO EN COMPRA
+
+# def precio_descuento(precio, descuento):
+#       precio = precio - precio * descuento / 100
+#       return precio
+
+# def precio_iva(precio, iva):
+#       precio = precio + precio * iva / 100
+#       return precio
+
+# def productos_compra(productos, impuestos):
+#       total =0
+
+#       for precio, iva_o_descuento in productos.items():
+#           total += impuestos(precio, iva_o_descuento)
+#           return total
+
+# print(f"Precio con descuento: {productos_compra({2340:30, 300:40, 3426:25}, precio_descuento)}")        
+# print(f"Precio con IVA: {productos_compra({2340:19, 300:5, 3426:1}, precio_iva)}")        
+
+
+
+#DEscuendo y IVA
 
 def precio_descuento(precio, descuento):
       precio = precio - precio * descuento / 100
@@ -5144,19 +5166,14 @@ def precio_iva(precio, iva):
       precio = precio + precio * iva / 100
       return precio
 
-def productos_compra(productos, impuestos):
-      total =0
+def producto_compra(producto, impuestos):
+      total=0
+      for precio, iva_o_descuento in producto.items():
+            total+= impuestos(precio, iva_o_descuento)
+      return total
 
-      for precio, iva_o_descuento in productos.items():
-          total += impuestos(precio, iva_o_descuento)
-          return total
-
-print(f"Precio con descuento: {productos_compra({2340:30, 300:14, 3426:0.5}, precio_descuento)}")        
-print(f"Precio con IVA: {productos_compra({2340:30, 300:14, 3426:0.5}, precio_iva)}")        
-
-
-
-
+print(f"PRecio con descuento: {producto_compra({400:10},precio_descuento)}")      
+print(f"Precio con IVA: {producto_compra({400:10},precio_iva)}")      
 
 
 
