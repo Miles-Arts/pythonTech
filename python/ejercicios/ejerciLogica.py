@@ -5264,7 +5264,7 @@ facturas={}
 # culcular()       
 
 
-from math import sin, cos, tan, exp, log
+# from math import sin, cos, tan, exp, log
 
 # def apply_function(f, n):
 #     '''
