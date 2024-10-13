@@ -5245,77 +5245,81 @@ facturas={}
 #         break     
             
 
-def aplicar_funcion(calcula, numero_entero):
-    # menu = {
-    #         "sin": math.sin,
-    #         "cos": math.cos,
-    #         "tan": math.tan,
-    #         "exp": math.exp,
-    #         "log": math.log
-    #     }
-    # resultado = {}
-    # for i in range(1, numero_entero + 1):
-    #     if calcular in ["sin", "cos", "tan"]:
-    #         resultado[i] = menu[calcular](math.radians(i))
-    #     else:
-    #         resultado[i] = menu[calcular](i)
-    # return resultado
-    funcion = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
-    resultado = {}
-    for i in range(1, numero_entero + 1):
-        resultado[i] = funcion[calcula][i]
-    return resultado    
+# def aplicar_funcion(calcula, numero_entero):
 
-def culcular():
-    calculo=input("¿cual función desea aplicar (sin, cos, tan, exp, log)? ").lower()
-    numero=int(input("Número entero positivo: ")) 
+#     funcion = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+#     resultado = {}
+#     for i in range(1, numero_entero + 1):
+#         resultado[i] = funcion[calcula][i]
+#     return resultado    
 
-    for valor, funcion_hacer in aplicar_funcion(calculo, numero).items():
-        print(f" {valor} \t {funcion_hacer}")
-    return
+# def culcular():
+#     calculo=input("¿cual función desea aplicar (sin, cos, tan, exp, log)? ").lower()
+#     numero=int(input("Número entero positivo: ")) 
 
-culcular()       
+#     for valor, funcion_hacer in aplicar_funcion(calculo, numero).items():
+#         print(f" {valor} \t {funcion_hacer}")
+#     return
+
+# culcular()       
 
 
 from math import sin, cos, tan, exp, log
 
-def apply_function(f, n):
-    '''
-    Función que aplica una función a los enteros desde 1 hasta n.
-    Parámetros:
-        f: Es una función que recibe un número real y devuelve otro.
-        n: Es un número entero positivo.
-    Devuelve:
-        Un diccionario con los pares i:f(i) para cada valor entero i de 1 a n.
-    '''
-    functions = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
-    result = {}
-    for i in range(1, n+1):
-        result[i] = functions[f](i)
-    return result
+# def apply_function(f, n):
+#     '''
+#     Función que aplica una función a los enteros desde 1 hasta n.
+#     Parámetros:
+#         f: Es una función que recibe un número real y devuelve otro.
+#         n: Es un número entero positivo.
+#     Devuelve:
+#         Un diccionario con los pares i:f(i) para cada valor entero i de 1 a n.
+#     '''
+#     functions = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+#     result = {}
+#     for i in range(1, n+1):
+#         result[i] = functions[f](i)
+#     return result
 
-def calculator():
-    '''
-    Función que aplica una función seleccionada por el usuario (seno, coseno, tangente, exponencial o logarítmo) a la lista de enteros desde 1 hasta n. 
-    Imprime por pantalla una tabla con la secuencia de enteros y el resultado de aplicarles la función introducida.
-    Parámetros:
-        f: Es una cadena con la función a aplicar (sin, cos, tan, exp o log).
-        n: Es un entero positivo.
-    '''
-    f = input('Introduce la función a aplicar (sin, cos, tan, exp, log): ')
-    n = int(input('Introduce un entero positivo: '))
-    for i, j in apply_function(f, n).items():
-        print (i, '\t', j)
+# def calculator():
+#     '''
+#     Función que aplica una función seleccionada por el usuario (seno, coseno, tangente, exponencial o logarítmo) a la lista de enteros desde 1 hasta n. 
+#     Imprime por pantalla una tabla con la secuencia de enteros y el resultado de aplicarles la función introducida.
+#     Parámetros:
+#         f: Es una cadena con la función a aplicar (sin, cos, tan, exp o log).
+#         n: Es un entero positivo.
+#     '''
+#     f = input('Introduce la función a aplicar (sin, cos, tan, exp, log): ')
+#     n = int(input('Introduce un entero positivo: '))
+#     for i, j in apply_function(f, n).items():
+#         print (i, '\t', j)
+#     return
+
+# calculator()
+
+
+
+
+
+#CALCULADORA CIENTIFICA
+
+def aplicar_algortimo(calculador, numero_entero):
+    funcion={'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+    resultado={}
+
+    for i in range(1, numero_entero):
+        resultado[i]=funcion[calculador](i)
+    return resultado
+
+def calcular():
+    calculo=input("función que desea realizar (sin, cos, tan, exp, log) ").lower()
+    numero=int(input("Número entero positivo: "))
+
+    for valor, funcion_hacer in aplicar_algortimo(calculo, numero).items():
+        print(f"{valor} {funcion_hacer}")
     return
 
-calculator()
-
-
-
-
-
-
-
+calcular()            
 
 
 
