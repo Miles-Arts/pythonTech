@@ -1,4 +1,5 @@
 import math
+from math import sin, cos, tan, exp, log
 # entrada=str(input("Ingrese la frase: ")).lower()
 # frase=entrada.split()
 # frases={}
@@ -5184,70 +5185,130 @@ facturas={}
 # exponencial y logaritmo neperiano.
 
 
-menu=True
+# menu=True
 
-def seno(valor):
-    resultado = math.sin(valor)
-    return resultado
+# def seno(valor):
+#     resultado = math.sin(valor)
+#     return resultado
 
-def coseno(valor):
-    resultado= math.cos(valor)   
-    return resultado 
+# def coseno(valor):
+#     resultado= math.cos(valor)   
+#     return resultado 
 
-def tangente(valor):
-    resultado= math.tan(valor)
-    return resultado
+# def tangente(valor):
+#     resultado= math.tan(valor)
+#     return resultado
 
-def exponencial(valor):
-    resultado= math.exp(valor)
-    return resultado
+# def exponencial(valor):
+#     resultado= math.exp(valor)
+#     return resultado
 
-def neperiano(valor):
-    resultado = math.log(valor)
-    return resultado
+# def neperiano(valor):
+#     resultado = math.log(valor)
+#     return resultado
 
-while menu != 6:
-# calcular el seno, 
-# coseno, tangente, 
-# exponencial y logaritmo neperiano.
-    valor=float(input("Ingrese un valor: "))
-    print("1 - SENO.")
-    print("2 - COSENO")
-    print("3 - TANGENTE")
-    print("4 - EXPONENCIAL")
-    print("5 - NEPERIANO")
-    print("6 - SALIR")
-    menu=int(input("¿Cuál función desea aplicar? "))
+# while menu != 6:
+# # calcular el seno, 
+# # coseno, tangente, 
+# # exponencial y logaritmo neperiano.
+#     valor=float(input("Ingrese un valor: "))
+#     print("1 - SENO.")
+#     print("2 - COSENO")
+#     print("3 - TANGENTE")
+#     print("4 - EXPONENCIAL")
+#     print("5 - NEPERIANO")
+#     print("6 - SALIR")
+#     menu=int(input("¿Cuál función desea aplicar? "))
    
     
-    if menu == 1:
-        resultado = seno(valor)
-        print(f"Resultado: {resultado}")
+#     if menu == 1:
+#         resultado = seno(valor)
+#         print(f"Resultado: {resultado}")
 
-    if menu == 2:
-        resultado = coseno(valor)
-        print(resultado)
+#     if menu == 2:
+#         resultado = coseno(valor)
+#         print(resultado)
 
-    if menu == 3:
-        resultado = tangente(valor)
-        print(f"Resultado: {resultado}")
+#     if menu == 3:
+#         resultado = tangente(valor)
+#         print(f"Resultado: {resultado}")
 
-    if menu == 4:
-        resultado = exponencial(valor)
-        print(resultado) 
+#     if menu == 4:
+#         resultado = exponencial(valor)
+#         print(resultado) 
 
-    if menu == 5:
-        resultado = neperiano(valor)
-        print(f"Resultado: {resultado}")
+#     if menu == 5:
+#         resultado = neperiano(valor)
+#         print(f"Resultado: {resultado}")
 
-    if menu == 6:
-        break     
+#     if menu == 6:
+#         break     
             
 
+def aplicar_funcion(calcula, numero_entero):
+    # menu = {
+    #         "sin": math.sin,
+    #         "cos": math.cos,
+    #         "tan": math.tan,
+    #         "exp": math.exp,
+    #         "log": math.log
+    #     }
+    # resultado = {}
+    # for i in range(1, numero_entero + 1):
+    #     if calcular in ["sin", "cos", "tan"]:
+    #         resultado[i] = menu[calcular](math.radians(i))
+    #     else:
+    #         resultado[i] = menu[calcular](i)
+    # return resultado
+    funcion = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+    resultado = {}
+    for i in range(1, numero_entero + 1):
+        resultado[i] = funcion[calcula][i]
+    return resultado    
+
+def culcular():
+    calculo=input("¿cual función desea aplicar (sin, cos, tan, exp, log)? ").lower()
+    numero=int(input("Número entero positivo: ")) 
+
+    for valor, funcion_hacer in aplicar_funcion(calculo, numero).items():
+        print(f" {valor} \t {funcion_hacer}")
+    return
+
+culcular()       
 
 
+from math import sin, cos, tan, exp, log
 
+def apply_function(f, n):
+    '''
+    Función que aplica una función a los enteros desde 1 hasta n.
+    Parámetros:
+        f: Es una función que recibe un número real y devuelve otro.
+        n: Es un número entero positivo.
+    Devuelve:
+        Un diccionario con los pares i:f(i) para cada valor entero i de 1 a n.
+    '''
+    functions = {'sin':sin, 'cos':cos, 'tan':tan, 'exp':exp, 'log':log}
+    result = {}
+    for i in range(1, n+1):
+        result[i] = functions[f](i)
+    return result
 
+def calculator():
+    '''
+    Función que aplica una función seleccionada por el usuario (seno, coseno, tangente, exponencial o logarítmo) a la lista de enteros desde 1 hasta n. 
+    Imprime por pantalla una tabla con la secuencia de enteros y el resultado de aplicarles la función introducida.
+    Parámetros:
+        f: Es una cadena con la función a aplicar (sin, cos, tan, exp o log).
+        n: Es un entero positivo.
+    '''
+    f = input('Introduce la función a aplicar (sin, cos, tan, exp, log): ')
+    n = int(input('Introduce un entero positivo: '))
+    for i, j in apply_function(f, n).items():
+        print (i, '\t', j)
+    return
+
+calculator()
 
 
 
