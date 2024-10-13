@@ -1,3 +1,4 @@
+import math
 # entrada=str(input("Ingrese la frase: ")).lower()
 # frase=entrada.split()
 # frases={}
@@ -5109,22 +5110,22 @@ facturas={}
 
 
 
-#PEdidio tienda
+# #PEdidio tienda
 
-def precio_descuento(precio, descuento):
-     precio = precio - precio * descuento / 100
-     return precio
+# def precio_descuento(precio, descuento):
+#      precio = precio - precio * descuento / 100
+#      return precio
 
-def precio_iva(precio, iva):
-     precio = precio + precio * iva / 100
-     return precio
+# def precio_iva(precio, iva):
+#      precio = precio + precio * iva / 100
+#      return precio
 
-def productos_pedido(productos, impuestos):
-     total =0
+# def productos_pedido(productos, impuestos):
+#      total =0
 
-     for precio, iva_o_descuento in productos.items():
-            total+= impuestos(precio, iva_o_descuento)
-     return total
+#      for precio, iva_o_descuento in productos.items():
+#             total+= impuestos(precio, iva_o_descuento)
+#      return total
 
 # print(f"Precio descuento: {productos_pedido({100:20,500:40,40:15}),precio_descuento}")
 # print(f"Precio descuento: {productos_pedido({100:20,500:40,40:15}),precio_iva}")
@@ -5157,25 +5158,91 @@ def productos_pedido(productos, impuestos):
 
 
 #DEscuendo y IVA
+# 
+# def precio_descuento(precio, descuento):
+#       precio = precio - precio * descuento / 100
+#       return precio
 
-def precio_descuento(precio, descuento):
-      precio = precio - precio * descuento / 100
-      return precio
+# def precio_iva(precio, iva):
+#       precio = precio + precio * iva / 100
+#       return precio
 
-def precio_iva(precio, iva):
-      precio = precio + precio * iva / 100
-      return precio
+# def producto_compra(producto, impuestos):
+#       total=0
+#       for precio, iva_o_descuento in producto.items():
+#             total+= impuestos(precio, iva_o_descuento)
+#       return total
 
-def producto_compra(producto, impuestos):
-      total=0
-      for precio, iva_o_descuento in producto.items():
-            total+= impuestos(precio, iva_o_descuento)
-      return total
-
-print(f"PRecio con descuento: {producto_compra({400:10},precio_descuento)}")      
-print(f"Precio con IVA: {producto_compra({400:10},precio_iva)}")      
+# print(f"PRecio con descuento: {producto_compra({400:10},precio_descuento)}")      
+# print(f"Precio con IVA: {producto_compra({400:10},precio_iva)}")      
 
 
+#CALCULADORA CIENTÍFICA
+
+# calcular el seno, 
+# coseno, tangente, 
+# exponencial y logaritmo neperiano.
+
+
+menu=True
+
+def seno(valor):
+    resultado = math.sin(valor)
+    return resultado
+
+def coseno(valor):
+    resultado= math.cos(valor)   
+    return resultado 
+
+def tangente(valor):
+    resultado= math.tan(valor)
+    return resultado
+
+def exponencial(valor):
+    resultado= math.exp(valor)
+    return resultado
+
+def neperiano(valor):
+    resultado = math.log(valor)
+    return resultado
+
+while menu != 6:
+# calcular el seno, 
+# coseno, tangente, 
+# exponencial y logaritmo neperiano.
+    valor=float(input("Ingrese un valor: "))
+    print("1 - SENO.")
+    print("2 - COSENO")
+    print("3 - TANGENTE")
+    print("4 - EXPONENCIAL")
+    print("5 - NEPERIANO")
+    print("6 - SALIR")
+    menu=int(input("¿Cuál función desea aplicar? "))
+   
+    
+    if menu == 1:
+        resultado = seno(valor)
+        print(f"Resultado: {resultado}")
+
+    if menu == 2:
+        resultado = coseno(valor)
+        print(resultado)
+
+    if menu == 3:
+        resultado = tangente(valor)
+        print(f"Resultado: {resultado}")
+
+    if menu == 4:
+        resultado = exponencial(valor)
+        print(resultado) 
+
+    if menu == 5:
+        resultado = neperiano(valor)
+        print(f"Resultado: {resultado}")
+
+    if menu == 6:
+        break     
+            
 
 
 
