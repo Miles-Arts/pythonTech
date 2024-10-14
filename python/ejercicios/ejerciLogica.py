@@ -5350,33 +5350,68 @@ facturas={}
 
 # 
 
-num=[1,2,3,4]
+# numeros_lista=[1,2,3,4]
 
-def aplicar_funcion_lista(funcion, listas):
+# def aplicar_funcion_lista(funcion, listas):
+
+#     lista=[]
+
+#     for i in listas:
+#         lista.append(funcion(i))
+
+#     return lista    
+
+# def cuadrado(numero):
+#     numero =  numero * numero  
+#     return  numero
+
+# print(f"Resultado:  { aplicar_funcion_lista(cuadrado, numeros_lista)}")
+
+
+
+
+#
+
+# numero_lista=[10,20,30,45,]
+
+
+# def aplicar_funcion(funcion, numero):
+#     lista=[]
+
+#     for i in numero:
+#         lista.append(funcion(i))
+
+#     return lista
+
+# def multiplicar(numero):
+
+#     numero = numero * numero
+#     return numero
+
+# print(f"Resultado: {aplicar_funcion(multiplicar, numero_lista)}")    
+
+
+
+
+
+#r
+
+numeros=[1,2,3,4,5]
+
+def aplicar_funcion(funcion, numeros):
 
     lista=[]
 
-    for i in listas:
+    for i in numeros:
         lista.append(funcion(i))
 
-    return lista    
+    return lista 
 
-def cuadrado(numero):
-    numero =  numero * numero  
-    return  numero
+def multiplicar(numero):
+    numero = numero  * numero
+    return numero
 
-print(f"Resultado:  { aplicar_funcion_lista(cuadrado, num)}")
-
-
-
-
-
-
-
-
-
-
-
+print(f"Resultado: {aplicar_funcion(multiplicar, numeros)}")   
 
 
 
