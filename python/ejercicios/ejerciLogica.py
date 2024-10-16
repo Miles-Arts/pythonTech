@@ -5435,27 +5435,108 @@ facturas={}
 
 
 
-lista_numero=[726,464,8,9]
+# lista_numero=[726,464,8,9]
 
-def aplicar_funcion(funcion, lista):
+# def aplicar_funcion(funcion, lista):
 
-    nueva_lista=[]
+#     nueva_lista=[]
 
-    for i in lista:
-        nueva_lista.append(funcion(i))
-    return nueva_lista
+#     for i in lista:
+#         nueva_lista.append(funcion(i))
+#     return nueva_lista
 
-def multilicar(numero):
-    numero = numero * numero
-    return numero
+# def multilicar(numero):
+#     numero = numero * numero
+#     return numero
 
-resultado = aplicar_funcion(multilicar, lista_numero)    
+# resultado = aplicar_funcion(multilicar, lista_numero)    
 
-for resultado in resultado:
-    print(f"Resultado: {resultado }")
+# for resulta in resultado:
+#     print(f"Resultado: {resulta }")
 
 
 # print(f"Resultado: {aplicar_funcion(multilicar, lista_numero)}")
+
+
+# lista_division=[4,5,6,7]
+
+# def aplicar_funcion(funcion, numeros_lista):
+
+#     lista=[]
+
+#     for i in numeros_lista:
+#         lista.append(funcion(i))
+#     return lista
+
+# def division(numero):
+#     numero = numero / numero   
+#     return numero
+
+
+# print(f"Resultado {aplicar_funcion(division, lista_division) }")
+
+
+
+
+
+
+
+lista_resta=[6,5,7,88,9]
+
+def aplicar_funcion(funcion,  numeros_lista):
+
+    lista=[]
+
+    for i in numeros_lista:
+        lista.append(funcion(i))
+    return lista
+
+def restar(numero):
+    numero  = numero - numero
+    return numero
+
+print(f"Resultado: {aplicar_funcion(restar, lista_resta)}")            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
