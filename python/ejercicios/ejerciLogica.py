@@ -5481,32 +5481,42 @@ facturas={}
 
 
 
-lista_resta=[6,5,7,88,9]
+# lista_resta=[6,5,7,88,9]
 
-def aplicar_funcion(funcion,  numeros_lista):
+# def aplicar_funcion(funcion,  numeros_lista):
+
+#     lista=[]
+
+#     for i in numeros_lista:
+#         lista.append(funcion(i))
+#     return lista
+
+# def restar(numero):
+#     numero  = numero - numero
+#     return numero
+
+# print(f"Resultado: {aplicar_funcion(restar, lista_resta)}")            
+
+
+
+
+
+
+lista_suma=[1,2,3,4]
+
+def aplicar_funcion(funcion, numero_lista):
 
     lista=[]
 
-    for i in numeros_lista:
+    for i in numero_lista:
         lista.append(funcion(i))
-    return lista
+    return lista    
 
-def restar(numero):
-    numero  = numero - numero
+def suma(numero):
+    numero = numero + numero 
     return numero
 
-print(f"Resultado: {aplicar_funcion(restar, lista_resta)}")            
-
-
-
-
-
-
-
-
-
-
-
+print(f"Resultado: { aplicar_funcion(suma, lista_suma)}")
 
 
 
