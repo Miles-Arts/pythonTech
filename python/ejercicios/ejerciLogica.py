@@ -5418,16 +5418,16 @@ facturas={}
 
 numeros_lista=[1,2,3,4]
 
-def aplicar_funcion(funcion, numero_entero):
+def aplicar_funcion(funcion, listas):
 
-    listas=[]
+    lista=[]
 
-    for i in funcion(numero_entero):
-        listas.append(funcion(i))
-    return listas
+    for i in listas:
+        lista.append(funcion(i))
+    return lista
 
-def multiplicar(multiplicar):
-    numero = numero  = numero
+def multiplicar(numero):
+    numero = numero * numero
     return numero
 
 
