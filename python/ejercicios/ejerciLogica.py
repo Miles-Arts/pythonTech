@@ -5416,25 +5416,46 @@ facturas={}
 
 
 
-numeros_lista=[1,2,3,4]
+# numeros_lista=[1,2,3,4]
 
-def aplicar_funcion(funcion, listas):
+# def aplicar_funcion(funcion, listas):
 
-    lista=[]
+#     lista=[]
 
-    for i in listas:
-        lista.append(funcion(i))
-    return lista
+#     for i in listas:
+#         lista.append(funcion(i))
+#     return lista
 
-def multiplicar(numero):
+# def multiplicar(numero):
+#     numero = numero * numero
+#     return numero
+
+
+# print(f"{aplicar_funcion(multiplicar, numeros_lista)}")
+
+
+
+lista_numero=[726,464,8,9]
+
+def aplicar_funcion(funcion, lista):
+
+    nueva_lista=[]
+
+    for i in lista:
+        nueva_lista.append(funcion(i))
+    return nueva_lista
+
+def multilicar(numero):
     numero = numero * numero
     return numero
 
+resultado = aplicar_funcion(multilicar, lista_numero)    
 
-print(f"{aplicar_funcion(multiplicar, numeros_lista)}")
+for resultado in resultado:
+    print(f"Resultado: {resultado }")
 
 
-
+# print(f"Resultado: {aplicar_funcion(multilicar, lista_numero)}")
 
 
 
