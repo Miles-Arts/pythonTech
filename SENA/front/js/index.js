@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardSection = document.getElementById("i-card-section")
 
         const granjas = [
-             {nombre: "Granja Fresas Colombia", producto: "Fresa", img: "fresas.jpg", ubicacion: "Tuta", fecha: new Date(2024, 3, 14 )  }, 
-             {nombre: "Granja Avi Boyacá", producto: "Huevos", img:"huevos.jpg", ubicacion: "Paipa", fecha: new Date(2024, 4, 17 )},
-             {nombre: "Maiz S.A", producto: "Maiz", img:"maiz.jpg", ubicacion: "Chocontá", fecha: new Date(2024, 5, 22 )},
-             {nombre: "Papa del campo", producto: "Papa", img:"papa.jpg", ubicacion: "Sogamoso", fecha: new Date(2024, 5, 15 )},
-             {nombre: "Granja Cristal", producto: "Durazno", img:"durazno.jpg", ubicacion: "Toca", fecha: new Date(2024, 8, 4 )},
-             {nombre: "Granja del Norte", producto: "Carne", img:"carne.jpg", ubicacion: "Sotaquirá", fecha: new Date(2024, 6, 1 )}
+             {nombre: "Granja Fresas Colombia", producto: "Fresa", img: "fresas.jpg", ubicacion: "Tuta", fecha: new Date(2024, 10, 14 )  }, 
+             {nombre: "Granja Avi Boyacá", producto: "Huevos", img:"huevos.jpg", ubicacion: "Paipa", fecha: new Date(2024, 10, 17 )},
+             {nombre: "Maiz S.A", producto: "Maiz", img:"maiz.jpg", ubicacion: "Chocontá", fecha: new Date(2024, 10, 22 )},
+             {nombre: "Papa del campo", producto: "Papa", img:"papa.jpg", ubicacion: "Sogamoso", fecha: new Date(2024, 10, 15 )},
+             {nombre: "Granja Cristal", producto: "Durazno", img:"durazno.jpg", ubicacion: "Toca", fecha: new Date(2024, 10, 4 )},
+             {nombre: "Granja del Norte", producto: "Carne", img:"carne.jpg", ubicacion: "Sotaquirá", fecha: new Date(2024, 10, 1 )}
             ] 
 
            granjas.forEach( granja => { 
