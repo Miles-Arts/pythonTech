@@ -5566,3 +5566,4 @@ print(f"Resultado: { aplicar_funcion(suma, lista_suma)}")
 
 
 
+
