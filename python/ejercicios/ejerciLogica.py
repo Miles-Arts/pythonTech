@@ -5499,27 +5499,39 @@ facturas={}
 
 
 
+# lista_suma=[1,2,3,4]
+
+# def aplicar_funcion(funcion, numero_lista):
+
+#     lista=[]
+
+#     for i in numero_lista:
+#         lista.append(funcion(i))
+#     return lista    
+
+# def suma(numero):
+#     numero = numero + numero 
+#     return numero
+
+# print(f"Resultado: { aplicar_funcion(suma, lista_suma)}")
 
 
+lista_suma=[1,2,2,4]
 
-lista_suma=[1,2,3,4]
+def aplicar_función(funcions, numero_listas):
+    mista=[]
 
-def aplicar_funcion(funcion, numero_lista):
+    for i in numero_listas:
+        mista.append(funcions(i))
 
-    lista=[]
-
-    for i in numero_lista:
-        lista.append(funcion(i))
-    return lista    
+    return mista
 
 def suma(numero):
-    numero = numero + numero 
+
+    numero=numero + numero
     return numero
 
-print(f"Resultado: { aplicar_funcion(suma, lista_suma)}")
-
-
-
+print(aplicar_función(suma, lista_suma ))    
 
 
 
