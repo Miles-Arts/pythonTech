@@ -5542,15 +5542,23 @@ facturas={}
 
 # print(f"Hola {nombre}")
 
-operacion= (3+2) / (2*5) * 2
+# operacion= (3+2) / (2*5) ** 2
 
-print(f"{operacion}")
+# print(f"{operacion}")
+
+# horas_trabajadas=int(input("Ingrese horas trabajadas: "))
+# horas_precio=float(input("Ingrese el valor por hora: "))
+
+# resultado= horas_trabajadas * horas_precio
+
+# print(f"El pago por las {horas_trabajadas} horas es: ${resultado}")
 
 
+suma=int(input("ingrese un entero positivo: "))
 
+resultado= suma * (suma + 1) / 2
 
-
-
+print(f"la suma de 1 hasta {suma} es: {resultado:.0f}")
 
 
 
