@@ -5533,13 +5533,18 @@ facturas={}
 
 # print(aplicar_función(suma, lista_suma ))    
 
-saludo="Hola mundo"
+# saludo="Hola mundo"
 
-print(saludo)
-
-
+# print(saludo)
 
 
+# nombre=input("Ingrese su nombre: ").title()
+
+# print(f"Hola {nombre}")
+
+operacion= (3+2) / (2*5) * 2
+
+print(f"{operacion}")
 
 
 
