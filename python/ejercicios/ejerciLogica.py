@@ -5516,24 +5516,26 @@ facturas={}
 # print(f"Resultado: { aplicar_funcion(suma, lista_suma)}")
 
 
-lista_suma=[1,2,2,4]
+# lista_suma=[1,2,2,4]
 
-def aplicar_función(funcions, numero_listas):
-    mista=[]
+# def aplicar_función(funcions, numero_listas):
+#     mista=[]
 
-    for i in numero_listas:
-        mista.append(funcions(i))
+#     for i in numero_listas:
+#         mista.append(funcions(i))
 
-    return mista
+#     return mista
 
-def suma(numero):
+# def suma(numero):
 
-    numero=numero + numero
-    return numero
+#     numero=numero + numero
+#     return numero
 
-print(aplicar_función(suma, lista_suma ))    
+# print(aplicar_función(suma, lista_suma ))    
 
+saludo="Hola mundo"
 
+print(saludo)
 
 
 
