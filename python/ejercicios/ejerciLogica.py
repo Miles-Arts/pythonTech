@@ -5614,17 +5614,44 @@ facturas={}
 
 
 
-deposito=float(input("Ingrese el deposito "))
-interes=0.04
+# deposito=float(input("Ingrese el deposito "))
+# interes=0.04
 
-anio1 =  deposito * ( interes  + 1)
-anio2 = anio1 * (interes + 1)
-anio3 = anio2 * (interes + 1)
+# anio1 =  deposito * ( interes  + 1)
+# anio2 = anio1 * (interes + 1)
+# anio3 = anio2 * (interes + 1)
 
 
-print(f"\n\tBalance segundo año ${anio2:.2f}")
-print(f"\tBalance primer año ${anio1:.2f}")
-print(f"\tBalance tercer año ${anio3:.2f}")
+# print(f"\n\tBalance segundo año ${anio2:.2f}")
+# print(f"\tBalance primer año ${anio1:.2f}")
+# print(f"\tBalance tercer año ${anio3:.2f}")
+
+
+pan_vendido=int(input("Cantidad de Pan vendido del día anterior "))
+pan=float(3.49)
+descuento=0.6
+
+precio_normal = float(pan * pan_vendido)
+precio_con_descuento = pan_vendido  * pan * (1 - descuento)
+
+print(f"\nPrecio unidad de pan ${pan}")
+print(f"Precio normal de los {pan_vendido} panes es de ${precio_normal:.2f} ")
+print(f"Precio con el 60% de descuento ${precio_con_descuento:.2f}")
+print(f"\n\t TOTAL ${precio_con_descuento:.2f}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
