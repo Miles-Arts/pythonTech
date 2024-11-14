@@ -5589,17 +5589,28 @@ facturas={}
 
 # print(f"Capital final: ${resultado:.2f}")
 
-peso=float(input("Ingrese su peso "))
-estatura=float(input("Ingrese su estatura "))
+# peso=float(input("Ingrese su peso "))
+# estatura=float(input("Ingrese su estatura "))
 
-imc = peso  / (estatura) ** 2
+# imc = peso  / (estatura) ** 2
 
-print(f"Tu índice de masa corporal es {imc:.3f}")
-
-
+# print(f"Tu índice de masa corporal es {imc:.3f}")
 
 
+payaso=112
+muneca=75
 
+numero_payasos=int(input("Ingrese numero de payaso vendidos: "))
+numero_munecas=int(input("Ingrese numero de muñecas vendidos: "))
+
+peso_payasos = float(numero_payasos * payaso)
+peso_munecas = float(numero_munecas * muneca)
+
+peso_total = float(peso_payasos + peso_munecas)
+
+print(f"El peso de payasos es: {peso_payasos} g")
+print(f"El peso de muñecas es: {peso_munecas} g")
+print(f"El peso total del pedido es: {peso_total}")
 
 
 
