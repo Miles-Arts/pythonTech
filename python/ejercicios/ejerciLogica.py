@@ -5581,16 +5581,20 @@ facturas={}
 # print(f"Capital final {resultado:.2f}")
 
 
-cantidad=float(input("¿Cantidad a invertir? "))
-interes=float(input("Interés anual "))
-anios=float(input("Años de inversión "))
+# cantidad=float(input("¿Cantidad a invertir? "))
+# interes=float(input("Interés anual "))
+# anios=float(input("Años de inversión "))
 
-resultado = cantidad*(interes / 100 + 1 ) ** anios
+# resultado = cantidad*(interes / 100 + 1 ) ** anios
 
-print(f"Capital final: ${resultado:.2f}")
+# print(f"Capital final: ${resultado:.2f}")
 
+peso=float(input("Ingrese su peso "))
+estatura=float(input("Ingrese su estatura "))
 
+imc = peso  / (estatura) ** 2
 
+print(f"Tu índice de masa corporal es {imc:.3f}")
 
 
 
