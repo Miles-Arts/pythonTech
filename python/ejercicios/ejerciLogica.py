@@ -5569,19 +5569,25 @@ facturas={}
 # print(f"{num1} entre {num2} da un cociente {cociente} y un resto {resto}")
 
 
-cantidad_invertir=float(input("Ingrese cantidad a invertir: "))
-interes_anual=float(input("Ingrese interés anual: "))
-anios_inversion=float(input("Años de inversion: "))
+# cantidad_invertir=float(input("Ingrese cantidad a invertir: "))
+# interes_anual=float(input("Ingrese interés anual: "))
+# anios_inversion=float(input("Años de inversion: "))
 
-# interes= cantidad_invertir +  (cantidad_invertir / interes_anual)
-# resultado= interes * anios_inversion
+# # interes= cantidad_invertir +  (cantidad_invertir / interes_anual)
+# # resultado= interes * anios_inversion
 
-resultado = cantidad_invertir * ( interes_anual / 100 + 1) ** anios_inversion
+# resultado = cantidad_invertir * ( interes_anual / 100 + 1) ** anios_inversion
 
-print(f"Capital final {resultado:.2f}")
+# print(f"Capital final {resultado:.2f}")
 
 
+cantidad=float(input("¿Cantidad a invertir? "))
+interes=float(input("Interés anual "))
+anios=float(input("Años de inversión "))
 
+resultado = cantidad*(interes / 100 + 1 ) ** anios
+
+print(f"Capital final: ${resultado:.2f}")
 
 
 
