@@ -5554,22 +5554,31 @@ facturas={}
 # print(f"El pago por las {horas_trabajadas} horas es: ${resultado}")
 
 
-suma=int(input("ingrese un entero positivo: "))
+# suma=int(input("ingrese un entero positivo: "))
 
-resultado= suma * (suma + 1) / 2
+# resultado= suma * (suma + 1) / 2
 
-print(f"la suma de 1 hasta {suma} es: {resultado:.0f}")
+# print(f"la suma de 1 hasta {suma} es: {resultado:.0f}")
+
+# num1=int(input("Ingrese el primer número entero: "))
+# num2=int(input("Ingrese el segundo número entero: "))
+
+# cociente= float(num1 / num2)
+# resto= float(num1 % num2)
+
+# print(f"{num1} entre {num2} da un cociente {cociente} y un resto {resto}")
 
 
+cantidad_invertir=float(input("Ingrese cantidad a invertir: "))
+interes_anual=float(input("Ingrese interés anual: "))
+anios_inversion=float(input("Años de inversion: "))
 
+# interes= cantidad_invertir +  (cantidad_invertir / interes_anual)
+# resultado= interes * anios_inversion
 
+resultado = cantidad_invertir * ( interes_anual / 100 + 1) ** anios_inversion
 
-
-
-
-
-
-
+print(f"Capital final {resultado:.2f}")
 
 
 
