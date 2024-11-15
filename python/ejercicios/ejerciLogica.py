@@ -5660,11 +5660,48 @@ facturas={}
 # print(f"{nombre3}")
 
 
-nombre=str(input("Ingrese  su nombre: ").title())
+# nombre=str(input("Ingrese  su nombre: ").title())
 
-nombre_numero = len(nombre)
+# nombre_numero = len(nombre)
 
-print(f"Su nombre {nombre} tiene {nombre_numero} letras.")
+# print(f"Su nombre {nombre} tiene {nombre_numero} letras.")
+
+
+
+# frase=str(input("Escriba una frase: "))
+
+# resultado = frase
+# hola = frase
+
+# print(resultado[::-1])
+# print("".join(reversed(hola)))
+
+
+numero=input("Ingrese un numero +34-913724710-56 ")
+
+print(numero[4:13:])
+print(numero[4:-3])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
