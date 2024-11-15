@@ -5660,7 +5660,7 @@ facturas={}
 # print(f"{nombre3}")
 
 
-nombre=str(input("Ingrese  su nombre: "))
+nombre=str(input("Ingrese  su nombre: ").title())
 
 nombre_numero = len(nombre)
 
