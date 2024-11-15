@@ -5677,13 +5677,19 @@ facturas={}
 # print("".join(reversed(hola)))
 
 
-numero=input("Ingrese un numero +34-913724710-56 ")
+# numero=input("Ingrese un numero +34-913724710-56 ")
 
-print(numero[4:13:])
-print(numero[4:-3])
+# print(numero[4:13:])
+# print(numero[4:-3])
 
 
+# frase=input("Escriba una frase ")
+# # vocal=input("Escriba una vocal ").upper()
+# vocal=input("Escriba una vocal ")
 
+# print(f"{frase}{vocal}")
+# print(frase.replace(vocal, vocal.upper()))
+# print(frase.replace("pues", frase))
 
 
 
