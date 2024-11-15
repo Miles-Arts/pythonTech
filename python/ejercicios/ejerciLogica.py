@@ -5660,7 +5660,11 @@ facturas={}
 # print(f"{nombre3}")
 
 
+nombre=str(input("Ingrese  su nombre: "))
 
+nombre_numero = len(nombre)
+
+print(f"Su nombre {nombre} tiene {nombre_numero} letras.")
 
 
 
