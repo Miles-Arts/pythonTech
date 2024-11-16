@@ -5696,13 +5696,21 @@ facturas={}
 
 # print(email[:email.find("@")]+"@ceu.es")
 
+# precio=input("Ingrese precio: ")
+
+# # print(f"{precio:.2f}")
+# print(precio[:precio.find(".")], "euros y ", precio[precio.find(".")+1:], "céntimos")
 
 
+# fecha=input("Ingrese su fecha de nacimiento ")
 
+# print("Día ",fecha[:fecha.find(" ")], "/", fecha[fecha.find(" ")+1:], "/", fecha[:fecha.find(" ")+2:])
 
+fecha = input("Años de nacimiento dd/mm/aaaa: ")
 
-
-
+print(f"Día {fecha[:2]}")
+print(f"Mes {fecha[3:5]}")
+print(f"Año {fecha[6:]}")
 
 
 
