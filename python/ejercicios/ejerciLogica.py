@@ -5706,16 +5706,21 @@ facturas={}
 
 # print("Día ",fecha[:fecha.find(" ")], "/", fecha[fecha.find(" ")+1:], "/", fecha[:fecha.find(" ")+2:])
 
-fecha = input("Años de nacimiento dd/mm/aaaa: ")
+# fecha = input("Años de nacimiento dd/mm/aaaa: ")
 
-print(f"Día {fecha[:2]}")
-print(f"Mes {fecha[3:5]}")
-print(f"Año {fecha[6:]}")
-
-
+# print(f"Día {fecha[:2]}")
+# print(f"Mes {fecha[3:5]}")
+# print(f"Año {fecha[6:]}")
 
 
+# productos=input("Ingrese produdctos separados por ( , ) ").title()
 
+# print(productos.replace(",","\n"))
+
+
+cesta=input("Ingrse proudctos separados por ( , ) ").title()
+
+print("\n".join(cesta.split(",")))
 
 
 
