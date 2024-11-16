@@ -5692,9 +5692,9 @@ facturas={}
 # print(frase.replace("pues", frase))
 
 
-email=str(input("Escriba su email: "))
+# email=str(input("Escriba su email: "))
 
-print(email[:email.find("@")]+"@ceu.es")
+# print(email[:email.find("@")]+"@ceu.es")
 
 
 
