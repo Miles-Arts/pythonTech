@@ -5712,15 +5712,88 @@ facturas={}
 # print(f"Mes {fecha[3:5]}")
 # print(f"Año {fecha[6:]}")
 
-
 # productos=input("Ingrese produdctos separados por ( , ) ").title()
 
 # print(productos.replace(",","\n"))
 
 
-cesta=input("Ingrse proudctos separados por ( , ) ").title()
+# cesta=input("Ingrse proudctos separados por ( , ) ").title()
 
-print("\n".join(cesta.split(",")))
+# print("\n".join(cesta.split(",")))
+
+
+# productos=input("Ingrese productos separados por , ").title()
+
+# # print("\n".join(productos.split(",")))
+
+
+# print(productos.replace(",", "\n"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
