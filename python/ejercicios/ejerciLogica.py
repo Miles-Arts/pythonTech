@@ -5729,6 +5729,10 @@ facturas={}
 
 # print(productos.replace(",", "\n"))
 
+producto=str(input("Ingrese enombre producto ")).title()
+precio=float(input("Ingrese el precio: "))
+unidades=int(input("Ingrese numero de unidades: "))
+
 
 
 
