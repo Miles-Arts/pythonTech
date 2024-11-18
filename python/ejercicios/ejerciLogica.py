@@ -5759,16 +5759,24 @@ facturas={}
 # else:
 #     print("Contraseña erronea.")    
 
-print("Ingrese 2 números para su división.")
-division_uno=float(input("Primer número: "))
-division_dos=float(input("Segundo número: "))
+# print("Ingrese 2 números para su división.")
+# division_uno=float(input("Primer número: "))
+# division_dos=float(input("Segundo número: "))
 
-if division_uno > 1 and division_dos > 1:
-    resultado = division_uno / division_dos
-    print(f"{resultado:10.2f}")
+# if division_uno > 1 and division_dos > 1:
+#     resultado = division_uno / division_dos
+#     print(f"{resultado:10.2f}")
+# else:
+#     print("Ingrese un numero mayor a 0")    
+
+numero=int(input("Ingrese un numero entero: "))
+
+resultado = numero % 2
+print(resultado)
+if resultado == 0:
+    print(f"El numero {numero} es par")
 else:
-    print("Ingrese un numero mayor a 0")    
-
+    print(f"Numero {numero} inpar.")    
 
 
 
