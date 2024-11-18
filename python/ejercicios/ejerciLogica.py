@@ -5733,6 +5733,12 @@ producto=str(input("Ingrese enombre producto ")).title()
 precio=float(input("Ingrese el precio: "))
 unidades=int(input("Ingrese numero de unidades: "))
 
+resultado = precio * unidades
+
+# print('{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'.format(producto = producto, unidades = unidades, precio = precio, total = unidades * precio))
+print(f"Producto: {producto}")
+print(f"Precio unidad ${precio:.2f}")
+print(f"TOTAL ${resultado:.2f}")
 
 
 
