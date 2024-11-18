@@ -5729,29 +5729,45 @@ facturas={}
 
 # print(productos.replace(",", "\n"))
 
-producto=str(input("Ingrese enombre producto ")).title()
-precio=float(input("Ingrese el precio: "))
-unidades=int(input("Ingrese numero de unidades: "))
+# producto=str(input("Ingrese enombre producto ")).title()
+# precio=float(input("Ingrese el precio: "))
+# unidades=int(input("Ingrese numero de unidades: "))
 
-resultado = precio * unidades
+# resultado = precio * unidades
 
-# print('{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'.format(producto = producto, unidades = unidades, precio = precio, total = unidades * precio))
-print(f"Producto: {producto}")
-print(f"Precio unidad ${precio:.2f}")
-print(f"TOTAL ${resultado:.2f}")
-
-
+# # print('{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'.format(producto = producto, unidades = unidades, precio = precio, total = unidades * precio))
+# print(f"Producto: {producto}")
+# print(f"Precio unidad ${precio:.2f}")
+# print(f"TOTAL ${resultado:.2f}")
 
 
+# edad=int(input("Ingrese su edad: "))
 
-
-
-
-
-
+# if edad >= 18:
+#     print(f"Tiene {edad} años, es mayor de edad.")
+# elif edad < 17:
+#     print(f"Tiene {edad} años, es menor de edad.")    
 
 
 
+
+# contrasena=str(input("Ingrese la contraseña: ")).lower()
+# new_contrasena=str(input("Ingrese la contraseña: "))
+
+# if contrasena == new_contrasena:
+#     print(f"Contraseña correcta")
+# else:
+#     print("Contraseña erronea.")    
+
+print("Ingrese 2 números para su división.")
+division_uno=float(input("Primer número: "))
+division_dos=float(input("Segundo número: "))
+
+if division_uno > 1 and division_dos > 1:
+    resultado = division_uno / division_dos
+    print(f"{resultado:10.2f}")
+else:
+    print("Ingrese un numero mayor a 0")    
 
 
 
