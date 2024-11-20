@@ -5885,21 +5885,49 @@ facturas={}
 #     print(f"Ingrese una puntación validad.")
 
 
-edad_jugador=int(input("Ingrese su edad: "))
+# edad_jugador=int(input("Ingrese su edad: "))
 
-if edad_jugador < 4:
-    print("Puede entrar gratis.")
-elif edad_jugador >= 4 and edad_jugador < 18:
-    print("Debe pagar $5.000")
-elif edad_jugador >= 18:
-    print("Debe pagar $10.000") 
+# if edad_jugador < 4:
+#     print("Puede entrar gratis.")
+# elif edad_jugador >= 4 and edad_jugador < 18:
+#     print("Debe pagar $5.000")
+# elif edad_jugador >= 18:
+#     print("Debe pagar $10.000") 
+# else:
+#     print("Ingrese una parametro válido")         
+
+
+tipo_pizza=str(input("Pizza vegetariana ( S o N) "))
+
+if tipo_pizza.upper() == "S":
+    print("\nIngredientes vegetarianos: \n\tPimiento y tofu.\n")
+    ingrediente=input("Ingrediente a elegir: ").lower()
+
+    if ingrediente == "pimiento":
+        print("Pedido:")
+        print("Pizza vegetariana con mozzarella, tomate y pimiento.")
+   
+    elif ingrediente == "tofu":
+        print("Pedido:")
+        print("Pizza vegetariana con mozzarella, tomate y tofu.")
+    else:
+        print("Ingrese un ingrediente válido.")    
+
+elif tipo_pizza.upper() == "N":
+    print("\nIngredientes no vegetarianos: \n\tPeperoni, Jamón y Salmón.\n")
+    ingrediente=input("Ingrediente a elegir: ").lower()
+
+    if ingrediente == "peperoni":
+        print("Pizza no vegetariana con mozzarella, tomate y peperoni.")
+    elif ingrediente in ("jamón", "jamon"):
+        print("Pizza no vegetariana con mozzarella, tomate y jamón.")  
+    elif ingrediente in ("salmón", "salmon"):
+        print("Pizza no vegetariana con mozzarella, tomate y salmón.")
+    else:
+        print("Ingrese un ingrediente válido.")    
+
 else:
-    print("Ingrese una parametro válido")         
-
-
-
-
-
+    print("Ingrese un parámetro válido.")
 
 
 
