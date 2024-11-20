@@ -5940,16 +5940,21 @@ facturas={}
 
 # for anios in range(0,edad):
 #     anios += 1
-#     print(f"{anios}")
+#     print(f"Años cumplidos {anios}")
 
 
-age=int(input("Edad: "))
+# age=int(input("Edad: "))
 
-for i in range(age):
-    print(f"Has cumplido {i+1} años")
+# for i in range(age):
+#     print(f"Has cumplido {i+1} años")
 
 
+# entero=int(input("Ingrese numero entero positivo: "))
 
+# for i in range(0,entero,2):
+# # for i in range(1,entero+1,2):
+#     i += 1
+#     print(i, end=", ")
 
 
 
