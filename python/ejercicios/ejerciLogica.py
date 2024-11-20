@@ -5769,29 +5769,51 @@ facturas={}
 # else:
 #     print("Ingrese un numero mayor a 0")    
 
-numero=int(input("Ingrese un numero entero: "))
+# numero=int(input("Ingrese un numero entero: "))
 
-resultado = numero % 2
-print(resultado)
-if resultado == 0:
-    print(f"El numero {numero} es par")
+# resultado = numero % 2
+# print(resultado)
+# if resultado == 0:
+#     print(f"El numero {numero} es par")
+# else:
+#     print(f"Numero {numero} inpar.")    
+
+
+# edad=int(input("Ingrese su edad: "))
+# ingresos=float(input("Ingrese sus ingresos mensuales: "))
+
+
+# if edad >= 18 and ingresos >= 1000:
+#     print(f"Debe tributar.")
+# else:
+#     print(f"No debe tributar.")    
+
+
+# nombre=str(input("Ingrese su nombre: ")).title()
+# genero=str(input("Ingrese su genero (H-M) ")).lower()
+
+
+# if nombre > "a" and nombre < "n":
+#     print("Esta en el grupo A")
+# elif nombre     
+
+
+
+nombre=input("Ingrese tu nombre: ").lower()
+genero=input("Ingrese su genero ( M - H) ").upper()
+
+if genero == "M":
+    if nombre < "m":
+        grupo = "A"
+    else:
+        grupo = "B"
 else:
-    print(f"Numero {numero} inpar.")    
+    if nombre > "n":
+        grupo = "A"
+    else:
+        grupo = "B"                
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(f"Tu grupo es {grupo}")
 
 
 
