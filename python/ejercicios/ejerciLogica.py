@@ -5896,47 +5896,57 @@ facturas={}
 # else:
 #     print("Ingrese una parametro válido")         
 
+# print("---La pizzería Bella Napoli---")
+# tipo_pizza=str(input("Pizza vegetariana ( S o N) "))
 
-tipo_pizza=str(input("Pizza vegetariana ( S o N) "))
+# if tipo_pizza.upper() == "S":
+#     print("\nMenú vegetarianos: \n\tPimiento y tofu.\n")
+#     ingrediente=input("Ingrediente a elegir: ").lower()
 
-if tipo_pizza.upper() == "S":
-    print("\nIngredientes vegetarianos: \n\tPimiento y tofu.\n")
-    ingrediente=input("Ingrediente a elegir: ").lower()
-
-    if ingrediente == "pimiento":
-        print("Pedido:")
-        print("Pizza vegetariana con mozzarella, tomate y pimiento.")
+#     if ingrediente == "pimiento":
+#         print("Pedido:")
+#         print("Pizza vegetariana con mozzarella, tomate y pimiento.")
    
-    elif ingrediente == "tofu":
-        print("Pedido:")
-        print("Pizza vegetariana con mozzarella, tomate y tofu.")
-    else:
-        print("Ingrese un ingrediente válido.")    
+#     elif ingrediente == "tofu":
+#         print("Pedido:")
+#         print("Pizza vegetariana con mozzarella, tomate y tofu.")
+#     else:
+#         print("Ingrese un ingrediente válido.")    
 
-elif tipo_pizza.upper() == "N":
-    print("\nIngredientes no vegetarianos: \n\tPeperoni, Jamón y Salmón.\n")
-    ingrediente=input("Ingrediente a elegir: ").lower()
+# elif tipo_pizza.upper() == "N":
+#     print("\nMenú  no vegetarianos: \n\tPeperoni, Jamón y Salmón.\n")
+#     ingrediente=input("Ingrediente a elegir: ").lower()
 
-    if ingrediente == "peperoni":
-        print("Pizza no vegetariana con mozzarella, tomate y peperoni.")
-    elif ingrediente in ("jamón", "jamon"):
-        print("Pizza no vegetariana con mozzarella, tomate y jamón.")  
-    elif ingrediente in ("salmón", "salmon"):
-        print("Pizza no vegetariana con mozzarella, tomate y salmón.")
-    else:
-        print("Ingrese un ingrediente válido.")    
+#     if ingrediente == "peperoni":
+#         print("Pizza no vegetariana con mozzarella, tomate y peperoni.")
+#     elif ingrediente in ("jamón", "jamon"):
+#         print("Pizza no vegetariana con mozzarella, tomate y jamón.")  
+#     elif ingrediente in ("salmón", "salmon"):
+#         print("Pizza no vegetariana con mozzarella, tomate y salmón.")
+#     else:
+#         print("Ingrese un ingrediente válido.")    
 
-else:
-    print("Ingrese un parámetro válido.")
-
-
+# else:
+#     print("Ingrese un parámetro válido.")
 
 
+# nombre=str(input("Ingrese su nombre: ")).title()
+
+# for i in range(10):
+#     print(f"{nombre}")
 
 
+# edad=int(input("Ingrese su edad: "))
+
+# for anios in range(0,edad):
+#     anios += 1
+#     print(f"{anios}")
 
 
+age=int(input("Edad: "))
 
+for i in range(age):
+    print(f"Has cumplido {i+1} años")
 
 
 
