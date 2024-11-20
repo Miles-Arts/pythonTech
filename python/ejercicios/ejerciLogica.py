@@ -5863,29 +5863,38 @@ facturas={}
 #     print(f"Tipo impsositivo de 45%")            
 
     
-puntuacion=float(input("Ingrese puntuación de empleado: "))
-pago= float(2400)
+# puntuacion=float(input("Ingrese puntuación de empleado: "))
+# pago= float(2400)
 
-if puntuacion == 0.0:
-    nivel = "Inaceptable"
-    resultado = float(pago * puntuacion)
-    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")
+# if puntuacion == 0.0:
+#     nivel = "Inaceptable"
+#     resultado = float(pago * puntuacion)
+#     print(f"Nivel {nivel}. \nPago ${resultado:.2f}")
 
-elif puntuacion == 0.4:
-    nivel = "Aceptable"
-    resultado = float(pago * puntuacion )
-    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
+# elif puntuacion == 0.4:
+#     nivel = "Aceptable"
+#     resultado = float(pago * puntuacion )
+#     print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
 
-elif puntuacion >= 0.6:
-    nivel = "Meritorio"
-    resultado = float(pago * puntuacion )
-    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
+# elif puntuacion >= 0.6:
+#     nivel = "Meritorio"
+#     resultado = float(pago * puntuacion )
+#     print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
 
+# else:
+#     print(f"Ingrese una puntación validad.")
+
+
+edad_jugador=int(input("Ingrese su edad: "))
+
+if edad_jugador < 4:
+    print("Puede entrar gratis.")
+elif edad_jugador >= 4 and edad_jugador < 18:
+    print("Debe pagar $5.000")
+elif edad_jugador >= 18:
+    print("Debe pagar $10.000") 
 else:
-    print(f"Ingrese una puntación validad.")
-
-
-
+    print("Ingrese una parametro válido")         
 
 
 
