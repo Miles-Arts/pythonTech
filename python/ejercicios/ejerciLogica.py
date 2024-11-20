@@ -5799,37 +5799,71 @@ facturas={}
 
 
 
-nombre=input("Ingrese tu nombre: ").lower()
-genero=input("Ingrese su genero ( M - H) ").upper()
+# nombre=input("Ingrese tu nombre: ").lower()
+# genero=input("Ingrese su genero ( M - H) ").upper()
 
-if genero == "M":
-    if nombre < "m":
-        grupo = "A"
-    else:
-        grupo = "B"
+# if genero == "M":
+#     if nombre < "m":
+#         grupo = "A"
+#     else:
+#         grupo = "B"
+
+# elif genero == "H":
+
+#     if nombre > "n":
+#         grupo = "A"
+#     else:
+#         grupo = "B"
+
+# elif genero != "M" or genero != "H": 
+#     genero=None
+#     print("Ingrese una letra válida ( M-H )")                        
+
+# print(f"Tu grupo es {grupo}")
+
+
+
+
+
+
+
+
+
+# nombre=input("Escriba su nombre ").lower()
+# genero=input("Escriba su genero ( H - M) ").upper()
+
+
+# if genero == "M":
+#     if  nombre < "m":
+#         grupo = "A"
+#     else:
+#         grupo = "B"
+
+# elif genero == "H":
+#     if nombre > "n":
+#         grupo = "A"
+#     else:
+#         grupo = "B"
+
+# print(f"Su grupo es  {grupo}")                    
+
+
+renta_anual=float(input("Ingrese su renta anual: "))
+porcentaje=0
+
+if renta_anual < 10000:
+    print(f"Tipo impsositivo de 5%")
+elif renta_anual >= 10000 and renta_anual < 20000:
+    print(f"Tipo impsositivo de 15%")
+elif renta_anual >= 20000 and renta_anual < 35000:
+    print(f"Tipo impsositivo de 20%")
+elif renta_anual >= 35000 and renta_anual < 60000:
+    print(f"Tipo impsositivo de 30%")
 else:
-    if nombre > "n":
-        grupo = "A"
-    else:
-        grupo = "B"                
+    print(f"Tipo impsositivo de 45%")            
 
-print(f"Tu grupo es {grupo}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
 
 
 
