@@ -5848,24 +5848,41 @@ facturas={}
 # print(f"Su grupo es  {grupo}")                    
 
 
-renta_anual=float(input("Ingrese su renta anual: "))
-porcentaje=0
+# renta_anual=float(input("Ingrese su renta anual: "))
+# porcentaje=0
 
-if renta_anual < 10000:
-    print(f"Tipo impsositivo de 5%")
-elif renta_anual >= 10000 and renta_anual < 20000:
-    print(f"Tipo impsositivo de 15%")
-elif renta_anual >= 20000 and renta_anual < 35000:
-    print(f"Tipo impsositivo de 20%")
-elif renta_anual >= 35000 and renta_anual < 60000:
-    print(f"Tipo impsositivo de 30%")
+# if renta_anual < 10000:
+#     print(f"Tipo impsositivo de 5%")
+# elif renta_anual >= 10000 and renta_anual < 20000:
+#     print(f"Tipo impsositivo de 15%")
+# elif renta_anual >= 20000 and renta_anual < 35000:
+#     print(f"Tipo impsositivo de 20%")
+# elif renta_anual >= 35000 and renta_anual < 60000:
+#     print(f"Tipo impsositivo de 30%")
+# else:
+#     print(f"Tipo impsositivo de 45%")            
+
+    
+puntuacion=float(input("Ingrese puntuación de empleado: "))
+pago= float(2400)
+
+if puntuacion == 0.0:
+    nivel = "Inaceptable"
+    resultado = float(pago * puntuacion)
+    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")
+
+elif puntuacion == 0.4:
+    nivel = "Aceptable"
+    resultado = float(pago * puntuacion )
+    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
+
+elif puntuacion >= 0.6:
+    nivel = "Meritorio"
+    resultado = float(pago * puntuacion )
+    print(f"Nivel {nivel}. \nPago ${resultado:.2f}")  
+
 else:
-    print(f"Tipo impsositivo de 45%")            
-
-    
-    
-
-
+    print(f"Ingrese una puntación validad.")
 
 
 
