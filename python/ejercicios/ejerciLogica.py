@@ -6014,12 +6014,12 @@ facturas={}
 
 
 
-numero=int(input("Número entero: "))
+# numero=int(input("Número entero: "))
 
-for i in range(numero):
-    for j in range(i+1):
-        print("*", end="")
-    print("")    
+# for i in range(numero):
+#     for j in range(i+1):
+#         print("*", end="")
+#     print("")    
 
 
 
