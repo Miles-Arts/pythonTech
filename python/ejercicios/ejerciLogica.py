@@ -5981,28 +5981,45 @@ facturas={}
 #     print(f"La inversión {resultados}")
 # # print()    
 
-inversion=float(input("¿Ingrese la cantidad a invertir? "))
-interes=float(input("¿Interés anual? "))
-anios=int(input("¿Años de inversión? "))
+# inversion=float(input("¿Ingrese la cantidad a invertir? "))
+# interes=float(input("¿Interés anual? "))
+# anios=int(input("¿Años de inversión? "))
 
-for i in range(anios):
-    inversion *= 1 + interes / 100
-    i+1
-    print(f"Capital tras {i} años: ${inversion:.2f}")
-
-
+# for i in range(anios):
+#     inversion *= 1 + interes / 100
+#     i+1
+#     print(f"Capital tras {i} años: ${inversion:.2f}")
 
 
 
+# inversion=float(input("¿Ingrese la cantidad a invertir? "))
+# interes=float(input("¿Interés anual? "))
+# anios=int(input("¿Años de inversión? "))
+
+# if i in range(anios):
+#     inversion *= + 1 + interes / 100 
+
+
+
+# numero=int(input("Número entero: "))
+
+# for i in range(numero):
+#     i +=1
+#     print("*")
+#     for j in range(i):
+#         j+=0
+#         print("*", end="")    
 
 
 
 
 
+numero=int(input("Número entero: "))
 
-
-
-
+for i in range(numero):
+    for j in range(i+1):
+        print("*", end="")
+    print("")    
 
 
 
