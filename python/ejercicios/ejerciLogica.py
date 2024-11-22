@@ -6023,21 +6023,52 @@ facturas={}
 
 
 
-numero=int(input("Ingrese un numero entero: "))
+# numero=int(input("Ingrese un numero entero: "))
 
-for i in range(numero):
-    for j in range(i+1):
-        print("*", end="")
-    print("")    
+# for i in range(numero):
+#     for j in range(i+1):
+#         print("*", end="")
+#     print("")    
+
+# # alt 33     !       
+#   alt 34     "       
+#   alt 35     #       
+#   alt 36     $       
+#   alt 37     %       
+#   alt 38     &       
+#   alt 39     '       
+#   alt 40     (       
+#   alt 41     )   
+#   alt 61     =         
+
+# multiplicar= 11
+# for i in range(1,multiplicar,1):
+#     # multiplicar = multiplicar * i 
+#     for j in range(0,multiplicar):
+#         print(f"{i} X {j} = {i*j}")
+#         # print(end="")    
+
+# for i in range(1,11):
+#     for j in range(1,11):
+#         print(i*j, end="\t")
+#     print("")    
 
 
 
 
 
-
-
-
-
+#   alt 33     !       
+#   alt 34     "       
+#   alt 35     #       
+#   alt 36     $       
+#   alt 37     %       
+#   alt 38     &       
+#   alt 39     '       
+#   alt 40     (       
+#   alt 41     ) 
+#   alt 47     /    
+#   alt 61     =  
+#   alt 92     \  
 
 
 
