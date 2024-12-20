@@ -6061,12 +6061,12 @@ facturas={}
 #         j+=1
 #         print(f"{j}",end="\t")    
 
-numero=int(input("Ingrese número enter: "))
+# numero=int(input("Ingrese número entero: "))
 
-for i in range(1,numero+1,2):
-    for j in range(i,0,-2):
-        print(j, end=" ")
-    print("")    
+# for i in range(1,numero+1,2):
+#     for j in range(i,0,-2):
+#         print(j, end=" ")
+#     print("")    
 
 
 #   alt 33     !       
@@ -6083,7 +6083,15 @@ for i in range(1,numero+1,2):
 #   alt 92     \  
 #   alt 124    | 
 
+clave=str(input("Escribe la clave: ")).lower()
+nuevaclave=str(input("Introduce la clave: ")).lower()
 
+
+
+if clave == nuevaclave:
+    print("Clave correcta!")
+else:
+    print("Clave incorrecta!")    
 
 
 
