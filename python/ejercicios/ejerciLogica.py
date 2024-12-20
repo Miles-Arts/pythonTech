@@ -6081,6 +6081,7 @@ for i in range(1,numero+1,2):
 #   alt 47     /    
 #   alt 61     =  
 #   alt 92     \  
+#   alt 124    | 
 
 
 
