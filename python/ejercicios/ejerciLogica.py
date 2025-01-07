@@ -6093,13 +6093,21 @@ facturas={}
 # else:
 #     print("Clave incorrecta!")    
 
-clave= "contraseña"
-password=""
+# clave= "contraseña"
+# password=""
 
-while password != clave:
-    password = input("Introduce la contraseña: ").lower()
-print("Contraseña correcta!")    
+# while password != clave:
+#     password = input("Introduce la contraseña: ").lower()
+# print("Contraseña correcta!")    
 
+numero_entero=int(input("Ingrese número entero: "))
+i= 2
+while numero_entero % i != 0:
+    i +=1
+if i == numero_entero:
+    print(str(numero_entero) + " es primo")
+else:    
+    print(str(numero_entero) + " no es primo")
 
 
 
