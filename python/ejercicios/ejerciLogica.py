@@ -6083,17 +6083,22 @@ facturas={}
 #   alt 92     \  
 #   alt 124    | 
 
-clave=str(input("Escribe la clave: ")).lower()
-nuevaclave=str(input("Introduce la clave: ")).lower()
+# clave=str(input("Escribe la clave: ")).lower()
+# nuevaclave=str(input("Introduce la clave: ")).lower()
 
 
 
-if clave == nuevaclave:
-    print("Clave correcta!")
-else:
-    print("Clave incorrecta!")    
+# if clave == nuevaclave:
+#     print("Clave correcta!")
+# else:
+#     print("Clave incorrecta!")    
 
+clave= "contraseña"
+password=""
 
+while password != clave:
+    password = input("Introduce la contraseña: ").lower()
+print("Contraseña correcta!")    
 
 
 
