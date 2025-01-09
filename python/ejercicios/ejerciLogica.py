@@ -6144,6 +6144,176 @@ facturas={}
 
 
 
+# entero=float(input("Escriba un entero positivo "))
+
+# resultado=float(entero*(entero+1) / 2)
+
+# print(f"\nLa suma de todos los números enteros")
+# print(f"desde 1 hasta {entero:.0f} es: {resultado:.0f} ")
+
+# peso=float(input("Ingrese su peso: "))
+# altura=float(input("Ingrese su altura: "))
+
+# resultado=float(peso / (altura * altura)
+# )
+# print(f"su IMC es: {resultado:.2f}")
+
+
+entero1=int(input("Escriba un número entero: "))
+entero2=int(input("Escriba un número entero: "))
+
+
+resultado1=entero1 // entero2
+resultado2=entero1 % entero2
+
+print(f"Entre {entero1} y {entero2} da un cociente {resultado1} y un resto de {resultado2}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
