@@ -6159,21 +6159,24 @@ facturas={}
 # print(f"su IMC es: {resultado:.2f}")
 
 
-entero1=int(input("Escriba un número entero: "))
-entero2=int(input("Escriba un número entero: "))
+# entero1=int(input("Escriba un número entero: "))
+# entero2=int(input("Escriba un número entero: "))
 
 
-resultado1=entero1 // entero2
-resultado2=entero1 % entero2
+# resultado1=entero1 // entero2
+# resultado2=entero1 % entero2
 
-print(f"Entre {entero1} y {entero2} da un cociente {resultado1} y un resto de {resultado2}")
-
-
+# print(f"Entre {entero1} y {entero2} da un cociente {resultado1} y un resto de {resultado2}")
 
 
+# dinero_inversion=float(input("Ingrese cantidad a invertir: "))
+# interes=float(input("Ingrese interés anual: "))
+# anios=float(input("Ingrese años inversión: "))
 
+# # res+ultado1= dinero_inversion + (dinero_inversion * anios) / anios
+# resultado1= dinero_inversion * (interes / 100 + 1) ** anios
 
-
+# print(f"Capital ganacia {resultado1}")
 
 
 
