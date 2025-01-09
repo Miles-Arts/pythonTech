@@ -6110,21 +6110,37 @@ facturas={}
 #     print(str(numero_entero) + " no es primo")
 
 
-hola="Hola Mundo"
+# hola="Hola Mundo"
 
-print(hola)
+# print(hola)
 
+# hola=input("Escribe Hola mundo: ").title()
 
-
-
-
-
+# print(hola)
 
 
+# saludo=input("Ingrese su nombre ").title()
+
+# print(f"¡Hola {saludo}!")
+
+# suma1=3
+# suma2=2
+# flotante1=float(2)
+# flotante2=float(5)
+# multiplicacion=2
+
+# # operacion=float((suma1 + suma2) / (flotante) * multiplicacion)
+# operacion=float(((suma1 + suma2) / (flotante1 * flotante2)) ** multiplicacion)
+
+# print(operacion)
 
 
+# horas=float(input("Horas trabajadas: "))
+# costo=float(input("Costo por hora: "))
 
+# resultado=float(horas * costo)
 
+# print(f"las {horas} horas trabajadas vales {resultado:.0f}")
 
 
 
