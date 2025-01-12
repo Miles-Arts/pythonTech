@@ -6178,22 +6178,36 @@ facturas={}
 
 # print(f"Capital ganacia {resultado1}")
 
+# munecas=int(input("Ingrese la cantidad de muñecas "))
+# payasos=int(input("Ingrese la cantidad de payasos "))
+
+
+# munecas_total= munecas *75
+# payasos_total= payasos * 112
+# total_envio=munecas_total + payasos_total
+
+
+# print(f"Se vendieron {munecas} mueñecas")
+# print(f"Se vendieron {payasos} payasos")
+# print(f"El peso total del envio es de: {total_envio} kilos")
 
 
 
+# deposito=float(input("Ingrese la cantidad de dinero "))
+# interes=0.04
+# anio=0
+
+# resultado1= deposito * (interes + 1) 
+# resultado2= resultado1 * (interes + 1) 
+# resultado3= resultado2 * (interes + 1) 
+
+# print(f"{resultado1:.2f}")
+# print(f"{resultado2:.2f}")
+# print(f"{resultado3:.2f}")
 
 
 
-
-
-
-
-
-
-
-
-
-
+pan=
 
 
 
