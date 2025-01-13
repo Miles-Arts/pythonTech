@@ -6206,16 +6206,32 @@ facturas={}
 # print(f"{resultado3:.2f}")
 
 
+# pan_vendido=int(input("Ingrese pan vendido: "))
+# pan=float(3.49)
+# descuento=float(0.6)
 
-pan=
+# # pan= pan_vendido * pan
+# precio_descuento= pan_vendido * pan * ( 1 - descuento  )
+
+# print("El Pan tiene un valor de 3.49€.")
+# print(f"Se le hace un descuento del {descuento}%")
+# print(f"Costo final TOTAL {precio_descuento:.2f}€.")
 
 
 
+# nombre=input("Escriba su nombre: ")
+# numero=int(input("Escriba un número entero: "))
+
+# resultado=0
+
+# print(f"\n{nombre.split()*numero}")
 
 
+nombre=input("Escriba su nombre completo: ")
 
-
-
+print(nombre.title())
+print(nombre.upper())
+print(nombre.lower())
 
 
 
