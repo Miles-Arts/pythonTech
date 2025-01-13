@@ -6227,21 +6227,27 @@ facturas={}
 # print(f"\n{nombre.split()*numero}")
 
 
-nombre=input("Escriba su nombre completo: ")
+# nombre=input("Escriba su nombre completo: ")
 
-print(nombre.title())
-print(nombre.upper())
-print(nombre.lower())
+# print(nombre.title())
+# print(nombre.upper())
+# print(nombre.lower())
 
+# nombre=input("Escriba su nombre: ").title()
 
+# resultado=len(nombre)
 
-
-
-
-
-
+# print(f"{nombre} tiene {resultado} letras.")
 
 
+# contacto="+34-913724710-56"
+# print(contacto[4:13])
+
+# frase=input("Escribe una frase: ")
+# # frase=reversed(frase)
+# resultado=frase
+
+# print(resultado[::-1])
 
 
 
