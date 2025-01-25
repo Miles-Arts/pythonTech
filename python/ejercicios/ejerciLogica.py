@@ -6252,26 +6252,48 @@ facturas={}
 
 # 8158
 
+# frase=input("Escribe una frase: ")
+
+# frase= reversed(frase)
+
+# print(frase)
+
+# frase=input("Escribe una frase: ")
+
+# frase= frase[::-1]
+
+# print(frase)
+
+
+# frase=input("Escribe una frase: ")
+# vocal=input("Escribe una vocal: ").upper()
+
+# oracion=frase + vocal
+
+# print(oracion)
+
+
+# frase=input("Ingrese frase: ")
+# vocal=input("Ingrese vocal: ")
+
+# oracion= frase.replace(vocal, vocal.upper())
+
+# print(oracion)
 
 
 
+# correo=input("Escribe tu email: ")
+
+# correo=correo[:correo.find('@')] + "@ceu.es"
+
+# print(correo)
 
 
+precios=input("Escribe precio producto con decimales: ")
 
+precio=precios[:precios.find(".")] , " euros y", precios[precios.find(".")+1], "céntimos."
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(precio)
 
 
 
