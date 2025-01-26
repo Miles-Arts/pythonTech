@@ -6289,29 +6289,38 @@ facturas={}
 # print(correo)
 
 
-precios=input("Escribe precio producto con decimales: ")
+# precios=input("Escribe precio producto con decimales: ")
 
-precio=precios[:precios.find(".")] , " euros y", precios[precios.find(".")+1], "céntimos."
+# precio=precios[:precios.find(".")] , " euros y", precios[precios.find(".")+1], "céntimos."
 
-print(precio)
-
-
+# print(precio)
 
 
+# fechas=input("Fecha de nacimiento dd/mm/aaaa: ")
+
+# fecha=fechas[:fechas.find(" ")], "/", fechas[fechas.find(" ")], "/", fechas[fechas.find(" ")] , "/"
+
+# print(fecha)
+
+
+# fecha=input("Fecha nacimiento fechas: ")
+
+# print(f"Día {fecha[:2]}")
+# print(f"Mes {fecha[3:5]}")
+# print(f"Año {fecha[6:]}")
 
 
 
+fecha=input("Fecha nacimeinto: ")
 
+dia=fecha[:fecha.find("/")]
+mesanio=fecha[fecha.find("/")+1:]
+mes=mesanio[:mesanio.find("/")]
+anio=mesanio[mesanio.find("/")+1:]
 
-
-
-
-
-
-
-
-
-
+print(f"Días {dia}")
+print(f"Mes {mes}")
+print(f"Año {anio}")
 
 
 
