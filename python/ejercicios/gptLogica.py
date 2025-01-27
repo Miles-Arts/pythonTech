@@ -134,15 +134,16 @@ def calcular_costo(precio, cantidad):
     return precio*cantidad
 
 print("--Tienda don Veci---")
-usuario=input("Ingrese su nombre: ").lower()
+usuario=input("Ingrese su nombre: ").title()
 
 productos=[]
 precios=[]
 
 for i in range(3):
-    producto=input(f"Ingrese nombre producto{i+1}: ")
-    precio=float(input(f"Precio {productos}:"))
-    cantidad=int(input(f"Cantidad productos{productos}: "))
+    producto=input(f"\nIngrese nombre producto: ").title()
+    i + 1
+    precio=float(input(f"Precio {producto}: "))
+    cantidad=int(input(f"Cantidad productos {producto}: "))
 
     costo= calcular_costo(precio, cantidad)
     productos.append((producto, cantidad, costo))
@@ -158,10 +159,10 @@ print(f"Cliente: {usuario}\n")
 
 for producto, catidad, precio in productos:
     print(f"Producto: {producto} | Cantidad: {cantidad} | Precio: ${precio:.2f}")
-print(f"\ntotal sin decuento: ${total:.2f}")
+print(f"\nTotal sin descuento: ${total:.2f}")
 
 if descuento > 0:
-    print(f"DEscuento apliacdo: ${descuento:.2f}")
+    print(f"Descuento apliacado: ${descuento:.2f}")
 print(f"Total a pagar: ${total_final:.2f}")
 
 
