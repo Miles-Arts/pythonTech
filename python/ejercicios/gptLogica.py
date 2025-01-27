@@ -43,30 +43,51 @@
 
 # CONVEROS MINUTOS HORAS DIAS
 
-print("---Conversor  mMnutos a Horas y Días")
-minutos=float(input("Ingrese cantidad de minutos: "))
+# print("---Conversor  mMnutos a Horas y Días")
+# minutos=float(input("Ingrese cantidad de minutos: "))
 
-horas=minutos / 60
-dias=minutos / 1440
-dias1=float(minutos / (60*24))
-
-
-print(f"Los {minutos} minutos.")
-print(f"Son {horas:.0f} horas. ")
-
-if dias1 >= 1.00 and dias1 <= 1.99:
-    print(f"Son {dias1:.0f} día.")
-elif dias1 >= 2.00:
-    print(f"Son {dias1:.0f} días.")
-else:
-    print(f"Son {dias:.2f} día. ")
+# horas=minutos / 60
+# dias=minutos / 1440
+# dias1=float(minutos / (60*24))
 
 
+# print(f"Los {minutos} minutos.")
+# print(f"Son {horas:.0f} horas. ")
 
+# if dias1 >= 1.00 and dias1 <= 1.99:
+#     print(f"Son {dias1:.0f} día.")
+# elif dias1 >= 2.00:
+#     print(f"Son {dias1:.0f} días.")
+# else:
+#     print(f"Son {dias:.2f} día. ")
 
+print("---Sistema básico de Calificacion---")
 
+estudiante=str(input("Ingrese nombre estudiante: ")).title()
+print("Ingrese notas de cada asignatura")
 
+nota1=float(input("Nota Inglés: "))
+nota2=float(input("Nota Computación: "))
+nota3=float(input("Nota Sociales: "))
 
+promedio=(nota1+nota2+nota3) / 3
+
+if promedio >= 3.0:
+    print(f"El estudiante: {estudiante}")
+    print(f"NOTAS:\n")
+    print(f"Inglés: \t{nota1}")
+    print(f"Computación: \t{nota2}")
+    print(f"Sociales: \t{nota3}")
+    print(f"\tPromedio: {promedio:.2f}")
+    print(f"\t\tSemestre Aprobado.")
+elif promedio <= 2.9:
+    print(f"El estudiante: {estudiante}")
+    print(f"NOTAS:\n")
+    print(f"Inglés: \t{nota1}")
+    print(f"Computación: \t{nota2}")
+    print(f"Sociales: \t{nota3}")
+    print(f"\tPromedio: {promedio:.2f}")
+    print(f"\t\tSemestre Reprobado.")
 
 
 
