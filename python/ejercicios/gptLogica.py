@@ -48,10 +48,18 @@ minutos=float(input("Ingrese cantidad de minutos: "))
 
 horas=minutos / 60
 dias=minutos / 1440
+dias1=float(minutos / (60*24))
 
-print(f"Los {minutos} minutos ")
-print(f"Son {horas:.2f} horas. ")
-print(f"Son {dias:.2f} días. ")
+
+print(f"Los {minutos} minutos.")
+print(f"Son {horas:.0f} horas. ")
+
+if dias1 >= 1.00 and dias1 <= 1.99:
+    print(f"Son {dias1:.0f} día.")
+elif dias1 >= 2.00:
+    print(f"Son {dias1:.0f} días.")
+else:
+    print(f"Son {dias:.2f} día. ")
 
 
 
