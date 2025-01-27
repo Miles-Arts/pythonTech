@@ -6311,16 +6311,16 @@ facturas={}
 
 
 
-fecha=input("Fecha nacimeinto: ")
+# fecha=input("Fecha nacimeinto: ")
 
-dia=fecha[:fecha.find("/")]
-mesanio=fecha[fecha.find("/")+1:]
-mes=mesanio[:mesanio.find("/")]
-anio=mesanio[mesanio.find("/")+1:]
+# dia=fecha[:fecha.find("/")]
+# mesanio=fecha[fecha.find("/")+1:]
+# mes=mesanio[:mesanio.find("/")]
+# anio=mesanio[mesanio.find("/")+1:]
 
-print(f"Días {dia}")
-print(f"Mes {mes}")
-print(f"Año {anio}")
+# print(f"Días {dia}")
+# print(f"Mes {mes}")
+# print(f"Año {anio}")
 
 
 
