@@ -168,8 +168,6 @@
 # print(f"Total a pagar: ${total_final:.2f}")
 
 # Registro de notas de estudiantes
-
-
 estudiante=str(input("Nombre Estudiante: ")).title()
 notas=[]
 
@@ -179,33 +177,27 @@ for i in range(4):
     notas.append(nota)
     promedio=float(sum(notas) / len(notas))
 
-    # for j in notas:
-    #     pass
-
 def calcular_notas(promedio):
     if promedio >= 3.0:
-        return("Aprobo")
+        return("Aprobado")
     elif promedio <= 2.9:
         return("Reprobo") 
 
 def nota_alta(notas):
     return max(notas)
      
-
 def nota_baja(notas):
     return min(notas)       
 
 def orden_notas(notas):
     return sorted(notas)   
-    
-     
 
 print(f"Estudiante {estudiante}")
-print(f"Semestre: {calcular_notas(promedio)}.")
+print(f"Promedio: {promedio:.2f}")
 print(f"Notas más alta: {nota_alta(notas)}")
 print(f"Nota más baja: {nota_baja(notas)}")
-print(f"Notas: {orden_notas(notas)}.")
-
+print(f"Orden de notas: {orden_notas(notas)}")
+print(f"Semestre: {calcular_notas(promedio)}.")
 
 
 
