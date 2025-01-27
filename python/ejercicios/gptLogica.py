@@ -62,7 +62,6 @@
 #     print(f"Son {dias:.2f} día. ")
 
 print("---Sistema básico de Calificacion---")
-
 estudiante=str(input("Ingrese nombre estudiante: ")).title()
 print("Ingrese notas de cada asignatura")
 
