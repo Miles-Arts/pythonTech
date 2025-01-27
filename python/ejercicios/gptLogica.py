@@ -21,26 +21,33 @@
 # print(f"Temperatura en Fahrenheit es: {fahrenheit} °F")
 # print(f"Temperatura en Kelvin es: {kelvin:.2f} °K")
 
+# medidas triangulo
+# print("Ingresa las dimenciones del triángulo: ")
+# base=float(input("Ancho: "))
+# altura=float(input("Altura: "))
+# print("\nIngresa las dimenciones de los bordes del triangulo: ")
+# perimetro1=float(input("Medida base: "))
+# perimetro2=float(input("Medida izquierda: "))
+# perimetro3=float(input("Medida base: "))
 
-print("Ingresa las dimenciones del triángulo: ")
-base=float(input("Ancho: "))
-altura=float(input("Altura: "))
-print("\nIngresa las dimenciones de los bordes del triangulo: ")
-perimetro1=float(input("Medida base: "))
-perimetro2=float(input("Medida izquierda: "))
-perimetro3=float(input("Medida base: "))
+# area=float(0.5) * base * altura
+# area1=(base * altura) / 2
 
-area=float(0.5) * base * altura
-area1=(base * altura) / 2
+# perimetro_total=perimetro1+perimetro2+perimetro3
+# perimetro_total1=2*(base+altura)
 
-perimetro_total=perimetro1+perimetro2+perimetro3
+# print(f"El área del triángulo es: {area1:.2f}")
+# print(f"El perímetro del triángulo es: {perimetro_total:.2f}")
+# print(f"El perímetro del triángulo es: {perimetro_total1:.2f}")
 
 
-print(f"El área del triángulo es: {area1:.2f}")
-print(f"El perímetro del triángulo es: {perimetro_total:.2f}")
+# CONVEROS MINUTOS HORAS DIAS
 
+print("---conversos  minutos a horas y días")
+minutos=float(input("Ingrese cantidad de minutos: "))
 
-
+horas=minutos / 60
+dias=minutos / 1440
 
 
 
