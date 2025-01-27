@@ -61,44 +61,74 @@
 # else:
 #     print(f"Son {dias:.2f} día. ")
 
-print("---Sistema básico de Calificacion---")
-estudiante=str(input("Ingrese nombre estudiante: ")).title()
-print("Ingrese notas de cada asignatura")
+# print("---Sistema básico de Calificacion---")
+# estudiante=str(input("Ingrese nombre estudiante: ")).title()
+# print("Ingrese notas de cada asignatura")
 
-nota1=float(input("Nota Inglés: "))
-nota2=float(input("Nota Computación: "))
-nota3=float(input("Nota Sociales: "))
+# nota1=float(input("Nota Inglés: "))
+# nota2=float(input("Nota Computación: "))
+# nota3=float(input("Nota Sociales: "))
 
-promedio=(nota1+nota2+nota3) / 3
+# promedio=(nota1+nota2+nota3) / 3
 
-if promedio >= 3.0:
-    print(f"El estudiante: {estudiante}")
-    print(f"NOTAS:\n")
-    print(f"Inglés: \t{nota1}")
-    print(f"Computación: \t{nota2}")
-    print(f"Sociales: \t{nota3}")
-    print(f"\tPromedio: {promedio:.2f}")
-    print(f"\t\tSemestre Aprobado.")
-elif promedio <= 2.9:
-    print(f"El estudiante: {estudiante}")
-    print(f"NOTAS:\n")
-    print(f"Inglés: \t{nota1}")
-    print(f"Computación: \t{nota2}")
-    print(f"Sociales: \t{nota3}")
-    print(f"\tPromedio: {promedio:.2f}")
-    print(f"\t\tSemestre Reprobado.")
-
-
+# if promedio >= 3.0:
+#     print(f"El estudiante: {estudiante}")
+#     print(f"NOTAS:\n")
+#     print(f"Inglés: \t{nota1}")
+#     print(f"Computación: \t{nota2}")
+#     print(f"Sociales: \t{nota3}")
+#     print(f"\tPromedio: {promedio:.2f}")
+#     print(f"\t\tSemestre Aprobado.")
+# elif promedio <= 2.9:
+#     print(f"El estudiante: {estudiante}")
+#     print(f"NOTAS:\n")
+#     print(f"Inglés: \t{nota1}")
+#     print(f"Computación: \t{nota2}")
+#     print(f"Sociales: \t{nota3}")
+#     print(f"\tPromedio: {promedio:.2f}")
+#     print(f"\t\tSemestre Reprobado.")
 
 
+# TIENDA DE FRUTAS
 
+usuario=str(input("Ingrese nombre: ")).title()
 
+producto1=str(input("Nombre producto: ")).title()
+precio1=float(input("Precio producto: "))
+cantida1=int(input("Cantidad: "))
 
+producto2=str(input("Nombre producto: ")).title()
+precio2=float(input("Precio producto: "))
+cantida2=int(input("Cantidad: "))
 
+producto3=str(input("Nombre producto: ")).title()
+precio3=float(input("Precio producto: "))
+cantida3=int(input("Cantidad: "))
 
+costo1=precio1*cantida1
+costo2=precio2*cantida2
+costo3=precio3*cantida3
 
+costo_lista=[costo1,costo2,costo3]
 
+total_precio=sum(costo_lista)
+descuento=10
+final_precio=float(total_precio *descuento)/100
+total_final=total_precio - final_precio
 
+if total_precio >= 20:
+    print(f"El usuario: {usuario}")
+    print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
+    print("Por compra superios a $20")
+    print("Tiene un descuento del 10%")
+    print(f"Total a pagar ${total_precio:.2f}")
+    print(f"Valor con descuento: ${total_final:.2f}")
+    
+else:
+    print(f"El usuario {usuario}")
+    print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
+    print(f"Total a pagar ${total_precio:.2f}")
+    print("No tiene descuento.")    
 
 
 
