@@ -130,46 +130,81 @@
 #     print(f"Total a pagar ${total_precio:.2f}")
 #     print("No tiene descuento.")    
 
-def calcular_costo(precio, cantidad):
-    return precio*cantidad
 
-print("--Tienda don Veci---")
-usuario=input("Ingrese su nombre: ").title()
+# -------------------------------------------------------------------
+# def calcular_costo(precio, cantidad):
+#     return precio*cantidad
 
-productos=[]
-precios=[]
+# print("--Tienda don Veci---")
+# usuario=input("Ingrese su nombre: ").title()
 
-for i in range(3):
-    producto=input(f"\nIngrese nombre producto: ").title()
-    i + 1
-    precio=float(input(f"Precio {producto}: "))
-    cantidad=int(input(f"Cantidad productos {producto}: "))
+# productos=[]
+# precios=[]
 
-    costo= calcular_costo(precio, cantidad)
-    productos.append((producto, cantidad, costo))
-    precios.append(costo)
+# for i in range(3):
+#     producto=input(f"\nIngrese nombre producto {i + 1}: ").title()
+    
+#     precio=float(input(f"Precio {producto}: "))
+#     cantidad=int(input(f"Cantidad productos {producto}: "))
 
-total=sum(precios)
+#     costo= calcular_costo(precio, cantidad)
+#     productos.append((producto, cantidad, costo))
+#     precios.append(costo)
 
-descuento=0.1*total if total > 20 else 0
-total_final= total - descuento
+# total=sum(precios)
 
-print("Resumen Compra")
-print(f"Cliente: {usuario}\n")
+# descuento=0.1*total if total > 20 else 0
+# total_final= total - descuento
 
-for producto, catidad, precio in productos:
-    print(f"Producto: {producto} | Cantidad: {cantidad} | Precio: ${precio:.2f}")
-print(f"\nTotal sin descuento: ${total:.2f}")
+# print("Resumen Compra")
+# print(f"Cliente: {usuario}\n")
 
-if descuento > 0:
-    print(f"Descuento apliacado: ${descuento:.2f}")
-print(f"Total a pagar: ${total_final:.2f}")
+# for producto, cantidad, precio in productos:
+#     print(f"Producto: {producto} | Cantidad: {cantidad} | Precio: ${precio:.2f}")
+# print(f"\nTotal sin descuento: ${total:.2f}")
+
+# if descuento > 0:
+#     print(f"Descuento apliacado: ${descuento:.2f}")
+# print(f"Total a pagar: ${total_final:.2f}")
+
+# Registro de notas de estudiantes
 
 
+estudiante=str(input("Nombre Estudiante: ")).title()
+notas=[]
 
+for i in range(4):
+    nota=float(input(f"Ingrese la nota {i+1} : "))
 
+    notas.append(nota)
+    promedio=float(sum(notas) / len(notas))
 
+    # for j in notas:
+    #     pass
 
+def calcular_notas(promedio):
+    if promedio >= 3.0:
+        return("Aprobo")
+    elif promedio <= 2.9:
+        return("Reprobo") 
+
+def nota_alta(notas):
+    return max(notas)
+     
+
+def nota_baja(notas):
+    return min(notas)       
+
+def orden_notas(notas):
+    return sorted(notas)   
+    
+     
+
+print(f"Estudiante {estudiante}")
+print(f"Semestre: {calcular_notas(promedio)}.")
+print(f"Notas más alta: {nota_alta(notas)}")
+print(f"Nota más baja: {nota_baja(notas)}")
+print(f"Notas: {orden_notas(notas)}.")
 
 
 
