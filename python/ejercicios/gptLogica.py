@@ -91,55 +91,78 @@
 
 # TIENDA DE FRUTAS
 
-usuario=str(input("Ingrese nombre: ")).title()
+# usuario=str(input("Ingrese nombre: ")).title()
 
-producto1=str(input("Nombre producto: ")).title()
-precio1=float(input("Precio producto: "))
-cantida1=int(input("Cantidad: "))
+# producto1=str(input("Nombre producto: ")).title()
+# precio1=float(input("Precio producto: "))
+# cantida1=int(input("Cantidad: "))
 
-producto2=str(input("Nombre producto: ")).title()
-precio2=float(input("Precio producto: "))
-cantida2=int(input("Cantidad: "))
+# producto2=str(input("Nombre producto: ")).title()
+# precio2=float(input("Precio producto: "))
+# cantida2=int(input("Cantidad: "))
 
-producto3=str(input("Nombre producto: ")).title()
-precio3=float(input("Precio producto: "))
-cantida3=int(input("Cantidad: "))
+# producto3=str(input("Nombre producto: ")).title()
+# precio3=float(input("Precio producto: "))
+# cantida3=int(input("Cantidad: "))
 
-costo1=precio1*cantida1
-costo2=precio2*cantida2
-costo3=precio3*cantida3
+# costo1=precio1*cantida1
+# costo2=precio2*cantida2
+# costo3=precio3*cantida3
 
-costo_lista=[costo1,costo2,costo3]
+# costo_lista=[costo1,costo2,costo3]
 
-total_precio=sum(costo_lista)
-descuento=10
-final_precio=float(total_precio *descuento)/100
-total_final=total_precio - final_precio
+# total_precio=sum(costo_lista)
+# descuento=10
+# final_precio=float(total_precio *descuento)/100
+# total_final=total_precio - final_precio
 
-if total_precio >= 20:
-    print(f"El usuario: {usuario}")
-    print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
-    print("Por compra superios a $20")
-    print("Tiene un descuento del 10%")
-    print(f"Total a pagar ${total_precio:.2f}")
-    print(f"Valor con descuento: ${total_final:.2f}")
+# if total_precio >= 20:
+#     print(f"El usuario: {usuario}")
+#     print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
+#     print("Por compra superios a $20")
+#     print("Tiene un descuento del 10%")
+#     print(f"Total a pagar ${total_precio:.2f}")
+#     print(f"Valor con descuento: ${total_final:.2f}")
     
-else:
-    print(f"El usuario {usuario}")
-    print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
-    print(f"Total a pagar ${total_precio:.2f}")
-    print("No tiene descuento.")    
+# else:
+#     print(f"El usuario {usuario}")
+#     print(f"Con los siguientes productos: \n{producto1} cantidad {cantida1} valor: ${costo1} \n{producto2} cantidad {cantida2} valor: ${costo2} \n{producto3} cantidad {cantida3} valor: ${costo3}")
+#     print(f"Total a pagar ${total_precio:.2f}")
+#     print("No tiene descuento.")    
 
+def calcular_costo(precio, cantidad):
+    return precio*cantidad
 
+print("--Tienda don Veci---")
+usuario=input("Ingrese su nombre: ").lower()
 
+productos=[]
+precios=[]
 
+for i in range(3):
+    producto=input(f"Ingrese nombre producto{i+1}: ")
+    precio=float(input(f"Precio {productos}:"))
+    cantidad=int(input(f"Cantidad productos{productos}: "))
 
+    costo= calcular_costo(precio, cantidad)
+    productos.append((producto, cantidad, costo))
+    precios.append(costo)
 
+total=sum(precios)
 
+descuento=0.1*total if total > 20 else 0
+total_final= total - descuento
 
+print("Resumen Compra")
+print(f"Cliente: {usuario}\n")
 
+for producto, catidad, precio in productos:
+    print(f"Producto: {producto} | Cantidad: {cantidad} | Precio: ${precio:.2f}")
+print(f"\ntotal sin decuento: ${total:.2f}")
 
-
+if descuento > 0:
+    print(f"DEscuento apliacdo: ${descuento:.2f}")
+print(f"Total a pagar: ${total_final:.2f}")
 
 
 
