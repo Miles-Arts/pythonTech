@@ -43,13 +43,15 @@
 
 # CONVEROS MINUTOS HORAS DIAS
 
-print("---conversos  minutos a horas y días")
+print("---Conversor  mMnutos a Horas y Días")
 minutos=float(input("Ingrese cantidad de minutos: "))
 
 horas=minutos / 60
 dias=minutos / 1440
 
-
+print(f"Los {minutos} minutos ")
+print(f"Son {horas:.2f} horas. ")
+print(f"Son {dias:.2f} días. ")
 
 
 
