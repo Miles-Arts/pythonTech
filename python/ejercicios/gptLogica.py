@@ -200,7 +200,12 @@ print(f"Orden de notas: {orden_notas(notas)}")
 print(f"Semestre: {calcular_notas(promedio)}.")
 
 
+# PRODUCTOS TIENDA
 
+for i in range(3):
+
+    producto=str(input(f"Producto {i+1} nombre: ")).title()
+    
 
 
 
