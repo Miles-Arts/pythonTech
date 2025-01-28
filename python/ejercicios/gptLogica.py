@@ -168,45 +168,65 @@
 # print(f"Total a pagar: ${total_final:.2f}")
 
 # Registro de notas de estudiantes
-estudiante=str(input("Nombre Estudiante: ")).title()
-notas=[]
+# estudiante=str(input("Nombre Estudiante: ")).title()
+# notas=[]
 
-for i in range(4):
-    nota=float(input(f"Ingrese la nota {i+1} : "))
+# for i in range(4):
+#     nota=float(input(f"Ingrese la nota {i+1} : "))
 
-    notas.append(nota)
-    promedio=float(sum(notas) / len(notas))
+#     notas.append(nota)
+#     promedio=float(sum(notas) / len(notas))
 
-def calcular_notas(promedio):
-    if promedio >= 3.0:
-        return("Aprobado")
-    elif promedio <= 2.9:
-        return("Reprobo") 
+# def calcular_notas(promedio):
+#     if promedio >= 3.0:
+#         return("Aprobado")
+#     elif promedio <= 2.9:
+#         return("Reprobo") 
 
-def nota_alta(notas):
-    return max(notas)
+# def nota_alta(notas):
+#     return max(notas)
      
-def nota_baja(notas):
-    return min(notas)       
+# def nota_baja(notas):
+#     return min(notas)       
 
-def orden_notas(notas):
-    return sorted(notas)   
+# def orden_notas(notas):
+#     return sorted(notas)   
 
-print(f"Estudiante {estudiante}")
-print(f"Promedio: {promedio:.2f}")
-print(f"Notas más alta: {nota_alta(notas)}")
-print(f"Nota más baja: {nota_baja(notas)}")
-print(f"Orden de notas: {orden_notas(notas)}")
-print(f"Semestre: {calcular_notas(promedio)}.")
+# print(f"Estudiante {estudiante}")
+# print(f"Promedio: {promedio:.2f}")
+# print(f"Notas más alta: {nota_alta(notas)}")
+# print(f"Nota más baja: {nota_baja(notas)}")
+# print(f"Orden de notas: {orden_notas(notas)}")
+# print(f"Semestre: {calcular_notas(promedio)}.")
 
 
 # PRODUCTOS TIENDA
 
-for i in range(3):
+productos={}
 
-    producto=str(input(f"Producto {i+1} nombre: ")).title()
+print(f"---Tienda don Comestibles---")
+cantidad_productos=int(input("\nIngrese cantidad productos: "))
+
+for i in range(cantidad_productos):
+
+    producto=str(input(f"\nProducto {i+1} nombre: ")).title()
+    precio=float(input(f"Ingrese precio de la {producto}: "))
+    cantidad=int(input(f"Ingrese cantida de {producto}: "))
+
+    # productos.append(producto,precio,cantidad)
+    productos[producto] = {
+        "precio": precio,
+        "cantidad": cantidad
+    }
+
+def valor_total(precio, cantidad):
+    return precio * cantidad
     
+gran_total=0
 
+print("\n---Lista de Productos---")
+for producto, detalle in productos.items():
+    print(f"{producto} Precio {detalle["precio"]}, Cantidad {detalle["cantidad"]}")
 
 
 
