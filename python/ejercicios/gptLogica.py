@@ -270,8 +270,34 @@
 # print(f"Producto más valioso: {producto_mas_valioso['nombre']} (${producto_mas_valioso['valor_total']:.2f})")
 
 
+# Calculadora gastos mensuales
+print("---Calculadora personal---")
+categorias=[]
+
+def gastos_totales(gasto):
+    return gasto+gasto   
+
+usuario=str(input("Ingrese su nombre: ")).title()     
+
+for i in range(2):
+    print(f"\nCategoria {i+1}: ")
+    categoria=str(input("Nombre categoria: ")).title()
+    gasto=float(input(f"Gastos de {categoria}: $"))
+
+    categoria={
+        "usuario": usuario,
+        "categoria": categoria,
+        "gasto": gasto
+       
+    }
+
+    categorias.append(categoria)
+
+suma_total= sum(gasto["gasto"] for gasto in categorias )
+gasto_alto=max(categorias, key=lambda gasto: gasto["gasto"])
 
 
+print(suma_total,gasto_alto)
 
 
 
