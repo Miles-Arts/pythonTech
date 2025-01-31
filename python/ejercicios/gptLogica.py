@@ -232,41 +232,42 @@
 # print(f"Producto más valioso: {producto_mas_valioso['nombre']} (${producto_mas_valioso['valor_total']:.2f})")
 
 
-def calcular_valor_total(precio, cantida):
-    return precio * cantida
+# def calcular_valor_total(precio, cantida):
+#     return precio * cantida
 
-print("---Control de inventario---")
+# print("---Control de inventario---")
+# ingresar_productos=int(input("Cantidad de productos a ingresar: "))
 
-productos=[]
+# productos=[]
 
-for i in range(3):
-    print(f"\nProducto {i+1}:")
-    nombre=str(input(f"Nombre del prducto: "))
-    precio=float(input(f"Precio por unidad: $"))
-    cantidad=int(input(f"Cantidad en inventario: "))
+# for i in range(ingresar_productos):
+#     print(f"\nProducto {i+1}:")
+#     nombre=str(input(f"Nombre del producto: ")).title()
+#     precio=float(input(f"Precio por unidad: $"))
+#     cantidad=int(input(f"Cantidad en inventario: "))
 
-    valor_total=calcular_valor_total(precio, cantidad)
+#     valor_total=calcular_valor_total(precio, cantidad)
 
-    producto={
-        "nombre": nombre,
-        "precio": precio,
-        "cantidad": cantidad,
-        "valor_total": valor_total
-    }
+#     producto={
+#         "nombre": nombre,
+#         "precio": precio,
+#         "cantidad": cantidad,
+#         "valor_total": valor_total
+#     }
 
-    productos.append(producto)
+#     productos.append(producto)
 
 
-valor_inventario=sum(p["valor_total"] for p in productos)
-producto_mas_valioso=max(productos, key=lambda p: p["valor_total"])    
+# valor_inventario=sum(p["valor_total"] for p in productos)
+# producto_mas_valioso=max(productos, key=lambda p: p["valor_total"])    
 
-print("\n---Resumen del Inventario---")
+# print("\n---Resumen del Inventario---\n")
 
-for p in productos:
-    print(f"- {p["nombre"]}: ${p["precio"]} x {p["cantidad"]} unidades = ${p["valor-total"]:.2f}")
+# for p in productos:
+#     print(f"\t- {p["nombre"]}: ${p["precio"]} x {p["cantidad"]} unidades = ${p["valor_total"]:.2f}")
 
-print(f"\nValor total del inventario: ${valor_inventario:.2f}")
-print(f"Producto más valioso: {producto_mas_valioso['nombre']} (${producto_mas_valioso['valor_total']:.2f})")
+# print(f"\nValor total del inventario: ${valor_inventario:.2f}")
+# print(f"Producto más valioso: {producto_mas_valioso['nombre']} (${producto_mas_valioso['valor_total']:.2f})")
 
 
 
