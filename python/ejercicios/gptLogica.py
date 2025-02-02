@@ -288,16 +288,21 @@ for i in range(2):
         "usuario": usuario,
         "categoria": categoria,
         "gasto": gasto
-       
     }
 
     categorias.append(categoria)
 
 suma_total= sum(gasto["gasto"] for gasto in categorias )
 
+gasto_alto=max(categorias, key=lambda ma: ma["gasto"])
+gasto_menor=min(categorias, key=lambda mi: mi["gasto"])
 
 
-print(suma_total,gasto_alto)
+print(f"Lista de Gastos")
+print(f"Hola {usuario}")
+print(f"Gasto Tota: ${suma_total}")
+print(f"\nGasto más alto ${gasto_alto["gasto"]}")
+print(f"\nGasto menor ${gasto_menor["gasto"]}")
 
 
 
