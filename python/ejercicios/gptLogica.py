@@ -294,7 +294,7 @@ for i in range(2):
     categorias.append(categoria)
 
 suma_total= sum(gasto["gasto"] for gasto in categorias )
-gasto_alto=max(categorias, key=lambda gasto: gasto["gasto"])
+
 
 
 print(suma_total,gasto_alto)
