@@ -365,26 +365,34 @@
 # CONTROL NOTAS ESTUDIANTES
 
 cantidad_estudiantes=int(input("Ingrese la cantidad de estudiantes: "))
-materias=[]
+estudiantes=[]
 
 for i in range(cantidad_estudiantes):
     nombre=str(input("Ingrese nombre estudiante: ")).title()
     nota=float(input("Notas final: "))
 
-    materia={
+    estudiante={
         "nombre": nombre,
         "nota": nota
     }
 
-    materias.append(materia)
+    # materia["nota"].append()
+    estudiantes.append(estudiante)
 
-    
+suma_notas=sum(estudiante["notas"] for estudiante in estudiantes )
+promedio_notas= suma_notas / cantidad_estudiantes
+nota_mas_baja=min(estudiantes, key=lambda n: n["nota"])
+
+def aprobo(nota):
+    if  nota >= 3:  
+        return "Aprobado"
+    else:
+        return "Reprobo" 
 
 
-
-
-
-
+print(f"El estudiante: {estudiante["nombre"]}")
+print(f"{estudiante["nota"]}")
+print(f"La nota más baja es: {nota_mas_baja}")
 
 
 
