@@ -325,7 +325,7 @@
 #     print(f"{items["categoria"]}: {porcentaje_gasto:.2f}%")
 
 
-def cualcular(gasto, total):
+def cualcular_porcentaje(gasto, total):
     return (gasto / total) * 100 if total > 0 else 0
 
 print("Calculadora de gastos mensuales")
@@ -341,10 +341,24 @@ for i in range(4):
 
 total_gastos=sum(gasto[1] for gasto in gastos)
 gasto_mayor=max(gastos, key=lambda x: x[1] )    
+gasto_minimo=min(gastos, key=lambda x: x[1])
+gastos_ordenados=sorted(gastos, key=lambda x: x[1])
+
+print(f"\nResumen de tus gastos")
+print(f" Usuario: {nombre}\n")
+
+for categoria, monto in gastos:
+    porcentaje=cualcular_porcentaje(monto, total_gastos)
+    print(f"- {categoria}: ${monto:.2f} ({porcentaje:2f}%)")
 
 
+print(f"\n Total gastado: ${total_gastos:.2f}")
+print(f"Gasto más alto: {gasto_mayor[0] } (${gasto_mayor[1]:.2f})")
+print(f"Gasto más bajo: {gasto_minimo[0] } (${gasto_minimo[1]:.2f})")
+print(f"\n Gastos ordenados de menor a mayor: ")
 
-
+for categoria, monto in gastos_ordenados:
+    print(f"- {categoria}: ${monto:.2f}")
 
 
 
