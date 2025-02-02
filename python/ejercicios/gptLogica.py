@@ -362,10 +362,23 @@
 #     print(f"- {categoria}: ${monto:.2f}")
 
 
+# CONTROL NOTAS ESTUDIANTES
 
+cantidad_estudiantes=int(input("Ingrese la cantidad de estudiantes: "))
+materias=[]
 
+for i in range(cantidad_estudiantes):
+    nombre=str(input("Ingrese nombre estudiante: ")).title()
+    nota=float(input("Notas final: "))
 
+    materia={
+        "nombre": nombre,
+        "nota": nota
+    }
 
+    materias.append(materia)
+
+    
 
 
 
