@@ -379,9 +379,10 @@ for i in range(cantidad_estudiantes):
     # materia["nota"].append()
     estudiantes.append(estudiante)
 
-suma_notas=sum(estudiante["notas"] for estudiante in estudiantes )
+suma_notas=sum(estudiante["nota"] for estudiante in estudiantes )
 promedio_notas= suma_notas / cantidad_estudiantes
 nota_mas_baja=min(estudiantes, key=lambda n: n["nota"])
+nota_mas_alta=max(estudiantes, key=lambda n: n["nota"])
 
 def aprobo(nota):
     if  nota >= 3:  
@@ -390,9 +391,17 @@ def aprobo(nota):
         return "Reprobo" 
 
 
-print(f"El estudiante: {estudiante["nombre"]}")
-print(f"{estudiante["nota"]}")
-print(f"La nota más baja es: {nota_mas_baja}")
+for estudiante in estudiantes:
+    print(f"El estudiante: {estudiante["nombre"]}")
+    print(f"Nota final: {estudiante["nota"]}")
+
+print(f"La nota más baja es: {nota_mas_baja["nota"]}")
+print(f"La nota más alta es: {nota_mas_alta["nota"]}")
+
+
+for estudiante in estudiantes:
+    print(f"el estudiante {estudiante["nombre"]} {aprobo(estudiante["nota"])}")
+
 
 
 
