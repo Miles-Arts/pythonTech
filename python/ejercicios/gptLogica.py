@@ -270,58 +270,59 @@
 # print(f"Producto más valioso: {producto_mas_valioso['nombre']} (${producto_mas_valioso['valor_total']:.2f})")
 
 
-# Calculadora gastos mensuales
-print("---Calculadora personal---")
-categorias=[]
+# # Calculadora gastos mensuales
+# print("---Calculadora personal---")
+# categorias=[]
 
-def gastos_totales(gasto):
-    return gasto+gasto   
+# # def gastos_totales(gasto):
+# #     return gasto+gasto   
 
-usuario=str(input("Ingrese su nombre: ")).title()
+# usuario=str(input("Ingrese su nombre: ")).title()
+# numero_categorias=int(input("Cuántas categorias desea ingresar: "))
      
 
-for i in range(2):
-    print(f"\nCategoria {i+1}: ")
-    categoria=str(input("Nombre categoria: ")).title()
-    gasto=float(input(f"Gastos de {categoria}: $"))
+# for i in range(numero_categorias):
+#     print(f"\nCategoria {i+1}: ")
+#     categoria=str(input("Nombre categoria: ")).title()
+#     gasto=float(input(f"Gastos de {categoria}: $"))
 
-    categoria={
-        "usuario": usuario,
-        "categoria": categoria,
-        "gasto": gasto
-    }
+#     categoria={
+#         "usuario": usuario,
+#         "categoria": categoria,
+#         "gasto": gasto
+#     }
 
-    categorias.append(categoria)
+#     categorias.append(categoria)
 
-suma_total= sum(gasto["gasto"] for gasto in categorias )
-gasto_alto=max(categorias, key=lambda ma: ma["gasto"])
-gasto_menor=min(categorias, key=lambda mi: mi["gasto"])
-orden_gastos=sorted(categorias, key=lambda orden: orden["gasto"])
+# suma_total= sum(gasto["gasto"] for gasto in categorias )
+# gasto_alto=max(categorias, key=lambda ma: ma["gasto"])
+# gasto_menor=min(categorias, key=lambda mi: mi["gasto"])
+# orden_gastos=sorted(categorias, key=lambda orden: orden["gasto"])
+
+# # def porcentaje(gasto, suma_total):
+# #     return (gasto / suma_total) * 100 if suma_total > 0 else 0
 
 # def porcentaje(gasto, suma_total):
-#     return (gasto / suma_total) * 100 if suma_total > 0 else 0
-
-def porcentaje(gasto, suma_total):
-    if suma_total > 0:
-        return (gasto / suma_total) * 100
-    else:
-        return 0
+#     if suma_total > 0:
+#         return (gasto / suma_total) * 100
+#     else:
+#         return 0
 
 
-print(f"Lista de Gastos")
-print(f"Hola {usuario}")
-print(f"Gasto Tota: ${suma_total}")
-print(f"Gasto más alto ${gasto_alto["gasto"]}")
-print(f"\asto menor ${gasto_menor["gasto"]}")
+# print(f"Lista de Gastos")
+# print(f"Hola {usuario}")
+# print(f"Gasto Tota: ${suma_total}")
+# print(f"Gasto más alto ${gasto_alto["gasto"]}")
+# print(f"Gasto menor ${gasto_menor["gasto"]}")
 
-print(f"Orden de gastos de menor a mayor: ")
-for items in orden_gastos:
-    print(f"{items["categoria"]}: ${items["gasto"]}")
+# print(f"Orden de gastos de menor a mayor: ")
+# for items in orden_gastos:
+#     print(f"{items["categoria"]}: ${items["gasto"]}")
 
-print(f"Porcentaje de cada gasto respesto al total: ")
-for items in categorias:
-    porcentaje_gasto=porcentaje(items["gasto"], suma_total)
-    print(f"{items["cayegoria"]}: {porcentaje_gasto:.2f}%")
+# print(f"Porcentaje de cada gasto respesto al total: ")
+# for items in categorias:
+#     porcentaje_gasto=porcentaje(items["gasto"], suma_total)
+#     print(f"{items["categoria"]}: {porcentaje_gasto:.2f}%")
 
 
 
