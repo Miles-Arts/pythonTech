@@ -325,9 +325,22 @@
 #     print(f"{items["categoria"]}: {porcentaje_gasto:.2f}%")
 
 
+def cualcular(gasto, total):
+    return (gasto / total) * 100 if total > 0 else 0
 
+print("Calculadora de gastos mensuales")
+nombre=input("Ingresa tu nombre: ").title()
 
+gastos=[]
 
+for i in range(4):
+
+    categoria= input(f"Ingresa el nombre del gasto {i+1}")
+    monto=float(input(f"Ingrese el monto gastado en {categoria}: $"))
+    gastos.append((categoria,monto))
+
+total_gastos=sum(gasto[1] for gasto in gastos)
+gasto_mayor=max(gastos, key=lambda x: x[1] )    
 
 
 
