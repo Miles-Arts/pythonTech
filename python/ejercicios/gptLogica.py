@@ -460,15 +460,14 @@ producto_mas_caro=max(productos, key=lambda p: p["precio_unidad"])
 producto_menos_caro=min(productos, key=lambda p: p["precio_unidad"])
 productos_mas_de_diez=sum(1 for producto in productos if producto["cantidad_comprada"] >= 10)
 
-print(f"Producto maás costoso es: {producto_mas_caro["nombre_producto"]} ${producto_mas_caro["precio_unidad"]}")
+print(f"Producto más costoso es: {producto_mas_caro["nombre_producto"]} ${producto_mas_caro["precio_unidad"]}")
 print(f"Producto menos costoso es: {producto_menos_caro["nombre_producto"]} ${producto_menos_caro["precio_unidad"]}")
 print(f"Total compra: ${costo_total}")
-
-
 print(f"Producto con más de 10 unidades: {productos_mas_de_diez}")        
 
-
-
+print("---Lista de productos comprado---")
+for producto in productos:
+    print(f"\nProducto: {producto["nombre_producto"]}\nPrecio: ${producto["precio_unidad"]:.0f}\nCantidad: {producto["cantidad_comprada"]}")
 
 
 
