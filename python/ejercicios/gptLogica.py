@@ -404,37 +404,114 @@
 # for estudiante in estudiantes:
 #     print(f"El estudiante {estudiante["nombre"]} {aprobo(estudiante["nota"])}")
 
-print("---Control de notas---")
+# print("---Control de notas---")
 
-num_estudiantes=int(input("¿Cuántos estudiantes a resgistar? "))
+# num_estudiantes=int(input("¿Cuántos estudiantes a resgistar? "))
 
-notas=[]
+# notas=[]
 
-for i in range(num_estudiantes):
-    nombre=input(f"\nNombre estudiante {i+1}:").title()
-    nota=float(input(f"Nombre de {nombre}: "))
+# for i in range(num_estudiantes):
+#     nombre=input(f"\nNombre estudiante {i+1}:").title()
+#     nota=float(input(f"Nombre de {nombre}: "))
 
-    notas.append((nombre, nota))
+#     notas.append((nombre, nota))
 
-suma_notas=sum(nota[1] for nota in notas)
-promedio=suma_notas / num_estudiantes
-nota_max=max(notas, key=lambda x: x[1])
-nota_min=min(notas, key=lambda x: x[1])
+# suma_notas=sum(nota[1] for nota in notas)
+# promedio=suma_notas / num_estudiantes
+# nota_max=max(notas, key=lambda x: x[1])
+# nota_min=min(notas, key=lambda x: x[1])
 
-aprobados=sum(1 for  _, nota in notas if nota >= 3.0)
-reprobados=num_estudiantes - aprobados
+# aprobados=sum(1 for  _, nota in notas if nota >= 3.0)
+# reprobados=num_estudiantes - aprobados
 
-print("\n Resumen de notas")
+# print("\n Resumen de notas")
 
-for nombre,nota in notas:
-    print(f"- {nombre}: {nota:.2f}")
+# for nombre,nota in notas:
+#     print(f"- {nombre}: {nota:.2f}")
 
-print(f"\nPromedio notas grupos: {promedio:.2f}")
-print(f"Nota mas alta {nota_max[0] } con {nota_max[1]:.2f}")
-print(f"Nota más baja {nota_min[0]} con {nota_min[1]:.2f}")
+# print(f"\nPromedio notas grupos: {promedio:.2f}")
+# print(f"Nota mas alta {nota_max[0] } con {nota_max[1]:.2f}")
+# print(f"Nota más baja {nota_min[0]} con {nota_min[1]:.2f}")
 
-print(f"\n Estudiantes aprobados (>= 3.0): {aprobados}")
-print(f"Estudiante sreprobados (< 3.0): {reprobados}")
+# print(f"\n Estudiantes aprobados (>= 3.0): {aprobados}")
+# print(f"Estudiante sreprobados (< 3.0): {reprobados}")
+
+
+# ...rEGISTRO COMPRAS SUPERMECADO
+
+cantidad_productos=int(input("Ingrese cantidad productos comprados: "))
+productos=[]
+
+for i in range(cantidad_productos):
+
+    nombre_producto=str(input("ingrese nombre producto: ")).title()
+    precio_unidad=float(input(f"Ingrese precio unidad {nombre_producto}: $"))
+    cantidad_comprada=int(input(f"Cantidad comprada {nombre_producto}: "))
+   
+    producto={
+        "nombre_producto": nombre_producto,
+        "precio_unidad": precio_unidad,
+        "cantidad_comprada": cantidad_comprada
+    }
+    productos.append(producto)
+
+costo_total=sum( producto["precio_unidad"] * producto["cantidad_comprada"] for producto  in productos)
+producto_mas_caro=max(productos, key=lambda p: p["precio_unidad"])
+producto_menos_caro=min(productos, key=lambda p: p["precio_unidad"])
+productos_mas_de_diez=sum(1 for  _, producto["precio_unidad"] in productos if producto >= 10)
+
+print(f"Producto maás costoso es: {producto_mas_caro["nombre_producto"]} ${producto_mas_caro["precio_unidad"]}")
+print(f"Producto menos costoso es: {producto_menos_caro["nombre_producto"]} ${producto_menos_caro["precio_unidad"]}")
+print(f"Total compra: ${costo_total}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
