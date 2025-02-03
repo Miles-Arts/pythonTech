@@ -419,11 +419,22 @@ for i in range(num_estudiantes):
 suma_notas=sum(nota[1] for nota in notas)
 promedio=suma_notas / num_estudiantes
 nota_max=max(notas, key=lambda x: x[1])
-nota_max=min(notas, key=lambda x: x[1])
+nota_min=min(notas, key=lambda x: x[1])
 
 aprobados=sum(1 for  _, nota in notas if nota >= 3.0)
 reprobados=num_estudiantes - aprobados
 
+print("\n Resumen de notas")
+
+for nombre,nota in notas:
+    print(f"- {nombre}: {nota:.2f}")
+
+print(f"\nPromedio notas grupos: {promedio:.2f}")
+print(f"Nota mas alta {nota_max[0] } con {nota_max[1]:.2f}")
+print(f"Nota más baja {nota_min[0]} con {nota_min[1]:.2f}")
+
+print(f"\n Estudiantes aprobados (>= 3.0): {aprobados}")
+print(f"Estudiante sreprobados (< 3.0): {reprobados}")
 
 
 
