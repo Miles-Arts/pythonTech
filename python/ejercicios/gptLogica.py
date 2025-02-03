@@ -364,47 +364,65 @@
 
 # CONTROL NOTAS ESTUDIANTES
 
-cantidad_estudiantes=int(input("Ingrese la cantidad de estudiantes: "))
-estudiantes=[]
+# cantidad_estudiantes=int(input("Ingrese la cantidad de estudiantes: "))
+# estudiantes=[]
 
-for i in range(cantidad_estudiantes):
-    nombre=str(input("Ingrese nombre estudiante: ")).title()
-    nota=float(input("Notas final: "))
+# for i in range(cantidad_estudiantes):
+#     nombre=str(input("Ingrese nombre estudiante: ")).title()
+#     nota=float(input("Notas final: "))
 
-    estudiante={
-        "nombre": nombre,
-        "nota": nota
-    }
+#     estudiante={
+#         "nombre": nombre,
+#         "nota": nota
+#     }
 
-    # materia["nota"].append()
-    estudiantes.append(estudiante)
+#     # materia["nota"].append()
+#     estudiantes.append(estudiante)
 
-suma_notas=sum(estudiante["nota"] for estudiante in estudiantes )
-promedio_notas= suma_notas / cantidad_estudiantes
-nota_mas_baja=min(estudiantes, key=lambda n: n["nota"])
-nota_mas_alta=max(estudiantes, key=lambda n: n["nota"])
+# suma_notas=sum(estudiante["nota"] for estudiante in estudiantes )
+# promedio_notas= suma_notas / cantidad_estudiantes
+# nota_mas_baja=min(estudiantes, key=lambda n: n["nota"])
+# nota_mas_alta=max(estudiantes, key=lambda n: n["nota"])
 
-def aprobo(nota):
-    if  nota >= 3:  
-        return "Aprobado"
-    else:
-        return "Reprobo" 
-
-
-for estudiante in estudiantes:
-    print(f"El estudiante: {estudiante["nombre"]}")
-    print(f"Nota final: {estudiante["nota"]}")
-
-print(f"La nota más baja es: {nota_mas_baja["nota"]}")
-print(f"La nota más alta es: {nota_mas_alta["nota"]}")
+# def aprobo(nota):
+#     if  nota >= 3:  
+#         return "Aprobado"
+#     else:
+#         return "Reprobo" 
 
 
-for estudiante in estudiantes:
-    print(f"el estudiante {estudiante["nombre"]} {aprobo(estudiante["nota"])}")
+# for estudiante in estudiantes:
+#     print(f"El estudiante: {estudiante["nombre"]}")
+#     print(f"Nota final: {estudiante["nota"]}")
+
+# print(f"La nota más baja es: {nota_mas_baja["nota"]}")
+# print(f"La nota más alta es: {nota_mas_alta["nota"]}")
+# print(f"Promedio de notas: {promedio_notas}")
 
 
 
+# for estudiante in estudiantes:
+#     print(f"El estudiante {estudiante["nombre"]} {aprobo(estudiante["nota"])}")
 
+print("---Control de notas---")
+
+num_estudiantes=int(input("¿Cuántos estudiantes a resgistar? "))
+
+notas=[]
+
+for i in range(num_estudiantes):
+    nombre=input(f"\nNombre estudiante {i+1}:").title()
+    nota=float(input(f"Nombre de {nombre}: "))
+
+    notas.append((nombre, nota))
+
+suma_notas=sum(nota[1] for nota in notas)
+promedio=suma_notas / num_estudiantes
+nota_max=max(notas, key=lambda x: x[1])
+nota_max=min(notas, key=lambda x: x[1])
+
+aprobados=sum(1 for  _, nota in notas if nota >= 3.0)
+reprobados=num_estudiantes - aprobados
 
 
 
