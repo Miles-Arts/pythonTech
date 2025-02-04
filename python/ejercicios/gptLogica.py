@@ -470,9 +470,9 @@
 #     print(f"\nProducto: {producto["nombre_producto"]}\nPrecio: ${producto["precio_unidad"]:.2f}\nCantidad: {producto["cantidad_comprada"]}")
 
 
-print("---Registro de compras supermecado---")
+print("---Registro de compras supermecado---\n")
 # entreda pedir cantidad productos
-num_productos=int(input("¿Cuántos productos compraste?"))
+num_productos=int(input("¿Cuántos productos compraste?: "))
 # lista para almacenar los productos
 productos=[]
 
@@ -481,7 +481,7 @@ for i in range(num_productos):
 
     print(f"\nProducto {i+1}: ")
     nombre=str(input("Nombre del producto: ")).title()
-    precio=float(input(f"Precio del producto {nombre}"))
+    precio=float(input(f"Precio del producto {nombre}: $"))
     cantidad=int(input(f"Cantidad de producto {nombre} comprado: "))
 
 # productos guardadod en diccionario
@@ -500,7 +500,7 @@ for i in range(num_productos):
 suma_total=sum(prod["total"] for prod in productos) 
 producto_mas_caro=max(productos, key=lambda x: x["precio"]) 
 producto_menos_caro=min(productos, key=lambda x: x["precio"])
-productos_caros=(1 for producto in productos if producto["precio"] >=10)
+productos_caros = sum(1 for prod in productos if prod["precio"] > 10)  # Productos que costaron más de $10
 
 #Salida
 print(f"Resumen de compra")
