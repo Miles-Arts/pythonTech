@@ -516,30 +516,37 @@
 
 #CALIFICACIONES ESTUDIANTES
 
-cantidad_estudiantes=int(input("Omgrese la cantidadd e estudiantes: "))
-notas=[]
+cantidad_estudiantes=int(input("Ingrese la cantidadd de estudiantes: "))
+calificaciones=[]
 
 for i in range(cantidad_estudiantes):
     print(f"Estudiante {i+1}")
     nombre=str(input("Nombre de estudiante: ")).title()
     nota_final=float(input(f"Ingrese la nota final de {nombre}: "))
 
-    nota={
+    calificacion={
         "nombre": nombre,
-        "nota": nota
+        "nota_final": nota_final
     }
-    notas.append(nota)
+    calificaciones.append(calificacion)
 
-suma_notas=sum(notas, key=lambda x: x["nota"]) 
-promedio_notas=cantidad_estudiantes / suma_notas
-mejor_nota=max(notas, key=lambda x: x ["nota"])
-peor_nota=min(notas, key=lambda x: x ["nota"])
-estudiantes_aprobados=(1 for nota in notas if nota["notas"] >= 3.0)
-# productos_caros = sum(1 for prod in productos if prod["precio"] > 10) 
-orden_lista=sorted(notas)
+suma_notas=sum(calif["nota_final"] for calif in calificaciones) 
+promedio_notas= suma_notas / cantidad_estudiantes 
+mejor_nota=max(calificaciones, key=lambda x: x ["nota_final"])
+peor_nota=min(calificaciones, key=lambda x: x ["nota_final"])
+estudiantes_aprobados=sum(1 for califi in calificaciones if califi["nota_final"] >= 3.0)
+orden_lista=sorted(calificaciones, key=lambda x: x["nota_final"])
 
+print("\n---RESULTADOS NOTAS ESTUDIANTES---\n")
+print(f"Promedio {promedio_notas:.2f}")
+print(f"Mejor nota de {mejor_nota["nombre"]} {mejor_nota["nota_final"]}")
+print(f"Peor nota de {peor_nota["nombre"]} {peor_nota["nota_final"]}")
+print(f"Estudiantes aprobados nota superior a 3.0: {estudiantes_aprobados}")
 
+print("\n---Orden de Notas---")
+for calificacion in orden_lista:
 
+    print(f"Estudiante {calificacion["nombre"] }\nNota: {calificacion["nota_final"]}")
 
 
 
