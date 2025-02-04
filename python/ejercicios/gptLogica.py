@@ -470,48 +470,48 @@
 #     print(f"\nProducto: {producto["nombre_producto"]}\nPrecio: ${producto["precio_unidad"]:.2f}\nCantidad: {producto["cantidad_comprada"]}")
 
 
-print("---Registro de compras supermecado---\n")
-# entreda pedir cantidad productos
-num_productos=int(input("¿Cuántos productos compraste?: "))
-# lista para almacenar los productos
-productos=[]
+    # print("---Registro de compras supermecado---\n")
+    # # entreda pedir cantidad productos
+    # num_productos=int(input("¿Cuántos productos compraste?: "))
+    # # lista para almacenar los productos
+    # productos=[]
 
-# entrada de datos
-for i in range(num_productos):
+    # # entrada de datos
+    # for i in range(num_productos):
 
-    print(f"\nProducto {i+1}: ")
-    nombre=str(input("Nombre del producto: ")).title()
-    precio=float(input(f"Precio del producto {nombre}: $"))
-    cantidad=int(input(f"Cantidad de producto {nombre} comprado: "))
+    #     print(f"\nProducto {i+1}: ")
+    #     nombre=str(input("Nombre del producto: ")).title()
+    #     precio=float(input(f"Precio del producto {nombre}: $"))
+    #     cantidad=int(input(f"Cantidad de producto {nombre} comprado: "))
 
-# productos guardadod en diccionario
+    # # productos guardadod en diccionario
 
-    producto={
-        "nombre": nombre,
-        "precio": precio,
-        "cantidad": cantidad,
-        "total": precio * cantidad #Calculamos costo total de productos
-    }
+    #     producto={
+    #         "nombre": nombre,
+    #         "precio": precio,
+    #         "cantidad": cantidad,
+    #         "total": precio * cantidad #Calculamos costo total de productos
+    #     }
 
-    productos.append(producto)
+    #     productos.append(producto)
 
-# Procesamiento
+    # # Procesamiento
 
-suma_total=sum(prod["total"] for prod in productos) 
-producto_mas_caro=max(productos, key=lambda x: x["precio"]) 
-producto_menos_caro=min(productos, key=lambda x: x["precio"])
-productos_caros = sum(1 for prod in productos if prod["precio"] > 10)  # Productos que costaron más de $10
+    # suma_total=sum(prod["total"] for prod in productos) 
+    # producto_mas_caro=max(productos, key=lambda x: x["precio"]) 
+    # producto_menos_caro=min(productos, key=lambda x: x["precio"])
+    # productos_caros = sum(1 for prod in productos if prod["precio"] > 10)  # Productos que costaron más de $10
 
-#Salida
-print(f"Resumen de compra")
+    # #Salida
+    # print(f"Resumen de compra")
 
-for prod in productos:
-    print(f"- {prod["nombre"]} (x{prod["cantidad"]}): ${prod["total"]:.2f}")
+    # for prod in productos:
+    #     print(f"- {prod["nombre"]} (x{prod["cantidad"]}): ${prod["total"]:.2f}")
 
-print(f"\n Total gastado: ${suma_total:.2f}")
-print(f"Producto más caro: {producto_mas_caro["nombre"]} Precio ${producto_mas_caro["precio"]:.2f}")
-print(f"Producto más económico: ${producto_menos_caro["nombre"]} Precio ${producto_menos_caro["precio"]:.2f} ")
-print(f"Producto con precio mayor a $10 {productos_caros}")
+    # print(f"\n Total gastado: ${suma_total:.2f}")
+    # print(f"Producto más caro: {producto_mas_caro["nombre"]} Precio ${producto_mas_caro["precio"]:.2f}")
+    # print(f"Producto más económico: ${producto_menos_caro["nombre"]} Precio ${producto_menos_caro["precio"]:.2f} ")
+    # print(f"Producto con precio mayor a $10 {productos_caros}")
 
 
 
