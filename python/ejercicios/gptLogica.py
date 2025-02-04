@@ -514,9 +514,29 @@
     # print(f"Producto con precio mayor a $10 {productos_caros}")
 
 
+#CALIFICACIONES ESTUDIANTES
 
+cantidad_estudiantes=int(input("Omgrese la cantidadd e estudiantes: "))
+notas=[]
 
+for i in range(cantidad_estudiantes):
+    print(f"Estudiante {i+1}")
+    nombre=str(input("Nombre de estudiante: ")).title()
+    nota_final=float(input(f"Ingrese la nota final de {nombre}: "))
 
+    nota={
+        "nombre": nombre,
+        "nota": nota
+    }
+    notas.append(nota)
+
+suma_notas=sum(notas, key=lambda x: x["nota"]) 
+promedio_notas=cantidad_estudiantes / suma_notas
+mejor_nota=max(notas, key=lambda x: x ["nota"])
+peor_nota=min(notas, key=lambda x: x ["nota"])
+estudiantes_aprobados=(1 for nota in notas if nota["notas"] >= 3.0)
+# productos_caros = sum(1 for prod in productos if prod["precio"] > 10) 
+orden_lista=sorted(notas)
 
 
 
