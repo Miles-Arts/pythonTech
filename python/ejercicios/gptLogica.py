@@ -548,14 +548,14 @@
 #     print(f"Estudiante: {calificacion["nombre"] }.\nNota: {calificacion["nota_final"]}")
 
 
-print("Gestor de Calificaciones Escolares")
+print(f"\n---Gestor de Calificaciones Escolares---\n")
 
 #entrada de datos
 num_estudiantes=int(input("Ingresa cantidad de estudiantes: "))
 estudiantes=[]
 
 for i in range(num_estudiantes):
-    print(f"\nIngresando datos de etsudiantes {i+1}")
+    print(f"\nIngresando datos de estudiantes {i+1}")
     nombre=str(input("Nombre de estudiante: ")).title()
     notas=[] #lista para almacenar notas
 
@@ -590,22 +590,22 @@ def clasificar_nota(nota):
         return "Reprobado"            
 
 #Salida de datos
-print(f"\nResumen de calificaciones")
+print(f"\n---Resumen de calificaciones---")
 
 for e in estudiantes:
     estado=clasificar_nota(e['promedio'])
-    print(f"\n{e['nombre']}")
+    print(f"\nEstudiante: {e['nombre']}")
     print(f"Notas: {e['notas']}")
-    print(f"Promedi: {e['promedio']:.2f} - {'estado'}")
+    print(f"Promedio: {e['promedio']:.2f} - {estado}.")
 
-print(f"\n Mejor estudiante: {mejor_estudiantes['nombre']} con {mejor_estudiantes['notas']:.2f}")    
-print(f"Peor estudiante {peor_estudiantes['nombre']} con {peor_estudiantes['notas']:.2f}")
-print(f"Estudiantes aprobados: {estudiantes_aprobados} de{num_estudiantes}")
+print(f"\nMejor estudiante {mejor_estudiantes['nombre']} con {mejor_estudiantes['promedio']:.2f}")    
+print(f"Peor estudiante {peor_estudiantes['nombre']} con {peor_estudiantes['promedio']:.2f}")
+print(f"Estudiantes aprobados: {estudiantes_aprobados} de {num_estudiantes}")
 
 print(f"\nLista de estudiantes ordenados por promedio:")
 for e in lista_ordenada:
     estado=clasificar_nota(e['promedio'])
-    print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}")
+    print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}.")
 
 
 
