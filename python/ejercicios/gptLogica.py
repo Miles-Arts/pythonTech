@@ -548,78 +548,108 @@
 #     print(f"Estudiante: {calificacion["nombre"] }.\nNota: {calificacion["nota_final"]}")
 
 
-print(f"\n---Gestor de Calificaciones Escolares---\n")
+# print(f"\n---Gestor de Calificaciones Escolares---\n")
 
 #entrada de datos
-num_estudiantes=int(input("Ingresa cantidad de estudiantes: "))
-estudiantes=[]
+# num_estudiantes=int(input("Ingresa cantidad de estudiantes: "))
+# estudiantes=[]
 
-for i in range(num_estudiantes):
-    print(f"\nIngresando datos de estudiantes {i+1}")
-    nombre=str(input("Nombre de estudiante: ")).title()
-    notas=[] #lista para almacenar notas
+# for i in range(num_estudiantes):
+#     print(f"\nIngresando datos de estudiantes {i+1}")
+#     nombre=str(input("Nombre de estudiante: ")).title()
+#     notas=[] #lista para almacenar notas
 
-        #pedir 3 calificaiones
-    for j in range(3):
-        nota=float(input(f"Ingrese la nota {j+1} de {nombre}: "))
-        notas.append(nota)
+#         #pedir 3 calificaiones
+#     for j in range(3):
+#         nota=float(input(f"Ingrese la nota {j+1} de {nombre}: "))
+#         notas.append(nota)
 
-    #guardar estudiante
-    estudiante={
-        "nombre": nombre,
-        "notas": notas,
-        "promedio": sum(notas) / len(notas) #calcular promedio
+#     #guardar estudiante
+#     estudiante={
+#         "nombre": nombre,
+#         "notas": notas,
+#         "promedio": sum(notas) / len(notas) #calcular promedio
+#     }
+#     estudiantes.append(estudiante)
+
+# #Procesamieto de datos
+# mejor_estudiantes=max(estudiantes, key=lambda e: e['promedio']) 
+# peor_estudiantes=min(estudiantes, key=lambda e: e['promedio'])   
+# estudiantes_aprobados=sum(1 for aprobo in estudiantes if aprobo['promedio'] >= 3.0)
+# lista_ordenada=sorted(estudiantes, key=lambda e: e['promedio'], reverse=True)
+
+# #Funcion para calificar notas
+# def clasificar_nota(nota):
+#     if nota >= 4.5:
+#         return "Excelente"
+#     elif nota >= 4.0:
+#         return "Muy bien"
+#     elif nota >= 3.0:
+#         return "Aprobado"
+#     else:
+#         return "Reprobado"            
+
+# #Salida de datos
+# print(f"\n---Resumen de calificaciones---")
+
+# for e in estudiantes:
+#     estado=clasificar_nota(e['promedio'])
+#     print(f"\nEstudiante: {e['nombre']}")
+#     print(f"Notas: {e['notas']}")
+#     print(f"Promedio: {e['promedio']:.2f} - {estado}.")
+
+# print(f"\nMejor estudiante {mejor_estudiantes['nombre']} con {mejor_estudiantes['promedio']:.2f}")    
+# print(f"Peor estudiante {peor_estudiantes['nombre']} con {peor_estudiantes['promedio']:.2f}")
+# print(f"Estudiantes aprobados: {estudiantes_aprobados} de {num_estudiantes}")
+
+# print(f"\nLista de estudiantes ordenados por promedio:")
+# for e in lista_ordenada:
+#     estado=clasificar_nota(e['promedio'])
+#     print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}.")
+
+
+#Registro de gastos personales
+
+cantidad_gastos=int(input("Ingrese la catntidadd de gastos a añadir: "))
+gastos=[]
+
+for i in range(cantidad_gastos):
+    print(f"Gasto número {i+1}")
+    nombre_gasto=str(input("Ingrese nombre del gasto: ")).title()
+    monto_gastado=float(input(f"Ingrese monto gastado de {nombre_gasto}: $"))
+    categoria_monto=str(input("Ingrese categoria ejemplo: Comida - Transporte - Entretenimiento: ")).title()
+
+    gasto={
+        "nombre_gasto":nombre_gasto,
+        "monto_gastado":monto_gastado,
+        "categoria_monto":categoria_monto
     }
-    estudiantes.append(estudiante)
 
-#Procesamieto de datos
-mejor_estudiantes=max(estudiantes, key=lambda e: e['promedio']) 
-peor_estudiantes=min(estudiantes, key=lambda e: e['promedio'])   
-estudiantes_aprobados=sum(1 for aprobo in estudiantes if aprobo['promedio'] >= 3.0)
-lista_ordenada=sorted(estudiantes, key=lambda e: e['promedio'], reverse=True)
+    gastos.append(gasto)
 
-#Funcion para calificar notas
-def clasificar_nota(nota):
-    if nota >= 4.5:
-        return "Excelente"
-    elif nota >= 4.0:
-        return "Muy bien"
-    elif nota >= 3.0:
-        return "Aprobado"
-    else:
-        return "Reprobado"            
+total_gastado=sum(gastos, key=lambda gas: gas["monto_gastado"])
+mayor_gasto=max(gastos, key=lambda may: may["monto_gastado"])
+menor_gasto=min(gastos, key=lambda men: men["monto_gastado"])
+gastos_mayores_cincuenta=sum(1 for may in gastos if may["monto_gastado"] >= 50)
+orden_gastos=sorted(gastos, key=lambda orden: orden["monto_gastado"])
+porcentaje_de_cada_gasto=sum(producto["monto_gastado"] for producto in gastos)
 
-#Salida de datos
-print(f"\n---Resumen de calificaciones---")
+#Saida
+print(f"---Lista de gastos personales---")
+print(f"\nMayor gasto fue {mayor_gasto['nombre_gasto']} con ${mayor_gasto['monto_gastado']:.2f}")
+print(f"\nMayor gasto fue {menor_gasto['nombre_gasto']} con ${menor_gasto['monto_gastado']:.2f}")
+print(f"Gastos superiores a $50 {cantidad_gastos}/{gastos_mayores_cincuenta["monto_gastado"]}")
+print(f"\nLista de gastos de menor a mayor")
+print(f"{orden_gastos["nombre_gasto"]} {orden_gastos["monto_gastado"]}")
 
-for e in estudiantes:
-    estado=clasificar_nota(e['promedio'])
-    print(f"\nEstudiante: {e['nombre']}")
-    print(f"Notas: {e['notas']}")
-    print(f"Promedio: {e['promedio']:.2f} - {estado}.")
-
-print(f"\nMejor estudiante {mejor_estudiantes['nombre']} con {mejor_estudiantes['promedio']:.2f}")    
-print(f"Peor estudiante {peor_estudiantes['nombre']} con {peor_estudiantes['promedio']:.2f}")
-print(f"Estudiantes aprobados: {estudiantes_aprobados} de {num_estudiantes}")
-
-print(f"\nLista de estudiantes ordenados por promedio:")
-for e in lista_ordenada:
-    estado=clasificar_nota(e['promedio'])
-    print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}.")
+print(f"-Porcentaje de gastos-")
+for porcentaje_gasto in gastos:
+    porcentaje=(porcentaje_gasto["monto_gastado"] / porcentaje_de_cada_gasto) * 100
+    print(f"Gasto: {porcentaje_gasto["nombre_gasto"]} porcentaje {porcentaje:.2f}")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# porcentaje = (producto["valor"] / gasto_total) * 100
 
 
 
