@@ -548,14 +548,54 @@
 #     print(f"Estudiante: {calificacion["nombre"] }.\nNota: {calificacion["nota_final"]}")
 
 
+print("Gestor de Calificaciones Escolares")
 
+#entrada de datos
+num_estudiantes=int(input("Ingresa cantidad de estudiantes: "))
+estudiantes=[]
 
+for i in range(num_estudiantes):
+    print(f"\nIngresando datos de etsudiantes {i+1}")
+    nombre=str(input("Nombre de estudiante: ")).title()
+    notas=[] #lista para almacenar notas
 
+        #pedir 3 calificaiones
+    for j in range(3):
+        nota=float(input(f"Ingrese la nota {j+1} de {nombre}: "))
+        notas.append(nota)
 
+    #guardar estudiante
+    estudiante={
+        "nombre": nombre,
+        "notas": notas,
+        "promedio": sum(notas) / len(notas) #calcular promedio
+    }
 
+    estudiantes.append(estudiante)
 
+#Procesamieto de datos
+mejor_estudiantes=max(estudiantes, key=lambda e: e['promedio']) 
+pero_estudiantes=min(estudiantes, key=lambda e: e['promedio'])   
+estudiantes_aprobados=sum(1 for aprobo in estudiantes if aprobo['prmedio'] >= 3.0)
+lista_ordenada=sorted(estudiantes, key=lambda e: e['prmedio'], reverse=True)
 
+#Funcion para calificar notas
+def clasificar_nota(nota):
+    if nota >= 4.5:
+        return "Excelente"
+    elif nota >= 4.0:
+        return "Muy bien"
+    elif nota >= 3.0:
+        return "Aprobado"
+    else:
+        return "Reprobado"            
 
+#Salida de datos
+
+print(f"\nResumen de calificaciones")
+
+for e in estudiantes:
+    estado=clasificar_nota(e['promedio'])
 
 
 
