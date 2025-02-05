@@ -570,14 +570,13 @@ for i in range(num_estudiantes):
         "notas": notas,
         "promedio": sum(notas) / len(notas) #calcular promedio
     }
-
     estudiantes.append(estudiante)
 
 #Procesamieto de datos
 mejor_estudiantes=max(estudiantes, key=lambda e: e['promedio']) 
-pero_estudiantes=min(estudiantes, key=lambda e: e['promedio'])   
-estudiantes_aprobados=sum(1 for aprobo in estudiantes if aprobo['prmedio'] >= 3.0)
-lista_ordenada=sorted(estudiantes, key=lambda e: e['prmedio'], reverse=True)
+peor_estudiantes=min(estudiantes, key=lambda e: e['promedio'])   
+estudiantes_aprobados=sum(1 for aprobo in estudiantes if aprobo['promedio'] >= 3.0)
+lista_ordenada=sorted(estudiantes, key=lambda e: e['promedio'], reverse=True)
 
 #Funcion para calificar notas
 def clasificar_nota(nota):
@@ -591,15 +590,22 @@ def clasificar_nota(nota):
         return "Reprobado"            
 
 #Salida de datos
-
 print(f"\nResumen de calificaciones")
 
 for e in estudiantes:
     estado=clasificar_nota(e['promedio'])
+    print(f"\n{e['nombre']}")
+    print(f"Notas: {e['notas']}")
+    print(f"Promedi: {e['promedio']:.2f} - {'estado'}")
 
+print(f"\n Mejor estudiante: {mejor_estudiantes['nombre']} con {mejor_estudiantes['notas']:.2f}")    
+print(f"Peor estudiante {peor_estudiantes['nombre']} con {peor_estudiantes['notas']:.2f}")
+print(f"Estudiantes aprobados: {estudiantes_aprobados} de{num_estudiantes}")
 
-
-
+print(f"\nLista de estudiantes ordenados por promedio:")
+for e in lista_ordenada:
+    estado=clasificar_nota(e['promedio'])
+    print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}")
 
 
 
