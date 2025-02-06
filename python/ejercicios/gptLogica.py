@@ -609,15 +609,15 @@
 
 
 #Registro de gastos personales
-
-cantidad_gastos=int(input("Ingrese la catntidadd de gastos a añadir: "))
+print(f"\n---Registro de gastos personales\n")
+cantidad_gastos=int(input("Ingrese la cantidadd de gastos: "))
 gastos=[]
 
 for i in range(cantidad_gastos):
-    print(f"Gasto número {i+1}")
+    print(f"\nGasto número {i+1}")
     nombre_gasto=str(input("Ingrese nombre del gasto: ")).title()
     monto_gastado=float(input(f"Ingrese monto gastado de {nombre_gasto}: $"))
-    categoria_monto=str(input("Ingrese categoria ejemplo: Comida - Transporte - Entretenimiento: ")).title()
+    categoria_monto=str(input("Ingrese categoria ejemplo: Comida - Transporte - Entretenimiento: \n")).title()
 
     gasto={
         "nombre_gasto":nombre_gasto,
@@ -627,25 +627,27 @@ for i in range(cantidad_gastos):
 
     gastos.append(gasto)
 
-total_gastado=sum(gastos, key=lambda gas: gas["monto_gastado"])
+total_gastado=sum(gas["monto_gastado"] for gas in gastos)
 mayor_gasto=max(gastos, key=lambda may: may["monto_gastado"])
 menor_gasto=min(gastos, key=lambda men: men["monto_gastado"])
-gastos_mayores_cincuenta=sum(1 for may in gastos if may["monto_gastado"] >= 50)
-orden_gastos=sorted(gastos, key=lambda orden: orden["monto_gastado"])
+gastos_mayores_cincuenta=sum(1 for may in gastos if may["monto_gastado"] > 50)
+orden_gastos=sorted(gastos, key=lambda orden: orden["monto_gastado"], )
 porcentaje_de_cada_gasto=sum(producto["monto_gastado"] for producto in gastos)
 
 #Saida
 print(f"---Lista de gastos personales---")
-print(f"\nMayor gasto fue {mayor_gasto['nombre_gasto']} con ${mayor_gasto['monto_gastado']:.2f}")
-print(f"\nMayor gasto fue {menor_gasto['nombre_gasto']} con ${menor_gasto['monto_gastado']:.2f}")
-print(f"Gastos superiores a $50 {cantidad_gastos}/{gastos_mayores_cincuenta["monto_gastado"]}")
-print(f"\nLista de gastos de menor a mayor")
-print(f"{orden_gastos["nombre_gasto"]} {orden_gastos["monto_gastado"]}")
+print(f"\nMayor gasto {mayor_gasto['nombre_gasto']} con ${mayor_gasto['monto_gastado']:.2f}")
+print(f"Menor gasto {menor_gasto['nombre_gasto']} con ${menor_gasto['monto_gastado']:.2f}")
+print(f"\nGastos superiores a $50: {cantidad_gastos}/{gastos_mayores_cincuenta}")
 
-print(f"-Porcentaje de gastos-")
+print(f"\n---Lista de gastos de menor a mayor---\n")
+for orden in orden_gastos:
+    print(f"Categoria: {orden["categoria_monto"]}. Gasto: {orden["nombre_gasto"]}. Valor: ${orden["monto_gastado"]}")
+
+print(f"\n---Porcentaje de gastos---")
 for porcentaje_gasto in gastos:
     porcentaje=(porcentaje_gasto["monto_gastado"] / porcentaje_de_cada_gasto) * 100
-    print(f"Gasto: {porcentaje_gasto["nombre_gasto"]} porcentaje {porcentaje:.2f}")
+    print(f"Gasto: {porcentaje_gasto["nombre_gasto"]}. Categoria: {porcentaje_gasto["categoria_monto"]}. {porcentaje:.2f}%")
 
 
 
