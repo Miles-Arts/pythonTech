@@ -1,3 +1,4 @@
+import random as ram
 # print("Ingresa 3 numeros: ")
 # numero1=float(input("primer número: "))
 # numero2=float(input("segundo número: "))
@@ -608,50 +609,216 @@
 #     print(f"{e['nombre']}: {e['promedio']:.2f} - {estado}.")
 
 
-#Registro de gastos personales
-print(f"\n---Registro de gastos personales\n")
-cantidad_gastos=int(input("Ingrese la cantidadd de gastos: "))
-gastos=[]
+# #Registro de gastos personales
+# print(f"\n---Registro de gastos personales\n")
+# cantidad_gastos=int(input("Ingrese la cantidadd de gastos: "))
+# gastos=[]
 
-for i in range(cantidad_gastos):
-    print(f"\nGasto número {i+1}")
-    nombre_gasto=str(input("Ingrese nombre del gasto: ")).title()
-    monto_gastado=float(input(f"Ingrese monto gastado de {nombre_gasto}: $"))
-    categoria_monto=str(input("Ingrese categoria ejemplo: Comida - Transporte - Entretenimiento: \n")).title()
+# for i in range(cantidad_gastos):
+#     print(f"\nGasto número {i+1}")
+#     nombre_gasto=str(input("Ingrese nombre del gasto: ")).title()
+#     monto_gastado=float(input(f"Ingrese monto gastado de {nombre_gasto}: $"))
+#     categoria_monto=str(input("Ingrese categoria ejemplo: Comida - Transporte - Entretenimiento: \n")).title()
 
-    gasto={
-        "nombre_gasto":nombre_gasto,
-        "monto_gastado":monto_gastado,
-        "categoria_monto":categoria_monto
-    }
+#     gasto={
+#         "nombre_gasto":nombre_gasto,
+#         "monto_gastado":monto_gastado,
+#         "categoria_monto":categoria_monto
+#     }
 
-    gastos.append(gasto)
+#     gastos.append(gasto)
 
-total_gastado=sum(gas["monto_gastado"] for gas in gastos)
-mayor_gasto=max(gastos, key=lambda may: may["monto_gastado"])
-menor_gasto=min(gastos, key=lambda men: men["monto_gastado"])
-gastos_mayores_cincuenta=sum(1 for may in gastos if may["monto_gastado"] > 50)
-orden_gastos=sorted(gastos, key=lambda orden: orden["monto_gastado"], )
-porcentaje_de_cada_gasto=sum(producto["monto_gastado"] for producto in gastos)
+# total_gastado=sum(gas["monto_gastado"] for gas in gastos)
+# mayor_gasto=max(gastos, key=lambda may: may["monto_gastado"])
+# menor_gasto=min(gastos, key=lambda men: men["monto_gastado"])
+# gastos_mayores_cincuenta=sum(1 for may in gastos if may["monto_gastado"] > 50)
+# orden_gastos=sorted(gastos, key=lambda orden: orden["monto_gastado"], )
+# porcentaje_de_cada_gasto=sum(producto["monto_gastado"] for producto in gastos)
 
-#Saida
-print(f"---Lista de gastos personales---")
-print(f"\nMayor gasto {mayor_gasto['nombre_gasto']} con ${mayor_gasto['monto_gastado']:.2f}")
-print(f"Menor gasto {menor_gasto['nombre_gasto']} con ${menor_gasto['monto_gastado']:.2f}")
-print(f"\nGastos superiores a $50: {cantidad_gastos}/{gastos_mayores_cincuenta}")
+# #Saida
+# print(f"---Lista de gastos personales---")
+# print(f"\nMayor gasto {mayor_gasto['nombre_gasto']} con ${mayor_gasto['monto_gastado']:.2f}")
+# print(f"Menor gasto {menor_gasto['nombre_gasto']} con ${menor_gasto['monto_gastado']:.2f}")
+# print(f"\nGastos superiores a $50: {cantidad_gastos}/{gastos_mayores_cincuenta}")
 
-print(f"\n---Lista de gastos de menor a mayor---\n")
-for orden in orden_gastos:
-    print(f"Categoria: {orden["categoria_monto"]}. Gasto: {orden["nombre_gasto"]}. Valor: ${orden["monto_gastado"]}")
+# print(f"\n---Lista de gastos de menor a mayor---\n")
+# for orden in orden_gastos:
+#     print(f"Categoria: {orden["categoria_monto"]}. Gasto: {orden["nombre_gasto"]}. Valor: ${orden["monto_gastado"]}")
 
-print(f"\n---Porcentaje de gastos---")
-for porcentaje_gasto in gastos:
-    porcentaje=(porcentaje_gasto["monto_gastado"] / porcentaje_de_cada_gasto) * 100
-    print(f"Gasto: {porcentaje_gasto["nombre_gasto"]}. Categoria: {porcentaje_gasto["categoria_monto"]}. {porcentaje:.2f}%")
+# print(f"\n---Porcentaje de gastos---")
+# for porcentaje_gasto in gastos:
+#     porcentaje=(porcentaje_gasto["monto_gastado"] / porcentaje_de_cada_gasto) * 100
+#     print(f"Gasto: {porcentaje_gasto["nombre_gasto"]}. Categoria: {porcentaje_gasto["categoria_monto"]}. {porcentaje:.2f}%")
 
 
 
-# porcentaje = (producto["valor"] / gasto_total) * 100
+# # porcentaje = (producto["valor"] / gasto_total) * 100
+
+
+# numero secreto
+# print(f"---Adivinda el número secreto---\n")
+# for i in range(3):
+#     while True:
+#         try:
+#             numero=int(input("Ingrese un número: "))
+#             numero_secreto=3
+#             if numero == numero_secreto:
+#                 print(f"Has adivinado {numero_secreto} es numero secreto!")
+                
+#             elif numero >= numero_secreto:
+#                 print(f"Una pista, el numero es menor")   
+#             elif numero <= numero_secreto:
+#                     print("Una pista, el numero es mayor")
+#             break
+#         except ValueError:
+#             print(F"Error debes ingresar un dato válido")            
+
+#         print(f"\n---Felicidades haz ganado---") 
+
+
+#NUMERO SECRETO
+
+# print(f"---Adivinda le número secreo---\n")
+
+# numero_secreto=3
+
+# for i in range(3):
+#     while True:
+#         try:
+#             numero=int(input("Ingrese un número: "))
+
+#             if numero == numero_secreto:
+#                 print(f"¡Has adivinado! {numero_secreto} es el número secreto")
+#                 print(f"\n---Felicidades, has ganado---")
+#                 exit()
+
+#             elif numero > numero_secreto:
+#                 print("Una pista: el número es menor")
+#             else:
+#                 print("Una pista: el número es mayor")  
+
+#             break
+#         except ValueError:
+#             print("Error: debes ngresar un dato válido.")
+
+# print(f"\nLo siento, has perdidio. \nEl número secreto era {numero_secreto}.")
+
+# numero_secreto= ram.randint(0,10)
+
+# print("¡Advina el número entre 0 y 10")
+
+# while True:
+#     intento=int(input("Ingresa tu primer intento: "))
+#     if intento.isdigit():
+#         intento = int(intento)
+#         break
+#     else:
+#         print("Por favor, ingresa un número válido.")
+
+# for i in range(2):
+#     if intento == numero_secreto:
+#         print("¡Felicidades! Adivinaste el número.")
+#         break
+#     elif intento < numero_secreto:
+#         print("El número es mayor.")
+#     else:
+#         print("El número es menor.")
+
+#     while True:
+#         intento = int(input("Inténtalo de nuevo: ")) 
+#         if intento.isdigit():
+#             intento = int(intento)
+#             break
+#         else:
+#             print("Por favor, ingresa un número válido.")       
+
+# else:
+#     print(f"¡Oh no! El número secreto era {numero_secreto}.")
+
+# print("¡Gracias por jugar!")
+
+#Ejercicio: Adivina el Rango del Número Secreto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
