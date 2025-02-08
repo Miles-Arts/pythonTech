@@ -757,46 +757,59 @@ import random
 #             match intento:
 #                 case 0 | 5: 
 
-numero_secreto=random.randint(1,100)
+# numero_secreto=random.randint(1,100)
 
-print("\nAdivina el rango del número secreto entre 1 y 100")
-print("Opciones:")
-print("1️⃣  Bajo (1-33)")
-print("2️⃣  Medio (34-66)")
-print("3️⃣  Alto (67-100)\n")
+# print("\nAdivina el rango del número secreto entre 1 y 100")
+# print("Opciones:")
+# print("1️⃣  Bajo (1-33)")
+# print("2️⃣  Medio (34-66)")
+# print("3️⃣  Alto (67-100)\n")
 
-for intento in range(5):
+# for intento in range(5):
+#     while True:
+#         opcion= input("Elige un rango (1, 2  o 3): ")
+#         if opcion.isdigit() and opcion in ("1","2","3"):
+#             opcion=int(opcion)
+#             break
+#         else:
+#             print("Opción inválida. Ingresa 1, 2 o 3.\n")
+
+#     match opcion:
+#         case 1:
+#             if 1 <= numero_secreto <= 33:
+#                 print("Correcto! el número estaba en el rango Bajo")
+#                 break
+#             else:
+#                 print("Incorrecto! el número NO está en el rango Bajo\n")
+#         case 2:
+#             if 34 <= numero_secreto <= 66:
+#                 print("Correcto! el número estaba en el rango Medio")
+#                 break
+#             else:
+#                 print("Incorrecto! el número NO está en el rango Medio\n")
+#         case 3:
+#             if 67 <= numero_secreto <=100:
+#                 print("Correcto! el número estaba en el rango Alto") 
+#                 break
+#             else:
+#                 print("Incorrecto! el número NO está en el rango Alto\n")       
+# else:
+#     print(f"Perdiste! El número secreto era {numero_secreto}.")
+
+# print("Gracias por jugar.")
+
+
+print("---Loteria Mágica---")
+print("Habran 3 numero aleatorios y deberas adivinar"
+
+numero_loteria=random.randint(1,50)
+intento=[]
+
+for i in range(5):
     while True:
-        opcion= input("Elige un rango (1, 2  o 3): ")
-        if opcion.isdigit() and opcion in ("1","2","3"):
-            opcion=int(opcion)
-            break
-        else:
-            print("Opción inválida. Ingresa 1, 2 o 3.\n")
-
-    match opcion:
-        case 1:
-            if 1 <= numero_secreto <= 33:
-                print("Correcto! el número estaba en el rango Bajo")
-                break
-            else:
-                print("Incorrecto! el número NO está en el rango Bajo\n")
-        case 2:
-            if 34 <= numero_secreto <= 66:
-                print("Correcto! el número estaba en el rango Medio")
-                break
-            else:
-                print("Incorrecto! el número NO está en el rango Medio\n")
-        case 3:
-            if 67 <= numero_secreto <=100:
-                print("Correcto! el número estaba en el rango Alto") 
-                break
-            else:
-                print("Incorrecto! el número NO está en el rango Alto\n")       
-else:
-    print(f"Perdiste! El número secreto era {numero_secreto}.")
-
-print("Gracias por jugar.")
+        intento=input("Ingresa un número entre 1 a 20")
+        intento=intento.isdigit()
+        intento=list(map(int, intento.split(",")))
 
 
 
