@@ -799,17 +799,20 @@ import random
 # print("Gracias por jugar.")
 
 
-print("---Loteria Mágica---")
-print("Habran 3 numero aleatorios y deberas adivinar"
+print("\n---Loteria Mágica---")
+print("Habran 3 numero aleatorios y deberas adivinar")
+print("Debes adivinar le número entre 1 y 50\n")
 
 numero_loteria=random.randint(1,50)
 intento=[]
 
 for i in range(5):
     while True:
-        intento=input("Ingresa un número entre 1 a 20")
-        intento=intento.isdigit()
-        intento=list(map(int, intento.split(",")))
+        intento=input("Ingresa un número entre 1 a 50: ")
+        
+        if intento.isdigit() and 1 <= int(intento) <=50:
+            intento=list(map(int, intento.split(",")))
+        
 
 
 
