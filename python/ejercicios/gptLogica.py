@@ -845,37 +845,51 @@ import random
 # print("Gracias por jugar!")
      
 
-numeros_secretos=random.sample(range(1,50), 3)
+# numeros_secretos=random.sample(range(1,50), 3)
 
-print("\n Bienvenidos a la loteria Mágica")
-print("Tienes 5 oportunidades para adivinar al menos uno de ños 3 números secretos")
-print("Los números están entre 1 y 50\n")
+# print("\n Bienvenidos a la loteria Mágica\n")
+# print("Tienes 5 oportunidades para adivinar \nal menos uno de los 3 números secretos")
+# print("Los números están entre 1 y 50\n")
 
-intentos_realizados=[]
+# intentos_realizados=[]
 
-for intento in range(5):
-    while True:
-        numero=input(f"Intento {intento+1}: Ingresa un número entre 1 y 50:")
-        if numero.isdigit() and 1 <= int(numero) <= 50:
-            numero=int(numero)
-            if numero in intentos_realizados:
-                print("Ya ingresaste este numero. Intenta con otro\n")
-            else:
-                intentos_realizados.append(numero)
-                break
-        else:
-            print("Entrada inválida. \nIngresa un número válido entre 1 y 50.\n") 
+# for intento in range(5):
+#     while True:
+#         numero=input(f"Intento {intento+1}: Ingresa un número entre 1 y 50: ")
+#         if numero.isdigit() and 1 <= int(numero) <= 50:
+#             numero=int(numero)
+#             if numero in intentos_realizados:
+#                 print("Ya ingresaste este numero. Intenta con otro\n")
+#             else:
+#                 intentos_realizados.append(numero)
+#                 break
+#         else:
+#             print("Entrada inválida. \nIngresa un número válido entre 1 y 50.\n") 
 
-    match numero in numeros_secretos:
-        case True:
-            print(f"Felicidades! {numero}  es un número secreto. Has Ganado!!!")
-            break
-        case False:
-            print("Incorrecto. Sigue intentando...\n")               
+#     match numero in numeros_secretos:
+#         case True:
+#             print(f"Felicidades! {numero}  es un número secreto. Has Ganado!!!\n")
+#             break
+#         case False:
+#             print("Incorrecto. Sigue intentando...\n")               
 
-else:
-    print(f"Oh no! PErdiste. Los números secretos eran: {numeros_secretos}")
-print("Gracias por jugar! ¿Te atreves a intentarlo de nuevo?")
+# else:
+#     print(f"Oh no! Perdiste.")
+#     print(f"Los números secretos eran: ")
+#     for secretos in numeros_secretos:
+#         print(f"-> {secretos}")
+# print("\nGracias por jugar!\n¿Te atreves a intentarlo de nuevo?")
+
+# contador de vocales
+palabra=input("Ingrese una palabra: ").lower()
+vocales=["a", "e", "i", "o", "u"]
+suma_vocales=0
+
+for i in palabra:
+    if i in vocales:
+        suma_vocales+=1
+print(f"La palabra: {palabra.upper()} tiene {suma_vocales} vocales")        
+
 
 
 
