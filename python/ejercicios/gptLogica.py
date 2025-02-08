@@ -799,25 +799,83 @@ import random
 # print("Gracias por jugar.")
 
 
-print("\n---Loteria Mágica---")
-print("Habran 3 numero aleatorios y deberas adivinar")
-print("Debes adivinar le número entre 1 y 50\n")
+# print("\n---Loteria Mágica---")
+# print("Habran 3 numero aleatorios y deberas adivinar")
+# print("Debes adivinar le número entre 1 y 50\n")
+# print("1️⃣  Bajo (1-16)")
+# print("2️⃣  Medio (17-43)")
+# print("3️⃣  Alto (44-50)\n") 
 
-numero_loteria=random.randint(1,50)
-intento=[]
+# numero_loteria=random.randint(1,50)
+# lista=[]
 
-for i in range(5):
+# for i in range(5):
+#     while True:
+#         print("Ingresa 3 numeros separados por coma (,)")
+#         intento=input("Ingresa un número entre 1 a 50: ")
+        
+#         if intento.isdigit() and 1 <= int(intento) <=50:
+#             lista=list(map(int, intento.split(",")))
+#             break
+#         else:
+#             print("Ingrese un nùmero válido")
+
+#         match lista:
+#             case 1:
+#                 if 1 <= numero_loteria <= 16:
+#                     print("Correcto el numero esta ahí")
+#                     break
+#                 else:
+#                     print("Incorrecto vuelve a intentar")    
+#             case 2:
+#                 if 17 <= numero_loteria <= 49:
+#                     print("Correcto el numero esta ahí")
+#                     break
+#                 else:
+#                     print("Incorrecto vuelve a intentar")
+#             case 3:
+#                 if 17 <= numero_loteria <= 49:
+#                     print("Correcto el numero esta ahí")
+#                     break
+#                 else:
+#                     print("Incorrecto vuelve a intentar")
+
+# else:
+#     print(f"Lo siento el número de loteria ganador era {numero_loteria}")
+# print("Gracias por jugar!")
+     
+
+numeros_secretos=random.sample(range(1,50), 3)
+
+print("\n Bienvenidos a la loteria Mágica")
+print("Tienes 5 oportunidades para adivinar al menos uno de ños 3 números secretos")
+print("Los números están entre 1 y 50\n")
+
+intentos_realizados=[]
+
+for intento in range(5):
     while True:
-        intento=input("Ingresa un número entre 1 a 50: ")
-        
-        if intento.isdigit() and 1 <= int(intento) <=50:
-            intento=list(map(int, intento.split(",")))
-        
+        numero=input(f"Intento {intento+1}: Ingresa un número entre 1 y 50:")
+        if numero.isdigit() and 1 <= int(numero) <= 50:
+            numero=int(numero)
+            if numero in intentos_realizados:
+                print("Ya ingresaste este numero. Intenta con otro\n")
+            else:
+                intentos_realizados.append(numero)
+                break
+        else:
+            print("Entrada inválida. \nIngresa un número válido entre 1 y 50.\n") 
 
+    match numero in numeros_secretos:
+        case True:
+            print(f"Felicidades! {numero}  es un número secreto. Has Ganado!!!")
+            break
+        case False:
+            print("Incorrecto. Sigue intentando...\n")               
 
-
-
-
+else:
+    print(f"Oh no! PErdiste. Los números secretos eran: {numeros_secretos}")
+print("Gracias por jugar! ¿Te atreves a intentarlo de nuevo?")
 
 
 
