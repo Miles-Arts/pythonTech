@@ -893,49 +893,69 @@ import random
 #Control de Inventario en una Tienda
 
 #Control de Inventario en una Tienda 🏪
+# print("\n---Control de Inventario en una Tienda 🏪---\n")
 
-cantidad_productos=int(input("Ingrese cantidad productos de la tienda: "))
-productos=[]
+# cantidad_productos=int(input("Ingrese cantidad productos de la tienda: "))
+# productos=[]
 
-for i in range(cantidad_productos):
-    print(f"\nProducto número {i+1} ")
-    nombre=str(input("Nombre Producto: ")).title()
-    precio_unitario=float(input("ngrese precio unitario: "))
-    cantidad_stock=int(input("Cantidad de producto: "))
-    categoria=str(input("Alimentos - Electrónica - Ropa")).title()
+# for i in range(cantidad_productos):
+#     print(f"\nProducto número {i+1} ")
+#     nombre=str(input("Nombre Producto: ")).title()
+#     precio_unitario=float(input(f"Ingrese precio unitario de {nombre}: $"))
+#     cantidad_stock=int(input("Cantidad de productos: "))
+#     categoria=str(input("Alimentos - Electrónica - Ropa: ")).title()
 
-    producto={
-        "nombre" : nombre,
-        "precio_unitario" : precio_unitario,
-        "cantidad_stock" : cantidad_stock,
-        "categoria" : categoria,
-        "valor_total": precio_unitario * cantidad_stock
-    }
+#     producto={
+#         "nombre" : nombre,
+#         "precio_unitario" : precio_unitario,
+#         "cantidad_stock" : cantidad_stock,
+#         "categoria" : categoria,
+#         "valor_total": precio_unitario * cantidad_stock
+#     }
 
-    productos.append(producto)
+#     productos.append(producto)
 
-valor_general = sum(prod["valor_total"] for prod in productos)
-mas_caro=max(productos, key=lambda prod: prod["precio_unitario"]) 
-menos_caro=min(productos, key=lambda prod: prod["precio_unitario"])
-mas_stock=sum(1 for stock in productos if stock["cantidad_stock"] >= 20 )
-orden_stock=sorted(productos, key=lambda prod: prod["precio_unitario"])
-
-print(f"---Stock Tienda---")
-print(f"El valor total es: ${valor_general}")
-print(f"El producto más costoso es: {mas_caro["nombre"]}.\nValor: ${mas_caro["precio_unitario"]}")
-print(f"El producto más económic es: {menos_caro["nombre"]}.\nValor: ${menos_caro["precio_unitario"]}")
-
-print(f"\nProductos con más stock")
-for stock_mas in mas_stock:
-    print(f"Producto: {stock_mas["nombre"]} Cantidad: {stock_mas["cantidad_stock"]}\n")
-print(f"Lista de producto de mayor a menor.")
-for lista_orden in orden_stock:
-    print(f"Producto: {lista_orden["nombre"]}. Valor: ${lista_orden["precio_unitario"]}")
+# valor_general = sum(prod["valor_total"] for prod in productos)
+# mas_caro=max(productos, key=lambda prod: prod["precio_unitario"]) 
+# menos_caro=min(productos, key=lambda prod: prod["precio_unitario"])
+# mas_stock=sum(1 for stock in productos if stock["cantidad_stock"] >= 20 )
+# orden_stock=sorted(productos, key=lambda prod: prod["precio_unitario"], reverse=True)
 
 
+# print(f"\n---Stock Tienda---\n")
+# print(f"El valor total es: ${valor_general:.2f}")
+# print(f"El producto más costoso es: {mas_caro["nombre"]}. Valor: ${mas_caro["precio_unitario"]:.2f}")
+# print(f"El producto más económico es: {menos_caro["nombre"]}. Valor: ${menos_caro["precio_unitario"]:.2f}")
+
+# print(f"\nProductos con más stock")
+# print(f"Productos con más de 20 unidades: {cantidad_productos} \ {mas_stock}\n")
+
+# print(f"Lista de producto de mayor a menor.")
+# for lista_orden in orden_stock:
+#     print(f"Producto: {lista_orden["nombre"]}. Categoria: {lista_orden["categoria"]} Valor: ${lista_orden["precio_unitario"]}")
 
 
 
+#🎭 Gestor de Reservas en un Teatro 🎭
+
+print("\n🎭 Gestor de Reservas en un Teatro 🎭\n")
+
+numero_reservas=int(input("Ingrese el número de reservas: "))
+reservas=[]
+
+for i in random(numero_reservas):
+        print(f"Reserva número: {i+1}")
+        nombre_espectador=str(input("Ingrese nombre del espectador: ")).title()
+        edad=int(input(f"Ingrese la edad de: {nombre_espectador}: "))
+        seccion=str(input("Sección deseada  (VIP, General o Balcón): ")).title()
+
+        reserva={
+            "nombre_espectador": nombre_espectador,
+            "edad": edad,
+            "seccion": seccion 
+        }
+
+        reservas.append(reserva)
 
 
 
