@@ -892,7 +892,37 @@ import random
 
 #Control de Inventario en una Tienda
 
-print("Hola")
+#Control de Inventario en una Tienda 🏪
+
+cantidad_productos=int(input("Ingrese cantidad productos de la tienda: "))
+productos=[]
+
+for i in range(cantidad_productos):
+    print(f"\nProducto número {i+1} ")
+    nombre=str(input("Nombre Producto: ")).title()
+    precio_unitario=float(input("ngrese precio unitario: "))
+    cantidad_stock=int(input("Cantidad de producto: "))
+    categoria=str(input("Alimentos - Electrónica - Ropa")).title()
+
+    producto={
+        "nombre" : nombre,
+        "precio_unitario" : precio_unitario,
+        "cantidad_stock" : cantidad_stock,
+        "categoria" : categoria,
+        "valor_total": precio_unitario * cantidad_stock
+    }
+
+    productos.append(producto)
+
+valor_general = productos["valor_total"]   
+mas_caro=max(productos, key=lambda prod: prod["precio_unitario"]) 
+menos_caro=min(producto, key=lambda prod: prod["precio_unitario"])
+
+
+
+
+
+
 
 
 
