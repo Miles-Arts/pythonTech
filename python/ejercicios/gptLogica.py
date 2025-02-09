@@ -914,12 +914,23 @@ for i in range(cantidad_productos):
 
     productos.append(producto)
 
-valor_general = productos["valor_total"]   
+valor_general = sum(prod["valor_total"] for prod in productos)
 mas_caro=max(productos, key=lambda prod: prod["precio_unitario"]) 
-menos_caro=min(producto, key=lambda prod: prod["precio_unitario"])
+menos_caro=min(productos, key=lambda prod: prod["precio_unitario"])
+mas_stock=sum(1 for stock in productos if stock["cantidad_stock"] >= 20 )
+orden_stock=sorted(productos, key=lambda prod: prod["precio_unitario"])
 
+print(f"---Stock Tienda---")
+print(f"El valor total es: ${valor_general}")
+print(f"El producto más costoso es: {mas_caro["nombre"]}.\nValor: ${mas_caro["precio_unitario"]}")
+print(f"El producto más económic es: {menos_caro["nombre"]}.\nValor: ${menos_caro["precio_unitario"]}")
 
-
+print(f"\nProductos con más stock")
+for stock_mas in mas_stock:
+    print(f"Producto: {stock_mas["nombre"]} Cantidad: {stock_mas["cantidad_stock"]}\n")
+print(f"Lista de producto de mayor a menor.")
+for lista_orden in orden_stock:
+    print(f"Producto: {lista_orden["nombre"]}. Valor: ${lista_orden["precio_unitario"]}")
 
 
 
