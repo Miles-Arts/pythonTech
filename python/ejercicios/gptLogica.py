@@ -881,18 +881,18 @@ import random
 # print("\nGracias por jugar!\n¿Te atreves a intentarlo de nuevo?")
 
 # contador de vocales
-palabra=input("Ingrese una palabra: ").lower()
-vocales=["a", "e", "i", "o", "u"]
-suma_vocales=0
+# palabra=input("Ingrese una palabra: ").lower()
+# vocales=["a", "e", "i", "o", "u"]
+# suma_vocales=0
 
-for i in palabra:
-    if i in vocales:
-        suma_vocales+=1
-print(f"La palabra: {palabra.upper()} tiene {suma_vocales} vocales")        
+# for i in palabra:
+#     if i in vocales:
+#         suma_vocales+=1
+# print(f"La palabra: {palabra.upper()} tiene {suma_vocales} vocales")        
 
+#Control de Inventario en una Tienda
 
-
-
+print("Hola")
 
 
 
