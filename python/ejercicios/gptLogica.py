@@ -957,6 +957,8 @@ for i in random(numero_reservas):
 
         reservas.append(reserva)
 
+        
+
 
 
 
