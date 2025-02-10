@@ -986,13 +986,13 @@ for secc, cantidad  in seccion_teatro.items():
     print("\n--Boletos vendidos---")
     print(f"Sección {secc}: {cantidad} vendidos.\n")
 
-for ventas in precio_boleto:
-    if ventas in seccion_teatro.items():
-        ventas_secciones[ventas] = precio_boleto[ventas] * seccion_teatro[ventas]
+for ventas in seccion_teatro:
+    if ventas in precio_boleto:
+        ventas_secciones[ventas] = seccion_teatro[ventas] * precio_boleto[ventas]
 
 print(f"Ventas por sección")
-for secc, venta in ventas_secciones:
-    print(f"{secc}: ${venta:.2f}")        
+for secc, venta in ventas_secciones.items():
+    print(f"-> {secc.capitalize()}: ${venta:.2f}")        
  
 venta_total=sum(ventas_secciones.values())
 print(f"Ingreso total del teatro: ${venta_total:.2f}\n")    
