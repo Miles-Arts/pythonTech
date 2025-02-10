@@ -942,12 +942,27 @@ print("\n🎭 Gestor de Reservas en un Teatro 🎭\n")
 
 numero_reservas=int(input("Ingrese el número de reservas: "))
 reservas=[]
+seccion_teatro={"Vip": 0, "General": 0, "Balcon": 0}
+precio_boleto={"Vip": 50, "General": 30, "Balcon": 20}
+ventas_secciones={}
 
-for i in random(numero_reservas):
+
+for i in range(numero_reservas):
         print(f"Reserva número: {i+1}")
         nombre_espectador=str(input("Ingrese nombre del espectador: ")).title()
         edad=int(input(f"Ingrese la edad de: {nombre_espectador}: "))
-        seccion=str(input("Sección deseada  (VIP, General o Balcón): ")).title()
+        
+        for _ in range(numero_reservas):
+            while True:
+                seccion=str(input("Sección deseada  (VIP, General o Balcón): ")).title()
+                if seccion in seccion_teatro:
+                    seccion_teatro[seccion] +1
+                    break
+                else:
+                    print("Seccion inválida. Deber ser (VIP, General o Balcón): ")
+
+
+
 
         reserva={
             "nombre_espectador": nombre_espectador,
@@ -957,7 +972,37 @@ for i in random(numero_reservas):
 
         reservas.append(reserva)
 
-        
+espectador_mayor=max(reservas, key=lambda edad: edad["edad"] )
+espectador_menor=min(reservas, key=lambda edad: edad["edad"])
+
+print(f"\n--Resumen Reservas---\n")
+
+print(f"El espectador mayor es: {espectador_mayor["nombre_espectador"]} Edad: {espectador_mayor["edad"]} años.")
+print(f"El espectador menor es: {espectador_menor["nombre_espectador"]} Edad: {espectador_menor["edad"]} años.")
+
+#Clave valor en el for
+for secc, cantidad  in seccion_teatro.items():
+    # print(f"Por cada sección se vendieron: \nVIP: {cantidad["Vip"]}. \nGeneral{cantidad["General"]}.\nBalcón: {cantidad["con"]}")
+    print("\n--Boletos vendidos---")
+    print(f"Sección {secc}: {cantidad} vendidos.\n")
+
+for ventas in precio_boleto:
+    if ventas in seccion_teatro.items():
+        ventas_secciones[ventas] = precio_boleto[ventas] * seccion_teatro[ventas]
+
+print(f"Ventas por sección")
+for secc, venta in ventas_secciones:
+    print(f"{secc}: ${venta:.2f}")        
+ 
+venta_total=sum(ventas_secciones.values())
+print(f"Ingreso total del teatro: ${venta_total:.2f}\n")    
+
+for edad in reservas:
+    if edad["edad"] <= 18:
+        print(f"El espectador es menor de edad")
+    else:
+        print(f"El espectador es mayor de edad.") 
+
 
 
 
