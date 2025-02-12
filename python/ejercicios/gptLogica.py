@@ -1041,7 +1041,28 @@ import random
 # print("Gracias por comprar")
 
 
+# 🛒 Ejercicio: Tienda de Descuentos
 
+cantidad_productos=int(input("Ingrese la cantidad de productos: "))
+total=0
+
+for i in range(cantidad_productos):
+    precio=float(input(f"Ingrese el precio del producto {i+1}: $"))
+    total+=precio
+
+    if total < 50:
+        descuento=0
+    elif total<=100:
+        descuento= total * 0.05   
+    else:
+        descuento=total * 0.10
+
+    total_final= total - descuento
+
+print(f"\n---Resumen de la compra---")
+print(f"Total antes del descuento: ${total:.2f}")
+print(f"Descuento aplicado: ${descuento:.2f}")
+print(f"Total a pagar: ${total_final:.2f}")
 
 
 
