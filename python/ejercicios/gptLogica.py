@@ -1084,26 +1084,38 @@ import random
 
 # Inicializamos los contadores de estudiantes
 
-secciones={"A":0, "B": 0}
+# secciones={"A":0, "B": 0}
 
-for seccion in secciones:
-    cantidad=int(input("Ingrese la cantidad de estudiantes: "))
-    secciones[seccion]=cantidad
+# for seccion in secciones:
+#     cantidad=int(input(f"Ingrese la cantidad de estudiantes {seccion}: "))
+#     secciones[seccion]=cantidad
 
-print(f"Estudiantes por sección")
+# print(f"Estudiantes por sección")
 
-for sec, cantidad in secciones.items():
-    print(f"Sección {sec}: {cantidad} estudiantes")
+# for sec, cantidad in secciones.items():
+#     print(f"Sección {sec}: {cantidad} estudiantes")
 
-total_estudiantes=sum(secciones.values())
-print(f"Total de estudiantes en la escuela: {total_estudiantes}")
+# total_estudiantes=sum(secciones.values())
+# print(f"Total de estudiantes en la escuela: {total_estudiantes}")
 
+# total_estudiantes=list(secciones.keys())
+# print(f"Total de estudiantes en la escuela: {total_estudiantes}")
 
+edad=int(input("Ingrese su edad: "))
 
-
-
-
-
+try:
+    if edad < 18:
+        print("Eres menor de edad no puede ingresar")
+    elif edad >= 18 and edad < 65:
+        print("Eres adulto, bienvenido")
+    elif edad >= 65 and edad < 100:
+        print("eres adulto mayor. Tienes descuento especial!")    
+    elif edad >= 100:
+        print(" Felicidades, eres una leyenda viva!")
+# else:
+#               
+except ValueError:
+    print("Ingrese un dato válido.") 
 
 
 
