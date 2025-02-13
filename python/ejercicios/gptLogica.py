@@ -1065,13 +1065,38 @@ import random
 # print(f"Total a pagar: ${total_final:.2f}")
 
 
+# Ejercicio: Contar estudiantes por sección
+
+# seccion_a=int(input("Estudiantes de sección A: "))
+# seccion_b=int(input("Estudiantes de sección B: "))
 
 
+# for i in seccion_a:
+#     i+=1
+#     print(f"En la sección A hay {i} estudiantes:")
+#     for j in seccion_b:
+#         j+=1
+#         print(f"En sección B hay {j} estudiantes")
 
+# total_estudiantes=sum(seccion_a + seccion_b)
 
+# print(f"En total {total_estudiantes}")
 
+# Inicializamos los contadores de estudiantes
 
+secciones={"A":0, "B": 0}
 
+for seccion in secciones:
+    cantidad=int(input("Ingrese la cantidad de estudiantes: "))
+    secciones[seccion]=cantidad
+
+print(f"Estudiantes por sección")
+
+for sec, cantidad in secciones.items():
+    print(f"Sección {sec}: {cantidad} estudiantes")
+
+total_estudiantes=sum(secciones.values())
+print(f"Total de estudiantes en la escuela: {total_estudiantes}")
 
 
 
