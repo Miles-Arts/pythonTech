@@ -1101,28 +1101,52 @@ import random
 # total_estudiantes=list(secciones.keys())
 # print(f"Total de estudiantes en la escuela: {total_estudiantes}")
 
-edad=int(input("Ingrese su edad: "))
+# edad=int(input("Ingrese su edad: "))
 
-try:
-    if edad < 18:
-        print("Eres menor de edad no puede ingresar")
-    elif edad >= 18 and edad < 65:
-        print("Eres adulto, bienvenido")
-    elif edad >= 65 and edad < 100:
-        print("eres adulto mayor. Tienes descuento especial!")    
-    elif edad >= 100:
-        print(" Felicidades, eres una leyenda viva!")
-# else:
-#               
-except ValueError:
-    print("Ingrese un dato válido.") 
+# try:
+#     if edad < 18:
+#         print("Eres menor de edad no puede ingresar")
+#     elif edad >= 18 and edad < 65:
+#         print("Eres adulto, bienvenido")
+#     elif edad >= 65 and edad < 100:
+#         print("eres adulto mayor. Tienes descuento especial!")    
+#     elif edad >= 100:
+#         print(" Felicidades, eres una leyenda viva!")
+# # else:
+# #               
+# except ValueError:
+#     print("Ingrese un dato válido.") 
 
+# 🎭 Adivina el personaje misterioso
 
+# personaje=str(input("El personaje vuela? (Sí/No) "))
+# personaje=["Capa", " No vuela", "Heroe"]
 
+print(f"🎭 Adivina el personaje misterioso 🎭\n ")
 
+def entrada_valida(pregunta, opciones):
+    while True:
+        respuesta = input(pregunta).strip().lower()
+        if respuesta in opciones:
+            return respuesta
+        print("Opción inválida. Intenta de nuevo!")    
 
+capa=entrada_valida(f"¿Usa capa? (Sí/No): ", ["sí", "no"] )
+vuela=entrada_valida(f"¿Puede volar? (Sí/No): ", ["sí", "no"])
+tipo=entrada_valida(f"¿Es un héroe o un villano? (Héroe/Villano): ", ["héroe", "villano"])
 
-
+if capa == "sí" and vuela == "sí" and tipo == "héroe":
+    print("Tu personaje podria ser Superman!")
+elif capa == "sí" and vuela == "no" and tipo == "héroe":
+    print("Tu personaje podría ser Batman!")
+elif capa == "sí" and vuela == "sí" and tipo == "villano":
+    print("Tu personaje podría ser Drácula!")
+elif capa == "no" and vuela == "sí" and tipo == "hérone":
+    print("tu personaje podría ser Iron Man")    
+elif capa == "sí" and tipo == "villano":
+    print("Tu personaje podria ser Guasón")          
+else: 
+    print("no conozco ese personaje... Intentalo de nuevo!")
 
 
 
