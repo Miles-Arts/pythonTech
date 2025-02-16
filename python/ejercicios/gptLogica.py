@@ -1223,29 +1223,54 @@ import random
 
 #Carrera de Autos 🚗💨
 
-print("\n---Carreras de Autos---\n")
-participantes=int(input("Cuantos participantes hay: \n"))
-categoria=["Rapido": 0, "Promedio": 0, "Lento": 0]
-tiempos=[]
+# print("\n---Carreras de Autos---\n")
+# participantes=int(input("Cuantos participantes hay: "))
+# categoria_a=0
+# categoria_b=0
+# categoria_c=0
+# tiempos=[]
 
-for i in range(participantes):
-    print(f"Ingrese el tiempo en segundos.")
-    tiempo=float(input(f"Ingrese el tiempo del participante {i+1}: \n"))
+# for i in range(participantes):
+#     print(f"\nIngrese el tiempo en segundos.")
+#     tiempo=float(input(f"Ingrese el tiempo del participante {i+1}: "))
 
-    tiempos.append(tiempo)
+#     tiempos.append(tiempo)
 
-    if tiempo <= 10:
-        print(f"Carro de alto rendimiento")
-        print(f"El carro {i} tardo {tiempo} en terminar.")
+#     if tiempo <= 10:
+#         categoria=+ tiempo
+#         print(f"Carro de alto rendimiento")
+#         print(f"El carro {i} tardo {tiempo} en terminar.")
 
-    elif tiempo > 10 or tiempo <= 20:  
-        print(f"Carro promedio")
-        print(f"El carro {i} tardo {tiempo} en terminar.")
-    else:
-        print("Carro lento supero los 20 segundos")      
-        print(f"El carro {i} tardo {tiempo} en terminar.")
+#     elif tiempo > 10 or tiempo <= 20: 
+#         categoria=+ tiempo 
+#         print(f"Carro promedio")
+#         print(f"El carro {i} tardo {tiempo} en terminar.")
+#     else:
+#         categoria=+ tiempo
+#         print("Carro lento supero los 20 segundos")      
+#         print(f"El carro {i} tardo {tiempo} en terminar.")
 
 
+# autos_rapidos=0
+# autos_promedio=0
+# autos_lentos=0
+
+# cantidad_autos=int(input("Ingrese cantidad autos en carrera: "))
+
+# for i in range(cantidad_autos):
+#     tiempo=float(input(f"Ingrese el tiempo de auto {i+1}: "))
+
+#     if tiempo < 10:
+#         autos_rapidos +=1
+#     elif 10 <= tiempo <= 20:
+#         autos_promedio +=1
+#     else:
+#         autos_lentos +=1   
+
+# print(f"\n---Resultados Carrera---")            
+# print(f"Autos de alto rendimiento {autos_rapidos}:")            
+# print(f"Autos rendimeitno promedio {autos_promedio}")            
+# print(f"Autos rendimeinto bajo {autos_lentos}")            
 
 
 
