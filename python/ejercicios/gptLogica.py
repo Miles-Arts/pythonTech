@@ -1200,9 +1200,26 @@ import random
 #     print(f"- {producto}")
 
 
+lista_compras=[]
 
+print("\nTu lista de compras")
+print("Escribe 'fin' para terminar.\n")
+i=0
 
+while True:
+    # print(f"Producto {i+1} ")
+    producto=input("Ingrese un producto o 'fin' para terminar: ").strip().title()
 
+    if producto== "Fin":
+        break
+
+    lista_compras.append(producto)
+
+print("\n---Tu lista de compras ---")   
+for producto in lista_compras:
+    print(f"- {producto}") 
+
+print("\n---Gracias por la compra---\n")
 
 
 
