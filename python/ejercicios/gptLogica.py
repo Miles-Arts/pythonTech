@@ -1200,27 +1200,50 @@ import random
 #     print(f"- {producto}")
 
 
-lista_compras=[]
+# lista_compras=[]
 
-print("\nTu lista de compras")
-print("Escribe 'fin' para terminar.\n")
-i=0
+# print("\nTu lista de compras")
+# print("Escribe 'fin' para terminar.\n")
+# i=0
 
-while True:
-    # print(f"Producto {i+1} ")
-    producto=input("Ingrese un producto o 'fin' para terminar: ").strip().title()
+# while True:
+#     # print(f"Producto {i+1} ")
+#     producto=input("Ingrese un producto o 'fin' para terminar: ").strip().title()
 
-    if producto== "Fin":
-        break
+#     if producto== "Fin":
+#         break
 
-    lista_compras.append(producto)
+#     lista_compras.append(producto)
 
-print("\n---Tu lista de compras ---")   
-for producto in lista_compras:
-    print(f"- {producto}") 
+# print("\n---Tu lista de compras ---")   
+# for producto in lista_compras:
+#     print(f"- {producto}") 
 
-print("\n---Gracias por la compra---\n")
+# print("\n---Gracias por la compra---\n")
 
+#Carrera de Autos 🚗💨
+
+print("\n---Carreras de Autos---\n")
+participantes=int(input("Cuantos participantes hay: \n"))
+categoria=["Rapido": 0, "Promedio": 0, "Lento": 0]
+tiempos=[]
+
+for i in range(participantes):
+    print(f"Ingrese el tiempo en segundos.")
+    tiempo=float(input(f"Ingrese el tiempo del participante {i+1}: \n"))
+
+    tiempos.append(tiempo)
+
+    if tiempo <= 10:
+        print(f"Carro de alto rendimiento")
+        print(f"El carro {i} tardo {tiempo} en terminar.")
+
+    elif tiempo > 10 or tiempo <= 20:  
+        print(f"Carro promedio")
+        print(f"El carro {i} tardo {tiempo} en terminar.")
+    else:
+        print("Carro lento supero los 20 segundos")      
+        print(f"El carro {i} tardo {tiempo} en terminar.")
 
 
 
