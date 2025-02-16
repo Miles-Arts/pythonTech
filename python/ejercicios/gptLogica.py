@@ -1272,10 +1272,31 @@ import random
 # print(f"Autos rendimeitno promedio {autos_promedio}")            
 # print(f"Autos rendimeinto bajo {autos_lentos}")            
 
+# print("\n---Restaurante Inteligente 🍽️---\n")
+# platos=int(input("Cuántos platos ordenó? "))
+# precios=[]
 
 
+# for i in range(platos):
+#     print(f"Plato {i+1}")
+#     precio=float(input("Precio del plato: $"))
 
+#     precios.append(precio)
 
+# #  valor_general = sum(prod["valor_total"] for prod in productos)
+# total=sum(prod for prod in precios )
+
+# print("\n---Total a Pagar---\n")
+
+# if total < 50:
+#     print(f"Menos de $50. \nCliente económico.")
+# elif 50 <= total <= 150:
+#     print(f"Entre $50 y $150. \nCliente estandar.")
+# else:
+#     print(f"Más de $150. \nCliente VIP.")   
+
+# print(f"Total a pagar ${total:.2f}")
+# print("\n---Gracias por su compra---")
 
 
 
