@@ -1141,7 +1141,7 @@ elif capa == "sí" and vuela == "no" and tipo == "héroe":
     print("Tu personaje podría ser Batman!")
 elif capa == "sí" and vuela == "sí" and tipo == "villano":
     print("Tu personaje podría ser Drácula!")
-elif capa == "no" and vuela == "sí" and tipo == "hérone":
+elif capa == "no" and vuela == "sí" and tipo == "héroe":
     print("tu personaje podría ser Iron Man")    
 elif capa == "sí" and tipo == "villano":
     print("Tu personaje podria ser Guasón")          
