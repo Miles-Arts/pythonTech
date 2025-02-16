@@ -1152,27 +1152,52 @@ import random
 
 #Lista Productos
 
-cantidad=int(input("¿cuántos productos desea añadir: "))
-productos=[]
+# cantidad=int(input("¿cuántos productos desea añadir: "))
+# productos=[]
 
-for i in range(cantidad):
-    print(f"Producto número {i+1}")
-    producto=input("Escribe el nombre del producto: ").title()
+# for i in range(cantidad):
+#     print(f"Producto número {i+1}")
+#     producto=input("Escribe el nombre del producto: ").title()
 
-    productos.append(producto)
-
-
-print("---Lista de productos---")
-for j in productos:
-
-    print(f"Producto: {j}")
+#     productos.append(producto)
 
 
+# print("---Lista de productos---")
+# for j in productos:
+
+#     print(f"Producto: {j}")
+
+# lista_compras=[]
+# cantidad=int(input("Cantidad de productos: "))
+
+# for i in range(cantidad):
+#     producto=input(f"Ingrese el producto {i+1}: ").title()
+#     lista_compras.append(producto)
+
+# print("\n Tu lista de compras: ")
+# for producto in lista_compras:
+#     print(f"- {producto}") 
+# print("\n Gracias")       
 
 
+# fin=False
+# lista_productos=[]
 
+# while not fin:
+#     print("Ingrese los productos de la lista")
+#     producto=input("Producto: ").title()
+#     lista_productos.append(producto)
 
+#     print("Enter para continuar")
+#     fin=input(f"Para terminar (fin): ").lower()
 
+#     if fin == "fin":
+
+#         fin=True
+
+# print(f"---Lista de productos---")
+# for producto in lista_productos:
+#     print(f"- {producto}")
 
 
 
