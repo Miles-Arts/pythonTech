@@ -1122,32 +1122,50 @@ import random
 # personaje=str(input("El personaje vuela? (Sí/No) "))
 # personaje=["Capa", " No vuela", "Heroe"]
 
-print(f"🎭 Adivina el personaje misterioso 🎭\n ")
+# print(f"🎭 Adivina el personaje misterioso 🎭\n ")
 
-def entrada_valida(pregunta, opciones):
-    while True:
-        respuesta = input(pregunta).strip().lower()
-        if respuesta in opciones:
-            return respuesta
-        print("Opción inválida. Intenta de nuevo!")    
+# def entrada_valida(pregunta, opciones):
+#     while True:
+#         respuesta = input(pregunta).strip().lower()
+#         if respuesta in opciones:
+#             return respuesta
+#         print("Opción inválida. Intenta de nuevo!")    
 
-capa=entrada_valida(f"¿Usa capa? (Sí/No): ", ["sí", "no"] )
-vuela=entrada_valida(f"¿Puede volar? (Sí/No): ", ["sí", "no"])
-tipo=entrada_valida(f"¿Es un héroe o un villano? (Héroe/Villano): ", ["héroe", "villano"])
+# capa=entrada_valida(f"¿Usa capa? (Sí/No): ", ["sí", "no"] )
+# vuela=entrada_valida(f"¿Puede volar? (Sí/No): ", ["sí", "no"])
+# tipo=entrada_valida(f"¿Es un héroe o un villano? (Héroe/Villano): ", ["héroe", "villano"])
 
-if capa == "sí" and vuela == "sí" and tipo == "héroe":
-    print("Tu personaje podria ser Superman!")
-elif capa == "sí" and vuela == "no" and tipo == "héroe":
-    print("Tu personaje podría ser Batman!")
-elif capa == "sí" and vuela == "sí" and tipo == "villano":
-    print("Tu personaje podría ser Drácula!")
-elif capa == "no" and vuela == "sí" and tipo == "héroe":
-    print("tu personaje podría ser Iron Man")    
-elif capa == "sí" and tipo == "villano":
-    print("Tu personaje podria ser Guasón")          
-else: 
-    print("no conozco ese personaje... Intentalo de nuevo!")
+# if capa == "sí" and vuela == "sí" and tipo == "héroe":
+#     print("Tu personaje podria ser Superman!")
+# elif capa == "sí" and vuela == "no" and tipo == "héroe":
+#     print("Tu personaje podría ser Batman!")
+# elif capa == "sí" and vuela == "sí" and tipo == "villano":
+#     print("Tu personaje podría ser Drácula!")
+# elif capa == "no" and vuela == "sí" and tipo == "héroe":
+#     print("tu personaje podría ser Iron Man")    
+# elif capa == "sí" and tipo == "villano":
+#     print("Tu personaje podria ser Guasón")          
+# else: 
+#     print("no conozco ese personaje... Intentalo de nuevo!")
 
+
+
+#Lista Productos
+
+cantidad=int(input("¿cuántos productos desea añadir: "))
+productos=[]
+
+for i in range(cantidad):
+    print(f"Producto número {i+1}")
+    producto=input("Escribe el nombre del producto: ").title()
+
+    productos.append(producto)
+
+
+print("---Lista de productos---")
+for j in productos:
+
+    print(f"Producto: {j}")
 
 
 
