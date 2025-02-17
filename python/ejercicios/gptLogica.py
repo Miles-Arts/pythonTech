@@ -1325,38 +1325,74 @@ import random
 
 print(f"\n---Cajero Automático---\n")
 pin=1234
-saldo=20
+saldo=float(200)
 retiro=0
 nuevo_saldo=0
 
 pin_cuenta=int(input("Ingrese el pin: "))
+
+
+def consultar_saldo():
+    print(f"Saldo: ${saldo}")
+    return
+
+def retirar_dinero():
+    retiro=float(input("Cantidad a retirar: $ "))
+    saldo =- retiro   
+    return saldo
+
+def depositar_dinero(saldo):
+    nuevo_saldo=float(input("Ingrese la cantidad a depositar: $"))
+    saldo += nuevo_saldo
+    return saldo   
+
+def salir():
+    mensaje= print("Vuelva pronto")
+    return mensaje
 
 for i in range(1):
     if pin == pin_cuenta:
         print("Pin correcto!")
         print(f"El Saldo de la cuenta es: {saldo}")
 
+        def menu():
+            while True:
+                print(f"\n---Menú---")
+                print(f"1 - Consultar Saldo: ")
+                print(f"2 - Retirar dinero")
+                print(f"3 - Depositar dinero")
+                print(f"4 - Salir")
+
+                opcion=input("Elige una opción:")
+
+                if opcion.isdigit():
+                    opcion=int(opcion)
+
+                    match opcion:
+                        case 1:
+                            consultar_saldo()
+                        case 2:
+                            retirar_dinero()
+                        case 3:
+                            depositar_dinero(saldo)
+                        case 4:
+                            salir()
+                            break     
+                        case _:
+                            print("Opción inválida vuelva pronto.")
+            else:
+                print("Ingrese un numero válido")        
+
     elif pin != pin_cuenta:
         for i in range(3):
             print(f"Intento {i+1}")
             print("El PIN es incorrecto: ingrese nuevamente")
 
-def consultar_saldo(saldo):
-    print(f"Saldo: ${saldo}")
-    return
+menu()
 
-def retirar_dinero(saldo):
-    saldo =- retiro   
-    return saldo
-
-def depositar_dinero(saldo):
-    saldo += nuevo_saldo
-    return saldo   
-            
-def menu():
 
     
-    pass
+    
 
 
 
