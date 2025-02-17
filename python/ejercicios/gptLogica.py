@@ -1321,6 +1321,43 @@ import random
 # print(f"\nTotal a pagar: ${total:.2f}")
 # print("\n---Gracias por su compra---")        
 
+# Cajero automatico
+
+print(f"\n---Cajero Automático---\n")
+pin=1234
+saldo=20
+retiro=0
+nuevo_saldo=0
+
+pin_cuenta=int(input("Ingrese el pin: "))
+
+for i in range(1):
+    if pin == pin_cuenta:
+        print("Pin correcto!")
+        print(f"El Saldo de la cuenta es: {saldo}")
+
+    elif pin != pin_cuenta:
+        for i in range(3):
+            print(f"Intento {i+1}")
+            print("El PIN es incorrecto: ingrese nuevamente")
+
+def consultar_saldo(saldo):
+    print(f"Saldo: ${saldo}")
+    return
+
+def retirar_dinero(saldo):
+    saldo =- retiro   
+    return saldo
+
+def depositar_dinero(saldo):
+    saldo += nuevo_saldo
+    return saldo   
+            
+def menu():
+
+    
+    pass
+
 
 
 
