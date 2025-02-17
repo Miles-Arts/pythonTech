@@ -1299,27 +1299,27 @@ import random
 # print("\n---Gracias por su compra---")
 
 
-print("\n---Restaurante Inteligente---")
-platos=int(input("¿Cuántos platos ordenó?: "))
-precios=[]
+# print("\n---Restaurante Inteligente---")
+# platos=int(input("¿Cuántos platos ordenó?: "))
+# precios=[]
 
-for i in range(platos):
-    precio=float(input(f"Precio del plato {i+1}: $"))
-    precios.append(precio)
+# for i in range(platos):
+#     precio=float(input(f"Precio del plato {i+1}: $"))
+#     precios.append(precio)
 
-total=sum(precios)
+# total=sum(precios)
 
-print("\n---Total a pagar---\n")
+# print("\n---Total a pagar---\n")
 
-if total < 50:
-    print(f"Menos de $50. \nCliente Económico.")
-elif 50 <= total <= 150:
-    print(f"Entre $50 y $150. \nCliente Estándar.")
-else:
-    print(f"Más de $150. \nCliente VIP.")    
+# if total < 50:
+#     print(f"Menos de $50. \nCliente Económico.")
+# elif 50 <= total <= 150:
+#     print(f"Entre $50 y $150. \nCliente Estándar.")
+# else:
+#     print(f"Más de $150. \nCliente VIP.")    
 
-print(f"\nTotal a pagar: ${total:.2f}")
-print("\n---Gracias por su compra---")        
+# print(f"\nTotal a pagar: ${total:.2f}")
+# print("\n---Gracias por su compra---")        
 
 
 
