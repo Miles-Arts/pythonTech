@@ -1434,17 +1434,17 @@ def menu():
         print(f"3 Depositar dinero")
         print(f"4 salir")
 
-        opcion=int(input("Elige una opción: "))
+        opcion=input("Elige una opción: ")
 
         if opcion.isdigit():
             opcion=int(opcion)
 
             if opcion==1:
-                consultar_saldo
+                consultar_saldo()
             elif opcion==2:
-                retitar_dinero
+                retitar_dinero()
             elif opcion==3:
-                depositar_dinero
+                depositar_dinero()
             elif opcion==4:
                 print("Gracias por usar el cajero. \nHasta Pronto!")  
             else:
@@ -1456,7 +1456,7 @@ for intento in range(intentos):
     pin_ingresado=str(input("Ingrese su PIN: "))
 
     if pin_ingresado==PIN_CORRECTO:
-        print("Acceso pemritido.")
+        print("Acceso permitido.")
         menu()
         break
     else:
