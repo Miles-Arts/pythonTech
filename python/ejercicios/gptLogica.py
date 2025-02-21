@@ -1391,13 +1391,79 @@ import random
 
 # menu()
 
-
+print("\n--Cajero automático---")
     
-    
+PIN_CORRECTO="1234"
+saldo=2000.0
+intentos=3
+
+def consultar_saldo():
+    # print("---Muestra el saldo actual---")
+    print(f"Saldo disponible: ${saldo:.2f}")
+
+def retitar_dinero():
+    global saldo
+    retirar = float(input("Ingrese la catidad a retirar: "))
+
+    if retirar > saldo:
+        print("Fondos Insuficientes!")
+    elif retirar <= 0:
+        print("Monto inválido!")
+    else:
+        saldo -= retirar
+        print(f"Retiro exitoso, Saldo actudal: {saldo:.2f}")         
 
 
+def depositar_dinero():
+    # print("Retirara dinero si hay saldo suficiente")   
+    global saldo
+    deposito = float(input("Ingrese la cantidad a depositar: "))
 
+    if deposito <= 0:
+        print("Monto inválido")
+    else:
+        saldo += deposito
+        print(f"Deposito exitoso. Saldo actual: ${saldo:.2f}")    
 
+def menu():
+
+    while True:
+        print(f"\n --- Menú ---")
+        print(f"1 Consultar Saldo")
+        print(f"2 Retirar dinero")
+        print(f"3 Depositar dinero")
+        print(f"4 salir")
+
+        opcion=int(input("Elige una opción: "))
+
+        if opcion.isdigit():
+            opcion=int(opcion)
+
+            if opcion==1:
+                consultar_saldo
+            elif opcion==2:
+                retitar_dinero
+            elif opcion==3:
+                depositar_dinero
+            elif opcion==4:
+                print("Gracias por usar el cajero. \nHasta Pronto!")  
+            else:
+                print("Opción inválida!")
+        else:
+            print("Ingrese un número válido")                      
+
+for intento in range(intentos):
+    pin_ingresado=str(input("Ingrese su PIN: "))
+
+    if pin_ingresado==PIN_CORRECTO:
+        print("Acceso pemritido.")
+        menu()
+        break
+    else:
+        print(f"Pin incorrecto. \nIntentos restantes: {intentos - intento - 1}")
+
+else:
+    print("Cueta bloqueada por seguridad!")
 
 
 
