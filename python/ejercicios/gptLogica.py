@@ -1615,9 +1615,60 @@ import random
 
 
 
-print("hola")
+# print("hola")
 
 
+# PROMEDIO
+
+# print("Ingrese 3 numeros")
+# lista=3
+# numeros=()
+
+# for i in range(lista):
+#     print(f"Ingrese el numero {i+1}")
+#     numero=input("Numero: ")
+
+#     if numero.isdigit():
+#         numero=int(numero)
+
+#         for j in numero:
+#             suma=sum(j)
+#             resultado = suma/lista
+
+#             print(f"El promedio de {j} es: {resultado}")
+
+#         else:
+#             print("error")  
+
+#     else:
+#         print("Ingrese un valor válido")         
+
+
+print("Ingresa 3 números")
+#Crea una lista vacia para almacenar los numeros
+numeros=[]
+
+#Solicita 3 numeros al usuario. 
+for i in range(3):
+
+    while True:
+        numero=input(f"Ingrese el número {i+1}: ")
+
+        #verifica que la entrada sea un números
+        if numero.isdigit():
+            numero=int(numero)
+            numeros.append(numero) #Agregar a la lista
+            break
+        else:
+            print("Error ingrese un número válido.")
+
+#Calcular la suma y el promedio
+suma=sum(numeros)
+promedio=suma/len(numeros)          
+
+#mostrar el resultado
+print(f"\nLa suma de los núemros es: {suma}")
+print(f"El promedio de los números es: {promedio:.2f}")
 
 
 
