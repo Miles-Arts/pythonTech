@@ -1516,7 +1516,10 @@ def menu():
             elif opcion == 3:
                 retirar_saldo()
             else:
-                print("Ingrese un nùmero vlido.")                
+                print("Ingrese un número válido.")   
+
+        else:
+            print("Ingrese un dato válido.")                         
       
 
 for i in random(intentos):
