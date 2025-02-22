@@ -1537,80 +1537,115 @@ import random
 #         print(f"intentelo nuevamente. \nIntentos Restantes {intentos - intentos - 1}")
 
 
-saldo=1000
-PIN_CORRECTO="1234"
-intentos=3
+# saldo=1000
+# PIN_CORRECTO="1234"
+# intentos=3
 
-def consultar_saldo():
-    print(f"Tu saldo actual es ${saldo:.2f}")
+# def consultar_saldo():
+#     print(f"Tu saldo actual es ${saldo:.2f}")
 
-def depositar_saldo():
-    global saldo
+# def depositar_saldo():
+#     global saldo
 
-    try:
-        consignar=float(input(f"Ingrese la cantidad a consignar: $"))
-        if consignar<=0:
-            print("Monto inválido. Dbe ser mayor que 0.")
-        else:
-            saldo+=consignar
-            print(f"Deposito exitoso. \nNuevo saldo: ${saldo:.2f}")    
+#     try:
+#         consignar=float(input(f"Ingrese la cantidad a consignar: $"))
+#         if consignar<=0:
+#             print("Monto inválido. Dbe ser mayor que 0.")
+#         else:
+#             saldo+=consignar
+#             print(f"Deposito exitoso. \nNuevo saldo: ${saldo:.2f}")    
 
-    except ValueError:
-        print("Ingrese un número válido.")        
+#     except ValueError:
+#         print("Ingrese un número válido.")        
 
-def retirar_saldo():
-    global saldo
+# def retirar_saldo():
+#     global saldo
 
-    try:
-        retirar=float(input("Ingrese la cantidad a retirar: $"))
-        if retirar<=0:
-            print("Monto inválido. Debe ser mayor que 0.")
-        elif retirar > saldo:
-            print("Saldo insuficiente.")
-        else:
-            saldo -= retirar
-            print(f"Retiro exitoso. Nuevo saldo: ${saldo}")      
-    except ValueError:
-        print("Ingrese un número válido.")          
+#     try:
+#         retirar=float(input("Ingrese la cantidad a retirar: $"))
+#         if retirar<=0:
+#             print("Monto inválido. Debe ser mayor que 0.")
+#         elif retirar > saldo:
+#             print("Saldo insuficiente.")
+#         else:
+#             saldo -= retirar
+#             print(f"Retiro exitoso. Nuevo saldo: ${saldo}")      
+#     except ValueError:
+#         print("Ingrese un número válido.")          
 
-def menu():
-    while True:
-        print("\n---Menú Cajero---")
-        print("1 - Consultar Saldo.")
-        print("2 - Depositar Dinero.")
-        print("3 - Retirar Dinero.")
-        print("4 - Salir.")
+# def menu():
+#     while True:
+#         print("\n---Menú Cajero---")
+#         print("1 - Consultar Saldo.")
+#         print("2 - Depositar Dinero.")
+#         print("3 - Retirar Dinero.")
+#         print("4 - Salir.")
 
-        opcion=input("Digita la opción: ")
+#         opcion=input("Digita la opción: ")
 
-        if opcion.isdigit():
-            opcion=int(opcion)
-            if opcion==1:
-                consultar_saldo()
-            elif opcion==2:
-                depositar_saldo()
-            elif opcion==3:
-                retirar_saldo()
-            elif opcion==4:
-                print("Gracias por utilizar nuestros cajeros.") 
-                break
-            else:
-                print("Ingrese un número válid.")           
-        else:
-            print("Ingrese un número válido.")
+#         if opcion.isdigit():
+#             opcion=int(opcion)
+#             if opcion==1:
+#                 consultar_saldo()
+#             elif opcion==2:
+#                 depositar_saldo()
+#             elif opcion==3:
+#                 retirar_saldo()
+#             elif opcion==4:
+#                 print("Gracias por utilizar nuestros cajeros.") 
+#                 break
+#             else:
+#                 print("Ingrese un número válid.")           
+#         else:
+#             print("Ingrese un número válido.")
 
-for i in range(intentos, 0, -1):
-    ingrese_pin=input("Ingrese tu PIN:")  
+# for i in range(intentos, 0, -1):
+#     ingrese_pin=input("Ingrese tu PIN:")  
 
-    if ingrese_pin==PIN_CORRECTO:
-        print("PIN correcto")
-        menu()
-        break
-    else: 
-        print(f"PIN incorrecto. Intentos restantes: {i-1}")
+#     if ingrese_pin==PIN_CORRECTO:
+#         print("PIN correcto")
+#         menu()
+#         break
+#     else: 
+#         print(f"PIN incorrecto. Intentos restantes: {i-1}")
 
-        if i-1==0:
-            print("Cuenta Bloqueada. \nDemasiado intentos fallidos")             
+#         if i-1==0:
+#             print("Cuenta Bloqueada. \nDemasiado intentos fallidos")             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
