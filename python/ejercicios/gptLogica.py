@@ -1401,7 +1401,7 @@ import random
 #     # print("---Muestra el saldo actual---")
 #     print(f"Saldo disponible: ${saldo:.2f}")
 
-# def retitar_dinero():
+# def retirar_dinero():
 #     global saldo
 #     retirar = float(input("Ingrese la catidad a retirar: "))
 
@@ -1442,7 +1442,7 @@ import random
 #             if opcion==1:
 #                 consultar_saldo()
 #             elif opcion==2:
-#                 retitar_dinero()
+#                 retirar_dinero()
 #             elif opcion==3:
 #                 depositar_dinero()
 #             elif opcion==4:
@@ -1467,6 +1467,67 @@ import random
 
 
 # 📌💰 Cajero Automático con global y if
+
+saldo=1000
+PIN_CORRECTO="1234"
+intentos=3
+
+def consultar_saldo():
+    # global saldo
+    print(f"El saldo d etu cuenta es: ${saldo:.2f}")
+
+def depositar_saldo():
+    global saldo   
+    consignar=float(input("Ingrese la cantidad a consignar: $"))
+
+    if consignar < 0 :
+        print("Monto inválido")
+    else:
+        saldo += consignar
+        print(f"Deposito exitoso. \nNuevo saldo: ${saldo:.2f}")   
+
+def retirar_saldo():
+    global saldo
+    retirar=float(input("Cantidad a retirar: $"))  
+
+    if retirar > saldo:
+        print("Saldo insuficiente")
+    else:
+        saldo += retirar
+        print(f"Retiro Exitoso. \nNuevo saldo {saldo:.2f}")    
+
+def menu():
+
+    while True:
+        print("---Menu Cajero---")
+        print("1 - Consultar Saldo.")          
+        print("2 - Depositar Saldo.")          
+        print("3 - Retirar Dinero.") 
+
+        opcion=input("Digita la opción: ")         
+
+        if opcion.isdigit():
+            opcion = int(opcion)
+
+            if opcion == 1:
+                consultar_saldo()
+            elif opcion == 2:
+                depositar_saldo()
+            elif opcion == 3:
+                retirar_saldo()
+            else:
+                print("Ingrese un nùmero vlido.")                
+      
+
+for i in random(intentos):
+    ingrese_pin=str(input("Ingrese PIN: "))
+
+    if ingrese_pin == PIN_CORRECTO:
+        print("Acceso permitido!")
+        menu()
+        break
+    else:
+        print(f"intentelo nuevamente. \nIntentos Restantes {intentos - intentos - 1}")
 
 
 
