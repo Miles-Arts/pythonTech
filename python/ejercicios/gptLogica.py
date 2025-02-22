@@ -1644,31 +1644,31 @@ import random
 #         print("Ingrese un valor válido")         
 
 
-print("Ingresa 3 números")
-#Crea una lista vacia para almacenar los numeros
-numeros=[]
+# print("Ingresa 3 números")
+# #Crea una lista vacia para almacenar los numeros
+# numeros=[]
 
-#Solicita 3 numeros al usuario. 
-for i in range(3):
+# #Solicita 3 numeros al usuario. 
+# for i in range(3):
 
-    while True:
-        numero=input(f"Ingrese el número {i+1}: ")
+#     while True:
+#         numero=input(f"Ingrese el número {i+1}: ")
 
-        #verifica que la entrada sea un números
-        if numero.isdigit():
-            numero=int(numero)
-            numeros.append(numero) #Agregar a la lista
-            break
-        else:
-            print("Error ingrese un número válido.")
+#         #verifica que la entrada sea un números
+#         if numero.isdigit():
+#             numero=int(numero)
+#             numeros.append(numero) #Agregar a la lista
+#             break
+#         else:
+#             print("Error ingrese un número válido.")
 
-#Calcular la suma y el promedio
-suma=sum(numeros)
-promedio=suma/len(numeros)          
+# #Calcular la suma y el promedio
+# suma=sum(numeros)
+# promedio=suma/len(numeros)          
 
-#mostrar el resultado
-print(f"\nLa suma de los núemros es: {suma}")
-print(f"El promedio de los números es: {promedio:.2f}")
+# #mostrar el resultado
+# print(f"\nLa suma de los núemros es: {suma}")
+# print(f"El promedio de los números es: {promedio:.2f}")
 
 
 
