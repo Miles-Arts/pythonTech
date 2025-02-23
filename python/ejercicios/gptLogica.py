@@ -1740,29 +1740,42 @@ import random
 # print(f"Números más  bajo: {mas_bajo}")
 
 
-metros=float(input("Ingresa la distancia en metros: "))
+# metros=float(input("Ingresa la distancia en metros: "))
 
-kilometros=1000
-centimetros=100
-milimetros=1000
+# kilometros=1000
+# centimetros=100
+# milimetros=1000
 
-kilometros= metros / kilometros
-centimetros= metros * centimetros
-milimetros= metros * milimetros
+# kilometros= metros / kilometros
+# centimetros= metros * centimetros
+# milimetros= metros * milimetros
 
-print(f"\nConvertidor de MT \n")
-print(f"{metros} mt son: {kilometros:.2f} kilometros.")
-print(f"{metros} mt son: {centimetros} centímetros.")
-print(f"{metros} mt son: {milimetros} milimetros.")
-
-
+# print(f"\nConvertidor de MT \n")
+# print(f"{metros} mt son: {kilometros:.2f} kilometros.")
+# print(f"{metros} mt son: {centimetros} centímetros.")
+# print(f"{metros} mt son: {milimetros} milimetros.")
 
 
+print("---Converso de Unidades de Longitud---")
 
+while True:
 
+    metros=input("Ingrese la distancia en metros: ")
 
+    if metros.replace(".","",1).isdigit():
+        metros=float(metros)
+        break
+    else:
+        print("Error: Ingrese un número válido.")
 
+kilometros= metros / 1000
+centimetros= metros * 100
+milimetros= metros * 1000
 
+print(f"\n---Convertidor MT---\n")
+print(f"{metros} mt son: {kilometros:.2f} kilómetros.")
+print(f"{metros} mt son: {centimetros:.2f} centímetros.")
+print(f"{metros} mt son: {milimetros:.2f} milímetros.")
 
 
 
