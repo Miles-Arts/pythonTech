@@ -1902,11 +1902,13 @@ import random
 
 # print(f"La persona es, {mayor_edad}")
 
+print("Ingrese dos numeros de 2 digitos del (00 - 99)")
+numero_a=int(input("Primer número: "))
+numero_b=int(input("Segundo numero:"))
 
+mayor= numero_a if numero_a > numero_b  else numero_b
 
-
-
-
+print(f"El numero mayor es: {mayor}")
 
 
 
