@@ -1853,45 +1853,54 @@ import random
 #     print("Debes repetir lña materia.")    
 
 
-print("--- Sistema de Notas ---")
-notas=[]
+# print("--- Sistema de Notas ---")
+# notas=[]
 
-#Pedir 4 notas
-for i in range(4):
-    while True:
-        nota=input("Ingrese la nota {i+1} (0 - 5): ")
+# #Pedir 4 notas
+# for i in range(4):
+#     while True:
+#         nota=input(f"Ingrese la nota {i+1} (0 - 5): ")
 
-        if nota.replace(".","",1).isdigit():
-            nota=float(nota)
+#         if nota.replace(".","",1).isdigit():
+#             nota=float(nota)
 
-            if 0 <= nota <= 5:
-                notas.append(nota)
-                break
-            else:
-                print("Error: La nota debe estar entre 0 y 5")
-        else:
-            print("Error. Ingrese un número válido.")        
+#             if 0 <= nota <= 5:
+#                 notas.append(nota)
+#                 break
+#             else:
+#                 print("Error: La nota debe estar entre 0 y 5")
+#         else:
+#             print("Error. Ingrese un número válido.")        
 
-#calcular promedio
-promedio=sum(notas)/len(notas)
+# #calcular promedio
+# promedio=sum(notas)/len(notas)
 
-#Calcular nota alya y nota baja
-nota_alta=max(notas)
-nota_baja=min(notas)
+# #Calcular nota alya y nota baja
+# nota_alta=max(notas)
+# nota_baja=min(notas)
 
-#Determinar si aprueba o no
-estado="Aprobado" if promedio >= 3.0 else "Repropbado"
+# #Determinar si aprueba o no
+# estado="Aprobado" if promedio >= 3.0 else "Repropbado"
 
-#Mostrar Resultados
-print("\n--- Resultados ---")
-print(f"Promedio: {promedio:.2f}")
-print(f"Nota más alta: {nota_alta}")
-print(f"Nota más baja: {nota_baja}")
-print(f"Estado: {estado}")
-
-
+# #Mostrar Resultados
+# print("\n--- Resultados ---")
+# print(f"Promedio: {promedio:.2f}")
+# print(f"Nota más alta: {nota_alta}")
+# print(f"Nota más baja: {nota_baja}")
+# print(f"Estado: {estado}")
 
 
+# numero=int(input("Escribe un dumero par entre 0 y 20: "))
+
+# par= "Es par" if numero % 2 == 0 else "Es impar"
+
+# print(f"El numero es: {par}")
+
+# edad=int(input("Ingrese su edad: "))
+
+# mayor_edad="mayor de edad" if edad >=18 else "menor de edad"
+
+# print(f"La persona es, {mayor_edad}")
 
 
 
