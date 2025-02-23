@@ -1923,17 +1923,26 @@ import random
 
 # print(f"El numero es: {cuadrado(numero)}")
 
-numero_b=int(input("Número a: "))
-numero_c=int(input("Número b: "))
+# numero_b=int(input("Número a: "))
+# numero_c=int(input("Número b: "))
 
-resultado=lambda a, b: a if a > b else b
+# resultado=lambda a, b: a if a > b else b
 
-print(f"El número mayor es: {resultado(numero_b,numero_c)}")
+# print(f"El número mayor es: {resultado(numero_b,numero_c)}")
 
+# (0°C × 9/5) + 32 = 32°F
 
+# grados=float(input("Convertidor de Celsius a Fahrenheit: "))
 
+grados={5,88,35}
 
+celcius=0
+fahrenheit=32
 
+resultado=lambda a: (a * 9/5) + 32 
+# resultado_a=lambda a: for a in grados 
+
+print(f"{grados}° Celsius son {resultado(grados):.0f}° Fahrenheit.")
 
 
 
