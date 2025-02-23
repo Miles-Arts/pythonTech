@@ -1670,19 +1670,90 @@ import random
 # print(f"\nLa suma de los núemros es: {suma}")
 # print(f"El promedio de los números es: {promedio:.2f}")
 
+# num1=float(input("Ingresa el primer nùmero: "))
+# num2=float(input("Ingresa el segundo nùmero: "))
+# num3=float(input("Ingresa el tercer nùmero: "))
+
+# promedio=(num1 + num2 + num3 ) / 3
+
+# print(f"El promedio de los números ingresados es: {promedio:.2f}")
 
 
+# print("---Promedio de Números---")
+# numeros=[]
+
+# for i in range(3):
+#     print(f"Ingresa el números {i+1}")
+#     numero=input("Numero: ")
+
+#     while True:
+#         if numero.isdigit():
+#             numero=int(numero)
+#             numeros.append(numero)
+#             break
+#         else:
+#             print("Ingrese un número válido")
+#     else:
+#         print("Ingresa un dato válido")        
 
 
+# suma=sum(numeros)
+# promedio=suma/len(numeros) 
+
+# mas_alto=max(numeros, key=lambda m: m in numeros)    
+# mas_bajo=min(numeros, key=lambda m: m in numeros)   
 
 
+# print("\n---Promedio---")
+# print(f"El promedio es: {promedio:.2f}")
+# print(f"Número más bajo: {mas_bajo}")
+# print(f"Número más alto: {mas_alto}")
 
 
+# print("---Promedio Números---")
+# numeros=[]
+
+# #Solicitar 3 numeros al usuario
+# for i in range(3):
+#     while True:
+#         numero=input(f"Ingresa el número {i+1}: ")
+
+#         if numero.isdigit():
+#             numero=int(numero)
+#             numeros.append(numero)
+#             break
+#         else:
+#             print("Error: Ingrese un número válido.")
+
+# # Calcular la suma y el promedio
+# suma=sum(numeros)
+# promedio=suma/len(numeros)
+
+# # Encontrar el número más alto y el más bajo
+# mas_alto=max(numeros)
+# mas_bajo=min(numeros)
+
+# # Mostrar resultados
+# print(f"\n---Resultados---")
+# print(f"El promedio es: {promedio:.2f}")
+# print(f"Números más  alto: {mas_alto}")
+# print(f"Números más  bajo: {mas_bajo}")
 
 
+metros=float(input("Ingresa la distancia en metros: "))
 
+kilometros=1000
+centimetros=100
+milimetros=1000
 
+kilometros= metros / kilometros
+centimetros= metros * centimetros
+milimetros= metros * milimetros
 
+print(f"\nConvertidor de MT \n")
+print(f"{metros} mt son: {kilometros:.2f} kilometros.")
+print(f"{metros} mt son: {centimetros} centímetros.")
+print(f"{metros} mt son: {milimetros} milimetros.")
 
 
 
