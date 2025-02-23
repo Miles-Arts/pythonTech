@@ -1811,46 +1811,111 @@ import random
 #     print(f"Estudiante Reprobado. \nPromedio: {promedio:.2f}") 
 #     print("Debes repetir la materia!")   
 
-print("\n---Notas de Estudiantes---\n")
+# print("\n---Notas de Estudiantes---\n")
+# notas=[]
+
+# #Pedir 4 notas
+# for i in range(4):
+#     while True:
+#         nota=input(f"\nNota {i+1}: ")
+
+#         #validas que la entrada sea un número
+#         if nota.replace(".","",1).isdigit():
+#             nota=float(nota)
+
+#             if 0.0 <= nota <= 5.0:
+#                 notas.append(nota)
+#                 break
+#             else:
+#                 print("\nError: La nota debe estar entre .0. y 5.0\n")
+#         else:
+#             print("\nError: Ingrese un número válido\n")
+
+# #Cálculos de notas
+
+# nota_alta=max(notas)
+# nota_baja=min(notas)
+# promedio=sum(notas)/len(notas)
+
+# #Mostrar resultado
+# print(f"\n--- Nota Final ---")
+# print(f"Promedio del estudiante: {promedio:.2f}")
+# print(f"Nota más alta: {nota_alta:.2f}")
+# print(f"Nota más baja: {nota_baja:.2f}")
+
+# #evaluacion de aprobación o reprobación
+
+# if promedio >= 3.0:
+#     print("\nEstudiante Aprobado ")
+#     print("Felicidades, pasaste!")
+# else:
+#     print("\nEstudiante Reprobado")    
+#     print("Debes repetir lña materia.")    
+
+
+print("--- Sistema de Notas ---")
 notas=[]
 
 #Pedir 4 notas
 for i in range(4):
     while True:
-        nota=input(f"\nNota {i+1}: ")
+        nota=input("Ingrese la nota {i+1} (0 - 5): ")
 
-        #validas que la entrada sea un número
         if nota.replace(".","",1).isdigit():
             nota=float(nota)
 
-            if 0.0 <= nota <= 5.0:
+            if 0 <= nota <= 5:
                 notas.append(nota)
                 break
             else:
-                print("\nError: La nota debe estar entre .0. y 5.0\n")
+                print("Error: La nota debe estar entre 0 y 5")
         else:
-            print("\nError: Ingrese un número válido\n")
+            print("Error. Ingrese un número válido.")        
 
-#Cálculos de notas
-
-nota_alta=max(notas)
-nota_baja=min(notas)
+#calcular promedio
 promedio=sum(notas)/len(notas)
 
-#Mostrar resultado
-print(f"\n--- Nota Final ---")
-print(f"Promedio del estudiante: {promedio:.2f}")
-print(f"Nota más alta: {nota_alta:.2f}")
-print(f"Nota más baja: {nota_baja:.2f}")
+#Calcular nota alya y nota baja
+nota_alta=max(notas)
+nota_baja=min(notas)
 
-#evaluacion de aprobación o reprobación
+#Determinar si aprueba o no
+estado="Aprobado" if promedio >= 3.0 else "Repropbado"
 
-if promedio >= 3.0:
-    print("\nEstudiante Aprobado ")
-    print("Felicidades, pasaste!")
-else:
-    print("\nEstudiante Reprobado")    
-    print("Debes repetir lña materia.")    
+#Mostrar Resultados
+print("\n--- Resultados ---")
+print(f"Promedio: {promedio:.2f}")
+print(f"Nota más alta: {nota_alta}")
+print(f"Nota más baja: {nota_baja}")
+print(f"Estado: {estado}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
