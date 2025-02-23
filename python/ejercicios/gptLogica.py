@@ -1902,24 +1902,33 @@ import random
 
 # print(f"La persona es, {mayor_edad}")
 
-print("Ingrese dos numeros de 2 digitos del (00 - 99)")
-numero_a=int(input("Primer número: "))
-numero_b=int(input("Segundo numero:"))
+# print("Ingrese dos numeros de 2 digitos del (00 - 99)")
+# numero_a=int(input("Primer número: "))
+# numero_b=int(input("Segundo numero:"))
 
-mayor= numero_a if numero_a > numero_b  else numero_b
+# mayor= numero_a if numero_a > numero_b  else numero_b
 
-print(f"El numero mayor es: {mayor}")
-
-
+# print(f"El numero mayor es: {mayor}")
 
 
+# numero=int(input("Ingrese un numero: "))
 
+# resultado= "par" if numero % 2 == 0 else "impar"
 
+# print(f"El numero {numero} es {resultado}")
 
+# numero=int(input("Ingrese un numero: "))
 
+# cuadrado=lambda x: x ** 2
 
+# print(f"El numero es: {cuadrado(numero)}")
 
+numero_b=int(input("Número a: "))
+numero_c=int(input("Número b: "))
 
+resultado=lambda a, b: a if a > b else b
+
+print(f"El número mayor es: {resultado(numero_b,numero_c)}")
 
 
 
