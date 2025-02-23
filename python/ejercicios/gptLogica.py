@@ -1756,29 +1756,60 @@ import random
 # print(f"{metros} mt son: {milimetros} milimetros.")
 
 
-print("---Converso de Unidades de Longitud---")
+# print("---Converso de Unidades de Longitud---")
 
-while True:
+# while True:
 
-    metros=input("Ingrese la distancia en metros: ")
+#     metros=input("Ingrese la distancia en metros: ")
 
-    if metros.replace(".","",1).isdigit():
-        metros=float(metros)
-        break
-    else:
-        print("Error: Ingrese un número válido.")
+#     if metros.replace(".","",1).isdigit():
+#         metros=float(metros)
+#         break
+#     else:
+#         print("Error: Ingrese un número válido.")
 
-kilometros= metros / 1000
-centimetros= metros * 100
-milimetros= metros * 1000
+# kilometros= metros / 1000
+# centimetros= metros * 100
+# milimetros= metros * 1000
 
-print(f"\n---Convertidor MT---\n")
-print(f"{metros} mt son: {kilometros:.2f} kilómetros.")
-print(f"{metros} mt son: {centimetros:.2f} centímetros.")
-print(f"{metros} mt son: {milimetros:.2f} milímetros.")
+# print(f"\n---Convertidor MT---\n")
+# print(f"{metros} mt son: {kilometros:.2f} kilómetros.")
+# print(f"{metros} mt son: {centimetros:.2f} centímetros.")
+# print(f"{metros} mt son: {milimetros:.2f} milímetros.")
 
 
+print("\n---Notas de Estudiantes---\n")
+notas=[]
 
+for i in range(4):
+    while True:
+        print(f"\nNota {i+1}.")
+        nota=float(input("Introduce la nota: "))
+
+        if 0.0 <= nota <= 5.0:
+            nota=float(nota)
+            notas.append(nota)
+            break
+        else:
+            print("\nIngrese un número entre 0.0 y 5.0\n")
+
+nota_alta=max(notas)            
+nota_baja=min(notas)
+
+sumas=sum(notas)
+promedio=sumas/len(notas)
+
+print("\n---Nota Final---")
+print(f"Estudiante con promedio: {promedio:.2f}")
+print(f"Nota mas alta: {nota_alta:.2f}")
+print(f"Nota más baja: {nota_baja:.2f}")
+
+if  promedio >= 3.0:
+    print(f"Estudiante Aprobado. \nPromedio: {promedio:.2f}") 
+    print("Felicidades Pasaste!")
+else:
+    print(f"Estudiante Reprobado. \nPromedio: {promedio:.2f}") 
+    print("Debes repetir la materia!")   
 
 
 
