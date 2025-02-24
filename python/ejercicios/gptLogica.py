@@ -1970,24 +1970,28 @@ import random
 # resultado=list(map(lambda g: (g-32) * 5/9, fahrenheit))
 # print(resultado)
 
+# nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
+
+# resultado=list(map(lambda g: "Largo" if len(g) >= 5 else "Corto",  nombres))
+
+# print(resultado)
+
+# nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
+
+# resultado=list(map(lambda g: "Muy largo" if len(g) >7  "Largo" elif len(g) >=5 else "Corto", nombres ))
+
+# print(resultado)
+
+# nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
+
+# resultado=list(map(lambda g: "Muy Largo" if len(g) > 7 else "Largo" elif len(g) >= 5 else "Corto", nombres))
+
+# # resultado = list(map(lambda g: "Muy largo" if len(g) > 7  "Largo" elif len(g) >= 5 else "Corto", nombres))
+
 nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
 
-resultado=list(map(lambda g: "Largo" if len(g) >= 5 else "Corto",  nombres))
-
+resultado=list(map(lambda g: "Muy Largo" if len(g) > 7 else ("Largo" if len(g) >= 5 else "Corto"), nombres))
 print(resultado)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
