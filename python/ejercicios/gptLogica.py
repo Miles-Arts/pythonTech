@@ -1934,15 +1934,61 @@ import random
 
 # grados=float(input("Convertidor de Celsius a Fahrenheit: "))
 
-grados={5,88,35}
+# grados={5,88,35}
 
-celcius=0
-fahrenheit=32
+# celcius=0
+# fahrenheit=32
 
-resultado=lambda a: (a * 9/5) + 32 
-# resultado_a=lambda a: for a in grados 
+# resultado=lambda a: (a * 9/5) + 32 
+# # resultado_a=lambda a: for a in grados 
 
-print(f"{grados}° Celsius son {resultado(grados):.0f}° Fahrenheit.")
+# print(f"{grados}° Celsius son {resultado(grados):.0f}° Fahrenheit.")
+
+
+# grados={5,35,8, 23}
+
+# grados_lista=list(grados) #List convierte set, tupla, string a una lista
+
+# clasificacion=list(map(lambda g: "Caliente" if g >= 22 else "Frío", grados_lista ))
+# print(clasificacion)
+
+# clasificacion_1=["Caliente" if g >= 22 else "Frio" for g in grados_lista]
+# print(clasificacion_1)
+# numeros=[-3, 0, 7, -1, 8]
+# numeros_lista=list(numeros)
+# clasificiacion=list(map(lambda g: "Positivo" if g >= 0 else "Negativo", numeros_lista))
+# print(clasificiacion)
+
+# (0°C × 9/5) + 32 = 32°F
+# clasificacion=list(map(lambda g: "Caliente" if g >= 22 else "Frío", grados_lista ))
+# # 
+# fahrenheit = [32, 212, 98.6, 50]
+# fahrenheit_lista =list(fahrenheit)
+# resultado=list(map(lambda g: fahrenheit_lista(0 * 9/5 ) + 32, fahrenheit_lista))
+# print(resultado)
+# fahrenheit = [32, 212, 98.6, 50]
+# resultado=list(map(lambda g: (g-32) * 5/9, fahrenheit))
+# print(resultado)
+
+nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
+
+resultado=list(map(lambda g: "Largo" if len(g) >= 5 else "Corto",  nombres))
+
+print(resultado)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
