@@ -2054,34 +2054,153 @@ import random
 # print(f"Gracias por jugar")
 
 
-def jugar():
-    numero_secreto=random.randint(1,10)
-    intentos=3
+# def jugar():
+#     numero_secreto=random.randint(1,10)
+#     intentos=3
 
-    print(f"\nBienvenido al juego de Adivina el número!\n")
-    print(f"Tiene {intentos} Intentos")
+#     print(f"\nBienvenido al juego de Adivina el número!\n")
+#     print(f"Tiene {intentos} Intentos")
 
-    for i in range(intentos):
-        while True:
-            intento=input(f"Intento {i+1} Ingresa un número: ")
+#     for i in range(intentos):
+#         while True:
+#             intento=input(f"Intento {i+1} Ingresa un número: ")
 
-            if intento.isdigit():
-                intento=int(intento)
-                break
-            else:
-                print("Error: Ingresaun número válido.")
+#             if intento.isdigit():
+#                 intento=int(intento)
+#                 break
+#             else:
+#                 print("Error: Ingresaun número válido.")
 
-        if intento == numero_secreto:
-            print(f"\nFelicidades Adivinaste!\nEl número secreto es {numero_secreto}")
-            return
-        elif intento < numero_secreto:
-            print("El número secreto es mayor.")
-        else:
-            print("El número secreto es menor.")    
+#         if intento == numero_secreto:
+#             print(f"\nFelicidades Adivinaste!\nEl número secreto es {numero_secreto}")
+#             return
+#         elif intento < numero_secreto:
+#             print("El número secreto es mayor.")
+#         else:
+#             print("El número secreto es menor.")    
 
-    print(f"\nLo siento, has agotado tus intentos. \nEl número secreto es: {numero_secreto}")        
+#     print(f"\nLo siento, has agotado tus intentos. \nEl número secreto es: {numero_secreto}")        
 
-jugar()
+# jugar()
+
+
+# print("---Calculadora de Números Primos---")
+
+# #resultado= "par" if numero % 2 == 0 else "impar" 
+ 
+# def datos():
+#     entero=input("Ingrese un numeros entero positivo: ")
+#     return entero
+
+# def calcular(numero):
+#     resultado = "par" if numero % 2 == 0 else "impar"
+#     return resultado
+
+
+# def numeros_primos():
+#     salida = print(f"El numero es {calcular(datos())}")
+#     return salida
+
+# datos()
+
+
+def es_primo(numero):
+    """Función que verifica si un número es primo."""
+    if numero < 2:
+        return False #Numeros menores a 2 no son primos
+    
+    for i in range(2, int(numero ** 0.5) + 1): #probar Divisores
+        if numero % i == 0:
+            return False #Si es divisible, no es primo
+    return True   # Si no se encontró divisores, es primo    
+
+#Pedir numero al USER
+while True:
+    num=input("Ingrese un numero entero positivo")
+
+    if num.isdigit(): # Verifica que sea un número válido
+        num=int(num)
+        break
+    else:
+        print("Error: Ingrese un úmero entero válido.")
+
+# Llamar a la función y mostrar el resultado
+if es_primo(num):
+    print(f"El número {num} es primo.") 
+else:
+    print(f"El número {num} NO es primo.")                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
