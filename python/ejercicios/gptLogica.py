@@ -2015,8 +2015,17 @@ import random
 
 # print(f"\nNúmero de vocales: {contador}")        
 
+print("---Contador Vocales---")
 
+palabra=input("Ingrese palabra y/o frase: ").lower()
+vocales=["a","e","i","o","u","á","é","í","ó","ú","ü"]
+total_vocales=0
 
+for letra in palabra:
+    if letra in vocales:
+        total_vocales+=1
+
+print(f"\nLa palabra {palabra.upper()} \nTotal {total_vocales} vocales ")
 
 
 
