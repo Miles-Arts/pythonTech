@@ -1988,10 +1988,10 @@ import random
 
 # # resultado = list(map(lambda g: "Muy largo" if len(g) > 7  "Largo" elif len(g) >= 5 else "Corto", nombres))
 
-nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
+# nombres = ["Ana", "Sebastián", "Luis", "Valeria", "Paco"]
 
-resultado=list(map(lambda g: "Muy Largo" if len(g) > 7 else ("Largo" if len(g) >= 5 else "Corto"), nombres))
-print(resultado)
+# resultado=list(map(lambda g: "Muy Largo" if len(g) > 7 else ("Largo" if len(g) >= 5 else "Corto"), nombres))
+# print(resultado)
 
 
 
