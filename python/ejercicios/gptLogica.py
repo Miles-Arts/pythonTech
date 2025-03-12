@@ -1993,17 +1993,27 @@ import random
 # resultado=list(map(lambda g: "Muy Largo" if len(g) > 7 else ("Largo" if len(g) >= 5 else "Corto"), nombres))
 # print(resultado)
 
-palabra=str(input("Ingrese una palabra: "))
+# palabra=str(input("Ingrese una palabra: "))
 
-palabras=["a","e","i","o","u"]
+# palabras=["a","e","i","o","u"]
 
-if palabra in palabras:
-    total_vocales=len(palabras)
-    print(f"Hay {total_vocales} vocales")
-else:
-    print(f"NN")    
+# if palabra in palabras:
+#     total_vocales=len(palabras)
+#     print(f"Hay {total_vocales} vocales")
+# else:
+#     print(f"NN")    
 
+# print("---Contador de Vocales---")
 
+# texto=input("Ingrese una palabra: ").lower()
+# vocales="aeiou"
+# contador=0
+
+# for letra in texto:
+#     if letra in vocales:
+#         contador+=1
+
+# print(f"\nNúmero de vocales: {contador}")        
 
 
 
