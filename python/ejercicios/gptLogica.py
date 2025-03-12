@@ -2015,30 +2015,73 @@ import random
 
 # print(f"\nNúmero de vocales: {contador}")        
 
-print("---Contador Vocales---")
+# print("---Contador Vocales---")
 
-palabra=input("Ingrese palabra y/o frase: ").lower()
-vocales=["a","e","i","o","u","á","é","í","ó","ú","ü"]
-total_vocales=0
+# palabra=input("Ingrese palabra y/o frase: ").lower()
+# vocales=["a","e","i","o","u","á","é","í","ó","ú","ü"]
+# total_vocales=0
 
-for letra in palabra:
-    if letra in vocales:
-        total_vocales+=1
+# for letra in palabra:
+#     if letra in vocales:
+#         total_vocales+=1
 
-print(f"\nLa palabra {palabra.upper()} \nTotal {total_vocales} vocales ")
-
-
+# print(f"\nLa palabra {palabra.upper()} \nTotal {total_vocales} vocales ")
 
 
+# print("\n---Adivina numero---\n")
+
+# numero_secreto=8
+# intentos=3
+
+# for i in range(intentos):
+#     print(f"Intento número: {i+1}")
+#     numero=int(input("Ingrese un número "))
+#     while intentos:
+    
+#         if numero == numero_secreto:
+#             print(f"\nAdvinaste el numero secreto! \n {numero_secreto} Es el número secreto\n")
+#             break
+#         elif numero > numero_secreto:
+#             print(f"\nTe pasaste. \nEstas cerca, sigue intentando.\n")
+#             break
+#         elif numero < numero_secreto:
+#             print(f"\nTe falta. \nEstas cerca sigue intentando\n") 
+#             break
+#         else:
+#             print("Error")
+#             break       
+
+# print(f"Gracias por jugar")
 
 
+def jugar():
+    numero_secreto=random.randint(1,10)
+    intentos=3
 
+    print(f"\nBienvenido al juego de Adivina el número!\n")
+    print(f"Tiene {intentos} Intentos")
 
+    for i in range(intentos):
+        while True:
+            intento=input(f"Intento {i+1} Ingresa un número: ")
 
+            if intento.isdigit():
+                intento=int(intento)
+                break
+            else:
+                print("Error: Ingresaun número válido.")
 
+        if intento == numero_secreto:
+            print(f"\nFelicidades Adivinaste!\nEl número secreto es {numero_secreto}")
+            return
+        elif intento < numero_secreto:
+            print("El número secreto es mayor.")
+        else:
+            print("El número secreto es menor.")    
 
+    print(f"\nLo siento, has agotado tus intentos. \nEl número secreto es: {numero_secreto}")        
 
-
+jugar()
 
 
 
