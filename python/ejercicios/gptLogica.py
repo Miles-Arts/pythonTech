@@ -2133,11 +2133,12 @@ import random
 
 print("\n---Calculadora de Compra en una Tienda de Comida---\n")
 productos=[]
+descuento=float(10)
 
 for i in range(3):
     print(f"Producto {i+1}: ")    
     nombre_producto=str(input("nombre producto: ")).title()
-    precio_producto=float(input("Ingrese precio: "))
+    precio_producto=float(input("Ingrese precio: $"))
     cantidad_producto=int(input("Ingrese cantidad: "))
     precio_general=float(0)
 
@@ -2151,13 +2152,12 @@ for i in range(3):
     productos.append(producto)
 
 precio_total=sum(producto["precio_general"] for producto in productos)
-#print(f"El precio total a pagar es: ${precio_total}")
-
 
 if precio_total > 20:
-    descuento= precio_total - (precio_total * ( precio_total / 0.10) ) 
+    descuento= precio_total * ( descuento / 100) 
+    total=precio_total - descuento
     print(f"\nPrecio sin descuento ${precio_total:.2f} ")
-    print(f"Precio con descuento ${descuento:.2f}")
+    print(f"Precio con descuento ${total:.2f}")
 else:
     print(f"\nPrecio sin descuento {precio_total}")    
 
