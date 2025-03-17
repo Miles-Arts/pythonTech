@@ -2161,16 +2161,52 @@ import random
 # else:
 #     print(f"\nPrecio sin descuento {precio_total}")    
 
+print("---Calculadora de Compra Tienda Comida---")
 
+productos=[]
+descuento=10
 
+for i in range(3):
 
+    print(f"\nProductos {i+1}")
+    nombre_producto=input("Nombre del producto: ").title()
 
+    while True:
+        try:
+            precio_producto=float(input("ingresa precio: $"))
+            cantidad_producto=int(input("ingresa cantidad: "))
 
+            if precio_producto > 0 and cantidad_producto > 0:
+                break
+            else:
+                print("Error: Precio y cantidad deben ser mayores a 0")
+        except ValueError:
+            print("Error: Ingrese valores numéricos válidos.")
 
+    precio_general=precio_producto * cantidad_producto
 
+    productos.append({
+        "nombre_producto": nombre_producto,
+        "precio_producto": precio_producto,
+        "cantidad_producto": cantidad_producto,
+        "precio_general": precio_general
+    })        
 
+precio_total=sum(producto["precio_general"] for producto in productos)
 
+print(f"Resumen de Compra")
 
+for producto in productos:
+    print(f"{producto["nombre_producto"]}: {producto["cantidad_producto"]} x ")
+
+if precio_total > 20:
+    descuento_aplicado=precio_total * (descuento / 100)
+    total_final=precio_total - descuento_aplicado
+    print(f"\nPrecio sin descuento: ${precio_total:.2f}")
+    print(f"DEscuento aplicado ${descuento_aplicado:.2f}")
+    print(f"Precio con descuento ${total_final:.2f}")
+else:
+    print(f"\nPrecio total a pagar: ${precio_total}")    
 
 
 
