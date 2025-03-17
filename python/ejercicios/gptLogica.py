@@ -2104,32 +2104,55 @@ import random
 # datos()
 
 
-def es_primo(numero):
-    """Función que verifica si un número es primo."""
-    if numero < 2:
-        return False #Numeros menores a 2 no son primos
+# def es_primo(numero):
+#     """Función que verifica si un número es primo."""
+#     if numero < 2:
+#         return False #Numeros menores a 2 no son primos
     
-    for i in range(2, int(numero ** 0.5) + 1): #probar Divisores
-        if numero % i == 0:
-            return False #Si es divisible, no es primo
-    return True   # Si no se encontró divisores, es primo    
+#     for i in range(2, int(numero ** 0.5) + 1): #probar Divisores
+#         if numero % i == 0:
+#             return False #Si es divisible, no es primo
+#     return True   # Si no se encontró divisores, es primo    
 
-#Pedir numero al USER
-while True:
-    num=input("Ingrese un numero entero positivo")
+# #Pedir numero al USER
+# while True:
+#     num=input("Ingrese un numero entero positivo: ")
 
-    if num.isdigit(): # Verifica que sea un número válido
-        num=int(num)
-        break
-    else:
-        print("Error: Ingrese un úmero entero válido.")
+#     if num.isdigit(): # Verifica que sea un número válido
+#         num=int(num)
+#         break
+#     else:
+#         print("Error: Ingrese un úmero entero válido.")
 
-# Llamar a la función y mostrar el resultado
-if es_primo(num):
-    print(f"El número {num} es primo.") 
-else:
-    print(f"El número {num} NO es primo.")                 
+# # Llamar a la función y mostrar el resultado
+# if es_primo(num):
+#     print(f"El número {num} es primo.") 
+# else:
+#     print(f"El número {num} NO es primo.")                 
 
+
+print("---Calculadora de Compra en una Tienda de Comida---")
+productos=[]
+
+for i in range(3):
+
+    nombre_producto=str(input("nombre producto: ")).title()
+    precio_producto=float(input("Ingrese precio: "))
+    cantidad_producto=int(input("Ingrese cantidad: "))
+
+    producto={
+        "nombre_producto": nombre_producto,
+        "precio_producto": precio_producto,
+        "cantidad_producto": cantidad_producto
+    }
+
+    productos.append(producto)
+
+    for _, precio,  _ in productos:
+
+        precio=len(precio)
+
+        print(precio)
 
 
 
