@@ -2194,19 +2194,21 @@ for i in range(3):
 
 precio_total=sum(producto["precio_general"] for producto in productos)
 
-print(f"Resumen de Compra")
+print(f"\n---Resumen de Compra---\n")
 
 for producto in productos:
-    print(f"{producto["nombre_producto"]}: {producto["cantidad_producto"]} x ")
+    print(f"{producto["nombre_producto"]}: {producto["cantidad_producto"]} x ${producto["precio_producto"]:.2f} = ${producto["precio_general"]:.2f}")
 
 if precio_total > 20:
     descuento_aplicado=precio_total * (descuento / 100)
     total_final=precio_total - descuento_aplicado
     print(f"\nPrecio sin descuento: ${precio_total:.2f}")
-    print(f"DEscuento aplicado ${descuento_aplicado:.2f}")
+    print(f"Descuento aplicado ${descuento_aplicado:.2f}")
     print(f"Precio con descuento ${total_final:.2f}")
 else:
-    print(f"\nPrecio total a pagar: ${precio_total}")    
+    print(f"\nPrecio total a pagar: ${precio_total}")
+
+print("---Gracias por su compra---")        
 
 
 
