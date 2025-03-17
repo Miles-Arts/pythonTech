@@ -2131,35 +2131,35 @@ import random
 #     print(f"El número {num} NO es primo.")                 
 
 
-print("\n---Calculadora de Compra en una Tienda de Comida---\n")
-productos=[]
-descuento=float(10)
+# print("\n---Calculadora de Compra en una Tienda de Comida---\n")
+# productos=[]
+# descuento=float(10)
 
-for i in range(3):
-    print(f"Producto {i+1}: ")    
-    nombre_producto=str(input("nombre producto: ")).title()
-    precio_producto=float(input("Ingrese precio: $"))
-    cantidad_producto=int(input("Ingrese cantidad: "))
-    precio_general=float(0)
+# for i in range(3):
+#     print(f"Producto {i+1}: ")    
+#     nombre_producto=str(input("nombre producto: ")).title()
+#     precio_producto=float(input("Ingrese precio: $"))
+#     cantidad_producto=int(input("Ingrese cantidad: "))
+#     precio_general=float(0)
 
-    producto={
-        "nombre_producto": nombre_producto,
-        "precio_producto": precio_producto,
-        "cantidad_producto": cantidad_producto, 
-        "precio_general": precio_producto * cantidad_producto 
-    }
+#     producto={
+#         "nombre_producto": nombre_producto,
+#         "precio_producto": precio_producto,
+#         "cantidad_producto": cantidad_producto, 
+#         "precio_general": precio_producto * cantidad_producto 
+#     }
 
-    productos.append(producto)
+#     productos.append(producto)
 
-precio_total=sum(producto["precio_general"] for producto in productos)
+# precio_total=sum(producto["precio_general"] for producto in productos)
 
-if precio_total > 20:
-    descuento= precio_total * ( descuento / 100) 
-    total=precio_total - descuento
-    print(f"\nPrecio sin descuento ${precio_total:.2f} ")
-    print(f"Precio con descuento ${total:.2f}")
-else:
-    print(f"\nPrecio sin descuento {precio_total}")    
+# if precio_total > 20:
+#     descuento= precio_total * ( descuento / 100) 
+#     total=precio_total - descuento
+#     print(f"\nPrecio sin descuento ${precio_total:.2f} ")
+#     print(f"Precio con descuento ${total:.2f}")
+# else:
+#     print(f"\nPrecio sin descuento {precio_total}")    
 
 
 
