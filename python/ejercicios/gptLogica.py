@@ -2257,12 +2257,53 @@ import random
 
 # mostrar_resumen(productos, subtotal, descuento, total_final)
 
+# print("---Comparador de Edades---")
+
+# def pedir_edades():
+#     edad_uno=int(input("Ingrese su edad: "))
+#     edad_dos=int(input("Ingrese su edad: "))
+#     return edad_uno, edad_dos
 
 
+# def comparar_edades(uno, dos):    
+
+#     if uno > dos:
+#         print(f"La edad {uno} es mayor")
+#     elif uno < dos:
+#         print(f"la edad {dos} es mayor")
+#     else:
+#         print(f"Edad {uno} y edad {dos} son iguales.") 
 
 
+# edad1, edad2 = pedir_edades()
+# comparar_edades(edad1,edad2)              
 
 
+print("\n---Comparador de Edades---")
+
+def obtener_edad(persona):
+    while True:
+        try:
+            edad=int(input(f"Ingrese la edad de la persona {persona}:"))
+            if edad > 0:
+                return edad
+            else:
+                print("Error. La edad debeb ser mayor a 0.")
+        except ValueError:
+            print("Error. Ingrese un número entero válido.")        
+
+def comparar_edades(edad1, edad2):
+    if edad1 > edad2:
+        print(f"\nLa persona 1 es mayor con {edad1} años.")
+    elif edad1 < edad2:
+        print(f"\nLa persona 2 es mayor con {edad2} años.")
+    else:
+        print(f"\nembas personas tienen la misma edad {edad1} años.")
+
+edad_persona1=obtener_edad(1)
+edad_persona2=obtener_edad(2)
+
+comparar_edades(edad_persona1, edad_persona2)
 
 
 
