@@ -2279,35 +2279,59 @@ import random
 # comparar_edades(edad1,edad2)              
 
 
-print("\n---Comparador de Edades---")
+# print("\n---Comparador de Edades---")
 
-def obtener_edad(persona):
-    while True:
-        try:
-            edad=int(input(f"Ingrese la edad de la persona {persona}:"))
-            if edad > 0:
-                return edad
-            else:
-                print("Error. La edad debeb ser mayor a 0.")
-        except ValueError:
-            print("Error. Ingrese un número entero válido.")        
+# def obtener_edad(persona):
+#     while True:
+#         try:
+#             edad=int(input(f"Ingrese la edad de la persona {persona}: "))
+#             if edad > 0:
+#                 return edad
+#             else:
+#                 print("Error. La edad debeb ser mayor a 0.")
+#         except ValueError:
+#             print("Error. Ingrese un número entero válido.")        
 
-def comparar_edades(edad1, edad2):
-    if edad1 > edad2:
-        print(f"\nLa persona 1 es mayor con {edad1} años.")
-    elif edad1 < edad2:
-        print(f"\nLa persona 2 es mayor con {edad2} años.")
+# def comparar_edades(edad1, edad2):
+#     if edad1 > edad2:
+#         print(f"\nLa persona 1 es mayor con {edad1} años.")
+#     elif edad1 < edad2:
+#         print(f"\nLa persona 2 es mayor con {edad2} años.")
+#     else:
+#         print(f"\nAmbas personas tienen la misma edad {edad1} años.")
+
+# edad_persona1=obtener_edad(1)
+# edad_persona2=obtener_edad(2)
+
+# comparar_edades(edad_persona1, edad_persona2)
+
+print("---Clasificador de Números Positivos y Negativos---")
+
+def pedir_numeros():
+    numeros=[]
+    for i in range(5):
+        while True:
+            try:
+                numero=int(input(f"Escriba el {i+1} numero: "))
+                numeros.append(numero)
+                break
+            except ValueError:
+                print("Escriba un número válido.")        
+    return numeros
+
+def comparar_numeros(numero):
+    if numero > 0:
+        print(f"El número {numero}  es positivo.")
+    elif numero < 0:
+        print(f"El número {numero} es negativo.")  
     else:
-        print(f"\nembas personas tienen la misma edad {edad1} años.")
-
-edad_persona1=obtener_edad(1)
-edad_persona2=obtener_edad(2)
-
-comparar_edades(edad_persona1, edad_persona2)
+        print(f"El número {numero} es cero.")      
 
 
+lista_numero=pedir_numeros()
 
-
+for num in lista_numero:
+    comparar_numeros(num)
 
 
 
