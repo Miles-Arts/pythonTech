@@ -2303,42 +2303,66 @@ import random
 # edad_persona1=obtener_edad(1)
 # edad_persona2=obtener_edad(2)
 
-# comparar_edades(edad_persona1, edad_persona2)
+# # comparar_edades(edad_persona1, edad_persona2)
 
-print("---Clasificador de Números Positivos y Negativos---")
+# print("---Clasificador de Números Positivos y Negativos---")
 
-def pedir_numeros():
-    numeros=[]
-    for i in range(5):
-        while True:
-            try:
-                numero=int(input(f"Escriba el {i+1} numero: "))
-                numeros.append(numero)
-                break
-            except ValueError:
-                print("Escriba un número válido.")        
-    return numeros
+# def pedir_numeros():
+#     numeros=[]
+#     for i in range(5):
+#         while True:
+#             try:
+#                 numero=int(input(f"Escriba el {i+1} numero: "))
+#                 numeros.append(numero)
+#                 break
+#             except ValueError:
+#                 print("Escriba un número válido.")        
+#     return numeros
 
-def comparar_numeros(numero):
-    if numero > 0:
-        print(f"El número {numero}  es positivo.")
-    elif numero < 0:
-        print(f"El número {numero} es negativo.")  
-    else:
-        print(f"El número {numero} es cero.")      
+# def comparar_numeros(numero):
+#     if numero > 0:
+#         print(f"El número {numero}  es positivo.")
+#     elif numero < 0:
+#         print(f"El número {numero} es negativo.")  
+#     else:
+#         print(f"El número {numero} es cero.")      
 
+# lista_numero=pedir_numeros()
 
-lista_numero=pedir_numeros()
+# for num in lista_numero:
+#     comparar_numeros(num)
 
-for num in lista_numero:
-    comparar_numeros(num)
+print("---Clasificador de números---")
 
+def clasificar_numeros(lista_numeros):
+    positivos=[]
+    negativos=[]
 
+    for num in lista_numeros:
+        if num > 0:
+            positivos.append(num)
+        elif num < 0:
+            negativos.append(num)
 
+    return positivos, negativos            
 
+numeros=[]
+for i in range(5):
+    while True:
+        try:
+            numero=int(input(f"Ingrese el número {i+1}: "))
+            numeros.append(numero)
+            break
+        except ValueError:
+            print("Error: Ingrese un número válido.")
 
+positivos, negativos =clasificar_numeros(numeros)
 
+print(f"\nNúmeros Positivos: {positivos}" if positivos else "🔴 no hay números positivos.")
+print(f"Números Negativos: {negativos}" if negativos else "✅ no hay números positivos.")
 
+if 0 in numeros:
+    print("El número 0 no es ni negativo ni positivo.")
 
 
 
