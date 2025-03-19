@@ -2211,51 +2211,51 @@ import random
 # print("---Gracias por su compra---")        
 
 
-print("\n---Bienvenido a la Tienda de Comida ---\n")
+# print("\n---Bienvenido a la Tienda de Comida ---\n")
 
-def obtener_datos():
+# def obtener_datos():
 
-    nombre=input("Nombre del producto: ").title()
+#     nombre=input("Nombre del producto: ").title()
 
-    while True:
-        try:
-            precio=float(input(f"Precio de{nombre}: $"))
-            cantidad=int(input(f"Cantidad de {nombre}: "))
+#     while True:
+#         try:
+#             precio=float(input(f"Precio de{nombre}: $"))
+#             cantidad=int(input(f"Cantidad de {nombre}: "))
 
-            if precio > 0 and cantidad > 0:
-                break
-            else:
-                print("Error: Precio y cantidad deben ser mayor a cero.-")
-        except ValueError:
-            print("Error: Ingrese valores númericos válidos.")
+#             if precio > 0 and cantidad > 0:
+#                 break
+#             else:
+#                 print("Error: Precio y cantidad deben ser mayor a cero.-")
+#         except ValueError:
+#             print("Error: Ingrese valores númericos válidos.")
 
-    return nombre, precio, cantidad        
+#     return nombre, precio, cantidad        
 
-def calcular_total(productos):
-    subtotal=sum(precio * cantidad for _, precio, cantidad in productos)
-    descuento=subtotal* 0.10 if subtotal > 20 else 0
-    total_final=subtotal - descuento
+# def calcular_total(productos):
+#     subtotal=sum(precio * cantidad for _, precio, cantidad in productos)
+#     descuento=subtotal* 0.10 if subtotal > 20 else 0
+#     total_final=subtotal - descuento
 
-    return subtotal, descuento, total_final
+#     return subtotal, descuento, total_final
 
-def mostrar_resumen(productos, subtotal, descuento, total_final):
+# def mostrar_resumen(productos, subtotal, descuento, total_final):
 
-    print("\n---Resumen de Compra---")
+#     print("\n---Resumen de Compra---")
 
-    for nombre, precio, cantidad in productos:
-        print(f"{nombre}: {cantidad} x ${precio:.2f} = ${precio *cantidad:.2f}")
+#     for nombre, precio, cantidad in productos:
+#         print(f"{nombre}: {cantidad} x ${precio:.2f} = ${precio *cantidad:.2f}")
 
-    print(f"\nTotal antes del descuento: ${subtotal:.2f}")
+#     print(f"\nTotal antes del descuento: ${subtotal:.2f}")
 
-    if descuento > 0:
-        print(f"Descuento Aplicado: ${descuento:.2f}")
-    print(f"Total a pagar: ${total_final}")    
+#     if descuento > 0:
+#         print(f"Descuento Aplicado: ${descuento:.2f}")
+#     print(f"Total a pagar: ${total_final}")    
 
-productos=[obtener_datos() for _ in range(3)]
+# productos=[obtener_datos() for _ in range(3)]
 
-subtotal, descuento, total_final= calcular_total(productos)
+# subtotal, descuento, total_final= calcular_total(productos)
 
-mostrar_resumen(productos, subtotal, descuento, total_final)
+# mostrar_resumen(productos, subtotal, descuento, total_final)
 
 
 
