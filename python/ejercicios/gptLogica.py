@@ -2637,41 +2637,54 @@ import random
 # print(f"\nEstudiantes en Aula de Estudio:")
 # print(f"\n".join(aula_estudiantes) if aula_estudiantes else "No hay esudiantes en Aula de Estudio.")
 
-print("\n---Sistema de Inventario de Tienda---\n")
+# print("\n---Sistema de Inventario de Tienda---\n")
 
-alimentos = ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", "Jugo de naranja", "Pollo", "Galletas", "Café"]
-electronicos = ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", "Parlante Bluetooth", "Reloj inteligente"]
-vestimenta = ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", "Gafas de sol", "Falda", "Suéter", "Traje"]
+# alimentos = ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", "Jugo de naranja", "Pollo", "Galletas", "Café"]
+# electronicos = ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", "Parlante Bluetooth", "Reloj inteligente"]
+# vestimenta = ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", "Gafas de sol", "Falda", "Suéter", "Traje"]
 
-inventario_total= alimentos+electronicos+vestimenta
+# inventario_total= alimentos+electronicos+vestimenta
 
-def inventario(lista):
-    alimentos_seleccionados = []
-    electronica_seleccionada = []
-    ropa_seleccionada = []
+# def inventario(lista):
+#     alimentos_seleccionados = []
+#     electronica_seleccionada = []
+#     ropa_seleccionada = []
 
-    for items in lista:
-        if items in alimentos:
-            alimentos_seleccionados.append(items)
-        elif items in electronicos:
-            electronica_seleccionada.append(items)
-        elif items in vestimenta:
-            ropa_seleccionada.append(items)
+#     for items in lista:
+#         if items in alimentos:
+#             alimentos_seleccionados.append(items)
+#         elif items in electronicos:
+#             electronica_seleccionada.append(items)
+#         elif items in vestimenta:
+#             ropa_seleccionada.append(items)
 
-    return alimentos_seleccionados, electronica_seleccionada, ropa_seleccionada                   
+#     return alimentos_seleccionados, electronica_seleccionada, ropa_seleccionada                   
     
-elementos_aleatorios=random.sample(inventario_total, k=10)    
+# elementos_aleatorios=random.sample(inventario_total, k=10)    
 
-alimento, electronica, ropa=inventario(elementos_aleatorios)
+# alimento, electronica, ropa=inventario(elementos_aleatorios)
 
-print(f"\n---Elementos de la Tienda---\n")
-print(f"\nProductos Alimenticios")
-print(f"\n".join(alimento) if alimento else "No hay Alimentos seleccionados.")
-print(f"\nProductos Electrónicos")
-print(f"\n".join(electronica) if electronica else "No hay Electrónica seleccionada.")
-print(f"\nProductos de Vestir")
-print(f"\n".join(ropa) if ropa else "No hay Ropa seleccionada.")
+# print(f"\n---Elementos de la Tienda---\n")
+# print(f"\nProductos Alimenticios")
+# print(f"\n".join(alimento) if alimento else "No hay Alimentos seleccionados.")
+# print(f"\nProductos Electrónicos")
+# print(f"\n".join(electronica) if electronica else "No hay Electrónica seleccionada.")
+# print(f"\nProductos de Vestir")
+# print(f"\n".join(ropa) if ropa else "No hay Ropa seleccionada.")
 
+
+print("\n📦🎁 --- Sistema de Inventario de Tienda --- 📦🎁")
+
+# Diccionario de categorías
+categorias = {
+    "Alimentos": ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", 
+                     "Jugo de naranja", "Pollo", "Galletas", "Café"],
+    "Electrónica": ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", 
+                       "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", 
+                       "Parlante Bluetooth", "Reloj inteligente"],
+    "Vestimenta": ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", 
+                      "Gafas de sol", "Falda", "Suéter", "Traje"]
+}
 
 
 
