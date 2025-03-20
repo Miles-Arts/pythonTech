@@ -2473,45 +2473,69 @@ import random
 
 # print(f"\nLista completa de elementos {lista_nombres}")
 
-print("\n📚🚗 ---Clasificador de Libros y Marcas de Autos--- 📚🚗")
+# print("\n📚🚗 ---Clasificador de Libros y Marcas de Autos--- 📚🚗")
 
-autos = ["Mercedes Benz", "Audi", "Porsche", "Maserati", "BMW", 
-         "Ferrari", "Lexus", "Toyota", "Chevrolet", "Jeep"]
+# autos = ["Mercedes Benz", "Audi", "Porsche", "Maserati", "BMW", 
+#          "Ferrari", "Lexus", "Toyota", "Chevrolet", "Jeep"]
 
-libros = ["El Hombre en busca de Sentido", "Don Quijote", "A Tale of Two Cities", 
-          "The Little Prince", "Harry Potter and the Philosopher's Stone", 
-          "And Then There Were None", "The Hobbit", "Alice's Adventures in Wonderland", 
-          "The Lord of the Rings", "Aprende Python"]
+# libros = ["El Hombre en busca de Sentido", "Don Quijote", "A Tale of Two Cities", 
+#           "The Little Prince", "Harry Potter and the Philosopher's Stone", 
+#           "And Then There Were None", "The Hobbit", "Alice's Adventures in Wonderland", 
+#           "The Lord of the Rings", "Aprende Python"]
 
-lista_nombres= autos + libros
+# lista_nombres= autos + libros
 
-def clasificador(lista):
+# def clasificador(lista):
 
-    seleccionados=random.sample(lista, k=min(10, len(lista)))
-    carros=[nombre for nombre in seleccionados if nombre in autos]
-    libro=[nombre for nombre in seleccionados if nombre in libros]
+#     seleccionados=random.sample(lista, k=min(10, len(lista)))
+#     carros=[nombre for nombre in seleccionados if nombre in autos]
+#     libro=[nombre for nombre in seleccionados if nombre in libros]
 
-    return carros, libro, seleccionados
+#     return carros, libro, seleccionados
 
-carros, libro, seleccionados= clasificador(lista_nombres)
+# carros, libro, seleccionados= clasificador(lista_nombres)
 
-print(f"\n Lista aleatoria selecionadda: \n{seleccionados}")
-print(f"\nLibros encontrados: ")
-print(f"\n".join(libros) if libros else "No hay liebros seleccioandos")
-print(f"\nMarcas de autos encontradas: ")
-print(f"\n".join(carros) if carros else "No hay autos seleccionados.")
-
-
+# print(f"\n Lista aleatoria selecionadda: \n{seleccionados}")
+# print(f"\nLibros encontrados: ")
+# print(f"\n".join(libros) if libros else "No hay liebros seleccioandos")
+# print(f"\nMarcas de autos encontradas: ")
+# print(f"\n".join(carros) if carros else "No hay autos seleccionados.")
 
 
+# print("\n📚🚗 --- Clasificador de Libros y Marcas de Autos --- 📚🚗")
+
+# # Listas de libros y marcas de autos
+# libros = ["1984", "Cien años de soledad", "Don Quijote", "El Principito", "Harry Potter",
+#           "Los Juegos del Hambre", "Moby Dick", "Orgullo y Prejuicio", "El Hobbit", "Dune"]
+
+# autos = ["Toyota", "Ford", "Chevrolet", "Honda", "BMW",
+#          "Mercedes", "Audi", "Nissan", "Volkswagen", "Tesla"]
+
+# elementos= libros+autos
+
+# def clasificar_elementos(lista_elementos):
+#     clasificacion_libros=[]
+#     clasificacion_autos=[]
+
+#     for item in lista_elementos:
+#         if item in libros:
+#             clasificacion_libros.append(item)
+#         elif item in lista_elementos:
+#             clasificacion_autos.append(item)
+
+#     return clasificacion_libros, clasificacion_autos    
+
+# elementos_aleatorios=random.sample(elementos, 10)        
+
+# libros_seleccionados, autos_seleccionados=clasificar_elementos(elementos_aleatorios)
+
+# print(f"\nElementos seleccionados: {elementos_aleatorios}")
+# print(f"\nLibros: {libros_seleccionados}"   if libros_seleccionados else "No hay libros seleccionados.")
+# print(f"Autos: {autos_seleccionados}" if autos_seleccionados else "No hay autos seleccionados.")
 
 
 
-
-
-
-
-
+print("---Registro de Estudiantes en una Biblioteca---")
 
 
 
