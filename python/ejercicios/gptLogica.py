@@ -2393,30 +2393,30 @@ import random
 #     print("El número 0 no es positivo ni negativo.")
 
 
-print("---Clasificador de Números Pares e Impares---")
+# print("---Clasificador de Números Pares e Impares---")
 
-def clasificar_numeros(lista_numeros):
-    pares=[]
-    impares=[]
+# def clasificar_numeros(lista_numeros):
+#     pares=[]
+#     impares=[]
 
-    for num in lista_numeros:
-        if num % 2 == 0:
-            pares.append(num)
-        else:
-            impares.append(num)    
+#     for num in lista_numeros:
+#         if num % 2 == 0:
+#             pares.append(num)
+#         else:
+#             impares.append(num)    
     
-    return pares, impares
+#     return pares, impares
 
-numeros=[random.randint(-20, 20) for _ in range(10)]
+# numeros=[random.randint(-20, 20) for _ in range(10)]
 
-pares, impares=clasificar_numeros(numeros)
+# pares, impares=clasificar_numeros(numeros)
 
-print(f"\nNúmeros generados: {numeros}")
-print(f"\nNúmeros Pares: {pares}" if pares else "No hay números pares")
-print(f"Números Impares: {impares}" if impares else "No hay números impares.")
+# print(f"\nNúmeros generados: {numeros}")
+# print(f"\nNúmeros Pares: {pares}" if pares else "No hay números pares")
+# print(f"Números Impares: {impares}" if impares else "No hay números impares.")
 
-if 0 in numeros:
-    print(f"El número 0 no es ni positivo ni negativo.")
+# if 0 in numeros:
+#     print(f"El número 0 no es ni positivo ni negativo.")
 
 
 
