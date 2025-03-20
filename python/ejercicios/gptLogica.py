@@ -2566,41 +2566,95 @@ import random
 # print(f"Estuduantes en Aula de estudio {aula}" if aula else "no hay estudiantes en el aula.")
 
 
-print("\n📚 --- Registro de Estudiantes en una Biblioteca --- 📚")
+# print("\n📚 --- Registro de Estudiantes en una Biblioteca --- 📚")
+
+# # Lista de estudiantes
+# estudiantes = [
+#     "Ana López", "Luis Torres", "Elena Ruiz", "Pablo Gómez", "Marta Díaz",
+#     "Diego Cruz", "Clara Méndez", "Jorge Ríos", "Sofía Lara", "Bruno Navas",
+#     "Alejandra Ramírez", "Guillermo Fernández", "Valentina Rodríguez", "Maximiliano González", 
+#     "Isabella Montenegro", "Cristóbal Benavides", "Montserrat Villanueva", 
+#     "Emiliano Santamaría", "Gabriela Castellanos", "Leandro Bustamante"
+# ]
+
+# def clasificar_estudiantes(lista_estudiantes):
+#     aula=[]
+#     biblioteca=[]
+
+#     for estudiantes in lista_estudiantes:
+#         categoria=random.choice(["Biblioteca", "Aula de Estudio."])
+
+#         if categoria == "Biblioteca":
+#             biblioteca.append(estudiantes)
+#         else:
+#             aula.append(estudiantes)    
+
+#     return aula, biblioteca        
+
+# estudiantes_aleatorios=random.sample(estudiantes, 10)
+# aula, biblioteca=clasificar_estudiantes(estudiantes_aleatorios)
+
+# print(f"\nLista de Estudiantes Seleccionados:")
+# print(estudiantes_aleatorios)
+
+# print(f"\nEstudiantes con préstamos de libros en la Biblioteca:")
+# print(f"\n".join(biblioteca) if biblioteca else "No hay Estudiantes en bibliteca")
+# print(f"\nEstudiantes en el aula de Estudio:")
+# print(f"\n".join(aula) if aula else "No hay estudiantes en el Aula de Estudio.")
+
+
+print("\n🎓📚 --- Registro de Estudiantes en la Biblioteca --- 📚🎓")
 
 # Lista de estudiantes
-estudiantes = [
-    "Ana López", "Luis Torres", "Elena Ruiz", "Pablo Gómez", "Marta Díaz",
-    "Diego Cruz", "Clara Méndez", "Jorge Ríos", "Sofía Lara", "Bruno Navas",
-    "Alejandra Ramírez", "Guillermo Fernández", "Valentina Rodríguez", "Maximiliano González", 
-    "Isabella Montenegro", "Cristóbal Benavides", "Montserrat Villanueva", 
-    "Emiliano Santamaría", "Gabriela Castellanos", "Leandro Bustamante"
-]
+estudiantes = ["Carlos", "Ana", "Pedro", "Lucía", "María", "Javier", "Elena", "Fernando", "Laura", "Santiago"]
+
+categorias=["Biblioteca", "Aula de Estudio"]
 
 def clasificar_estudiantes(lista_estudiantes):
-    aula=[]
     biblioteca=[]
+    aula_estudio=[]
 
-    for estudiantes in lista_estudiantes:
-        categoria=random.choice(["Biblioteca", "Aula de Estudio."])
-
+    for estudiante in lista_estudiantes:
+        categoria = random.choice(categorias)
         if categoria == "Biblioteca":
-            biblioteca.append(estudiantes)
+            biblioteca.append(estudiante)
         else:
-            aula.append(estudiantes)    
+            aula_estudio.append(estudiante)   
 
-    return aula, biblioteca        
+    return biblioteca, aula_estudio
 
-estudiantes_aleatorios=random.sample(estudiantes, 10)
-aula, biblioteca=clasificar_estudiantes(estudiantes_aleatorios)
+estudiantes_seleccionados=random.sample(estudiantes, k=7)
 
-print(f"\nLista de Estudiantes Seleccionados:")
-print(estudiantes_aleatorios)
+biblioteca, aula_estudiantes=clasificar_estudiantes(estudiantes)
 
-print(f"\nEstudiantes con préstamos de libros en la Biblioteca:")
-print(f"\n".join(biblioteca) if biblioteca else "No hay Estudiantes en bibliteca")
-print(f"\nEstudiantes en el aula de Estudio:")
-print(f"\n".join(aula) if aula else "No hay estudiantes en el Aula de Estudio.")
+print(f"\nEstudiantes Seleccionados: {estudiantes_seleccionados}")
+print(f"\nEstudiantes en la Biblioteca:")
+print(f"\n".join(biblioteca) if biblioteca else "No hay estudiantes en biblioteca.")
+print(f"\nEstudiantes en Aula de Estudio:")
+print(f"\n".join(aula_estudiantes) if aula_estudiantes else "No hay esudiantes en Aula de Estudio.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
