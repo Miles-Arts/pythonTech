@@ -2420,58 +2420,122 @@ import random
 
 
 
-print("---Clasificador de Libros y Marcas de Autos---")
+# print("---Clasificador de Libros y Marcas de Autos---")
 
-lista_nombres=["Mercedes Benz",
-                    "Audi",
-                    "Porsche",
-                    "Maserati",
-                    "BMW",
-                    "Ferrari",
-                    "Lexus",
-                    "Toyota",
-                    "Chevrolet",
-                    "Jeep",
-                    "El Hombre en busca de Sentido",
-                    "Don Quijote",
-                    "A Tale of Two Cities",
-                    "The Little Prince",
-                    "Harry Potter and the Philosopher's Stone",
-                    "And Then There Were None",
-                    "The Hobbit",
-                    "Alice's Adventures in Wonderland",
-                    "The Lord of the Rings",
-                    "Aprende Python" 
-                    ]
+# lista_nombres=["Mercedes Benz",
+#                     "Audi",
+#                     "Porsche",
+#                     "Maserati",
+#                     "BMW",
+#                     "Ferrari",
+#                     "Lexus",
+#                     "Toyota",
+#                     "Chevrolet",
+#                     "Jeep",
+#                     "El Hombre en busca de Sentido",
+#                     "Don Quijote",
+#                     "A Tale of Two Cities",
+#                     "The Little Prince",
+#                     "Harry Potter and the Philosopher's Stone",
+#                     "And Then There Were None",
+#                     "The Hobbit",
+#                     "Alice's Adventures in Wonderland",
+#                     "The Lord of the Rings",
+#                     "Aprende Python" 
+#                     ]
+
+# def clasificador(lista):
+#     carros=[]
+#     libros=[]
+
+#     lista_general=random.sample(lista_nombres, k=min(10, len(lista_nombres)))
+
+
+#     for nombres in lista_general:
+#         if nombres in ["Mercedes Benz","Audi","Porsche","Maserati","BMW","Ferrari","Lexus","Toyota","Chevrolet","Jeep"]:
+#             carros.append(nombres)
+#         elif nombres in  [   "El Hombre en busca de Sentido","Don Quijote","A Tale of Two Cities","The Little Prince","Harry Potter and the Philosopher's Stone","And Then There Were None","The Hobbit","Alice's Adventures in Wonderland","The Lord of the Rings","Aprende Python" ]:
+#             libros.append(nombres)
+
+#     return carros, libros
+
+# # pares, impares=clasificar_numeros(numeros)
+
+# carros, libros=clasificador(lista_nombres)
+
+# print(f"\nLa lista de libros es:\n")
+# for i in libros:
+#     print(f"{i}")
+
+# print(f"\nLa lista de carros es:\n")
+# for j in carros:
+#     print(f"{j}")
+
+# print(f"\nLista completa de elementos {lista_nombres}")
+
+print("\n📚🚗 ---Clasificador de Libros y Marcas de Autos--- 📚🚗")
+
+autos = ["Mercedes Benz", "Audi", "Porsche", "Maserati", "BMW", 
+         "Ferrari", "Lexus", "Toyota", "Chevrolet", "Jeep"]
+
+libros = ["El Hombre en busca de Sentido", "Don Quijote", "A Tale of Two Cities", 
+          "The Little Prince", "Harry Potter and the Philosopher's Stone", 
+          "And Then There Were None", "The Hobbit", "Alice's Adventures in Wonderland", 
+          "The Lord of the Rings", "Aprende Python"]
+
+lista_nombres= autos + libros
 
 def clasificador(lista):
-    carros=[]
-    libros=[]
 
-    lista_general=random.sample(lista_nombres, k=min(10, len(lista_nombres)))
+    seleccionados=random.sample(lista, k=min(10, len(lista)))
+    carros=[nombre for nombre in seleccionados if nombre in autos]
+    libro=[nombre for nombre in seleccionados if nombre in libros]
+
+    return carros, libro, seleccionados
+
+carros, libro, seleccionados= clasificador(lista_nombres)
+
+print(f"\n Lista aleatoria selecionadda: \n{seleccionados}")
+print(f"\nLibros encontrados: ")
+print(f"\n".join(libros) if libros else "No hay liebros seleccioandos")
+print(f"\nMarcas de autos encontradas: ")
+print(f"\n".join(carros) if carros else "No hay autos seleccionados.")
 
 
-    for nombres in lista_general:
-        if nombres in ["Mercedes Benz","Audi","Porsche","Maserati","BMW","Ferrari","Lexus","Toyota","Chevrolet","Jeep"]:
-            carros.append(nombres)
-        elif nombres in  [   "El Hombre en busca de Sentido","Don Quijote","A Tale of Two Cities","The Little Prince","Harry Potter and the Philosopher's Stone","And Then There Were None","The Hobbit","Alice's Adventures in Wonderland","The Lord of the Rings","Aprende Python" ]:
-            libros.append(nombres)
 
-    return carros, libros
 
-# pares, impares=clasificar_numeros(numeros)
 
-carros, libros=clasificador(lista_nombres)
 
-print(f"\nLa lista de libros es:\n")
-for i in libros:
-    print(f"{i}")
 
-print(f"\nLa lista de carros es:\n")
-for j in carros:
-    print(f"{j}")
 
-print(f"\nLista completa de elementos {lista_nombres}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
