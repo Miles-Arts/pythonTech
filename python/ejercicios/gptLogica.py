@@ -2415,6 +2415,8 @@ print(f"\nNúmeros generados: {numeros}")
 print(f"\nNúmeros Pares: {pares}" if pares else "No hay números pares")
 print(f"Números Impares: {impares}" if impares else "No hay números impares.")
 
+if 0 in numeros:
+    print(f"El número 0 no es ni positivo ni negativo.")
 
 
 
