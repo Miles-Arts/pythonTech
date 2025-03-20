@@ -2370,36 +2370,50 @@ import random
 # ✅ Use función (def) para clasificar los números en pares e impares.
 # ✅ Use for para recorrer los números y if para la clasificación.-
 
-print("---Clasificador de Números Pares e Impares con random---")
-par=[]
-impar=[]
-numeros=[random.randint(-20,20) for _ in range(10)]
+# print("---Clasificador de Números Pares e Impares con random---")
+# par=[]
+# impar=[]
+# numeros=[random.randint(-20,20) for _ in range(10)]
 
-def clasificar_numeros(numeros):
+# def clasificar_numeros(numeros):
 
-    for num in numeros:
+#     for num in numeros:
+#         if num % 2 == 0:
+#             par.append(num)
+#         elif num % 2 != 0:
+#             impar.append(num)
+#     return par, impar        
+
+# par, impar=   clasificar_numeros(numeros)     
+
+# print(f"Número Par: {par}" if par else "No hay números pares")
+# print(f"Número Impar: {impar}" if impar else "No hay números impares ")
+
+# if 0 in numeros:
+#     print("El número 0 no es positivo ni negativo.")
+
+
+print("---Clasificador de Números Pares e Impares---")
+
+def clasificar_numeros(lista_numeros):
+    pares=[]
+    impares=[]
+
+    for num in lista_numeros:
         if num % 2 == 0:
-            par.append(num)
-        elif num % 2 != 0:
-            impar.append(num)
-    return par, impar        
+            pares.append(num)
+        else:
+            impares.append(num)    
+    
+    return pares, impares
 
-par, impar=   clasificar_numeros(numeros)     
+numeros=[random.randint(-20, 20) for _ in range(10)]
 
-print(f"Número Par: {par}" if par else "No hay números pares")
-print(f"Número Impar: {impar}" if impar else "No hay números impares ")
+pares, impares=clasificar_numeros(numeros)
 
-if 0 in numeros:
-    print("El número 0 no es positivo ni negativo.")
-
-
-
-
-
-
-
-
-
+print(f"\nNúmeros generados: {numeros}")
+print(f"\nNúmeros Pares: {pares}" if pares else "No hay números pares")
+print(f"Números Impares: {impares}" if impares else "No hay números impares.")
 
 
 
