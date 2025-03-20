@@ -2603,38 +2603,74 @@ import random
 # print(f"\n".join(aula) if aula else "No hay estudiantes en el Aula de Estudio.")
 
 
-print("\n🎓📚 --- Registro de Estudiantes en la Biblioteca --- 📚🎓")
+# print("\n🎓📚 --- Registro de Estudiantes en la Biblioteca --- 📚🎓")
 
-# Lista de estudiantes
-estudiantes = ["Carlos", "Ana", "Pedro", "Lucía", "María", "Javier", "Elena", "Fernando", "Laura", "Santiago"]
+# # Lista de estudiantes
+# estudiantes =[
+#         'Guillermo Fernández', 'Luis Torres', 'Bruno Navas', 
+#         'Jorge Ríos', 'Diego Cruz', 'Elena Ruiz', 'Marta Díaz', 
+#         'Emiliano Santamaría', 'Cristóbal Benavides', 'Valentina Rodríguez'
+#         ]
 
-categorias=["Biblioteca", "Aula de Estudio"]
+# categorias=["Biblioteca", "Aula de Estudio"]
 
-def clasificar_estudiantes(lista_estudiantes):
-    biblioteca=[]
-    aula_estudio=[]
+# def clasificar_estudiantes(lista_estudiantes):
+#     biblioteca=[]
+#     aula_estudio=[]
 
-    for estudiante in lista_estudiantes:
-        categoria = random.choice(categorias)
-        if categoria == "Biblioteca":
-            biblioteca.append(estudiante)
-        else:
-            aula_estudio.append(estudiante)   
+#     for estudiante in lista_estudiantes:
+#         categoria = random.choice(categorias)
+#         if categoria == "Biblioteca":
+#             biblioteca.append(estudiante)
+#         else:
+#             aula_estudio.append(estudiante)   
 
-    return biblioteca, aula_estudio
+#     return biblioteca, aula_estudio
 
-estudiantes_seleccionados=random.sample(estudiantes, k=7)
+# estudiantes_seleccionados=random.sample(estudiantes, k=7)
 
-biblioteca, aula_estudiantes=clasificar_estudiantes(estudiantes)
+# biblioteca, aula_estudiantes=clasificar_estudiantes(estudiantes)
 
-print(f"\nEstudiantes Seleccionados: {estudiantes_seleccionados}")
-print(f"\nEstudiantes en la Biblioteca:")
-print(f"\n".join(biblioteca) if biblioteca else "No hay estudiantes en biblioteca.")
-print(f"\nEstudiantes en Aula de Estudio:")
-print(f"\n".join(aula_estudiantes) if aula_estudiantes else "No hay esudiantes en Aula de Estudio.")
+# print(f"\nEstudiantes Seleccionados: {estudiantes_seleccionados}")
+# print(f"\nEstudiantes en la Biblioteca:")
+# print(f"\n".join(biblioteca) if biblioteca else "No hay estudiantes en biblioteca.")
+# print(f"\nEstudiantes en Aula de Estudio:")
+# print(f"\n".join(aula_estudiantes) if aula_estudiantes else "No hay esudiantes en Aula de Estudio.")
 
+print("\n---Sistema de Inventario de Tienda---\n")
 
+alimentos = ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", "Jugo de naranja", "Pollo", "Galletas", "Café"]
+electronicos = ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", "Parlante Bluetooth", "Reloj inteligente"]
+vestimenta = ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", "Gafas de sol", "Falda", "Suéter", "Traje"]
 
+inventario_total= alimentos+electronicos+vestimenta
+
+def inventario(lista):
+    alimentos_seleccionados = []
+    electronica_seleccionada = []
+    ropa_seleccionada = []
+
+    for items in lista:
+        if items in alimentos:
+            alimentos_seleccionados.append(items)
+        elif items in electronicos:
+            electronica_seleccionada.append(items)
+        elif items in vestimenta:
+            ropa_seleccionada.append(items)
+
+    return alimentos_seleccionados, electronica_seleccionada, ropa_seleccionada                   
+    
+elementos_aleatorios=random.sample(inventario_total, k=10)    
+
+alimento, electronica, ropa=inventario(elementos_aleatorios)
+
+print(f"\n---Elementos de la Tienda---\n")
+print(f"\nProductos Alimenticios")
+print(f"\n".join(alimento) if alimento else "No hay Alimentos seleccionados.")
+print(f"\nProductos Electrónicos")
+print(f"\n".join(electronica) if electronica else "No hay Electrónica seleccionada.")
+print(f"\nProductos de Vestir")
+print(f"\n".join(ropa) if ropa else "No hay Ropa seleccionada.")
 
 
 
