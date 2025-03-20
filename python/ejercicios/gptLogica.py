@@ -2332,42 +2332,65 @@ import random
 # for num in lista_numero:
 #     comparar_numeros(num)
 
-print("---Clasificador de números---")
+# print("---Clasificador de números---")
 
-def clasificar_numeros(lista_numeros):
-    positivos=[]
-    negativos=[]
+# def clasificar_numeros(lista_numeros):
+#     positivos=[]
+#     negativos=[]
 
-    for num in lista_numeros:
-        if num > 0:
-            positivos.append(num)
-        elif num < 0:
-            negativos.append(num)
+#     for num in lista_numeros:
+#         if num > 0:
+#             positivos.append(num)
+#         elif num < 0:
+#             negativos.append(num)
 
-    return positivos, negativos            
+#     return positivos, negativos            
 
-numeros=[]
-for i in range(5):
-    while True:
-        try:
-            numero=int(input(f"Ingrese el número {i+1}: "))
-            numeros.append(numero)
-            break
-        except ValueError:
-            print("Error: Ingrese un número válido.")
+# numeros=[]
+# for i in range(5):
+#     while True:
+#         try:
+#             numero=int(input(f"Ingrese el número {i+1}: "))
+#             numeros.append(numero)
+#             break
+#         except ValueError:
+#             print("Error: Ingrese un número válido.")
 
-positivos, negativos =clasificar_numeros(numeros)
+# positivos, negativos =clasificar_numeros(numeros)
 
-print(f"\nNúmeros Positivos: {positivos}" if positivos else "🔴 no hay números positivos.")
-print(f"Números Negativos: {negativos}" if negativos else "✅ no hay números positivos.")
+# print(f"\n✅ Números Positivos: {positivos}" if positivos else "🔴 no hay números positivos.")
+# print(f"🔴 Números Negativos: {negativos}" if negativos else "✅ no hay números positivos.")
+
+# if 0 in numeros:
+#     print("🔵 El número 0 no es ni negativo ni positivo.")
+
+# ---------Crea un programa que:
+# ✅ Genere automáticamente 10 números aleatorios entre -20 y 20.
+# ✅ Use la biblioteca random para generar los números.
+# ✅ Use función (def) para clasificar los números en pares e impares.
+# ✅ Use for para recorrer los números y if para la clasificación.-
+
+print("---Clasificador de Números Pares e Impares con random---")
+par=[]
+impar=[]
+numeros=[random.randint(-20,20) for _ in range(10)]
+
+def clasificar_numeros(numeros):
+
+    for num in numeros:
+        if num % 2 == 0:
+            par.append(num)
+        elif num % 2 != 0:
+            impar.append(num)
+    return par, impar        
+
+par, impar=   clasificar_numeros(numeros)     
+
+print(f"Número Par: {par}" if par else "No hay números pares")
+print(f"Número Impar: {impar}" if impar else "No hay números impares ")
 
 if 0 in numeros:
-    print("El número 0 no es ni negativo ni positivo.")
-
-
-
-
-
+    print("El número 0 no es positivo ni negativo.")
 
 
 
