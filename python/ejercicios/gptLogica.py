@@ -2724,7 +2724,7 @@ productos = [
 # Categorías
 categorias = {
     "Alimentos": ["Manzana", "Chocolate", "Pan", "Leche", "Queso"],
-    "Electrónica": ["Laptop", "Televisor", "Teléfono", "Reloj", "Auriculares", "Mouse", "Tablet"],
+    "Electronica": ["Laptop", "Televisor", "Teléfono", "Reloj", "Auriculares", "Mouse", "Tablet"],
     "Ropa": ["Camiseta", "Pantalón", "Zapatillas"]
 }
 
@@ -2734,18 +2734,14 @@ def clasificar_productos(lista_productos):
     for producto in lista_productos:
         for categoria, items in categorias.items():
             if producto in items:
-                inventario[f"{
-                    'Alimentos' if categoria == 'Alimentos ' 
-                    else 
-                    'Electronica' if categoria == 'Electronica' 
-                    else 
-                    'Ropa'} {categoria}"].append(producto)
+                inventario[categoria].append(producto)  
+
     return inventario
 
 productos_seleccionados=random.sample(productos, 10)
 inventario=clasificar_productos(productos_seleccionados)
 
-print(f"Productos seleccionados: {productos_seleccionados}")
+print(f"\nProductos seleccionados: {productos_seleccionados}")
 
 for categoria, items in inventario.items():
     print(f"\n{categoria}:")
