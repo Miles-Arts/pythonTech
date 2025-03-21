@@ -1,4 +1,5 @@
 import random 
+import itertools
 # print("Ingresa 3 numeros: ")
 # numero1=float(input("primer número: "))
 # numero2=float(input("segundo número: "))
@@ -2686,17 +2687,29 @@ categorias = {
                       "Gafas de sol", "Falda", "Suéter", "Traje"]
 }
 
+# inventario_total=sum(categorias.values(), []) # Unir todas las listas
+inventario_total=list(itertools.chain(*categorias.values()))
 
+def inventario(lista):
+    inventario_clasificado={categoria: [] for categoria in categorias}
 
+    for item in lista:
+        for categoria, productos in categorias.items():
+            if item in productos:
+                inventario_clasificado[categoria].append(item)
 
+    return inventario_clasificado            
 
+elementos_aleatorios=random.sample(inventario_total, k=10)
 
+prodcutos_clasificados=inventario(elementos_aleatorios)
 
+print(f"\nElementos seleccionados: ")
+print(elementos_aleatorios)
 
-
-
-
-
+for categoria, productos in prodcutos_clasificados.items():
+    print(f"\n{categoria}:")
+    print(f"\n".join(productos) if productos else "No hay productos.")
 
 
 
