@@ -2804,16 +2804,61 @@ import itertools
 
 
 
+# print("---Clasificador de Números Pares e Impares---")
+
+# valor=[random.randint(-20,20) for _ in range(10)] 
+
+# def par_impar(lista):
+#     clasificador={"Pares": [], "Impares": []}
+
+#     while True:
+#         try:
+#             for identificador in lista:
+#                 if identificador % 2 == 0:
+#                     clasificador["Pares"].append(identificador)
+                   
+#                 else:
+#                     clasificador["Impares"].append(identificador)
+#                     break        
+
+#             return clasificador  
+              
+
+#         except ValueError:
+#             print("El numero no es correcto")
+
+# resultado=par_impar(valor)
+
+# print(f"\n---Clasificador de Números Pares e Impares---\n")
+
+# print(f"Números seleccionados: {valor}")
+            
+# for categoria, valor in resultado.items():
+#     print(f"Categoria {categoria}")
+#     print(f"\n".join(map(str, valor)) if valor else "No hay numeros en esa lista.")
+
 print("---Clasificador de Números Pares e Impares---")
 
+valor=[random.randint(-20,20) for _ in range(10)]
 
+def par_impar(lista):
+    clasificador={"Pares": [], "Impares": []}
 
+    for identificador in lista:
+        if identificador % 2 == 0:
+            clasificador["Pares"].append(identificador)
+        else:
+            clasificador["Impares"].append(identificador)
+    return clasificador
 
+resultado=par_impar(valor)        
 
+print(f"\n---Clasificavdor de núemros Pares e Impares---\n")
+print(f"Números seleccionadosd: {valor}")
 
-
-
-
+for categoria, numeros in resultado.items():
+    print(f"\nCategoría {categoria}:")
+    print(f"\n".join(map(str, numeros)) if numeros else "No hay números.")
 
 
 
