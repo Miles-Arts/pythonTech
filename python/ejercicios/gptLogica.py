@@ -2674,54 +2674,82 @@ import itertools
 # print(f"\n".join(ropa) if ropa else "No hay Ropa seleccionada.")
 
 
+# print("\n📦🎁 --- Sistema de Inventario de Tienda --- 📦🎁")
+
+# # Diccionario de categorías
+# categorias = {
+#     "Alimentos": ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", 
+#                      "Jugo de naranja", "Pollo", "Galletas", "Café"],
+#     "Electrónica": ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", 
+#                        "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", 
+#                        "Parlante Bluetooth", "Reloj inteligente"],
+#     "Vestimenta": ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", 
+#                       "Gafas de sol", "Falda", "Suéter", "Traje"]
+# }
+
+# # inventario_total=sum(categorias.values(), []) # Unir todas las listas
+# inventario_total=list(itertools.chain(*categorias.values()))
+
+# def inventario(lista):
+#     inventario_clasificado={categoria: [] for categoria in categorias}
+
+#     for item in lista:
+#         for categoria, productos in categorias.items():
+#             if item in productos:
+#                 inventario_clasificado[categoria].append(item)
+
+#     return inventario_clasificado            
+
+# elementos_aleatorios=random.sample(inventario_total, k=10)
+
+# prodcutos_clasificados=inventario(elementos_aleatorios)
+
+# print(f"\nElementos seleccionados: ")
+# print(elementos_aleatorios)
+
+# for categoria, productos in prodcutos_clasificados.items():
+#     print(f"\n{categoria}:")
+#     print(f"\n".join(productos) if productos else "No hay productos.")
+
+
 print("\n📦🎁 --- Sistema de Inventario de Tienda --- 📦🎁")
 
-# Diccionario de categorías
+# Lista de productos
+productos = [
+    "Manzana", "Laptop", "Camiseta", "Pantalón", "Televisor",
+    "Zapatillas", "Chocolate", "Teléfono", "Pan", "Reloj",
+    "Auriculares", "Leche", "Mouse", "Queso", "Tablet"
+]
+
+# Categorías
 categorias = {
-    "Alimentos": ["Manzanas", "Pan", "Arroz", "Yogur", "Queso", "Huevos", 
-                     "Jugo de naranja", "Pollo", "Galletas", "Café"],
-    "Electrónica": ["Laptop", "Smartphone", "Cámara", "Auriculares", "Tablet", 
-                       "Mouse inalámbrico", "Consola de videojuegos", "Teclado mecánico", 
-                       "Parlante Bluetooth", "Reloj inteligente"],
-    "Vestimenta": ["Camisa", "Vestido", "Bufanda", "Chaqueta", "Medias", "Sombrero", 
-                      "Gafas de sol", "Falda", "Suéter", "Traje"]
+    "Alimentos": ["Manzana", "Chocolate", "Pan", "Leche", "Queso"],
+    "Electrónica": ["Laptop", "Televisor", "Teléfono", "Reloj", "Auriculares", "Mouse", "Tablet"],
+    "Ropa": ["Camiseta", "Pantalón", "Zapatillas"]
 }
 
-# inventario_total=sum(categorias.values(), []) # Unir todas las listas
-inventario_total=list(itertools.chain(*categorias.values()))
+def clasificar_productos(lista_productos):
+    inventario={"Alimentos": [], "Electronica": [], "Ropa": []}
 
-def inventario(lista):
-    inventario_clasificado={categoria: [] for categoria in categorias}
+    for producto in lista_productos:
+        for categoria, items in categorias.items():
+            if producto in items:
+                inventario[f"{
+                    'Alimentos' if categoria == 'Alimentos ' 
+                    else 
+                    'Electronica' if categoria == 'Electronica' 
+                    else 
+                    'Ropa'} {categoria}"].append(producto)
+    return inventario
 
-    for item in lista:
-        for categoria, productos in categorias.items():
-            if item in productos:
-                inventario_clasificado[categoria].append(item)
+productos_seleccionados=random.sample(productos, 10)
+inventario=clasificar_productos(productos_seleccionados)
 
-    return inventario_clasificado            
+print(f"Productos seleccionados: {productos_seleccionados}")
 
-elementos_aleatorios=random.sample(inventario_total, k=10)
-
-prodcutos_clasificados=inventario(elementos_aleatorios)
-
-print(f"\nElementos seleccionados: ")
-print(elementos_aleatorios)
-
-for categoria, productos in prodcutos_clasificados.items():
+for categoria, items in inventario.items():
     print(f"\n{categoria}:")
-    print(f"\n".join(productos) if productos else "No hay productos.")
-
-
-
-
-
-
-
-
-
-
-
-
+    print(f"\n".join(items) if items else "No hay productos en está categoría.")
 
 
 
