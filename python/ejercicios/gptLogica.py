@@ -2776,33 +2776,35 @@ import itertools
 # print(f"\n".join(map (str, numeros_ceros)) if numeros_ceros else "No hay números ceros.")
             
 
-print("\n🎲 --- Clasificador de Números Aleatorios --- 🎲")
+# print("\n🎲 --- Clasificador de Números Aleatorios --- 🎲")
 
-# Generar 15 números aleatorios entre -50 y 50
-numeros = [random.randint(-50, 50) for _ in range(15)]
+# # Generar 15 números aleatorios entre -50 y 50
+# numeros = [random.randint(-50, 50) for _ in range(15)]
 
-def clasificar_numeros(lista_numeros):
-    clasificacion={"Positivos": [], "Negativos": [], "Ceros": []}
+# def clasificar_numeros(lista_numeros):
+#     clasificacion={"Positivos": [], "Negativos": [], "Ceros": []}
 
-    for numero in lista_numeros:
-        if numero > 0:
-            clasificacion["Positivos"].append(numero)
-        elif numero < 0:
-            clasificacion["Negativos"].append(numero)
-        else:
-            clasificacion["Ceros"].append(numero)  
+#     for numero in lista_numeros:
+#         if numero > 0:
+#             clasificacion["Positivos"].append(numero)
+#         elif numero < 0:
+#             clasificacion["Negativos"].append(numero)
+#         else:
+#             clasificacion["Ceros"].append(numero)  
 
-    return clasificacion
+#     return clasificacion
 
-resultado=clasificar_numeros(numeros)
+# resultado=clasificar_numeros(numeros)
 
-print(f"\nNúmeros Generados: {numeros}")
+# print(f"\nNúmeros Generados: {numeros}")
 
-for categoria, numeros in resultado.items():
-    print(f"\n{categoria}:")
-    print(f",".join(map(str, numeros)) if numeros else "No hay números en esta categoría.")
+# for categoria, numeros in resultado.items():
+#     print(f"\n{categoria}:")
+#     print(f",".join(map(str, numeros)) if numeros else "No hay números en esta categoría.")
 
 
+
+print("---Clasificador de Números Pares e Impares---")
 
 
 
