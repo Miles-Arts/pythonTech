@@ -2837,39 +2837,61 @@ import itertools
 #     print(f"Categoria {categoria}")
 #     print(f"\n".join(map(str, valor)) if valor else "No hay numeros en esa lista.")
 
-print("---Clasificador de Números Pares e Impares---")
+# print("---Clasificador de Números Pares e Impares---")
 
-valor=[random.randint(-20,20) for _ in range(10)]
+# valor=[random.randint(-20,20) for _ in range(10)]
 
-def par_impar(lista):
-    clasificador={"Pares": [], "Impares": []}
+# def par_impar(lista):
+#     clasificador={"Pares": [], "Impares": []}
 
-    for identificador in lista:
-        if identificador % 2 == 0:
-            clasificador["Pares"].append(identificador)
+#     for identificador in lista:
+#         if identificador % 2 == 0:
+#             clasificador["Pares"].append(identificador)
+#         else:
+#             clasificador["Impares"].append(identificador)
+#     return clasificador
+
+# resultado=par_impar(valor)        
+
+# print(f"\n---Clasificavdor de núemros Pares e Impares---\n")
+# print(f"Números seleccionadosd: {valor}")
+
+# for categoria, numeros in resultado.items():
+#     print(f"\nCategoría {categoria}:")
+#     print(f"\n".join(map(str, numeros)) if numeros else "No hay números.")
+
+print("\n🎲 --- Clasificador de Números Pares e Impares --- 🎲")
+
+def generar_numeros():
+    numeros=[]
+
+    # Generar 10 números aleatorios entre -20 y 20
+    while len(numeros) < 10:
+        numero=random.randint(-20,20)
+        numeros.append(numero)
+    return numeros    
+
+    # Clasificar los números en pares e impares
+def clasificar_numeros(lista_numeros):
+    pares=[]
+    impares=[]
+
+    for numero in lista_numeros:
+        if numero % 2 == 0:
+            pares.append(numero)
         else:
-            clasificador["Impares"].append(identificador)
-    return clasificador
+            impares.append(numero)
+    return pares, impares            
 
-resultado=par_impar(valor)        
+    
+    # Generar y clasificar los números
+numeros=generar_numeros()
+pares, impares=clasificar_numeros(numeros)
 
-print(f"\n---Clasificavdor de núemros Pares e Impares---\n")
-print(f"Números seleccionadosd: {valor}")
-
-for categoria, numeros in resultado.items():
-    print(f"\nCategoría {categoria}:")
-    print(f"\n".join(map(str, numeros)) if numeros else "No hay números.")
-
-
-
-
-
-
-
-
-
-
-
+    # Mostrar los resultados
+print(f"\nNúmeros generados: {numeros}")
+print(f"\n Números Pares: {pares}" if pares else "no hay números en esta categorías.")
+print(f" Números Impares: {impares}" if impares else "no hay números en esta categorías.")
 
 
 
