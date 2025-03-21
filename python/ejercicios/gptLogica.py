@@ -2712,40 +2712,96 @@ import itertools
 #     print(f"\n".join(productos) if productos else "No hay productos.")
 
 
-print("\n📦🎁 --- Sistema de Inventario de Tienda --- 📦🎁")
+# print("\n📦🎁 --- Sistema de Inventario de Tienda --- 📦🎁")
 
-# Lista de productos
-productos = [
-    "Manzana", "Laptop", "Camiseta", "Pantalón", "Televisor",
-    "Zapatillas", "Chocolate", "Teléfono", "Pan", "Reloj",
-    "Auriculares", "Leche", "Mouse", "Queso", "Tablet"
-]
+# # Lista de productos
+# productos = [
+#     "Manzana", "Laptop", "Camiseta", "Pantalón", "Televisor",
+#     "Zapatillas", "Chocolate", "Teléfono", "Pan", "Reloj",
+#     "Auriculares", "Leche", "Mouse", "Queso", "Tablet"
+# ]
 
-# Categorías
-categorias = {
-    "Alimentos": ["Manzana", "Chocolate", "Pan", "Leche", "Queso"],
-    "Electronica": ["Laptop", "Televisor", "Teléfono", "Reloj", "Auriculares", "Mouse", "Tablet"],
-    "Ropa": ["Camiseta", "Pantalón", "Zapatillas"]
-}
+# # Categorías
+# categorias = {
+#     "Alimentos": ["Manzana", "Chocolate", "Pan", "Leche", "Queso"],
+#     "Electronica": ["Laptop", "Televisor", "Teléfono", "Reloj", "Auriculares", "Mouse", "Tablet"],
+#     "Ropa": ["Camiseta", "Pantalón", "Zapatillas"]
+# }
 
-def clasificar_productos(lista_productos):
-    inventario={"Alimentos": [], "Electronica": [], "Ropa": []}
+# def clasificar_productos(lista_productos):
+#     inventario={"Alimentos": [], "Electronica": [], "Ropa": []}
 
-    for producto in lista_productos:
-        for categoria, items in categorias.items():
-            if producto in items:
-                inventario[categoria].append(producto)  
+#     for producto in lista_productos:
+#         for categoria, items in categorias.items():
+#             if producto in items:
+#                 inventario[categoria].append(producto)  
 
-    return inventario
+#     return inventario
 
-productos_seleccionados=random.sample(productos, 10)
-inventario=clasificar_productos(productos_seleccionados)
+# productos_seleccionados=random.sample(productos, 10)
+# inventario=clasificar_productos(productos_seleccionados)
 
-print(f"\nProductos seleccionados: {productos_seleccionados}")
+# print(f"\nProductos seleccionados: {productos_seleccionados}")
 
-for categoria, items in inventario.items():
-    print(f"\n{categoria}:")
-    print(f"\n".join(items) if items else "No hay productos en está categoría.")
+# for categoria, items in inventario.items():
+#     print(f"\n{categoria}:")
+#     print(f"\n".join(items) if items else "No hay productos en está categoría.")
+
+print("---Clasificador de Números Aleatorios---")
+
+numeros_aleatorios=[random.randint(-50,50) for _ in range(15)]
+
+def clasificador_de_numeros(lista):
+    positivos=[]
+    negativos=[]
+    ceros=[]
+
+    for numeros in lista:
+        if numeros > 0:
+            positivos.append(numeros)
+        elif numeros < 0:
+            negativos.append(numeros)
+        else:
+            ceros.append(numeros)   
+
+    return positivos, negativos, ceros
+
+numeros_positivos, numeros_negativos,numeros_ceros=clasificador_de_numeros(numeros_aleatorios)
+
+print(f"Números Positivos:")
+print(f"\n".join(map (str, numeros_positivos)) if numeros_positivos else "No hay números positivos.")
+print(f"\nNúmeros Negativos:")
+print(f"\n".join(map (str, numeros_negativos)) if numeros_negativos else "No hay números negativos.")
+print(f"\nNúmero Cero")
+print(f"\n".join(map (str, numeros_ceros)) if numeros_ceros else "No hay números ceros.")
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
