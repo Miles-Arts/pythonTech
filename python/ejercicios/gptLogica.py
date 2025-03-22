@@ -2860,38 +2860,150 @@ import itertools
 #     print(f"\nCategoría {categoria}:")
 #     print(f"\n".join(map(str, numeros)) if numeros else "No hay números.")
 
-print("\n🎲 --- Clasificador de Números Pares e Impares --- 🎲")
+# print("\n🎲 --- Clasificador de Números Pares e Impares --- 🎲")
 
-def generar_numeros():
-    numeros=[]
+# def generar_numeros():
+#     numeros=[]
 
-    # Generar 10 números aleatorios entre -20 y 20
-    while len(numeros) < 10:
-        numero=random.randint(-20,20)
-        numeros.append(numero)
-    return numeros    
+#     # Generar 10 números aleatorios entre -20 y 20
+#     while len(numeros) < 10:
+#         numero=random.randint(-20,20)
+#         numeros.append(numero)
+#     return numeros    
 
-    # Clasificar los números en pares e impares
-def clasificar_numeros(lista_numeros):
+#     # Clasificar los números en pares e impares
+# def clasificar_numeros(lista_numeros):
+#     pares=[]
+#     impares=[]
+
+#     for numero in lista_numeros:
+#         if numero % 2 == 0:
+#             pares.append(numero)
+#         else:
+#             impares.append(numero)
+#     return pares, impares            
+
+    
+#     # Generar y clasificar los números
+# numeros=generar_numeros()
+# pares, impares=clasificar_numeros(numeros)
+
+#     # Mostrar los resultados
+# print(f"\nNúmeros generados: {numeros}")
+# print(f"\n Números Pares: {pares}" if pares else "no hay números en esta categorías.")
+# print(f" Números Impares: {impares}" if impares else "no hay números en esta categorías.")
+
+print("\n---Clasificador de Números Positivos, Negativos y Pares---\n")
+
+numeros=[random.randint(-50,50) for _ in range(15)]
+
+def positivos_negativos_cero(lista_aleatoria):
+    positivos=[]
+    negativos=[]
+    ceros=[]
+
+    for lista in lista_aleatoria:
+        if lista > 0:
+            positivos.append(lista)
+        elif lista < 0:
+            negativos.append(lista)
+        else:
+            ceros.append(lista)    
+    return positivos, negativos, ceros            
+
+def par_impar(lista_aleatoria):
     pares=[]
     impares=[]
 
-    for numero in lista_numeros:
-        if numero % 2 == 0:
-            pares.append(numero)
+    for par_impar in lista_aleatoria:
+        if par_impar % 2 == 0:
+            pares.append(par_impar)
         else:
-            impares.append(numero)
+            impares.append(par_impar)
+
     return pares, impares            
 
-    
-    # Generar y clasificar los números
-numeros=generar_numeros()
-pares, impares=clasificar_numeros(numeros)
+positivos, negativos, ceros= positivos_negativos_cero(numeros)
+par, impar=par_impar(numeros)
 
-    # Mostrar los resultados
-print(f"\nNúmeros generados: {numeros}")
-print(f"\n Números Pares: {pares}" if pares else "no hay números en esta categorías.")
-print(f" Números Impares: {impares}" if impares else "no hay números en esta categorías.")
+print("\n---Clasificador de Números Positivos, Negativos y Pares---\n")
+print(f"Lista de números utilizados: {numeros}\n")
+
+print(f"Números Positivos: ")
+print(f"\n".join(map(str, positivos)) if positivos else "No hay números en esta sección.")
+print(f"Números Negativos: ")
+print(f"\n".join(map(str, negativos)) if negativos else "no hay números en esta sección.")
+
+if ceros == 0:
+    print(f"Numero Cero")
+    print(f"\n".join(map(str, ceros)))
+
+print(f"\n---Numeros Pares e Impares---\n")
+
+print(f"Numeros Pares: ")
+print(f"\n".join(map(str, par)) if par else "No hay números en esta lista.")
+print(f"Numeros Impares: ")
+print(f"\n".join(map(str, impar)) if impar else "No hay núermos en esta lista.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
