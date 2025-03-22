@@ -3078,12 +3078,12 @@ pares_impares=clasificacion_pares_impares(numeros)
 print(f"\n--- Clasificador de Números ---")
 print(f"Números generados: {numeros}")
 
-print("\n--- Clasificación Positivos/Negativs/Ceros ---")
+print("\n--- Clasificación Positivos/Negativos/Ceros ---")
 for categoria, valores in positivos_negativos.items():
     print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
 
 print("\n--- Categoría Pares/Impares ---")
-for categoris, valor in pares_impares.items():
+for categoria, valores in pares_impares.items():
     print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
 
 
