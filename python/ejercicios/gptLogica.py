@@ -3137,49 +3137,182 @@ import itertools
 
 
 
-print("\n--- 📊 Calculadora de Promedio y Clasificación de Notas ---\n")
+# print("\n--- 📊 Calculadora de Promedio y Clasificación de Notas ---\n")
 
 
-def pedir_notas(lista_notas):
+# def pedir_notas(lista_notas):
 
-    for i in range(5):
-        while True:
-            try:
-                nota=float(input(f"Ingrese la nota {i+1}: "))
-                if 0.0 <= nota <= 5.0:
-                    lista_notas.append(nota)
-                    break
-                else:
-                    print("Error: la nota debe estar entre 0.0 y 5.0")
+#     for i in range(5):
+#         while True:
+#             try:
+#                 nota=float(input(f"Ingrese la nota {i+1}: "))
+#                 if 0.0 <= nota <= 5.0:
+#                     lista_notas.append(nota)
+#                     break
+#                 else:
+#                     print("Error: la nota debe estar entre 0.0 y 5.0")
             
-            except ValueError:
-                print("Error: Ingrese un número válido.")
+#             except ValueError:
+#                 print("Error: Ingrese un número válido.")
 
-def calcular_promedio(lista_notas):
+# def calcular_promedio(lista_notas):
 
-    return sum(lista_notas)  / len(lista_notas)
+#     return sum(lista_notas)  / len(lista_notas)
 
-def clasificar_promedio(promedio):
+# def clasificar_promedio(promedio):
 
-    if promedio > 4.5:
-        return "Excelente!"
-    elif promedio > 3.5:
-        return "Bueno!"
-    elif promedio > 3.0:
+#     if promedio > 4.5:
+#         return "Excelente!"
+#     elif promedio > 3.5:
+#         return "Bueno!"
+#     elif promedio > 3.0:
+#         return "Regular"
+#     else:
+#         return "Insificiente!"
+
+# notas = []
+
+# pedir_notas(notas)
+# promedio=calcular_promedio(notas)
+# clasificacion=clasificar_promedio(promedio)
+
+# print(f"\n---Resultados---")
+# print(f"notas ingresadas: {notas}")
+# print(f"Promedio obtenido: {promedio:.2f}")
+# print(f"Clasificación: {clasificacion}")
+
+
+def calcular_promedio(notas):
+
+    return sum(notas) / len(notas)
+
+def clasificacion_promedio(promedio):
+
+    if promedio >= 4.5:
+        return "Excelente"
+    elif 3.5 <= promedio < 4.5:
+        return "Bueno"
+    elif 3.0 <= promedio < 3.5:
         return "Regular"
     else:
-        return "Insificiente!"
+        return "Insuficiente"
 
-notas = []
+notas=[]
+for i in range(5):
+    while True:
+        try:
+            print(f"Ingrese la nota {i+1} entre (0 - 5): ")
+            nota=float(input(f"Nota: "))
+            if 0 <= nota <= 5:
+                notas.append(nota)
+                break
+            else:
+                print("Error: La nota debe estar entre 0 y 5.")
 
-pedir_notas(notas)
+        except ValueError:
+            print("Error: Ingrese un número válido.")        
+
 promedio=calcular_promedio(notas)
-clasificacion=clasificar_promedio(promedio)
+categoria=clasificacion_promedio(promedio)
 
 print(f"\n---Resultados---")
-print(f"notas ingresadas: {notas}")
-print(f"Promedio obtenido: {promedio:.2f}")
-print(f"Clasificación: {clasificacion}")
+print(f"Notas ingresadas {notas}")
+print(f"Promedio: {promedio:.2f}")
+print(f"Clasificación: {categoria}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
