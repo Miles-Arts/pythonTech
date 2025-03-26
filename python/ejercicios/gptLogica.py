@@ -3086,70 +3086,100 @@ import itertools
 # for categoria, valores in pares_impares.items():
 #     print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
 
-print("---Calculadora de Promedio y Clasificación de Notas---")
-notas=[]
+# print("---Calculadora de Promedio y Clasificación de Notas---")
+# notas=[]
+
+# def pedir_notas(lista_notas):
+    
+#     for i in range(5):
+#         print(f"Nota {i+1} ")
+#         nota=input("Ingrese la nota: ")
+
+#         if nota.isdigit():
+#             nota=int(nota)
+#             notas.append(nota)
+#         else:
+#             print("Ingrese un parámetro válido.")    
+#     return notas
+
+# def calcular_notas(lista_notas):
+
+#     numero_notas=len(notas)
+#     suma_notas=sum(notas)
+#     promedio_notas=suma_notas/numero_notas
+
+#     return promedio_notas
+
+# def clasificar_promedio(lista_notas):
+#     clasificador=lista_notas
+
+#     if clasificador > 4.5:
+#         print(f"Excelente!")
+#     elif 3.5 < clasificador < 4.4:
+#         print(f"Bueno!")     
+#     elif 3.0 < clasificador < 3.4:
+#         print("Regular!")
+#     else:
+#         print("Insuficiente!")    
+
+#     return   clasificador
+
+# pedir_notas(notas)
+# promedio=calcular_notas(notas)
+# clasificacion=clasificar_promedio(promedio)
+
+# print("---Resultados Notas---")
+
+# print(f"\nEl Promedio de notas")
+# print(f"Resultado: {promedio}")
+# print(f"El estudiantes sacó un {clasificacion}.")
+
+
+
+
+print("\n--- 📊 Calculadora de Promedio y Clasificación de Notas ---\n")
+
 
 def pedir_notas(lista_notas):
-    
+
     for i in range(5):
-        print(f"Nota {i+1} ")
-        nota=input("Ingrese la nota: ")
+        while True:
+            try:
+                nota=float(input(f"Ingrese la nota {i+1}: "))
+                if 0.0 <= nota <= 5.0:
+                    lista_notas.append(nota)
+                    break
+                else:
+                    print("Error: la nota debe estar entre 0.0 y 5.0")
+            
+            except ValueError:
+                print("Error: Ingrese un número válido.")
 
-        if nota.isdigit():
-            nota=int(nota)
-            notas.append(nota)
-        else:
-            print("Ingrese un parámetro válido.")    
-    return notas
+def calcular_promedio(lista_notas):
 
-def calcular_notas(lista_notas):
+    return sum(lista_notas)  / len(lista_notas)
 
-    numero_notas=len(notas)
-    suma_notas=sum(notas)
-    promedio_notas=suma_notas/numero_notas
+def clasificar_promedio(promedio):
 
-    return promedio_notas
-
-def clasificar_promedio(lista_notas):
-    clasificador=lista_notas
-
-    if clasificador > 4.5:
-        print(f"Excelente!")
-    elif 3.5 < clasificador < 4.4:
-        print(f"Bueno!")     
-    elif 3.0 < clasificador < 3.4:
-        print("Regular!")
+    if promedio > 4.5:
+        return "Excelente!"
+    elif promedio > 3.5:
+        return "Bueno!"
+    elif promedio > 3.0:
+        return "Regular"
     else:
-        print("Insuficiente!")    
+        return "Insificiente!"
 
-    return   clasificador
+notas = []
 
 pedir_notas(notas)
-promedio=calcular_notas(notas)
+promedio=calcular_promedio(notas)
 clasificacion=clasificar_promedio(promedio)
 
-print("---Resultados Notas---")
-
-print(f"\nEl Promedio de notas")
-print(f"Resultado: {promedio}")
-print(f"El estudiantes sacó un {clasificacion}.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(f"\n---Resultados---")
+print(f"notas ingresadas: {notas}")
+print(f"Promedio obtenido: {promedio:.2f}")
+print(f"Clasificación: {clasificacion}")
 
 
 
