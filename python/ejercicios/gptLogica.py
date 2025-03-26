@@ -3006,98 +3006,133 @@ import itertools
 # print("\n".join(map(str, impares)) if impares else "No hay números impares.")
 
 
-def generar_numeros(cantidad, rango_min, rango_max):
-    """
-    Generar una lista de números aleatorios.
+# def generar_numeros(cantidad, rango_min, rango_max):
+#     """
+#     Generar una lista de números aleatorios.
 
-    Args:
-        cantidad (int): Cantidad de números a generar.
-        rango_min (int): Valor mínimo del rango.
-        rango_maz (int): Valor máximo del rango.
+#     Args:
+#         cantidad (int): Cantidad de números a generar.
+#         rango_min (int): Valor mínimo del rango.
+#         rango_maz (int): Valor máximo del rango.
 
-    Returns:
-        list: Lista de números generados.        
+#     Returns:
+#         list: Lista de números generados.        
 
-    """
+#     """
 
-    return [random.randint(rango_min, rango_max) for _ in range(cantidad)]
+#     return [random.randint(rango_min, rango_max) for _ in range(cantidad)]
 
 
-def clasificar_positivos_negativos(lista_numeros):
-    """
-    Clasificar los números positivos, negativos y ceros.
+# def clasificar_positivos_negativos(lista_numeros):
+#     """
+#     Clasificar los números positivos, negativos y ceros.
 
-    Args: 
-        lista_numeros (list): Lista d enpuemros a clasificar.
+#     Args: 
+#         lista_numeros (list): Lista d enpuemros a clasificar.
 
-    Returns:
-        dict: Diccionario con las categorías "Positivas", "Negaticas" y "Ceros."    
-    """
+#     Returns:
+#         dict: Diccionario con las categorías "Positivas", "Negaticas" y "Ceros."    
+#     """
 
-    clasificacion= {"Positivos": [], "Negativos": [], "Ceros": []}
+#     clasificacion= {"Positivos": [], "Negativos": [], "Ceros": []}
 
-    for numeros in lista_numeros:
-        if numeros > 0:
-            clasificacion["Positivos"].append(numeros)
-        elif numeros < 0:
-            clasificacion["Negativos"].append(numeros)
+#     for numeros in lista_numeros:
+#         if numeros > 0:
+#             clasificacion["Positivos"].append(numeros)
+#         elif numeros < 0:
+#             clasificacion["Negativos"].append(numeros)
+#         else:
+#             clasificacion["Ceros"].append(numeros)
+
+#     return clasificacion               
+
+# def clasificacion_pares_impares(lista_numeros):
+#     """
+#     Clasifica los números en pares e impares.
+
+#     Args:
+#         lista_numeros (list): Lista números a clasificar.
+#     Returns:
+#         dict: Diccionario con las categorias "Pares" e "Impares".    
+
+#     """
+
+#     clasificacion={"Pares": [], "Impares": []}
+
+#     for numero in lista_numeros:
+#         if numero % 2 == 0:
+#             clasificacion["Pares"].append(numero)
+#         else:
+#             clasificacion["Impares"].append(numero)    
+
+#     return clasificacion        
+
+# # Generar números Aleatorios
+# numeros=generar_numeros(cantidad=15, rango_min=-50,rango_max=50)
+
+# # Clasificar números
+# positivos_negativos=clasificar_positivos_negativos(numeros)
+# pares_impares=clasificacion_pares_impares(numeros)
+
+# # Mostrar resultados
+# print(f"\n--- Clasificador de Números ---")
+# print(f"Números generados: {numeros}")
+
+# print("\n--- Clasificación Positivos/Negativos/Ceros ---")
+# for categoria, valores in positivos_negativos.items():
+#     print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
+
+# print("\n--- Categoría Pares/Impares ---")
+# for categoria, valores in pares_impares.items():
+#     print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
+
+print("---Calculadora de Promedio y Clasificación de Notas---")
+notas=[]
+
+def pedir_notas(lista_notas):
+    
+    for i in range(5):
+        print(f"Nota {i+1} ")
+        nota=input("Ingrese la nota: ")
+
+        if nota.isdigit():
+            nota=int(nota)
+            notas.append(nota)
         else:
-            clasificacion["Ceros"].append(numeros)
+            print("Ingrese un parámetro válido.")    
+    return notas
 
-    return clasificacion               
+def calcular_notas(lista_notas):
 
-def clasificacion_pares_impares(lista_numeros):
-    """
-    Clasifica los números en pares e impares.
+    numero_notas=len(notas)
+    suma_notas=sum(notas)
+    promedio_notas=suma_notas/numero_notas
 
-    Args:
-        lista_numeros (list): Lista números a clasificar.
-    Returns:
-        dict: Diccionario con las categorias "Pares" e "Impares".    
+    return promedio_notas
 
-    """
+def clasificar_promedio(lista_notas):
+    clasificador=lista_notas
 
-    clasificacion={"Pares": [], "Impares": []}
+    if clasificador > 4.5:
+        print(f"Excelente!")
+    elif 3.5 < clasificador < 4.4:
+        print(f"Bueno!")     
+    elif 3.0 < clasificador < 3.4:
+        print("Regular!")
+    else:
+        print("Insuficiente!")    
 
-    for numero in lista_numeros:
-        if numero % 2 == 0:
-            clasificacion["Pares"].append(numero)
-        else:
-            clasificacion["Impares"].append(numero)    
+    return   clasificador
 
-    return clasificacion        
+pedir_notas(notas)
+promedio=calcular_notas(notas)
+clasificacion=clasificar_promedio(promedio)
 
-# Generar números Aleatorios
-numeros=generar_numeros(cantidad=15, rango_min=-50,rango_max=50)
+print("---Resultados Notas---")
 
-# Clasificar números
-positivos_negativos=clasificar_positivos_negativos(numeros)
-pares_impares=clasificacion_pares_impares(numeros)
-
-# Mostrar resultados
-print(f"\n--- Clasificador de Números ---")
-print(f"Números generados: {numeros}")
-
-print("\n--- Clasificación Positivos/Negativos/Ceros ---")
-for categoria, valores in positivos_negativos.items():
-    print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
-
-print("\n--- Categoría Pares/Impares ---")
-for categoria, valores in pares_impares.items():
-    print(f"{categoria}: {valores}" if valores else f"{categoria}: No hay números en esta categoría.")
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(f"\nEl Promedio de notas")
+print(f"Resultado: {promedio}")
+print(f"El estudiantes sacó un {clasificacion}.")
 
 
 
