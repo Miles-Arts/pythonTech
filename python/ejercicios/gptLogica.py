@@ -3182,68 +3182,101 @@ import itertools
 # print(f"Clasificación: {clasificacion}")
 
 
-def calcular_promedio(notas):
+# def calcular_promedio(notas):
 
-    return sum(notas) / len(notas)
+#     return sum(notas) / len(notas)
 
-def clasificacion_promedio(promedio):
+# def clasificacion_promedio(promedio):
 
-    if promedio >= 4.5:
-        return "Excelente"
-    elif 3.5 <= promedio < 4.5:
-        return "Bueno"
-    elif 3.0 <= promedio < 3.5:
-        return "Regular"
-    else:
-        return "Insuficiente"
+#     if promedio >= 4.5:
+#         return "Excelente"
+#     elif 3.5 <= promedio < 4.5:
+#         return "Bueno"
+#     elif 3.0 <= promedio < 3.5:
+#         return "Regular"
+#     else:
+#         return "Insuficiente"
 
-notas=[]
+# notas=[]
+# for i in range(5):
+#     while True:
+#         try:
+#             print(f"Ingrese la nota {i+1} entre (0 - 5): ")
+#             nota=float(input(f"Nota: "))
+#             if 0 <= nota <= 5:
+#                 notas.append(nota)
+#                 break
+#             else:
+#                 print("Error: La nota debe estar entre 0 y 5.")
+
+#         except ValueError:
+#             print("Error: Ingrese un número válido.")        
+
+# promedio=calcular_promedio(notas)
+# categoria=clasificacion_promedio(promedio)
+
+# print(f"\n---Resultados---")
+# print(f"Notas ingresadas {notas}")
+# print(f"Promedio: {promedio:.2f}")
+# print(f"Clasificación: {categoria}")
+
+
+# ()
+
+print("\n👶👦🧑👴 --- Clasificador de Edades --- 👴🧑👦👶")
+
+edades=[]
+
 for i in range(5):
     while True:
         try:
-            print(f"Ingrese la nota {i+1} entre (0 - 5): ")
-            nota=float(input(f"Nota: "))
-            if 0 <= nota <= 5:
-                notas.append(nota)
+            edad=int(input(f"\nIngrese la edad de la persona {i+1}: "))
+            if 0 <= edad <= 100:
+                edades.append(edad)
                 break
             else:
-                print("Error: La nota debe estar entre 0 y 5.")
+                print("Error: Ingrese una edad entre 0 y 100.")
+        
+        except ValueError: 
+            print("Error: Ingrese un número válido.")    
 
-        except ValueError:
-            print("Error: Ingrese un número válido.")        
 
-promedio=calcular_promedio(notas)
-categoria=clasificacion_promedio(promedio)
+def calcular_promedio(lista_edades):
+    return sum(lista_edades) / len(lista_edades)
+
+
+def clasificar_edades(lista_edades):
+
+    clasificacion= {
+        "Niños": [],
+        "Adolecentes": [],
+        "Adultos": [],
+        "Adulto Mayor": []
+    }
+
+    for edad in lista_edades:
+
+        if 0 <= edad <= 12:
+            clasificacion["Niños"].append(edad)
+        elif 13 <= edad <= 17:
+            clasificacion["Adolecentes"].append(edad)
+        elif 18 <= edad <= 64:
+            clasificacion["Adultos"].append(edad)
+        else:
+            clasificacion["Adulto Mayor"].append(edad)
+
+    return clasificacion                    
+
+
+promedio=calcular_promedio(edades)
+clasificacion=clasificar_edades(edades)
 
 print(f"\n---Resultados---")
-print(f"Notas ingresadas {notas}")
-print(f"Promedio: {promedio:.2f}")
-print(f"Clasificación: {categoria}")
+print(f"Edades ingresadas: {', '.join(map(str, edades))}")
+print(f"Promedio de edades: {promedio:.2f}\n")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for categoris, lista in clasificacion.items():
+    print(f"{categoris}: {', '.join(map(str, lista)) if lista else "Ninguno."}")
 
 
 
