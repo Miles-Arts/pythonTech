@@ -3410,23 +3410,23 @@ def mostrar_menu():
 
     print("\n---Gestor de Ateras Pendientes---")
     print("1. Agregar tarea.")
-    print("2. Mostrar tareas pendienmtes.")
+    print("2. Mostrar tareas pendientes.")
     print("3. Completar tarea.")
     print("4. Salir.")
 
 
 def agregar_tarea():
 
-    tarea=input("Ingrese la tarea pendien: ").strip()   
-    with open("tareas.txt", "w") as arhcivo:
-        arhcivo.write(tarea + "\n")
+    tarea=input("Ingrese la tarea pendiente: ").strip()   
+    with open("tareas.txt", "a") as archivo:
+        archivo.write(tarea + "\n")
     print("Tarea agregada con éxito.")     
 
 
 def mostrar_tareas():
 
     try:
-        with open("tareas", "r") as archivo:
+        with open("tareas.txt", "r") as archivo:
             tareas=archivo.readlines()
         if tareas:
             print("\n---Tareas Pendientes---")
@@ -3450,8 +3450,8 @@ def completar_tarea():
             return
         print("\n---Tareas pendoentes---")    
 
-        for i, tareas in enumerate(tareas, start=1):
-            print(f"{i}. {tareas.strip()}")
+        for i, tarea in enumerate(tareas, start=1):
+            print(f"{i}. {tarea.strip()}")
         numero=int(input("Ingrese el número de la teras completada: "))    
 
         if 1 <= numero <= len(tareas):
@@ -3472,7 +3472,7 @@ def completar_tarea():
 
 while True:
     mostrar_menu()
-    opcion=input("Seleciones una opción: ").strip()
+    opcion=input("Selecione una opción: ").strip()
 
     if opcion == "1":
         agregar_tarea()
@@ -3480,6 +3480,8 @@ while True:
         mostrar_tareas()
     elif opcion == "3":
         completar_tarea()
+    elif opcion == "4":
+        print("Hasta luego!")    
         break
     else:
         print("Opción inválida. Intente de nuevo.")        
