@@ -3487,15 +3487,15 @@ import itertools
 #         print("Opción inválida. Intente de nuevo.")        
 
 
-palabras=input("\nIngrese palabra: ")
+# palabras=input("\nIngrese palabra: ")
 
-total=0
-vocales="aeiouAEIOUáéíóúÁÉÍÓÚ"
+# total=0
+# vocales="aeiouAEIOUáéíóúÁÉÍÓÚ"
 
-for letras in list(palabras):
-    if letras in vocales:
-        total+=1
-print(f"Total vocales: {total}")
+# for letras in list(palabras):
+#     if letras in vocales:
+#         total+=1
+# print(f"Total vocales: {total}")
 
 
 
