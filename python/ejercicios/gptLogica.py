@@ -3498,23 +3498,99 @@ import itertools
 # print(f"Total vocales: {total}")
 
 
+# print("\n---Lista de Compras---\n")
+
+# def mostrar_menu():
+
+#     print("\n---Gestor de Lista de Compras---")
+#     print("1. Agregar compra.")
+#     print("2. Mostrar compra pendientes.")
+#     print("3. Salir.")
+
+# def agregar_productos():
+
+#     compra=input("Ingrese producto compra: ").strip()   
+#     with open("compras.txt", "a") as archivo:
+#         archivo.write(compra + "\n")
+#     print("Producto agregado con éxito.")  
 
 
+# def mostrar_productos():
+
+#     try:
+#         with open("compras.txt", "r") as archivo:
+#             compras=archivo.readlines()
+#         if compras:
+#             print("\n---Tareas Pendientes---")
+#             for i, compra in enumerate(compras, start=1):
+#                 print(f"{i}. {compra.strip()}")    
+#         else:
+#             print("No hay productos en la lista.")     
+
+#     except FileNotFoundError:
+#         print("No hay productos pendintes. El archivo no existe.")   
 
 
+# while True:
+#     mostrar_menu()
+#     opcion=input("Selecione una opción: ").strip()
+
+#     if opcion == "1":
+#         agregar_productos()
+#     elif opcion == "2":
+#         mostrar_productos()
+#     elif opcion == "3":
+#         print("--Salida---")
+#         break    
+#     else:
+#         print("Opción inválida. Intente de nuevo.") 
+
+print("\n---Lista de Compras---\n")
 
 
+def mostrar_menu():
 
+    print("\n---Gestor de Lista de compras---")
+    print("1. Agregar Productos.")
+    print("2. Mostrar lista de compras.")
+    print("3. Salir")
 
+def agregar_producto():
 
+    producto=input("Ingrese nombre del producto: ").strip().title()    
+    if producto:
+        with open("compras.txt", "a") as archivo:
+            archivo.write(producto + "\n")
+        print(f"\nProducto '{producto}' agregado con éxito.")
+    else:
+        print("No se puede agrgar un producto vacío.")        
 
+def mostrar_lista():
+    try:
+        with open("compras.txt", "r") as archivo:
+            productos=archivo.readlines()
+        if productos:
+            print("\n---Lista de Compras---")
+            for i, producto in enumerate(productos, start=1):
+                print(f"{i}. {producto.strip()}")
+        else:
+            print("La lista de compras está vacía.")
+    except FileNotFoundError:
+        print("No hay lista de compras. El archivo no exoste.")
 
+while True:
+    mostrar_menu()
+    opcion=input("Seleccione una opción: ").strip()
 
-
-
-
-
-
+    if opcion=="1":
+        agregar_producto()
+    elif opcion=="2":
+        mostrar_lista()
+    elif opcion=="3":
+        print("Hasta Luego!")
+        break
+    else:
+        print("Opción inválida. Intente de nuevo.")               
 
 
 
