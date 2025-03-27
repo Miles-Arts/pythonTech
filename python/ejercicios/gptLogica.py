@@ -3406,14 +3406,68 @@ import itertools
 # crear_agenda(tareas)
 
 
+def mostrar_menu():
+
+    print("\n---Gestor de Ateras Pendientes---")
+    print("1. Agregar tarea.")
+    print("2. Mostrar tareas pendienmtes.")
+    print("3. Completar tarea.")
+    print("4. Salir.")
 
 
+def agregar_tarea():
+
+    tarea=input("Ingrese la tarea pendien: ").strip()   
+    with open("tareas.txt", "w") as arhcivo:
+        arhcivo.write(tarea + "\n")
+    print("Tarea agregada con éxito.")     
 
 
+def mostrar_tareas():
+
+    try:
+        with open("tareas", "r") as archivo:
+            tareas=archivo.readlines()
+        if tareas:
+            print("\n---Tareas Pendientes---")
+            for i, tarea in enumerate(tareas, start=1):
+                print(f"{i}. {tarea.strip()}")    
+        else:
+            print("No hay tareas pendientes.")     
+
+    except FileNotFoundError:
+        print("No hay tareas pendientes. El archivo no existe.")        
 
 
+def completar_tarea():
 
+    try:
+        with open("tareas.txt", "r") as archivo:
+            tareas=archivo.readlines()
 
+        if not tareas:
+            print("No hay tareas pendientes.")
+            return
+        print("\n---Tareas pendoentes---")    
+
+        for i, tareas in enumerate(tareas, start=1):
+            print(f"{i}. {tareas.strip()}")
+        numero=int(input("Ingrese el número de la teras completada: "))    
+
+        if 1 <= numero <= len(tareas):
+            tarea_completada=tareas.pop(numero -1)
+
+            with open("tareas.txt", "w") as archivo:
+                archivo.writelines(tareas)
+                print(f"Tarea '{tarea_completada.strip()}' completada y eliminada")
+
+        else:
+            print("Número inválido.")
+            
+    except FileNotFoundError:
+        print("No hay tareas pendientes. El archivo no existe.")
+    except ValueError:
+        print("Error: Ingrese un número válido.")                    
 
 
 
