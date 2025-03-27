@@ -3406,87 +3406,96 @@ import itertools
 # crear_agenda(tareas)
 
 
-def mostrar_menu():
+# def mostrar_menu():
 
-    print("\n---Gestor de Ateras Pendientes---")
-    print("1. Agregar tarea.")
-    print("2. Mostrar tareas pendientes.")
-    print("3. Completar tarea.")
-    print("4. Salir.")
-
-
-def agregar_tarea():
-
-    tarea=input("Ingrese la tarea pendiente: ").strip()   
-    with open("tareas.txt", "a") as archivo:
-        archivo.write(tarea + "\n")
-    print("Tarea agregada con éxito.")     
+#     print("\n---Gestor de Ateras Pendientes---")
+#     print("1. Agregar tarea.")
+#     print("2. Mostrar tareas pendientes.")
+#     print("3. Completar tarea.")
+#     print("4. Salir.")
 
 
-def mostrar_tareas():
+# def agregar_tarea():
 
-    try:
-        with open("tareas.txt", "r") as archivo:
-            tareas=archivo.readlines()
-        if tareas:
-            print("\n---Tareas Pendientes---")
-            for i, tarea in enumerate(tareas, start=1):
-                print(f"{i}. {tarea.strip()}")    
-        else:
-            print("No hay tareas pendientes.")     
-
-    except FileNotFoundError:
-        print("No hay tareas pendientes. El archivo no existe.")        
+#     tarea=input("Ingrese la tarea pendiente: ").strip()   
+#     with open("tareas.txt", "a") as archivo:
+#         archivo.write(tarea + "\n")
+#     print("Tarea agregada con éxito.")     
 
 
-def completar_tarea():
+# def mostrar_tareas():
 
-    try:
-        with open("tareas.txt", "r") as archivo:
-            tareas=archivo.readlines()
+#     try:
+#         with open("tareas.txt", "r") as archivo:
+#             tareas=archivo.readlines()
+#         if tareas:
+#             print("\n---Tareas Pendientes---")
+#             for i, tarea in enumerate(tareas, start=1):
+#                 print(f"{i}. {tarea.strip()}")    
+#         else:
+#             print("No hay tareas pendientes.")     
 
-        if not tareas:
-            print("No hay tareas pendientes.")
-            return
-        print("\n---Tareas pendoentes---")    
-
-        for i, tarea in enumerate(tareas, start=1):
-            print(f"{i}. {tarea.strip()}")
-        numero=int(input("Ingrese el número de la teras completada: "))    
-
-        if 1 <= numero <= len(tareas):
-            tarea_completada=tareas.pop(numero -1)
-
-            with open("tareas.txt", "w") as archivo:
-                archivo.writelines(tareas)
-                print(f"Tarea '{tarea_completada.strip()}' completada y eliminada")
-
-        else:
-            print("Número inválido.")
-
-    except FileNotFoundError:
-        print("No hay tareas pendientes. El archivo no existe.")
-    except ValueError:
-        print("Error: Ingrese un número válido.")                    
+#     except FileNotFoundError:
+#         print("No hay tareas pendientes. El archivo no existe.")        
 
 
-while True:
-    mostrar_menu()
-    opcion=input("Selecione una opción: ").strip()
+# def completar_tarea():
 
-    if opcion == "1":
-        agregar_tarea()
-    elif opcion == "2":
-        mostrar_tareas()
-    elif opcion == "3":
-        completar_tarea()
-    elif opcion == "4":
-        print("Hasta luego!")    
-        break
-    else:
-        print("Opción inválida. Intente de nuevo.")        
+#     try:
+#         with open("tareas.txt", "r") as archivo:
+#             tareas=archivo.readlines()
+
+#         if not tareas:
+#             print("No hay tareas pendientes.")
+#             return
+#         print("\n---Tareas pendoentes---")    
+
+#         for i, tarea in enumerate(tareas, start=1):
+#             print(f"{i}. {tarea.strip()}")
+#         numero=int(input("Ingrese el número de la teras completada: "))    
+
+#         if 1 <= numero <= len(tareas):
+#             tarea_completada=tareas.pop(numero -1)
+
+#             with open("tareas.txt", "w") as archivo:
+#                 archivo.writelines(tareas)
+#                 print(f"Tarea '{tarea_completada.strip()}' completada y eliminada")
+
+#         else:
+#             print("Número inválido.")
+
+#     except FileNotFoundError:
+#         print("No hay tareas pendientes. El archivo no existe.")
+#     except ValueError:
+#         print("Error: Ingrese un número válido.")                    
 
 
+# while True:
+#     mostrar_menu()
+#     opcion=input("Selecione una opción: ").strip()
+
+#     if opcion == "1":
+#         agregar_tarea()
+#     elif opcion == "2":
+#         mostrar_tareas()
+#     elif opcion == "3":
+#         completar_tarea()
+#     elif opcion == "4":
+#         print("Hasta luego!")    
+#         break
+#     else:
+#         print("Opción inválida. Intente de nuevo.")        
+
+
+palabras=input("\nIngrese palabra: ")
+
+total=0
+vocales="aeiouAEIOUáéíóúÁÉÍÓÚ"
+
+for letras in list(palabras):
+    if letras in vocales:
+        total+=1
+print(f"Total vocales: {total}")
 
 
 
