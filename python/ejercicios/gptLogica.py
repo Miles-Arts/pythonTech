@@ -3333,31 +3333,77 @@ import itertools
 
 # -----------------------------------------------------
 
-with open("archivo_ejemplo.txt", "w") as archivo:
-    archivo.write("Hola, este es un archivo de ejemplo\n")
-    archivo.write("estamos aprendiendo manejo de archivos en Python.\n")
+# with open("archivo_ejemplo.txt", "w") as archivo:
+#     archivo.write("Hola, este es un archivo de ejemplo\n")
+#     archivo.write("estamos aprendiendo manejo de archivos en Python.\n")
 
-with open("archivo_ejemplo.txt", "r") as archivo:
-    contenido=archivo.read()
-    print("Contenido del Archivo:")
-    print(contenido)
+# with open("archivo_ejemplo.txt", "r") as archivo:
+#     contenido=archivo.read()
+#     print("Contenido del Archivo:")
+#     print(contenido)
 
-with open("archivo_ejemplo.txt", "a") as archivo:
-    archivo.write("Este es un nuevo contendio agregado\n")
+# with open("archivo_ejemplo.txt", "a") as archivo:
+#     archivo.write("Este es un nuevo contendio agregado\n")
 
-with open("archivo_ejemplo.txt", "r") as archivo:
-    contenido=archivo.read()
-    print("\nContenido actualizado del archivo.")            
-    print(contenido)            
-
-
+# with open("archivo_ejemplo.txt", "r") as archivo:
+#     contenido=archivo.read()
+#     print("\nContenido actualizado del archivo.")            
+#     print(contenido)            
 
 
+print("---Agenda Personal---")
+
+tareas=[]
+
+def crear_agenda(tarea):
+    
+    tarea={"Actividad": [""]}
+    tarea=input("Ingrese tareas pendientes: ")
+    tareas.append(tarea)
+
+    with open("agenda.txt", "w") as archivo:
+        archivo.write(tareas)
+    
+    return archivo
+
+def leer_agenda(contenido):
+    with open("agenda.txt", "r") as archivo:
+        contenido=archivo.read()
+    return contenido
+
+def check_tareas(tareas):
+    with open("agenda.txt", "a") as archivo:
+        archivo.write(tareas)
+
+
+def menu():
+    while True:
+        print("---Menú Agenda---")
+        print("Escribir 1.")    
+        print("Leer 2.")    
+        print("Tarea realizada 3.")    
+        print("Salid 4.")
+
+        try:
+            menu=int(input("Escriba la opción: "))
+
+            if menu == 1:
+                crear_agenda()
+            elif menu == 2:
+                leer_agenda()        
+            elif menu == 3:
+                check_tareas()
+            elif menu == 4:
+                print("Hasta pronto.")
+                break    
+
+        except ValueError:
+            print("Error: Ingrese un dato válido.")
 
 
 
-
-
+menu()
+crear_agenda(tareas)
 
 
 
