@@ -1,0 +1,3 @@
+Hola, este es un archivo de ejemplo
+estamos aprendiendo manejo de archivos en Python.
+Este es un nuevo contendio agregado

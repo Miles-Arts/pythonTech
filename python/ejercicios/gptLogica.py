@@ -3276,62 +3276,79 @@ import itertools
 # print(f"Promedio de edades: {promedio:.2f}\n")
 
 # for categoris, lista in clasificacion.items():
-#     print(f"{categoris}: {', '.join(map(str, lista)) if lista else "Ninguno."}")
+# #     print(f"{categoris}: {', '.join(map(str, lista)) if lista else "Ninguno."}")
 
 
-def calcular_edades(edades):
-    return sum(edades) / len(edades)
+# def calcular_edades(edades):
+#     return sum(edades) / len(edades)
 
-def clasificar_edades(edades):
+# def clasificar_edades(edades):
 
-    clasificacion={
-        "Niños": [],
-        "Adolescentes": [],
-        "Adultos": [],
-        "Adultos Mayores": [],
-    }
+#     clasificacion={
+#         "Niños": [],
+#         "Adolescentes": [],
+#         "Adultos": [],
+#         "Adultos Mayores": [],
+#     }
 
-    for edad in edades:
-        if edad < 12:
-            clasificacion["Niños"].append(edad)
-        elif 12 <= edad <=17:
-            clasificacion["Adolescentes"].append(edad)
-        elif 18 <= edad <= 64:
-            clasificacion["Adultos"].append(edad)
-        else:
-            clasificacion["Adultos Mayores"].append(edad)   
+#     for edad in edades:
+#         if edad < 12:
+#             clasificacion["Niños"].append(edad)
+#         elif 12 <= edad <=17:
+#             clasificacion["Adolescentes"].append(edad)
+#         elif 18 <= edad <= 64:
+#             clasificacion["Adultos"].append(edad)
+#         else:
+#             clasificacion["Adultos Mayores"].append(edad)   
 
-    return clasificacion               
-
-
-edades=[]
-
-for i in range(5):
-    while True:
-        try:
-            edad =int(input(f"Ingrese edad de la persona {i+1}: "))
-            if edad >= 0:
-                edades.append(edad)
-                break
-            else:
-                print("Error: La edad debe ser número positivo.")
-        except ValueError:
-            print("Error: Ingrese un número válido.")        
+#     return clasificacion               
 
 
-promedio=calcular_edades(edades)
-clasificacion=clasificar_edades(edades)
+# edades=[]
 
-print(f"\n---REsultados---")
-print(f"Edades Ingresadas: {edades}")
-print(f"Promedio Edades: {promedio}")
+# for i in range(5):
+#     while True:
+#         try:
+#             edad =int(input(f"Ingrese edad de la persona {i+1}: "))
+#             if edad >= 0:
+#                 edades.append(edad)
+#                 break
+#             else:
+#                 print("Error: La edad debe ser número positivo.")
+#         except ValueError:
+#             print("Error: Ingrese un número válido.")        
 
 
-for categoria, lista in clasificacion.items():
-    print(f"{categoria}:")
-    print(f", ".join(map(str, lista)) if lista else "No hay personas en esta categoría.")
+# promedio=calcular_edades(edades)
+# clasificacion=clasificar_edades(edades)
+
+# print(f"\n---REsultados---")
+# print(f"Edades Ingresadas: {edades}")
+# print(f"Promedio Edades: {promedio}")
 
 
+# for categoria, lista in clasificacion.items():
+#     print(f"\n{categoria}:")
+#     print(f"Edad: " + ", ".join(map(str, lista)) if lista else "No hay personas en esta categoría.")
+
+# -----------------------------------------------------
+
+with open("archivo_ejemplo.txt", "w") as archivo:
+    archivo.write("Hola, este es un archivo de ejemplo\n")
+    archivo.write("estamos aprendiendo manejo de archivos en Python.\n")
+
+with open("archivo_ejemplo.txt", "r") as archivo:
+    contenido=archivo.read()
+    print("Contenido del Archivo:")
+    print(contenido)
+
+with open("archivo_ejemplo.txt", "a") as archivo:
+    archivo.write("Este es un nuevo contendio agregado\n")
+
+with open("archivo_ejemplo.txt", "r") as archivo:
+    contenido=archivo.read()
+    print("\nContenido actualizado del archivo.")            
+    print(contenido)            
 
 
 
