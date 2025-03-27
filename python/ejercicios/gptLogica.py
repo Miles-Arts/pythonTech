@@ -3223,68 +3223,113 @@ import itertools
 
 # ()
 
-print("\n👶👦🧑👴 --- Clasificador de Edades --- 👴🧑👦👶")
+# print("\n👶👦🧑👴 --- Clasificador de Edades --- 👴🧑👦👶")
+
+# edades=[]
+
+# for i in range(5):
+#     while True:
+#         try:
+#             edad=int(input(f"\nIngrese la edad de la persona {i+1}: "))
+#             if 0 <= edad <= 100:
+#                 edades.append(edad)
+#                 break
+#             else:
+#                 print("Error: Ingrese una edad entre 0 y 100.")
+        
+#         except ValueError: 
+#             print("Error: Ingrese un número válido.")    
+
+
+# def calcular_promedio(lista_edades):
+#     return sum(lista_edades) / len(lista_edades)
+
+
+# def clasificar_edades(lista_edades):
+
+#     clasificacion= {
+#         "Niños": [],
+#         "Adolecentes": [],
+#         "Adultos": [],
+#         "Adulto Mayor": []
+#     }
+
+#     for edad in lista_edades:
+
+#         if 0 <= edad <= 12:
+#             clasificacion["Niños"].append(edad)
+#         elif 13 <= edad <= 17:
+#             clasificacion["Adolecentes"].append(edad)
+#         elif 18 <= edad <= 64:
+#             clasificacion["Adultos"].append(edad)
+#         else:
+#             clasificacion["Adulto Mayor"].append(edad)
+
+#     return clasificacion                    
+
+
+# promedio=calcular_promedio(edades)
+# clasificacion=clasificar_edades(edades)
+
+# print(f"\n---Resultados---")
+# print(f"Edades ingresadas: {', '.join(map(str, edades))}")
+# print(f"Promedio de edades: {promedio:.2f}\n")
+
+# for categoris, lista in clasificacion.items():
+#     print(f"{categoris}: {', '.join(map(str, lista)) if lista else "Ninguno."}")
+
+
+def calcular_edades(edades):
+    return sum(edades) / len(edades)
+
+def clasificar_edades(edades):
+
+    clasificacion={
+        "Niños": [],
+        "Adolescentes": [],
+        "Adultos": [],
+        "Adultos Mayores": [],
+    }
+
+    for edad in edades:
+        if edad < 12:
+            clasificacion["Niños"].append(edad)
+        elif 12 <= edad <=17:
+            clasificacion["Adolescentes"].append(edad)
+        elif 18 <= edad <= 64:
+            clasificacion["Adultos"].append(edad)
+        else:
+            clasificacion["Adultos Mayores"].append(edad)   
+
+    return clasificacion               
+
 
 edades=[]
 
 for i in range(5):
     while True:
         try:
-            edad=int(input(f"\nIngrese la edad de la persona {i+1}: "))
-            if 0 <= edad <= 100:
+            edad =int(input(f"Ingrese edad de la persona {i+1}: "))
+            if edad >= 0:
                 edades.append(edad)
                 break
             else:
-                print("Error: Ingrese una edad entre 0 y 100.")
-        
-        except ValueError: 
-            print("Error: Ingrese un número válido.")    
+                print("Error: La edad debe ser número positivo.")
+        except ValueError:
+            print("Error: Ingrese un número válido.")        
 
 
-def calcular_promedio(lista_edades):
-    return sum(lista_edades) / len(lista_edades)
-
-
-def clasificar_edades(lista_edades):
-
-    clasificacion= {
-        "Niños": [],
-        "Adolecentes": [],
-        "Adultos": [],
-        "Adulto Mayor": []
-    }
-
-    for edad in lista_edades:
-
-        if 0 <= edad <= 12:
-            clasificacion["Niños"].append(edad)
-        elif 13 <= edad <= 17:
-            clasificacion["Adolecentes"].append(edad)
-        elif 18 <= edad <= 64:
-            clasificacion["Adultos"].append(edad)
-        else:
-            clasificacion["Adulto Mayor"].append(edad)
-
-    return clasificacion                    
-
-
-promedio=calcular_promedio(edades)
+promedio=calcular_edades(edades)
 clasificacion=clasificar_edades(edades)
 
-print(f"\n---Resultados---")
-print(f"Edades ingresadas: {', '.join(map(str, edades))}")
-print(f"Promedio de edades: {promedio:.2f}\n")
-
-for categoris, lista in clasificacion.items():
-    print(f"{categoris}: {', '.join(map(str, lista)) if lista else "Ninguno."}")
+print(f"\n---REsultados---")
+print(f"Edades Ingresadas: {edades}")
+print(f"Promedio Edades: {promedio}")
 
 
-
-
-
-
-
-
+for categoria, lista in clasificacion.items():
+    print(f"{categoria}:")
+    print(f", ".join(map(str, lista)) if lista else "No hay personas en esta categoría.")
 
 
 
