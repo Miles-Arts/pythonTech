@@ -3463,14 +3463,26 @@ def completar_tarea():
 
         else:
             print("Número inválido.")
-            
+
     except FileNotFoundError:
         print("No hay tareas pendientes. El archivo no existe.")
     except ValueError:
         print("Error: Ingrese un número válido.")                    
 
 
+while True:
+    mostrar_menu()
+    opcion=input("Seleciones una opción: ").strip()
 
+    if opcion == "1":
+        agregar_tarea()
+    elif opcion == "2":
+        mostrar_tareas()
+    elif opcion == "3":
+        completar_tarea()
+        break
+    else:
+        print("Opción inválida. Intente de nuevo.")        
 
 
 
