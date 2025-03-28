@@ -3599,9 +3599,7 @@ def agregar_producto():
         archivo.write(producto + "\n")
     print(f"Producto '{producto}' agrgado con éxito.")
 
-
 def  mostrar_lista():
-
     try:
         with open("compras.txt", "r") as archivo:
             productos=archivo.readlines()
@@ -3614,9 +3612,22 @@ def  mostrar_lista():
     except FileNotFoundError:
         print("No hay lista de compras. El archivo no existe.")                
 
+while True:
+    print("\n---Menú Lista de Compras---")
+    print("1. Agregar Producto.")
+    print("2. Mostrar lista de compras.")
+    print("3. Salir")
+    opcion=input("Selecciones una opción.").strip()
 
-
-
+    if opcion=="1":
+        agregar_producto()
+    elif opcion=="2":
+        mostrar_lista()
+    elif opcion=="3":
+        print("Hasta Pronto!")        
+        break
+    else:
+        print("Opción inválida. Intente de nuevo.")
 
 
 
