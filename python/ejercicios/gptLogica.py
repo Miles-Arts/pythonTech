@@ -3594,10 +3594,10 @@ import itertools
 
 
 def agregar_producto():
-    producto=input("Ingrese el nombre dle producto: ").strip().title()
+    producto=input("Ingrese el nombre del producto: ").strip().title()
     with open("compras.txt", "a") as archivo:
         archivo.write(producto + "\n")
-    print(f"Producto '{producto}' agrgado con éxito.")
+    print(f"Producto '{producto}' agregado con éxito.")
 
 def  mostrar_lista():
     try:
