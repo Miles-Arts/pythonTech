@@ -3743,7 +3743,7 @@ try:
         else:
             print("Año fuera de rango!")  
 
-        print(f"\nAño de nacimiento estimadop: {anio_nacimiento} ")          
+        print(f"\nAño de nacimiento estimado: {anio_nacimiento} ")          
 
 except ValueError:
     print("Error: Ingrese un número válido.")
