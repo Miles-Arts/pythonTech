@@ -1,5 +1,6 @@
 import random 
 import itertools
+import string
 # print("Ingresa 3 numeros: ")
 # numero1=float(input("primer número: "))
 # numero2=float(input("segundo número: "))
@@ -3749,67 +3750,124 @@ import itertools
 #     print("Error: Ingrese un número válido.")
 
 
-print("\n---Validador de Contraseñas---\n")
+# print("\n---Validador de Contraseñas---\n")
 
-print("La contraseña debe tener más de o carácteres")
-contrasenia=input("Ingrese la contaseña: ")
-def extension_contrasenia(contrasenia):
-    while True:
+# print("La contraseña debe tener más de o carácteres")
+# contrasenia=input("Ingrese la contaseña: ")
+# def extension_contrasenia(contrasenia):
+#     while True:
         
-        if len(contrasenia) >= 8:
-            print("hola")
-        else:
-            print("Ingrese una más larga.")
+#         if len(contrasenia) >= 8:
+#             print("hola")
+#         else:
+#             print("Ingrese una más larga.")
 
-        return True    
+#         return True    
 
   
+# def validar_contrasenia(contrasenia):
+#     tiene_mayuscula=False
+#     tiene_minuscula=False
+
+#     for caracter in contrasenia:
+#         if caracter.isupper():
+#             tiene_mayuscula=True
+#         elif caracter.islower():
+#             tiene_minuscula=True
+
+#     if tiene_mayuscula and tiene_minuscula:
+#         return True
+#     else:
+#         print("Añade una letra mayuscula y una minuscula.")
+#         return False            
+
+# def validar_numero(contrasenia):
+#     tiene_numero=False
+
+#     for caracter_numero in contrasenia:
+#         if caracter_numero.isdigit():
+#             tiene_numero=True
+#             return tiene_numero
+#         else:
+#             print("No tiene número")    
+
+# def validar_caracter_especial(contrasenia):
+#     caracteres_especiales='!@#$%^&*()-_=+[]{}|;:,.<>?/'
+
+#     tiene_especial=any(caracter in caracteres_especiales for caracter in contrasenia)
+
+#     return tiene_especial
+
+# def validador_general(contrasenia):
+
+#     if extension_contrasenia() and validar_contrasenia() and validar_numero() and validar_caracter_especial():
+#         return True
+#     else:
+#         return False
+    
+# def mensaje_contrasenia():
+
+#     if validador_general() == True:
+#         print("Contraseña gusrdada con éxito!")
+#     else:
+#         print("Debe cambiar de contraseña!")        
+
+# print("\n---Validador de Contraseñas---\n")   
+
+# def validar_contrasenia(contrasenia):
+#     caracteres_especiales="!@#$%^&*()-_=+[]{}|;:,.<>?/"
+
+print("\n---Validador de Contraseñas---\n")
+print("La contraseña debe tener más de 8 caracteres, al menos una mayúscula, una minúscula, un número y un carácter especial.")
+
+contrasenia=input("Ingrese la contraseña: ")
+
+def extension_contrasenia(contrasenia):
+    return len(contrasenia) >= 8
+
 def validar_contrasenia(contrasenia):
-    tiene_mayuscula=False
-    tiene_minuscula=False
+    tiene_mayuscula=any(caracter.isupper() for caracter in contrasenia)
+    tiene_minuscula=any(caracter.islower() for caracter in contrasenia)
 
-    for caracter in contrasenia:
-        if caracter.isupper():
-            tiene_mayuscula=True
-        elif caracter.islower():
-            tiene_minuscula=True
-
-    if tiene_mayuscula and tiene_minuscula:
-        return True
-    else:
-        print("Añade una letra mayuscula y una minuscula.")
-        return False            
+    return tiene_mayuscula and tiene_minuscula    
 
 def validar_numero(contrasenia):
-    tiene_numero=False
-
-    for caracter_numero in contrasenia:
-        if caracter_numero.isdigit():
-            tiene_numero=True
-            return tiene_numero
-        else:
-            print("No tiene número")    
+    return any(caracter.isdigit() for caracter in contrasenia)
 
 def validar_caracter_especial(contrasenia):
-    caracteres_especiales='!@#$%^&*()-_=+[]{}|;:,.<>?/'
+    caracteres_especiales="!@#$%^&*()-_=+[]{}|;:,.<>?/"
+    return any(caracter in caracteres_especiales for caracter in contrasenia)
 
-    tiene_especial=any(caracter in caracteres_especiales for caracter in contrasenia)
+def 
+   
 
-    return tiene_especial
 
-def validador_general(contrasenia):
 
-    if extension_contrasenia() and validar_contrasenia() and validar_numero() and validar_caracter_especial():
-        return True
-    else:
-        return False
-    
-def mensaje_contrasenia():
 
-    if validador_general() == True:
-        print("Contraseña gusrdada con éxito!")
-    else:
-        print("Debe cambiar de contraseña!")        
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
 
    
 
