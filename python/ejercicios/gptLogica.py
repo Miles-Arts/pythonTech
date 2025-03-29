@@ -3722,46 +3722,96 @@ import itertools
 
 # print(f"\n{calculador}")
 
-print("---Calculadora de edades---")
+# print("---Calculadora de edades---")
 
-anio_actual=2025
+# anio_actual=2025
 
-try:
-    edad=int(input("Ingresa su edad_ ").strip())
+# try:
+#     edad=int(input("Ingresa su edad_ ").strip())
 
-    if edad < 0 or edad > 120:
-        print("Error: Ingrese una edad válida.")
-    else:
-        anio_nacimiento = anio_actual - edad
+#     if edad < 0 or edad > 120:
+#         print("Error: Ingrese una edad válida.")
+#     else:
+#         anio_nacimiento = anio_actual - edad
             
-        if anio_nacimiento > 2007:
-            print("Eres menor de edad.")
-        elif 1961 <= anio_nacimiento <= 2007:
-            print("Eres Adulto.")
-        elif 1900 <= anio_nacimiento < 1961:
-            print("Eres Adulto Mayor.")
+#         if anio_nacimiento > 2007:
+#             print("Eres menor de edad.")
+#         elif 1961 <= anio_nacimiento <= 2007:
+#             print("Eres Adulto.")
+#         elif 1900 <= anio_nacimiento < 1961:
+#             print("Eres Adulto Mayor.")
+#         else:
+#             print("Año fuera de rango!")  
+
+#         print(f"\nAño de nacimiento estimado: {anio_nacimiento} ")          
+
+# except ValueError:
+#     print("Error: Ingrese un número válido.")
+
+
+print("\n---Validador de Contraseñas---\n")
+
+print("La contraseña debe tener más de o carácteres")
+contrasenia=input("Ingrese la contaseña: ")
+def extension_contrasenia(contrasenia):
+    while True:
+        
+        if len(contrasenia) >= 8:
+            print("hola")
         else:
-            print("Año fuera de rango!")  
+            print("Ingrese una más larga.")
 
-        print(f"\nAño de nacimiento estimado: {anio_nacimiento} ")          
+        return True    
 
-except ValueError:
-    print("Error: Ingrese un número válido.")
+  
+def validar_contrasenia(contrasenia):
+    tiene_mayuscula=False
+    tiene_minuscula=False
 
+    for caracter in contrasenia:
+        if caracter.isupper():
+            tiene_mayuscula=True
+        elif caracter.islower():
+            tiene_minuscula=True
 
+    if tiene_mayuscula and tiene_minuscula:
+        return True
+    else:
+        print("Añade una letra mayuscula y una minuscula.")
+        return False            
 
+def validar_numero(contrasenia):
+    tiene_numero=False
 
+    for caracter_numero in contrasenia:
+        if caracter_numero.isdigit():
+            tiene_numero=True
+            return tiene_numero
+        else:
+            print("No tiene número")    
 
+def validar_caracter_especial(contrasenia):
+    caracteres_especiales='!@#$%^&*()-_=+[]{}|;:,.<>?/'
 
+    tiene_especial=any(caracter in caracteres_especiales for caracter in contrasenia)
 
+    return tiene_especial
 
+def validador_general(contrasenia):
 
+    if extension_contrasenia() and validar_contrasenia() and validar_numero() and validar_caracter_especial():
+        return True
+    else:
+        return False
+    
+def mensaje_contrasenia():
 
+    if validador_general() == True:
+        print("Contraseña gusrdada con éxito!")
+    else:
+        print("Debe cambiar de contraseña!")        
 
-
-
-
-
+   
 
 
 
