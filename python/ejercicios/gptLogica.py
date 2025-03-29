@@ -3593,41 +3593,119 @@ import itertools
 #         print("Opción inválida. Intente de nuevo.")               
 
 
-def agregar_producto():
-    producto=input("Ingrese el nombre del producto: ").strip().title()
-    with open("compras.txt", "a") as archivo:
-        archivo.write(producto + "\n")
-    print(f"Producto '{producto}' agregado con éxito.")
+# def agregar_producto():
+#     producto=input("Ingrese el nombre del producto: ").strip().title()
+#     with open("compras.txt", "a") as archivo:
+#         archivo.write(producto + "\n")
+#     print(f"Producto '{producto}' agregado con éxito.")
 
-def  mostrar_lista():
-    try:
-        with open("compras.txt", "r") as archivo:
-            productos=archivo.readlines()
-        if productos:
-            print("---Lista Compras---")
-            for i, producto in enumerate(productos, start=1):
-                print(f"{i}. {producto.strip()}")
-        else:
-            print("La lista de compras está vacia.")
-    except FileNotFoundError:
-        print("No hay lista de compras. El archivo no existe.")                
+# def  mostrar_lista():
+#     try:
+#         with open("compras.txt", "r") as archivo:
+#             productos=archivo.readlines()
+#         if productos:
+#             print("---Lista Compras---")
+#             for i, producto in enumerate(productos, start=1):
+#                 print(f"{i}. {producto.strip()}")
+#         else:
+#             print("La lista de compras está vacia.")
+#     except FileNotFoundError:
+#         print("No hay lista de compras. El archivo no existe.")                
 
-while True:
-    print("\n---Menú Lista de Compras---")
-    print("1. Agregar Producto.")
-    print("2. Mostrar lista de compras.")
-    print("3. Salir")
-    opcion=input("Selecciones una opción.").strip()
+# while True:
+#     print("\n---Menú Lista de Compras---")
+#     print("1. Agregar Producto.")
+#     print("2. Mostrar lista de compras.")
+#     print("3. Salir")
+#     opcion=input("Selecciones una opción.").strip()
 
-    if opcion=="1":
-        agregar_producto()
-    elif opcion=="2":
-        mostrar_lista()
-    elif opcion=="3":
-        print("Hasta Pronto!")        
+#     if opcion=="1":
+#         agregar_producto()
+#     elif opcion=="2":
+#         mostrar_lista()
+#     elif opcion=="3":
+#         print("Hasta Pronto!")        
+#         break
+#     else:
+#         print("Opción inválida. Intente de nuevo.")
+
+
+
+# print("\n---Adivina un numero---\n")
+
+# # numeros=[random.randint(1,100) for _ in range(1)]
+# numeros=random.randint(1,100)
+
+# for i in range(5):
+#     print("\nIngrese un número entre 1 y 100.")
+#     print(f"Intento {i+1}.")
+#     numero=input("Ingrese el número: ").strip()
+
+#     if numero.isdigit():
+#         numero=int(numero)
+#         if numero == numeros:
+#             print(f"\nGanastaste el número ganador es: {numeros}")
+#             break
+#         elif numero > numeros:
+#             print("\nEl número ingresado es mayor!")
+#         elif numero < numeros:
+#             print("El número ingresado es menor!")
+#         else:
+#             print("Escribe un número válido.")   
+
+#     else:
+#         print("9\nIngrese un número correcto.")    
+
+# print("Gracias por jugar fin")
+
+
+# print("---Adivina el número---")
+# numero_secreto=random.randint(1,100)
+
+# for i in range(5):
+#     print("\nIntenta adivinar el número entre 1 y 100.")
+#     numero=input("Ingrese un número: ").strip()
+
+#     if numero.isdigit():
+#         numero=int(numero)
+
+#         if numero==numero_secreto:
+#             print(f"Ganaste! el número secreto es: {numero_secreto}")
+#             break
+#         elif numero > numero_secreto:
+#             print("El número secreto es mayor!")
+#         else:
+#             print("El número secreto es menor!")    
+#     else:
+#         print("Error: Ingrese un número válido!")
+
+# print(f"\nEl número secreto era: {numero_secreto}")
+# print("Gracias por jugar!")        
+
+print("\n---Adivina el número---")
+numero_secreto=random.randint(1,100)
+intentos=5
+
+print(f"Tienes {intentos} intenmtos para adivinar el número secreto entre 1 y 100.")
+
+for i in range(intentos):
+    while True:
+        try:
+            numero=int(input(f"Intento {i+1}: Ingresa un número: ").strip())
+            break
+        except ValueError:
+            print("Error: Ingresa un númerp válido.")
+    if numero==numero_secreto:
+        print(f"Ganaste! el número ganador era {numero_secreto}")
         break
+    elif numero < numero_secreto:
+        print("El número secreto mayor.")
     else:
-        print("Opción inválida. Intente de nuevo.")
+        print("el número secreto es menor.")
+
+else:
+    print(f"Lo siento, has perdido. el número secreto era_ {numero_secreto}")
+
 
 
 
