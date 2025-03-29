@@ -3682,29 +3682,83 @@ import itertools
 # print(f"\nEl número secreto era: {numero_secreto}")
 # print("Gracias por jugar!")        
 
-print("\n---Adivina el número---")
-numero_secreto=random.randint(1,100)
-intentos=5
+# print("\n---Adivina el número---")
+# numero_secreto=random.randint(1,100)
+# intentos=5
 
-print(f"Tienes {intentos} intenmtos para adivinar el número secreto entre 1 y 100.")
+# print(f"Tienes {intentos} intentos para adivinar el número secreto entre 1 y 100.")
 
-for i in range(intentos):
-    while True:
-        try:
-            numero=int(input(f"Intento {i+1}: Ingresa un número: ").strip())
-            break
-        except ValueError:
-            print("Error: Ingresa un númerp válido.")
-    if numero==numero_secreto:
-        print(f"Ganaste! el número ganador era {numero_secreto}")
-        break
-    elif numero < numero_secreto:
-        print("El número secreto mayor.")
+# for i in range(intentos):
+#     while True:
+#         try:
+#             numero=int(input(f"Intento {i+1}: Ingresa un número: ").strip())
+#             break
+#         except ValueError:
+#             print("Error: Ingresa un número válido.")
+#     if numero==numero_secreto:
+#         print(f"Ganaste! el número ganador era {numero_secreto}")
+#         break
+#     elif numero < numero_secreto:
+#         print("El número secreto mayor.")
+#     else:
+#         print("el número secreto es menor.")
+
+# else:
+#     print(f"Lo siento, has perdido. el número secreto era_ {numero_secreto}")
+
+
+# print("---Calcularo de edades---")
+
+# anio_actual=2025
+# edades=int(input("Ingrese su edad: ").strip())
+# calculador=anio_actual-edades
+
+# if 2007 < calculador <= 2025:
+#     print("Eres menor de edad!")
+# elif 2007 >= calculador >= 1961:
+#     print("Eres Adulto.")
+# elif 1962 >= calculador >= 1900:
+#     print("Eres Adulto Mayor.")        
+
+# print(f"\n{calculador}")
+
+print("---Calculadora de edades---")
+
+anio_actual=2025
+
+try:
+    edad=int(input("Ingresa su edad_ ").strip())
+
+    if edad < 0 or edad > 120:
+        print("Error: Ingrese una edad válida.")
     else:
-        print("el número secreto es menor.")
+        anio_nacimiento = anio_actual - edad
+            
+        if anio_nacimiento > 2007:
+            print("Eres menor de edad.")
+        elif 1961 <= anio_nacimiento <= 2007:
+            print("Eres Adulto.")
+        elif 1900 <= anio_nacimiento < 1961:
+            print("Eres Adulto Mayor.")
+        else:
+            print("Año fuera de rango!")  
 
-else:
-    print(f"Lo siento, has perdido. el número secreto era_ {numero_secreto}")
+        print(f"\nAño de nacimiento estimadop: {anio_nacimiento} ")          
+
+except ValueError:
+    print("Error: Ingrese un número válido.")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
