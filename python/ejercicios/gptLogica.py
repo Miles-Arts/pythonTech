@@ -3977,10 +3977,115 @@ import string
 
 # -------------------------------------------
 
+def analizar_texto(texto):
+
+    resultados={
+        "num_caracteres": 0,
+        "num_palabras": 0,
+        "num_oraciones": 0,
+        "frecuencia_palabras": {},
+        "palabra_mas_comun": "",
+        "frecuencia_maxima": 0,
+        "longitud_promedio_palabras": 0
+    }
+
+    if not texto:
+        return resultados
+    
+    resultados["num_caracteres"]=sum(1 for caracter in texto if caracter.strip())
+
+    palabras=[palabra.lower() for palabra in texto.split() if palabra.strip()]
+    resultados["num_palabras"]=len(palabras)
+
+    signos_finales=[".","!","?"]
+    resultados["num_oraciones"]=sum(1 for caracter in texto if caracter in signos_finales)
+
+    if resultados["num_oraciones"]== 0 and texto.strip():
+        resultados["num_oraciones"]=1
+
+    for palabra in palabras:
+        palabra_limpia=palabra.strip('.,!?:;"\'-') 
+        if palabra_limpia:
+            resultados["frecuencia_palabras"][palabra_limpia]=resultados["frecuencia_palabras"].get(palabra_limpia, 0) + 1 
+
+    if resultados["frecuencia_palabras"]:
+        resultados["palabra_mas_comun"], resultados["frecuencia_maxima"]= max(
+            resultados["frecuencia_palabras"].items(),
+            key=lambda x: x[1]
+        )
+
+    if resultados["num_palabras"] > 0:
+        suma_longitudes=sum(len(palabra) for palabra in palabras)
+        resultados["longitud_promedio_palabras"]=round(suma_longitudes / resultados["num_palabras"], 2)    
+
+    return resultados
+
+def mostrar_resultados(estadisticas):
+
+    print(f"\n---Resultados del análisis---")
+    print(f"Número de catracteres: {estadisticas["num_caracteres"]}")
+    print(f"Número de palabras: {estadisticas["num_palabras"]}")
+    print(f"Número de oraciones: {estadisticas["num_oraciones"]}")
+    print(f"Longitud promedio de palabras: {estadisticas["logitud_promedio_palabras"]} caracteres")
+
+    if estadisticas["palabra_mas_comun"]:
+        print(f"Palabra más común: {estadisticas["palabra_mas_comun"]}" +
+              f"(aparece {estadisticas["frecuencia_max"]} veces)")
+
+
+    if estadisticas["frecuencia_palabras"]:
+        print("\nTop 5 palabras más frecuentes:")
+        palabras_ordenadas=sorted(
+            estadisticas["frecuencia_palabras"].items(),
+            key=lambda x: x[1],
+            reverse=True
+        )[:5]
+
+        for palabra, frecuencia in palabras_ordenadas:
+            print(f" - '{palabra}': {frecuencia} veces")
+
+def main():
+    print("===Analizador de Texto===")            
+    print("Este programa analiza un texto y muestra estadísticas sobre el mismo.")            
+
+
+    opcion=input("\n¿DEsea ingresar texto directamente (1) o cargar desde arhcivo (2)?")
+
+    if opcion=="1":
+        print("\nIngrese el texto a analizar (presione Ctrl+D en Unix/Linux o Ctrl+Z en Windows seguido de Enter para terminar):")
+        lineas = []
+        try:
+            while True:
+                linea=input()
+                lineas.append(linea)
+        except EOFError:
+            pass
+        texto="\n".join(lineas)
+
+    elif opcion=="2":     
+        nombre_archivo=input("\nIngrese el nombre del archivo.")
+        try:
+            with open(nombre_archivo, "r", encoding='utf-8') as archivo:
+                texto=archivo.read()
+        except FileNotFoundError:
+            print(f"Error: no se encontró el archivo {nombre_archivo}")
+            return 
+        except Exception as e:
+            print(f"Error al leer el archivo: {e}")
+            return
+    else:
+        print("Opción no válida. Por favor, ejecute el programa nuevamente.")                 
+        return
+    
+    estadisticas=analizar_texto(texto)
+
+    mostrar_resultados(estadisticas)
+
+if __name__ == "__main__":
+    main()
 
 
 
-   
 
 
 
@@ -3990,7 +4095,15 @@ import string
 
 
 
-   
+
+
+
+
+
+
+
+
+
 
 
 
