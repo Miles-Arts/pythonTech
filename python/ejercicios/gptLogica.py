@@ -3968,7 +3968,7 @@ def main():
     if validar_contrasena(contrasena):
         print("\nContraseña guardad con éxito!")
     else:
-        print("\nLa contraseña no cumple con los requisitos. \nPOr favor, inténte nuevamente")    
+        print("\nLa contraseña no cumple con los requisitos. \nPor favor, inténte nuevamente.")    
 
 if __name__ == "__main__":
     main()
