@@ -4084,18 +4084,84 @@ import string
 # if __name__ == "__main__":
 #     main()
 
+# print("\n---Conversor de Temperatura---\n")
+
+# def ingresa_temperatura(temperatura):
+#     temperatura=input("Ingrese la temperatura en Grados Celsius o Fahrenheit")
+#     return temperatura
 
 
+# def temperatura_fahrenheit(temperatura):
+#     fahrenheit= (temperatura * 9/5) + 32
+#     return fahrenheit
+
+# def temperatura_celcius(temperatura):
+#     celsius=(temperatura-32) * 5/9
+#     return celsius
 
 
+# while True:
+
+#     print("---Menu---")
+#     print("1 - Celsius a Fahrenheit")
+#     print("2 - Fahrenheit a Celsius")
+#     print("3 - Salir.")
+#     opcion=int(input("Ingrese elección: "))
+
+#     try:
+#         if opcion in [1,2,3,] :
+#             if opcion==1:
+#                temperatura_fahrenheit()
+#             elif opcion==2:
+#                 temperatura_celcius()
+#             elif opcion==3:
+#                 print("Gracias!")
+#                 break
+#             else:
+#                 print("Error")
+#                 break
+                    
+#         else:
+#             print("Ingrese un número entre 1 y 3") 
+#             break       
+#     except ValueError:
+#             print("Error Ingrese un dato válido")     
 
 
+print("\n--- Conversor de Temperatura ---\n")
 
+def temperatura_fahrenheit(tempertaura):
+    return (tempertaura * 9/5) + 32
 
+def temperatura_celsius(temperatura):
+    return (temperatura - 32) * 5/9
 
+while True:
+    print("\n---Menu---")
+    print("1 - Celsius a Fahrenheit")
+    print("2 - Fahrenheit a Celsius")
+    print("3 - Salir")
 
+    opcion=input("Ingrese elección: ").strip()
 
+    if opcion=="3":
+        print("Gracias por usar el conversor.\nHasta luego!")
+        break
 
+    if opcion in ["1","2"]:
+        try:
+            temperatura=float(input("Ingrese la temperatura").strip())
+
+            if opcion=="1":
+                resultado=temperatura_fahrenheit(tempertaura)
+                print(f"{temperatura}°C equivalen a {resultado:.2f}°F")
+            elif opcion=="2":
+                resultado=temperatura_celsius(temperatura)
+                print(f"{temperatura}°F equivalen a {resultado:.2f}°C")
+        except ValueError:
+            print("Error: Ingrese un número válido.")
+    else:
+        print("Ingrese una opción válida (1, 2 o 3)")        
 
 
 
