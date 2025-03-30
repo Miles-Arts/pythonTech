@@ -4145,19 +4145,23 @@ while True:
     opcion=input("Ingrese elección: ").strip()
 
     if opcion=="3":
-        print("Gracias por usar el conversor.\nHasta luego!")
+        print("\nGracias por usar el conversor.\nHasta luego!")
         break
 
     if opcion in ["1","2"]:
         try:
-            temperatura=float(input("Ingrese la temperatura").strip())
+            temperatura=float(input("\nIngrese la temperatura: ").strip())
 
             if opcion=="1":
-                resultado=temperatura_fahrenheit(tempertaura)
-                print(f"{temperatura}°C equivalen a {resultado:.2f}°F")
+                resultado=temperatura_fahrenheit(temperatura)
+                print("\nResultado:")
+                print(f"\t{temperatura}°C equivalen a {resultado:.2f}°F")
+               
             elif opcion=="2":
                 resultado=temperatura_celsius(temperatura)
-                print(f"{temperatura}°F equivalen a {resultado:.2f}°C")
+                print("\nResultado:")
+                print(f"\t{temperatura}°F equivalen a {resultado:.2f}°C")
+                
         except ValueError:
             print("Error: Ingrese un número válido.")
     else:
