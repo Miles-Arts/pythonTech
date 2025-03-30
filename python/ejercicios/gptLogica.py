@@ -3929,51 +3929,53 @@ import string
 
 # contrasena=""
 
-def validar_contrasena(contrasena):
-    mensajes_error=[]
+# def validar_contrasena(contrasena):
+#     mensajes_error=[]
 
-    if len(contrasena) < 8:
-        mensajes_error.append("Ingrese una contraseña más larga (mínimo 8 caracteres).")
+#     if len(contrasena) < 8:
+#         mensajes_error.append("Ingrese una contraseña más larga (mínimo 8 caracteres).")
 
-    if not any(caracter.isupper() for caracter in contrasena):
-        mensajes_error.append("La contraseña debe tener al menos una letra mayúscula.")
+#     if not any(caracter.isupper() for caracter in contrasena):
+#         mensajes_error.append("La contraseña debe tener al menos una letra mayúscula.")
 
-    if not any(caracter.islower() for caracter in contrasena):
-        mensajes_error.append("La contraseña debe tener al menos una letra minúscula.")
+#     if not any(caracter.islower() for caracter in contrasena):
+#         mensajes_error.append("La contraseña debe tener al menos una letra minúscula.")
 
-    if not any(caracter.isdigit() for caracter in contrasena):
-        mensajes_error.append("La contraseña debe tener al menos un número.")
+#     if not any(caracter.isdigit() for caracter in contrasena):
+#         mensajes_error.append("La contraseña debe tener al menos un número.")
 
-    caracteres_especiales=set('!@#$%^&*()-_=+[]{}|;:,.<>?/')
-    if not set(contrasena).intersection(caracteres_especiales):
-        mensajes_error.append("La contraseña debe tener al menos un carácter especial.")
+#     caracteres_especiales=set('!@#$%^&*()-_=+[]{}|;:,.<>?/')
+#     if not set(contrasena).intersection(caracteres_especiales):
+#         mensajes_error.append("La contraseña debe tener al menos un carácter especial.")
 
 
-    for mensaje in mensajes_error:
-        print(mensaje)
+#     for mensaje in mensajes_error:
+#         print(mensaje)
 
-    return len(mensajes_error) ==0    
+#     return len(mensajes_error) ==0    
    
-def main():
-    print("\n---Validador de Contraseñas---\n")
-    print("La contraseña debe cumplor todos los requisitos:")
-    print("- Tener 8 o más carácteres")
-    print("- Incluir al menos una letra mayúscula")
-    print("- Incluir al menos una letra minúscula")
-    print("- Incluir al menos un número")
-    print("- Incluir al menos un caracter especial")
+# def main():
+#     print("\n---Validador de Contraseñas---\n")
+#     print("La contraseña debe cumplor todos los requisitos:")
+#     print("- Tener 8 o más carácteres")
+#     print("- Incluir al menos una letra mayúscula")
+#     print("- Incluir al menos una letra minúscula")
+#     print("- Incluir al menos un número")
+#     print("- Incluir al menos un caracter especial")
 
-    contrasena=input("\nIngrese la contraseña: ")
+#     contrasena=input("\nIngrese la contraseña: ")
 
-    if validar_contrasena(contrasena):
-        print("\nContraseña guardad con éxito!")
-    else:
-        print("\nLa contraseña no cumple con los requisitos. \nPor favor, inténte nuevamente.")    
+#     if validar_contrasena(contrasena):
+#         print("\nContraseña guardad con éxito!")
+#     else:
+#         print("\nLa contraseña no cumple con los requisitos. \nPor favor, inténte nuevamente.")    
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
+
+# -------------------------------------------
 
 
 
