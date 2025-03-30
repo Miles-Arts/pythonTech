@@ -3927,7 +3927,7 @@ import string
 
 # mensaje_contrasenia(contrasenia)
 
-contrasena=""
+# contrasena=""
 
 def validar_contrasena(contrasena):
     mensajes_error=[]
@@ -3949,11 +3949,29 @@ def validar_contrasena(contrasena):
         mensajes_error.append("La contraseña debe tener al menos un carácter especial.")
 
 
+    for mensaje in mensajes_error:
+        print(mensaje)
 
+    return len(mensajes_error) ==0    
    
+def main():
+    print("\n---Validador de Contraseñas---\n")
+    print("La contraseña debe cumplor todos los requisitos:")
+    print("- Tener 8 o más carácteres")
+    print("- Incluir al menos una letra mayúscula")
+    print("- Incluir al menos una letra minúscula")
+    print("- Incluir al menos un número")
+    print("- Incluir al menos un caracter especial")
 
+    contrasena=input("\nIngrese la contraseña: ")
 
+    if validar_contrasena(contrasena):
+        print("\nContraseña guardad con éxito!")
+    else:
+        print("\nLa contraseña no cumple con los requisitos. \nPOr favor, inténte nuevamente")    
 
+if __name__ == "__main__":
+    main()
 
 
 
