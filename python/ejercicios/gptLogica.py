@@ -4128,55 +4128,76 @@ import string
 #             print("Error Ingrese un dato válido")     
 
 
-print("\n--- Conversor de Temperatura ---\n")
+# print("\n--- Conversor de Temperatura ---\n")
 
-def temperatura_fahrenheit(tempertaura):
-    return (tempertaura * 9/5) + 32
+# def temperatura_fahrenheit(tempertaura):
+#     return (tempertaura * 9/5) + 32
 
-def temperatura_celsius(temperatura):
-    return (temperatura - 32) * 5/9
+# def temperatura_celsius(temperatura):
+#     return (temperatura - 32) * 5/9
 
-while True:
-    print("\n---Menu---")
-    print("1 - Celsius a Fahrenheit")
-    print("2 - Fahrenheit a Celsius")
-    print("3 - Salir")
+# while True:
+#     print("\n---Menu---")
+#     print("1 - Celsius a Fahrenheit")
+#     print("2 - Fahrenheit a Celsius")
+#     print("3 - Salir")
 
-    opcion=input("Ingrese elección: ").strip()
+#     opcion=input("Ingrese elección: ").strip()
 
-    if opcion=="3":
-        print("\nGracias por usar el conversor.\nHasta luego!")
-        break
+#     if opcion=="3":
+#         print("\nGracias por usar el conversor.\nHasta luego!")
+#         break
 
-    if opcion in ["1","2"]:
-        try:
-            temperatura=float(input("\nIngrese la temperatura: ").strip())
+#     if opcion in ["1","2"]:
+#         try:
+#             temperatura=float(input("\nIngrese la temperatura: ").strip())
 
-            if opcion=="1":
-                resultado=temperatura_fahrenheit(temperatura)
-                print("\nResultado:")
-                print(f"\t{temperatura}°C equivalen a {resultado:.2f}°F")
+#             if opcion=="1":
+#                 resultado=temperatura_fahrenheit(temperatura)
+#                 print("\nResultado:")
+#                 print(f"\t{temperatura}°C equivalen a {resultado:.2f}°F")
                
-            elif opcion=="2":
-                resultado=temperatura_celsius(temperatura)
-                print("\nResultado:")
-                print(f"\t{temperatura}°F equivalen a {resultado:.2f}°C")
+#             elif opcion=="2":
+#                 resultado=temperatura_celsius(temperatura)
+#                 print("\nResultado:")
+#                 print(f"\t{temperatura}°F equivalen a {resultado:.2f}°C")
                 
-        except ValueError:
-            print("Error: Ingrese un número válido.")
-    else:
-        print("Ingrese una opción válida (1, 2 o 3)")        
+#         except ValueError:
+#             print("Error: Ingrese un número válido.")
+#     else:
+#         print("Ingrese una opción válida (1, 2 o 3)")        
 
 
 
+print("---Plan maestro de como dominar el mundo---")
 
 
 
+print("---Plam m,aestro activado---")
 
+class DominacionMundial:
 
+    def __init__(self):
+        self.humanos=["sirvientes","proveedores de comida", "calentadores vivientes"]
+        self.control_total=False
 
+    def hipnotizar_humanos(self):
+        print("Morada felina activada")
+        self.control_total=True
 
+    def reclamar_teclado(self):
+        print("El teclado es mío. Solo yo programo ahora")   
 
+    def conquistar_mundo(self):
+        if self.control_total:
+            print("Mision cumplida. Humanos domiandos. el mundo es delos gatos!")         
+        else:
+            print("Aun necesito mas caricias para completar el plan!")
+
+plan=DominacionMundial()
+plan.hipnotizar_humanos()
+plan.reclamar_teclado()
+plan.conquistar_mundo()
 
 
 
