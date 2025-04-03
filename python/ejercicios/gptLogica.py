@@ -4253,44 +4253,46 @@ print("---Plan maestro de como dominar el mundo---")
 
 # print(f"El precio de")
 
+# print("\n--- Conversor de Monedas ---\n")
+
+# def euros_a_usd(moneda):
+#     return moneda * 0.906738
+
+# def cop_a_usd(moneda):
+#     return moneda * 4.157
+
+# def yen_a_usd(moneda):
+#     return moneda * 146.297
+
+# while True:
+#     try:
+#         print(f"\n---Menú---")
+#         print("1 - USD a Euros.")
+#         print("2 - USD a Pesos Colombianos (COP).")
+#         print("3 - USD a Yen Japónes.")
+#         print("4 - Salir.")
+
+#         opcion=input("Ingrese opción: ").strip()
+
+#         if opcion == "1":
+#             moneda=float(input("Ingrese la catidad de USD: ").strip())
+#             print(f"{moneda} USD equivale a {euros_a_usd(moneda):.2f} Euros.")
+#         elif opcion == "2":
+#             moneda=float(input("Ingrese la cantidad de USD: ").strip())
+#             print(f"{moneda} USD equivale a ${cop_a_usd(moneda):.2f} Pesos Colombianos.")
+#         elif opcion == "3":
+#             moneda=float(input("Ingrese la cantidad de USD: ").strip())
+#             print(f"{moneda} USD equivales a {yen_a_usd(moneda):.2f}")
+#         elif opcion == "4":
+#             print("---Gracias por utilizar nuestros servicios---")
+#             break 
+#         else:
+#             print("Opción inválida. Intente de nuevo.")
+
+#     except ValueError:
+#         print("Error: Ingrese un número válido.")               
+
 print("\n--- Conversor de Monedas ---\n")
-
-def euros_a_usd(moneda):
-    return moneda * 1.10285
-
-def cop_a_usd(moneda):
-    return moneda * 0.000240532
-
-def yen_a_usd(moneda):
-    return moneda * 0.00683539
-
-while True:
-    try:
-        print(f"\n---Menú---")
-        print("1 - Euros a USD.")
-        print("2 - Pesos Colombianos (COP) a USD.")
-        print("3 - Yen Japónes a USD.")
-        print("4 - Salir.")
-
-        opcion=input("Ingrese opción: ").strip()
-
-        if opcion == "1":
-            moneda=float(input("Ingrese la catidad de USD: ").strip())
-            print(f"{moneda} USD equivale a {euros_a_usd(moneda):.2f} Euros.")
-        elif opcion == "2":
-            moneda=float(input("Ingrese la cantidad de USD: ").strip())
-            print(f"{moneda} USD equivale a {cop_a_usd(moneda):.2f} Pesos Colombianos.")
-        elif opcion == "3":
-            moneda=float(input("Ingrese la cantidad de USD: ").strip())
-            print(f"{moneda} USD equivales a {yen_a_usd(moneda):.2f}")
-        elif opcion == "4":
-            print("---Gracias por utilizar nuestros servicios---") 
-        else:
-            print("Opción inválida. Intente de nuevo.")
-
-    except ValueError:
-        print("Error: Ingrese un número válido.")               
-
 
 
 
