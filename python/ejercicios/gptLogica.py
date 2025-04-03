@@ -4173,31 +4173,137 @@ print("---Plan maestro de como dominar el mundo---")
 
 
 
-print("---Plam m,aestro activado---")
+# print("---Plam m,aestro activado---")
 
-class DominacionMundial:
+# class DominacionMundial:
 
-    def __init__(self):
-        self.humanos=["sirvientes","proveedores de comida", "calentadores vivientes"]
-        self.control_total=False
+#     def __init__(self):
+#         self.humanos=["sirvientes","proveedores de comida", "calentadores vivientes"]
+#         self.control_total=False
 
-    def hipnotizar_humanos(self):
-        print("Morada felina activada")
-        self.control_total=True
+#     def hipnotizar_humanos(self):
+#         print("Morada felina activada")
+#         self.control_total=True
 
-    def reclamar_teclado(self):
-        print("El teclado es mío. Solo yo programo ahora")   
+#     def reclamar_teclado(self):
+#         print("El teclado es mío. Solo yo programo ahora")   
 
-    def conquistar_mundo(self):
-        if self.control_total:
-            print("Mision cumplida. Humanos domiandos. el mundo es delos gatos!")         
-        else:
-            print("Aun necesito mas caricias para completar el plan!")
+#     def conquistar_mundo(self):
+#         if self.control_total:
+#             print("Mision cumplida. Humanos domiandos. el mundo es delos gatos!")         
+#         else:
+#             print("Aun necesito mas caricias para completar el plan!")
 
-plan=DominacionMundial()
-plan.hipnotizar_humanos()
-plan.reclamar_teclado()
-plan.conquistar_mundo()
+# plan=DominacionMundial()
+# plan.hipnotizar_humanos()
+# plan.reclamar_teclado()
+# plan.conquistar_mundo()
+
+# ========================================================
+# 1 COP = 0.000240532 USD
+# 1 USD = 4,157.45 COP
+
+# 1 EUR = 1.10285 USD
+# 1 USD = 0.906738 EUR
+
+# 1 JPY = 0.00683539 USD
+# 1 USD = 146.297 JPY_/.,;'p[[=-----__++--_?¡![]]]
+
+# print("\n---Conversor de Monedas---\n")
+
+# ingrese_dolares=float(input("Ingrese la cantidad de USD a convertir: ").strip())
+
+# def euros_usd(moneda):
+#     return moneda * 1.10285
+
+# def cop_usd(moneda):
+#     return moneda * 0.000240532
+
+# def yen_jp_usd(moneda):
+#     return moneda * 0.00683539
+
+
+# while True:
+#         try:
+#             print("\n---Menu---")
+#             print("1 - Euros a USD.")
+#             print("2 - COP a USD.")
+#             print("3 - Yen Japónes.")
+#             print("4 - Salir.")
+
+#             opcion=input("Ingrese opción: ").strip()
+
+#             if opcion == "1":
+#                 euros_usd(ingrese_dolares)
+#             elif opcion == "2":
+#                 cop_usd(ingrese_dolares)
+#             elif opcion == "3":
+#                 yen_jp_usd(ingrese_dolares)
+#             elif opcion == "4":
+#                 print("---Gracias por utilzar nuestros servicios---")
+#                 break 
+#         except ValueError:
+#             print("Ingrese un parámetro válido")    
+
+
+# euros_usd(ingrese_dolares)
+# cop_usd(ingrese_dolares)
+# yen_jp_usd(ingrese_dolares)
+
+
+# print(f"El precio de")
+
+print("\n--- Conversor de Monedas ---\n")
+
+def euros_a_usd(moneda):
+    return moneda * 1.10285
+
+def cop_a_usd(moneda):
+    return moneda * 0.000240532
+
+def yen_a_usd(moneda):
+    return moneda * 0.00683539
+
+while True:
+    try:
+        print(f"\n---Menú---")
+        print("1 - Euros a USD.")
+        print("2 - Pesos Colombianos (COP) a USD.")
+        print("3 - Yen Japónes a USD.")
+        print("4 - Salir.")
+
+        opcion=input("Ingrese opción: ").strip()
+
+        if opcion == "1":
+            moneda=float(input("Ingrese la catidad de : ").strip())
+            print(f"{moneda} EUR equivale a {euros_a_usd(moneda):.2f} USD")
+        elif opcion == "2":
+            moneda=float(input("Ingrese la canti"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
