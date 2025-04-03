@@ -4284,7 +4284,12 @@ while True:
             moneda=float(input("Ingrese la cantidad de USD: ").strip())
             print(f"{moneda} USD equivales a {yen_a_usd(moneda):.2f}")
         elif opcion == "4":
-            print("---Gracias por utilizar nuestros servicios")    
+            print("---Gracias por utilizar nuestros servicios---") 
+        else:
+            print("Opción inválida. Intente de nuevo.")
+
+    except ValueError:
+        print("Error: Ingrese un número válido.")               
 
 
 
