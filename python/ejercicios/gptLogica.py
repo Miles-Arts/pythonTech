@@ -4275,11 +4275,16 @@ while True:
         opcion=input("Ingrese opción: ").strip()
 
         if opcion == "1":
-            moneda=float(input("Ingrese la catidad de : ").strip())
-            print(f"{moneda} EUR equivale a {euros_a_usd(moneda):.2f} USD")
+            moneda=float(input("Ingrese la catidad de USD: ").strip())
+            print(f"{moneda} USD equivale a {euros_a_usd(moneda):.2f} Euros.")
         elif opcion == "2":
-            moneda=float(input("Ingrese la canti"))
-
+            moneda=float(input("Ingrese la cantidad de USD: ").strip())
+            print(f"{moneda} USD equivale a {cop_a_usd(moneda):.2f} Pesos Colombianos.")
+        elif opcion == "3":
+            moneda=float(input("Ingrese la cantidad de USD: ").strip())
+            print(f"{moneda} USD equivales a {yen_a_usd(moneda):.2f}")
+        elif opcion == "4":
+            print("---Gracias por utilizar nuestros servicios")    
 
 
 
