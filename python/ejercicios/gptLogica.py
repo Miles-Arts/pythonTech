@@ -4294,71 +4294,144 @@ import string
 
 # print("\n--- Conversor de Monedas ---\n")
 
-def convertir_a_euros(dolares):
-    """Convertir dólares a euros"""
-    tasa_cambio=0.85
-    return dolares * tasa_cambio
+# def convertir_a_euros(dolares):
+#     """Convertir dólares a euros"""
+#     tasa_cambio=0.85
+#     return dolares * tasa_cambio
 
-def convertir_a_pesos_colombianos(dolares):
-    """Convertir dólares a pesos colombianos"""
-    tasa_cambio=4000
-    return dolares * tasa_cambio
+# def convertir_a_pesos_colombianos(dolares):
+#     """Convertir dólares a pesos colombianos"""
+#     tasa_cambio=4000
+#     return dolares * tasa_cambio
 
-def convertir_a_yen(dolares):
-    """Convertir dólares a yen japónes"""
-    tasa_cambio=110
-    return dolares * tasa_cambio
+# def convertir_a_yen(dolares):
+#     """Convertir dólares a yen japónes"""
+#     tasa_cambio=110
+#     return dolares * tasa_cambio
 
-# Programa Principal
-print("\n---Conversor de monedas---")
+# # Programa Principal
+# print("\n---Conversor de monedas---")
 
-while True:
-    try:
-        dolares=float(input("Ingrese la cantidad de dólares: ").strip())
+# while True:
+#     try:
+#         dolares=float(input("Ingrese la cantidad de dólares: ").strip())
 
-        if dolares < 0:
-            print("La cantidad debe ser positiva.")
-            continue
-        break
-    except ValueError:
-        print("Error: Ingrese un número válido.")
+#         if dolares < 0:
+#             print("La cantidad debe ser positiva.")
+#             continue
+#         break
+#     except ValueError:
+#         print("Error: Ingrese un número válido.")
 
-print(f"\nSeleccione la moneda a la que desea convertir.")
-print(f"1. Euros")
-print(f"2. Pesos Colombianos")
-print(f"3. Yen Japonés.")
-print(f"4. Salir.")
+# print(f"\nSeleccione la moneda a la que desea convertir.")
+# print(f"1. Euros")
+# print(f"2. Pesos Colombianos")
+# print(f"3. Yen Japonés.")
+# print(f"4. Salir.")
 
-while True:
-    opcion=input("Ingrese su opción (1, 2, 3 o 4): ").strip()
-    if opcion=="1":
-        resultado=convertir_a_euros(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado:.2f} euros.\n")
-    elif opcion =="2":
-        resultado=convertir_a_pesos_colombianos(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado:.2f} pesos colombianos.\n")
-    elif opcion=="3":
-        resultado=convertir_a_yen(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado} yen japonés.\n") 
-    elif opcion=="4":
-        print("\nVuelve Pronto. \nFin.")  
-        break
-    else:
-        print("Opción inválida. Intente de nuevo.")         
-
-
+# while True:
+#     opcion=input("Ingrese su opción (1, 2, 3 o 4): ").strip()
+#     if opcion=="1":
+#         resultado=convertir_a_euros(dolares)
+#         print(f"\n{dolares} dólares equivalen a {resultado:.2f} euros.\n")
+#     elif opcion =="2":
+#         resultado=convertir_a_pesos_colombianos(dolares)
+#         print(f"\n{dolares} dólares equivalen a {resultado:.2f} pesos colombianos.\n")
+#     elif opcion=="3":
+#         resultado=convertir_a_yen(dolares)
+#         print(f"\n{dolares} dólares equivalen a {resultado} yen japonés.\n") 
+#     elif opcion=="4":
+#         print("\nVuelve Pronto. \nFin.")  
+#         break
+#     else:
+#         print("Opción inválida. Intente de nuevo.")         
 
 
+# print("---Gestor de notas estudiantes---")
+
+# nota=input("Ingrese las notas de los estudiantes: ")
+
+# notas=nota.split()
+
+# calificaciones = [float(calif) for calif in notas]
+
+# calificaciones_max=max(notas)
+# calificaciones_min=min(notas)
+# promedio=sum(calificaciones)/len(calificaciones)
+
+# print("---Entrega de Notas---")
+# print(f"La calificación más alta fue de {calificaciones_max}")
+# print(f"La calificación más baja fue de {calificaciones_min}")
+
+# print(f"El promedio de notas del grupo fue de {promedio:.2f}")
 
 
+# for calificacion in calificaciones:
+#     if calificacion >= 3.0:
+        
+#         print(f"Estudiantes Aprobados: {calificacion}")
+    
+#     elif calificacion < 3.0:
+
+#         print(f"Estudiantes Reprobados {calificacion}")  
+
+print("---Gestor de Calificaciones---")
+
+def ingresar_calificaciones():
+    """Solicitar el usuario inghresar las calificaciones del los estudiantes"""
+
+    estudiantes=[]
+    cantidad=int(input("Ingrese la cantidad de estudiantes: "))
+
+    for i in range(cantidad):
+        nombre=input(f"Ingres enombre del estudiante {i+1}: ").title()
+        while True:
+            try:
+                calificacion=float(input(f"Ingrese la calificación de {nombre} (0.0 a 5.0): "))
+                if 0.0 <= calificacion <= 5.0:
+                    estudiantes.append({"nombre": nombre, "calificacion": calificacion})
+                    break
+                else:
+                    print("La calificación deb estar entre 0.0 y 5.0")
+            except ValueError:
+                print("Error: Ingrese un número válido.")
+    return estudiantes                        
+
+def calcular_promedio(estudiantes):
+    """Calcula el promedio de las calificaciones"""
+    return sum(estudiante["estudiante"] for estudiante in estudiantes) / len(estudiantes)
+
+def clasificar_estudiantes(estudiantes):
+    """"Clasificar los estudiantes como Aprobados o Reprobados"""
+
+    aprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] >= 3.0]
+    reprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] < 3.0]
 
 
+#Programa Principal
+print("\n---Gestro de Calificaciones")
+estudiantes=ingresar_calificaciones()
+
+promedio=calcular_promedio(estudiantes)
+aprobados, reprobados=clasificar_estudiantes(estudiantes)
+mejor_calificaciones=max(estudiantes, key=lambda x: x["calificacion"])
+peor_calificacion=min(estudiantes, key=lambda x: x["calificaion"])
+
+#Mostrar Ressultados
+
+print(f"\n---Resultados---")
+print(f"Promedio de Calificaicones {promedio:.2f}")
+print(f"Mejor Calificaion: {mejor_calificaciones["nombre"]} con {mejor_calificaciones["calificacion"]:.2f}")
+print(f"Peor Calificacion: {peor_calificacion["nombre"]} con {peor_calificacion["calificacion"]}")
 
 
+print(f"\nEstudiantes Aprobados:")
+for estudiantes in aprobados:
+    print(f"Estudiante {estudiantes["nombre"]} con calificacion {estudiantes["calificacion"]}")
 
-
-
-
+print(f"\Estudiantes Reprobados:")
+for estudiantes in reprobados:
+    print(f"Estudiantes {estudiantes["nombre"]} con calificaion {estudiantes["calificacion"]}")
 
 
 
