@@ -4169,7 +4169,7 @@ import string
 
 
 
-print("---Plan maestro de como dominar el mundo---")
+# print("---Plan maestro de como dominar el mundo---")
 
 
 
@@ -4292,7 +4292,7 @@ print("---Plan maestro de como dominar el mundo---")
 #     except ValueError:
 #         print("Error: Ingrese un número válido.")               
 
-print("\n--- Conversor de Monedas ---\n")
+# print("\n--- Conversor de Monedas ---\n")
 
 def convertir_a_euros(dolares):
     """Convertir dólares a euros"""
@@ -4323,22 +4323,26 @@ while True:
     except ValueError:
         print("Error: Ingrese un número válido.")
 
-print(f"\nSElecciones la moenda a la que desea convertir.")
+print(f"\nSeleccione la moneda a la que desea convertir.")
 print(f"1. Euros")
 print(f"2. Pesos Colombianos")
 print(f"3. Yen Japonés.")
+print(f"4. Salir.")
 
 while True:
-    opcion=input("Ingrese su opción (1, 2 o 3): ").strip()
+    opcion=input("Ingrese su opción (1, 2, 3 o 4): ").strip()
     if opcion=="1":
         resultado=convertir_a_euros(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado:.2f} euros.")
+        print(f"\n{dolares} dólares equivalen a {resultado:.2f} euros.\n")
     elif opcion =="2":
         resultado=convertir_a_pesos_colombianos(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado:.2f} pesos colombianos.")
+        print(f"\n{dolares} dólares equivalen a {resultado:.2f} pesos colombianos.\n")
     elif opcion=="3":
         resultado=convertir_a_yen(dolares)
-        print(f"\n{dolares} dólares equivalen a {resultado} yen japonés.")   
+        print(f"\n{dolares} dólares equivalen a {resultado} yen japonés.\n") 
+    elif opcion=="4":
+        print("\nVuelve Pronto. \nFin.")  
+        break
     else:
         print("Opción inválida. Intente de nuevo.")         
 
