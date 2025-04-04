@@ -4375,7 +4375,7 @@ import string
 
 #         print(f"Estudiantes Reprobados {calificacion}")  
 
-print("---Gestor de Calificaciones---")
+#print("---Gestor de Calificaciones---")
 
 def ingresar_calificaciones():
     """Solicitar el usuario inghresar las calificaciones del los estudiantes"""
@@ -4384,7 +4384,7 @@ def ingresar_calificaciones():
     cantidad=int(input("Ingrese la cantidad de estudiantes: "))
 
     for i in range(cantidad):
-        nombre=input(f"Ingres enombre del estudiante {i+1}: ").title()
+        nombre=input(f"Ingrese nombre del estudiante {i+1}: ").title()
         while True:
             try:
                 calificacion=float(input(f"Ingrese la calificación de {nombre} (0.0 a 5.0): "))
@@ -4399,7 +4399,7 @@ def ingresar_calificaciones():
 
 def calcular_promedio(estudiantes):
     """Calcula el promedio de las calificaciones"""
-    return sum(estudiante["estudiante"] for estudiante in estudiantes) / len(estudiantes)
+    return sum(estudiante["calificacion"] for estudiante in estudiantes) / len(estudiantes)
 
 def clasificar_estudiantes(estudiantes):
     """"Clasificar los estudiantes como Aprobados o Reprobados"""
@@ -4407,6 +4407,7 @@ def clasificar_estudiantes(estudiantes):
     aprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] >= 3.0]
     reprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] < 3.0]
 
+    return aprobados, reprobados
 
 #Programa Principal
 print("\n---Gestro de Calificaciones")
@@ -4415,7 +4416,7 @@ estudiantes=ingresar_calificaciones()
 promedio=calcular_promedio(estudiantes)
 aprobados, reprobados=clasificar_estudiantes(estudiantes)
 mejor_calificaciones=max(estudiantes, key=lambda x: x["calificacion"])
-peor_calificacion=min(estudiantes, key=lambda x: x["calificaion"])
+peor_calificacion=min(estudiantes, key=lambda x: x["calificacion"])
 
 #Mostrar Ressultados
 
@@ -4429,7 +4430,7 @@ print(f"\nEstudiantes Aprobados:")
 for estudiantes in aprobados:
     print(f"Estudiante {estudiantes["nombre"]} con calificacion {estudiantes["calificacion"]}")
 
-print(f"\Estudiantes Reprobados:")
+print(f"\nEstudiantes Reprobados:")
 for estudiantes in reprobados:
     print(f"Estudiantes {estudiantes["nombre"]} con calificaion {estudiantes["calificacion"]}")
 
