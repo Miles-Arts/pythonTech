@@ -4294,11 +4294,53 @@ print("---Plan maestro de como dominar el mundo---")
 
 print("\n--- Conversor de Monedas ---\n")
 
+def convertir_a_euros(dolares):
+    """Convertir dólares a euros"""
+    tasa_cambio=0.85
+    return dolares * tasa_cambio
 
+def convertir_a_pesos_colombianos(dolares):
+    """Convertir dólares a pesos colombianos"""
+    tasa_cambio=4000
+    return dolares * tasa_cambio
 
+def convertir_a_yen(dolares):
+    """Convertir dólares a yen japónes"""
+    tasa_cambio=110
+    return dolares * tasa_cambio
 
+# Programa Principal
+print("\n---Conversor de monedas---")
 
+while True:
+    try:
+        dolares=float(input("Ingrese la cantidad de dólares: ").strip())
 
+        if dolares < 0:
+            print("La cantidad debe ser positiva.")
+            continue
+        break
+    except ValueError:
+        print("Error: Ingrese un número válido.")
+
+print(f"\nSElecciones la moenda a la que desea convertir.")
+print(f"1. Euros")
+print(f"2. Pesos Colombianos")
+print(f"3. Yen Japonés.")
+
+while True:
+    opcion=input("Ingrese su opción (1, 2 o 3): ").strip()
+    if opcion=="1":
+        resultado=convertir_a_euros(dolares)
+        print(f"\n{dolares} dólares equivalen a {resultado:.2f} euros.")
+    elif opcion =="2":
+        resultado=convertir_a_pesos_colombianos(dolares)
+        print(f"\n{dolares} dólares equivalen a {resultado:.2f} pesos colombianos.")
+    elif opcion=="3":
+        resultado=convertir_a_yen(dolares)
+        print(f"\n{dolares} dólares equivalen a {resultado} yen japonés.")   
+    else:
+        print("Opción inválida. Intente de nuevo.")         
 
 
 
