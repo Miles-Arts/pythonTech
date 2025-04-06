@@ -4377,62 +4377,142 @@ import string
 
 #print("---Gestor de Calificaciones---")
 
-def ingresar_calificaciones():
-    """Solicitar el usuario inghresar las calificaciones del los estudiantes"""
+# def ingresar_calificaciones():
+#     """Solicitar el usuario inghresar las calificaciones del los estudiantes"""
 
-    estudiantes=[]
-    cantidad=int(input("Ingrese la cantidad de estudiantes: "))
+#     estudiantes=[]
+#     cantidad=int(input("Ingrese la cantidad de estudiantes: "))
 
-    for i in range(cantidad):
-        nombre=input(f"Ingrese nombre del estudiante {i+1}: ").title()
-        while True:
-            try:
-                calificacion=float(input(f"Ingrese la calificación de {nombre} (0.0 a 5.0): "))
-                if 0.0 <= calificacion <= 5.0:
-                    estudiantes.append({"nombre": nombre, "calificacion": calificacion})
-                    break
-                else:
-                    print("La calificación deb estar entre 0.0 y 5.0")
-            except ValueError:
-                print("Error: Ingrese un número válido.")
-    return estudiantes                        
+#     for i in range(cantidad):
+#         nombre=input(f"Ingrese nombre del estudiante {i+1}: ").title()
+#         while True:
+#             try:
+#                 calificacion=float(input(f"Ingrese la calificación de {nombre} (0.0 a 5.0): "))
+#                 if 0.0 <= calificacion <= 5.0:
+#                     estudiantes.append({"nombre": nombre, "calificacion": calificacion})
+#                     break
+#                 else:
+#                     print("La calificación deb estar entre 0.0 y 5.0")
+#             except ValueError:
+#                 print("Error: Ingrese un número válido.")
+#     return estudiantes                        
 
-def calcular_promedio(estudiantes):
-    """Calcula el promedio de las calificaciones"""
-    return sum(estudiante["calificacion"] for estudiante in estudiantes) / len(estudiantes)
+# def calcular_promedio(estudiantes):
+#     """Calcula el promedio de las calificaciones"""
+#     return sum(estudiante["calificacion"] for estudiante in estudiantes) / len(estudiantes)
 
-def clasificar_estudiantes(estudiantes):
-    """"Clasificar los estudiantes como Aprobados o Reprobados"""
+# def clasificar_estudiantes(estudiantes):
+#     """"Clasificar los estudiantes como Aprobados o Reprobados"""
 
-    aprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] >= 3.0]
-    reprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] < 3.0]
+#     aprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] >= 3.0]
+#     reprobados=[estudiante for estudiante in estudiantes if estudiante["calificacion"] < 3.0]
 
-    return aprobados, reprobados
+#     return aprobados, reprobados
 
-#Programa Principal
-print("\n---Gestro de Calificaciones")
-estudiantes=ingresar_calificaciones()
+# #Programa Principal
+# print("\n---Gestro de Calificaciones")
+# estudiantes=ingresar_calificaciones()
 
-promedio=calcular_promedio(estudiantes)
-aprobados, reprobados=clasificar_estudiantes(estudiantes)
-mejor_calificaciones=max(estudiantes, key=lambda x: x["calificacion"])
-peor_calificacion=min(estudiantes, key=lambda x: x["calificacion"])
+# promedio=calcular_promedio(estudiantes)
+# aprobados, reprobados=clasificar_estudiantes(estudiantes)
+# mejor_calificaciones=max(estudiantes, key=lambda x: x["calificacion"])
+# peor_calificacion=min(estudiantes, key=lambda x: x["calificacion"])
 
-#Mostrar Ressultados
+# #Mostrar Ressultados
 
-print(f"\n---Resultados---")
-print(f"Promedio de Calificaicones {promedio:.2f}")
-print(f"Mejor Calificaion: {mejor_calificaciones["nombre"]} con {mejor_calificaciones["calificacion"]:.2f}")
-print(f"Peor Calificacion: {peor_calificacion["nombre"]} con {peor_calificacion["calificacion"]}")
+# print(f"\n---Resultados---")
+# print(f"Promedio de Calificaicones {promedio:.2f}")
+# print(f"Mejor Calificaion: {mejor_calificaciones["nombre"]} con {mejor_calificaciones["calificacion"]:.2f}")
+# print(f"Peor Calificacion: {peor_calificacion["nombre"]} con {peor_calificacion["calificacion"]}")
 
 
-print(f"\nEstudiantes Aprobados:")
-for estudiantes in aprobados:
-    print(f"Estudiante {estudiantes["nombre"]} con calificacion {estudiantes["calificacion"]}")
+# print(f"\nEstudiantes Aprobados:")
+# for estudiantes in aprobados:
+#     print(f"Estudiante {estudiantes["nombre"]} con calificacion {estudiantes["calificacion"]}")
 
-print(f"\nEstudiantes Reprobados:")
-for estudiantes in reprobados:
-    print(f"Estudiantes {estudiantes["nombre"]} con calificaion {estudiantes["calificacion"]}")
+# print(f"\nEstudiantes Reprobados:")
+# for estudiantes in reprobados:
+#     print(f"Estudiantes {estudiantes["nombre"]} con calificaion {estudiantes["calificacion"]}")
+
+# print("\n---Números Pares e Impares---\n")
+
+# numero=input("Ingrese un número: ").strip()
+
+# def analizador(number):
+    
+#     if number.isdigit():
+#         number = int(number)
+#         number = number % 2
+
+#         if  number == 0:
+#             print(f"El número {number} es par")
+#             return number
+#         elif number != 0:
+#             print(f"El número {number} es impar")
+#             return number
+
+# analizador(numero)
+
+
+
+# print("---Números Pares e Impares---")
+
+# numero=input("Ingrese un número: ").strip()
+
+# def analizador(number):
+
+#     if number.isdigit():
+#         number=int(number)
+#         if number % 2 == 0:
+#             print(f"El número {number} es par.")
+#         else:
+#             print(f"El número {number} es impar.")
+#     else:
+#         print("Error: Ingerse u número válido.")
+
+# analizador(numero)        
+
+# print("---Sumar Dígitos de un Número---")
+
+# numero=input("Ingrese un número entero: ").strip()
+
+# def sumar_digitos(number):
+
+#     if number > "0":
+#         # number = int(number)
+
+#         # number = number.split()
+#         number = list(str(number))
+#         resultado= int(sum(number))
+
+#         print(resultado)
+    
+#     else:
+#         print("Error: Ingrese un número válido.")
+
+
+# sumar_digitos(numero)
+
+
+print("---Sumar Dígitos de un Número---")
+
+numero=input("Ingrese un numero entero: ").strip()
+
+def sumar_digitos(number):
+
+    if number.isdigit():
+        
+        digitos=[int(digic) for digic in number]
+        resultado =sum(digitos)
+
+        print(f"La suma de los dígitos es: {resultado}")
+
+    else:
+        print("Error: Ingrese un número válido.")    
+
+
+sumar_digitos(numero)
+
 
 
 
